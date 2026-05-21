@@ -1073,16 +1073,24 @@
       const l = document.getElementById('loader');
       if (l && !l.classList.contains('hide')) {
         l.classList.add('hide');
+        
+        // Force scroll reset and resize canvas to guarantee correct starting state
+        window.scrollTo(0, 0);
+        tTarget = 0;
+        tCurrent = 0;
+        if (ctx && typeof ctx.onResize === 'function') {
+          ctx.onResize();
+        }
+        
         setTimeout(() => l.remove(), 600);
       }
     }
     requestAnimationFrame(firstFrameHook);
     setTimeout(hideLoader, 3000);
 
-    // Start
-    window.scrollTo(0, 0);
-    tTarget = 0;
-    tCurrent = 0;
+    // Start with synchronized scroll position
+    tTarget = computeScrollProgress();
+    tCurrent = tTarget;
     animate();
   </script>
 </body>
