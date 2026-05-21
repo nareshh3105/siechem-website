@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Cables — Siechem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .product-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 56px 0 80px;
+    }
+    @media (max-width: 980px) {
+      .product-hero { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .product-hero-visual {
+      position: relative;
+      aspect-ratio: 1;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .product-hero-visual svg { width: 100%; height: 100%; filter: drop-shadow(0 20px 60px rgba(227,30,36,0.18)); }
+
+    .tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      overflow-x: auto;
+    }
+    .tab {
+      padding: 14px 22px;
+      background: none;
+      border: none;
+      color: var(--text-faint);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+
+    .tab-panel { display: none; animation: fadeUp 0.4s ease; }
+    .tab-panel.active { display: block; }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .spec-table tr { border-bottom: 1px solid var(--border); }
+    .spec-table td { padding: 14px 16px; }
+    .spec-table td:first-child { color: var(--text-faint); font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; width: 38%; }
+    .spec-table td:last-child { font-weight: 500; }
+    .spec-table tr:hover { background: rgba(255,255,255,0.02); }
+
+    .variant-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    .variant-table th, .variant-table td { padding: 12px 14px; text-align: left; }
+    .variant-table th {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      border-bottom: 1px solid var(--border-strong);
+    }
+    .variant-table td { border-bottom: 1px solid var(--border); }
+    .variant-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .variant-table .part-no { font-family: var(--mono); color: var(--accent-2); font-weight: 600; }
+
+    .application-card {
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .application-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .application-card .icon { width: 40px; height: 40px; border-radius: 8px; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent-2); margin-bottom: 14px; }
+    .application-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .application-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    .related-card {
+      display: flex;
+      gap: 14px;
+      padding: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .related-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .related-card .icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(227,30,36,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-2); flex-shrink: 0; }
+    .related-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .related-card p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
+
+    .download-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .download-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .download-card .doc-icon { width: 44px; height: 56px; border-radius: 6px; background: linear-gradient(135deg, rgba(227,30,36,0.18), rgba(227,30,36,0.06)); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .download-card .doc-meta { flex: 1; }
+    .download-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .download-card p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo">
+        <span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        SIECHEM
+      </a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="tech-support.html" class="nav-link">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Request Quote
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="container" style="padding-top:28px;">
+    <div class="breadcrumb">
+      <a href="siechem-redesign.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="products.html">Products</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="products.html">Cables by Segment</a>
+      <span class="breadcrumb-sep"></span>
+      <span>Solar Cables</span>
+    </div>
+  </div>
+
+  <!-- Product hero -->
+  <section class="container">
+    <div class="product-hero">
+      <div class="fade-up">
+        <div class="eyebrow">Renewable Energy</div>
+        <h1 class="page-title" style="margin-bottom:20px;">Solar Cables<br/><em>EN 50618 · TUV</em></h1>
+        <p class="page-lede" style="margin-bottom:28px;">UV-stabilised, electron-beam crosslinked solar DC cables engineered for 25-year photovoltaic system lifespans. Operating from −40 °C to +120 °C with 1.5 kV DC continuous rating.</p>
+
+        <div class="spec-row" style="margin-bottom:28px; border-top:none; padding-top:0;">
+          <div class="spec"><span class="spec-label">Voltage</span><span class="spec-value">1.5 <span class="unit">kV DC</span></span></div>
+          <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−40 to +120<span class="unit">°C</span></span></div>
+          <div class="spec"><span class="spec-label">Lifespan</span><span class="spec-value">25 <span class="unit">years</span></span></div>
+          <div class="spec"><span class="spec-label">Section</span><span class="spec-value">1.5 – 240 <span class="unit">mm²</span></span></div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;">
+          <span class="tag tag-accent">TUV 2PfG 1169</span>
+          <span class="tag tag-accent">EN 50618</span>
+          <span class="tag">IEC 62930</span>
+          <span class="tag">UL 4703</span>
+          <span class="tag">RoHS</span>
+          <span class="tag">REACH</span>
+          <span class="tag">Halogen-Free</span>
+        </div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary">Request Datasheet
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#downloads" class="btn btn-ghost">Download Specs (PDF)</a>
+        </div>
+      </div>
+
+      <div class="product-hero-visual fade-up fade-up-3">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="jacket" cx="38%" cy="32%" r="65%">
+              <stop offset="0%" stop-color="#3a3a3a"/>
+              <stop offset="100%" stop-color="#0d1117"/>
+            </radialGradient>
+            <radialGradient id="copper" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#F24B51"/>
+              <stop offset="50%" stop-color="#E31E24"/>
+              <stop offset="100%" stop-color="#B3151A"/>
+            </radialGradient>
+            <radialGradient id="strand" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#F24B51"/>
+              <stop offset="100%" stop-color="#B3151A"/>
+            </radialGradient>
+            <radialGradient id="ins" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#1e293b"/>
+              <stop offset="100%" stop-color="#0f172a"/>
+            </radialGradient>
+            <filter id="copperGlow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <!-- Background glow -->
+          <circle cx="200" cy="200" r="190" fill="url(#jacket)" opacity="0.05"/>
+
+          <!-- Outer jacket -->
+          <circle cx="200" cy="200" r="185" fill="url(#jacket)"/>
+          <circle cx="200" cy="200" r="185" fill="none" stroke="#1e2a3d" stroke-width="2"/>
+
+          <!-- Marking ring -->
+          <circle cx="200" cy="200" r="170" fill="none" stroke="#1a2030" stroke-width="0.5"/>
+          <text font-family="JetBrains Mono, monospace" font-size="9" fill="#5a6b80" font-weight="600">
+            <textPath href="#labelPath" startOffset="0">SIECHEM · SOLAR DC · 1.5kV · TUV 2PfG 1169 · EN 50618 · −40°C TO +120°C · </textPath>
+          </text>
+          <defs>
+            <path id="labelPath" d="M 200,200 m -165,0 a 165,165 0 1,1 330,0 a 165,165 0 1,1 -330,0"/>
+          </defs>
+
+          <!-- Insulation -->
+          <circle cx="200" cy="200" r="135" fill="url(#ins)"/>
+          <circle cx="200" cy="200" r="135" fill="none" stroke="#243044" stroke-width="0.5"/>
+
+          <!-- Inner separator -->
+          <circle cx="200" cy="200" r="100" fill="#0a0e16" stroke="#1a2030" stroke-width="0.5"/>
+
+          <!-- Stranded copper conductor (19 strands in concentric layers) -->
+          <g filter="url(#copperGlow)">
+            <!-- Center strand -->
+            <circle cx="200" cy="200" r="14" fill="url(#strand)"/>
+            <!-- Inner ring of 6 -->
+            <g>
+              <circle cx="226" cy="200" r="13" fill="url(#strand)"/>
+              <circle cx="213" cy="222" r="13" fill="url(#strand)"/>
+              <circle cx="187" cy="222" r="13" fill="url(#strand)"/>
+              <circle cx="174" cy="200" r="13" fill="url(#strand)"/>
+              <circle cx="187" cy="178" r="13" fill="url(#strand)"/>
+              <circle cx="213" cy="178" r="13" fill="url(#strand)"/>
+            </g>
+            <!-- Outer ring of 12 strands -->
+            <g>
+              <circle cx="250" cy="200" r="12" fill="url(#copper)"/>
+              <circle cx="244" cy="221" r="12" fill="url(#copper)"/>
+              <circle cx="225" cy="240" r="12" fill="url(#copper)"/>
+              <circle cx="200" cy="247" r="12" fill="url(#copper)"/>
+              <circle cx="175" cy="240" r="12" fill="url(#copper)"/>
+              <circle cx="156" cy="221" r="12" fill="url(#copper)"/>
+              <circle cx="150" cy="200" r="12" fill="url(#copper)"/>
+              <circle cx="156" cy="179" r="12" fill="url(#copper)"/>
+              <circle cx="175" cy="160" r="12" fill="url(#copper)"/>
+              <circle cx="200" cy="153" r="12" fill="url(#copper)"/>
+              <circle cx="225" cy="160" r="12" fill="url(#copper)"/>
+              <circle cx="244" cy="179" r="12" fill="url(#copper)"/>
+            </g>
+          </g>
+
+          <!-- Annotations -->
+          <g font-family="JetBrains Mono, monospace" font-size="10" fill="#94a3b8" font-weight="500">
+            <!-- Outer jacket label -->
+            <line x1="350" y1="60" x2="320" y2="100" stroke="#475569" stroke-width="1"/>
+            <text x="355" y="62" fill="#cbd5e1">XLPE Outer Sheath</text>
+            <text x="355" y="76" font-size="8" fill="#64748b">UV stabilised</text>
+
+            <!-- Insulation -->
+            <line x1="350" y1="180" x2="290" y2="195" stroke="#475569" stroke-width="1"/>
+            <text x="355" y="182" fill="#cbd5e1">E-Beam XLPO</text>
+            <text x="355" y="196" font-size="8" fill="#64748b">Halogen-free</text>
+
+            <!-- Conductor -->
+            <line x1="350" y1="300" x2="240" y2="245" stroke="#475569" stroke-width="1"/>
+            <text x="355" y="302" fill="#cbd5e1">Tinned Copper</text>
+            <text x="355" y="316" font-size="8" fill="#64748b">Class 5 stranded</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs section -->
+  <section class="section section-divider">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" data-tab="specs">Technical Specs</button>
+        <button class="tab" data-tab="construction">Construction</button>
+        <button class="tab" data-tab="variants">Variants</button>
+        <button class="tab" data-tab="applications">Applications</button>
+        <button class="tab" data-tab="compliance">Compliance</button>
+      </div>
+
+      <!-- SPECS -->
+      <div class="tab-panel active" id="panel-specs">
+        <div class="grid grid-2" style="gap:32px;">
+          <div>
+            <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">Electrical</h3>
+            <table class="spec-table">
+              <tr><td>Rated Voltage (DC)</td><td>1.5 kV (Uo / U)</td></tr>
+              <tr><td>Rated Voltage (AC)</td><td>1.0 kV</td></tr>
+              <tr><td>Test Voltage</td><td>6.5 kV DC for 5 min</td></tr>
+              <tr><td>Insulation Resistance</td><td>≥ 1000 MΩ · km at 20°C</td></tr>
+              <tr><td>Min. Bending Radius (stationary)</td><td>4 × D</td></tr>
+              <tr><td>Min. Bending Radius (flexing)</td><td>6 × D</td></tr>
+            </table>
+          </div>
+          <div>
+            <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;">Mechanical & Environmental</h3>
+            <table class="spec-table">
+              <tr><td>Temp (Conductor max.)</td><td>+120 °C continuous</td></tr>
+              <tr><td>Temp (Ambient)</td><td>−40 °C to +90 °C</td></tr>
+              <tr><td>Short Circuit (5s)</td><td>+200 °C</td></tr>
+              <tr><td>UV Resistance</td><td>HD 605/A1 · ISO 4892-2</td></tr>
+              <tr><td>Ozone Resistance</td><td>EN 50396</td></tr>
+              <tr><td>Service Life</td><td>≥ 25 years</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONSTRUCTION -->
+      <div class="tab-panel" id="panel-construction">
+        <div class="grid grid-2" style="gap:32px; align-items:start;">
+          <div>
+            <h3 class="section-title" style="font-size:24px; margin-bottom:14px;">Layered for the Long Haul</h3>
+            <p style="color:var(--text-muted); margin-bottom:24px;">Three engineered layers: Class 5 stranded tinned copper conductor, electron-beam crosslinked polyolefin insulation, and UV-stabilised XLPE outer sheath. Each layer optimised for its job.</p>
+            <ol style="list-style:none; counter-reset:layer; display:flex; flex-direction:column; gap:14px;">
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+                <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">01</span>
+                <div><h4 style="font-size:15px; font-weight:700;">Tinned Copper Conductor</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">Class 5 flexible stranded, tinned to IEC 60228. Optimised for low DC resistance and corrosion resistance.</p></div>
+              </li>
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+                <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">02</span>
+                <div><h4 style="font-size:15px; font-weight:700;">E-Beam XLPO Insulation</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">Electron-beam crosslinked polyolefin. Thermal, chemical, mechanical resistance well beyond standard PVC.</p></div>
+              </li>
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+                <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">03</span>
+                <div><h4 style="font-size:15px; font-weight:700;">XLPE Outer Sheath</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">UV-stabilised, halogen-free, fire-retardant. Cyclical thermal endurance to +120 °C continuous, +200 °C short-circuit.</p></div>
+              </li>
+            </ol>
+          </div>
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px;">
+            <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">Test Battery</h3>
+            <table class="spec-table">
+              <tr><td>Tensile Strength</td><td>≥ 10 N/mm²</td></tr>
+              <tr><td>Elongation at Break</td><td>≥ 200%</td></tr>
+              <tr><td>Hot Set (200°C, 0.2N/mm²)</td><td>≤ 100% elongation</td></tr>
+              <tr><td>Cold Bend (−40°C)</td><td>Pass · No cracks</td></tr>
+              <tr><td>Acid / Alkali Resistance</td><td>ISO 175 / TUV 2PfG 1169</td></tr>
+              <tr><td>Damp Heat (1000h, 85°C, 85%RH)</td><td>Pass</td></tr>
+              <tr><td>Flame Spread</td><td>IEC 60332-1 · UL VW-1</td></tr>
+              <tr><td>Smoke Density</td><td>EN 61034 · ≥ 70%</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VARIANTS -->
+      <div class="tab-panel" id="panel-variants">
+        <p style="color:var(--text-muted); margin-bottom:18px;">All variants available in red, black, blue jacket. Custom colours on request for orders ≥ 1000 m.</p>
+        <div style="overflow-x:auto;">
+          <table class="variant-table">
+            <thead>
+              <tr>
+                <th>Part No.</th>
+                <th>Cross Section</th>
+                <th>Conductor Strands</th>
+                <th>Outer Dia.</th>
+                <th>DC Resist. (20°C)</th>
+                <th>Ampacity (60°C)</th>
+                <th>Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="part-no">SC-DC-150</td><td>1.5 mm²</td><td>30 / 0.25</td><td>4.5 mm</td><td>14.0 Ω/km</td><td>30 A</td><td>32 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-250</td><td>2.5 mm²</td><td>50 / 0.25</td><td>5.1 mm</td><td>8.21 Ω/km</td><td>41 A</td><td>49 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-400</td><td>4.0 mm²</td><td>56 / 0.30</td><td>5.9 mm</td><td>5.09 Ω/km</td><td>55 A</td><td>72 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-600</td><td>6.0 mm²</td><td>84 / 0.30</td><td>6.7 mm</td><td>3.39 Ω/km</td><td>70 A</td><td>98 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-1000</td><td>10 mm²</td><td>80 / 0.40</td><td>8.0 mm</td><td>1.95 Ω/km</td><td>98 A</td><td>153 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-1600</td><td>16 mm²</td><td>126 / 0.40</td><td>9.2 mm</td><td>1.24 Ω/km</td><td>132 A</td><td>231 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-2500</td><td>25 mm²</td><td>196 / 0.40</td><td>11.1 mm</td><td>0.795 Ω/km</td><td>176 A</td><td>351 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-3500</td><td>35 mm²</td><td>276 / 0.40</td><td>12.4 mm</td><td>0.565 Ω/km</td><td>218 A</td><td>479 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-5000</td><td>50 mm²</td><td>396 / 0.40</td><td>14.0 mm</td><td>0.393 Ω/km</td><td>264 A</td><td>668 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-7000</td><td>70 mm²</td><td>360 / 0.50</td><td>15.8 mm</td><td>0.277 Ω/km</td><td>329 A</td><td>918 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-9500</td><td>95 mm²</td><td>475 / 0.50</td><td>18.0 mm</td><td>0.210 Ω/km</td><td>397 A</td><td>1224 kg/km</td></tr>
+              <tr><td class="part-no">SC-DC-12000</td><td>120 mm²</td><td>608 / 0.50</td><td>20.1 mm</td><td>0.164 Ω/km</td><td>460 A</td><td>1542 kg/km</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- APPLICATIONS -->
+      <div class="tab-panel" id="panel-applications">
+        <div class="grid grid-3">
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="1"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="14" x2="21" y2="14"/><line x1="7" y1="6" x2="7" y2="18"/><line x1="12" y1="6" x2="12" y2="18"/><line x1="17" y1="6" x2="17" y2="18"/></svg></div>
+            <h4>Utility-Scale Solar Farms</h4>
+            <p>String wiring between PV modules and combiner boxes in MW-scale ground-mount installations.</p>
+          </div>
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21 L21 21"/><path d="M3 12 L12 4 L21 12"/><line x1="6" y1="14" x2="18" y2="14"/><line x1="6" y1="18" x2="18" y2="18"/></svg></div>
+            <h4>Rooftop Commercial PV</h4>
+            <p>Industrial and commercial rooftop systems requiring fire-rated, UV-stable cabling.</p>
+          </div>
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="12" rx="1"/><circle cx="9" cy="14" r="2"/><circle cx="15" cy="14" r="2"/><path d="M9 8 V5 L15 5 V8"/></svg></div>
+            <h4>Battery Storage Systems</h4>
+            <p>Lithium-ion ESS wiring with high temperature endurance and abrasion resistance.</p>
+          </div>
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 L12 8"/><path d="M12 22 L12 16"/><circle cx="12" cy="12" r="4"/><path d="M22 12 L18 12"/><path d="M2 12 L6 12"/></svg></div>
+            <h4>Off-Grid / Hybrid Systems</h4>
+            <p>Remote installations with telecom towers, water pumping, irrigation and rural electrification.</p>
+          </div>
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12 Q12 4 21 12"/><circle cx="12" cy="14" r="2"/><line x1="12" y1="16" x2="12" y2="20"/></svg></div>
+            <h4>Floating Solar (Floatovoltaics)</h4>
+            <p>Reservoir and marine PV installations with enhanced moisture and salt-water resistance.</p>
+          </div>
+          <div class="application-card">
+            <div class="icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="14" x2="16" y2="14"/></svg></div>
+            <h4>EV Charging Infrastructure</h4>
+            <p>Solar-powered EV charging stations with DC fast-charge connections.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE -->
+      <div class="tab-panel" id="panel-compliance">
+        <p style="color:var(--text-muted); margin-bottom:24px;">Tested and certified to global solar cable standards. Full compliance documentation available on request.</p>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="tag tag-accent" style="margin-bottom:10px;">PRIMARY</div>
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">TUV 2PfG 1169 / 08.2007</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">German solar cable specification. Mandatory for European installations. Includes 1500h UV ageing, hot-set, mechanical strength, and 3rd-party witness testing.</p>
+          </div>
+          <div class="card">
+            <div class="tag tag-accent" style="margin-bottom:10px;">PRIMARY</div>
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">EN 50618:2014</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">European Standard for low-voltage cables for photovoltaic systems. Harmonised across EU member states.</p>
+          </div>
+          <div class="card">
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">IEC 62930:2017</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">International equivalent. Required for IECEE CB scheme markets including India, Middle East, SE Asia.</p>
+          </div>
+          <div class="card">
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">UL 4703</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">US/Canada standard for photovoltaic wire and cable. Required for NEC code-compliant installations.</p>
+          </div>
+          <div class="card">
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">RoHS 2 / RoHS 3</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">EU Directive 2011/65/EU + 2015/863/EU. Restriction of hazardous substances in electrical equipment.</p>
+          </div>
+          <div class="card">
+            <h4 style="font-size:16px; font-weight:700; margin-bottom:6px;">REACH</h4>
+            <p style="font-size:13.5px; color:var(--text-muted);">EU Regulation 1907/2006. SVHC declaration on file. No restricted substances above 0.1% w/w.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads -->
+  <section class="section section-soft" id="downloads">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Downloads</p>
+        <h2 class="section-title">Datasheets &amp; Documents</h2>
+      </div>
+      <div class="grid grid-3">
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>Technical Datasheet</h4><p>PDF · 1.4 MB · v2025.1</p></div>
+        </a>
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>TUV Certificate</h4><p>PDF · 320 KB</p></div>
+        </a>
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>Installation Guide</h4><p>PDF · 2.1 MB</p></div>
+        </a>
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>Test Reports</h4><p>PDF · 4.8 MB · Type test</p></div>
+        </a>
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>RoHS / REACH Declaration</h4><p>PDF · 280 KB</p></div>
+        </a>
+        <a href="#" class="download-card">
+          <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg></div>
+          <div class="doc-meta"><h4>3D CAD Models</h4><p>STEP / IGES · ZIP</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related products -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Related Products</p>
+        <h2 class="section-title">You Might Also Need</h2>
+      </div>
+      <div class="grid grid-4">
+        <a href="product-detail.html" class="related-card">
+          <div class="icon"><svg viewBox="0 0 22 22" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="5"/><line x1="11" y1="2" x2="11" y2="5"/><line x1="11" y1="17" x2="11" y2="20"/></svg></div>
+          <div><h4>Wind Energy Cables</h4><p>DNV-GL · IEC 60228</p></div>
+        </a>
+        <a href="product-detail.html" class="related-card">
+          <div class="icon"><svg viewBox="0 0 22 22" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="16" height="10" rx="1"/></svg></div>
+          <div><h4>Battery Cables</h4><p>UL 1283 · SAE J1127</p></div>
+        </a>
+        <a href="product-detail.html" class="related-card">
+          <div class="icon"><svg viewBox="0 0 22 22" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 L11 4 L19 11"/><line x1="11" y1="4" x2="11" y2="18"/></svg></div>
+          <div><h4>Building Wires</h4><p>IS 694 · UL 44</p></div>
+        </a>
+        <a href="product-detail.html" class="related-card">
+          <div class="icon"><svg viewBox="0 0 22 22" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/></svg></div>
+          <div><h4>Bare Copper Conductor</h4><p>IS 8130 · IEC 60228</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo"><span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>SIECHEM</a>
+          <p>India's leading specialty wires &amp; cables manufacturer. Engineering precision for the world's most critical systems since 2002.</p>
+        </div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">By Segment</a></li><li><a href="products.html">By Standard</a></li><li><a href="product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="tech-support.html">AWG Converter</a></li><li><a href="tech-support.html">Voltage Drop</a></li><li><a href="tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="customers.html">Customers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

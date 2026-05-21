@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Support — Siechem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .calc-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; }
+    @media (max-width: 980px) { .calc-grid { grid-template-columns: 1fr; } }
+
+    .calc-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    .calc-tabs { display:flex; gap:4px; background:rgba(255,255,255,0.04); border-radius:10px; padding:4px; margin-bottom:24px; width:fit-content; }
+    .calc-tab { padding:9px 18px; border-radius:7px; border:none; background:transparent; color:var(--text-faint); font-size:13px; font-weight:600; cursor:pointer; transition:all .15s; }
+    .calc-tab.active { background: var(--accent); color: #fff; }
+
+    .calc-field { margin-bottom: 16px; }
+    .calc-result-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:12px; margin-top:24px; }
+    .result-card { padding:16px 18px; background:var(--bg-soft); border:1px solid var(--border); border-radius:10px; }
+    .result-card .label { font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint); margin-bottom:6px; }
+    .result-card .value { font-size:24px; font-weight:800; letter-spacing:-.5px; }
+    .result-card .unit { font-size:12.5px; font-weight:500; color:var(--text-faint); margin-left:3px; }
+    .result-card .sub { font-size:11.5px; color:var(--text-dim); margin-top:4px; font-family:var(--mono); }
+
+    .tool-card {
+      padding: 22px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.15s;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .tool-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-2px); }
+    .tool-card .tool-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, rgba(227,30,36,0.16), rgba(227,30,36,0.04));
+      border: 1px solid var(--accent-border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent-2);
+    }
+    .tool-card h3 { font-size:15px; font-weight:700; }
+    .tool-card p { font-size:13px; color:var(--text-muted); }
+
+    .seg-btn-group { display:flex; border-radius:8px; overflow:hidden; border:1px solid var(--border); }
+    .seg-btn-group button { flex:1; padding:11px 14px; background:rgba(255,255,255,0.03); color:var(--text-faint); border:none; font:inherit; font-size:13px; font-weight:600; cursor:pointer; transition:all .15s; }
+    .seg-btn-group button.active { background: var(--accent); color:#fff; }
+
+    .pass-banner {
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13.5px;
+      display: flex; align-items: center; gap: 10px;
+      margin-top: 18px;
+    }
+    .pass-good { background: rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.25); color:#86efac; }
+    .pass-warn { background: rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.25); color:#fcd34d; }
+    .pass-bad { background: rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.25); color:#fca5a5; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo">
+        <span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        SIECHEM
+      </a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="tech-support.html" class="nav-link active">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Request Quote
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><span>Tech Support</span></div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Engineering Desk</div>
+          <h1 class="page-title">Tools for<br/><em>Engineers.</em></h1>
+          <p class="page-lede">25+ calculators, lookup tables and white papers used daily by application engineers at Siechem and our customers. Cable selection, sizing, compliance and lifetime estimation — all in one place.</p>
+        </div>
+        <div class="fade-up fade-up-3" style="background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; padding:24px;">
+          <div style="display:flex; justify-content:space-between; gap:16px;">
+            <div class="spec"><span class="spec-label">Calculators</span><span class="spec-value">14</span></div>
+            <div class="spec"><span class="spec-label">Reference Tables</span><span class="spec-value">9</span></div>
+            <div class="spec"><span class="spec-label">White Papers</span><span class="spec-value">7</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Calculator -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Featured Tool</p>
+        <h2 class="section-title">AWG ↔ mm² &amp; Voltage Drop</h2>
+        <p class="section-sub">Convert American Wire Gauge to metric, check current capacity and verify voltage drop against IEC/BS limits — instantly.</p>
+      </div>
+
+      <div class="calc-panel">
+        <div class="calc-tabs">
+          <button class="calc-tab active" data-calc="awg">AWG Converter</button>
+          <button class="calc-tab" data-calc="vd">Voltage Drop</button>
+          <button class="calc-tab" data-calc="ref">Quick Reference</button>
+        </div>
+
+        <!-- AWG -->
+        <div class="calc-content" id="content-awg">
+          <div class="calc-grid">
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div class="field">
+                <label class="label">AWG Gauge</label>
+                <select class="select" id="awgSel">
+                  <option value="30">AWG 30</option><option value="28">AWG 28</option>
+                  <option value="26">AWG 26</option><option value="24">AWG 24</option>
+                  <option value="22" selected>AWG 22</option><option value="20">AWG 20</option>
+                  <option value="18">AWG 18</option><option value="16">AWG 16</option>
+                  <option value="14">AWG 14</option><option value="12">AWG 12</option>
+                  <option value="10">AWG 10</option><option value="8">AWG 8</option>
+                  <option value="6">AWG 6</option><option value="4">AWG 4</option>
+                  <option value="2">AWG 2</option><option value="1">AWG 1</option>
+                  <option value="1/0">AWG 1/0</option><option value="2/0">AWG 2/0</option>
+                  <option value="3/0">AWG 3/0</option><option value="4/0">AWG 4/0</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="label">Conductor Material</label>
+                <div class="seg-btn-group" id="matAwg">
+                  <button class="active" data-v="cu">Copper</button>
+                  <button data-v="al">Aluminium</button>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Temperature (°C)</label>
+                <input class="input" type="number" id="awgTemp" value="20" min="-40" max="200">
+              </div>
+            </div>
+            <div>
+              <div class="calc-result-grid" id="awgResults"></div>
+              <div style="background:var(--bg-soft); border:1px solid var(--border); border-left:3px solid var(--accent); padding:14px 18px; border-radius:8px; margin-top:18px; font-size:13px; color:var(--text-muted);">
+                <strong style="color:var(--text);">IEC equivalent:</strong> <span id="iecEq">1.5 mm² (Class 5 stranded)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voltage Drop -->
+        <div class="calc-content" id="content-vd" style="display:none;">
+          <div class="calc-grid">
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+                <div class="field"><label class="label">Voltage (V)</label><input class="input" type="number" id="vd_v" value="230"></div>
+                <div class="field"><label class="label">Current (A)</label><input class="input" type="number" id="vd_i" value="16" step="0.5"></div>
+                <div class="field"><label class="label">Length (m)</label><input class="input" type="number" id="vd_l" value="30"></div>
+                <div class="field"><label class="label">Section (mm²)</label>
+                  <select class="select" id="vd_s">
+                    <option>0.5</option><option>0.75</option><option>1.0</option><option>1.5</option>
+                    <option selected>2.5</option><option>4</option><option>6</option><option>10</option>
+                    <option>16</option><option>25</option><option>35</option><option>50</option>
+                    <option>70</option><option>95</option><option>120</option><option>150</option>
+                    <option>185</option><option>240</option><option>300</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Conductor</label>
+                <div class="seg-btn-group" id="matVd">
+                  <button class="active" data-v="cu">Copper</button>
+                  <button data-v="al">Aluminium</button>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Circuit Type</label>
+                <div class="seg-btn-group" id="phVd">
+                  <button class="active" data-v="1">Single Phase</button>
+                  <button data-v="3">Three Phase</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="calc-result-grid" id="vdResults"></div>
+              <div id="vdBanner" class="pass-banner pass-good">Compliance status</div>
+              <p style="font-size:11.5px; color:var(--text-dim); margin-top:12px; font-family:var(--mono);">IEC/BS limits: ≤3% lighting · ≤5% power</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reference table -->
+        <div class="calc-content" id="content-ref" style="display:none;">
+          <table class="spec-table" style="font-size:13.5px;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-strong);">
+                <td style="font-family:var(--mono); font-size:11px;">AWG</td>
+                <td style="font-family:var(--mono); font-size:11px;">Diameter (mm)</td>
+                <td style="font-family:var(--mono); font-size:11px;">Section (mm²)</td>
+                <td style="font-family:var(--mono); font-size:11px;">Cu Resist. Ω/km</td>
+                <td style="font-family:var(--mono); font-size:11px;">Ampacity (A)</td>
+              </tr>
+            </thead>
+            <tbody id="refBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Tools -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Full Toolkit</p>
+        <h2 class="section-title">All Calculators &amp; Tools</h2>
+      </div>
+      <div class="grid grid-3" id="toolGrid"></div>
+    </div>
+  </section>
+
+  <!-- White Papers -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Knowledge Base</p>
+        <h2 class="section-title">White Papers &amp; Publications</h2>
+      </div>
+      <div class="grid grid-2">
+        <a href="#" class="card card-hover" style="display:flex; gap:18px; align-items:center;">
+          <div style="width:60px; height:78px; border-radius:8px; background:linear-gradient(135deg, rgba(227,30,36,0.2), rgba(227,30,36,0.04)); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="var(--accent-2)" stroke-width="1.6"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg>
+          </div>
+          <div>
+            <div class="tag tag-accent" style="margin-bottom:8px;">WHITE PAPER</div>
+            <h3 style="font-size:17px; font-weight:700; margin-bottom:4px;">Electron-Beam Crosslinking</h3>
+            <p style="font-size:13px; color:var(--text-muted);">Why E-beam XLPE/XLPO outperforms thermally-cured competitors in flex life, hot-set and chemical resistance.</p>
+          </div>
+        </a>
+        <a href="#" class="card card-hover" style="display:flex; gap:18px; align-items:center;">
+          <div style="width:60px; height:78px; border-radius:8px; background:linear-gradient(135deg, rgba(227,30,36,0.2), rgba(227,30,36,0.04)); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="var(--accent-2)" stroke-width="1.6"><path d="M14 2 L20 8 L20 22 L4 22 L4 2 L14 2 Z"/><path d="M14 2 L14 8 L20 8"/></svg>
+          </div>
+          <div>
+            <div class="tag tag-accent" style="margin-bottom:8px;">WHITE PAPER</div>
+            <h3 style="font-size:17px; font-weight:700; margin-bottom:4px;">Accelerated Ageing &amp; Cable Life</h3>
+            <p style="font-size:13px; color:var(--text-muted);">How Arrhenius modelling and high-temperature endurance testing predict 25-year service life.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo"><span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>SIECHEM</a>
+          <p>India's leading specialty wires &amp; cables manufacturer. Engineering precision since 2002.</p>
+        </div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">By Segment</a></li><li><a href="products.html">By Standard</a></li><li><a href="product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="tech-support.html">AWG Converter</a></li><li><a href="tech-support.html">Voltage Drop</a></li><li><a href="tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="customers.html">Customers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const AWG_TABLE = {
+      '30':{d:0.255,a:0.0509,rcu:338.6,ral:555.5,amp:0.5},
+      '28':{d:0.321,a:0.0804,rcu:212.9,ral:349.5,amp:0.8},
+      '26':{d:0.405,a:0.1288,rcu:133.9,ral:219.7,amp:1.3},
+      '24':{d:0.511,a:0.2047,rcu:84.22,ral:138.2,amp:2.1},
+      '22':{d:0.644,a:0.3247,rcu:53.46,ral:87.7,amp:3.3},
+      '20':{d:0.812,a:0.5176,rcu:33.56,ral:55.1,amp:5.3},
+      '18':{d:1.024,a:0.8231,rcu:21.14,ral:34.7,amp:7.5},
+      '16':{d:1.291,a:1.307,rcu:13.30,ral:21.8,amp:13},
+      '14':{d:1.628,a:2.081,rcu:8.452,ral:13.9,amp:18},
+      '12':{d:2.053,a:3.309,rcu:5.315,ral:8.73,amp:25},
+      '10':{d:2.588,a:5.261,rcu:3.338,ral:5.47,amp:35},
+      '8':{d:3.264,a:8.367,rcu:2.099,ral:3.45,amp:46},
+      '6':{d:4.115,a:13.30,rcu:1.320,ral:2.17,amp:65},
+      '4':{d:5.189,a:21.15,rcu:0.829,ral:1.36,amp:85},
+      '2':{d:6.544,a:33.62,rcu:0.521,ral:0.856,amp:115},
+      '1':{d:7.348,a:42.41,rcu:0.413,ral:0.678,amp:130},
+      '1/0':{d:8.252,a:53.49,rcu:0.327,ral:0.537,amp:150},
+      '2/0':{d:9.266,a:67.43,rcu:0.260,ral:0.426,amp:175},
+      '3/0':{d:10.40,a:85.01,rcu:0.206,ral:0.338,amp:200},
+      '4/0':{d:11.68,a:107.2,rcu:0.163,ral:0.268,amp:230},
+    };
+
+    // ── AWG calculator ──
+    let awgMat = 'cu';
+    function renderAwg() {
+      const g = document.getElementById('awgSel').value;
+      const t = parseFloat(document.getElementById('awgTemp').value) || 20;
+      const d = AWG_TABLE[g];
+      // Temp coefficient ~0.00393 / °C for Cu, 0.00403 for Al
+      const tempCoef = awgMat === 'cu' ? 0.00393 : 0.00403;
+      const r0 = awgMat === 'cu' ? d.rcu : d.ral;
+      const r = r0 * (1 + tempCoef * (t - 20));
+      const iec = d.a < 0.5 ? 'Custom' : d.a < 0.8 ? '0.5 mm²' : d.a < 1.2 ? '0.75-1.0 mm²' : d.a < 2 ? '1.5 mm²' : d.a < 3 ? '2.5 mm²' : d.a < 5 ? '4.0 mm²' : d.a < 8 ? '6.0 mm²' : d.a < 12 ? '10 mm²' : d.a < 22 ? '16-25 mm²' : d.a < 40 ? '35 mm²' : d.a < 60 ? '50 mm²' : '70+ mm²';
+      document.getElementById('iecEq').textContent = iec + ' (Class 5 stranded)';
+      document.getElementById('awgResults').innerHTML = `
+        <div class="result-card"><div class="label">Diameter</div><div class="value">${d.d.toFixed(3)}<span class="unit">mm</span></div><div class="sub">${(d.d/25.4).toFixed(4)} in</div></div>
+        <div class="result-card"><div class="label">Cross-Section</div><div class="value">${d.a < 1 ? d.a.toFixed(4) : d.a.toFixed(2)}<span class="unit">mm²</span></div><div class="sub">${(d.a * 1.9735).toFixed(2)} kcmil</div></div>
+        <div class="result-card"><div class="label">Resistance</div><div class="value">${r.toFixed(2)}<span class="unit">Ω/km</span></div><div class="sub">${awgMat==='cu'?'Copper':'Aluminium'} @ ${t}°C</div></div>
+        <div class="result-card"><div class="label">Ampacity</div><div class="value">${d.amp}<span class="unit">A</span></div><div class="sub">~60°C, free air</div></div>
+      `;
+    }
+    document.getElementById('awgSel').addEventListener('change', renderAwg);
+    document.getElementById('awgTemp').addEventListener('input', renderAwg);
+    document.querySelectorAll('#matAwg button').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('#matAwg button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active'); awgMat = b.dataset.v; renderAwg();
+    }));
+
+    // ── Voltage drop ──
+    let vdMat = 'cu'; let vdPh = '1';
+    function renderVd() {
+      const V = parseFloat(document.getElementById('vd_v').value)||1;
+      const I = parseFloat(document.getElementById('vd_i').value)||0;
+      const L = parseFloat(document.getElementById('vd_l').value)||1;
+      const S = parseFloat(document.getElementById('vd_s').value)||1;
+      const rho = vdMat==='cu' ? 0.0172 : 0.0282;
+      const factor = vdPh==='1' ? 2 : Math.sqrt(3);
+      const vd = (factor * I * rho * L) / S;
+      const pct = (vd / V) * 100;
+      const excellent = pct <= 3, ok = pct <= 5;
+      document.getElementById('vdResults').innerHTML = `
+        <div class="result-card"><div class="label">Voltage Drop</div><div class="value">${vd.toFixed(2)}<span class="unit">V</span></div></div>
+        <div class="result-card"><div class="label">% Drop</div><div class="value" style="color:${excellent?'#86efac':ok?'#fcd34d':'#fca5a5'}">${pct.toFixed(2)}<span class="unit">%</span></div></div>
+        <div class="result-card"><div class="label">Voltage at Load</div><div class="value">${(V-vd).toFixed(1)}<span class="unit">V</span></div></div>
+        <div class="result-card"><div class="label">Power Loss</div><div class="value">${(vd*I).toFixed(1)}<span class="unit">W</span></div></div>
+      `;
+      const b = document.getElementById('vdBanner');
+      b.className = 'pass-banner ' + (excellent?'pass-good':ok?'pass-warn':'pass-bad');
+      b.innerHTML = (excellent?'✓ ':ok?'⚠ ':'✗ ') + (excellent?'Excellent — within all limits':ok?'Acceptable for power circuits':'Exceeds 5% limit — increase section');
+    }
+    ['vd_v','vd_i','vd_l','vd_s'].forEach(id => document.getElementById(id).addEventListener('input', renderVd));
+    document.querySelectorAll('#matVd button').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#matVd button').forEach(x => x.classList.remove('active')); b.classList.add('active'); vdMat = b.dataset.v; renderVd(); }));
+    document.querySelectorAll('#phVd button').forEach(b => b.addEventListener('click', () => { document.querySelectorAll('#phVd button').forEach(x => x.classList.remove('active')); b.classList.add('active'); vdPh = b.dataset.v; renderVd(); }));
+
+    // ── Reference table ──
+    document.getElementById('refBody').innerHTML = Object.entries(AWG_TABLE).map(([g, d]) => `
+      <tr><td style="color:var(--accent-2); font-family:var(--mono); font-weight:600;">${g}</td>
+      <td>${d.d.toFixed(3)}</td><td>${d.a < 1 ? d.a.toFixed(4) : d.a.toFixed(2)}</td>
+      <td>${d.rcu.toFixed(2)}</td><td>${d.amp}</td></tr>
+    `).join('');
+
+    // ── Tab switching ──
+    document.querySelectorAll('.calc-tab').forEach(t => t.addEventListener('click', () => {
+      document.querySelectorAll('.calc-tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      ['awg','vd','ref'].forEach(id => document.getElementById('content-'+id).style.display = id===t.dataset.calc?'block':'none');
+    }));
+
+    // ── Tools list ──
+    const TOOLS = [
+      { name: 'AWG ↔ mm² Conversion', desc: 'Convert wire gauge between American and metric systems with full resistance & ampacity data.', icon: 'M3 12 L21 12' },
+      { name: 'Voltage Drop Calculation', desc: 'Verify circuit voltage drop against IEC/BS limits for power and lighting.', icon: 'M4 4 L20 20 M4 20 L20 4' },
+      { name: 'Current Carrying Capacity', desc: 'Ampacity tables for different installation methods, ambient temperatures and grouping.', icon: 'M12 2 L12 22' },
+      { name: 'Conductor Resistance', desc: 'DC and AC resistance at any temperature for Cu, Al, tinned and silver-plated.', icon: 'M3 8 L21 8 M3 16 L21 16' },
+      { name: 'Insulation Resistance', desc: 'Estimate insulation resistance from material parameters and cable geometry.', icon: 'M5 5 L19 5 L19 19 L5 19 Z' },
+      { name: 'Capacitance Calculation', desc: 'Per-unit-length capacitance of coaxial, twisted-pair and bunched cables.', icon: 'M4 8 L20 8 M4 16 L20 16' },
+      { name: 'Inductance Calculation', desc: 'Self and mutual inductance for single and multi-conductor cable geometries.', icon: 'M3 18 Q9 6 15 18 Q21 30 27 18' },
+      { name: 'Reactance Calculation', desc: 'AC reactance for cable system design and harmonic analysis.', icon: 'M3 12 L9 6 L15 18 L21 12' },
+      { name: 'Impedance Calculation', desc: 'Characteristic impedance for signal and high-frequency cables.', icon: 'M3 12 L21 12 M12 3 L12 21' },
+      { name: 'Electrical Losses', desc: 'Joule heating and dielectric loss calculation for cable system economics.', icon: 'M3 12 L8 6 L14 18 L21 6' },
+      { name: 'Short Circuit Temp Rating', desc: 'Conductor temperature rise under fault current using IEC adiabatic formula.', icon: 'M12 2 L4 14 L12 14 L8 22 L20 10 L12 10 L16 2 Z' },
+      { name: 'Braid Shield Calculation', desc: 'Shield coverage, optical fill and DC resistance for braided shields.', icon: 'M4 8 L20 16 M20 8 L4 16' },
+      { name: 'Cable Life Calculation', desc: 'Arrhenius modelling for projected cable service life under thermal stress.', icon: 'M3 12 A9 9 0 1 0 21 12 A9 9 0 1 0 3 12' },
+      { name: 'Derating Factors', desc: 'Multi-conductor grouping, ambient temperature and depth-of-burial derating.', icon: 'M3 6 L21 6 M3 12 L18 12 M3 18 L15 18' },
+      { name: 'Color Code Chart', desc: 'IEC, BS, IS, MIL and SAE conductor color codes — multi-pair to multi-core.', icon: 'M3 8 L7 8 M9 8 L13 8 M15 8 L19 8 M3 14 L7 14 M9 14 L13 14 M15 14 L19 14' },
+      { name: 'PTFE/FEP/PFA/ETFE Compare', desc: 'Side-by-side technical comparison of fluoropolymer insulations.', icon: 'M5 5 L19 5 L19 11 L5 11 Z M5 13 L19 13 L19 19 L5 19 Z' },
+      { name: 'Toxicity Index', desc: 'Smoke toxicity index calculation for LSZH cable compliance.', icon: 'M12 4 C8 8 6 12 6 15 A6 6 0 0 0 18 15 C18 12 16 8 12 4 Z' },
+      { name: 'Cable Size for Automotive', desc: 'Automotive-specific sizing for 12V/24V/48V/800V vehicle electrical systems.', icon: 'M3 14 L5 8 L19 8 L21 14 L21 18 L3 18 Z' },
+      { name: 'Cable Size for Solar PV', desc: 'String sizing tool: voltage drop, NEC code compliance, multi-string aggregation.', icon: 'M12 2 L12 6 M12 18 L12 22 M2 12 L6 12 M18 12 L22 12 M5 5 L7 7 M17 17 L19 19' },
+      { name: 'NFPA Electrical Safety', desc: 'Quick reference for NFPA 70 (NEC) and NFPA 79 industrial machinery wiring.', icon: 'M12 2 L4 22 L20 22 Z M12 9 L12 14 M12 17 L12 18' },
+      { name: 'Cable Installation Procedure', desc: 'Pull tension, sidewall pressure, jam ratio for cable pulling.', icon: 'M3 12 L21 12 M7 8 L7 16' },
+      { name: 'Cable Handling System', desc: 'Drum size, payout speed, max pull force tables for site logistics.', icon: 'M5 8 L19 8 L19 16 L5 16 Z M9 4 L9 20 M15 4 L15 20' },
+      { name: 'Packaging of Wires & Cables', desc: 'Carton, drum and reel packing specs for shipping volume and cost.', icon: 'M4 4 L20 4 L20 20 L4 20 Z M4 4 L20 20 M20 4 L4 20' },
+    ];
+    document.getElementById('toolGrid').innerHTML = TOOLS.map(t => `
+      <a href="#" class="tool-card">
+        <div class="tool-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="${t.icon}"/></svg></div>
+        <h3>${t.name}</h3>
+        <p>${t.desc}</p>
+      </a>
+    `).join('');
+
+    renderAwg(); renderVd();
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications — Siechem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .cert-card {
+      padding: 26px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: all 0.18s;
+      cursor: pointer;
+    }
+    .cert-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-3px); }
+    .cert-card .badge {
+      width: 56px; height: 56px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(227,30,36,0.16), rgba(227,30,36,0.04));
+      border: 1px solid var(--accent-border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--accent-2);
+      margin-bottom: 18px;
+      text-align: center;
+      line-height: 1.1;
+    }
+    .cert-card h3 { font-size:16px; font-weight:700; margin-bottom:6px; letter-spacing:-0.2px; }
+    .cert-card .scope { font-size:11.5px; font-family:var(--mono); color:var(--accent-2); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:12px; }
+    .cert-card p { font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:12px; }
+    .cert-card .meta { font-size:11.5px; color:var(--text-faint); font-family:var(--mono); padding-top:12px; border-top:1px solid var(--border); }
+
+    .compliance-band {
+      padding: 36px 40px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 980px) { .compliance-band { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo"><span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>SIECHEM</a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="tech-support.html" class="nav-link">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link active">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Request Quote
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><span>Certifications</span></div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Compliance &amp; Quality</div>
+          <h1 class="page-title">Certified by<br/>the <em>People</em><br/>Who Set the Bar.</h1>
+          <p class="page-lede">Every product line is third-party tested and certified to the standards your project specifies. Full documentation available on request — datasheets, test reports, declarations of conformity.</p>
+        </div>
+        <div class="fade-up fade-up-3" style="background:var(--bg-soft); border:1px solid var(--border); border-radius:14px; padding:24px;">
+          <div style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+            <div class="spec"><span class="spec-label">Active Certs</span><span class="spec-value">24<span class="unit">+</span></span></div>
+            <div class="spec"><span class="spec-label">Test Labs</span><span class="spec-value">NABL</span></div>
+            <div class="spec"><span class="spec-label">Countries</span><span class="spec-value">50<span class="unit">+</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification grid -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Active Certifications</p>
+        <h2 class="section-title">Quality Management &amp; Product Approvals</h2>
+      </div>
+
+      <h3 style="font-family:var(--mono); font-size:12px; color:var(--text-faint); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;">Quality Management Systems</h3>
+      <div class="grid grid-3" style="margin-bottom:48px;">
+        <div class="cert-card"><div class="badge">ISO<br/>9001</div><div class="scope">QMS</div><h3>ISO 9001:2015</h3><p>Quality management system. Annual surveillance audits by TUV Rheinland.</p><div class="meta">Valid: 2024–2027 · Cert #IN-QMS-2024-0421</div></div>
+        <div class="cert-card"><div class="badge">ISO<br/>14001</div><div class="scope">EMS</div><h3>ISO 14001:2015</h3><p>Environmental management system. Continuous environmental impact reduction.</p><div class="meta">Valid: 2024–2027 · Cert #IN-EMS-2024-0422</div></div>
+        <div class="cert-card"><div class="badge">ISO<br/>45001</div><div class="scope">OHS</div><h3>ISO 45001:2018</h3><p>Occupational health &amp; safety. Worker safety and workplace risk management.</p><div class="meta">Valid: 2024–2027 · Cert #IN-OHS-2024-0423</div></div>
+        <div class="cert-card"><div class="badge">IATF<br/>16949</div><div class="scope">AUTO</div><h3>IATF 16949:2016</h3><p>Automotive industry quality management. Required by Tier 1 auto OEMs.</p><div class="meta">Valid: 2024–2026</div></div>
+      </div>
+
+      <h3 style="font-family:var(--mono); font-size:12px; color:var(--text-faint); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:20px;">Product Certifications &amp; Approvals</h3>
+      <div class="grid grid-3">
+        <div class="cert-card"><div class="badge">TUV</div><div class="scope">Solar / EU</div><h3>TUV 2PfG 1169</h3><p>Solar DC cables. TUV Rheinland Germany.</p><div class="meta">EN 50618 harmonised · Valid since 2014</div></div>
+        <div class="cert-card"><div class="badge">UL</div><div class="scope">North America</div><h3>UL Listed</h3><p>UL 44 building wire, UL 4703 PV wire, UL 1283 battery, UL 758 appliance.</p><div class="meta">File #E519847 · Active</div></div>
+        <div class="cert-card"><div class="badge">CSA</div><div class="scope">Canada</div><h3>CSA Certified</h3><p>CSA C22.2 building wire equivalent. Required for Canadian electrical code.</p><div class="meta">Cert #C-CSA-2023</div></div>
+        <div class="cert-card"><div class="badge">CE</div><div class="scope">Europe</div><h3>CE Marking</h3><p>European Conformity. Low Voltage Directive 2014/35/EU compliance.</p><div class="meta">All applicable product lines</div></div>
+        <div class="cert-card"><div class="badge">RoHS<br/>2/3</div><div class="scope">Hazardous</div><h3>RoHS 2 / RoHS 3</h3><p>EU Directive 2011/65/EU + 2015/863/EU. No restricted substances.</p><div class="meta">Self-declaration on file</div></div>
+        <div class="cert-card"><div class="badge">REACH</div><div class="scope">Chemicals</div><h3>REACH Compliant</h3><p>EU Regulation 1907/2006. SVHC declaration. &lt;0.1% w/w threshold.</p><div class="meta">Updated quarterly</div></div>
+        <div class="cert-card"><div class="badge">MIL</div><div class="scope">Defence</div><h3>MIL-DTL-16878</h3><p>US Military specification for electrical wire. DGAQA approved (India).</p><div class="meta">DGAQA Reg #2008-04</div></div>
+        <div class="cert-card"><div class="badge">DEF<br/>STAN</div><div class="scope">UK Defence</div><h3>UK DEF STAN 61-12</h3><p>UK Defence specification for electrical cables in defence equipment.</p><div class="meta">Active approval</div></div>
+        <div class="cert-card"><div class="badge">IEC</div><div class="scope">International</div><h3>IEC Standards</h3><p>IEC 60092 marine · IEC 60228 conductors · IEC 60502 power · IEC 60332 fire.</p><div class="meta">IECEE CB scheme members</div></div>
+        <div class="cert-card"><div class="badge">BS<br/>EN</div><div class="scope">Britain / Europe</div><h3>BS EN Standards</h3><p>BS 6387 fire-survival · BS 5308 instrumentation · BS 6231 panel wiring.</p><div class="meta">BSI test reports on file</div></div>
+        <div class="cert-card"><div class="badge">IS</div><div class="scope">India / BIS</div><h3>IS / BIS Certified</h3><p>IS 694 building · IS 1554 power · IS 9938 telecom · IS 8130 conductors.</p><div class="meta">ISI License active</div></div>
+        <div class="cert-card"><div class="badge">RDSO</div><div class="scope">Railway India</div><h3>RDSO Approved</h3><p>Research Designs &amp; Standards Organisation (Indian Railways) approval.</p><div class="meta">Multiple cable types</div></div>
+        <div class="cert-card"><div class="badge">EN<br/>45545</div><div class="scope">Rail Fire</div><h3>EN 45545-2</h3><p>European rail vehicle fire safety. Hazard Level HL3.</p><div class="meta">DEKRA tested</div></div>
+        <div class="cert-card"><div class="badge">DNV-<br/>GL</div><div class="scope">Marine</div><h3>DNV-GL Type Approved</h3><p>Det Norske Veritas marine cables. Lloyd's Register equivalent recognition.</p><div class="meta">Type Approval #MT-2022</div></div>
+        <div class="cert-card"><div class="badge">ATEX</div><div class="scope">Hazardous Area</div><h3>ATEX Compliant</h3><p>Directive 2014/34/EU. Cables for explosive-atmosphere installations.</p><div class="meta">Zone 1 / Zone 2</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance band -->
+  <section class="section section-divider">
+    <div class="container">
+      <div class="compliance-band">
+        <div>
+          <h3 style="font-size:26px; font-weight:800; letter-spacing:-0.5px; line-height:1.2; margin-bottom:10px;">Need a document?</h3>
+          <p style="color:var(--text-muted);">All certificates, declarations, test reports and type-approval documents are available on request — usually within one business day.</p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end;">
+          <a href="contact.html" class="btn btn-primary">Request Documents
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </a>
+          <a href="catalogues.html" class="btn btn-ghost">Browse Downloads</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="siechem-redesign.html" class="nav-logo"><span class="nav-logo-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>SIECHEM</a><p>India's leading specialty wires &amp; cables manufacturer since 2002.</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">By Segment</a></li><li><a href="products.html">By Standard</a></li><li><a href="product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="tech-support.html">AWG Converter</a></li><li><a href="tech-support.html">Voltage Drop</a></li><li><a href="tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="customers.html">Customers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>

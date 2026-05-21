@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siechem — Precision Wiring for Critical Applications</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      background: #FFFFFF;
+      color: #0F172A;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: rgba(227,30,36,0.15); }
+
+    /* ───────── Fixed 3D canvas ───────── */
+    #scene-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+    }
+
+    /* Ambient background gradient + grid behind canvas */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 30% 40%, rgba(227,30,36,0.04) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 60% at 70% 70%, rgba(56,84,166,0.05) 0%, transparent 65%),
+        linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    }
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.35;
+      background-image:
+        linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 80% 60% at center, black 0%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at center, black 0%, transparent 70%);
+    }
+
+    /* ───────── Navigation ───────── */
+    .nav {
+      position: fixed;
+      top: 16px; left: 24px; right: 24px;
+      z-index: 100;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: #0F172A;
+      font-weight: 800; font-size: 17px; letter-spacing: -0.4px;
+    }
+    .nav-logo-mark {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(227,30,36,0.25);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .nav-logo:hover .nav-logo-mark {
+      transform: rotate(90deg);
+    }
+    .nav-links {
+      display: flex; gap: 4px;
+    }
+    .nav-links a {
+      padding: 8px 14px;
+      color: #475569;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: #E31E24; background: rgba(227,30,36,0.06); }
+    .nav-cta {
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
+      border: none;
+      border-radius: 8px;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(227,30,36,0.3);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .nav-cta:hover {
+      background: linear-gradient(135deg, #F24B51 0%, #E31E24 100%);
+      box-shadow: 0 6px 18px rgba(227,30,36,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ───────── Scroll stage ───────── */
+    .stage {
+      position: relative;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .scene {
+      height: 120vh;
+      position: relative;
+      pointer-events: none;
+    }
+    .scene:last-of-type { height: 100vh; }
+
+    /* ───────── Overlay panels ───────── */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      padding: 110px max(120px, 10vw) 60px max(120px, 10vw);
+      will-change: opacity;
+    }
+    .overlay-panel {
+      max-width: 500px;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 16px;
+      padding: 38px 42px;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+      pointer-events: auto;
+    }
+    .overlay-panel::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 24px; bottom: 24px;
+      width: 4px;
+      background: linear-gradient(to bottom, #E31E24, #B3151A);
+      border-radius: 0 4px 4px 0;
+    }
+    .overlay.show .overlay-panel { transform: translateY(0); }
+    .overlay.right { justify-content: flex-end; }
+    .overlay.right .overlay-panel { text-align: right; }
+    .overlay.right .overlay-panel::before {
+      left: auto; right: 0;
+      border-radius: 4px 0 0 4px;
+    }
+    .overlay.center { justify-content: center; text-align: center; }
+    .overlay.center .overlay-panel { text-align: center; max-width: 720px; }
+    .overlay.center .overlay-panel::before { display: none; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 14px;
+      border-radius: 99px;
+      background: rgba(227,30,36,0.08);
+      border: 1px solid rgba(227,30,36,0.2);
+      color: #E31E24;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: #E31E24;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(227,30,36,0.5);
+    }
+
+    h1.headline {
+      font-size: clamp(40px, 5vw, 76px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.02;
+      margin-bottom: 26px;
+      color: #0F172A;
+    }
+    h1.headline em {
+      font-style: normal;
+      background: linear-gradient(135deg, #E31E24 0%, #F24B51 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2.headline {
+      font-size: clamp(32px, 3.8vw, 58px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin-bottom: 22px;
+      color: #0F172A;
+    }
+    .lede {
+      font-size: clamp(15px, 1.15vw, 18px);
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+    .spec {
+      background: rgba(15, 23, 42, 0.02);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.25s ease;
+    }
+    .spec:hover {
+      background: rgba(227, 30, 36, 0.03);
+      border-color: rgba(227, 30, 36, 0.1);
+    }
+    .spec-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #64748B;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .spec-value {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .spec-value .unit { font-size: 11px; color: #64748B; font-weight: 500; margin-left: 2px; }
+
+    .ctas {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      pointer-events: auto;
+    }
+    .right .ctas { justify-content: flex-end; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 11px 22px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(227,30,36,0.3);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #F24B51 0%, #E31E24 100%);
+      box-shadow: 0 6px 20px rgba(227,30,36,0.45);
+      transform: translateY(-1.5px);
+    }
+    .btn-primary svg {
+      transition: transform 0.2s ease;
+    }
+    .btn-primary:hover svg {
+      transform: translateX(3px);
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      color: #475569;
+    }
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.04);
+      border-color: #0f172a;
+      color: #0f172a;
+      transform: translateY(-1px);
+    }
+
+    /* ───────── Floating annotations (small labels positioned near cable) ───────── */
+    .annotation {
+      position: fixed;
+      pointer-events: none;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid #E2E8F0;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #1E293B;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 25;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .annotation .dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: 1px;
+    }
+    .annotation.show { opacity: 1; }
+
+    /* ───────── Scroll cue ───────── */
+    .scroll-cue {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #64748B;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .scroll-cue-line {
+      width: 1px; height: 36px;
+      background: linear-gradient(180deg, transparent, rgba(15,23,42,0.2));
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-cue-line::after {
+      content: '';
+      position: absolute;
+      top: -100%; left: 0;
+      width: 100%; height: 50%;
+      background: linear-gradient(180deg, transparent, #E31E24);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0% { top: -50%; }
+      100% { top: 100%; }
+    }
+
+    /* ───────── Progress rail (left side) ───────── */
+    .progress-rail {
+      position: fixed;
+      top: 50%;
+      left: 28px;
+      transform: translateY(-50%);
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      pointer-events: auto;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 30px;
+      padding: 20px 10px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+      align-items: center;
+    }
+    .progress-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #CBD5E1;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      position: relative;
+      cursor: pointer;
+    }
+    .progress-dot:hover {
+      background: #94A3B8;
+      transform: scale(1.2);
+    }
+    .progress-dot.active {
+      background: #E31E24;
+      box-shadow: 0 0 12px rgba(227,30,36,0.6);
+      transform: scale(1.5);
+    }
+    .progress-dot .label {
+      position: absolute;
+      left: 24px; top: 50%;
+      transform: translateY(-50%) translateX(-6px);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748B;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      white-space: nowrap;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      border-radius: 6px;
+      padding: 4px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      pointer-events: none;
+    }
+    .progress-dot:hover .label,
+    .progress-dot.active .label {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+    .progress-dot.active .label {
+      color: #0F172A;
+      border-color: rgba(227, 30, 36, 0.15);
+    }
+
+    /* ───────── Footer scene ───────── */
+    .footer-content {
+      pointer-events: auto;
+    }
+    .cert-row {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    .cert {
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 7px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+      background: rgba(255,255,255,0.03);
+    }
+    .footer-meta {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12.5px;
+      color: #64748B;
+      flex-wrap: wrap; gap: 16px;
+    }
+
+    /* Loading splash */
+    .loader {
+      position: fixed; inset: 0;
+      z-index: 200;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      transition: opacity 0.5s ease-out;
+      pointer-events: none;
+    }
+    .loader.hide { opacity: 0 !important; }
+    .loader-mark {
+      width: 56px; height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #E31E24, #B3151A);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 40px rgba(227,30,36,0.3);
+      animation: loaderPulse 1.4s ease-in-out infinite;
+    }
+    @keyframes loaderPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    .loader-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #64748B;
+    }
+
+    /* ───────── Mobile Responsiveness ───────── */
+    @media (max-width: 768px) {
+      .nav {
+        top: 12px;
+        left: 16px;
+        right: 16px;
+        padding: 10px 16px;
+        border-radius: 10px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .nav-logo {
+        font-size: 15px;
+      }
+      .nav-logo-mark {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+      }
+      .nav-logo-mark svg {
+        width: 15px;
+        height: 15px;
+      }
+      .nav-cta {
+        padding: 8px 14px;
+        font-size: 12px;
+        border-radius: 6px;
+      }
+
+      .progress-rail {
+        display: none;
+      }
+
+      .scroll-cue {
+        display: none;
+      }
+
+      .overlay {
+        padding: 90px 16px 24px 16px;
+        align-items: flex-end;
+      }
+      .overlay-panel {
+        max-width: 100%;
+        width: 100%;
+        padding: 24px 20px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+      }
+
+      /* Convert left/right border to top border for bottom-drawer sheet feel */
+      .overlay-panel::before {
+        left: 20px;
+        right: 20px;
+        top: 0;
+        bottom: auto;
+        height: 4px;
+        width: auto;
+        border-radius: 0 0 4px 4px;
+      }
+      .overlay.right .overlay-panel {
+        text-align: left;
+      }
+      .overlay.right .ctas {
+        justify-content: flex-start;
+      }
+      .overlay.right .overlay-panel::before {
+        left: 20px;
+        right: 20px;
+        top: 0;
+        bottom: auto;
+        height: 4px;
+        width: auto;
+        border-radius: 0 0 4px 4px;
+      }
+
+      /* Scrollable footer overlay */
+      .overlay.center {
+        align-items: flex-start;
+        overflow-y: auto;
+        pointer-events: auto;
+      }
+      .overlay.center .overlay-panel {
+        margin: 80px 16px 40px 16px;
+        max-width: 100%;
+        width: calc(100% - 32px);
+        text-align: center;
+      }
+
+      /* Typography adjustments */
+      h1.headline {
+        font-size: 28px !important;
+        margin-bottom: 16px;
+      }
+      h2.headline {
+        font-size: 24px !important;
+        margin-bottom: 14px;
+      }
+      .lede {
+        font-size: 14px !important;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .eyebrow {
+        margin-bottom: 14px;
+        padding: 4px 10px;
+        font-size: 10px;
+      }
+
+      /* Specifications layout: 2-column grid */
+      .specs {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding-top: 16px;
+      }
+      .spec {
+        padding: 8px 10px;
+      }
+      .spec-value {
+        font-size: 14px;
+      }
+
+      /* Buttons spacing */
+      .ctas {
+        gap: 8px;
+      }
+      .btn {
+        padding: 9px 16px;
+        font-size: 12px;
+        flex: 1;
+        justify-content: center;
+      }
+
+      /* Footer specifications */
+      .cert-row {
+        gap: 6px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .cert {
+        padding: 6px 12px;
+        font-size: 10px;
+      }
+      .footer-meta {
+        margin-top: 32px;
+        padding-top: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg-layer"></div>
+  <div class="bg-grid"></div>
+
+  <!-- 3D canvas -->
+  <canvas id="scene-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-mark">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5">
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/>
+          <line x1="12" y1="3" x2="12" y2="7"/>
+          <line x1="12" y1="17" x2="12" y2="21"/>
+        </svg>
+      </span>
+      SIECHEM
+    </a>
+    <div class="nav-links">
+      <a href="products.html">Products</a>
+      <a href="tech-support.html">Tech Support</a>
+      <a href="about.html">Company</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <a href="catalogues.html">Catalogues</a>
+    </div>
+    <a href="contact.html" class="nav-cta">
+      Request Quote
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </nav>
+
+  <!-- Progress rail -->
+  <div class="progress-rail" id="progress-rail">
+    <div class="progress-dot" data-t="0.05"><span class="label">Overview</span></div>
+    <div class="progress-dot" data-t="0.22"><span class="label">Jacket</span></div>
+    <div class="progress-dot" data-t="0.38"><span class="label">Shield</span></div>
+    <div class="progress-dot" data-t="0.55"><span class="label">Conductors</span></div>
+    <div class="progress-dot" data-t="0.75"><span class="label">Spec</span></div>
+    <div class="progress-dot" data-t="0.92"><span class="label">Current</span></div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="scroll-cue" id="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-cue-line"></div>
+  </div>
+
+  <!-- ─── Overlay panels (one per scene) ─── -->
+
+  <!-- 1. HERO -->
+  <div class="overlay" data-start="0.00" data-end="0.12" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">India's #1 Specialty Wires &amp; Cables</div>
+      <h1 class="headline">Precision Wiring<br/>for <em>Critical</em><br/>Applications.</h1>
+      <p class="lede">22 million+ engineered cable configurations for Aerospace, Defence, Automotive, Marine and Industrial systems. Where failure is not an option.</p>
+      <div class="ctas">
+        <a href="products.html" class="btn btn-primary">Explore the Cable
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-ghost">Custom Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. JACKET -->
+  <div class="overlay right" data-start="0.14" data-end="0.28" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">Layer 1 — Outer Jacket</div>
+      <h2 class="headline">Engineered for the<br/>Worst Conditions.</h2>
+      <p class="lede">Proprietary LSZH, PVC and XLPE compounds. Flame-retardant, oil-resistant, UV-stable. The outer skin that survives the impossible.</p>
+      <div class="specs">
+        <div class="spec"><span class="spec-label">Compounds</span><span class="spec-value">LSZH · XLPE · PVC</span></div>
+        <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−65 <span class="unit">to</span> +260<span class="unit">°C</span></span></div>
+        <div class="spec"><span class="spec-label">Compliance</span><span class="spec-value">EN 50525 · BS 7655</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. SHIELD -->
+  <div class="overlay" data-start="0.30" data-end="0.42" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">Layer 2 — Braided Shield</div>
+      <h2 class="headline">Tinned Copper Braid.<br/>EMI Locked Out.</h2>
+      <p class="lede">High-coverage tinned copper braid suppresses electromagnetic interference at every frequency band. Mechanical reinforcement, signal integrity, peace of mind.</p>
+      <div class="specs">
+        <div class="spec"><span class="spec-label">Coverage</span><span class="spec-value">85<span class="unit">%</span> +</span></div>
+        <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Tinned Copper</span></div>
+        <div class="spec"><span class="spec-label">Standard</span><span class="spec-value">IEC 62153-4</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. CONDUCTORS -->
+  <div class="overlay right" data-start="0.44" data-end="0.62" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">Layer 3 — Seven Conductors</div>
+      <h2 class="headline">Twisted with<br/>Microscopic Precision.</h2>
+      <p class="lede">Each conductor is individually insulated, colour-coded and stranded for flex life. Six outer cores helix around one neutral — the geometry that survives a million bend cycles.</p>
+      <div class="specs">
+        <div class="spec"><span class="spec-label">Cores</span><span class="spec-value">7</span></div>
+        <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">30 <span class="unit">to</span> 4/0</span></div>
+        <div class="spec"><span class="spec-label">Flex Life</span><span class="spec-value">1M+ <span class="unit">cycles</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. FAN-OUT (Spec) -->
+  <div class="overlay" data-start="0.64" data-end="0.80" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">Engineering Spec</div>
+      <h2 class="headline">Individually Rated.<br/>Individually Tested.</h2>
+      <p class="lede">Every conductor is qualified separately — for resistance, hi-pot, partial discharge and continuity. Then the assembly is qualified as a system. Nothing leaves the line untested.</p>
+      <div class="specs">
+        <div class="spec"><span class="spec-label">Tests / Cable</span><span class="spec-value">38</span></div>
+        <div class="spec"><span class="spec-label">Hi-Pot</span><span class="spec-value">5<span class="unit">kV AC</span></span></div>
+        <div class="spec"><span class="spec-label">Insulation</span><span class="spec-value">&gt; 100 <span class="unit">GΩ·km</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. CURRENT FLOW -->
+  <div class="overlay right" data-start="0.82" data-end="0.94" style="opacity:0">
+    <div class="overlay-panel">
+      <div class="eyebrow">Live Performance</div>
+      <h2 class="headline">From Spec Sheet<br/>to Signal Path.</h2>
+      <p class="lede">From a single prototype to full production runs of millions of metres — our applications engineering team builds the wire your system has been waiting for.</p>
+      <div class="ctas">
+        <a href="contact.html" class="btn btn-primary">Talk to an Engineer
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. FOOTER -->
+  <div class="overlay center" data-start="0.96" data-end="1.01" id="footer-overlay" style="opacity:0">
+    <div class="overlay-panel footer-content">
+      <div class="eyebrow">Ready When You Are</div>
+      <h2 class="headline">Bring Us Your<br/>Toughest Spec.</h2>
+      <p class="lede">From Chennai to 50+ countries. From single prototypes to production runs. Siechem engineers the cable your system depends on.</p>
+      <div class="ctas" style="justify-content: center;">
+        <a href="mailto:sales@siechem.com" class="btn btn-primary">sales@siechem.com</a>
+        <a href="#" class="btn btn-ghost">Download Catalogue</a>
+      </div>
+      <div class="cert-row">
+        <span class="cert">TUV</span>
+        <span class="cert">UL</span>
+        <span class="cert">CE</span>
+        <span class="cert">RoHS</span>
+        <span class="cert">IEC</span>
+        <span class="cert">MIL-Spec</span>
+        <span class="cert">BS EN</span>
+        <span class="cert">IS / BIS</span>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Siechem Technologies Pvt. Ltd. · Chennai, India</span>
+        <span>Established 2002 · 100,000 sq.ft · 22M+ configurations</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Scroll spacer sections ─── -->
+  <div class="stage" id="stage">
+    <div class="scene"></div>
+    <div class="scene"></div>
+    <div class="scene"></div>
+    <div class="scene"></div>
+    <div class="scene"></div>
+    <div class="scene"></div>
+    <div class="scene"></div>
+  </div>
+
+  <!-- Loading -->
+  <div class="loader" id="loader">
+    <div class="loader-mark">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2.5">
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/>
+        <line x1="12" y1="3" x2="12" y2="7"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    </div>
+    <div class="loader-text">Initialising · Siechem</div>
+  </div>
+
+  <!-- Orchestrator -->
+  <script>
+    // Disable scroll restoration ASAP so cinematic always starts at hero.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { initCableScene, setReveal, ease, range, lerp } from './cable-scene.js';
+
+    const canvas = document.getElementById('scene-canvas');
+    const ctx = initCableScene(canvas);
+    const { scene, camera, renderer, cable, lights } = ctx;
+
+    // Initial sizing
+    ctx.onResize();
+    window.addEventListener('resize', ctx.onResize);
+
+    // ───── Camera keyframes ─────
+    const KEYS = [
+      { t: 0.00, pos: [ 0.0,  0.5,  7.5], look: [ 0.0,  0.0,  0.0], fov: 30 },
+      { t: 0.10, pos: [ 1.8,  0.7,  6.5], look: [ 0.4,  0.2,  0.0], fov: 30 },
+      { t: 0.22, pos: [ 2.4,  0.3,  4.6], look: [-0.4, -0.1,  0.0], fov: 28 },
+      { t: 0.38, pos: [-2.2, -0.2,  4.4], look: [ 0.2, -0.1,  0.0], fov: 28 },
+      { t: 0.55, pos: [ 0.6,  0.6,  3.8], look: [ 0.0,  0.2,  0.0], fov: 26 },
+      { t: 0.72, pos: [-1.0,  0.3,  5.4], look: [ 0.0,  0.0,  0.0], fov: 32 },
+      { t: 0.88, pos: [ 0.0,  0.0,  2.2], look: [ 0.0,  0.0,  0.0], fov: 24 },
+      { t: 1.00, pos: [ 0.0,  0.0,  3.5], look: [ 0.0,  0.0,  0.0], fov: 30 },
+    ];
+
+    function sampleKeys(t) {
+      let a = KEYS[0], b = KEYS[KEYS.length - 1];
+      for (let i = 0; i < KEYS.length - 1; i++) {
+        if (t >= KEYS[i].t && t <= KEYS[i + 1].t) {
+          a = KEYS[i]; b = KEYS[i + 1]; break;
+        }
+      }
+      const lt = a.t === b.t ? 0 : (t - a.t) / (b.t - a.t);
+      const e = ease.inOut(Math.max(0, Math.min(1, lt)));
+      return {
+        pos: [lerp(a.pos[0], b.pos[0], e), lerp(a.pos[1], b.pos[1], e), lerp(a.pos[2], b.pos[2], e)],
+        look: [lerp(a.look[0], b.look[0], e), lerp(a.look[1], b.look[1], e), lerp(a.look[2], b.look[2], e)],
+        fov: lerp(a.fov, b.fov, e),
+      };
+    }
+
+    // ───── State ─────
+    const lookTarget = new THREE.Vector3();
+    let tTarget = 0;
+    let tCurrent = 0;
+
+    // Cache DOM
+    const overlays = Array.from(document.querySelectorAll('.overlay'));
+    const dots = Array.from(document.querySelectorAll('.progress-dot'));
+    const scrollCue = document.getElementById('scroll-cue');
+
+    // Make progress dots clickable for smooth cinematic scrolling
+    dots.forEach(d => {
+      d.addEventListener('click', () => {
+        const tVal = parseFloat(d.dataset.t);
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        window.scrollTo({
+          top: tVal * maxScroll,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function computeScrollProgress() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      return max > 0 ? window.scrollY / max : 0;
+    }
+
+    function onScroll() {
+      tTarget = computeScrollProgress();
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // ───── Update loop ─────
+    function update(t) {
+      // Camera
+      const k = sampleKeys(t);
+      camera.position.set(k.pos[0], k.pos[1], k.pos[2]);
+      lookTarget.set(k.look[0], k.look[1], k.look[2]);
+      camera.lookAt(lookTarget);
+      
+      // Calculate dynamic FOV for portrait viewports (mobile aspect ratio < 1)
+      const aspect = camera.aspect;
+      let targetFov = k.fov;
+      if (aspect < 1) {
+        targetFov = k.fov * Math.min(1.5, Math.max(1.0, 0.85 / aspect));
+      }
+      
+      if (Math.abs(camera.fov - targetFov) > 0.01) {
+        camera.fov = targetFov;
+        camera.updateProjectionMatrix();
+      }
+
+      // Cable rotation — gentle drift + extra swing in fan-out scene
+      const baseRot = t * Math.PI * 0.35;
+      const fanT = ease.inOut(range(t, 0.62, 0.80));
+      cable.rotation.y = baseRot + Math.sin(t * Math.PI * 2.0) * 0.08 + fanT * 0.4;
+      cable.rotation.x = Math.sin(t * Math.PI * 1.4) * 0.10;
+      cable.rotation.z = Math.sin(t * Math.PI * 0.7) * 0.04;
+
+      // Reveal — jacket peels 0.14→0.28, shield peels 0.44→0.56, bedding 0.46→0.58
+      const jR = 1 - ease.inOut(range(t, 0.14, 0.30));
+      const sR = 1 - ease.inOut(range(t, 0.44, 0.58));
+      const bR = 1 - ease.inOut(range(t, 0.46, 0.60));
+      setReveal(cable.userData.materials.jacket, jR);
+      setReveal(cable.userData.materials.shield, sR);
+      setReveal(cable.userData.materials.bedding, bR);
+
+      // Conductors are always present; their insulation/copper reveal stays at 1.
+      cable.userData.conductorMeshes.forEach((m) => {
+        setReveal(m.userData.insulationMat, 1.0);
+        setReveal(m.userData.copperMat, 1.0);
+      });
+
+      // Fan-out: spread conductors outward in the 0.66→0.82 range
+      const fan = ease.inOut(range(t, 0.66, 0.82));
+      cable.userData.conductorMeshes.forEach((m) => {
+        const dir = m.userData.fanDir;
+        const scale = m.userData.fanOffsetScale;
+        m.position.copy(dir).multiplyScalar(fan * 0.55 * scale);
+      });
+
+      // Final close-up: dim outer conductors so center conductor stands out
+      const closeUp = ease.in(range(t, 0.84, 1.00));
+      cable.userData.conductorMeshes.forEach((m) => {
+        if (!m.userData.isCenter) {
+          m.userData.insulationMat.opacity = 1 - closeUp * 0.92;
+          m.userData.copperMat.opacity = 1 - closeUp * 0.92;
+          m.userData.insulationMat.transparent = closeUp > 0.01;
+          m.userData.copperMat.transparent = closeUp > 0.01;
+        } else {
+          // Center conductor emissive boost in final scene
+          m.userData.copperMat.emissiveIntensity = 0.18 + closeUp * 0.6;
+        }
+      });
+
+      // Particles — fade in for current flow scene + animate along spine
+      const particleVis = ease.out(range(t, 0.80, 0.96));
+      cable.userData.particles.material.opacity = particleVis;
+
+      if (particleVis > 0.01) {
+        const time = performance.now() * 0.001;
+        const speed = 0.35;
+        const offsets = cable.userData.particleOffsets;
+        const positions = cable.userData.particlePositions;
+        const curve = cable.userData.centerCurve;
+        for (let i = 0; i < offsets.length; i++) {
+          let p = (offsets[i] + time * speed) % 1;
+          if (p < 0) p += 1;
+          const pt = curve.getPointAt(p);
+          positions[i * 3] = pt.x;
+          positions[i * 3 + 1] = pt.y;
+          positions[i * 3 + 2] = pt.z;
+        }
+        cable.userData.particleGeo.attributes.position.needsUpdate = true;
+      }
+
+      // Accent light intensity ramp up at end (current flow scene)
+      lights.accent.intensity = 1.0 + closeUp * 2.0;
+      lights.accent.color.setHex(closeUp > 0.3 ? 0xff4d54 : 0xe31e24);
+
+      // Overlays — fade in BEFORE the scene window, fade out AFTER it,
+      // so the panel is at full opacity for the entire scene range.
+      const FADE = 0.025;
+      for (const el of overlays) {
+        const s = parseFloat(el.dataset.start);
+        const e = parseFloat(el.dataset.end);
+        const fadeIn = range(t, s - FADE, s);
+        const fadeOut = 1 - range(t, e, e + FADE);
+        const op = Math.max(0, Math.min(fadeIn, fadeOut));
+        el.style.opacity = op;
+        if (op > 0.5) el.classList.add('show'); else el.classList.remove('show');
+      }
+
+      // Progress rail
+      let activeIdx = 0;
+      let bestDist = 1;
+      dots.forEach((d, i) => {
+        const dt = parseFloat(d.dataset.t);
+        const dist = Math.abs(t - dt);
+        if (dist < bestDist) { bestDist = dist; activeIdx = i; }
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === activeIdx);
+      });
+
+      // Scroll cue fades after a bit of scrolling
+      scrollCue.style.opacity = t < 0.04 ? (1 - t * 25) : 0;
+    }
+
+    // ───── Render loop ─────
+    function animate() {
+      requestAnimationFrame(animate);
+      // Smooth scroll progress
+      tCurrent += (tTarget - tCurrent) * 0.07;
+      update(tCurrent);
+      renderer.render(scene, camera);
+    }
+
+    // Hide loader once we've rendered a couple frames; also force-hide after 3s
+    // as a fallback in case the rAF counter never fires (e.g. tab backgrounded).
+    let framesRendered = 0;
+    function firstFrameHook() {
+      framesRendered++;
+      if (framesRendered > 2) {
+        hideLoader();
+        return;
+      }
+      requestAnimationFrame(firstFrameHook);
+    }
+    function hideLoader() {
+      const l = document.getElementById('loader');
+      if (l && !l.classList.contains('hide')) {
+        l.classList.add('hide');
+        setTimeout(() => l.remove(), 600);
+      }
+    }
+    requestAnimationFrame(firstFrameHook);
+    setTimeout(hideLoader, 3000);
+
+    // Start
+    window.scrollTo(0, 0);
+    tTarget = 0;
+    tCurrent = 0;
+    animate();
+  </script>
+</body>
+</html>
