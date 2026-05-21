@@ -511,6 +511,16 @@
 
     /* ───────── Mobile Responsiveness ───────── */
     @media (max-width: 768px) {
+      html, body {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+      .scene {
+        height: 100vh !important;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
       .nav {
         top: 12px;
         left: 16px;
