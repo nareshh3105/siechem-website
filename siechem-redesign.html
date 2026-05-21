@@ -125,6 +125,108 @@
       transform: translateY(-1px);
     }
 
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 16px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 110;
+    }
+    .nav-hamburger span {
+      width: 100%;
+      height: 2px;
+      background-color: #0F172A;
+      border-radius: 2px;
+      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .nav-hamburger.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+      background-color: #E31E24;
+    }
+    .nav-hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-hamburger.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+      background-color: #E31E24;
+    }
+
+    /* Mobile Navigation Drawer */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 95;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  visibility 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      padding-top: 80px;
+      touch-action: none;
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    .mobile-menu-links a {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0F172A;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+      letter-spacing: -0.5px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .mobile-menu-links a:hover,
+    .mobile-menu-links a:active {
+      color: #E31E24;
+    }
+    .mobile-menu.open .mobile-menu-links a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .mobile-menu.open .mobile-menu-links a:nth-child(1) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s; }
+    .mobile-menu.open .mobile-menu-links a:nth-child(2) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s; }
+    .mobile-menu.open .mobile-menu-links a:nth-child(3) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s; }
+    .mobile-menu.open .mobile-menu-links a:nth-child(4) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s; }
+    .mobile-menu.open .mobile-menu-links a:nth-child(5) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s; }
+    .mobile-menu.open .mobile-menu-links a:nth-child(6) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s; }
+
+    /* Lock body scroll */
+    html.nav-open, html.nav-open body {
+      overflow: hidden !important;
+    }
+
     /* ───────── Scroll stage ───────── */
     .stage {
       position: relative;
@@ -553,6 +655,9 @@
         font-size: 12px;
         border-radius: 6px;
       }
+      .nav-hamburger {
+        display: flex;
+      }
 
       .progress-rail {
         display: none;
@@ -752,13 +857,32 @@
       <a href="customers.html">Customers</a>
       <a href="catalogues.html">Catalogues</a>
     </div>
-    <a href="contact.html" class="nav-cta">
-      Request Quote
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-        <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </a>
+    <div class="nav-actions">
+      <a href="contact.html" class="nav-cta">
+        Request Quote
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a href="products.html">Products</a>
+      <a href="tech-support.html">Tech Support</a>
+      <a href="about.html">Company</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <a href="catalogues.html">Catalogues</a>
+    </div>
+  </div>
 
   <!-- Progress rail -->
   <div class="progress-rail" id="progress-rail">
@@ -928,6 +1052,31 @@
         lastScene.appendChild(footer);
       }
     }
+
+    // Mobile navigation drawer toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('nav-hamburger');
+      const menu = document.getElementById('mobile-menu');
+      if (hamburger && menu) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          menu.classList.toggle('open');
+          if (menu.classList.contains('open')) {
+            document.documentElement.classList.add('nav-open');
+          } else {
+            document.documentElement.classList.remove('nav-open');
+          }
+        });
+        const links = menu.querySelectorAll('a');
+        links.forEach(l => {
+          l.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('open');
+            document.documentElement.classList.remove('nav-open');
+          });
+        });
+      }
+    });
   </script>
   <script type="module">
     import * as THREE from 'three';
