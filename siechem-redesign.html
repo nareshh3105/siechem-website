@@ -148,6 +148,10 @@
       align-items: center;
       padding: 110px max(120px, 10vw) 60px max(120px, 10vw);
       will-change: opacity;
+      visibility: hidden;
+    }
+    .overlay.show {
+      visibility: visible;
     }
     .overlay-panel {
       max-width: 500px;
@@ -517,6 +521,7 @@
       }
       .scene {
         height: 100vh !important;
+        height: 100dvh !important;
         scroll-snap-align: start;
         scroll-snap-stop: always;
       }
@@ -598,7 +603,10 @@
       /* Scrollable footer overlay */
       .overlay.center {
         align-items: flex-start;
-        overflow-y: auto;
+        overflow-y: visible;
+        pointer-events: none;
+      }
+      .overlay.center.show {
         pointer-events: auto;
       }
       .overlay.center .overlay-panel {
@@ -606,6 +614,43 @@
         max-width: 100%;
         width: calc(100% - 32px);
         text-align: center;
+      }
+
+      /* When footer is moved into the last scene on mobile */
+      .scene #footer-overlay {
+        position: relative !important;
+        inset: auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        pointer-events: auto !important;
+        overflow: visible !important;
+      }
+      .scene #footer-overlay .overlay-panel {
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+        background: rgba(255, 255, 255, 0.92) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        padding: 40px 20px 32px 20px !important;
+      }
+      .scene:last-of-type {
+        height: auto !important;
+        min-height: 100dvh !important;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        pointer-events: auto !important;
       }
 
       /* Typography adjustments */
@@ -869,6 +914,15 @@
     // Disable scroll restoration ASAP so cinematic always starts at hero.
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
     window.scrollTo(0, 0);
+
+    // On mobile, move the footer overlay inside the last scene so it scrolls naturally in-flow
+    if (window.innerWidth <= 768) {
+      const footer = document.getElementById('footer-overlay');
+      const lastScene = document.querySelector('.stage .scene:last-of-type');
+      if (footer && lastScene) {
+        lastScene.appendChild(footer);
+      }
+    }
   </script>
   <script type="module">
     import * as THREE from 'three';
@@ -933,6 +987,14 @@
     });
 
     function computeScrollProgress() {
+      // On mobile, the scroll progress is based on the top of the last scene (the footer snap point)
+      if (window.innerWidth <= 768) {
+        const lastScene = document.querySelector('.stage .scene:last-of-type');
+        if (lastScene) {
+          const limit = lastScene.offsetTop;
+          return limit > 0 ? Math.min(1.0, window.scrollY / limit) : 0;
+        }
+      }
       const max = document.documentElement.scrollHeight - window.innerHeight;
       return max > 0 ? window.scrollY / max : 0;
     }
