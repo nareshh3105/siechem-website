@@ -887,9 +887,9 @@
   <!-- Progress rail -->
   <div class="progress-rail" id="progress-rail">
     <div class="progress-dot" data-t="0.05"><span class="label">Overview</span></div>
-    <div class="progress-dot" data-t="0.22"><span class="label">Jacket</span></div>
+    <div class="progress-dot" data-t="0.22"><span class="label">Conductors</span></div>
     <div class="progress-dot" data-t="0.38"><span class="label">Shield</span></div>
-    <div class="progress-dot" data-t="0.55"><span class="label">Conductors</span></div>
+    <div class="progress-dot" data-t="0.55"><span class="label">Jacket</span></div>
     <div class="progress-dot" data-t="0.75"><span class="label">Spec</span></div>
     <div class="progress-dot" data-t="0.92"><span class="label">Current</span></div>
   </div>
@@ -917,16 +917,16 @@
     </div>
   </div>
 
-  <!-- 2. JACKET -->
+  <!-- 2. CONDUCTORS -->
   <div class="overlay right" data-start="0.14" data-end="0.28" style="opacity:0">
     <div class="overlay-panel">
-      <div class="eyebrow">Layer 1 — Outer Jacket</div>
-      <h2 class="headline">Engineered for the<br/>Worst Conditions.</h2>
-      <p class="lede">Proprietary LSZH, PVC and XLPE compounds. Flame-retardant, oil-resistant, UV-stable. The outer skin that survives the impossible.</p>
+      <div class="eyebrow">Layer 3 — Seven Conductors</div>
+      <h2 class="headline">Twisted with<br/>Microscopic Precision.</h2>
+      <p class="lede">Each conductor is individually insulated, colour-coded and stranded for flex life. Six outer cores helix around one neutral — the geometry that survives a million bend cycles.</p>
       <div class="specs">
-        <div class="spec"><span class="spec-label">Compounds</span><span class="spec-value">LSZH · XLPE · PVC</span></div>
-        <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−65 <span class="unit">to</span> +260<span class="unit">°C</span></span></div>
-        <div class="spec"><span class="spec-label">Compliance</span><span class="spec-value">EN 50525 · BS 7655</span></div>
+        <div class="spec"><span class="spec-label">Cores</span><span class="spec-value">7</span></div>
+        <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">30 <span class="unit">to</span> 4/0</span></div>
+        <div class="spec"><span class="spec-label">Flex Life</span><span class="spec-value">1M+ <span class="unit">cycles</span></span></div>
       </div>
     </div>
   </div>
@@ -945,16 +945,16 @@
     </div>
   </div>
 
-  <!-- 4. CONDUCTORS -->
+  <!-- 4. JACKET -->
   <div class="overlay right" data-start="0.44" data-end="0.62" style="opacity:0">
     <div class="overlay-panel">
-      <div class="eyebrow">Layer 3 — Seven Conductors</div>
-      <h2 class="headline">Twisted with<br/>Microscopic Precision.</h2>
-      <p class="lede">Each conductor is individually insulated, colour-coded and stranded for flex life. Six outer cores helix around one neutral — the geometry that survives a million bend cycles.</p>
+      <div class="eyebrow">Layer 1 — Outer Jacket</div>
+      <h2 class="headline">Engineered for the<br/>Worst Conditions.</h2>
+      <p class="lede">Proprietary LSZH, PVC and XLPE compounds. Flame-retardant, oil-resistant, UV-stable. The outer skin that survives the impossible.</p>
       <div class="specs">
-        <div class="spec"><span class="spec-label">Cores</span><span class="spec-value">7</span></div>
-        <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">30 <span class="unit">to</span> 4/0</span></div>
-        <div class="spec"><span class="spec-label">Flex Life</span><span class="spec-value">1M+ <span class="unit">cycles</span></span></div>
+        <div class="spec"><span class="spec-label">Compounds</span><span class="spec-value">LSZH · XLPE · PVC</span></div>
+        <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−65 <span class="unit">to</span> +260<span class="unit">°C</span></span></div>
+        <div class="spec"><span class="spec-label">Compliance</span><span class="spec-value">EN 50525 · BS 7655</span></div>
       </div>
     </div>
   </div>
@@ -1185,10 +1185,10 @@
       cable.rotation.x = Math.sin(t * Math.PI * 1.4) * 0.10;
       cable.rotation.z = Math.sin(t * Math.PI * 0.7) * 0.04;
 
-      // Reveal — jacket peels 0.14→0.28, shield peels 0.44→0.56, bedding 0.46→0.58
-      const jR = 1 - ease.inOut(range(t, 0.14, 0.30));
-      const sR = 1 - ease.inOut(range(t, 0.44, 0.58));
-      const bR = 1 - ease.inOut(range(t, 0.46, 0.60));
+      // Reveal — assembly on scroll down, peeling back for spec/fan-out
+      const bR = ease.inOut(range(t, 0.26, 0.36)) - ease.inOut(range(t, 0.62, 0.70));
+      const sR = ease.inOut(range(t, 0.28, 0.40)) - ease.inOut(range(t, 0.62, 0.70));
+      const jR = ease.inOut(range(t, 0.42, 0.58)) - ease.inOut(range(t, 0.62, 0.70));
       setReveal(cable.userData.materials.jacket, jR);
       setReveal(cable.userData.materials.shield, sR);
       setReveal(cable.userData.materials.bedding, bR);
