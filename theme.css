@@ -62,14 +62,14 @@ img { display: block; max-width: 100%; }
   gap: 28px;
 }
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 16px;
-  letter-spacing: -0.3px;
-  color: var(--accent);
+  display: block;
   flex-shrink: 0;
+  text-decoration: none;
+}
+.logo-svg {
+  width: 140px;
+  height: 40px;
+  display: block;
 }
 .nav-logo-mark {
   width: 32px; height: 32px;
@@ -421,6 +421,7 @@ html.nav-open, html.nav-open body {
   .nav-links { display: none !important; }
   .nav-hamburger { display: flex; }
   .nav-inner { padding: 0 20px; justify-content: space-between; }
+  .logo-svg { width: 112px; height: 32px; }
 }
 @media (max-width: 640px) {
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }

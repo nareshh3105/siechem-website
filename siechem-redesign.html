@@ -838,17 +838,7 @@
 
   <!-- Navigation -->
   <nav class="nav">
-    <a href="#" class="nav-logo">
-      <span class="nav-logo-mark">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="white" stroke-width="2.5">
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/>
-          <line x1="12" y1="3" x2="12" y2="7"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-      </span>
-      SIECHEM
-    </a>
+    <a href="#" class="nav-logo"><svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial Black', 'Arial', sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text><text x="50%" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text></svg></a>
     <div class="nav-links">
       <a href="products.html">Products</a>
       <a href="tech-support.html">Tech Support</a>
@@ -1185,10 +1175,10 @@
       cable.rotation.x = Math.sin(t * Math.PI * 1.4) * 0.10;
       cable.rotation.z = Math.sin(t * Math.PI * 0.7) * 0.04;
 
-      // Reveal — assembly on scroll down, peeling back for spec/fan-out
-      const bR = ease.inOut(range(t, 0.26, 0.36)) - ease.inOut(range(t, 0.62, 0.70));
-      const sR = ease.inOut(range(t, 0.28, 0.40)) - ease.inOut(range(t, 0.62, 0.70));
-      const jR = ease.inOut(range(t, 0.42, 0.58)) - ease.inOut(range(t, 0.62, 0.70));
+      // Reveal — assembly on scroll down, keeping layers fully visible after assembly
+      const bR = ease.inOut(range(t, 0.26, 0.36));
+      const sR = ease.inOut(range(t, 0.28, 0.40));
+      const jR = ease.inOut(range(t, 0.42, 0.58));
       setReveal(cable.userData.materials.jacket, jR);
       setReveal(cable.userData.materials.shield, sR);
       setReveal(cable.userData.materials.bedding, bR);
@@ -1199,8 +1189,8 @@
         setReveal(m.userData.copperMat, 1.0);
       });
 
-      // Fan-out: spread conductors outward in the 0.66→0.82 range
-      const fan = ease.inOut(range(t, 0.66, 0.82));
+      // Keep conductors in place (no fanning out since jacket remains closed)
+      const fan = 0;
       cable.userData.conductorMeshes.forEach((m) => {
         const dir = m.userData.fanDir;
         const scale = m.userData.fanOffsetScale;

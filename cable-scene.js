@@ -285,8 +285,8 @@ export function buildCable(textures) {
   }
   group.add(conductorsGroup);
 
-  // ── CURRENT PARTICLES along the center conductor (visible in final scene)
-  const centerCurve = makeConductorCurve(spine, 0, 0, 0, 200);
+  // ── CURRENT PARTICLES along the outer jacket surface (visible in final scene)
+  const centerCurve = makeConductorCurve(spine, 0.58, 0, 1.2, 200);
   const PARTICLE_COUNT = 80;
   const particleGeo = new THREE.BufferGeometry();
   const positions = new Float32Array(PARTICLE_COUNT * 3);
