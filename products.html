@@ -276,7 +276,7 @@
             <li><a href="products.html">By Segment</a></li>
             <li><a href="products.html">By Standard</a></li>
             <li><a href="product-detail.html">Solar Cables</a></li>
-            <li><a href="product-detail.html">Aerospace</a></li>
+            <li><a href="product-aero44.html">Aerospace</a></li>
             <li><a href="product-detail.html">Automotive</a></li>
           </ul>
         </div>
@@ -317,7 +317,7 @@
 
   <script>
     const SEGMENTS = [
-      { name: "Aerospace Cables", std: "MIL-DTL-16878 · AS22759", icon: "plane" },
+      { name: "Aerospace Cables", std: "MIL-DTL-16878 · AS22759", icon: "plane", url: "product-aero44.html" },
       { name: "Airport Lighting Cables", std: "FAA L-824 · IEC 60189", icon: "lighting" },
       { name: "Appliance Wires & Cables", std: "UL 758 · IS 694", icon: "appliance" },
       { name: "Automotive Cables", std: "JASO D611 · ISO 6722 · LV216", icon: "car" },
@@ -379,7 +379,7 @@
       { code: "ISO 6722", desc: "Auto LV / ISO 19642" },
       { code: "JASO", desc: "Japan Auto Standards" },
       { code: "JIS C 3406", desc: "Japan Industrial" },
-      { code: "MIL", desc: "US Military Spec" },
+      { code: "MIL", desc: "US Military Spec", url: "product-aero44.html" },
       { code: "NES", desc: "Naval Engineering Std" },
       { code: "PW 125", desc: "Siechem Proprietary" },
       { code: "SAE", desc: "Society of Auto Engineers" },
@@ -426,7 +426,7 @@
 
     function render() {
       document.getElementById('segmentGrid').innerHTML = SEGMENTS.map(seg => `
-        <a href="product-detail.html" class="product-card">
+        <a href="${seg.url || 'product-detail.html'}" class="product-card">
           <div class="product-icon" style="color:var(--accent-2);">${iconFor(seg.icon)}</div>
           <h3>${seg.name}</h3>
           <p>${seg.std}</p>
@@ -435,7 +435,7 @@
       `).join('');
 
       document.getElementById('standardGrid').innerHTML = STANDARDS.map(std => `
-        <a href="product-detail.html" class="standard-pill">
+        <a href="${std.url || 'product-detail.html'}" class="standard-pill">
           <div class="code">${std.code}</div>
           <div class="desc">${std.desc}</div>
         </a>
@@ -464,6 +464,19 @@
         pill.style.display = txt.includes(q) ? '' : 'none';
       });
     });
+
+    // Parse URL parameter to activate the correct view on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const viewParam = urlParams.get('view');
+    if (viewParam) {
+      const activeBtn = document.querySelector(`.filter-bar button[data-view="${viewParam}"]`);
+      if (activeBtn) {
+        document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
+        activeBtn.classList.add('active');
+        document.getElementById('view-segment').style.display = viewParam === 'segment' ? 'block' : 'none';
+        document.getElementById('view-standard').style.display = viewParam === 'standard' ? 'block' : 'none';
+      }
+    }
 
     render();
   </script>
