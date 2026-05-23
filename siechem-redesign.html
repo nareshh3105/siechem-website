@@ -9,14 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-    }
-  }
-  </script>
+  <!-- Three.js importmap removed - using video player background -->
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,13 +22,26 @@
     }
     ::selection { background: rgba(227,30,36,0.15); }
 
-    /* ───────── Fixed 3D canvas ───────── */
-    #scene-canvas {
+    /* ───────── Video Background ───────── */
+    .video-container {
       position: fixed;
       inset: 0;
       width: 100vw;
       height: 100vh;
       z-index: 1;
+      overflow: hidden;
+      background: #F8FAFC;
+    }
+    #hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-overlay-tint {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 30%, rgba(248, 250, 252, 0.4) 100%);
+      pointer-events: none;
     }
 
     /* Ambient background gradient + grid behind canvas */
@@ -842,8 +848,14 @@
   <div class="bg-layer"></div>
   <div class="bg-grid"></div>
 
-  <!-- 3D canvas -->
-  <canvas id="scene-canvas"></canvas>
+  <!-- Video Background -->
+  <div class="video-container">
+    <video id="hero-video" preload="auto" playsinline muted loop autoplay>
+      <source src="video/cable-video.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay-tint"></div>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav">
@@ -1077,50 +1089,43 @@
       }
     });
   </script>
-  <script type="module">
-    import * as THREE from 'three';
-    import { initCableScene, setReveal, ease, range, lerp } from './cable-scene.js';
+  <script>
+    // ───── Configuration ─────
+    // Options: 
+    // 'loop'    - plays video continuously in the background (extremely smooth, recommended for factory tour)
+    // 'scrub'   - syncs video current time directly to scroll progress (requires a high-keyframe video for smoothness)
+    // 'segments'- plays specific segments of the video when scrolling to different sections
+    const VIDEO_MODE = 'loop'; 
 
-    const canvas = document.getElementById('scene-canvas');
-    const ctx = initCableScene(canvas);
-    const { scene, camera, renderer, cable, lights } = ctx;
+    const video = document.getElementById('hero-video');
 
-    // Initial sizing
-    ctx.onResize();
-    window.addEventListener('resize', ctx.onResize);
-
-    // ───── Camera keyframes ─────
-    const KEYS = [
-      { t: 0.00, pos: [ 0.0,  0.5,  7.5], look: [ 0.0,  0.0,  0.0], fov: 30 },
-      { t: 0.10, pos: [ 1.8,  0.7,  6.5], look: [ 0.4,  0.2,  0.0], fov: 30 },
-      { t: 0.22, pos: [ 2.4,  0.3,  4.6], look: [-0.4, -0.1,  0.0], fov: 28 },
-      { t: 0.38, pos: [-2.2, -0.2,  4.4], look: [ 0.2, -0.1,  0.0], fov: 28 },
-      { t: 0.55, pos: [ 0.6,  0.6,  3.8], look: [ 0.0,  0.2,  0.0], fov: 26 },
-      { t: 0.72, pos: [-1.0,  0.3,  5.4], look: [ 0.0,  0.0,  0.0], fov: 32 },
-      { t: 0.88, pos: [ 0.0,  0.0,  2.2], look: [ 0.0,  0.0,  0.0], fov: 24 },
-      { t: 1.00, pos: [ 0.0,  0.0,  3.5], look: [ 0.0,  0.0,  0.0], fov: 30 },
+    // ───── Segment Definitions (percentages of total duration) ─────
+    const SEGMENTS = [
+      { name: 'hero', startT: 0.00, endT: 0.13, startV: 0.00, endV: 0.15 },
+      { name: 'conductors', startT: 0.13, endT: 0.29, startV: 0.15, endV: 0.30 },
+      { name: 'shield', startT: 0.29, endT: 0.43, startV: 0.30, endV: 0.45 },
+      { name: 'jacket', startT: 0.43, endT: 0.63, startV: 0.45, endV: 0.65 },
+      { name: 'spec', startT: 0.63, endT: 0.81, startV: 0.65, endV: 0.80 },
+      { name: 'current', startT: 0.81, endT: 0.95, startV: 0.80, endV: 0.95 },
+      { name: 'footer', startT: 0.95, endT: 1.01, startV: 0.95, endV: 1.00 },
     ];
 
-    function sampleKeys(t) {
-      let a = KEYS[0], b = KEYS[KEYS.length - 1];
-      for (let i = 0; i < KEYS.length - 1; i++) {
-        if (t >= KEYS[i].t && t <= KEYS[i + 1].t) {
-          a = KEYS[i]; b = KEYS[i + 1]; break;
-        }
-      }
-      const lt = a.t === b.t ? 0 : (t - a.t) / (b.t - a.t);
-      const e = ease.inOut(Math.max(0, Math.min(1, lt)));
-      return {
-        pos: [lerp(a.pos[0], b.pos[0], e), lerp(a.pos[1], b.pos[1], e), lerp(a.pos[2], b.pos[2], e)],
-        look: [lerp(a.look[0], b.look[0], e), lerp(a.look[1], b.look[1], e), lerp(a.look[2], b.look[2], e)],
-        fov: lerp(a.fov, b.fov, e),
-      };
+    // Easing helper for overlays and progress
+    const ease = {
+      smooth: (t) => t * t * (3 - 2 * t),
+      inOut: (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+      out: (t) => 1 - Math.pow(1 - t, 3),
+      in: (t) => t * t * t,
+    };
+
+    function range(v, a, b) {
+      return Math.max(0, Math.min(1, (v - a) / (b - a)));
     }
 
     // ───── State ─────
-    const lookTarget = new THREE.Vector3();
     let tTarget = 0;
     let tCurrent = 0;
+    let isSeeking = false;
 
     // Cache DOM
     const overlays = Array.from(document.querySelectorAll('.overlay'));
@@ -1140,7 +1145,6 @@
     });
 
     function computeScrollProgress() {
-      // On mobile, the scroll progress is based on the top of the last scene (the footer snap point)
       if (window.innerWidth <= 768) {
         const lastScene = document.querySelector('.stage .scene:last-of-type');
         if (lastScene) {
@@ -1157,96 +1161,38 @@
     }
     window.addEventListener('scroll', onScroll, { passive: true });
 
-    // ───── Update loop ─────
-    function update(t) {
-      // Camera
-      const k = sampleKeys(t);
-      camera.position.set(k.pos[0], k.pos[1], k.pos[2]);
-      lookTarget.set(k.look[0], k.look[1], k.look[2]);
-      camera.lookAt(lookTarget);
-      
-      // Calculate dynamic FOV for portrait viewports (mobile aspect ratio < 1)
-      const aspect = camera.aspect;
-      let targetFov = k.fov;
-      if (aspect < 1) {
-        targetFov = k.fov * Math.min(1.5, Math.max(1.0, 0.85 / aspect));
+    // Handle video load and hide loader
+    video.addEventListener('loadeddata', () => {
+      hideLoader();
+    });
+
+    video.addEventListener('seeked', () => {
+      isSeeking = false;
+    });
+
+    // Fallback loader hide after 3 seconds
+    setTimeout(hideLoader, 3000);
+
+    function hideLoader() {
+      const l = document.getElementById('loader');
+      if (l && !l.classList.contains('hide')) {
+        l.classList.add('hide');
+        window.scrollTo(0, 0);
+        tTarget = 0;
+        tCurrent = 0;
+        setTimeout(() => l.remove(), 600);
       }
-      
-      if (Math.abs(camera.fov - targetFov) > 0.01) {
-        camera.fov = targetFov;
-        camera.updateProjectionMatrix();
-      }
+    }
 
-      // Cable rotation — gentle drift + extra swing in fan-out scene
-      const baseRot = t * Math.PI * 0.35;
-      const fanT = ease.inOut(range(t, 0.62, 0.80));
-      cable.rotation.y = baseRot + Math.sin(t * Math.PI * 2.0) * 0.08 + fanT * 0.4;
-      cable.rotation.x = Math.sin(t * Math.PI * 1.4) * 0.10;
-      cable.rotation.z = Math.sin(t * Math.PI * 0.7) * 0.04;
+    // Initialize Video State based on Mode
+    if (VIDEO_MODE === 'loop') {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
 
-      // Reveal — assembly on scroll down, keeping layers fully visible after assembly
-      const bR = ease.inOut(range(t, 0.26, 0.36));
-      const sR = ease.inOut(range(t, 0.28, 0.40));
-      const jR = ease.inOut(range(t, 0.42, 0.58));
-      setReveal(cable.userData.materials.jacket, jR);
-      setReveal(cable.userData.materials.shield, sR);
-      setReveal(cable.userData.materials.bedding, bR);
-
-      // Conductors are always present; their insulation/copper reveal stays at 1.
-      cable.userData.conductorMeshes.forEach((m) => {
-        setReveal(m.userData.insulationMat, 1.0);
-        setReveal(m.userData.copperMat, 1.0);
-      });
-
-      // Keep conductors in place (no fanning out since jacket remains closed)
-      const fan = 0;
-      cable.userData.conductorMeshes.forEach((m) => {
-        const dir = m.userData.fanDir;
-        const scale = m.userData.fanOffsetScale;
-        m.position.copy(dir).multiplyScalar(fan * 0.55 * scale);
-      });
-
-      // Final close-up: dim outer conductors so center conductor stands out
-      const closeUp = ease.in(range(t, 0.84, 1.00));
-      cable.userData.conductorMeshes.forEach((m) => {
-        if (!m.userData.isCenter) {
-          m.userData.insulationMat.opacity = 1 - closeUp * 0.92;
-          m.userData.copperMat.opacity = 1 - closeUp * 0.92;
-          m.userData.insulationMat.transparent = closeUp > 0.01;
-          m.userData.copperMat.transparent = closeUp > 0.01;
-        } else {
-          // Center conductor emissive boost in final scene
-          m.userData.copperMat.emissiveIntensity = 0.18 + closeUp * 0.6;
-        }
-      });
-
-      // Particles — fade in for current flow scene + animate along spine
-      const particleVis = ease.out(range(t, 0.80, 0.96));
-      cable.userData.particles.material.opacity = particleVis;
-
-      if (particleVis > 0.01) {
-        const time = performance.now() * 0.001;
-        const speed = 0.35;
-        const offsets = cable.userData.particleOffsets;
-        const positions = cable.userData.particlePositions;
-        const curve = cable.userData.centerCurve;
-        for (let i = 0; i < offsets.length; i++) {
-          let p = (offsets[i] + time * speed) % 1;
-          if (p < 0) p += 1;
-          const pt = curve.getPointAt(p);
-          positions[i * 3] = pt.x;
-          positions[i * 3 + 1] = pt.y;
-          positions[i * 3 + 2] = pt.z;
-        }
-        cable.userData.particleGeo.attributes.position.needsUpdate = true;
-      }
-
-      // Accent light intensity ramp up at end (current flow scene)
-      lights.accent.intensity = 1.0 + closeUp * 2.0;
-      lights.accent.color.setHex(closeUp > 0.3 ? 0xff4d54 : 0xe31e24);
-
-      // Overlays — fade in BEFORE the scene window, fade out AFTER it,
-      // so the panel is at full opacity for the entire scene range.
+    // ───── Update overlays ─────
+    function updateOverlays(t) {
       const FADE = 0.025;
       for (const el of overlays) {
         const s = parseFloat(el.dataset.start);
@@ -1258,7 +1204,7 @@
         if (op > 0.5) el.classList.add('show'); else el.classList.remove('show');
       }
 
-      // Progress rail
+      // Progress rail active dot
       let activeIdx = 0;
       let bestDist = 1;
       dots.forEach((d, i) => {
@@ -1274,46 +1220,50 @@
       scrollCue.style.opacity = t < 0.04 ? (1 - t * 25) : 0;
     }
 
-    // ───── Render loop ─────
+    // ───── Animation loop ─────
     function animate() {
       requestAnimationFrame(animate);
+      
       // Smooth scroll progress
       tCurrent += (tTarget - tCurrent) * 0.07;
-      update(tCurrent);
-      renderer.render(scene, camera);
-    }
+      updateOverlays(tCurrent);
 
-    // Hide loader once we've rendered a couple frames; also force-hide after 3s
-    // as a fallback in case the rAF counter never fires (e.g. tab backgrounded).
-    let framesRendered = 0;
-    function firstFrameHook() {
-      framesRendered++;
-      if (framesRendered > 2) {
-        hideLoader();
-        return;
-      }
-      requestAnimationFrame(firstFrameHook);
-    }
-    function hideLoader() {
-      const l = document.getElementById('loader');
-      if (l && !l.classList.contains('hide')) {
-        l.classList.add('hide');
-        
-        // Force scroll reset and resize canvas to guarantee correct starting state
-        window.scrollTo(0, 0);
-        tTarget = 0;
-        tCurrent = 0;
-        if (ctx && typeof ctx.onResize === 'function') {
-          ctx.onResize();
+      // Handle video modes
+      if (video.readyState >= 2 && video.duration) {
+        if (VIDEO_MODE === 'scrub') {
+          const destTime = tCurrent * video.duration;
+          if (!isSeeking && Math.abs(video.currentTime - destTime) > 0.04) {
+            isSeeking = true;
+            video.currentTime = destTime;
+          }
+        } else if (VIDEO_MODE === 'segments') {
+          // Find active segment
+          let activeSeg = SEGMENTS[0];
+          for (let i = 0; i < SEGMENTS.length; i++) {
+            if (tCurrent >= SEGMENTS[i].startT && tCurrent <= SEGMENTS[i].endT) {
+              activeSeg = SEGMENTS[i];
+              break;
+            }
+          }
+          const startReal = activeSeg.startV * video.duration;
+          const endReal = activeSeg.endV * video.duration;
+
+          if (video.currentTime < startReal || video.currentTime > endReal) {
+            isSeeking = true;
+            video.currentTime = startReal;
+            video.play().catch(() => {});
+          } else if (video.currentTime >= endReal) {
+            video.pause();
+          } else {
+            if (video.paused && !isSeeking) {
+              video.play().catch(() => {});
+            }
+          }
         }
-        
-        setTimeout(() => l.remove(), 600);
       }
     }
-    requestAnimationFrame(firstFrameHook);
-    setTimeout(hideLoader, 3000);
 
-    // Start with synchronized scroll position
+    // Start Loop
     tTarget = computeScrollProgress();
     tCurrent = tTarget;
     animate();
