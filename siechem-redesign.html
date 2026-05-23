@@ -279,11 +279,13 @@
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      background: #0D0C0C;
+      background: #FFFFFF;
       cursor: pointer;
       box-shadow: 0 4px 20px rgba(0,0,0,0.05);
       border: 1px solid var(--border);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
     }
     .video-card:hover {
       transform: translateY(-6px);
@@ -294,6 +296,16 @@
       width: 100%;
       height: 100%;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .video-card-thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10.5;
+      overflow: hidden;
+      background: #0D0C0C;
     }
     .video-card-video {
       width: 100%;
@@ -311,12 +323,12 @@
     .video-card-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.85) 90%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.7) 90%);
       z-index: 1;
       transition: background 0.4s ease;
     }
     .video-card:hover .video-card-overlay {
-      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.0) 45%, rgba(0,0,0,0.92) 90%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.0) 45%, rgba(0,0,0,0.8) 90%);
     }
     .video-card-badge {
       position: absolute;
@@ -383,6 +395,7 @@
       padding: 22px;
       z-index: 2;
       color: #FFFFFF;
+      transition: all 0.3s ease;
     }
     .video-card-title {
       font-size: 19px;
@@ -444,20 +457,37 @@
     }
     .video-modal-close {
       position: absolute;
-      top: 16px;
-      right: 16px;
+      top: 24px;
+      right: 24px;
       background: rgba(0, 0, 0, 0.6);
       border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: 50%;
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       color: #FFFFFF;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 0.25s ease;
-      z-index: 10;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .video-modal-close:hover {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      transform: scale(1.08);
+    }
+    .video-modal-body {
+      width: 100%;
+      height: 100%;
+    }
+    .video-modal-player {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
     }
@@ -657,8 +687,40 @@
       .testimonial-text { font-size: 15px; }
     }
     @media (max-width: 640px) {
-      .video-card { flex: 0 0 85%; }
-      .carousel-scroll-wrap { gap: 16px; }
+      .video-card {
+        flex: 0 0 82%;
+        aspect-ratio: auto;
+        background: #FFFFFF;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      }
+      .video-card-thumb-wrap {
+        aspect-ratio: 16 / 9.5;
+      }
+      .video-card-content {
+        position: static;
+        padding: 18px;
+        background: #FFFFFF;
+        color: var(--text);
+      }
+      .video-card-title {
+        color: var(--text);
+        font-size: 16px;
+        margin-bottom: 6px;
+        text-shadow: none;
+      }
+      .video-card-desc {
+        color: var(--text-muted);
+        font-size: 12.5px;
+        line-height: 1.45;
+        text-shadow: none;
+      }
+      .carousel-scroll-wrap {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
       .section-header-carousel {
         flex-direction: column;
         align-items: flex-start;
@@ -668,6 +730,50 @@
         width: 100%;
         justify-content: flex-end;
       }
+      .ribbon-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+      }
+      .ribbon-label {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 4px;
+        margin-right: 0;
+        font-size: 11px;
+      }
+      .ribbon-link {
+        padding: 8px 10px;
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    @media (max-width: 520px) {
+      .nav-cta {
+        display: none !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
+      }
+      .hero-search-container {
+        margin: 0 10px 24px 10px;
+      }
+      .hero-search-input {
+        padding: 12px 14px;
+        font-size: 13.5px;
+      }
+      .hero-search-btn {
+        padding: 0 16px;
+      }
+      .hero-search-btn span {
+        display: none;
+      }
     }
     @media (max-height: 600px) {
       .video-modal-container {
@@ -675,6 +781,16 @@
         height: 85vh;
         aspect-ratio: 16 / 9;
       }
+      .video-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+      }
+    }
+    /* Mobile Menu request quote sequence */
+    .mobile-menu.open .mobile-menu-links a:nth-child(7) {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
     }
   </style>
 </head>
@@ -722,6 +838,7 @@
       <a href="certifications.html">Certifications</a>
       <a href="customers.html">Customers</a>
       <a href="catalogues.html">Catalogues</a>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 16px; color: #FFFFFF; box-shadow: var(--shadow-cta);">Request Quote</a>
     </div>
   </div>
 
@@ -802,15 +919,17 @@
         <!-- Video Card 1 -->
         <div class="video-card" data-video-src="video/at-a-glance/inside-our-factory.mp4">
           <div class="video-card-inner">
-            <video class="video-card-video" loop muted playsinline preload="metadata">
-              <source src="video/at-a-glance/inside-our-factory.mp4" type="video/mp4">
-            </video>
-            <div class="video-card-overlay"></div>
-            <div class="video-card-badge">Factory Tour</div>
-            <div class="video-card-play-btn">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/inside-our-factory.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Factory Tour</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
             <div class="video-card-content">
               <h3 class="video-card-title">Inside Our Factory</h3>
@@ -822,15 +941,17 @@
         <!-- Video Card 2 -->
         <div class="video-card" data-video-src="video/at-a-glance/she-powers-siechem.mp4">
           <div class="video-card-inner">
-            <video class="video-card-video" loop muted playsinline preload="metadata">
-              <source src="video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
-            </video>
-            <div class="video-card-overlay"></div>
-            <div class="video-card-badge">Culture</div>
-            <div class="video-card-play-btn">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Culture</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
             <div class="video-card-content">
               <h3 class="video-card-title">She Powers Siechem</h3>
@@ -842,15 +963,17 @@
         <!-- Video Card 3 -->
         <div class="video-card" data-video-src="video/at-a-glance/happy-labours-day.mp4">
           <div class="video-card-inner">
-            <video class="video-card-video" loop muted playsinline preload="metadata">
-              <source src="video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
-            </video>
-            <div class="video-card-overlay"></div>
-            <div class="video-card-badge">Workforce</div>
-            <div class="video-card-play-btn">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Workforce</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
             <div class="video-card-content">
               <h3 class="video-card-title">Happy Labour's Day</h3>
@@ -862,15 +985,17 @@
         <!-- Video Card 4 -->
         <div class="video-card" data-video-src="video/at-a-glance/women-empowerment-v1.mp4">
           <div class="video-card-inner">
-            <video class="video-card-video" loop muted playsinline preload="metadata">
-              <source src="video/at-a-glance/women-empowerment-v1.mp4" type="video/mp4">
-            </video>
-            <div class="video-card-overlay"></div>
-            <div class="video-card-badge">Equality</div>
-            <div class="video-card-play-btn">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/women-empowerment-v1.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Equality</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
             <div class="video-card-content">
               <h3 class="video-card-title">Women Empowerment</h3>
@@ -1039,10 +1164,10 @@
   <!-- Video Lightbox Modal -->
   <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Video Player">
     <div class="video-modal-backdrop"></div>
+    <button class="video-modal-close" id="video-modal-close" aria-label="Close modal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
     <div class="video-modal-container">
-      <button class="video-modal-close" id="video-modal-close" aria-label="Close modal">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
       <div class="video-modal-body">
         <video class="video-modal-player" id="video-modal-player" controls playsinline>
           <source src="" type="video/mp4">
