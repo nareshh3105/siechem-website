@@ -222,53 +222,260 @@
       color: var(--text);
     }
     
-    /* ───────── At a Glance ───────── */
-    .glance-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
-    .glance-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    /* ───────── At a Glance (Premium Video Carousel) ───────── */
+    .section-header-carousel {
       display: flex;
-      flex-direction: column;
-      height: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
     }
-    .glance-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(227,30,36,0.06);
-      border-color: rgba(227,30,36,0.15);
+    .carousel-nav-buttons {
+      display: flex;
+      gap: 12px;
     }
-    .glance-icon-box {
+    .carousel-nav-btn {
       width: 48px;
       height: 48px;
-      border-radius: 10px;
-      background: var(--accent-soft);
-      color: var(--accent);
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-strong);
+      color: var(--text-muted);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
-      font-size: 20px;
-      font-weight: 800;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
-    .glance-card-title {
-      font-size: 18px;
+    .carousel-nav-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+      transform: scale(1.06);
+      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.12);
+    }
+    .carousel-nav-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(227,30,36,0.18);
+    }
+    .carousel-scroll-wrap {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 24px;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+    }
+    .carousel-scroll-wrap::-webkit-scrollbar {
+      display: none; /* WebKit */
+    }
+    .video-card {
+      flex: 0 0 calc(33.333% - 16px);
+      scroll-snap-align: start;
+      aspect-ratio: 16 / 10.5;
+      min-width: 320px;
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #0D0C0C;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(227, 30, 36, 0.14);
+      border-color: rgba(227, 30, 36, 0.35);
+    }
+    .video-card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .video-card-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: grayscale(15%) brightness(95%);
+    }
+    .video-card:hover .video-card-video {
+      opacity: 0.9;
+      transform: scale(1.05);
+      filter: grayscale(0%) brightness(100%);
+    }
+    .video-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.85) 90%);
+      z-index: 1;
+      transition: background 0.4s ease;
+    }
+    .video-card:hover .video-card-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.0) 45%, rgba(0,0,0,0.92) 90%);
+    }
+    .video-card-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
       font-weight: 700;
-      color: var(--text);
-      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .glance-card-desc {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--text-muted);
-      flex: 1;
+    .video-card:hover .video-card-badge {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.4);
     }
+    .video-card-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      z-index: 2;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0.9;
+    }
+    .video-card:hover .video-card-play-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--accent);
+      border-color: var(--accent-light);
+      color: #FFFFFF;
+      opacity: 1;
+      box-shadow: 0 0 24px rgba(227, 30, 36, 0.65);
+    }
+    .video-card-play-btn svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+    }
+    .video-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px;
+      z-index: 2;
+      color: #FFFFFF;
+    }
+    .video-card-title {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      color: #FFFFFF;
+    }
+    .video-card-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.82);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      transition: color 0.3s ease;
+    }
+    .video-card:hover .video-card-desc {
+      color: #FFFFFF;
+    }
+
+    /* ───────── Video Lightbox Modal ───────── */
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-modal.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .video-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .video-modal-container {
+      position: relative;
+      width: 90%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      transform: scale(0.94);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-modal.open .video-modal-container {
+      transform: scale(1);
+    }
+    .video-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .video-modal-close:hover {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      transform: scale(1.08);
+    }
+    .video-modal-body {
+      width: 100%;
+      height: 100%;
+    }
+    .video-modal-player {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
 
     /* ───────── Capabilities Section ───────── */
     .caps-split {
@@ -436,18 +643,38 @@
 
     /* ───────── Responsive Sizing ───────── */
     @media (max-width: 980px) {
-      .glance-grid { grid-template-columns: repeat(2, 1fr); }
+      .video-card { flex: 0 0 calc(50% - 12px); }
+      .carousel-scroll-wrap { gap: 20px; }
       .caps-split { grid-template-columns: 1fr; gap: 40px; }
       .hero-title { font-size: 38px; }
     }
     @media (max-width: 768px) {
-      .glance-grid { grid-template-columns: 1fr; }
       .hero-video-section { height: 60vh; min-height: 480px; }
       .hero-title { font-size: 32px; }
       .hero-subtitle { font-size: 15px; }
       .testimonial-box { padding: 32px; }
       .testimonial-quotes { top: 12px; left: 16px; font-size: 48px; }
       .testimonial-text { font-size: 15px; }
+    }
+    @media (max-width: 640px) {
+      .video-card { flex: 0 0 85%; }
+      .carousel-scroll-wrap { gap: 16px; }
+      .section-header-carousel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .carousel-nav-buttons {
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+    @media (max-height: 600px) {
+      .video-modal-container {
+        width: auto;
+        height: 85vh;
+        aspect-ratio: 16 / 9;
+      }
     }
   </style>
 </head>
@@ -554,49 +781,102 @@
   </section>
 
   <!-- At a Glance Section -->
-  <section class="section-padding bg-light-grey">
+  <section class="section-padding bg-light-grey glance-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">Advanced Engineering</span>
-        <h2 class="section-title">Operations &amp; Capabilities At A Glance</h2>
+      <div class="section-header-carousel">
+        <div class="section-header-text">
+          <span class="section-eyebrow">Advanced Engineering</span>
+          <h2 class="section-title">Operations &amp; Capabilities At A Glance</h2>
+        </div>
+        <div class="carousel-nav-buttons">
+          <button class="carousel-nav-btn" id="carousel-prev" aria-label="Previous slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-nav-btn" id="carousel-next" aria-label="Next slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
       </div>
       
-      <div class="glance-grid">
-        <!-- Card 1 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">EB</div>
-          <h3 class="glance-card-title">E-Beam Polymer Crosslinking</h3>
-          <p class="glance-card-desc">State-of-the-art Electron Beam Irradiation lines crosslink polymer chains, boosting cable thermal limits up to +260°C and resistance to chemicals and abrasion.</p>
+      <div class="carousel-scroll-wrap" id="carousel-scroll-wrap">
+        <!-- Video Card 1 -->
+        <div class="video-card" data-video-src="video/at-a-glance/inside-our-factory.mp4">
+          <div class="video-card-inner">
+            <video class="video-card-video" loop muted playsinline preload="metadata">
+              <source src="video/at-a-glance/inside-our-factory.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-overlay"></div>
+            <div class="video-card-badge">Factory Tour</div>
+            <div class="video-card-play-btn">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Inside Our Factory</h3>
+              <p class="video-card-desc">Take a complete tour of our advanced manufacturing plants, raw compounding divisions, and testing laboratories.</p>
+            </div>
+          </div>
         </div>
-        <!-- Card 2 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">QL</div>
-          <h3 class="glance-card-title">Accredited Quality Laboratories</h3>
-          <p class="glance-card-desc">Equipped with 38+ inspection parameters. We perform automated hi-pot, partial discharge, flex life, and flame resistance testing to exceed international standards.</p>
+
+        <!-- Video Card 2 -->
+        <div class="video-card" data-video-src="video/at-a-glance/she-powers-siechem.mp4">
+          <div class="video-card-inner">
+            <video class="video-card-video" loop muted playsinline preload="metadata">
+              <source src="video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-overlay"></div>
+            <div class="video-card-badge">Culture</div>
+            <div class="video-card-play-btn">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">She Powers Siechem</h3>
+              <p class="video-card-desc">Dedicated to diversity, engineering excellence, and empowering women in our manufacturing operations.</p>
+            </div>
+          </div>
         </div>
-        <!-- Card 3 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">CP</div>
-          <h3 class="glance-card-title">In-House Compounding Plant</h3>
-          <p class="glance-card-desc">Formulating our own proprietary LSZH, XLPE, and polymer raw compounds. Full vertical integration guarantees chemical consistency and custom flexibility.</p>
+
+        <!-- Video Card 3 -->
+        <div class="video-card" data-video-src="video/at-a-glance/happy-labours-day.mp4">
+          <div class="video-card-inner">
+            <video class="video-card-video" loop muted playsinline preload="metadata">
+              <source src="video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-overlay"></div>
+            <div class="video-card-badge">Workforce</div>
+            <div class="video-card-play-btn">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Happy Labour's Day</h3>
+              <p class="video-card-desc">Honoring the hard-working technicians and operators who ensure high quality and zero defects.</p>
+            </div>
+          </div>
         </div>
-        <!-- Card 4 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">AE</div>
-          <h3 class="glance-card-title">Aerospace &amp; Defense Cables</h3>
-          <p class="glance-card-desc">Manufactured in accordance with AS 9100 and MIL-Spec protocols. Supporting commercial aviation and defense systems with lightweight, dual-wall wires.</p>
-        </div>
-        <!-- Card 5 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">RE</div>
-          <h3 class="glance-card-title">Solar &amp; Green Energy</h3>
-          <p class="glance-card-desc">TUV, UL, and CE approved solar PV cabling. Engineered for a 25-year service life under extreme UV radiation, moisture, and temperature fluctuations.</p>
-        </div>
-        <!-- Card 6 -->
-        <div class="glance-card">
-          <div class="glance-icon-box">GL</div>
-          <h3 class="glance-card-title">Global Distribution Reach</h3>
-          <p class="glance-card-desc">Operating a massive 100,000 sq.ft advanced manufacturing facility in Chennai, India. Directly exporting custom cables to projects in over 50+ countries.</p>
+
+        <!-- Video Card 4 -->
+        <div class="video-card" data-video-src="video/at-a-glance/women-empowerment-v1.mp4">
+          <div class="video-card-inner">
+            <video class="video-card-video" loop muted playsinline preload="metadata">
+              <source src="video/at-a-glance/women-empowerment-v1.mp4" type="video/mp4">
+            </video>
+            <div class="video-card-overlay"></div>
+            <div class="video-card-badge">Equality</div>
+            <div class="video-card-play-btn">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Women Empowerment</h3>
+              <p class="video-card-desc">Fostering skills, independence, and career growth for women across our specialized cable manufacturing divisions.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -756,6 +1036,22 @@
     </div>
   </footer>
 
+  <!-- Video Lightbox Modal -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Video Player">
+    <div class="video-modal-backdrop"></div>
+    <div class="video-modal-container">
+      <button class="video-modal-close" id="video-modal-close" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="video-modal-body">
+        <video class="video-modal-player" id="video-modal-player" controls playsinline>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
   <!-- Loader Script and Menu Logic -->
   <script>
     // Navigation Drawer Toggle
@@ -808,6 +1104,108 @@
           slideInterval = setInterval(nextSlide, 6000);
         });
       });
+
+      // --- At a Glance Video Carousel Logic ---
+      const wrap = document.getElementById('carousel-scroll-wrap');
+      const firstCard = wrap ? wrap.querySelector('.video-card') : null;
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+
+      if (wrap && firstCard && prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const cardWidth = firstCard.offsetWidth;
+          const style = window.getComputedStyle(wrap);
+          const gap = parseFloat(style.gap) || 24;
+          wrap.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+          const cardWidth = firstCard.offsetWidth;
+          const style = window.getComputedStyle(wrap);
+          const gap = parseFloat(style.gap) || 24;
+          wrap.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+        });
+        
+        const toggleButtons = () => {
+          const scrollLeft = wrap.scrollLeft;
+          const maxScroll = wrap.scrollWidth - wrap.clientWidth;
+          prevBtn.style.opacity = scrollLeft <= 4 ? '0.4' : '1';
+          prevBtn.style.pointerEvents = scrollLeft <= 4 ? 'none' : 'auto';
+          nextBtn.style.opacity = scrollLeft >= maxScroll - 4 ? '0.4' : '1';
+          nextBtn.style.pointerEvents = scrollLeft >= maxScroll - 4 ? 'none' : 'auto';
+        };
+        
+        wrap.addEventListener('scroll', toggleButtons);
+        window.addEventListener('resize', toggleButtons);
+        // Initial setup delay to ensure rendering is complete
+        setTimeout(toggleButtons, 200);
+      }
+
+      // Video Hover Preview Logic
+      const videoCards = document.querySelectorAll('.video-card');
+      videoCards.forEach(card => {
+        const video = card.querySelector('.video-card-video');
+        if (video) {
+          card.addEventListener('mouseenter', () => {
+            video.play().catch(err => {
+              console.log('Video hover autoplay blocked/interrupted:', err);
+            });
+          });
+          card.addEventListener('mouseleave', () => {
+            video.pause();
+          });
+        }
+      });
+
+      // Fullscreen Lightbox Modal Controller
+      const modal = document.getElementById('video-modal');
+      const modalPlayer = document.getElementById('video-modal-player');
+      const modalClose = document.getElementById('video-modal-close');
+      const modalBackdrop = modal ? modal.querySelector('.video-modal-backdrop') : null;
+
+      if (modal && modalPlayer && modalClose) {
+        videoCards.forEach(card => {
+          card.addEventListener('click', () => {
+            const src = card.getAttribute('data-video-src');
+            if (src) {
+              const sourceEl = modalPlayer.querySelector('source');
+              if (sourceEl) {
+                sourceEl.src = src;
+                modalPlayer.load();
+                modal.classList.add('open');
+                document.documentElement.classList.add('nav-open'); // lock body scroll
+                
+                // Play inside the modal
+                modalPlayer.play().catch(err => {
+                  console.log('Modal video play failed:', err);
+                });
+              }
+            }
+          });
+        });
+
+        const closeModal = () => {
+          modal.classList.remove('open');
+          document.documentElement.classList.remove('nav-open'); // unlock body scroll
+          modalPlayer.pause();
+          const sourceEl = modalPlayer.querySelector('source');
+          if (sourceEl) {
+            sourceEl.src = '';
+          }
+          modalPlayer.load();
+        };
+
+        modalClose.addEventListener('click', closeModal);
+        if (modalBackdrop) {
+          modalBackdrop.addEventListener('click', closeModal);
+        }
+        
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.classList.contains('open')) {
+            closeModal();
+          }
+        });
+      }
 
       // Hero Search Bar Submission Redirect
       const searchForm = document.getElementById('hero-search-form');
