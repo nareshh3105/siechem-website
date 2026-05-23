@@ -28,13 +28,14 @@
       overflow: hidden;
       display: flex;
       align-items: center;
-      background: #000000;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1A0505 100%);
     }
     .hero-video-bg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
       object-fit: cover;
-      opacity: 0.55;
+      opacity: 0;
+      transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
     }
     .hero-video-overlay {
       position: absolute;
@@ -1181,6 +1182,23 @@
   <script>
     // Navigation Drawer Toggle
     document.addEventListener('DOMContentLoaded', () => {
+      // Hero Video Load & Autoplay Controller
+      const heroVideo = document.getElementById('hero-video');
+      if (heroVideo) {
+        const startVideo = () => {
+          heroVideo.style.opacity = '0.55';
+        };
+        if (heroVideo.readyState >= 3) {
+          startVideo();
+        } else {
+          heroVideo.addEventListener('canplay', startVideo);
+          heroVideo.addEventListener('loadeddata', startVideo);
+        }
+        heroVideo.play().catch(err => {
+          console.log('Autoplay was blocked or delayed:', err);
+        });
+      }
+
       const hamburger = document.getElementById('nav-hamburger');
       const menu = document.getElementById('mobile-menu');
       if (hamburger && menu) {
