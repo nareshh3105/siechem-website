@@ -8,878 +8,481 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Three.js importmap removed - using video player background -->
+  
+  <link rel="stylesheet" href="theme.css">
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body {
-      background: #FFFFFF;
-      color: #0F172A;
-      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+    /* ───────── Color Scheme (Unchanged) ───────── */
+    :root {
+      --accent: #E31E24;
+      --accent-2: #B3151A;
+      --accent-soft: rgba(227, 30, 36, 0.06);
     }
-    ::selection { background: rgba(227,30,36,0.15); }
 
-    /* ───────── Video Background ───────── */
-    .video-container {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 1;
-      overflow: hidden;
-      background: #F8FAFC;
-    }
-    #hero-video {
+    /* ───────── Hero Section ───────── */
+    .hero-video-section {
+      position: relative;
+      height: 75vh;
+      min-height: 560px;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background: #000000;
     }
-    .video-overlay-tint {
+    .hero-video-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+    .hero-video-overlay {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center, transparent 30%, rgba(248, 250, 252, 0.4) 100%);
-      pointer-events: none;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.65) 100%);
+      z-index: 2;
     }
-
-    /* Ambient background gradient + grid behind canvas */
-    .bg-layer {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 30% 40%, rgba(227,30,36,0.04) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 60% at 70% 70%, rgba(56,84,166,0.05) 0%, transparent 65%),
-        linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+      color: #FFFFFF;
     }
-    .bg-grid {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      opacity: 0.35;
-      background-image:
-        linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px);
-      background-size: 56px 56px;
-      mask-image: radial-gradient(ellipse 80% 60% at center, black 0%, transparent 70%);
-      -webkit-mask-image: radial-gradient(ellipse 80% 60% at center, black 0%, transparent 70%);
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #F24B51;
+      margin-bottom: 18px;
+      font-weight: 600;
     }
-
-    /* ───────── Navigation ───────── */
-    .nav {
-      position: fixed;
-      top: 16px; left: 24px; right: 24px;
-      z-index: 100;
-      padding: 12px 28px;
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: #F24B51;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 32px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Hero Search Bar */
+    .hero-search-container {
+      max-width: 580px;
+      margin: 0 auto 32px auto;
+      position: relative;
+    }
+    .hero-search-form {
+      display: flex;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .hero-search-form:focus-within {
+      background: #FFFFFF;
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(227,30,36,0.25);
+    }
+    .hero-search-input {
+      flex: 1;
+      padding: 16px 20px;
+      border: none;
+      background: transparent;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: inherit;
+    }
+    .hero-search-input::placeholder {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+    }
+    .hero-search-form:focus-within .hero-search-input {
+      color: var(--text);
+    }
+    .hero-search-form:focus-within .hero-search-input::placeholder {
+      color: var(--text-faint);
+    }
+    .hero-search-input:focus {
+      outline: none;
+    }
+    .hero-search-btn {
+      padding: 0 24px;
+      background: var(--accent);
+      border: none;
+      color: #FFFFFF;
+      font-weight: 700;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      border-radius: 14px;
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
+      gap: 8px;
+      transition: background 0.15s;
+      cursor: pointer;
     }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      text-decoration: none; color: #0F172A;
-      font-weight: 800; font-size: 17px; letter-spacing: -0.4px;
-    }
-    .logo-svg {
-      width: 140px;
-      height: 40px;
-      display: block;
-    }
-    .nav-logo-mark {
-      width: 32px; height: 32px; border-radius: 8px;
-      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 4px 12px rgba(227,30,36,0.25);
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .nav-logo:hover .nav-logo-mark {
-      transform: rotate(90deg);
-    }
-    .nav-links {
-      display: flex; gap: 4px;
-    }
-    .nav-links a {
-      padding: 8px 14px;
-      color: #475569;
-      text-decoration: none;
-      font-size: 13.5px;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: all 0.2s ease;
-    }
-    .nav-links a:hover { color: #E31E24; background: rgba(227,30,36,0.06); }
-    .nav-cta {
-      padding: 10px 20px;
-      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
-      border: none;
-      border-radius: 8px;
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(227,30,36,0.3);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 700;
-      display: inline-flex; align-items: center; gap: 6px;
-      transition: all 0.2s ease;
-    }
-    .nav-cta:hover {
-      background: linear-gradient(135deg, #F24B51 0%, #E31E24 100%);
-      box-shadow: 0 6px 18px rgba(227,30,36,0.45);
-      transform: translateY(-1px);
+    .hero-search-btn:hover {
+      background: var(--accent-2);
     }
 
-    .nav-actions {
+    /* ───────── Product Ribbon ───────── */
+    .product-ribbon {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      position: relative;
+      z-index: 10;
+    }
+    .ribbon-inner {
       display: flex;
+      justify-content: center;
       align-items: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
-    .nav-hamburger {
-      display: none;
+    .ribbon-label {
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-right: 12px;
+    }
+    .ribbon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .ribbon-link:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .ribbon-link svg {
+      transition: transform 0.2s;
+    }
+    .ribbon-link:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* ───────── Section Layouts ───────── */
+    .section-padding {
+      padding: 80px 0;
+    }
+    .bg-light-grey {
+      background: #F8FAFC;
+    }
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 56px auto;
+      text-align: center;
+    }
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      color: var(--text);
+    }
+    
+    /* ───────── At a Glance ───────── */
+    .glance-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .glance-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+      display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      width: 24px;
-      height: 16px;
-      background: transparent;
+      height: 100%;
+    }
+    .glance-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(227,30,36,0.06);
+      border-color: rgba(227,30,36,0.15);
+    }
+    .glance-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .glance-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .glance-card-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      flex: 1;
+    }
+
+    /* ───────── Capabilities Section ───────── */
+    .caps-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .caps-content h2 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .caps-content p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .caps-badge-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .caps-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .caps-badge-icon {
+      font-size: 18px;
+      color: var(--accent);
+      display: flex;
+    }
+    .caps-badge-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .caps-stats-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.01);
+    }
+    .caps-stat-item {
+      margin-bottom: 28px;
+    }
+    .caps-stat-item:last-child {
+      margin-bottom: 0;
+    }
+    .caps-stat-num {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .caps-stat-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .caps-stat-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ───────── Testimonials Section ───────── */
+    .testimonial-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .testimonial-quotes {
+      font-size: 64px;
+      color: var(--accent-soft);
+      line-height: 1;
+      font-family: Georgia, serif;
+      position: absolute;
+      top: 24px; left: 32px;
+      user-select: none;
+    }
+    .testimonial-slide {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .testimonial-slide.active {
+      display: block;
+    }
+    .testimonial-text {
+      font-size: 17px;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .testimonial-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .testimonial-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border);
       border: none;
       cursor: pointer;
       padding: 0;
-      z-index: 110;
+      transition: all 0.2s;
     }
-    .nav-hamburger span {
-      width: 100%;
-      height: 2px;
-      background-color: #0F172A;
-      border-radius: 2px;
-      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .nav-hamburger.active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-      background-color: #E31E24;
-    }
-    .nav-hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .nav-hamburger.active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-      background-color: #E31E24;
-    }
-
-    /* Mobile Navigation Drawer */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      height: 100dvh;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      z-index: 95;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                  visibility 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      padding-top: 80px;
-      touch-action: none;
-    }
-    .mobile-menu.open {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    .mobile-menu-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-    }
-    .mobile-menu-links a {
-      font-size: 26px;
-      font-weight: 800;
-      color: #0F172A;
-      text-decoration: none;
-      transition: color 0.2s, transform 0.2s;
-      letter-spacing: -0.5px;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    .mobile-menu-links a:hover,
-    .mobile-menu-links a:active {
-      color: #E31E24;
-    }
-    .mobile-menu.open .mobile-menu-links a {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .mobile-menu.open .mobile-menu-links a:nth-child(1) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s; }
-    .mobile-menu.open .mobile-menu-links a:nth-child(2) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s; }
-    .mobile-menu.open .mobile-menu-links a:nth-child(3) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s; }
-    .mobile-menu.open .mobile-menu-links a:nth-child(4) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s; }
-    .mobile-menu.open .mobile-menu-links a:nth-child(5) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s; }
-    .mobile-menu.open .mobile-menu-links a:nth-child(6) { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s; }
-
-    /* Lock body scroll */
-    html.nav-open, html.nav-open body {
-      overflow: hidden !important;
-    }
-
-    /* ───────── Scroll stage ───────── */
-    .stage {
-      position: relative;
-      z-index: 10;
-      pointer-events: none;
-    }
-    .scene {
-      height: 120vh;
-      position: relative;
-      pointer-events: none;
-    }
-    .scene:last-of-type { height: 100vh; }
-
-    /* ───────── Overlay panels ───────── */
-    .overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 20;
-      pointer-events: none;
-      display: flex;
-      align-items: center;
-      padding: 110px max(120px, 10vw) 60px max(120px, 10vw);
-      will-change: opacity;
-      visibility: hidden;
-    }
-    .overlay.show {
-      visibility: visible;
-    }
-    .overlay-panel {
-      max-width: 500px;
-      position: relative;
-      transform: translateY(20px);
-      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      border-radius: 16px;
-      padding: 38px 42px;
-      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
-      pointer-events: auto;
-    }
-    .overlay-panel::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 24px; bottom: 24px;
-      width: 4px;
-      background: linear-gradient(to bottom, #E31E24, #B3151A);
-      border-radius: 0 4px 4px 0;
-    }
-    .overlay.show .overlay-panel { transform: translateY(0); }
-    .overlay.right { justify-content: flex-end; }
-    .overlay.right .overlay-panel { text-align: right; }
-    .overlay.right .overlay-panel::before {
-      left: auto; right: 0;
-      border-radius: 4px 0 0 4px;
-    }
-    .overlay.center { justify-content: center; text-align: center; }
-    .overlay.center .overlay-panel { text-align: center; max-width: 720px; }
-    .overlay.center .overlay-panel::before { display: none; }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 5px 14px;
-      border-radius: 99px;
-      background: rgba(227,30,36,0.08);
-      border: 1px solid rgba(227,30,36,0.2);
-      color: #E31E24;
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-    .eyebrow::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: #E31E24;
-      border-radius: 50%;
-      box-shadow: 0 0 8px rgba(227,30,36,0.5);
-    }
-
-    h1.headline {
-      font-size: clamp(40px, 5vw, 76px);
-      font-weight: 800;
-      letter-spacing: -2px;
-      line-height: 1.02;
-      margin-bottom: 26px;
-      color: #0F172A;
-    }
-    h1.headline em {
-      font-style: normal;
-      background: linear-gradient(135deg, #E31E24 0%, #F24B51 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    h2.headline {
-      font-size: clamp(32px, 3.8vw, 58px);
-      font-weight: 800;
-      letter-spacing: -1.5px;
-      line-height: 1.05;
-      margin-bottom: 22px;
-      color: #0F172A;
-    }
-    .lede {
-      font-size: clamp(15px, 1.15vw, 18px);
-      color: #475569;
-      line-height: 1.65;
-      margin-bottom: 28px;
-    }
-    .specs {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-      gap: 12px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-    }
-    .spec {
-      background: rgba(15, 23, 42, 0.02);
-      border: 1px solid rgba(15, 23, 42, 0.04);
-      border-radius: 8px;
-      padding: 10px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      transition: all 0.25s ease;
-    }
-    .spec:hover {
-      background: rgba(227, 30, 36, 0.03);
-      border-color: rgba(227, 30, 36, 0.1);
-    }
-    .spec-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 9.5px;
-      color: #64748B;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .spec-value {
-      font-size: 16px;
-      font-weight: 800;
-      color: #0F172A;
-    }
-    .spec-value .unit { font-size: 11px; color: #64748B; font-weight: 500; margin-left: 2px; }
-
-    .ctas {
-      display: flex; gap: 12px; flex-wrap: wrap;
-      pointer-events: auto;
-    }
-    .right .ctas { justify-content: flex-end; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 11px 22px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #E31E24 0%, #B3151A 100%);
-      color: #ffffff;
-      box-shadow: 0 4px 14px rgba(227,30,36,0.3);
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #F24B51 0%, #E31E24 100%);
-      box-shadow: 0 6px 20px rgba(227,30,36,0.45);
-      transform: translateY(-1.5px);
-    }
-    .btn-primary svg {
-      transition: transform 0.2s ease;
-    }
-    .btn-primary:hover svg {
-      transform: translateX(3px);
-    }
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      color: #475569;
-    }
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 0.04);
-      border-color: #0f172a;
-      color: #0f172a;
-      transform: translateY(-1px);
-    }
-
-    /* ───────── Floating annotations (small labels positioned near cable) ───────── */
-    .annotation {
-      position: fixed;
-      pointer-events: none;
-      background: rgba(255,255,255,0.92);
-      border: 1px solid #E2E8F0;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      color: #1E293B;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      z-index: 25;
-      white-space: nowrap;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .annotation .dot {
-      display: inline-block;
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      margin-right: 6px;
-      vertical-align: 1px;
-    }
-    .annotation.show { opacity: 1; }
-
-    /* ───────── Scroll cue ───────── */
-    .scroll-cue {
-      position: fixed;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 50;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: #64748B;
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      pointer-events: none;
-      transition: opacity 0.3s;
-    }
-    .scroll-cue-line {
-      width: 1px; height: 36px;
-      background: linear-gradient(180deg, transparent, rgba(15,23,42,0.2));
-      position: relative;
-      overflow: hidden;
-    }
-    .scroll-cue-line::after {
-      content: '';
-      position: absolute;
-      top: -100%; left: 0;
-      width: 100%; height: 50%;
-      background: linear-gradient(180deg, transparent, #E31E24);
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-    @keyframes scrollPulse {
-      0% { top: -50%; }
-      100% { top: 100%; }
-    }
-
-    /* ───────── Progress rail (left side) ───────── */
-    .progress-rail {
-      position: fixed;
-      top: 50%;
-      left: 28px;
-      transform: translateY(-50%);
-      z-index: 50;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      pointer-events: auto;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      border-radius: 30px;
-      padding: 20px 10px;
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-      align-items: center;
-    }
-    .progress-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #CBD5E1;
-      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-      position: relative;
-      cursor: pointer;
-    }
-    .progress-dot:hover {
-      background: #94A3B8;
+    .testimonial-dot.active {
+      background: var(--accent);
       transform: scale(1.2);
     }
-    .progress-dot.active {
-      background: #E31E24;
-      box-shadow: 0 0 12px rgba(227,30,36,0.6);
-      transform: scale(1.5);
-    }
-    .progress-dot .label {
-      position: absolute;
-      left: 24px; top: 50%;
-      transform: translateY(-50%) translateX(-6px);
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #64748B;
-      opacity: 0;
-      transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-      white-space: nowrap;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      border-radius: 6px;
-      padding: 4px 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      pointer-events: none;
-    }
-    .progress-dot:hover .label,
-    .progress-dot.active .label {
-      opacity: 1;
-      transform: translateY(-50%) translateX(0);
-    }
-    .progress-dot.active .label {
-      color: #0F172A;
-      border-color: rgba(227, 30, 36, 0.15);
-    }
 
-    /* ───────── Footer scene ───────── */
-    .footer-content {
-      pointer-events: auto;
-    }
-    .cert-row {
-      display: flex; gap: 10px; flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 32px;
-      margin-bottom: 32px;
-    }
-    .cert {
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 7px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      font-weight: 600;
-      color: #475569;
-      background: rgba(255,255,255,0.03);
-    }
-    .footer-meta {
-      margin-top: 64px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 12.5px;
-      color: #64748B;
-      flex-wrap: wrap; gap: 16px;
-    }
-
-    /* Loading splash */
-    .loader {
-      position: fixed; inset: 0;
-      z-index: 200;
-      background: #FFFFFF;
+    /* Client logos */
+    .client-logos {
       display: flex;
-      flex-direction: column;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      gap: 18px;
-      transition: opacity 0.5s ease-out;
-      pointer-events: none;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      opacity: 0.65;
     }
-    .loader.hide { opacity: 0 !important; }
-    .loader-mark {
-      width: 56px; height: 56px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #E31E24, #B3151A);
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 40px rgba(227,30,36,0.3);
-      animation: loaderPulse 1.4s ease-in-out infinite;
-    }
-    @keyframes loaderPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-    }
-    .loader-text {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 0.2em;
+    .client-logo-item {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-faint);
       text-transform: uppercase;
-      color: #64748B;
     }
 
-    /* ───────── Mobile Responsiveness ───────── */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ───────── Responsive Sizing ───────── */
+    @media (max-width: 980px) {
+      .glance-grid { grid-template-columns: repeat(2, 1fr); }
+      .caps-split { grid-template-columns: 1fr; gap: 40px; }
+      .hero-title { font-size: 38px; }
+    }
     @media (max-width: 768px) {
-      html, body {
-        scroll-snap-type: y mandatory;
-        scroll-behavior: smooth;
-      }
-      .scene {
-        height: 100vh !important;
-        height: 100dvh !important;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-      }
-
-      .nav {
-        top: 12px;
-        left: 16px;
-        right: 16px;
-        padding: 10px 16px;
-        border-radius: 10px;
-      }
-      .nav-links {
-        display: none;
-      }
-      .nav-logo {
-        font-size: 15px;
-      }
-      .logo-svg {
-        width: 112px;
-        height: 32px;
-      }
-      .nav-logo-mark {
-        width: 28px;
-        height: 28px;
-        border-radius: 6px;
-      }
-      .nav-logo-mark svg {
-        width: 15px;
-        height: 15px;
-      }
-      .nav-cta {
-        padding: 8px 14px;
-        font-size: 12px;
-        border-radius: 6px;
-      }
-      .nav-hamburger {
-        display: flex;
-      }
-
-      .progress-rail {
-        display: none;
-      }
-
-      .scroll-cue {
-        display: none;
-      }
-
-      .overlay {
-        padding: 90px 16px 24px 16px;
-        align-items: flex-end;
-      }
-      .overlay-panel {
-        max-width: 100%;
-        width: 100%;
-        padding: 24px 20px;
-        margin-bottom: 24px;
-        border-radius: 12px;
-      }
-
-      /* Convert left/right border to top border for bottom-drawer sheet feel */
-      .overlay-panel::before {
-        left: 20px;
-        right: 20px;
-        top: 0;
-        bottom: auto;
-        height: 4px;
-        width: auto;
-        border-radius: 0 0 4px 4px;
-      }
-      .overlay.right .overlay-panel {
-        text-align: left;
-      }
-      .overlay.right .ctas {
-        justify-content: flex-start;
-      }
-      .overlay.right .overlay-panel::before {
-        left: 20px;
-        right: 20px;
-        top: 0;
-        bottom: auto;
-        height: 4px;
-        width: auto;
-        border-radius: 0 0 4px 4px;
-      }
-
-      /* Scrollable footer overlay */
-      .overlay.center {
-        align-items: flex-start;
-        overflow-y: visible;
-        pointer-events: none;
-      }
-      .overlay.center.show {
-        pointer-events: auto;
-      }
-      .overlay.center .overlay-panel {
-        margin: 80px 16px 40px 16px;
-        max-width: 100%;
-        width: calc(100% - 32px);
-        text-align: center;
-      }
-
-      /* When footer is moved into the last scene on mobile */
-      .scene #footer-overlay {
-        position: relative !important;
-        inset: auto !important;
-        opacity: 0 !important;
-        visibility: hidden !important;
-        width: 100% !important;
-        height: auto !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        pointer-events: auto !important;
-        overflow: visible !important;
-        transition: opacity 0.4s ease, visibility 0.4s ease;
-      }
-      .scene #footer-overlay.show {
-        opacity: 1 !important;
-        visibility: visible !important;
-      }
-      .scene #footer-overlay .overlay-panel {
-        margin: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        border: none !important;
-        border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
-        background: rgba(255, 255, 255, 0.92) !important;
-        backdrop-filter: blur(20px) !important;
-        -webkit-backdrop-filter: blur(20px) !important;
-        padding: 40px 20px 32px 20px !important;
-      }
-      .scene:last-of-type {
-        height: auto !important;
-        min-height: 100dvh !important;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-end !important;
-        pointer-events: auto !important;
-      }
-
-      /* Typography adjustments */
-      h1.headline {
-        font-size: 28px !important;
-        margin-bottom: 16px;
-      }
-      h2.headline {
-        font-size: 24px !important;
-        margin-bottom: 14px;
-      }
-      .lede {
-        font-size: 14px !important;
-        line-height: 1.5;
-        margin-bottom: 20px;
-      }
-      .eyebrow {
-        margin-bottom: 14px;
-        padding: 4px 10px;
-        font-size: 10px;
-      }
-
-      /* Specifications layout: 2-column grid */
-      .specs {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
-        padding-top: 16px;
-      }
-      .spec {
-        padding: 8px 10px;
-      }
-      .spec-value {
-        font-size: 14px;
-      }
-
-      /* Buttons spacing */
-      .ctas {
-        gap: 8px;
-      }
-      .btn {
-        padding: 9px 16px;
-        font-size: 12px;
-        flex: 1;
-        justify-content: center;
-      }
-
-      /* Footer specifications */
-      .cert-row {
-        gap: 6px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      .cert {
-        padding: 6px 12px;
-        font-size: 10px;
-      }
-      .footer-meta {
-        margin-top: 32px;
-        padding-top: 20px;
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-      }
+      .glance-grid { grid-template-columns: 1fr; }
+      .hero-video-section { height: 60vh; min-height: 480px; }
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 15px; }
+      .testimonial-box { padding: 32px; }
+      .testimonial-quotes { top: 12px; left: 16px; font-size: 48px; }
+      .testimonial-text { font-size: 15px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background -->
-  <div class="bg-layer"></div>
-  <div class="bg-grid"></div>
-
-  <!-- Video Background -->
-  <div class="video-container">
-    <video id="hero-video" preload="auto" playsinline muted loop autoplay>
-      <source src="video/cable-video.mp4" type="video/mp4">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
-    </video>
-    <div class="video-overlay-tint"></div>
-  </div>
-
   <!-- Navigation -->
   <nav class="nav">
-    <a href="#" class="nav-logo"><svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial Black', 'Arial', sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text><text x="50%" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text></svg></a>
-    <div class="nav-links">
-      <a href="products.html">Products</a>
-      <a href="tech-support.html">Tech Support</a>
-      <a href="about.html">Company</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="customers.html">Customers</a>
-      <a href="catalogues.html">Catalogues</a>
-    </div>
-    <div class="nav-actions">
-      <a href="contact.html" class="nav-cta">
-        Request Quote
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-          <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo">
+        <svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
+          <text x="50%" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial Black', 'Arial', sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text>
+          <text x="50%" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text>
         </svg>
       </a>
-      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-links">
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="tech-support.html" class="nav-link">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta">
+          Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -895,118 +498,246 @@
     </div>
   </div>
 
-  <!-- Progress rail -->
-  <div class="progress-rail" id="progress-rail">
-    <div class="progress-dot" data-t="0.05"><span class="label">Overview</span></div>
-    <div class="progress-dot" data-t="0.22"><span class="label">Conductors</span></div>
-    <div class="progress-dot" data-t="0.38"><span class="label">Shield</span></div>
-    <div class="progress-dot" data-t="0.55"><span class="label">Jacket</span></div>
-    <div class="progress-dot" data-t="0.75"><span class="label">Spec</span></div>
-    <div class="progress-dot" data-t="0.92"><span class="label">Current</span></div>
-  </div>
-
-  <!-- Scroll cue -->
-  <div class="scroll-cue" id="scroll-cue">
-    <span>Scroll</span>
-    <div class="scroll-cue-line"></div>
-  </div>
-
-  <!-- ─── Overlay panels (one per scene) ─── -->
-
-  <!-- 1. HERO -->
-  <div class="overlay" data-start="0.00" data-end="0.12" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">India's #1 Specialty Wires &amp; Cables</div>
-      <h1 class="headline">Precision Wiring<br/>for <em>Critical</em><br/>Applications.</h1>
-      <p class="lede">22 million+ engineered cable configurations for Aerospace, Defence, Automotive, Marine and Industrial systems. Where failure is not an option.</p>
-      <div class="ctas">
-        <a href="products.html" class="btn btn-primary">Explore the Cable
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
-        </a>
-        <a href="contact.html" class="btn btn-ghost">Custom Quote</a>
+  <!-- Hero Video Section -->
+  <section class="hero-video-section">
+    <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" id="hero-video">
+      <source src="video/cable-video.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">India's #1 Specialty Wires &amp; Cables</div>
+      <h1 class="hero-title">Precision Wiring for<br/><em>Critical</em> Applications.</h1>
+      <p class="hero-subtitle">AS 9100, TUV, UL, &amp; MIL-Spec qualified configurations for Aerospace, Defense, Marine, Renewable Energy, and Advanced Industrial systems.</p>
+      
+      <!-- Interactive Hero Search Bar -->
+      <div class="hero-search-container">
+        <form class="hero-search-form" id="hero-search-form">
+          <input type="text" class="hero-search-input" id="hero-search-input" placeholder="Search products (e.g. Aero 44, Solar, MIL-Spec)..." required autocomplete="off">
+          <button type="submit" class="hero-search-btn">
+            <span>Search</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="4"/><path d="M9 9l3 3"/></svg>
+          </button>
+        </form>
       </div>
-    </div>
-  </div>
 
-  <!-- 2. CONDUCTORS -->
-  <div class="overlay right" data-start="0.14" data-end="0.28" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">Layer 3 — Seven Conductors</div>
-      <h2 class="headline">Twisted with<br/>Microscopic Precision.</h2>
-      <p class="lede">Each conductor is individually insulated, colour-coded and stranded for flex life. Six outer cores helix around one neutral — the geometry that survives a million bend cycles.</p>
-      <div class="specs">
-        <div class="spec"><span class="spec-label">Cores</span><span class="spec-value">7</span></div>
-        <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">30 <span class="unit">to</span> 4/0</span></div>
-        <div class="spec"><span class="spec-label">Flex Life</span><span class="spec-value">1M+ <span class="unit">cycles</span></span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. SHIELD -->
-  <div class="overlay" data-start="0.30" data-end="0.42" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">Layer 2 — Braided Shield</div>
-      <h2 class="headline">Tinned Copper Braid.<br/>EMI Locked Out.</h2>
-      <p class="lede">High-coverage tinned copper braid suppresses electromagnetic interference at every frequency band. Mechanical reinforcement, signal integrity, peace of mind.</p>
-      <div class="specs">
-        <div class="spec"><span class="spec-label">Coverage</span><span class="spec-value">85<span class="unit">%</span> +</span></div>
-        <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Tinned Copper</span></div>
-        <div class="spec"><span class="spec-label">Standard</span><span class="spec-value">IEC 62153-4</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 4. JACKET -->
-  <div class="overlay right" data-start="0.44" data-end="0.62" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">Layer 1 — Outer Jacket</div>
-      <h2 class="headline">Engineered for the<br/>Worst Conditions.</h2>
-      <p class="lede">Proprietary LSZH, PVC and XLPE compounds. Flame-retardant, oil-resistant, UV-stable. The outer skin that survives the impossible.</p>
-      <div class="specs">
-        <div class="spec"><span class="spec-label">Compounds</span><span class="spec-value">LSZH · XLPE · PVC</span></div>
-        <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−65 <span class="unit">to</span> +260<span class="unit">°C</span></span></div>
-        <div class="spec"><span class="spec-label">Compliance</span><span class="spec-value">EN 50525 · BS 7655</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5. FAN-OUT (Spec) -->
-  <div class="overlay" data-start="0.64" data-end="0.80" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">Engineering Spec</div>
-      <h2 class="headline">Individually Rated.<br/>Individually Tested.</h2>
-      <p class="lede">Every conductor is qualified separately — for resistance, hi-pot, partial discharge and continuity. Then the assembly is qualified as a system. Nothing leaves the line untested.</p>
-      <div class="specs">
-        <div class="spec"><span class="spec-label">Tests / Cable</span><span class="spec-value">38</span></div>
-        <div class="spec"><span class="spec-label">Hi-Pot</span><span class="spec-value">5<span class="unit">kV AC</span></span></div>
-        <div class="spec"><span class="spec-label">Insulation</span><span class="spec-value">&gt; 100 <span class="unit">GΩ·km</span></span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6. CURRENT FLOW -->
-  <div class="overlay right" data-start="0.82" data-end="0.94" style="opacity:0">
-    <div class="overlay-panel">
-      <div class="eyebrow">Live Performance</div>
-      <h2 class="headline">From Spec Sheet<br/>to Signal Path.</h2>
-      <p class="lede">From a single prototype to full production runs of millions of metres — our applications engineering team builds the wire your system has been waiting for.</p>
-      <div class="ctas">
-        <a href="contact.html" class="btn btn-primary">Talk to an Engineer
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- 7. FOOTER -->
-  <div class="overlay center" data-start="0.96" data-end="1.01" id="footer-overlay" style="opacity:0">
-    <div class="overlay-panel footer-content">
-      <div class="eyebrow">Ready When You Are</div>
-      <h2 class="headline">Bring Us Your<br/>Toughest Spec.</h2>
-      <p class="lede">From Chennai to 50+ countries. From single prototypes to production runs. Siechem engineers the cable your system depends on.</p>
       <div class="ctas" style="justify-content: center;">
-        <a href="mailto:sales@siechem.com" class="btn btn-primary">sales@siechem.com</a>
-        <a href="#" class="btn btn-ghost">Download Catalogue</a>
+        <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="catalogues.html" class="btn btn-ghost">Download Catalogues</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Range Ribbon -->
+  <section class="product-ribbon">
+    <div class="container">
+      <div class="ribbon-inner">
+        <span class="ribbon-label">Quick Links:</span>
+        <a href="products.html?view=segment" class="ribbon-link">
+          Cables By Segment
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="products.html?view=standard" class="ribbon-link">
+          Cables By Standard
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="tech-support.html" class="ribbon-link">
+          Technical Support
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="catalogues.html" class="ribbon-link">
+          Product Catalogues
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- At a Glance Section -->
+  <section class="section-padding bg-light-grey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Advanced Engineering</span>
+        <h2 class="section-title">Operations &amp; Capabilities At A Glance</h2>
+      </div>
+      
+      <div class="glance-grid">
+        <!-- Card 1 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">EB</div>
+          <h3 class="glance-card-title">E-Beam Polymer Crosslinking</h3>
+          <p class="glance-card-desc">State-of-the-art Electron Beam Irradiation lines crosslink polymer chains, boosting cable thermal limits up to +260°C and resistance to chemicals and abrasion.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">QL</div>
+          <h3 class="glance-card-title">Accredited Quality Laboratories</h3>
+          <p class="glance-card-desc">Equipped with 38+ inspection parameters. We perform automated hi-pot, partial discharge, flex life, and flame resistance testing to exceed international standards.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">CP</div>
+          <h3 class="glance-card-title">In-House Compounding Plant</h3>
+          <p class="glance-card-desc">Formulating our own proprietary LSZH, XLPE, and polymer raw compounds. Full vertical integration guarantees chemical consistency and custom flexibility.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">AE</div>
+          <h3 class="glance-card-title">Aerospace &amp; Defense Cables</h3>
+          <p class="glance-card-desc">Manufactured in accordance with AS 9100 and MIL-Spec protocols. Supporting commercial aviation and defense systems with lightweight, dual-wall wires.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">RE</div>
+          <h3 class="glance-card-title">Solar &amp; Green Energy</h3>
+          <p class="glance-card-desc">TUV, UL, and CE approved solar PV cabling. Engineered for a 25-year service life under extreme UV radiation, moisture, and temperature fluctuations.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="glance-card">
+          <div class="glance-icon-box">GL</div>
+          <h3 class="glance-card-title">Global Distribution Reach</h3>
+          <p class="glance-card-desc">Operating a massive 100,000 sq.ft advanced manufacturing facility in Chennai, India. Directly exporting custom cables to projects in over 50+ countries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="caps-split">
+        <div class="caps-content">
+          <span class="section-eyebrow">Why Choose Siechem</span>
+          <h2>Specialty Engineering. Full Customization.</h2>
+          <p>Since 2002, Siechem has been at the forefront of the wire and cable industry, designing and manufacturing over 22 million configurations. We combine technical design consultancy, E-Beam polymer modification, and vertically integrated compounding to build the exact wires your systems require.</p>
+          <p>Our team of applications engineers collaborates directly with clients to optimize weight, flexibility, electrical shield coverage, and environmental survivability for critical systems.</p>
+          
+          <div class="caps-badge-list">
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">AS 9100 Certified</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">MIL-Spec Compliance</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">IECEE CB Lab Testing</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">TUV &amp; UL Approved</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="caps-stats-card">
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">22M+</div>
+            <div class="caps-stat-label">Cable Configurations</div>
+            <div class="caps-stat-desc">Engineered and documented formulations for global B2B clients.</div>
+          </div>
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">100k</div>
+            <div class="caps-stat-label">Sq. Ft. Facility</div>
+            <div class="caps-stat-desc">State-of-the-art E-beam extrusion and twisting plant in Chennai.</div>
+          </div>
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">38+</div>
+            <div class="caps-stat-label">Tests Per Cable</div>
+            <div class="caps-stat-desc">Hi-pot, flame, oil, and flex testing conducted in our accredited labs.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Client logos Section -->
+  <section class="section-padding bg-light-grey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Client Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="testimonial-quotes">“</div>
+        
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <p class="testimonial-text">We are highly pleased with the technical consistency and compliance documentation from Siechem. Their ability to deliver customized E-beam crosslinked cables for our high-stress environments makes them an invaluable aerospace partner.</p>
+          <div class="testimonial-author">Siemens Transportation systems</div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <p class="testimonial-text">Honeywell has benefitted directly from Siechem's flexible engineering approach. The high level of quality control in their Chennai laboratories and compliance with military wire standards makes our global sourcing seamless.</p>
+          <div class="testimonial-author">Honeywell Aerospace Division</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <p class="testimonial-text">Consistent quality, certified custom cable designs, and precise logistics timelines. The team at Siechem makes specifying wires for our offshore energy projects straightforward and efficient.</p>
+          <div class="testimonial-author">General Electric Power &amp; Water</div>
+        </div>
+
+        <!-- Testimonial Indicators -->
+        <div class="testimonial-indicators">
+          <button class="testimonial-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+      <!-- Grayscale Corporate Client Logos -->
+      <div class="client-logos">
+        <div class="client-logo-item">Siemens</div>
+        <div class="client-logo-item">Honeywell</div>
+        <div class="client-logo-item">Schneider</div>
+        <div class="client-logo-item">GE Energy</div>
+        <div class="client-logo-item">Mitsubishi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo">
+            <svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg">
+              <text x="50%" y="26" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial Black', 'Arial', sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text>
+              <text x="50%" y="42" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-weight="700" font-size="11" fill="#FFFFFF" letter-spacing="0.2px">Wires &amp; Cables</text>
+            </svg>
+          </a>
+          <p>India's leading specialty wires &amp; cables manufacturer. Engineering precision for the world's most critical systems since 2002.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html?view=segment">By Segment</a></li>
+            <li><a href="products.html?view=standard">By Standard</a></li>
+            <li><a href="product-aero44.html">Aerospace Cables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support &amp; Company</h4>
+          <ul>
+            <li><a href="tech-support.html">Technical Support</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact &amp; Media</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="customers.html">Our Customers</a></li>
+            <li><a href="catalogues.html">Catalogues</a></li>
+          </ul>
+        </div>
       </div>
       <div class="cert-row">
         <span class="cert">TUV</span>
@@ -1023,48 +754,11 @@
         <span>Established 2002 · 100,000 sq.ft · 22M+ configurations</span>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- ─── Scroll spacer sections ─── -->
-  <div class="stage" id="stage">
-    <div class="scene"></div>
-    <div class="scene"></div>
-    <div class="scene"></div>
-    <div class="scene"></div>
-    <div class="scene"></div>
-    <div class="scene"></div>
-    <div class="scene"></div>
-  </div>
-
-  <!-- Loading -->
-  <div class="loader" id="loader">
-    <div class="loader-mark">
-      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="white" stroke-width="2.5">
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="12" cy="12" r="9" stroke-dasharray="4 3"/>
-        <line x1="12" y1="3" x2="12" y2="7"/>
-        <line x1="12" y1="17" x2="12" y2="21"/>
-      </svg>
-    </div>
-    <div class="loader-text">Initialising · Siechem</div>
-  </div>
-
-  <!-- Orchestrator -->
+  <!-- Loader Script and Menu Logic -->
   <script>
-    // Disable scroll restoration ASAP so cinematic always starts at hero.
-    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    window.scrollTo(0, 0);
-
-    // On mobile, move the footer overlay inside the last scene so it scrolls naturally in-flow
-    if (window.innerWidth <= 768) {
-      const footer = document.getElementById('footer-overlay');
-      const lastScene = document.querySelector('.stage .scene:last-of-type');
-      if (footer && lastScene) {
-        lastScene.appendChild(footer);
-      }
-    }
-
-    // Mobile navigation drawer toggle
+    // Navigation Drawer Toggle
     document.addEventListener('DOMContentLoaded', () => {
       const hamburger = document.getElementById('nav-hamburger');
       const menu = document.getElementById('mobile-menu');
@@ -1087,186 +781,47 @@
           });
         });
       }
-    });
-  </script>
-  <script>
-    // ───── Configuration ─────
-    // Options: 
-    // 'loop'    - plays video continuously in the background (extremely smooth, recommended for factory tour)
-    // 'scrub'   - syncs video current time directly to scroll progress (requires a high-keyframe video for smoothness)
-    // 'segments'- plays specific segments of the video when scrolling to different sections
-    const VIDEO_MODE = 'loop'; 
 
-    const video = document.getElementById('hero-video');
+      // Testimonial Carousel Auto-Play and Click Logic
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      let currentSlide = 0;
+      let slideInterval = setInterval(nextSlide, 6000);
 
-    // ───── Segment Definitions (percentages of total duration) ─────
-    const SEGMENTS = [
-      { name: 'hero', startT: 0.00, endT: 0.13, startV: 0.00, endV: 0.15 },
-      { name: 'conductors', startT: 0.13, endT: 0.29, startV: 0.15, endV: 0.30 },
-      { name: 'shield', startT: 0.29, endT: 0.43, startV: 0.30, endV: 0.45 },
-      { name: 'jacket', startT: 0.43, endT: 0.63, startV: 0.45, endV: 0.65 },
-      { name: 'spec', startT: 0.63, endT: 0.81, startV: 0.65, endV: 0.80 },
-      { name: 'current', startT: 0.81, endT: 0.95, startV: 0.80, endV: 0.95 },
-      { name: 'footer', startT: 0.95, endT: 1.01, startV: 0.95, endV: 1.00 },
-    ];
+      function showSlide(n) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
 
-    // Easing helper for overlays and progress
-    const ease = {
-      smooth: (t) => t * t * (3 - 2 * t),
-      inOut: (t) => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
-      out: (t) => 1 - Math.pow(1 - t, 3),
-      in: (t) => t * t * t,
-    };
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
 
-    function range(v, a, b) {
-      return Math.max(0, Math.min(1, (v - a) / (b - a)));
-    }
-
-    // ───── State ─────
-    let tTarget = 0;
-    let tCurrent = 0;
-    let isSeeking = false;
-
-    // Cache DOM
-    const overlays = Array.from(document.querySelectorAll('.overlay'));
-    const dots = Array.from(document.querySelectorAll('.progress-dot'));
-    const scrollCue = document.getElementById('scroll-cue');
-
-    // Make progress dots clickable for smooth cinematic scrolling
-    dots.forEach(d => {
-      d.addEventListener('click', () => {
-        const tVal = parseFloat(d.dataset.t);
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        window.scrollTo({
-          top: tVal * maxScroll,
-          behavior: 'smooth'
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          showSlide(index);
+          slideInterval = setInterval(nextSlide, 6000);
         });
       });
-    });
 
-    function computeScrollProgress() {
-      if (window.innerWidth <= 768) {
-        const lastScene = document.querySelector('.stage .scene:last-of-type');
-        if (lastScene) {
-          const limit = lastScene.offsetTop;
-          return limit > 0 ? Math.min(1.0, window.scrollY / limit) : 0;
-        }
-      }
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      return max > 0 ? window.scrollY / max : 0;
-    }
-
-    function onScroll() {
-      tTarget = computeScrollProgress();
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    // Handle video load and hide loader
-    video.addEventListener('loadeddata', () => {
-      hideLoader();
-    });
-
-    video.addEventListener('seeked', () => {
-      isSeeking = false;
-    });
-
-    // Fallback loader hide after 3 seconds
-    setTimeout(hideLoader, 3000);
-
-    function hideLoader() {
-      const l = document.getElementById('loader');
-      if (l && !l.classList.contains('hide')) {
-        l.classList.add('hide');
-        window.scrollTo(0, 0);
-        tTarget = 0;
-        tCurrent = 0;
-        setTimeout(() => l.remove(), 600);
-      }
-    }
-
-    // Initialize Video State based on Mode
-    if (VIDEO_MODE === 'loop') {
-      video.play().catch(() => {});
-    } else {
-      video.pause();
-    }
-
-    // ───── Update overlays ─────
-    function updateOverlays(t) {
-      const FADE = 0.025;
-      for (const el of overlays) {
-        const s = parseFloat(el.dataset.start);
-        const e = parseFloat(el.dataset.end);
-        const fadeIn = range(t, s - FADE, s);
-        const fadeOut = 1 - range(t, e, e + FADE);
-        const op = Math.max(0, Math.min(fadeIn, fadeOut));
-        el.style.opacity = op;
-        if (op > 0.5) el.classList.add('show'); else el.classList.remove('show');
-      }
-
-      // Progress rail active dot
-      let activeIdx = 0;
-      let bestDist = 1;
-      dots.forEach((d, i) => {
-        const dt = parseFloat(d.dataset.t);
-        const dist = Math.abs(t - dt);
-        if (dist < bestDist) { bestDist = dist; activeIdx = i; }
-      });
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === activeIdx);
-      });
-
-      // Scroll cue fades after a bit of scrolling
-      scrollCue.style.opacity = t < 0.04 ? (1 - t * 25) : 0;
-    }
-
-    // ───── Animation loop ─────
-    function animate() {
-      requestAnimationFrame(animate);
-      
-      // Smooth scroll progress
-      tCurrent += (tTarget - tCurrent) * 0.07;
-      updateOverlays(tCurrent);
-
-      // Handle video modes
-      if (video.readyState >= 2 && video.duration) {
-        if (VIDEO_MODE === 'scrub') {
-          const destTime = tCurrent * video.duration;
-          if (!isSeeking && Math.abs(video.currentTime - destTime) > 0.04) {
-            isSeeking = true;
-            video.currentTime = destTime;
+      // Hero Search Bar Submission Redirect
+      const searchForm = document.getElementById('hero-search-form');
+      const searchInput = document.getElementById('hero-search-input');
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = encodeURIComponent(searchInput.value.trim());
+          if (query) {
+            window.location.href = `products.html?search=${query}`;
           }
-        } else if (VIDEO_MODE === 'segments') {
-          // Find active segment
-          let activeSeg = SEGMENTS[0];
-          for (let i = 0; i < SEGMENTS.length; i++) {
-            if (tCurrent >= SEGMENTS[i].startT && tCurrent <= SEGMENTS[i].endT) {
-              activeSeg = SEGMENTS[i];
-              break;
-            }
-          }
-          const startReal = activeSeg.startV * video.duration;
-          const endReal = activeSeg.endV * video.duration;
-
-          if (video.currentTime < startReal || video.currentTime > endReal) {
-            isSeeking = true;
-            video.currentTime = startReal;
-            video.play().catch(() => {});
-          } else if (video.currentTime >= endReal) {
-            video.pause();
-          } else {
-            if (video.paused && !isSeeking) {
-              video.play().catch(() => {});
-            }
-          }
-        }
+        });
       }
-    }
-
-    // Start Loop
-    tTarget = computeScrollProgress();
-    tCurrent = tTarget;
-    animate();
+    });
   </script>
 </body>
 </html>
