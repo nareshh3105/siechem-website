@@ -105,7 +105,7 @@
     .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-faint); cursor: pointer; width: 28px; height: 28px; border-radius: 50%; transition: background 0.15s; display: flex; align-items: center; justify-content: center; }
     .modal-close:hover { background: var(--bg-soft); color: var(--text); }
 
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-faint); margin-bottom: 32px; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-faint); margin-bottom: 0; padding: 20px 0 0; }
     .breadcrumb a { color: var(--text-faint); text-decoration: none; }
     .breadcrumb a:hover { color: var(--accent); }
     .breadcrumb span { color: var(--border-strong); }
@@ -115,6 +115,100 @@
     .empty-state p { font-size: 15px; margin: 0; }
 
     .colour-dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); vertical-align: middle; margin-right: 5px; }
+
+    /* ── Hero band ── */
+    .auto-hero-band {
+      background: linear-gradient(135deg, #0f0f14 0%, #1a0a0b 50%, #1e1014 100%);
+      margin: 0 -9999px;
+      padding: 64px 9999px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .auto-hero-band::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(227,30,36,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .auto-hero-band::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(227,30,36,0.4) 40%, rgba(227,30,36,0.4) 60%, transparent 100%);
+    }
+    .auto-hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 900px) { .auto-hero-inner { grid-template-columns: 1fr; gap: 40px; } }
+    .auto-hero-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 22px; }
+    .auto-hero-tag {
+      font-size: 11px; font-weight: 700; font-family: var(--mono);
+      padding: 4px 10px; border-radius: 4px;
+      background: rgba(227,30,36,0.15); color: #f87171;
+      border: 1px solid rgba(227,30,36,0.3);
+      letter-spacing: 0.04em;
+    }
+    .auto-hero-tag.primary { background: rgba(227,30,36,0.25); color: #fca5a5; border-color: rgba(227,30,36,0.5); }
+    .auto-hero-title {
+      font-size: clamp(32px, 5vw, 52px); font-weight: 900; line-height: 1.08;
+      color: #fff; margin-bottom: 18px; letter-spacing: -0.02em;
+    }
+    .auto-hero-title span { color: #e31e24; }
+    .auto-hero-desc { font-size: 15.5px; line-height: 1.7; color: rgba(255,255,255,0.62); max-width: 520px; margin-bottom: 36px; }
+    .auto-hero-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-bottom: 36px; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; }
+    .auto-hero-stat {
+      padding: 18px 16px; text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+    .auto-hero-stat:last-child { border-right: none; }
+    .auto-hero-stat-num { font-size: 26px; font-weight: 900; color: #e31e24; line-height: 1; margin-bottom: 4px; }
+    .auto-hero-stat-label { font-size: 11px; color: rgba(255,255,255,0.45); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    @media (max-width: 540px) { .auto-hero-stats { grid-template-columns: 1fr 1fr; } .auto-hero-stat:nth-child(2) { border-right: none; } }
+    .auto-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; background: #e31e24; color: #fff;
+      font-weight: 700; font-size: 14.5px; border-radius: 8px; border: none; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(227,30,36,0.45);
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .hero-btn-primary:hover { background: #c8181e; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(227,30,36,0.55); }
+    .hero-btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 26px; background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.85);
+      font-weight: 600; font-size: 14.5px; border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.15); text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .hero-btn-secondary:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    /* ── Cable SVG visual ── */
+    .auto-hero-visual {
+      position: relative; aspect-ratio: 1; max-width: 440px; margin: 0 auto;
+    }
+    .auto-hero-visual svg { width: 100%; height: 100%; filter: drop-shadow(0 0 60px rgba(227,30,36,0.25)); }
+
+    /* ── Spec badges strip ── */
+    .spec-strip {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      padding: 22px 0; border-bottom: 1px solid var(--border); margin-bottom: 36px;
+      align-items: center;
+    }
+    .spec-strip-label { font-size: 12px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); margin-right: 4px; }
+    .spec-pill {
+      font-size: 12px; font-weight: 700; font-family: var(--mono);
+      padding: 5px 12px; border-radius: 99px;
+      background: var(--accent-soft); color: var(--accent-2);
+      border: 1px solid var(--accent-border);
+    }
   </style>
 </head>
 <body>
@@ -139,97 +233,127 @@
         <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
-    <div class="nav-mobile" id="nav-mobile">
-      <a href="siechem-redesign.html" class="nav-mobile-link">Home</a>
-      <a href="products.html" class="nav-mobile-link">Products</a>
-      <a href="tech-support.html" class="nav-mobile-link">Tech Support</a>
-      <a href="about.html" class="nav-mobile-link">Company</a>
-      <a href="certifications.html" class="nav-mobile-link">Certifications</a>
-      <a href="customers.html" class="nav-mobile-link">Customers</a>
-      <a href="catalogues.html" class="nav-mobile-link">Catalogues</a>
-      <a href="contact.html" class="nav-mobile-link nav-mobile-cta">Request Quote</a>
-    </div>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a href="siechem-redesign.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tech-support.html">Tech Support</a>
+      <a href="about.html">Company</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <a href="catalogues.html">Catalogues</a>
+    </div>
+  </div>
+
+  <!-- Hero Band (full-bleed dark) -->
+  <div class="auto-hero-band">
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:28px;">
+        <a href="siechem-redesign.html" style="color:rgba(255,255,255,0.4);">Home</a>
+        <span style="color:rgba(255,255,255,0.2);">›</span>
+        <a href="products.html" style="color:rgba(255,255,255,0.4);">Products</a>
+        <span style="color:rgba(255,255,255,0.2);">›</span>
+        <a href="catalogues.html" style="color:rgba(255,255,255,0.4);">Catalogues</a>
+        <span style="color:rgba(255,255,255,0.2);">›</span>
+        <span style="color:rgba(255,255,255,0.75);">Automotive Cables</span>
+      </div>
+      <div class="auto-hero-inner">
+        <div>
+          <div class="auto-hero-tags">
+            <span class="auto-hero-tag primary">Automotive</span>
+            <span class="auto-hero-tag">JIS C3406</span>
+            <span class="auto-hero-tag">JASO D611/D608</span>
+            <span class="auto-hero-tag">SAE J1128/J1127/J1678</span>
+            <span class="auto-hero-tag">ISO 6722</span>
+          </div>
+          <h1 class="auto-hero-title">Automotive Cables<br><span>Complete Range</span></h1>
+          <p class="auto-hero-desc">Comprehensive portfolio of low-tension automotive cables meeting all major international standards — from ultra-thin wall (0.22mm²) to heavy-duty battery cables (120mm² / 4/0 AWG). Bare or tinned copper, PVC or cross-linked insulation, +70°C to +150°C.</p>
+          <div class="auto-hero-stats">
+            <div class="auto-hero-stat"><div class="auto-hero-stat-num">45+</div><div class="auto-hero-stat-label">Cable Types</div></div>
+            <div class="auto-hero-stat"><div class="auto-hero-stat-num">8</div><div class="auto-hero-stat-label">Spec Standards</div></div>
+            <div class="auto-hero-stat"><div class="auto-hero-stat-num">500+</div><div class="auto-hero-stat-label">Size Variants</div></div>
+            <div class="auto-hero-stat"><div class="auto-hero-stat-num">90+</div><div class="auto-hero-stat-label">Colour Options</div></div>
+          </div>
+          <div class="auto-hero-actions">
+            <button class="hero-btn-primary" onclick="openModal()">Request Quote <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <a href="catalogues.html" class="hero-btn-secondary">View All Catalogues</a>
+          </div>
+        </div>
+        <div class="auto-hero-visual">
+          <svg viewBox="0 0 440 440" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#e31e24" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#e31e24" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="strand-g" cx="35%" cy="30%" r="65%">
+                <stop offset="0%" stop-color="#f5d06a"/>
+                <stop offset="100%" stop-color="#b8811a"/>
+              </radialGradient>
+              <filter id="blur-glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <!-- Glow background -->
+            <circle cx="220" cy="220" r="200" fill="url(#glow)"/>
+            <!-- Orbit rings -->
+            <circle cx="220" cy="220" r="195" stroke="rgba(227,30,36,0.08)" stroke-width="1" stroke-dasharray="4 8"/>
+            <circle cx="220" cy="220" r="160" stroke="rgba(227,30,36,0.06)" stroke-width="1" stroke-dasharray="3 10"/>
+            <g transform="translate(220,220)">
+              <!-- Outer jacket -->
+              <circle r="148" fill="#12060a" stroke="#e31e24" stroke-width="2"/>
+              <!-- Jacket highlight arc -->
+              <path d="M -104 -104 A 148 148 0 0 1 104 -104" stroke="rgba(227,30,36,0.35)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <!-- Insulation layer -->
+              <circle r="118" fill="#2a0a0d"/>
+              <circle r="118" fill="none" stroke="#e31e24" stroke-width="1.5" stroke-opacity="0.4"/>
+              <!-- Inner conductor area -->
+              <circle r="82" fill="#1a0508"/>
+              <!-- 7-wire inner core -->
+              <circle cx="0" cy="0" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="32" cy="0" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="-32" cy="0" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="16" cy="27.7" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="-16" cy="27.7" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="16" cy="-27.7" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <circle cx="-16" cy="-27.7" r="18" fill="url(#strand-g)" stroke="#c49a20" stroke-width="1"/>
+              <!-- Outer ring 12 strands -->
+              <circle cx="60" cy="0" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="-60" cy="0" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="30" cy="52" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="-30" cy="52" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="30" cy="-52" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="-30" cy="-52" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="52" cy="30" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="-52" cy="30" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="52" cy="-30" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <circle cx="-52" cy="-30" r="14" fill="url(#strand-g)" stroke="#c49a20" stroke-width="0.8"/>
+              <!-- Dimension callouts -->
+              <line x1="0" y1="-82" x2="0" y2="-148" stroke="rgba(227,30,36,0.5)" stroke-width="1" stroke-dasharray="3 4"/>
+              <circle cx="0" cy="-148" r="3" fill="#e31e24"/>
+              <text x="6" y="-108" fill="rgba(255,255,255,0.55)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500">PVC / XLPO</text>
+              <line x1="82" y1="0" x2="148" y2="0" stroke="rgba(255,200,80,0.5)" stroke-width="1" stroke-dasharray="3 4"/>
+              <circle cx="148" cy="0" r="3" fill="#e8b84b"/>
+              <text x="88" y="-5" fill="rgba(255,200,80,0.7)" font-size="10" font-family="'JetBrains Mono',monospace" font-weight="500">Cu Strands</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-      <a href="siechem-redesign.html">Home</a>
-      <span>›</span>
-      <a href="products.html">Products</a>
-      <span>›</span>
-      <a href="catalogues.html">Catalogues</a>
-      <span>›</span>
-      <span style="color:var(--text)">Automotive Cables</span>
+    <!-- Spec strip -->
+    <div class="spec-strip">
+      <span class="spec-strip-label">Standards:</span>
+      <span class="spec-pill">JIS C3406</span>
+      <span class="spec-pill">JASO D611</span>
+      <span class="spec-pill">JASO D608</span>
+      <span class="spec-pill">SAE J1128</span>
+      <span class="spec-pill">SAE J1127</span>
+      <span class="spec-pill">SAE J1678</span>
+      <span class="spec-pill">ISO 6722</span>
+      <span class="spec-pill">Volvo</span>
     </div>
-
-    <!-- Hero -->
-    <section class="product-hero">
-      <div class="product-hero-content">
-        <div class="product-hero-tags" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
-          <span class="badge badge-primary">Automotive</span>
-          <span class="badge">JIS C3406</span>
-          <span class="badge">JASO D611/D608</span>
-          <span class="badge">SAE J1128/J1127/J1678</span>
-          <span class="badge">ISO 6722</span>
-        </div>
-        <h1 class="product-hero-title">Automotive Cables<br><span style="color:var(--accent)">Complete Range</span></h1>
-        <p class="product-hero-desc" style="max-width:520px;">Comprehensive portfolio of low-tension automotive cables meeting all major international standards — from ultra-thin wall (0.22mm²) to heavy-duty battery cables (120mm² / 4/0 AWG). Available in bare or tinned copper, PVC or cross-linked insulation, across temperature ratings from +70°C to +150°C.</p>
-        <div style="display:flex;gap:40px;margin-top:28px;flex-wrap:wrap;">
-          <div><div style="font-size:28px;font-weight:800;color:var(--accent)">45+</div><div style="font-size:13px;color:var(--text-faint);margin-top:2px;">Cable Types</div></div>
-          <div><div style="font-size:28px;font-weight:800;color:var(--accent)">7</div><div style="font-size:13px;color:var(--text-faint);margin-top:2px;">Spec Standards</div></div>
-          <div><div style="font-size:28px;font-weight:800;color:var(--accent)">500+</div><div style="font-size:13px;color:var(--text-faint);margin-top:2px;">Size Variants</div></div>
-          <div><div style="font-size:28px;font-weight:800;color:var(--accent)">90+</div><div style="font-size:13px;color:var(--text-faint);margin-top:2px;">Colour Options</div></div>
-        </div>
-        <div style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap;">
-          <button class="btn btn-primary" onclick="openModal()">Request Quote</button>
-          <a href="catalogues.html" class="btn btn-secondary">View All Catalogues</a>
-        </div>
-      </div>
-      <div class="product-hero-visual">
-        <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" fill="none">
-          <circle cx="210" cy="210" r="200" fill="url(#bg-grad)" opacity="0.06"/>
-          <!-- Main cable cross-section -->
-          <g transform="translate(210,210)">
-            <!-- Outer jacket -->
-            <circle r="140" fill="#1a1a2e" stroke="#e31e24" stroke-width="2.5" opacity="0.9"/>
-            <!-- Insulation -->
-            <circle r="110" fill="#e31e24" opacity="0.15"/>
-            <!-- Conductor bundle -->
-            <circle r="72" fill="#e31e24" opacity="0.08"/>
-            <!-- Individual strands (19-strand pattern) -->
-            <circle cx="0" cy="0" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="28" cy="0" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-28" cy="0" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="14" cy="24" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-14" cy="24" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="14" cy="-24" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-14" cy="-24" r="16" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <!-- outer ring of strands -->
-            <circle cx="54" cy="0" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-54" cy="0" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="27" cy="47" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-27" cy="47" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="27" cy="-47" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-27" cy="-47" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="47" cy="27" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-47" cy="27" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="47" cy="-27" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <circle cx="-47" cy="-27" r="13" fill="#e8b84b" stroke="#c49a20" stroke-width="1"/>
-            <!-- Wall labels -->
-            <text x="90" y="-90" fill="#e31e24" font-size="11" font-weight="600" font-family="sans-serif" transform="rotate(-30,90,-90)">XLPO / PVC</text>
-            <text x="90" y="-75" fill="rgba(255,255,255,0.5)" font-size="9" font-family="sans-serif" transform="rotate(-30,90,-75)">Insulation</text>
-          </g>
-          <defs>
-            <radialGradient id="bg-grad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#e31e24"/>
-              <stop offset="100%" stop-color="#e31e24" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
-    </section>
 
     <!-- Tabs -->
     <div class="tabs">
@@ -950,7 +1074,8 @@
 
   // ─── NAV HAMBURGER ────────────────────────────────────────────────────────
   document.getElementById('nav-hamburger').addEventListener('click', () => {
-    document.getElementById('nav-mobile').classList.toggle('open');
+    document.getElementById('mobile-menu').classList.toggle('open');
+    document.getElementById('nav-hamburger').classList.toggle('active');
   });
   </script>
 
