@@ -70,7 +70,7 @@
 
     .quick-contacts {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
       gap: 14px;
       margin-top: 20px;
     }
@@ -102,6 +102,7 @@
     /* Map placeholder */
     .map-illustration {
       aspect-ratio: 16 / 9;
+      max-height: 280px;
       background: linear-gradient(135deg, #0a1020, #050810);
       border: 1px solid var(--border);
       border-radius: 14px;

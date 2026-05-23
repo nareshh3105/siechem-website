@@ -135,6 +135,13 @@
       font-size: 12px;
       color: var(--text-faint);
     }
+    @media (max-width: 640px) {
+      .filter-bar { width: 100%; overflow-x: auto; }
+      .filter-bar button { padding: 9px 14px; font-size: 13px; flex-shrink: 0; }
+    }
+    @media (max-width: 480px) {
+      .search-bar { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
