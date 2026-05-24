@@ -150,19 +150,8 @@ module.exports = async function handler(req, res) {
 
   const { name, phone, company, email, part_number, quantity, delivery, message, cable_type, cable_spec, subject } = req.body || {};
 
-  // Temporary debug — remove after confirming env vars are injected
   const gmailUser = (process.env.GMAIL_USER || '').trim();
   const gmailPass = (process.env.GMAIL_PASS || '').trim();
-  if (!gmailUser || !gmailPass) {
-    return res.status(500).json({
-      success: false,
-      debug: {
-        GMAIL_USER: gmailUser ? `${gmailUser.slice(0,5)}…` : 'MISSING',
-        GMAIL_PASS: gmailPass ? `set(${gmailPass.length}chars)` : 'MISSING',
-        env_keys: Object.keys(process.env).filter(k => k.startsWith('GMAIL'))
-      }
-    });
-  }
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
