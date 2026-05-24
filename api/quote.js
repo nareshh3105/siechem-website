@@ -11,19 +11,6 @@ const nodemailer = require('nodemailer');
 
 const COMPANY_EMAIL = process.env.GMAIL_USER;
 
-// ─── Build Gmail transporter ────────────────────────────────────────────────
-function makeTransporter() {
-  return nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS
-    }
-  });
-}
-
 // ─── Company notification email (plain summary) ─────────────────────────────
 function companyEmailHtml({ name, phone, company, email, part_number, cable_type, quantity, delivery, message }) {
   return `<!DOCTYPE html><html><body style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
@@ -163,7 +150,25 @@ module.exports = async function handler(req, res) {
 
   const { name, phone, company, email, part_number, quantity, delivery, message, cable_type, cable_spec, subject } = req.body || {};
 
-  const transporter = makeTransporter();
+  // Temporary debug — remove after confirming env vars are injected
+  const gmailUser = (process.env.GMAIL_USER || '').trim();
+  const gmailPass = (process.env.GMAIL_PASS || '').trim();
+  if (!gmailUser || !gmailPass) {
+    return res.status(500).json({
+      success: false,
+      debug: {
+        GMAIL_USER: gmailUser ? `${gmailUser.slice(0,5)}…` : 'MISSING',
+        GMAIL_PASS: gmailPass ? `set(${gmailPass.length}chars)` : 'MISSING',
+        env_keys: Object.keys(process.env).filter(k => k.startsWith('GMAIL'))
+      }
+    });
+  }
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: { user: gmailUser, pass: gmailPass }
+  });
   const errors = [];
 
   // ── 1. Company notification ───────────────────────────────────────────────
