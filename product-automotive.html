@@ -655,23 +655,104 @@
 
   <!-- Quote Modal -->
   <div class="modal" id="quote-modal">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width:520px;max-height:90vh;overflow-y:auto;">
       <button class="modal-close" onclick="closeModal()">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
-      <h3 style="margin:0 0 6px;font-size:20px;">Request a Quote</h3>
-      <p style="color:var(--text-faint);font-size:14px;margin:0 0 24px;">Our sales team will respond within 4 business hours.</p>
-      <form onsubmit="submitModal(event)">
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          <div class="control-group"><label>Your Name</label><input type="text" class="filter-select" placeholder="Full name" required></div>
-          <div class="control-group"><label>Company</label><input type="text" class="filter-select" placeholder="Organisation name" required></div>
-          <div class="control-group"><label>Email</label><input type="email" class="filter-select" placeholder="you@company.com" required></div>
-          <div class="control-group"><label>Part Number / Requirement</label><textarea class="filter-select" rows="3" placeholder="e.g. 81106XX (AVX, 0.5mm², Black) — 5000m" id="modal-part-field"></textarea></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--accent-soft);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--accent-2)" stroke-width="1.8" stroke-linecap="round"><path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/><path d="M5 4V3a1 1 0 011-1h4a1 1 0 011 1v1"/><line x1="6" y1="8" x2="10" y2="8"/><line x1="6" y1="11" x2="10" y2="11"/></svg>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:20px;">Send Request →</button>
+        <h3 style="margin:0;font-size:20px;">Request a Quote</h3>
+      </div>
+      <p style="color:var(--text-faint);font-size:13.5px;margin:0 0 22px;">Our sales team will respond within 4 business hours.</p>
+
+      <!-- Success state -->
+      <div id="modal-success" style="display:none;text-align:center;padding:32px 0;">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 style="margin:0 0 8px;font-size:18px;">Quote Request Sent!</h4>
+        <p style="color:var(--text-faint);font-size:14px;margin:0 0 20px;">We've received your request and will get back to you within 4 business hours.</p>
+        <button onclick="closeModal()" class="btn btn-secondary">Close</button>
+      </div>
+
+      <!-- Form -->
+      <form id="quote-form" onsubmit="submitModal(event)">
+        <!-- Web3Forms hidden fields -->
+        <input type="hidden" name="access_key" value="PASTE_YOUR_WEB3FORMS_KEY_HERE">
+        <input type="hidden" name="subject" id="modal-email-subject" value="Quote Request – Siechem Automotive Cables">
+        <input type="hidden" name="from_name" value="Siechem Website">
+        <input type="hidden" name="redirect" value="false">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <!-- Row: Name + Phone -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="control-group">
+              <label>Your Name *</label>
+              <input type="text" name="name" class="filter-select" placeholder="Full name" required>
+            </div>
+            <div class="control-group">
+              <label>Phone *</label>
+              <input type="tel" name="phone" class="filter-select" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+          <!-- Row: Company + Email -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="control-group">
+              <label>Company *</label>
+              <input type="text" name="company" class="filter-select" placeholder="Organisation name" required>
+            </div>
+            <div class="control-group">
+              <label>Email *</label>
+              <input type="email" name="email" class="filter-select" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <!-- Part Number -->
+          <div class="control-group">
+            <label>Part Number / Requirement</label>
+            <input type="text" name="part_number" class="filter-select" placeholder="e.g. 80304 04 (AVS, 0.3mm², Black)" id="modal-part-field">
+          </div>
+          <!-- Quantity -->
+          <div class="control-group">
+            <label>Quantity Required *</label>
+            <input type="text" name="quantity" class="filter-select" placeholder="e.g. 5,000 metres / 10 reels" required>
+          </div>
+          <!-- Delivery -->
+          <div class="control-group">
+            <label>Delivery Timeline</label>
+            <select name="delivery" class="filter-select">
+              <option value="">— Select —</option>
+              <option>Urgent (within 1 week)</option>
+              <option>Standard (2–4 weeks)</option>
+              <option>Planned (1–3 months)</option>
+              <option>Project basis (flexible)</option>
+            </select>
+          </div>
+          <!-- Message -->
+          <div class="control-group">
+            <label>Additional Notes</label>
+            <textarea name="message" class="filter-select" rows="2" placeholder="Any specific requirements, grades, or certifications needed…"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" id="modal-submit-btn" class="btn btn-primary" style="width:100%;margin-top:20px;justify-content:center;gap:8px;">
+          <span id="modal-btn-text">Send Quote Request →</span>
+          <svg id="modal-btn-spinner" style="display:none;animation:spin 0.7s linear infinite;" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.35)" stroke-width="2"/><path d="M8 2a6 6 0 016 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <p id="modal-error" style="display:none;color:#dc2626;font-size:13px;margin-top:10px;text-align:center;"></p>
       </form>
     </div>
   </div>
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (max-width: 540px) {
+      .modal-content > form > div > div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 
   <script>
   // ─── CATALOG DATA ──────────────────────────────────────────────────────────
@@ -1053,20 +1134,64 @@
   // ─── MODAL ────────────────────────────────────────────────────────────────
   function openModal() {
     document.getElementById('quote-modal').classList.add('open');
+    document.getElementById('quote-form').style.display = '';
+    document.getElementById('modal-success').style.display = 'none';
     document.body.style.overflow = 'hidden';
   }
   function openModalWith(part) {
     document.getElementById('modal-part-field').value = part;
+    // Set dynamic subject line
+    document.getElementById('modal-email-subject').value = 'Quote Request – ' + part + ' – Siechem Automotive Cables';
     openModal();
   }
   function closeModal() {
     document.getElementById('quote-modal').classList.remove('open');
     document.body.style.overflow = '';
+    // Reset form after a short delay
+    setTimeout(() => {
+      document.getElementById('quote-form').reset();
+      document.getElementById('quote-form').style.display = '';
+      document.getElementById('modal-success').style.display = 'none';
+      document.getElementById('modal-error').style.display = 'none';
+    }, 300);
   }
-  function submitModal(e) {
+  async function submitModal(e) {
     e.preventDefault();
-    closeModal();
-    alert('Thank you! Our team will respond within 4 business hours.');
+    const btn = document.getElementById('modal-submit-btn');
+    const btnText = document.getElementById('modal-btn-text');
+    const spinner = document.getElementById('modal-btn-spinner');
+    const errEl = document.getElementById('modal-error');
+
+    // Loading state
+    btn.disabled = true;
+    btnText.textContent = 'Sending…';
+    spinner.style.display = 'inline-block';
+    errEl.style.display = 'none';
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (json.success) {
+        document.getElementById('quote-form').style.display = 'none';
+        document.getElementById('modal-success').style.display = 'block';
+      } else {
+        throw new Error(json.message || 'Submission failed');
+      }
+    } catch (err) {
+      errEl.textContent = 'Failed to send. Please try again or email us directly at sales@siechem.com';
+      errEl.style.display = 'block';
+    } finally {
+      btn.disabled = false;
+      btnText.textContent = 'Send Quote Request →';
+      spinner.style.display = 'none';
+    }
   }
   document.getElementById('quote-modal').addEventListener('click', e => {
     if (e.target === e.currentTarget) closeModal();
