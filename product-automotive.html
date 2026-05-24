@@ -694,6 +694,9 @@
         <input type="hidden" name="from_name" value="Siechem Website">
         <input type="hidden" name="redirect" value="false">
         <input type="checkbox" name="botcheck" style="display:none">
+        <!-- Spec data passed to /api/quote for customer email -->
+        <input type="hidden" name="cable_type" id="modal-cable-type" value="">
+        <input type="hidden" name="cable_spec" id="modal-cable-spec" value="">
 
         <div style="display:flex;flex-direction:column;gap:14px;">
           <!-- Row: Name + Phone -->
@@ -1147,10 +1150,49 @@
     document.getElementById('modal-success').style.display = 'none';
     document.body.style.overflow = 'hidden';
   }
+  function findTypeByPart(partDisplay) {
+    const normalized = partDisplay.replace(/[\s\-]/g, '');
+    for (const t of TYPES) {
+      for (const row of t.sizes) {
+        const base = row[0].replace('XX', '');
+        if (normalized.startsWith(base) && normalized.length === base.length + 2) {
+          return { type: t, row };
+        }
+      }
+    }
+    // Fallback: match any row whose base appears in the normalized part
+    for (const t of TYPES) {
+      for (const row of t.sizes) {
+        const base = row[0].replace('XX', '');
+        if (normalized.startsWith(base)) return { type: t, row };
+      }
+    }
+    return null;
+  }
+
   function openModalWith(part) {
     document.getElementById('modal-part-field').value = part;
-    // Set dynamic subject line
     document.getElementById('modal-email-subject').value = 'Quote Request – ' + part + ' – Siechem Automotive Cables';
+    // Attach cable spec for customer email
+    const found = findTypeByPart(part);
+    if (found) {
+      document.getElementById('modal-cable-type').value = found.type.label;
+      document.getElementById('modal-cable-spec').value = JSON.stringify({
+        spec: found.type.spec,
+        label: found.type.label,
+        insulation: found.type.ins,
+        temp: found.type.temp,
+        testVoltage: found.type.tv,
+        unit: found.type.unit,
+        selectedRow: {
+          size: found.row[1], amps: found.row[2], ohm: found.row[3],
+          od_mm: found.row[4], weight: found.row[5], stdLen: found.row[6]
+        },
+        allSizes: found.type.sizes.map(s => ({
+          size: s[1], amps: s[2], ohm: s[3], od_mm: s[4], weight: s[5], stdLen: s[6]
+        }))
+      });
+    }
     openModal();
   }
   function closeModal() {
@@ -1171,7 +1213,6 @@
     const spinner = document.getElementById('modal-btn-spinner');
     const errEl = document.getElementById('modal-error');
 
-    // Loading state
     btn.disabled = true;
     btnText.textContent = 'Sending…';
     spinner.style.display = 'inline-block';
@@ -1179,9 +1220,11 @@
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
+    // Parse spec JSON (sent to serverless function, not Web3Forms)
+    try { data.cable_spec = JSON.parse(data.cable_spec || '{}'); } catch (_) { data.cable_spec = {}; }
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('/api/quote', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
@@ -1194,7 +1237,7 @@
         throw new Error(json.message || 'Submission failed');
       }
     } catch (err) {
-      errEl.textContent = 'Failed to send. Please try again or email us directly at sales@siechem.com';
+      errEl.textContent = 'Failed to send. Please try again or email us at sales@siechem.com';
       errEl.style.display = 'block';
     } finally {
       btn.disabled = false;

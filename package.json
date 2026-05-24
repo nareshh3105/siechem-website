@@ -1,0 +1,11 @@
+{
+  "name": "siechem-website",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "resend": "^3.2.0"
+  }
+}
