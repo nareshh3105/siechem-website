@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aero 44 Wires & Cables — Aerospace & Defence — Siechem</title>
+  <meta name="description" content="Aero 44 aerospace & defence wires — AS9100, DGAQA & MIL-W-22759 qualified. Fluoropolymer & ETFE insulation. Request quote online.">
+  <meta name="keywords" content="siechem, specialty cables, wires, Chennai, India">
+  <meta property="og:title" content="Aero 44 Wires – Aerospace & Defence | Siechem">
+  <meta property="og:description" content="Aero 44 aerospace & defence wires — AS9100, DGAQA & MIL-W-22759 qualified. Fluoropolymer & ETFE insulation. Request quote online.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/product-aero44.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/product-aero44.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -828,32 +837,73 @@
 
   <!-- Quote Request Modal -->
   <div class="modal" id="quoteModal">
-    <div class="modal-content">
+    <div class="modal-content" style="max-width:500px;">
       <button class="modal-close" onclick="closeQuoteModal()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <div style="margin-bottom:24px;">
-        <h3 style="font-size:22px; font-weight:800; color:var(--accent-2); margin-bottom:8px;">Request Quote / Info</h3>
-        <p style="color:var(--text-muted); font-size:13.5px;">Provide your contact details and project details. Our defense and aerospace engineering team will respond within 24 hours.</p>
+      <h3 style="font-size:20px;font-weight:800;color:var(--accent-2);margin:0 0 6px;">Request Quote / Info</h3>
+      <p style="color:var(--text-muted);font-size:13.5px;margin:0 0 22px;">Our aerospace engineering team responds within 24 hours.</p>
+
+      <div id="aero-success" style="display:none;text-align:center;padding:32px 0;">
+        <div style="width:56px;height:56px;border-radius:50%;background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h4 style="margin:0 0 8px;font-size:17px;">Request Sent!</h4>
+        <p style="color:var(--text-muted);font-size:13.5px;margin:0 0 18px;">We'll get back to you within 24 hours.</p>
+        <button onclick="closeQuoteModal()" class="btn btn-secondary">Close</button>
       </div>
-      <form onsubmit="submitQuoteForm(event)">
-        <div class="control-group" style="margin-bottom:16px;">
-          <label for="formProduct">Product Configuration</label>
-          <input type="text" id="formProduct" class="filter-select" readonly style="background:var(--bg-soft); font-family:var(--mono);">
+
+      <form id="aeroQuoteForm" onsubmit="submitQuoteForm(event)">
+        <input type="hidden" name="access_key" value="adac1a08-b909-4780-913f-ded062c472a5">
+        <input type="hidden" name="subject" id="aero-subject" value="Aero 44 Quote Request – Siechem">
+        <input type="hidden" name="from_name" value="Siechem Website">
+        <input type="hidden" name="redirect" value="false">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div class="control-group">
+            <label>Product Configuration</label>
+            <input type="text" id="formProduct" name="product" class="filter-select" readonly style="background:var(--bg-soft);font-family:var(--mono);">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="control-group">
+              <label>Full Name *</label>
+              <input type="text" id="formName" name="name" class="filter-select" required placeholder="Your name">
+            </div>
+            <div class="control-group">
+              <label>Phone *</label>
+              <input type="tel" id="formPhone" name="phone" class="filter-select" required placeholder="+91 98765 43210">
+            </div>
+          </div>
+          <div class="control-group">
+            <label>Business Email *</label>
+            <input type="email" id="formEmail" name="email" class="filter-select" required placeholder="you@company.com">
+          </div>
+          <div class="control-group">
+            <label>Company *</label>
+            <input type="text" name="company" class="filter-select" required placeholder="Organisation name">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="control-group">
+              <label>Quantity (Meters) *</label>
+              <input type="number" id="formQty" name="quantity" class="filter-select" placeholder="e.g. 500" required>
+            </div>
+            <div class="control-group">
+              <label>Delivery Timeline</label>
+              <select name="delivery" class="filter-select">
+                <option value="">— Select —</option>
+                <option>Urgent (≤1 week)</option>
+                <option>Standard (2–4 weeks)</option>
+                <option>Planned (1–3 months)</option>
+                <option>Project basis</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="control-group" style="margin-bottom:16px;">
-          <label for="formName">Full Name</label>
-          <input type="text" id="formName" class="filter-select" required>
-        </div>
-        <div class="control-group" style="margin-bottom:16px;">
-          <label for="formEmail">Business Email</label>
-          <input type="email" id="formEmail" class="filter-select" required>
-        </div>
-        <div class="control-group" style="margin-bottom:16px;">
-          <label for="formQty">Required Quantity (Meters)</label>
-          <input type="number" id="formQty" class="filter-select" placeholder="e.g. 500" required>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:12px;">Submit Request</button>
+        <button type="submit" id="aero-submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:18px;">
+          <span id="aero-btn-text">Submit Request</span>
+        </button>
+        <p id="aero-error" style="display:none;color:#dc2626;font-size:13px;margin-top:10px;text-align:center;"></p>
       </form>
     </div>
   </div>
@@ -1112,20 +1162,47 @@
     }
     function closeQuoteModal() {
       document.getElementById('quoteModal').classList.remove('open');
+      setTimeout(() => {
+        document.getElementById('aeroQuoteForm').reset();
+        document.getElementById('aeroQuoteForm').style.display = '';
+        document.getElementById('aero-success').style.display = 'none';
+        document.getElementById('aero-error').style.display = 'none';
+        document.getElementById('aero-btn-text').textContent = 'Submit Request';
+        document.getElementById('aero-submit-btn').disabled = false;
+      }, 300);
     }
     function requestQuoteFromBuilder() {
       const part = document.getElementById('partDisplay').textContent;
       openQuoteModal(part);
     }
-    function submitQuoteForm(e) {
+    async function submitQuoteForm(e) {
       e.preventDefault();
-      const p = document.getElementById('formProduct').value;
-      const n = document.getElementById('formName').value;
-      const em = document.getElementById('formEmail').value;
-      const qty = document.getElementById('formQty').value;
+      const btn = document.getElementById('aero-submit-btn');
+      const btnText = document.getElementById('aero-btn-text');
+      const errEl = document.getElementById('aero-error');
+      btn.disabled = true; btnText.textContent = 'Sending…'; errEl.style.display = 'none';
 
-      alert(`Thank you, ${n}! Your quote request for ${qty}m of ${p} has been sent successfully. An aerospace specialist will email you at ${em}.`);
-      closeQuoteModal();
+      const product = document.getElementById('formProduct').value;
+      document.getElementById('aero-subject').value = `Aero 44 Quote – ${product}`;
+
+      const formData = new FormData(document.getElementById('aeroQuoteForm'));
+      const data = Object.fromEntries(formData);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('aeroQuoteForm').style.display = 'none';
+          document.getElementById('aero-success').style.display = 'block';
+        } else throw new Error(json.message);
+      } catch(err) {
+        errEl.textContent = 'Failed to send. Please email sales@siechem.com directly.';
+        errEl.style.display = 'block';
+        btn.disabled = false; btnText.textContent = 'Submit Request';
+      }
     }
 
     // Initialize Page

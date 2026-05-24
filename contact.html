@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Siechem</title>
+  <meta name="description" content="Contact Siechem Wires & Cables for quotes, technical support and distributor enquiries. Head office in Chennai, factory in Pondicherry.">
+  <meta name="keywords" content="siechem, specialty cables, wires, Chennai, India">
+  <meta property="og:title" content="Contact Us | Siechem Wires & Cables">
+  <meta property="og:description" content="Contact Siechem Wires & Cables for quotes, technical support and distributor enquiries. Head office in Chennai, factory in Pondicherry.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/contact.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -198,35 +207,51 @@
           <h2 style="font-size:22px; font-weight:800; letter-spacing:-0.5px; margin-bottom:6px;">Send a Sales Enquiry</h2>
           <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:28px;">All fields marked <span style="color:var(--accent-2);">*</span> are required. Applications engineering team responds within 1 business day.</p>
 
+          <!-- Success state -->
+          <div id="contact-success" style="display:none;text-align:center;padding:48px 24px;">
+            <div style="width:60px;height:60px;border-radius:50%;background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 style="margin:0 0 10px;font-size:20px;">Enquiry Sent!</h3>
+            <p style="color:var(--text-muted);font-size:14px;margin:0;">Our team will respond within 1 business day. For urgent matters call <strong>+91 44 2522 0859</strong>.</p>
+          </div>
+
           <form id="contactForm">
+            <!-- Web3Forms -->
+            <input type="hidden" name="access_key" value="adac1a08-b909-4780-913f-ded062c472a5">
+            <input type="hidden" name="subject" id="contact-subject" value="Sales Enquiry – Siechem Website">
+            <input type="hidden" name="from_name" value="Siechem Website">
+            <input type="hidden" name="redirect" value="false">
+            <input type="checkbox" name="botcheck" style="display:none">
+
             <div class="form-row">
               <div class="field">
                 <label class="label">First Name <span style="color:var(--accent-2);">*</span></label>
-                <input class="input" type="text" required placeholder="Ananya">
+                <input class="input" type="text" name="first_name" required placeholder="Ananya">
               </div>
               <div class="field">
                 <label class="label">Last Name <span style="color:var(--accent-2);">*</span></label>
-                <input class="input" type="text" required placeholder="Sharma">
+                <input class="input" type="text" name="last_name" required placeholder="Sharma">
               </div>
             </div>
             <div class="form-row">
               <div class="field">
                 <label class="label">Work Email <span style="color:var(--accent-2);">*</span></label>
-                <input class="input" type="email" required placeholder="ananya@yourcompany.com">
+                <input class="input" type="email" name="email" required placeholder="ananya@yourcompany.com">
               </div>
               <div class="field">
                 <label class="label">Phone</label>
-                <input class="input" type="tel" placeholder="+91 98XXX XXXXX">
+                <input class="input" type="tel" name="phone" placeholder="+91 98XXX XXXXX">
               </div>
             </div>
             <div class="form-row">
               <div class="field">
                 <label class="label">Company <span style="color:var(--accent-2);">*</span></label>
-                <input class="input" type="text" required placeholder="Acme Engineering Pvt. Ltd.">
+                <input class="input" type="text" name="company" required placeholder="Acme Engineering Pvt. Ltd.">
               </div>
               <div class="field">
                 <label class="label">Industry <span style="color:var(--accent-2);">*</span></label>
-                <select class="select" required>
+                <select class="select" name="industry" required>
                   <option value="">Select industry</option>
                   <option>Aerospace &amp; Defence</option>
                   <option>Automotive &amp; EV</option>
@@ -243,11 +268,11 @@
             <div class="form-row">
               <div class="field">
                 <label class="label">Country</label>
-                <input class="input" type="text" placeholder="India" value="India">
+                <input class="input" type="text" name="country" placeholder="India" value="India">
               </div>
               <div class="field">
                 <label class="label">Enquiry Type</label>
-                <select class="select">
+                <select class="select" name="enquiry_type">
                   <option>Sales — Quote Request</option>
                   <option>Sales — Sample Request</option>
                   <option>Sales — Catalogue / Datasheet</option>
@@ -262,7 +287,7 @@
             <div class="form-row single">
               <div class="field">
                 <label class="label">Cable Specification or Description <span style="color:var(--accent-2);">*</span></label>
-                <textarea class="textarea" required placeholder="e.g. 'Solar DC 6 mm², 1.5 kV, TUV 2PfG 1169, 1200 m, delivery to Rajasthan by April 2026' — or describe your application and we'll suggest a solution."></textarea>
+                <textarea class="textarea" name="message" required placeholder="e.g. 'Solar DC 6 mm², 1.5 kV, TUV 2PfG 1169, 1200 m, delivery to Rajasthan by April 2026' — or describe your application and we'll suggest a solution."></textarea>
               </div>
             </div>
             <div class="form-row single" style="margin-bottom:20px;">
@@ -273,10 +298,10 @@
             </div>
 
             <button type="button" id="submitBtn" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;">
-              Send Enquiry
+              <span id="contact-btn-text">Send Enquiry</span>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
             </button>
-
+            <p id="contact-error" style="display:none;color:#dc2626;font-size:13px;margin-top:10px;text-align:center;"></p>
             <p style="font-size:12px; color:var(--text-dim); margin-top:14px; font-family:var(--mono); text-align:center;">Response time: typically &lt; 1 business day. For urgent enquiries call +91 44 2522 0859.</p>
           </form>
         </div>
@@ -306,12 +331,11 @@
             <div class="contact-line"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5 L3 11 C3 12.1 3.9 13 5 13 L11 13"/><path d="M3 5 L7.5 9 L12 5"/></svg><a href="mailto:factory@siechem.com">factory@siechem.com</a></div>
           </div>
 
-          <div class="map-illustration">
-            <div class="map-pin" style="top:40%; left:62%;"></div>
-            <div class="map-label" style="top:36%; left:65%;">Chennai · HQ</div>
-            <div class="map-pin" style="top:60%; left:58%; width:10px; height:10px;"></div>
-            <div class="map-label" style="top:58%; left:60%; font-size:10px;">Pondicherry · Factory</div>
-            <div style="position:absolute; bottom:20px; right:24px; font-family:var(--mono); font-size:10px; color:var(--text-dim); letter-spacing:0.06em;">TAMIL NADU · INDIA</div>
+          <div style="border-radius:14px;overflow:hidden;border:1px solid var(--border);height:260px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8!2d80.2789!3d13.0839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265d8e0a4e555%3A0x5e7b7a0e8bde8b8!2s26%2C%20Errabalu%20Chetty%20St%2C%20Sowcarpet%2C%20Chennai%2C%20Tamil%20Nadu%20600001!5e0!3m2!1sen!2sin!4v1716540000000!5m2!1sen!2sin"
+              width="100%" height="260" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Siechem Technologies Head Office, Chennai">
+            </iframe>
           </div>
 
           <div class="quick-contacts">
@@ -382,16 +406,40 @@
   </footer>
 
   <script>
-    document.getElementById('submitBtn').addEventListener('click', () => {
+    document.getElementById('submitBtn').addEventListener('click', async () => {
       const form = document.getElementById('contactForm');
-      if (form.checkValidity()) {
-        const btn = document.getElementById('submitBtn');
-        btn.innerHTML = '✓ Enquiry Sent — We will respond within 1 business day';
-        btn.style.background = '#16a34a';
-        btn.disabled = true;
-        form.reset();
-      } else {
-        form.reportValidity();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      const btn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('contact-btn-text');
+      const errEl = document.getElementById('contact-error');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+      errEl.style.display = 'none';
+
+      // Update subject with enquiry type
+      const enquiryType = form.querySelector('[name="enquiry_type"]').value;
+      const company = form.querySelector('[name="company"]').value;
+      document.getElementById('contact-subject').value = `${enquiryType} — ${company} — Siechem Website`;
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('contactForm').style.display = 'none';
+          document.getElementById('contact-success').style.display = 'block';
+        } else throw new Error(json.message);
+      } catch(err) {
+        errEl.textContent = 'Failed to send. Please email us directly at sales@siechem.com';
+        errEl.style.display = 'block';
+        btn.disabled = false;
+        btnText.textContent = 'Send Enquiry';
       }
     });
   </script>
