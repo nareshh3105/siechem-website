@@ -163,11 +163,6 @@ module.exports = async function handler(req, res) {
 
   const { name, phone, company, email, part_number, quantity, delivery, message, cable_type, cable_spec, subject } = req.body || {};
 
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
-    console.error('[quote] Missing Gmail env vars');
-    return res.status(500).json({ success: false, message: 'Server email not configured' });
-  }
-
   const transporter = makeTransporter();
   const errors = [];
 
@@ -204,7 +199,7 @@ module.exports = async function handler(req, res) {
   }
 
   if (errors.length === 2) {
-    return res.status(500).json({ success: false, message: errors.join('; ') });
+    return res.status(500).json({ success: false, message: errors.join(' | ') });
   }
-  return res.status(200).json({ success: true });
+  return res.status(200).json({ success: true, warnings: errors.length ? errors : undefined });
 };
