@@ -983,8 +983,10 @@
     const term = q.trim().toLowerCase();
     let visible = 0;
     rows.forEach(row => {
-      const text = row.textContent.toLowerCase();
-      const show = !term || text.includes(term);
+      const cells = row.querySelectorAll('td');
+      // Search only: part number (col 0), AWG (col 1), mm² (col 2)
+      const searchText = [0, 1, 2].map(i => cells[i] ? cells[i].textContent : '').join(' ').toLowerCase();
+      const show = !term || searchText.includes(term);
       row.style.display = show ? '' : 'none';
       if (show) visible++;
     });
