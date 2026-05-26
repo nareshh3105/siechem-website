@@ -573,31 +573,55 @@
       border-radius: 16px;
       padding: 40px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.01);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
     .caps-stat-item {
-      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
     }
     .caps-stat-item:last-child {
-      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
     }
     .caps-stat-num {
-      font-size: 40px;
-      font-weight: 800;
+      font-size: 44px;
+      font-weight: 900;
       color: var(--accent);
       line-height: 1;
       margin-bottom: 6px;
+      font-family: var(--mono);
+      letter-spacing: -1px;
     }
     .caps-stat-label {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--text);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
     }
     .caps-stat-desc {
-      font-size: 13.5px;
+      font-size: 13px;
       color: var(--text-muted);
       margin-top: 4px;
+      line-height: 1.55;
+    }
+    @media (max-width: 640px) {
+      .caps-stats-card {
+        padding: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+      }
+      .caps-stat-item {
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+      }
+      .caps-stat-item:nth-child(even) { border-right: none; }
+      .caps-stat-item:last-child { border-bottom: none; }
+      .caps-stat-item:nth-last-child(2) { border-bottom: none; }
+      .caps-stat-num { font-size: 32px; }
     }
 
     /* ───────── Testimonials Section ───────── */
@@ -905,12 +929,17 @@
     <div class="hero-video-overlay"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">India's #1 Specialty Wires &amp; Cables</div>
-      <h1 class="hero-title">Precision Wiring for<br/><em>Critical</em> Applications.</h1>
-      <p class="hero-subtitle">AS 9100, TUV, UL, &amp; MIL-Spec qualified configurations for Aerospace, Defense, Marine, Renewable Energy, and Advanced Industrial systems.</p>
-      
-      <div class="ctas" style="justify-content: center;">
+      <h1 class="hero-title" style="font-size: clamp(30px, 5.5vw, 58px); letter-spacing: clamp(-0.5px, -0.08em, -1.5px);">Precision Wiring for<br/><em>Critical</em> Applications.</h1>
+      <p class="hero-subtitle" style="font-size: clamp(14px, 2vw, 17px);">AS 9100, TUV, UL, &amp; MIL-Spec qualified configurations for Aerospace, Defense, Marine, Renewable Energy, and Advanced Industrial systems.</p>
+
+      <div class="ctas" style="justify-content: center; gap: 12px;">
         <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="contact.html" class="btn btn-white" style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);color:#fff;backdrop-filter:blur(8px);">Request Quote</a>
       </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8l5 5 5-5"/></svg>
     </div>
   </section>
 
@@ -1446,5 +1475,34 @@
   </script>
   <script src="nav-mobile.js" defer></script>
   <script src="animations.js" defer></script>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11l5-5 5 5"/></svg>
+  </button>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-sticky-cta" aria-hidden="true">
+    <a href="contact.html" class="btn btn-primary">Request Quote</a>
+    <a href="tel:+914422220000" class="btn btn-ghost">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 2h3l1.5 3.5L5 7a9 9 0 003 3l1.5-1.5L13 10v3a1 1 0 01-1 1A11 11 0 011 3a1 1 0 011-1z"/></svg>
+      Call Us
+    </a>
+  </div>
+
+  <script>
+    // Back to top
+    (function () {
+      var btn = document.getElementById('backToTop');
+      if (!btn) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) btn.classList.add('btt-visible');
+        else btn.classList.remove('btt-visible');
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
 </body>
 </html>
