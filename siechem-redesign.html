@@ -49,7 +49,7 @@
     .hero-video-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.22) 100%);
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.10) 100%);
       z-index: 2;
     }
     .hero-content {
@@ -1260,7 +1260,7 @@
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
         const startVideo = () => {
-          heroVideo.style.opacity = '0.82';
+          heroVideo.style.opacity = '1';
         };
         if (heroVideo.readyState >= 3) {
           startVideo();
