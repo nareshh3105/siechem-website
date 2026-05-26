@@ -801,6 +801,46 @@
     .mobile-menu.open .mobile-menu-links a:nth-child(7) {
       transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
     }
+    /* Certifications ticker */
+    .cert-ticker-outer {
+      background: #1C1A19;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+      padding: 9px 0;
+    }
+    .cert-ticker-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      width: max-content;
+      animation: tickerScroll 34s linear infinite;
+    }
+    .cert-ticker-outer:hover .cert-ticker-inner { animation-play-state: paused; }
+    @keyframes tickerScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .cert-ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 28px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .cert-ticker-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -894,11 +934,46 @@
     </div>
   </section>
 
+  <!-- Certifications ticker -->
+  <div class="cert-ticker-outer" aria-hidden="true">
+    <div class="cert-ticker-inner">
+      <span class="cert-ticker-item">TÜV SÜD</span>
+      <span class="cert-ticker-item">UL Listed</span>
+      <span class="cert-ticker-item">AS 9100</span>
+      <span class="cert-ticker-item">MIL-SPEC</span>
+      <span class="cert-ticker-item">RDSO</span>
+      <span class="cert-ticker-item">NABL</span>
+      <span class="cert-ticker-item">CE</span>
+      <span class="cert-ticker-item">RoHS</span>
+      <span class="cert-ticker-item">IEC</span>
+      <span class="cert-ticker-item">BIS / IS</span>
+      <span class="cert-ticker-item">JASO</span>
+      <span class="cert-ticker-item">SAE</span>
+      <span class="cert-ticker-item">DGAQA</span>
+      <span class="cert-ticker-item">IECEE CB</span>
+      <!-- duplicate for seamless loop -->
+      <span class="cert-ticker-item">TÜV SÜD</span>
+      <span class="cert-ticker-item">UL Listed</span>
+      <span class="cert-ticker-item">AS 9100</span>
+      <span class="cert-ticker-item">MIL-SPEC</span>
+      <span class="cert-ticker-item">RDSO</span>
+      <span class="cert-ticker-item">NABL</span>
+      <span class="cert-ticker-item">CE</span>
+      <span class="cert-ticker-item">RoHS</span>
+      <span class="cert-ticker-item">IEC</span>
+      <span class="cert-ticker-item">BIS / IS</span>
+      <span class="cert-ticker-item">JASO</span>
+      <span class="cert-ticker-item">SAE</span>
+      <span class="cert-ticker-item">DGAQA</span>
+      <span class="cert-ticker-item">IECEE CB</span>
+    </div>
+  </div>
+
   <!-- At a Glance Section -->
   <section class="section-padding bg-light-grey glance-section">
     <div class="container">
       <div class="section-header-carousel">
-        <div class="section-header-text">
+        <div class="section-header-text reveal">
           <span class="section-eyebrow">Advanced Engineering</span>
           <h2 class="section-title">Operations &amp; Capabilities At A Glance</h2>
         </div>
@@ -1008,7 +1083,7 @@
   <section class="section-padding">
     <div class="container">
       <div class="caps-split">
-        <div class="caps-content">
+        <div class="caps-content reveal">
           <span class="section-eyebrow">Why Choose Siechem</span>
           <h2>Specialty Engineering. Full Customization.</h2>
           <p>Since 2002, Siechem has been at the forefront of the wire and cable industry, designing and manufacturing over 22 million configurations. We combine technical design consultancy, E-Beam polymer modification, and vertically integrated compounding to build the exact wires your systems require.</p>
@@ -1034,7 +1109,7 @@
           </div>
         </div>
 
-        <div class="caps-stats-card">
+        <div class="caps-stats-card reveal reveal-d2">
           <div class="caps-stat-item">
             <div class="caps-stat-num">22M+</div>
             <div class="caps-stat-label">Cable Configurations</div>
@@ -1058,12 +1133,12 @@
   <!-- Testimonials & Client logos Section -->
   <section class="section-padding bg-light-grey">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-eyebrow">Client Testimonials</span>
         <h2 class="section-title">What Our Customers Say</h2>
       </div>
 
-      <div class="testimonial-box">
+      <div class="testimonial-box reveal reveal-d1">
         <div class="testimonial-quotes">“</div>
         
         <!-- Slide 1 -->
@@ -1093,7 +1168,7 @@
       </div>
 
       <!-- Grayscale Corporate Client Logos -->
-      <div class="client-logos">
+      <div class="client-logos reveal reveal-d2">
         <div class="client-logo-item">Siemens</div>
         <div class="client-logo-item">Honeywell</div>
         <div class="client-logo-item">Schneider</div>
@@ -1360,5 +1435,7 @@
       }
     });
   </script>
+  <script src="nav-mobile.js" defer></script>
+  <script src="animations.js" defer></script>
 </body>
 </html>

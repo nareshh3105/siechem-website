@@ -578,3 +578,46 @@ html.nav-open, html.nav-open body {
 ::-webkit-scrollbar-track { background: #F1F3F5; }
 ::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ─────────── Smooth scroll ─────────── */
+html { scroll-behavior: smooth; }
+
+/* ─────────── Scroll-reveal ─────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.08s; }
+.reveal-d2 { transition-delay: 0.16s; }
+.reveal-d3 { transition-delay: 0.24s; }
+.reveal-d4 { transition-delay: 0.32s; }
+.reveal-d5 { transition-delay: 0.40s; }
+.reveal-d6 { transition-delay: 0.48s; }
+
+/* ─────────── Nav scroll glass effect ─────────── */
+.nav-scrolled {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.09) !important;
+}
+
+/* ─────────── Mobile spacing improvements ─────────── */
+@media (max-width: 640px) {
+  .page-hero { padding: 44px 0 32px; }
+  .page-title { font-size: clamp(26px, 8vw, 36px) !important; letter-spacing: -0.8px !important; }
+  .page-lede { font-size: 14.5px; }
+  .section { padding: 52px 0; }
+  .section-tight { padding: 32px 0; }
+  .section-loose { padding: 64px 0; }
+  .section-head { margin-bottom: 24px; }
+  .section-title { font-size: clamp(24px, 7vw, 34px); }
+  .card { padding: 20px; }
+}

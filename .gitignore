@@ -4,3 +4,10 @@ Thumbs.db
 screenshots/
 
 .vercel
+.env*.local
+.env.production
+*.py
+*.txt
+*.json
+!package.json
+!package-lock.json
