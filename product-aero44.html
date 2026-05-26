@@ -155,6 +155,29 @@
       font-family: var(--mono); font-size: 11px; font-weight: 600;
       color: var(--text-muted); white-space: nowrap;
     }
+    /* ── Spec Table Search ───────────────────────── */
+    .spec-search-wrap {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-radius: 8px; padding: 9px 14px; margin-bottom: 10px;
+      transition: border-color 0.15s;
+    }
+    .spec-search-wrap:focus-within { border-color: var(--accent); }
+    .spec-search-wrap svg { flex-shrink: 0; color: var(--text-faint); }
+    .spec-search-input {
+      flex: 1; border: none; background: transparent;
+      font-size: 13px; font-family: var(--mono); color: var(--text);
+      outline: none; min-width: 0;
+    }
+    .spec-search-input::placeholder { color: var(--text-faint); }
+    .spec-search-count {
+      font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .spec-no-match {
+      text-align: center; padding: 20px; font-size: 13px; color: var(--text-faint);
+      font-family: var(--mono); display: none;
+    }
     .part-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
     .part-table { width: 100%; border-collapse: collapse; font-size: 13px; }
     .part-table thead tr { background: var(--bg-soft); }
@@ -928,8 +951,14 @@
         </div>
       </div>
       <h4 style="font-size:12px;font-weight:700;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;color:var(--text-faint);margin-bottom:10px;">Complete Size Range</h4>
+      <div class="spec-search-wrap">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" id="specSearchInput" type="text" placeholder="Search by part no., AWG, mm²…" oninput="filterSpecTable(this.value)" autocomplete="off" spellcheck="false">
+        <span class="spec-search-count" id="specSearchCount">${t.sizes.length} parts</span>
+      </div>
+      <div class="spec-no-match" id="specNoMatch">No parts match your search</div>
       <div class="part-table-wrap">
-        <table class="part-table"><thead>${thead}</thead><tbody>${tbody}</tbody></table>
+        <table class="part-table" id="specPartTable"><thead>${thead}</thead><tbody>${tbody}</tbody></table>
       </div>
       <div class="color-note">
         <strong>Colour Code:</strong> ${t.colorNote}<br>
@@ -947,9 +976,28 @@
     document.body.style.overflow = 'hidden';
   }
 
+  function filterSpecTable(q) {
+    const rows = document.querySelectorAll('#specPartTable tbody tr');
+    const noMatch = document.getElementById('specNoMatch');
+    const countEl = document.getElementById('specSearchCount');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      const show = !term || text.includes(term);
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = term ? `${visible} of ${rows.length} parts` : `${rows.length} parts`;
+    noMatch.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+
   function closeSpec() {
     document.getElementById('specOverlay').classList.remove('open');
     document.body.style.overflow = '';
+    // Clear search on close
+    const inp = document.getElementById('specSearchInput');
+    if (inp) inp.value = '';
   }
   function handleSpecOverlayClick(e) {
     if (e.target === document.getElementById('specOverlay')) closeSpec();
