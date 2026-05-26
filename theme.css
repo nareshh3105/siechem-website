@@ -231,7 +231,7 @@ html.nav-open, html.nav-open body {
 
 /* ─────────── Page hero ─────────── */
 .page-hero {
-  padding: 72px 0 56px;
+  padding: 32px 0 52px;
   background: linear-gradient(135deg, #FDFCFC 0%, #FFF5F5 100%);
   border-bottom: 1px solid var(--border);
   position: relative;
@@ -611,7 +611,7 @@ html { scroll-behavior: smooth; }
 
 /* ─────────── Mobile spacing improvements ─────────── */
 @media (max-width: 640px) {
-  .page-hero { padding: 44px 0 32px; }
+  .page-hero { padding: 20px 0 28px; }
   .page-title { font-size: clamp(26px, 8vw, 36px) !important; letter-spacing: -0.8px !important; }
   .page-lede { font-size: 14.5px; }
   .section { padding: 52px 0; }
