@@ -45,6 +45,8 @@
       object-fit: cover;
       opacity: 0;
       transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+      filter: brightness(1.08) contrast(1.12) saturate(1.25);
+      will-change: transform;
     }
     .hero-video-overlay {
       position: absolute;
@@ -1262,6 +1264,10 @@
         const startVideo = () => {
           heroVideo.style.opacity = '1';
         };
+        // Ensure highest decode quality
+        if ('preservesPitch' in heroVideo) heroVideo.preservesPitch = true;
+        heroVideo.setAttribute('playsinline', '');
+        heroVideo.setAttribute('disablepictureinpicture', '');
         if (heroVideo.readyState >= 3) {
           startVideo();
         } else {
