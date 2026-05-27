@@ -1,0 +1,1143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Cables SAE J1128 — GXL / SXL — Siechem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    .product-hero {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 56px 0 80px;
+    }
+    @media (max-width: 980px) {
+      .product-hero { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .product-hero-visual {
+      position: relative;
+      aspect-ratio: 1.05;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .product-hero-visual svg { width: 100%; height: 100%; filter: drop-shadow(0 20px 60px rgba(227,30,36,0.18)); }
+
+    .tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      padding: 14px 24px;
+      background: none;
+      border: none;
+      color: var(--text-faint);
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+    .tab-panel { display: none; animation: fadeUp 0.4s ease; }
+    .tab-panel.active { display: block; }
+
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .spec-table tr { border-bottom: 1px solid var(--border); }
+    .spec-table td { padding: 14px 16px; }
+    .spec-table td:first-child { color: var(--text-faint); font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.04em; width: 42%; }
+    .spec-table td:last-child { font-weight: 500; }
+    .spec-table tr:hover { background: rgba(227,30,36,0.01); }
+
+    .interactive-controls {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-card);
+    }
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 900px) { .controls-grid { grid-template-columns: 1fr 1fr; gap: 16px; } }
+    @media (max-width: 540px) { .controls-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+    .control-group { display: flex; flex-direction: column; gap: 8px; }
+    .control-group label {
+      font-size: 12px;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .filter-select, .filter-search {
+      width: 100%;
+      padding: 11px 14px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .filter-select:focus, .filter-search:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.12);
+    }
+
+    .catalog-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+    .result-count { font-size: 13.5px; color: var(--text-faint); font-family: var(--mono); }
+
+    .variant-table-container {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 32px;
+    }
+    .variant-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    .variant-table th, .variant-table td { padding: 14px 18px; text-align: left; }
+    .variant-table th {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-faint);
+      background: var(--bg-soft);
+      border-bottom: 2px solid var(--border);
+    }
+    .variant-table td { border-bottom: 1px solid var(--border); background: var(--bg-card); }
+    .variant-table tr:last-child td { border-bottom: none; }
+    .variant-table tr:hover td { background: var(--bg-card-hover); }
+    .variant-table .part-no { font-family: var(--mono); color: var(--accent-2); font-weight: 600; }
+
+    .type-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      font-weight: 700;
+      font-family: var(--mono);
+    }
+    .badge-gxl-bare { background: rgba(227,30,36,0.06); color: var(--accent-2); border: 1px solid rgba(227,30,36,0.18); }
+    .badge-gxl-tin  { background: rgba(37,99,235,0.06); color: #2563eb; border: 1px solid rgba(37,99,235,0.18); }
+    .badge-sxl-mm   { background: rgba(22,163,74,0.06); color: #16a34a; border: 1px solid rgba(22,163,74,0.18); }
+    .badge-sxl-awg  { background: rgba(234,88,12,0.06); color: #ea580c; border: 1px solid rgba(234,88,12,0.18); }
+
+    .colour-dot {
+      display: inline-block;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.15);
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .btn-table-cta {
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 5px;
+      background: var(--accent-soft);
+      color: var(--accent-2);
+      border: 1px solid var(--accent-border);
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+    .btn-table-cta:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .builder-container {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 980px) { .builder-container { grid-template-columns: 1fr; } }
+    .builder-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .builder-display {
+      position: sticky;
+      top: 96px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .part-output {
+      font-family: var(--mono);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--bg-soft);
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.03);
+      word-break: break-all;
+    }
+    @media (max-width: 480px) { .part-output { font-size: 16px; padding: 12px; } }
+
+    .builder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 580px) { .builder-grid { grid-template-columns: 1fr; } }
+
+    .color-swatch-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+    .color-swatch {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.15s, border-color 0.15s;
+      title: attr(title);
+    }
+    .color-swatch:hover { transform: scale(1.15); }
+    .color-swatch.active { border-color: var(--accent); transform: scale(1.15); box-shadow: 0 0 0 2px rgba(227,30,36,0.3); }
+    .color-swatch::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.8);
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.15s;
+    }
+    .color-swatch.active::after { transform: translate(-50%, -50%) scale(1); }
+
+    .decoded-list { display: flex; flex-direction: column; gap: 12px; }
+    .decoded-item {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13.5px;
+    }
+    .decoded-item:last-child { border-bottom: none; }
+    .decoded-item .label { color: var(--text-faint); font-family: var(--mono); font-size: 11px; text-transform: uppercase; }
+    .decoded-item .val { font-weight: 600; color: var(--text); }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(17, 24, 39, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+    .modal.open { opacity: 1; visibility: visible; }
+    .modal-content {
+      background: var(--bg);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      position: relative;
+      animation: modalSlide 0.3s ease;
+    }
+    @keyframes modalSlide {
+      from { transform: translateY(15px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      background: none; border: none;
+      color: var(--text-faint);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      transition: background 0.15s, color 0.15s;
+    }
+    .modal-close:hover { background: var(--bg-soft); color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo"><svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="26" text-anchor="middle" font-family="'Open Sans', 'Arial Black', Arial, sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text><text x="50%" y="42" text-anchor="middle" font-family="'Roboto', Arial, sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text></svg></a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="tech-support.html" class="nav-link">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a href="products.html">Products</a>
+      <a href="tech-support.html">Tech Support</a>
+      <a href="about.html">Company</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <a href="catalogues.html">Catalogues</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="container" style="padding-top:28px;">
+    <div class="breadcrumb">
+      <a href="siechem-redesign.html">Home</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="products.html">Products</a>
+      <span class="breadcrumb-sep"></span>
+      <a href="products.html?view=segment">Automotive Cables</a>
+      <span class="breadcrumb-sep"></span>
+      <span>SAE J1128 — GXL / SXL</span>
+    </div>
+  </div>
+
+  <!-- Product Hero -->
+  <section class="container">
+    <div class="product-hero">
+      <div class="fade-up">
+        <div class="eyebrow" style="color:var(--accent); font-weight:700;">Automotive Low-Voltage Wire</div>
+        <h1 class="page-title" style="margin-bottom:20px; font-size:44px; font-weight:800;">GXL / SXL Cables<br/><em>SAE J1128</em></h1>
+        <p class="page-lede" style="margin-bottom:28px; color:var(--text-muted);">Electron beam cross-linked polyolefin (XLPO) insulated automotive primary wire. Designed for wire harness circuits in automobiles, motorcycles and motor vehicles requiring superior heat, chemical, and abrasion resistance. Manufactured to SAE J1128 : 2015.</p>
+
+        <div class="spec-row" style="margin-bottom:28px; border-top:none; padding-top:0;">
+          <div class="spec"><span class="spec-label">Temp Range</span><span class="spec-value">−40 to +125<span class="unit">°C</span></span></div>
+          <div class="spec"><span class="spec-label">Test Voltage</span><span class="spec-value">1 <span class="unit">kV</span></span></div>
+          <div class="spec"><span class="spec-label">Insulation</span><span class="spec-value">EBXL <span class="unit">XLPO</span></span></div>
+          <div class="spec"><span class="spec-label">Types</span><span class="spec-value">GXL · SXL</span></div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;">
+          <span class="tag tag-accent">SAE J1128</span>
+          <span class="tag tag-accent">SAE J1127</span>
+          <span class="tag">RoHS Compliant</span>
+          <span class="tag">ASTM B3</span>
+          <span class="tag">TUV Approved</span>
+          <span class="tag">AS9100D</span>
+        </div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="openQuoteModal('SAE J1128 Automotive Cable — General Inquiry')">Request Custom Quote
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 3l4 4-4 4" stroke="white" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </button>
+          <a href="#" class="btn btn-ghost" onclick="document.querySelectorAll('.tab')[2].click(); return false;">View Compliance Specs</a>
+        </div>
+      </div>
+
+      <!-- Cross-section SVG of XLPO automotive wire -->
+      <div class="product-hero-visual fade-up fade-up-3">
+        <svg viewBox="0 0 400 400">
+          <defs>
+            <radialGradient id="autoJacket" cx="38%" cy="32%" r="65%">
+              <stop offset="0%" stop-color="#2d4a1e"/>
+              <stop offset="100%" stop-color="#1a2e10"/>
+            </radialGradient>
+            <radialGradient id="autoXLPO" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#4ade80"/>
+              <stop offset="50%" stop-color="#16a34a"/>
+              <stop offset="100%" stop-color="#14532d"/>
+            </radialGradient>
+            <radialGradient id="autoCopper" cx="35%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#fda86a"/>
+              <stop offset="40%" stop-color="#d4762d"/>
+              <stop offset="100%" stop-color="#7a3b18"/>
+            </radialGradient>
+            <radialGradient id="autoStrand" cx="40%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#fda86a"/>
+              <stop offset="100%" stop-color="#a15016"/>
+            </radialGradient>
+            <filter id="autoGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+
+          <circle cx="200" cy="200" r="185" fill="#16a34a" opacity="0.04" filter="url(#autoGlow)"/>
+
+          <!-- XLPO Insulation layer -->
+          <circle cx="200" cy="200" r="175" fill="url(#autoXLPO)" stroke="rgba(74,222,128,0.3)" stroke-width="1.5"/>
+
+          <!-- Conductor separator -->
+          <circle cx="200" cy="200" r="100" fill="#0f172a"/>
+
+          <!-- Conductor strands — 19-strand layout -->
+          <g>
+            <circle cx="200" cy="200" r="18" fill="url(#autoStrand)"/>
+            <circle cx="235" cy="200" r="17" fill="url(#autoStrand)"/>
+            <circle cx="218" cy="229" r="17" fill="url(#autoStrand)"/>
+            <circle cx="182" cy="229" r="17" fill="url(#autoStrand)"/>
+            <circle cx="165" cy="200" r="17" fill="url(#autoStrand)"/>
+            <circle cx="182" cy="171" r="17" fill="url(#autoStrand)"/>
+            <circle cx="218" cy="171" r="17" fill="url(#autoStrand)"/>
+            <circle cx="265" cy="200" r="16" fill="url(#autoCopper)"/>
+            <circle cx="257" cy="228" r="16" fill="url(#autoCopper)"/>
+            <circle cx="234" cy="252" r="16" fill="url(#autoCopper)"/>
+            <circle cx="200" cy="262" r="16" fill="url(#autoCopper)"/>
+            <circle cx="166" cy="252" r="16" fill="url(#autoCopper)"/>
+            <circle cx="143" cy="228" r="16" fill="url(#autoCopper)"/>
+            <circle cx="135" cy="200" r="16" fill="url(#autoCopper)"/>
+            <circle cx="143" cy="172" r="16" fill="url(#autoCopper)"/>
+            <circle cx="166" cy="148" r="16" fill="url(#autoCopper)"/>
+            <circle cx="200" cy="138" r="16" fill="url(#autoCopper)"/>
+            <circle cx="234" cy="148" r="16" fill="url(#autoCopper)"/>
+            <circle cx="257" cy="172" r="16" fill="url(#autoCopper)"/>
+          </g>
+
+          <!-- Annotation lines -->
+          <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="#4b5563" font-weight="600">
+            <path d="M 320,75 L 285,120" stroke="#cbd5e1" stroke-width="1.2"/>
+            <circle cx="285" cy="120" r="3" fill="var(--accent)"/>
+            <text x="325" y="78" fill="var(--text)">EBXL-XLPO Insulation</text>
+            <text x="325" y="91" font-size="8.5" fill="var(--text-faint)">Cross-linked polyolefin wall</text>
+
+            <path d="M 320,185 L 268,185" stroke="#cbd5e1" stroke-width="1.2"/>
+            <circle cx="268" cy="185" r="3" fill="var(--accent)"/>
+            <text x="325" y="188" fill="var(--text)">Colour Coded</text>
+            <text x="325" y="201" font-size="8.5" fill="var(--text-faint)">90+ colour options available</text>
+
+            <path d="M 320,310 L 230,250" stroke="#cbd5e1" stroke-width="1.2"/>
+            <circle cx="230" cy="250" r="3" fill="var(--accent)"/>
+            <text x="325" y="313" fill="var(--text)">APC Soft-Annealed</text>
+            <text x="325" y="326" font-size="8.5" fill="var(--text-faint)">Electrolytic copper — ASTM B3</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="section section-divider">
+    <div class="container">
+      <div class="tabs">
+        <button class="tab active" data-tab="catalog">Interactive Catalog</button>
+        <button class="tab" data-tab="builder">Part Number Builder</button>
+        <button class="tab" data-tab="compliance">Compliance &amp; Specs</button>
+        <button class="tab" data-tab="factory">Factory &amp; Quality</button>
+      </div>
+
+      <!-- Tab: Interactive Catalog -->
+      <div class="tab-panel active" id="panel-catalog">
+        <div class="section-head" style="margin-bottom: 24px;">
+          <p class="section-eyebrow">Filter &amp; Search</p>
+          <h2 class="section-title">SAE J1128 Cable Variants</h2>
+          <p class="section-sub">Filter by spec standard, cable type, size, and insulation colour. Part numbers end in <code style="font-family:var(--mono); background:var(--bg-soft); padding:1px 5px; border-radius:4px;">-XX</code> — replace XX with your colour code when ordering.</p>
+        </div>
+
+        <div class="interactive-controls">
+          <div class="controls-grid">
+            <div class="control-group">
+              <label for="specFilter">Spec Standard</label>
+              <select id="specFilter" class="filter-select">
+                <option value="All">All (SAE J1128)</option>
+                <option value="GXL">GXL — Cat. 820 / C123</option>
+                <option value="SXL">SXL — Cat. 821</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="typeFilter">Cable Type</label>
+              <select id="typeFilter" class="filter-select">
+                <option value="All">All Types</option>
+                <option value="GXL-Bare">GXL — Bare Conductor</option>
+                <option value="GXL-Tinned">GXL — Tinned Conductor</option>
+                <option value="SXL-mm2">SXL — mm² sizes</option>
+                <option value="SXL-AWG">SXL — AWG sizes</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="sizeFilter">Size</label>
+              <select id="sizeFilter" class="filter-select">
+                <option value="All">All Sizes</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="colourFilter">Insulation Colour</label>
+              <select id="colourFilter" class="filter-select">
+                <option value="All">All Colours</option>
+                <option value="Red">Red — 01</option>
+                <option value="Yellow">Yellow — 02</option>
+                <option value="Blue">Blue — 03</option>
+                <option value="Black">Black — 04</option>
+                <option value="Green">Green — 05</option>
+                <option value="Yellow-Green">Yellow-Green — 06</option>
+                <option value="Grey">Grey — 07</option>
+                <option value="Brown">Brown — 08</option>
+                <option value="White">White — 09</option>
+                <option value="Orange">Orange — 10</option>
+                <option value="Violet">Violet — 11</option>
+                <option value="Chocolate">Chocolate — 12</option>
+                <option value="Tan">Tan — 13</option>
+                <option value="Charcoal">Charcoal — 14</option>
+                <option value="LT Blue">LT Blue — 15</option>
+                <option value="DK Grey">DK Grey — 16</option>
+                <option value="LT Green">LT Green — 17</option>
+                <option value="DK Green">DK Green — 18</option>
+                <option value="DK Blue">DK Blue — 19</option>
+                <option value="Purple">Purple — 20</option>
+                <option value="Pink">Pink — 21</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalog-meta">
+          <div class="result-count" id="resultCount">Loading...</div>
+          <div style="font-size:12px; color:var(--text-faint); font-family:var(--mono);">Current carrying capacity at 125°C, 40°C ambient</div>
+        </div>
+
+        <div class="variant-table-container">
+          <div style="overflow-x: auto;">
+            <table class="variant-table" id="variantTable">
+              <thead>
+                <tr>
+                  <th>Part Number</th>
+                  <th>Type</th>
+                  <th>Size</th>
+                  <th>Stranding</th>
+                  <th>Cond. Dia (mm)</th>
+                  <th>OD (mm)</th>
+                  <th>Weight (kg/km)</th>
+                  <th>Resistance (Ω/km)</th>
+                  <th>Current (A)</th>
+                  <th>Std. Length</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="variantTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-soft); border:1px solid var(--border); border-radius:10px; padding:18px 22px; font-size:13px; color:var(--text-muted); line-height:1.7;">
+          <strong style="color:var(--text);">Colour Code Note:</strong> Replace <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">XX</code> in the part number with your required colour code (e.g. <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">04</code> for Black, <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">09</code> for White). 90+ single and dual-colour options available — use the Part Number Builder tab to configure your exact specification.
+        </div>
+      </div>
+
+      <!-- Tab: Part Number Builder -->
+      <div class="tab-panel" id="panel-builder">
+        <div class="section-head" style="margin-bottom:28px;">
+          <p class="section-eyebrow">Interactive Configurator</p>
+          <h2 class="section-title">SAE J1128 Part Builder</h2>
+          <p class="section-sub">Select your cable parameters to generate a Siechem part number and view the full decoded specification.</p>
+        </div>
+
+        <div class="builder-container">
+          <div class="builder-form">
+            <div class="builder-grid">
+              <div class="control-group" style="margin-bottom:20px;">
+                <label>1. Cable Type</label>
+                <select id="buildType" class="filter-select" onchange="updatePartNumber()">
+                  <option value="GXL-Bare">GXL — General Purpose, Bare</option>
+                  <option value="GXL-Tinned">GXL — General Purpose, Tinned</option>
+                  <option value="SXL-mm2">SXL — Special Purpose, mm²</option>
+                  <option value="SXL-AWG">SXL — Special Purpose, AWG</option>
+                </select>
+              </div>
+              <div class="control-group" style="margin-bottom:20px;">
+                <label>2. Size</label>
+                <select id="buildSize" class="filter-select" onchange="updatePartNumber()">
+                  <!-- Populated by JS -->
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group" style="margin-bottom:20px;">
+              <label>3. Insulation Colour</label>
+              <div class="color-swatch-group" id="builderColours"></div>
+              <div style="margin-top:8px; font-size:12px; color:var(--text-faint); font-family:var(--mono);" id="selectedColourLabel">Selected: White (09)</div>
+            </div>
+          </div>
+
+          <div class="builder-display">
+            <h3 style="font-size:16px; font-weight:700; margin-bottom:14px;">Siechem Part Number</h3>
+            <div class="part-output" id="partDisplay">82080-09</div>
+
+            <h4 style="font-size:12px; font-weight:700; font-family:var(--mono); color:var(--text-faint); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">Decoded Configuration</h4>
+            <div class="decoded-list" id="decodedList"></div>
+
+            <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:24px;" onclick="requestQuoteFromBuilder()">
+              Request Quote for this configuration
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab: Compliance & Specs -->
+      <div class="tab-panel" id="panel-compliance">
+        <div class="grid grid-2" style="gap:48px; align-items:start;">
+          <div>
+            <h3 class="section-title" style="font-size:24px; margin-bottom:14px;">SAE J1128 Standard Requirements</h3>
+            <p style="color:var(--text-muted); margin-bottom:24px;">Siechem GXL/SXL cables are manufactured in an AS9100D, ISO 9001 and ISO 14001 certified facility. All wires are 100% spark-tested and meet RoHS EU Directive.</p>
+
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+                <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">GXL — General Purpose Cross-linked</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Thin-wall XLPO insulation for general vehicle wiring applications. Smaller outer diameter and lower weight than standard PVC alternatives. Available in bare and tinned conductor variants.</p>
+              </div>
+              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+                <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">SXL — Special Purpose Cross-linked</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Thicker-wall XLPO for demanding underhood and special purpose applications. Provides greater mechanical protection for environments with higher abrasion or vibration exposure.</p>
+              </div>
+              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+                <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">EBXL Technology</h4>
+                <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Electron beam crosslinking creates a three-dimensional polymer network that prevents melting at elevated temperatures, improves cut-through resistance, and maintains flexibility in cold environments down to −40°C.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:var(--shadow-card);">
+            <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">Technical Characteristics</h3>
+            <table class="spec-table">
+              <tr><td>Standard</td><td>SAE J1128 : 2015</td></tr>
+              <tr><td>Conductor Material</td><td>Soft-annealed electrolytic copper (E-Cu ETP1)</td></tr>
+              <tr><td>Conductor Type</td><td>Bare or Tinned per ASTM B3</td></tr>
+              <tr><td>Insulation</td><td>Electron beam cross-linked polyolefin (EBXL-XLPO)</td></tr>
+              <tr><td>GXL Wall Thickness</td><td>0.41 mm (min) — general purpose, thinner wall</td></tr>
+              <tr><td>SXL Wall Thickness</td><td>0.52 mm (min) — special purpose, thicker wall</td></tr>
+              <tr><td>Temperature Rating</td><td>−40°C to +125°C · 3000 hours</td></tr>
+              <tr><td>Test Voltage</td><td>1 kV</td></tr>
+              <tr><td>Flame Retardancy</td><td>Self-extinguishing · UL 1581 VW-1</td></tr>
+              <tr><td>Chemical Resistance</td><td>Acids, alkalis, petrol, diesel, oil</td></tr>
+              <tr><td>RoHS</td><td>Compliant — EU Directive 2011/65/EU</td></tr>
+              <tr><td>Size Range (GXL)</td><td>AWG 6 to 20</td></tr>
+              <tr><td>Size Range (SXL)</td><td>AWG 8 to 20 / 0.5 to 8 mm²</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- Colour Code Reference -->
+        <div style="margin-top:48px;">
+          <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">Standard Colour Code Reference</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#E31E24;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Red — 01
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#EAB308;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Yellow — 02
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#2563EB;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Blue — 03
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#1a1a1a;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Black — 04
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#16A34A;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Green — 05
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#84cc16;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Yellow-Green — 06
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#6B7280;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Grey — 07
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#78350F;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Brown — 08
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#fff;border:1px solid rgba(0,0,0,0.25);display:inline-block;"></span> White — 09
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#EA580C;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Orange — 10
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#7C3AED;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Violet — 11
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#6d3a1f;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Chocolate — 12
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#d2b48c;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Tan — 13
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#36454F;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Charcoal — 14
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#93c5fd;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> LT Blue — 15
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#4b5563;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Grey — 16
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#86efac;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> LT Green — 17
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#14532d;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Green — 18
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#1d4ed8;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Blue — 19
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#6b21a8;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Purple — 20
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+              <span style="width:16px;height:16px;border-radius:50%;background:#f9a8d4;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Pink — 21
+            </div>
+          </div>
+          <p style="margin-top:14px; font-size:12.5px; color:var(--text-faint);">90+ dual-colour combinations also available (e.g. Black/Red-39, Green/Black-42). Contact sales for the full colour matrix.</p>
+        </div>
+      </div>
+
+      <!-- Tab: Factory & Quality -->
+      <div class="tab-panel" id="panel-factory">
+        <div class="section-head" style="margin-bottom:28px;">
+          <p class="section-eyebrow">Manufacturing Excellence</p>
+          <h2 class="section-title">EBXL Production &amp; Testing</h2>
+          <p class="section-sub">Siechem's in-house electron beam irradiation facility and fully equipped laboratory ensure every GXL/SXL wire meets zero-defect quality standards before despatch.</p>
+        </div>
+
+        <div class="grid grid-3" style="gap:24px;">
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#1e293b,#0f172a);display:flex;align-items:center;justify-content:center;position:relative;">
+              <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><path d="M2 20h20M17 17l1-5h3v5M4 17l1-9h3v9M9 17h6M11 6V3h2v3"/></svg>
+              <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">1.5 / 3.0 MeV accelerator</span>
+            </div>
+            <div style="padding:20px;">
+              <h4 style="font-size:16px;font-weight:800;margin-bottom:6px;">Electron Beam Crosslinking</h4>
+              <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">High-energy electron bombardment permanently crosslinks the XLPO insulation polymer chains, eliminating melt-flow at rated temperatures and significantly improving cut-through resistance.</p>
+            </div>
+          </div>
+
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#1e293b,#0f172a);display:flex;align-items:center;justify-content:center;position:relative;">
+              <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">100% Spark Tested</span>
+            </div>
+            <div style="padding:20px;">
+              <h4 style="font-size:16px;font-weight:800;margin-bottom:6px;">Inline Quality Testing</h4>
+              <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">Every metre is spark-tested at 1 kV during production. NABL-accredited laboratory performs tensile, elongation, cold bend, heat aging, and fuel/oil resistance qualification tests.</p>
+            </div>
+          </div>
+
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+            <div style="aspect-ratio:16/10;background:linear-gradient(135deg,#1e293b,#0f172a);display:flex;align-items:center;justify-content:center;position:relative;">
+              <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><path d="M4 4h16v16H4z M12 4v16 M4 12h16"/></svg>
+              <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">400,000 sq.ft facility</span>
+            </div>
+            <div style="padding:20px;">
+              <h4 style="font-size:16px;font-weight:800;margin-bottom:6px;">High-Speed Extrusion Lines</h4>
+              <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">PLC-controlled tandem extrusion lines deliver precise wall thickness control. Colour coding is applied inline with optical verification, supporting 90+ standard and custom colour options.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Modal -->
+  <div class="modal" id="quoteModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeQuoteModal()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div style="margin-bottom:24px;">
+        <h3 style="font-size:22px; font-weight:800; color:var(--accent-2); margin-bottom:8px;">Request Quote / Info</h3>
+        <p style="color:var(--text-muted); font-size:13.5px;">Provide your contact details and requirement. Our automotive cable team will respond within 24 hours.</p>
+      </div>
+      <form onsubmit="submitQuoteForm(event)">
+        <div class="control-group" style="margin-bottom:16px;">
+          <label for="formProduct">Product Configuration</label>
+          <input type="text" id="formProduct" class="filter-select" readonly style="background:var(--bg-soft); font-family:var(--mono);">
+        </div>
+        <div class="control-group" style="margin-bottom:16px;">
+          <label for="formName">Full Name</label>
+          <input type="text" id="formName" class="filter-select" required>
+        </div>
+        <div class="control-group" style="margin-bottom:16px;">
+          <label for="formEmail">Business Email</label>
+          <input type="email" id="formEmail" class="filter-select" required>
+        </div>
+        <div class="control-group" style="margin-bottom:16px;">
+          <label for="formQty">Required Quantity (Meters)</label>
+          <input type="number" id="formQty" class="filter-select" placeholder="e.g. 1000" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; margin-top:12px;">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo"><svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="26" text-anchor="middle" font-family="'Open Sans', 'Arial Black', Arial, sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text><text x="50%" y="42" text-anchor="middle" font-family="'Roboto', Arial, sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text></svg></a>
+          <p>India's leading specialty wires &amp; cables manufacturer. Engineering precision for the world's most critical systems since 2002.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">By Segment</a></li>
+            <li><a href="products.html">By Standard</a></li>
+            <li><a href="product-aero44.html">Aero 44 Wires</a></li>
+            <li><a href="product-automotive-saej1128.html">GXL / SXL Cables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Engineering</h4>
+          <ul>
+            <li><a href="tech-support.html">AWG Converter</a></li>
+            <li><a href="tech-support.html">Voltage Drop</a></li>
+            <li><a href="tech-support.html">All Tools</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+            <li><a href="customers.html">Customers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li>
+            <li><a href="tel:+914425220859">+91 44 2522 0859</a></li>
+            <li>Chennai · Pondicherry</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Siechem Technologies Pvt. Ltd.</span>
+        <span>Established 2002 · 100,000 sq.ft · 22M+ Configurations</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ─── TAB LOGIC ───────────────────────────────────────────────────
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ─── CATALOG DATA ────────────────────────────────────────────────
+    const COLOURS = [
+      { code: "01", name: "Red",          hex: "#E31E24" },
+      { code: "02", name: "Yellow",       hex: "#EAB308" },
+      { code: "03", name: "Blue",         hex: "#2563EB" },
+      { code: "04", name: "Black",        hex: "#1a1a1a" },
+      { code: "05", name: "Green",        hex: "#16A34A" },
+      { code: "06", name: "Yellow-Green", hex: "#84cc16" },
+      { code: "07", name: "Grey",         hex: "#6B7280" },
+      { code: "08", name: "Brown",        hex: "#78350F" },
+      { code: "09", name: "White",        hex: "#FFFFFF" },
+      { code: "10", name: "Orange",       hex: "#EA580C" },
+      { code: "11", name: "Violet",       hex: "#7C3AED" },
+      { code: "12", name: "Chocolate",    hex: "#6d3a1f" },
+      { code: "13", name: "Tan",          hex: "#d2b48c" },
+      { code: "14", name: "Charcoal",     hex: "#36454F" },
+      { code: "15", name: "LT Blue",      hex: "#93c5fd" },
+      { code: "16", name: "DK Grey",      hex: "#4b5563" },
+      { code: "17", name: "LT Green",     hex: "#86efac" },
+      { code: "18", name: "DK Green",     hex: "#14532d" },
+      { code: "19", name: "DK Blue",      hex: "#1d4ed8" },
+      { code: "20", name: "Purple",       hex: "#6b21a8" },
+      { code: "21", name: "Pink",         hex: "#f9a8d4" }
+    ];
+
+    // type: GXL-Bare | GXL-Tinned | SXL-mm2 | SXL-AWG
+    // sizeUnit: AWG | mm2
+    // size: string (AWG number or mm² value)
+    const CABLE_DATA = [
+      // ── GXL Bare Conductor (Cat. 820) — AWG ──────────────────────
+      { type:"GXL-Bare", part:"82082XX*",  sizeUnit:"AWG", size:"20", strands:"7",   condDia:0.93, od:2.4, weight:9,   resistance:35.7, current:17, stdLen:1000 },
+      { type:"GXL-Bare", part:"C82082XX",  sizeUnit:"AWG", size:"20", strands:"19",  condDia:0.93, od:2.4, weight:9,   resistance:37.1, current:17, stdLen:1000 },
+      { type:"GXL-Bare", part:"82081XX",   sizeUnit:"AWG", size:"18", strands:"16",  condDia:1.21, od:2.5, weight:11,  resistance:24.7, current:22, stdLen:1000 },
+      { type:"GXL-Bare", part:"C82081XX",  sizeUnit:"AWG", size:"18", strands:"19",  condDia:1.21, od:2.5, weight:11,  resistance:24.7, current:22, stdLen:1000 },
+      { type:"GXL-Bare", part:"82080XX",   sizeUnit:"AWG", size:"16", strands:"19",  condDia:1.45, od:2.9, weight:17,  resistance:15.4, current:28, stdLen:1000 },
+      { type:"GXL-Bare", part:"82079XX",   sizeUnit:"AWG", size:"14", strands:"19",  condDia:1.80, od:3.2, weight:22,  resistance:9.30, current:38, stdLen:500  },
+      { type:"GXL-Bare", part:"82078XX",   sizeUnit:"AWG", size:"12", strands:"19",  condDia:2.25, od:3.8, weight:34,  resistance:5.90, current:51, stdLen:500  },
+      { type:"GXL-Bare", part:"82077XX",   sizeUnit:"AWG", size:"10", strands:"19",  condDia:2.85, od:4.7, weight:50,  resistance:3.70, current:69, stdLen:500  },
+      { type:"GXL-Bare", part:"C82076XX",  sizeUnit:"AWG", size:"8",  strands:"49",  condDia:3.55, od:6.0, weight:90,  resistance:2.40, current:91, stdLen:500  },
+      { type:"GXL-Bare", part:"82076XX",   sizeUnit:"AWG", size:"8",  strands:"19",  condDia:3.55, od:6.0, weight:90,  resistance:2.40, current:91, stdLen:500  },
+      { type:"GXL-Bare", part:"C39375XX",  sizeUnit:"AWG", size:"6",  strands:"133", condDia:4.80, od:7.5, weight:147, resistance:1.38, current:128,stdLen:500  },
+
+      // ── GXL Tinned Conductor (Cat. C123) — AWG ───────────────────
+      { type:"GXL-Tinned", part:"C12382XX*", sizeUnit:"AWG", size:"20", strands:"7",  condDia:0.93, od:2.4, weight:9,  resistance:36.8, current:17, stdLen:1000 },
+      { type:"GXL-Tinned", part:"C12381XX",  sizeUnit:"AWG", size:"18", strands:"16", condDia:1.21, od:2.5, weight:11, resistance:23.4, current:22, stdLen:1000 },
+      { type:"GXL-Tinned", part:"C12380XX",  sizeUnit:"AWG", size:"16", strands:"19", condDia:1.45, od:2.9, weight:17, resistance:15.9, current:28, stdLen:1000 },
+      { type:"GXL-Tinned", part:"C12379XX",  sizeUnit:"AWG", size:"14", strands:"19", condDia:1.80, od:3.2, weight:22, resistance:9.58, current:38, stdLen:500  },
+      { type:"GXL-Tinned", part:"C12378XX",  sizeUnit:"AWG", size:"12", strands:"19", condDia:2.25, od:3.8, weight:34, resistance:6.08, current:51, stdLen:500  },
+      { type:"GXL-Tinned", part:"C12377XX",  sizeUnit:"AWG", size:"10", strands:"19", condDia:2.85, od:4.7, weight:50, resistance:3.81, current:69, stdLen:500  },
+      { type:"GXL-Tinned", part:"C12376XX",  sizeUnit:"AWG", size:"8",  strands:"19", condDia:3.55, od:6.0, weight:78, resistance:2.47, current:91, stdLen:500  },
+
+      // ── SXL Bare Conductor mm² (Cat. 821) ────────────────────────
+      { type:"SXL-mm2", part:"82106XX*",  sizeUnit:"mm2", size:"0.5", strands:"7",  condDia:0.93, od:2.8, weight:11, resistance:35.7, current:18, stdLen:1000 },
+      { type:"SXL-mm2", part:"82160XX",   sizeUnit:"mm2", size:"0.8", strands:"16", condDia:1.21, od:3.0, weight:13, resistance:24.7, current:23, stdLen:1000 },
+      { type:"SXL-mm2", part:"C82160XX",  sizeUnit:"mm2", size:"0.8", strands:"19", condDia:1.21, od:3.0, weight:13, resistance:24.7, current:23, stdLen:1000 },
+      { type:"SXL-mm2", part:"82110XX",   sizeUnit:"mm2", size:"1",   strands:"19", condDia:1.45, od:3.4, weight:20, resistance:15.4, current:29, stdLen:1000 },
+      { type:"SXL-mm2", part:"82114XX",   sizeUnit:"mm2", size:"2",   strands:"19", condDia:1.80, od:3.9, weight:25, resistance:9.3,  current:40, stdLen:500  },
+      { type:"SXL-mm2", part:"82117XX",   sizeUnit:"mm2", size:"3",   strands:"19", condDia:2.25, od:4.6, weight:40, resistance:5.9,  current:53, stdLen:500  },
+      { type:"SXL-mm2", part:"82121XX",   sizeUnit:"mm2", size:"5",   strands:"19", condDia:2.85, od:5.3, weight:55, resistance:3.7,  current:70, stdLen:500  },
+      { type:"SXL-mm2", part:"C82125XX",  sizeUnit:"mm2", size:"8",   strands:"49", condDia:3.55, od:6.2, weight:93, resistance:2.4,  current:89, stdLen:500  },
+      { type:"SXL-mm2", part:"82125XX",   sizeUnit:"mm2", size:"8",   strands:"19", condDia:3.55, od:6.2, weight:93, resistance:2.4,  current:89, stdLen:500  },
+
+      // ── SXL Bare Conductor AWG (Cat. 821/C821) ───────────────────
+      { type:"SXL-AWG", part:"82182XX*",  sizeUnit:"AWG", size:"20", strands:"7",  condDia:0.93, od:2.8, weight:11, resistance:35.7, current:18, stdLen:1000 },
+      { type:"SXL-AWG", part:"82181XX",   sizeUnit:"AWG", size:"18", strands:"16", condDia:1.21, od:3.0, weight:13, resistance:24.7, current:23, stdLen:1000 },
+      { type:"SXL-AWG", part:"C82181XX",  sizeUnit:"AWG", size:"18", strands:"19", condDia:1.21, od:3.0, weight:13, resistance:24.7, current:23, stdLen:1000 },
+      { type:"SXL-AWG", part:"82180XX",   sizeUnit:"AWG", size:"16", strands:"19", condDia:1.45, od:3.4, weight:20, resistance:15.4, current:29, stdLen:1000 },
+      { type:"SXL-AWG", part:"82179XX",   sizeUnit:"AWG", size:"14", strands:"19", condDia:1.80, od:3.9, weight:25, resistance:9.3,  current:40, stdLen:500  },
+      { type:"SXL-AWG", part:"82178XX",   sizeUnit:"AWG", size:"12", strands:"19", condDia:2.25, od:4.6, weight:40, resistance:5.9,  current:53, stdLen:500  },
+      { type:"SXL-AWG", part:"82177XX",   sizeUnit:"AWG", size:"10", strands:"19", condDia:2.85, od:5.3, weight:55, resistance:3.7,  current:70, stdLen:500  },
+      { type:"SXL-AWG", part:"C82176XX",  sizeUnit:"AWG", size:"8",  strands:"49", condDia:3.55, od:6.2, weight:93, resistance:2.4,  current:89, stdLen:500  },
+      { type:"SXL-AWG", part:"82176XX",   sizeUnit:"AWG", size:"8",  strands:"19", condDia:3.55, od:6.2, weight:93, resistance:2.4,  current:89, stdLen:500  }
+    ];
+
+    const TYPE_BADGE = {
+      "GXL-Bare":   '<span class="type-badge badge-gxl-bare">GXL · Bare</span>',
+      "GXL-Tinned": '<span class="type-badge badge-gxl-tin">GXL · Tinned</span>',
+      "SXL-mm2":    '<span class="type-badge badge-sxl-mm">SXL · mm²</span>',
+      "SXL-AWG":    '<span class="type-badge badge-sxl-awg">SXL · AWG</span>'
+    };
+
+    const SPEC_MAP = { "GXL-Bare":"GXL", "GXL-Tinned":"GXL", "SXL-mm2":"SXL", "SXL-AWG":"SXL" };
+
+    // ─── SIZE FILTER ─────────────────────────────────────────────────
+    function refreshSizeOptions() {
+      const typeVal = document.getElementById('typeFilter').value;
+      const specVal = document.getElementById('specFilter').value;
+      const sizeEl  = document.getElementById('sizeFilter');
+      const current = sizeEl.value;
+
+      const relevant = CABLE_DATA.filter(d => {
+        if (typeVal !== "All" && d.type !== typeVal) return false;
+        if (specVal !== "All" && SPEC_MAP[d.type] !== specVal) return false;
+        return true;
+      });
+
+      const sizes = [...new Set(relevant.map(d => d.size))];
+      // Sort numerically
+      sizes.sort((a, b) => parseFloat(a) - parseFloat(b));
+      const unit = relevant.length && relevant[0].sizeUnit === "mm2" ? "mm²" : "AWG";
+      const mixedUnits = relevant.some(d => d.sizeUnit === "mm2") && relevant.some(d => d.sizeUnit === "AWG");
+
+      sizeEl.innerHTML = '<option value="All">All Sizes</option>' +
+        sizes.map(s => {
+          const d = relevant.find(r => r.size === s);
+          const u = d ? (d.sizeUnit === "mm2" ? "mm²" : "AWG") : "";
+          return `<option value="${s}">${s} ${u}</option>`;
+        }).join('');
+
+      if (sizes.includes(current)) sizeEl.value = current;
+    }
+
+    // ─── CATALOG RENDER ───────────────────────────────────────────────
+    function renderCatalog() {
+      const specVal   = document.getElementById('specFilter').value;
+      const typeVal   = document.getElementById('typeFilter').value;
+      const sizeVal   = document.getElementById('sizeFilter').value;
+      const colourVal = document.getElementById('colourFilter').value;
+
+      const filtered = CABLE_DATA.filter(d => {
+        if (specVal !== "All" && SPEC_MAP[d.type] !== specVal) return false;
+        if (typeVal !== "All" && d.type !== typeVal) return false;
+        if (sizeVal !== "All" && d.size !== sizeVal) return false;
+        return true;
+      });
+
+      document.getElementById('resultCount').textContent =
+        `Showing ${filtered.length} product variation${filtered.length === 1 ? '' : 's'}`;
+
+      const tbody = document.getElementById('variantTableBody');
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="11" style="text-align:center;padding:32px;color:var(--text-faint);">No variants match your filter criteria. Try broadening your selection.</td></tr>`;
+        return;
+      }
+
+      const colourCode = colourVal === "All" ? "XX"
+        : (COLOURS.find(c => c.name === colourVal)?.code ?? "XX");
+      const colourHex  = colourVal === "All" ? null
+        : (COLOURS.find(c => c.name === colourVal)?.hex ?? null);
+
+      tbody.innerHTML = filtered.map(d => {
+        const resolvedPart = d.part.replace("XX", colourCode);
+        const sizeLabel    = d.sizeUnit === "mm2" ? `${d.size} mm²` : `${d.size} AWG`;
+        const colourCell   = colourVal === "All"
+          ? `<span style="font-family:var(--mono);color:var(--text-faint);">-XX</span>`
+          : `<span class="colour-dot" style="background:${colourHex};"></span>${colourVal} (${colourCode})`;
+
+        return `
+          <tr>
+            <td class="part-no">${resolvedPart}</td>
+            <td>${TYPE_BADGE[d.type]}</td>
+            <td style="font-weight:600;">${sizeLabel}</td>
+            <td style="font-family:var(--mono);font-size:12.5px;">${d.strands} str.</td>
+            <td style="font-family:var(--mono);">${d.condDia.toFixed(2)}</td>
+            <td style="font-family:var(--mono);">${d.od.toFixed(1)}</td>
+            <td style="font-family:var(--mono);">${d.weight}</td>
+            <td style="font-family:var(--mono);">${d.resistance.toFixed(2)}</td>
+            <td style="font-weight:600;">${d.current} A</td>
+            <td style="font-family:var(--mono);">${d.stdLen} m</td>
+            <td><button class="btn-table-cta" onclick="openQuoteModal('${resolvedPart.replace(/'/g,'')} (${sizeLabel})')">Quote</button></td>
+          </tr>`;
+      }).join('');
+    }
+
+    document.getElementById('specFilter').addEventListener('change', () => { refreshSizeOptions(); renderCatalog(); });
+    document.getElementById('typeFilter').addEventListener('change', () => { refreshSizeOptions(); renderCatalog(); });
+    document.getElementById('sizeFilter').addEventListener('change', renderCatalog);
+    document.getElementById('colourFilter').addEventListener('change', renderCatalog);
+
+    // ─── BUILDER LOGIC ────────────────────────────────────────────────
+    let activeBuilderColour = "09";
+
+    const BUILDER_TYPE_SIZES = {
+      "GXL-Bare":   CABLE_DATA.filter(d => d.type === "GXL-Bare").map(d => ({size:d.size, unit:"AWG"})).filter((v,i,a)=>a.findIndex(x=>x.size===v.size)===i).sort((a,b)=>parseFloat(a.size)-parseFloat(b.size)),
+      "GXL-Tinned": CABLE_DATA.filter(d => d.type === "GXL-Tinned").map(d => ({size:d.size, unit:"AWG"})).filter((v,i,a)=>a.findIndex(x=>x.size===v.size)===i).sort((a,b)=>parseFloat(a.size)-parseFloat(b.size)),
+      "SXL-mm2":    CABLE_DATA.filter(d => d.type === "SXL-mm2").map(d => ({size:d.size, unit:"mm²"})).filter((v,i,a)=>a.findIndex(x=>x.size===v.size)===i).sort((a,b)=>parseFloat(a.size)-parseFloat(b.size)),
+      "SXL-AWG":    CABLE_DATA.filter(d => d.type === "SXL-AWG").map(d => ({size:d.size, unit:"AWG"})).filter((v,i,a)=>a.findIndex(x=>x.size===v.size)===i).sort((a,b)=>parseFloat(a.size)-parseFloat(b.size))
+    };
+
+    function refreshBuilderSizes() {
+      const t = document.getElementById('buildType').value;
+      const s = document.getElementById('buildSize');
+      const cur = s.value;
+      const opts = BUILDER_TYPE_SIZES[t] || [];
+      s.innerHTML = opts.map(o => `<option value="${o.size}">${o.size} ${o.unit}</option>`).join('');
+      if (opts.find(o => o.size === cur)) s.value = cur;
+    }
+
+    function initBuilderColours() {
+      const grp = document.getElementById('builderColours');
+      grp.innerHTML = COLOURS.map(c => `
+        <div class="color-swatch ${c.code === activeBuilderColour ? 'active' : ''}"
+             style="background:${c.hex};"
+             title="${c.name} (${c.code})"
+             onclick="selectBuilderColour('${c.code}')"></div>
+      `).join('');
+      const sel = COLOURS.find(c => c.code === activeBuilderColour);
+      document.getElementById('selectedColourLabel').textContent =
+        `Selected: ${sel ? sel.name + ' (' + sel.code + ')' : activeBuilderColour}`;
+    }
+
+    function selectBuilderColour(code) {
+      activeBuilderColour = code;
+      initBuilderColours();
+      updatePartNumber();
+    }
+
+    function updatePartNumber() {
+      refreshBuilderSizes();
+      const t    = document.getElementById('buildType').value;
+      const size = document.getElementById('buildSize').value;
+      const col  = activeBuilderColour;
+      const colObj = COLOURS.find(c => c.code === col);
+      const colName = colObj ? colObj.name : col;
+
+      // Find matching base part
+      const match = CABLE_DATA.find(d => d.type === t && d.size === size);
+      let basePart = match ? match.part.replace("XX*","").replace("XX","") : "?????";
+      const partNo = `${basePart}${col}`;
+
+      document.getElementById('partDisplay').textContent = partNo;
+
+      const typeLabels = {
+        "GXL-Bare":   "GXL — General Purpose (Bare Conductor)",
+        "GXL-Tinned": "GXL — General Purpose (Tinned Conductor)",
+        "SXL-mm2":    "SXL — Special Purpose (mm² sizing)",
+        "SXL-AWG":    "SXL — Special Purpose (AWG sizing)"
+      };
+      const unit = (t === "SXL-mm2") ? "mm²" : "AWG";
+
+      document.getElementById('decodedList').innerHTML = `
+        <div class="decoded-item"><span class="label">Standard</span><span class="val">SAE J1128 : 2015</span></div>
+        <div class="decoded-item"><span class="label">Cable Series</span><span class="val">${typeLabels[t]}</span></div>
+        <div class="decoded-item"><span class="label">Insulation</span><span class="val">Electron Beam Cross-linked Polyolefin (EBXL-XLPO)</span></div>
+        <div class="decoded-item"><span class="label">Conductor</span><span class="val">${t.includes("Tinned") ? "Tinned" : "Bare"} Soft-annealed Copper (ASTM B3)</span></div>
+        <div class="decoded-item"><span class="label">Size</span><span class="val">${size} ${unit}</span></div>
+        <div class="decoded-item"><span class="label">Temp. Rating</span><span class="val">−40°C to +125°C · 3000 Hours</span></div>
+        <div class="decoded-item"><span class="label">Colour Code</span><span class="val" style="display:flex;align-items:center;gap:6px;">
+          <span style="width:14px;height:14px;border-radius:50%;background:${colObj ? colObj.hex : '#ccc'};border:1px solid rgba(0,0,0,0.15);display:inline-block;flex-shrink:0;"></span>
+          ${colName} — ${col}
+        </span></div>
+      `;
+    }
+
+    function requestQuoteFromBuilder() {
+      const part = document.getElementById('partDisplay').textContent;
+      openQuoteModal(part);
+    }
+
+    // ─── MODAL ────────────────────────────────────────────────────────
+    function openQuoteModal(partStr) {
+      document.getElementById('formProduct').value = partStr;
+      document.getElementById('quoteModal').classList.add('open');
+    }
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('open');
+    }
+    function submitQuoteForm(e) {
+      e.preventDefault();
+      const p   = document.getElementById('formProduct').value;
+      const n   = document.getElementById('formName').value;
+      const em  = document.getElementById('formEmail').value;
+      const qty = document.getElementById('formQty').value;
+      alert(`Thank you, ${n}! Your quote request for ${qty}m of ${p} has been submitted. Our automotive cable specialist will contact you at ${em} within 24 hours.`);
+      closeQuoteModal();
+    }
+
+    // ─── INIT ─────────────────────────────────────────────────────────
+    refreshSizeOptions();
+    renderCatalog();
+    refreshBuilderSizes();
+    initBuilderColours();
+    updatePartNumber();
+  </script>
+  <script src="nav-mobile.js" defer></script>
+</body>
+</html>

@@ -26,7 +26,8 @@
   --radius:      10px;
   --radius-lg:   14px;
   --mono:        'JetBrains Mono', ui-monospace, monospace;
-  --sans:        'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --sans:        'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading:     'Open Sans', 'Roboto', -apple-system, sans-serif;
 }
 
 html, body {
@@ -299,6 +300,7 @@ html.nav-open, html.nav-open body {
   line-height: 1.05;
   margin-bottom: 18px;
   color: var(--text);
+  font-family: var(--heading);
 }
 .page-title em {
   font-style: normal;
@@ -340,10 +342,11 @@ html.nav-open, html.nav-open body {
 }
 .section-title {
   font-size: clamp(28px, 3vw, 42px);
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
   margin-bottom: 14px;
+  font-family: var(--heading);
 }
 .section-sub {
   font-size: 16px;
