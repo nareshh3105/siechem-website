@@ -631,13 +631,15 @@
   ];
 
   /* ── Page init ──────────────────────────────────── */
+  /* Support both ?id=N (Vercel/production) and #N (local preview) */
   const params = new URLSearchParams(window.location.search);
-  const productId = parseInt(params.get('id'), 10);
+  const hashId = window.location.hash.replace('#', '');
+  const productId = parseInt(params.get('id') || hashId, 10);
   const t = TYPES.find(x => x.id === productId);
 
   if (!t) {
     /* Not found */
-    document.getElementById('pageTitle').textContent = 'Product Not Found — Siechem';
+    document.title = 'Product Not Found — Siechem';
     document.getElementById('breadcrumbTitle').textContent = 'Not Found';
     document.getElementById('specPageTitle').textContent = 'Product Not Found';
     document.getElementById('specPageCat').textContent = '';
@@ -650,7 +652,6 @@
   } else {
     /* ── Update page meta ─────────────────────────── */
     document.title = `${t.name} — Siechem Aero 44`;
-    document.getElementById('pageTitle').textContent = `${t.name} — Siechem Aero 44`;
     document.getElementById('breadcrumbTitle').textContent = t.name;
     document.getElementById('specPageCat').textContent = `Catalogue No: ${t.cat}`;
     document.getElementById('specPageTitle').textContent = t.name;
