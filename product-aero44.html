@@ -844,7 +844,7 @@
         : `<span class="badge badge-general">General Purpose</span>`;
       const coreBadge = t.cores > 1 ? `<span class="badge badge-twin">Twin Core</span>` : '';
       return `
-        <div class="prod-card reveal" onclick="openSpec(${t.id})">
+        <div class="prod-card reveal" onclick="window.location='product-aero44-spec.html?id=${t.id}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')window.location='product-aero44-spec.html?id=${t.id}'">
           <div class="prod-card-head">
             <div class="prod-card-badges">${voltBadge}${shieldBadge}${typeBadge}${coreBadge}</div>
             <div class="prod-card-name">${t.name}</div>
