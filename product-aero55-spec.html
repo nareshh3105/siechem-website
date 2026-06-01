@@ -824,8 +824,10 @@
     document.querySelectorAll(`[data-step="${step}"]`).forEach(t => t.classList.remove('selected'));
     el.classList.add('selected');
     S[step] = val;
-    // If upstream filter changed, reset AWG
-    if (!['awg','conductor','voltage','apptype'].includes(step)) S.awg = null;
+    // Keep AWG selection unless the chosen size is no longer available
+    if (step !== 'awg' && S.awg !== null) {
+      if (!availableAWGs().includes(+S.awg)) S.awg = null;
+    }
     renderAWG();
     renderSummary();
     renderResult();
@@ -834,7 +836,8 @@
   function clearStep(step) {
     S[step] = null;
     document.querySelectorAll(`[data-step="${step}"]`).forEach(t => t.classList.remove('selected'));
-    if (!['conductor','voltage','apptype'].includes(step)) S.awg = null;
+    // Same: only clear AWG if it's no longer in the available set
+    if (S.awg !== null && !availableAWGs().includes(+S.awg)) S.awg = null;
     renderAWG();
     renderSummary();
     renderResult();
