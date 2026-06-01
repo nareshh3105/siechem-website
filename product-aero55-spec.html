@@ -9,284 +9,187 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="theme.css">
   <style>
-  /* ── Search bar ── */
-  .search-top {
-    position: relative; margin-bottom: 36px;
-  }
+  /* ── Search ── */
+  .search-top { position: relative; margin-bottom: 32px; }
   .search-top input {
-    width: 100%; padding: 16px 20px 16px 52px;
+    width: 100%; padding: 15px 20px 15px 50px;
     background: var(--bg-card); border: 2px solid var(--border);
-    border-radius: 14px; font-size: 15px; color: var(--text);
-    font-family: var(--mono); transition: border-color 0.15s;
+    border-radius: 12px; font-size: 14px; color: var(--text);
+    font-family: var(--sans); transition: border-color .15s;
   }
   .search-top input:focus { outline: none; border-color: var(--accent); }
-  .search-top input::placeholder { color: var(--text-faint); font-family: var(--sans); }
-  .search-top .search-ico {
-    position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  .search-top input::placeholder { color: var(--text-faint); }
+  .search-top .s-ico {
+    position: absolute; left: 17px; top: 50%; transform: translateY(-50%);
     color: var(--text-faint); pointer-events: none;
   }
-  .search-results {
+  .search-drop {
     position: absolute; top: calc(100% + 6px); left: 0; right: 0;
     background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; z-index: 100; display: none;
-    box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+    border-radius: 12px; z-index: 200; display: none;
+    box-shadow: 0 12px 36px rgba(0,0,0,.18);
   }
-  .search-results.open { display: block; }
-  .sr-item {
-    padding: 12px 18px; cursor: pointer; border-bottom: 1px solid var(--border);
-    transition: background 0.12s;
-  }
-  .sr-item:last-child { border-bottom: none; }
-  .sr-item:hover { background: var(--accent-soft); }
-  .sr-pn { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); }
-  .sr-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .search-drop.open { display: block; }
+  .sd-item { padding: 12px 18px; cursor: pointer; border-bottom: 1px solid var(--border); transition: background .12s; }
+  .sd-item:last-child { border-bottom: none; }
+  .sd-item:hover { background: var(--accent-soft); }
+  .sd-pn   { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--accent); }
+  .sd-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-  /* ── Tier containers ── */
-  .tier { margin-bottom: 28px; }
-  .tier-header {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
-  }
-  .tier-badge {
-    font-family: var(--mono); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.1em; padding: 3px 9px; border-radius: 20px;
-  }
-  .t1 { background: rgba(227,30,36,0.15); color: var(--accent); border: 1px solid rgba(227,30,36,0.3); }
-  .t2 { background: rgba(59,130,246,0.12); color: #60a5fa;   border: 1px solid rgba(59,130,246,0.25); }
-  .t3 { background: rgba(124,58,237,0.12); color: #a78bfa;   border: 1px solid rgba(124,58,237,0.25); }
-  .tier-title { font-size: 13px; font-weight: 600; color: var(--text-muted); }
-  .tier-hint  { font-size: 12px; color: var(--text-faint); margin-left: auto; }
+  /* ── Steps ── */
+  .steps { display: flex; flex-direction: column; gap: 0; }
 
-  /* Tier 1: 3-column grid */
-  .tier-1-grid {
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+  .step {
+    display: flex; gap: 0;
+    border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; margin-bottom: 12px;
+    background: var(--bg-card);
   }
-  .t1-group {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 18px;
-  }
-  .t1-group-label {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: var(--accent); font-family: var(--mono);
-    margin-bottom: 14px;
-  }
-
-  /* AWG grid */
-  .awg-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px;
-  }
-  .awg-tile {
-    padding: 9px 6px; text-align: center;
-    background: var(--bg-soft); border: 2px solid var(--border);
-    border-radius: 8px; cursor: pointer; transition: all 0.14s;
-  }
-  .awg-tile .awg-main { font-size: 13px; font-weight: 700; color: var(--text); font-family: var(--mono); }
-  .awg-tile .awg-mm   { font-size: 10px; color: var(--text-faint); }
-  .awg-tile:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
-  .awg-tile.selected  { background: var(--accent); border-color: var(--accent); }
-  .awg-tile.selected .awg-main, .awg-tile.selected .awg-mm { color: #fff; }
-  .awg-tile.disabled  { opacity: 0.22; pointer-events: none; }
-
-  /* Core / shield tiles */
-  .choice-tiles { display: flex; flex-direction: column; gap: 8px; }
-  .choice-tile {
-    display: flex; align-items: center; gap: 12px;
-    padding: 12px 14px; border: 2px solid var(--border);
-    border-radius: 10px; cursor: pointer; transition: all 0.14s;
+  .step-label-col {
+    width: 220px; flex-shrink: 0;
+    padding: 22px 20px;
     background: var(--bg-soft);
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; justify-content: center; gap: 6px;
   }
-  .choice-tile .ct-icon { font-size: 18px; width: 24px; text-align: center; flex-shrink:0; }
-  .choice-tile .ct-label { font-size: 13px; font-weight: 600; color: var(--text); }
-  .choice-tile .ct-sub   { font-size: 11px; color: var(--text-faint); font-family: var(--mono); }
-  .choice-tile:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
-  .choice-tile.selected  { border-color: var(--accent); background: var(--accent); }
-  .choice-tile.selected .ct-label { color: #fff; }
-  .choice-tile.selected .ct-sub   { color: rgba(255,255,255,0.65); }
-  .choice-tile.disabled  { opacity: 0.22; pointer-events: none; }
+  .step-num {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .step-num.done { background: #22c55e; }
+  .step-name {
+    font-size: 13px; font-weight: 700; color: var(--text);
+    line-height: 1.3;
+  }
+  .step-hint { font-size: 11px; color: var(--text-faint); font-family: var(--mono); }
 
-  /* Tier 2: inline row groups */
-  .tier-2-row {
-    display: grid; grid-template-columns: repeat(3,1fr); gap: 16px;
+  .step-options {
+    flex: 1; padding: 16px 20px;
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
   }
-  .t2-group {
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 16px;
-  }
-  .t2-group-label {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: #60a5fa; font-family: var(--mono);
-    margin-bottom: 12px;
-  }
-  .t2-tiles { display: flex; flex-wrap: wrap; gap: 7px; }
-  .t2-tile {
-    padding: 8px 14px; border: 2px solid var(--border);
-    border-radius: 8px; cursor: pointer; font-size: 12.5px; font-weight: 600;
-    color: var(--text-muted); background: var(--bg-soft);
-    transition: all 0.13s; white-space: nowrap;
-  }
-  .t2-tile:hover:not(.disabled) { border-color: #60a5fa; color: #60a5fa; background: rgba(59,130,246,0.08); }
-  .t2-tile.selected { border-color: #60a5fa; background: rgba(59,130,246,0.15); color: #93c5fd; }
-  .t2-tile.disabled { opacity: 0.2; pointer-events: none; }
 
-  /* Tier 3: collapsible */
-  .tier-3-toggle {
+  /* Option tiles */
+  .opt {
     display: flex; align-items: center; gap: 10px;
-    padding: 12px 18px; background: var(--bg-card);
-    border: 1px solid var(--border); border-radius: 12px;
-    cursor: pointer; font-size: 13px; font-weight: 600;
-    color: var(--text-muted); transition: background 0.14s;
-    width: 100%;
+    padding: 11px 18px; border: 2px solid var(--border);
+    border-radius: 10px; cursor: pointer;
+    transition: all .14s; background: var(--bg-soft);
+    min-width: 160px;
   }
-  .tier-3-toggle:hover { background: var(--bg-card-hover); }
-  .tier-3-toggle .t3-arrow { margin-left: auto; transition: transform 0.2s; }
-  .tier-3-toggle.open .t3-arrow { transform: rotate(180deg); }
-  .tier-3-panel {
-    display: none; margin-top: 12px;
-    background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 20px;
+  .opt-icon { font-size: 18px; flex-shrink: 0; }
+  .opt-text { display: flex; flex-direction: column; gap: 2px; }
+  .opt-label { font-size: 13px; font-weight: 600; color: var(--text); }
+  .opt-sub   { font-size: 11px; color: var(--text-faint); font-family: var(--mono); }
+  .opt:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
+  .opt.selected {
+    border-color: var(--accent); background: var(--accent); color: #fff;
   }
-  .tier-3-panel.open { display: block; }
-  .t3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-  .t3-group-label {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.1em; color: #a78bfa; font-family: var(--mono);
-    margin-bottom: 10px;
-  }
-  .t3-tiles { display: flex; flex-wrap: wrap; gap: 7px; }
-  .t3-tile {
-    padding: 7px 13px; border: 2px solid var(--border);
-    border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: 600;
-    color: var(--text-muted); background: var(--bg-soft);
-    transition: all 0.13s;
-  }
-  .t3-tile:hover:not(.disabled) { border-color: #a78bfa; color: #a78bfa; background: rgba(124,58,237,0.08); }
-  .t3-tile.selected { border-color: #a78bfa; background: rgba(124,58,237,0.15); color: #c4b5fd; }
-  .t3-tile.disabled { opacity: 0.2; pointer-events: none; }
+  .opt.selected .opt-label { color: #fff; }
+  .opt.selected .opt-sub   { color: rgba(255,255,255,.65); }
+  .opt.disabled { opacity: .25; pointer-events: none; }
 
-  /* Active filter summary */
-  .filter-summary {
+  /* AWG tiles */
+  .awg-wrap { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px 20px; }
+  .awg-tile {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px 14px; border: 2px solid var(--border);
+    border-radius: 9px; cursor: pointer; transition: all .14s;
+    background: var(--bg-soft); min-width: 68px; text-align: center;
+  }
+  .awg-main { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--text); }
+  .awg-sub  { font-size: 10px; color: var(--text-faint); margin-top: 2px; }
+  .awg-tile:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
+  .awg-tile.selected { border-color: var(--accent); background: var(--accent); }
+  .awg-tile.selected .awg-main, .awg-tile.selected .awg-sub { color: #fff; }
+  .awg-tile.disabled { opacity: .2; pointer-events: none; }
+
+  /* Summary chips */
+  .summary-bar {
     display: flex; flex-wrap: wrap; gap: 7px; align-items: center;
-    padding: 12px 18px; background: var(--bg-card);
-    border: 1px solid var(--border); border-radius: 12px; margin-bottom: 24px;
+    padding: 11px 16px; background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: 10px; margin-bottom: 28px;
   }
-  .fs-chip {
-    padding: 4px 10px; border-radius: 20px; font-size: 11.5px; font-weight: 600;
-    font-family: var(--mono); display: flex; align-items: center; gap: 5px;
+  .s-chip {
+    display: flex; align-items: center; gap: 5px;
+    padding: 4px 10px; border-radius: 20px; font-size: 11.5px;
+    font-weight: 600; font-family: var(--mono);
+    background: rgba(227,30,36,.1); color: var(--accent);
+    border: 1px solid rgba(227,30,36,.2);
   }
-  .fs-t1 { background: rgba(227,30,36,0.12); color: var(--accent); }
-  .fs-t2 { background: rgba(59,130,246,0.12); color: #60a5fa; }
-  .fs-t3 { background: rgba(124,58,237,0.12); color: #a78bfa; }
-  .fs-chip .fs-x { cursor: pointer; opacity: 0.6; }
-  .fs-chip .fs-x:hover { opacity: 1; }
-  .fs-reset { margin-left: auto; font-size: 12px; color: var(--text-faint); cursor: pointer; font-weight: 600; }
-  .fs-reset:hover { color: var(--accent); }
-  .fs-empty { font-size: 13px; color: var(--text-faint); }
+  .s-chip .cx { cursor: pointer; opacity: .6; margin-left: 2px; }
+  .s-chip .cx:hover { opacity: 1; }
+  .s-empty { font-size: 13px; color: var(--text-faint); }
+  .s-reset { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--text-faint); cursor: pointer; }
+  .s-reset:hover { color: var(--accent); }
 
-  /* Result card */
-  .cfg-result {
+  /* Result */
+  .result-box {
     margin-top: 32px; padding: 32px;
     background: linear-gradient(135deg, #1a2030, #0f1422);
-    border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; border: 1px solid rgba(255,255,255,.08);
   }
-  .result-empty {
-    text-align: center; padding: 48px 0;
-    color: rgba(255,255,255,0.3); font-size: 14px;
+  .r-empty { text-align: center; padding: 48px 0; color: rgba(255,255,255,.3); }
+  .r-empty-icon { font-size: 36px; margin-bottom: 12px; }
+  .r-progress { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+  .r-step {
+    padding: 4px 12px; border-radius: 20px; font-size: 11px;
+    font-weight: 600; font-family: var(--mono);
+    border: 1px dashed rgba(255,255,255,.2); color: rgba(255,255,255,.25);
   }
-  .result-empty-icon { font-size: 36px; margin-bottom: 12px; }
-  .result-empty-steps {
-    display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 20px;
-  }
-  .res-step {
-    padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
-    font-family: var(--mono); border: 1px dashed rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.25);
-  }
-  .res-step.done { border-color: rgba(34,197,94,0.4); color: #4ade80; background: rgba(34,197,94,0.08); }
+  .r-step.done { border-color: rgba(34,197,94,.4); color: #4ade80; background: rgba(34,197,94,.08); }
 
-  .result-partno {
-    font-family: var(--mono); font-size: 32px; font-weight: 700; color: #fff;
-    letter-spacing: 0.06em; margin-bottom: 4px;
-  }
-  .result-partno span { color: var(--accent); }
-  .result-desc { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
-  .result-badges { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 24px; }
-  .rb { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; font-family: var(--mono); }
-  .rb-g { background:rgba(34,197,94,0.15); color:#4ade80; border:1px solid rgba(34,197,94,0.25); }
-  .rb-b { background:rgba(59,130,246,0.15); color:#93c5fd; border:1px solid rgba(59,130,246,0.25); }
-  .rb-r { background:rgba(227,30,36,0.2);  color:#fca5a5; border:1px solid rgba(227,30,36,0.3); }
-  .rb-a { background:rgba(251,191,36,0.15);color:#fcd34d; border:1px solid rgba(251,191,36,0.25); }
-  .rb-p { background:rgba(124,58,237,0.15);color:#c4b5fd; border:1px solid rgba(124,58,237,0.25); }
+  .r-pn { font-family: var(--mono); font-size: 30px; font-weight: 700; color: #fff; letter-spacing: .06em; }
+  .r-pn span { color: var(--accent); }
+  .r-desc { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 4px; margin-bottom: 16px; }
+  .r-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+  .rb { padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; font-family: var(--mono); }
+  .rb-g { background:rgba(34,197,94,.12); color:#4ade80; border:1px solid rgba(34,197,94,.2); }
+  .rb-b { background:rgba(59,130,246,.12); color:#93c5fd; border:1px solid rgba(59,130,246,.2); }
+  .rb-r { background:rgba(227,30,36,.15); color:#fca5a5; border:1px solid rgba(227,30,36,.25); }
+  .rb-a { background:rgba(251,191,36,.12); color:#fcd34d; border:1px solid rgba(251,191,36,.2); }
 
-  .specs-grid {
-    display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px;
-  }
-  .sg { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 14px 16px; }
-  .sg-lbl { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,0.38); text-transform: uppercase; margin-bottom: 5px; }
-  .sg-val { font-size: 19px; font-weight: 700; color: #fff; }
-  .sg-unit { font-size: 11px; color: rgba(255,255,255,0.45); margin-left: 2px; }
+  .specs-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }
+  .sg { background: rgba(255,255,255,.05); border-radius: 10px; padding: 14px 16px; }
+  .sg-l { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,.38); text-transform: uppercase; margin-bottom: 5px; }
+  .sg-v { font-size: 18px; font-weight: 700; color: #fff; }
+  .sg-u { font-size: 11px; color: rgba(255,255,255,.45); margin-left: 2px; }
 
-  .std-row {
-    padding: 14px 16px; background: rgba(255,255,255,0.04);
-    border-radius: 10px; margin-bottom: 20px;
-  }
-  .std-row-lbl { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 8px; }
-  .std-row-list { display: flex; flex-wrap: wrap; gap: 6px; }
-  .std-pill {
-    padding: 3px 9px; border-radius: 5px; font-size: 11px; font-weight: 600;
-    font-family: var(--mono); background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.55);
-  }
+  .std-box { padding: 14px 16px; background: rgba(255,255,255,.04); border-radius: 10px; margin-bottom: 20px; }
+  .std-l { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,.38); text-transform: uppercase; margin-bottom: 8px; }
+  .std-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .std-pill { padding: 3px 9px; border-radius: 5px; font-size: 11px; font-weight: 600; font-family: var(--mono); background: rgba(255,255,255,.07); color: rgba(255,255,255,.55); }
 
-  .result-cta { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-quote {
-    padding: 12px 28px; background: var(--accent); color: #fff;
-    border: none; border-radius: 10px; font-size: 14px; font-weight: 700;
-    cursor: pointer; transition: background 0.15s;
-  }
-  .btn-quote:hover { background: var(--accent-light); }
-  .btn-reset-all {
-    padding: 12px 22px; background: rgba(255,255,255,0.07);
-    color: rgba(255,255,255,0.6); border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer;
-    transition: background 0.15s;
-  }
-  .btn-reset-all:hover { background: rgba(255,255,255,0.12); }
+  .r-cta { display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.07); padding-top: 20px; margin-top: 4px; }
+  .btn-q { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s; }
+  .btn-q:hover { background: var(--accent-light); }
+  .btn-rst { padding: 12px 22px; background: rgba(255,255,255,.07); color: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .btn-rst:hover { background: rgba(255,255,255,.12); }
 
   /* Quote modal */
-  .modal-backdrop {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.65);
-    z-index: 999; display: none; align-items: center; justify-content: center;
-  }
-  .modal-backdrop.open { display: flex; }
-  .modal {
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: 20px; padding: 36px; width: 100%; max-width: 480px; margin: 20px;
-  }
-  .modal h3 { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
-  .modal-sub { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
-  .modal-part {
-    font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--accent);
-    background: var(--accent-soft); padding: 10px 16px; border-radius: 8px; margin-bottom: 18px;
-  }
-  .form-row { margin-bottom: 13px; }
-  .form-row label { display: block; font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 5px; }
-  .form-row input, .form-row textarea {
-    width: 100%; padding: 10px 14px;
-    background: var(--bg-soft); border: 1px solid var(--border);
-    border-radius: 8px; font-size: 14px; color: var(--text); font-family: var(--sans);
-  }
-  .form-row textarea { resize: vertical; min-height: 65px; }
-  .modal-actions { display: flex; gap: 10px; margin-top: 18px; }
-  .modal-cancel {
-    padding: 10px 20px; background: none; border: 1px solid var(--border);
-    border-radius: 8px; cursor: pointer; font-size: 13px; color: var(--text-muted);
-  }
+  .modal-bd { position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:999;display:none;align-items:center;justify-content:center; }
+  .modal-bd.open { display: flex; }
+  .modal { background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:36px;width:100%;max-width:480px;margin:20px; }
+  .modal h3 { font-size:22px;font-weight:800;margin-bottom:6px; }
+  .modal-sub { color:var(--text-muted);font-size:14px;margin-bottom:18px; }
+  .modal-pn { font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:10px 16px;border-radius:8px;margin-bottom:16px; }
+  .fr { margin-bottom:12px; }
+  .fr label { display:block;font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:4px; }
+  .fr input,.fr textarea { width:100%;padding:10px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;font-size:14px;color:var(--text);font-family:var(--sans); }
+  .fr textarea { resize:vertical;min-height:65px; }
+  .modal-acts { display:flex;gap:10px;margin-top:16px; }
+  .btn-cancel { padding:10px 20px;background:none;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:13px;color:var(--text-muted); }
 
   @media (max-width: 900px) {
-    .tier-1-grid, .tier-2-row, .t3-grid { grid-template-columns: 1fr; }
-    .awg-grid { grid-template-columns: repeat(4,1fr); }
+    .step { flex-direction: column; }
+    .step-label-col { width: auto; border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: center; }
     .specs-grid { grid-template-columns: repeat(2,1fr); }
   }
-  @media (max-width: 480px) {
-    .awg-grid { grid-template-columns: repeat(3,1fr); }
+  @media (max-width: 560px) {
+    .opt { min-width: 130px; }
+    .specs-grid { grid-template-columns: repeat(2,1fr); }
   }
   </style>
 </head>
@@ -311,39 +214,34 @@
         <a href="catalogues.html" class="nav-link">Catalogues</a>
       </div>
       <a href="contact.html" class="nav-cta">Request Quote →</a>
-      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-links">
-        <a href="products.html">Products</a>
-        <a href="tech-support.html">Tech Support</a>
-        <a href="about.html">Company</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="customers.html">Customers</a>
-        <a href="catalogues.html">Catalogues</a>
+        <a href="products.html">Products</a><a href="tech-support.html">Tech Support</a>
+        <a href="about.html">Company</a><a href="certifications.html">Certifications</a>
+        <a href="customers.html">Customers</a><a href="catalogues.html">Catalogues</a>
       </div>
     </div>
   </nav>
 
-  <!-- Page Hero -->
+  <!-- Hero -->
   <section class="page-hero">
     <div class="container">
       <div class="breadcrumb">
         <a href="siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span>
         <a href="products.html">Products</a><span class="breadcrumb-sep"></span>
         <a href="product-aero44.html">Aerospace</a><span class="breadcrumb-sep"></span>
-        <span>AERO 55</span>
+        <span>AERO 55 Configurator</span>
       </div>
       <div class="page-hero-content">
         <div class="fade-up">
           <div class="eyebrow">Aerospace Cables · EBXL ETFE · SAE AS22759</div>
           <h1 class="page-title">AERO 55<br/><em>Configurator</em></h1>
-          <p class="page-lede">Three tiers of filters — pick only what you need. Most engineers find their exact part number in under 30 seconds using just the Tier 1 controls.</p>
+          <p class="page-lede">6 steps — each one narrows the options. Select your requirements to land on an exact part number with full dimensional data.</p>
         </div>
         <div class="fade-up fade-up-2" style="display:flex;flex-direction:column;gap:10px;padding:22px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;">
-          <div class="spec"><span class="spec-label">Voltage</span><span class="spec-value">600 V / 1000 V</span></div>
+          <div class="spec"><span class="spec-label">Voltage</span><span class="spec-value">600 V</span></div>
           <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">10 – 30 AWG</span></div>
           <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−65°C to +200°C</span></div>
           <div class="spec"><span class="spec-label">Standards</span><span class="spec-value">AS22759 · DEF-STAN · BMS</span></div>
@@ -353,408 +251,375 @@
     </div>
   </section>
 
-  <!-- Configurator Body -->
+  <!-- Configurator -->
   <section class="section" style="padding-top:36px;">
     <div class="container">
 
       <!-- Direct search -->
       <div class="search-top">
-        <span class="search-ico">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M15 15l3 3"/></svg>
+        <span class="s-ico">
+          <svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M15 15l3 3"/></svg>
         </span>
-        <input type="text" id="searchBox" placeholder="Direct lookup — type a part no. or catalogue no. (e.g. 55G440, 55G44085, 55P510…)" autocomplete="off" />
-        <div class="search-results" id="searchResults"></div>
+        <input id="searchBox" type="text" placeholder="Direct lookup — type part no. or catalogue no. (e.g. 55G440, 55G44085, 55P510…)" autocomplete="off" />
+        <div class="search-drop" id="searchDrop"></div>
       </div>
 
-      <!-- Active filter summary -->
-      <div class="filter-summary" id="filterSummary">
-        <span class="fs-empty">Select parameters below to find your part number</span>
+      <!-- Summary chips -->
+      <div class="summary-bar" id="summaryBar">
+        <span class="s-empty">Make your selections below to find the exact part number</span>
       </div>
 
-      <!-- ══ TIER 1 ══ -->
-      <div class="tier">
-        <div class="tier-header">
-          <span class="tier-badge t1">TIER 1</span>
-          <span class="tier-title">Most Used — AWG Size · Cores · Shielding</span>
-          <span class="tier-hint">Start here — 90% of orders are decided by these 3</span>
+      <!-- 6 steps -->
+      <div class="steps">
+
+        <!-- Step 1: Conductors / Cores -->
+        <div class="step" id="step-cores">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-cores">1</div>
+              <div class="step-name">Conductors</div>
+            </div>
+            <div class="step-hint">Core count &amp; type</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="cores" data-val="1" onclick="pick(this)">
+              <span class="opt-icon">〰</span>
+              <div class="opt-text"><span class="opt-label">Single Core</span><span class="opt-sub">1 conductor</span></div>
+            </div>
+            <div class="opt" data-step="cores" data-val="2" onclick="pick(this)">
+              <span class="opt-icon">⇌</span>
+              <div class="opt-text"><span class="opt-label">Twisted Twin</span><span class="opt-sub">2 conductors twisted</span></div>
+            </div>
+            <div class="opt" data-step="cores" data-val="multi" onclick="pick(this)">
+              <span class="opt-icon">≡</span>
+              <div class="opt-text"><span class="opt-label">Multicore</span><span class="opt-sub">3 – 4 conductors</span></div>
+            </div>
+            <div class="opt" data-step="cores" data-val="atc" onclick="pick(this)">
+              <span class="opt-icon">⊛</span>
+              <div class="opt-text"><span class="opt-label">ATC Special</span><span class="opt-sub">Twin axial / RF</span></div>
+            </div>
+          </div>
         </div>
-        <div class="tier-1-grid">
 
-          <!-- AWG -->
-          <div class="t1-group">
-            <div class="t1-group-label">Wire Size (AWG)</div>
-            <div class="awg-grid" id="awgGrid"></div>
+        <!-- Step 2: Shielding -->
+        <div class="step" id="step-shielded">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-shielded">2</div>
+              <div class="step-name">Shielding</div>
+            </div>
+            <div class="step-hint">Braid over insulation</div>
           </div>
-
-          <!-- Cores -->
-          <div class="t1-group">
-            <div class="t1-group-label">Number of Cores</div>
-            <div class="choice-tiles">
-              <div class="choice-tile" data-step="cores" data-val="1" onclick="pick(this)">
-                <span class="ct-icon">〰</span>
-                <div><div class="ct-label">Single Core</div><div class="ct-sub">1 conductor</div></div>
-              </div>
-              <div class="choice-tile" data-step="cores" data-val="2" onclick="pick(this)">
-                <span class="ct-icon">⇌</span>
-                <div><div class="ct-label">Twisted Twin</div><div class="ct-sub">2 conductors twisted</div></div>
-              </div>
-              <div class="choice-tile" data-step="cores" data-val="multi" onclick="pick(this)">
-                <span class="ct-icon">≡</span>
-                <div><div class="ct-label">Multicore</div><div class="ct-sub">3 – 4 conductors</div></div>
-              </div>
-              <div class="choice-tile" data-step="cores" data-val="atc" onclick="pick(this)">
-                <span class="ct-icon">⊛</span>
-                <div><div class="ct-label">ATC Special</div><div class="ct-sub">Twin axial / RF</div></div>
-              </div>
+          <div class="step-options">
+            <div class="opt" data-step="shielded" data-val="no" onclick="pick(this)">
+              <span class="opt-icon">○</span>
+              <div class="opt-text"><span class="opt-label">Unshielded</span><span class="opt-sub">No braid</span></div>
+            </div>
+            <div class="opt" data-step="shielded" data-val="yes" onclick="pick(this)">
+              <span class="opt-icon">⊕</span>
+              <div class="opt-text"><span class="opt-label">Shielded</span><span class="opt-sub">Tin copper braid</span></div>
             </div>
           </div>
-
-          <!-- Shielded -->
-          <div class="t1-group">
-            <div class="t1-group-label">Shielding</div>
-            <div class="choice-tiles">
-              <div class="choice-tile" data-step="shielded" data-val="no" onclick="pick(this)">
-                <span class="ct-icon">○</span>
-                <div><div class="ct-label">Unshielded</div><div class="ct-sub">No braid over insulation</div></div>
-              </div>
-              <div class="choice-tile" data-step="shielded" data-val="yes" onclick="pick(this)">
-                <span class="ct-icon">⊕</span>
-                <div><div class="ct-label">Shielded</div><div class="ct-sub">Tinned copper braid</div></div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <!-- ══ TIER 2 ══ -->
-      <div class="tier">
-        <div class="tier-header">
-          <span class="tier-badge t2">TIER 2</span>
-          <span class="tier-title">Application Filters — Airframe Grade · SPC · Weight Class</span>
-          <span class="tier-hint">For aerospace-specific builds</span>
+        <!-- Step 3: Application Grade -->
+        <div class="step" id="step-airframe">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-airframe">3</div>
+              <div class="step-name">Application Grade</div>
+            </div>
+            <div class="step-hint">Standard or airframe</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="airframe" data-val="standard" onclick="pick(this)">
+              <span class="opt-icon">🔌</span>
+              <div class="opt-text"><span class="opt-label">Standard</span><span class="opt-sub">Aircraft · avionics · military</span></div>
+            </div>
+            <div class="opt" data-step="airframe" data-val="airframe" onclick="pick(this)">
+              <span class="opt-icon">✈️</span>
+              <div class="opt-text"><span class="opt-label">Airframe Rated</span><span class="opt-sub">Dual-wall airframe grade</span></div>
+            </div>
+          </div>
         </div>
-        <div class="tier-2-row">
 
-          <!-- Airframe -->
-          <div class="t2-group">
-            <div class="t2-group-label">Application Grade</div>
-            <div class="t2-tiles">
-              <div class="t2-tile" data-step="airframe" data-val="standard" onclick="pick(this)">Standard</div>
-              <div class="t2-tile" data-step="airframe" data-val="airframe" onclick="pick(this)">✈ Airframe Rated</div>
+        <!-- Step 4: Quality Process -->
+        <div class="step" id="step-spc">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-spc">4</div>
+              <div class="step-name">Quality Process</div>
+            </div>
+            <div class="step-hint">SPC or standard QC</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="spc" data-val="no" onclick="pick(this)">
+              <span class="opt-icon">✓</span>
+              <div class="opt-text"><span class="opt-label">Standard QC</span><span class="opt-sub">General purpose</span></div>
+            </div>
+            <div class="opt" data-step="spc" data-val="yes" onclick="pick(this)">
+              <span class="opt-icon">⚙</span>
+              <div class="opt-text"><span class="opt-label">SPC Controlled</span><span class="opt-sub">Statistical process control</span></div>
             </div>
           </div>
-
-          <!-- SPC -->
-          <div class="t2-group">
-            <div class="t2-group-label">Quality Process</div>
-            <div class="t2-tiles">
-              <div class="t2-tile" data-step="spc" data-val="no" onclick="pick(this)">Standard QC</div>
-              <div class="t2-tile" data-step="spc" data-val="yes" onclick="pick(this)">⚙ SPC Controlled</div>
-            </div>
-          </div>
-
-          <!-- Weight class -->
-          <div class="t2-group">
-            <div class="t2-group-label">Weight Class</div>
-            <div class="t2-tiles" id="weightTiles">
-              <div class="t2-tile" data-step="weight" data-val="Light" onclick="pick(this)">Light</div>
-              <div class="t2-tile" data-step="weight" data-val="Medium" onclick="pick(this)">Medium</div>
-              <div class="t2-tile" data-step="weight" data-val="Normal" onclick="pick(this)">Normal (Airframe)</div>
-              <div class="t2-tile" data-step="weight" data-val="Heavy" onclick="pick(this)">Heavy Duty</div>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-      <!-- ══ TIER 3 ══ -->
-      <div class="tier">
-        <div class="tier-header">
-          <span class="tier-badge t3">TIER 3</span>
-          <span class="tier-title">Advanced — Conductor Plating · Voltage · Application Type</span>
-          <span class="tier-hint">Fine-tune for temperature rating and application</span>
+        <!-- Step 5: Conductor Plating -->
+        <div class="step" id="step-conductor">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-conductor">5</div>
+              <div class="step-name">Conductor Plating</div>
+            </div>
+            <div class="step-hint">Sets temp. rating</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="conductor" data-val="tin" onclick="pick(this)">
+              <span class="opt-icon">⬡</span>
+              <div class="opt-text"><span class="opt-label">Tin-Plated</span><span class="opt-sub">−65°C to +150°C</span></div>
+            </div>
+            <div class="opt" data-step="conductor" data-val="silver" onclick="pick(this)">
+              <span class="opt-icon">◈</span>
+              <div class="opt-text"><span class="opt-label">Silver-Coated</span><span class="opt-sub">−65°C to +200°C</span></div>
+            </div>
+            <div class="opt" data-step="conductor" data-val="nickel" onclick="pick(this)">
+              <span class="opt-icon">◇</span>
+              <div class="opt-text"><span class="opt-label">Nickel-Coated</span><span class="opt-sub">−65°C to +200°C</span></div>
+            </div>
+          </div>
         </div>
-        <div class="t3-grid">
 
-          <!-- Conductor -->
-          <div class="t2-group">
-            <div class="t3-group-label">Conductor Plating</div>
-            <div class="t3-tiles">
-              <div class="t3-tile" data-step="conductor" data-val="tin" onclick="pick(this)">
-                Tin-Plated<br><span style="font-size:10px;opacity:.6;">−65°C to +150°C</span>
-              </div>
-              <div class="t3-tile" data-step="conductor" data-val="silver" onclick="pick(this)">
-                Silver-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
-              </div>
-              <div class="t3-tile" data-step="conductor" data-val="nickel" onclick="pick(this)">
-                Nickel-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
-              </div>
+        <!-- Step 6: AWG Size -->
+        <div class="step" id="step-awg">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-awg">6</div>
+              <div class="step-name">Wire Size (AWG)</div>
             </div>
+            <div class="step-hint">Valid sizes highlighted</div>
           </div>
-
-          <!-- Voltage -->
-          <div class="t2-group">
-            <div class="t3-group-label">Voltage Rating</div>
-            <div class="t3-tiles">
-              <div class="t3-tile" data-step="voltage" data-val="600" onclick="pick(this)">600 V</div>
-              <div class="t3-tile" data-step="voltage" data-val="1000" onclick="pick(this)">1000 V<br><span style="font-size:10px;opacity:.6;">Heavy Duty Airframe</span></div>
-            </div>
-          </div>
-
-          <!-- Application type -->
-          <div class="t2-group">
-            <div class="t3-group-label">Application Type</div>
-            <div class="t3-tiles">
-              <div class="t3-tile" data-step="apptype" data-val="G" onclick="pick(this)">General Purpose<br><span style="font-size:10px;opacity:.6;">Aircraft · Avionics · Military</span></div>
-              <div class="t3-tile" data-step="apptype" data-val="O" onclick="pick(this)">Outer Space<br><span style="font-size:10px;opacity:.6;">Satellites · High vacuum</span></div>
-              <div class="t3-tile" data-step="apptype" data-val="P" onclick="pick(this)">Process Control<br><span style="font-size:10px;opacity:.6;">SPC · Statistical verified</span></div>
-            </div>
-          </div>
-
+          <div class="awg-wrap" id="awgWrap"></div>
         </div>
+
       </div>
 
       <!-- Result -->
-      <div class="cfg-result" id="cfgResult">
-        <div id="resultEmpty">
-          <div class="result-empty">
-            <div class="result-empty-icon">🔍</div>
-            <div>Select AWG size, cores and shielding in Tier 1 to see matching variants</div>
-            <div class="result-empty-steps" id="emptySteps"></div>
+      <div class="result-box" id="resultBox">
+        <div id="rEmpty">
+          <div class="r-empty">
+            <div class="r-empty-icon">🔍</div>
+            <div>Complete all 6 steps to see your exact part number</div>
+            <div class="r-progress" id="rProgress"></div>
           </div>
         </div>
-        <div id="resultMatch" style="display:none;"></div>
+        <div id="rMatch" style="display:none;"></div>
       </div>
 
     </div>
   </section>
 
   <!-- Quote Modal -->
-  <div class="modal-backdrop" id="quoteModal">
+  <div class="modal-bd" id="quoteModal">
     <div class="modal">
       <h3>Request Quote</h3>
       <p class="modal-sub">We respond within 1 business day with pricing and lead time.</p>
-      <div class="modal-part" id="modalPartNo">—</div>
-      <div class="form-row"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
-      <div class="form-row"><label>Company</label><input type="text" placeholder="Company name"></div>
-      <div class="form-row"><label>Email *</label><input type="email" placeholder="you@company.com"></div>
-      <div class="form-row"><label>Quantity (metres)</label><input type="text" placeholder="e.g. 500 m"></div>
-      <div class="form-row"><label>Notes</label><textarea placeholder="Special requirements, delivery date…"></textarea></div>
-      <div class="modal-actions">
-        <button class="btn-quote" onclick="submitQuote()">Send Request</button>
-        <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+      <div class="modal-pn" id="modalPn">—</div>
+      <div class="fr"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
+      <div class="fr"><label>Company</label><input type="text" placeholder="Company name"></div>
+      <div class="fr"><label>Email *</label><input type="email" placeholder="you@company.com"></div>
+      <div class="fr"><label>Quantity (metres)</label><input type="text" placeholder="e.g. 500 m"></div>
+      <div class="fr"><label>Notes</label><textarea placeholder="Special requirements, delivery date…"></textarea></div>
+      <div class="modal-acts">
+        <button class="btn-q" onclick="submitQuote()">Send Request</button>
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
       </div>
     </div>
   </div>
 
   <script src="nav-mobile.js" defer></script>
   <script>
-  // ── DATA ────────────────────────────────────────────────────────────────
-  const AWG_MM  = {30:0.051,28:0.08,26:0.13,24:0.20,22:0.33,20:0.52,18:0.82,16:1.31,14:2.08,12:3.31,10:5.26};
+  // ── DATA ─────────────────────────────────────────────────────────────────
+  const AWG_MM  = {30:.051,28:.08,26:.13,24:.20,22:.33,20:.52,18:.82,16:1.31,14:2.08,12:3.31,10:5.26};
   const AWG_STR = {30:7,28:7,26:19,24:19,22:19,20:19,18:19,16:19,14:19,12:37,10:37};
   const AWG_ALL = [30,28,26,24,22,20,18,16,14,12,10];
 
-  const COND_LABEL = {tin:'Tin-Plated', silver:'Silver-Coated', nickel:'Nickel-Coated'};
-  const COND_TEMP  = {tin:'−65°C to +150°C', silver:'−65°C to +200°C', nickel:'−65°C to +200°C'};
-  const COND_DIGIT = {tin:'0', silver:'1', nickel:'2'};
+  const COND_LABEL = {tin:'Tin-Plated',silver:'Silver-Coated',nickel:'Nickel-Coated'};
+  const COND_TEMP  = {tin:'−65°C to +150°C',silver:'−65°C to +200°C',nickel:'−65°C to +200°C'};
+  const COND_DIGIT = {tin:'0',silver:'1',nickel:'2'};
 
   const FAMILIES = [
-    { id:'G000', label:'Single Core Unsheathed Wire',
-      cores:1, shielded:false, airframe:false, spc:false, voltage:600, weight:'Light', apptype:'G',
-      awgs:[30,28,26,24,22,20,18,16,14,12,10],
-      sizes:{30:{od:0.63,wt:0.98,base:'55G00087'},28:{od:0.70,wt:1.35,base:'55G00086'},
-             26:{od:0.83,wt:2.08,base:'55G00085'},24:{od:0.96,wt:2.98,base:'55G00084'},
-             22:{od:1.11,wt:4.17,base:'55G00083'},20:{od:1.29,wt:6.40,base:'55G00082'},
-             18:{od:1.54,wt:9.67,base:'55G00081'},16:{od:1.75,wt:12.35,base:'55G00080'},
-             14:{od:2.22,wt:19.34,base:'55G00079'},12:{od:2.64,wt:29.32,base:'55G00078'},
-             10:{od:3.25,wt:46.10,base:'55G00077'}}},
-    { id:'G100', label:'Twisted Twin Core Cable',
-      cores:2, shielded:false, airframe:false, spc:false, voltage:600, weight:'Light', apptype:'G',
-      awgs:[30,28,26,24,22,20,18,16,14,12,10],
-      sizes:{30:{od:1.29,wt:1.94,base:'55G10087'},28:{od:1.44,wt:2.68,base:'55G10086'},
-             26:{od:1.69,wt:4.16,base:'55G10085'},24:{od:1.95,wt:5.96,base:'55G10084'},
-             22:{od:2.25,wt:8.63,base:'55G10083'},20:{od:2.68,wt:13.24,base:'55G10082'},
-             18:{od:3.21,wt:20.09,base:'55G10081'},16:{od:3.75,wt:26.30,base:'55G10080'},
-             14:{od:4.45,wt:38.68,base:'55G10079'},12:{od:5.35,wt:58.64,base:'55G10078'},
-             10:{od:6.50,wt:92.20,base:'55G10077'}}},
-    { id:'G500', label:'Twisted Twin Core Shielded Cable',
-      cores:2, shielded:true, airframe:false, spc:false, voltage:600, weight:'Light', apptype:'G',
-      awgs:[30,28,26,24,22,20,18,16,14,12,10],
-      sizes:{30:{od:2.14,wt:8.03,base:'55G50087'},28:{od:2.29,wt:9.37,base:'55G50086'},
-             26:{od:2.55,wt:11.75,base:'55G50085'},24:{od:2.82,wt:14.58,base:'55G50084'},
-             22:{od:3.09,wt:18.15,base:'55G50083'},20:{od:3.61,wt:25.10,base:'55G50082'},
-             18:{od:4.15,wt:35.18,base:'55G50081'},16:{od:4.70,wt:45.60,base:'55G50080'},
-             14:{od:5.55,wt:65.10,base:'55G50079'},12:{od:6.60,wt:93.50,base:'55G50078'},
-             10:{od:7.90,wt:143.0,base:'55G50077'}}},
-    { id:'G240', label:'Single Core Airframe Wire',
-      cores:1, shielded:false, airframe:true, spc:false, voltage:600, weight:'Normal', apptype:'G',
-      awgs:[26,24,22,20,18,16,14,12,10],
-      sizes:{26:{od:1.03,wt:2.5,base:'55G24085'},24:{od:1.16,wt:3.4,base:'55G24084'},
-             22:{od:1.29,wt:4.8,base:'55G24083'},20:{od:1.49,wt:7.0,base:'55G24082'},
-             18:{od:1.80,wt:10.7,base:'55G24081'},16:{od:1.98,wt:13.4,base:'55G24080'},
-             14:{od:2.42,wt:20.5,base:'55G24079'},12:{od:2.84,wt:30.5,base:'55G24078'},
-             10:{od:3.42,wt:48.3,base:'55G24077'}}},
-    { id:'G440', label:'Single Core Shielded Airframe Wire',
-      cores:1, shielded:true, airframe:true, spc:false, voltage:600, weight:'Normal', apptype:'G',
-      awgs:[26,24,22,20,18,16,14,12,10],
-      sizes:{26:{od:1.87,wt:7.89,base:'55G44085'},24:{od:2.00,wt:9.37,base:'55G44084'},
-             22:{od:2.15,wt:11.76,base:'55G44083'},20:{od:2.35,wt:14.88,base:'55G44082'},
-             18:{od:2.63,wt:19.79,base:'55G44081'},16:{od:2.83,wt:23.81,base:'55G44080'},
-             14:{od:3.27,wt:33.03,base:'55G44079'},12:{od:3.70,wt:45.09,base:'55G44078'},
-             10:{od:4.21,wt:66.97,base:'55G44077'}}},
-    { id:'G540', label:'Twisted Twin Core Shielded Airframe Cable',
-      cores:2, shielded:true, airframe:true, spc:false, voltage:600, weight:'Normal', apptype:'G',
-      awgs:[26,24,22,20,18,16,14,12,10],
-      sizes:{26:{od:2.89,wt:14.29,base:'55G54085'},24:{od:3.14,wt:16.37,base:'55G54084'},
-             22:{od:3.44,wt:20.68,base:'55G54083'},20:{od:3.87,wt:27.08,base:'55G54082'},
-             18:{od:4.41,wt:36.46,base:'55G54081'},16:{od:4.82,wt:42.86,base:'55G54080'},
-             14:{od:5.73,wt:61.61,base:'55G54079'},12:{od:6.59,wt:85.42,base:'55G54078'},
-             10:{od:7.81,wt:127.54,base:'55G54077'}}},
-    { id:'P410', label:'Single Core SPC Shielded Airframe Wire',
-      cores:1, shielded:true, airframe:true, spc:true, voltage:600, weight:'Medium', apptype:'P',
-      awgs:[26,24,22,20,18,16,14,12,10],
-      sizes:{26:{od:1.54,wt:6.54,base:'55P41085'},24:{od:1.67,wt:7.86,base:'55P41084'},
-             22:{od:1.82,wt:9.81,base:'55P41083'},20:{od:2.02,wt:12.83,base:'55P41082'},
-             18:{od:2.25,wt:17.01,base:'55P41081'},16:{od:2.46,wt:20.36,base:'55P41080'},
-             14:{od:2.81,wt:28.69,base:'55P41079'},12:{od:3.32,wt:40.73,base:'55P41078'},
-             10:{od:4.00,wt:59.90,base:'55P41077'}}},
-    { id:'P510', label:'Twisted Twin Core SPC Shielded Airframe Cable',
-      cores:2, shielded:true, airframe:true, spc:true, voltage:600, weight:'Medium', apptype:'P',
-      awgs:[26,24,22,20,18,16,14,12,10],
-      sizes:{26:{od:2.35,wt:11.34,base:'55P51085'},24:{od:2.90,wt:13.90,base:'55P51084'},
-             22:{od:2.91,wt:17.89,base:'55P51083'},20:{od:3.32,wt:23.84,base:'55P51082'},
-             18:{od:3.80,wt:32.10,base:'55P51081'},16:{od:4.18,wt:39.00,base:'55P51080'},
-             14:{od:4.94,wt:55.21,base:'55P51079'},12:{od:5.94,wt:80.23,base:'55P51078'},
-             10:{od:7.41,wt:123.65,base:'55P51077'}}},
+    {id:'G000',label:'Single Core Unsheathed Wire',
+     cores:1,shielded:false,airframe:false,spc:false,
+     awgs:[30,28,26,24,22,20,18,16,14,12,10],
+     sizes:{30:{od:.63,wt:.98,base:'55G00087'},28:{od:.70,wt:1.35,base:'55G00086'},
+            26:{od:.83,wt:2.08,base:'55G00085'},24:{od:.96,wt:2.98,base:'55G00084'},
+            22:{od:1.11,wt:4.17,base:'55G00083'},20:{od:1.29,wt:6.40,base:'55G00082'},
+            18:{od:1.54,wt:9.67,base:'55G00081'},16:{od:1.75,wt:12.35,base:'55G00080'},
+            14:{od:2.22,wt:19.34,base:'55G00079'},12:{od:2.64,wt:29.32,base:'55G00078'},
+            10:{od:3.25,wt:46.10,base:'55G00077'}}},
+    {id:'G100',label:'Twisted Twin Core Cable',
+     cores:2,shielded:false,airframe:false,spc:false,
+     awgs:[30,28,26,24,22,20,18,16,14,12,10],
+     sizes:{30:{od:1.29,wt:1.94,base:'55G10087'},28:{od:1.44,wt:2.68,base:'55G10086'},
+            26:{od:1.69,wt:4.16,base:'55G10085'},24:{od:1.95,wt:5.96,base:'55G10084'},
+            22:{od:2.25,wt:8.63,base:'55G10083'},20:{od:2.68,wt:13.24,base:'55G10082'},
+            18:{od:3.21,wt:20.09,base:'55G10081'},16:{od:3.75,wt:26.30,base:'55G10080'},
+            14:{od:4.45,wt:38.68,base:'55G10079'},12:{od:5.35,wt:58.64,base:'55G10078'},
+            10:{od:6.50,wt:92.20,base:'55G10077'}}},
+    {id:'G500',label:'Twisted Twin Core Shielded Cable',
+     cores:2,shielded:true,airframe:false,spc:false,
+     awgs:[30,28,26,24,22,20,18,16,14,12,10],
+     sizes:{30:{od:2.14,wt:8.03,base:'55G50087'},28:{od:2.29,wt:9.37,base:'55G50086'},
+            26:{od:2.55,wt:11.75,base:'55G50085'},24:{od:2.82,wt:14.58,base:'55G50084'},
+            22:{od:3.09,wt:18.15,base:'55G50083'},20:{od:3.61,wt:25.10,base:'55G50082'},
+            18:{od:4.15,wt:35.18,base:'55G50081'},16:{od:4.70,wt:45.60,base:'55G50080'},
+            14:{od:5.55,wt:65.10,base:'55G50079'},12:{od:6.60,wt:93.50,base:'55G50078'},
+            10:{od:7.90,wt:143.0,base:'55G50077'}}},
+    {id:'G240',label:'Single Core Airframe Wire',
+     cores:1,shielded:false,airframe:true,spc:false,
+     awgs:[26,24,22,20,18,16,14,12,10],
+     sizes:{26:{od:1.03,wt:2.5,base:'55G24085'},24:{od:1.16,wt:3.4,base:'55G24084'},
+            22:{od:1.29,wt:4.8,base:'55G24083'},20:{od:1.49,wt:7.0,base:'55G24082'},
+            18:{od:1.80,wt:10.7,base:'55G24081'},16:{od:1.98,wt:13.4,base:'55G24080'},
+            14:{od:2.42,wt:20.5,base:'55G24079'},12:{od:2.84,wt:30.5,base:'55G24078'},
+            10:{od:3.42,wt:48.3,base:'55G24077'}}},
+    {id:'G440',label:'Single Core Shielded Airframe Wire',
+     cores:1,shielded:true,airframe:true,spc:false,
+     awgs:[26,24,22,20,18,16,14,12,10],
+     sizes:{26:{od:1.87,wt:7.89,base:'55G44085'},24:{od:2.00,wt:9.37,base:'55G44084'},
+            22:{od:2.15,wt:11.76,base:'55G44083'},20:{od:2.35,wt:14.88,base:'55G44082'},
+            18:{od:2.63,wt:19.79,base:'55G44081'},16:{od:2.83,wt:23.81,base:'55G44080'},
+            14:{od:3.27,wt:33.03,base:'55G44079'},12:{od:3.70,wt:45.09,base:'55G44078'},
+            10:{od:4.21,wt:66.97,base:'55G44077'}}},
+    {id:'G540',label:'Twisted Twin Core Shielded Airframe Cable',
+     cores:2,shielded:true,airframe:true,spc:false,
+     awgs:[26,24,22,20,18,16,14,12,10],
+     sizes:{26:{od:2.89,wt:14.29,base:'55G54085'},24:{od:3.14,wt:16.37,base:'55G54084'},
+            22:{od:3.44,wt:20.68,base:'55G54083'},20:{od:3.87,wt:27.08,base:'55G54082'},
+            18:{od:4.41,wt:36.46,base:'55G54081'},16:{od:4.82,wt:42.86,base:'55G54080'},
+            14:{od:5.73,wt:61.61,base:'55G54079'},12:{od:6.59,wt:85.42,base:'55G54078'},
+            10:{od:7.81,wt:127.54,base:'55G54077'}}},
+    {id:'P410',label:'Single Core SPC Shielded Airframe Wire',
+     cores:1,shielded:true,airframe:true,spc:true,
+     awgs:[26,24,22,20,18,16,14,12,10],
+     sizes:{26:{od:1.54,wt:6.54,base:'55P41085'},24:{od:1.67,wt:7.86,base:'55P41084'},
+            22:{od:1.82,wt:9.81,base:'55P41083'},20:{od:2.02,wt:12.83,base:'55P41082'},
+            18:{od:2.25,wt:17.01,base:'55P41081'},16:{od:2.46,wt:20.36,base:'55P41080'},
+            14:{od:2.81,wt:28.69,base:'55P41079'},12:{od:3.32,wt:40.73,base:'55P41078'},
+            10:{od:4.00,wt:59.90,base:'55P41077'}}},
+    {id:'P510',label:'Twisted Twin Core SPC Shielded Airframe Cable',
+     cores:2,shielded:true,airframe:true,spc:true,
+     awgs:[26,24,22,20,18,16,14,12,10],
+     sizes:{26:{od:2.35,wt:11.34,base:'55P51085'},24:{od:2.90,wt:13.90,base:'55P51084'},
+            22:{od:2.91,wt:17.89,base:'55P51083'},20:{od:3.32,wt:23.84,base:'55P51082'},
+            18:{od:3.80,wt:32.10,base:'55P51081'},16:{od:4.18,wt:39.00,base:'55P51080'},
+            14:{od:4.94,wt:55.21,base:'55P51079'},12:{od:5.94,wt:80.23,base:'55P51078'},
+            10:{od:7.41,wt:123.65,base:'55P51077'}}},
   ];
 
-  // ── STATE ───────────────────────────────────────────────────────────────
-  const S = { awg:null, cores:null, shielded:null, airframe:null, spc:null,
-              weight:null, conductor:null, voltage:null, apptype:null };
+  // ── STATE ──────────────────────────────────────────────────────────────
+  const S = {cores:null,shielded:null,airframe:null,spc:null,conductor:null,awg:null};
 
-  // ── FILTERING ───────────────────────────────────────────────────────────
+  const STEP_NAMES = {
+    cores:'Conductors',shielded:'Shielding',airframe:'Application Grade',
+    spc:'Quality Process',conductor:'Conductor Plating',awg:'AWG Size'
+  };
+  const SEL_LABELS = {
+    cores:  {1:'Single Core',2:'Twisted Twin',multi:'Multicore',atc:'ATC Special'},
+    shielded:{yes:'Shielded',no:'Unshielded'},
+    airframe:{airframe:'Airframe Rated',standard:'Standard'},
+    spc:    {yes:'SPC Controlled',no:'Standard QC'},
+    conductor:{tin:'Tin-Plated',silver:'Silver-Coated',nickel:'Nickel-Coated'},
+    awg:    v => `AWG ${v}`,
+  };
+
+  // ── FILTERING ──────────────────────────────────────────────────────────
   function matchFamilies() {
     return FAMILIES.filter(f => {
-      if (S.cores === '1'    && f.cores !== 1) return false;
-      if (S.cores === '2'    && f.cores !== 2) return false;
-      if (S.cores === 'multi'|| S.cores === 'atc') return false; // no data → result shows "contact us"
-      if (S.shielded === 'yes' && !f.shielded)       return false;
-      if (S.shielded === 'no'  && f.shielded)        return false;
-      if (S.airframe === 'airframe' && !f.airframe)  return false;
-      if (S.airframe === 'standard' && f.airframe)   return false;
-      if (S.spc === 'yes' && !f.spc)                 return false;
-      if (S.spc === 'no'  && f.spc)                  return false;
-      if (S.weight && !f.weight.startsWith(S.weight))return false;
-      if (S.apptype && f.apptype !== S.apptype)      return false;
-      if (S.voltage && f.voltage !== +S.voltage)     return false;
+      if (S.cores === '1'    && f.cores !== 1)    return false;
+      if (S.cores === '2'    && f.cores !== 2)    return false;
+      if (S.cores === 'multi'|| S.cores === 'atc') return false;
+      if (S.shielded === 'yes' && !f.shielded)    return false;
+      if (S.shielded === 'no'  && f.shielded)     return false;
+      if (S.airframe === 'airframe' && !f.airframe) return false;
+      if (S.airframe === 'standard' && f.airframe)  return false;
+      if (S.spc === 'yes' && !f.spc)  return false;
+      if (S.spc === 'no'  && f.spc)   return false;
       return true;
     });
   }
 
-  // AWG availability is driven only by Tier 1 + Tier 2 (not Tier 3).
-  // Multicore / ATC have no catalogue data yet → show all AWGs so the
-  // result card can display the "contact us" message instead of a grey grid.
+  // AWG availability — only driven by cores/shielded/airframe/spc (not conductor)
   function availableAWGs() {
     if (S.cores === 'multi' || S.cores === 'atc') return AWG_ALL;
-
-    const matched = FAMILIES.filter(f => {
-      if (S.cores === '1' && f.cores !== 1) return false;
-      if (S.cores === '2' && f.cores !== 2) return false;
-      if (S.shielded === 'yes' && !f.shielded)       return false;
-      if (S.shielded === 'no'  && f.shielded)        return false;
-      if (S.airframe === 'airframe' && !f.airframe)  return false;
-      if (S.airframe === 'standard' && f.airframe)   return false;
-      if (S.spc === 'yes' && !f.spc)                 return false;
-      if (S.spc === 'no'  && f.spc)                  return false;
-      if (S.weight && !f.weight.startsWith(S.weight))return false;
-      // Tier 3 (conductor, voltage, apptype) intentionally excluded
-      return true;
-    });
+    const matched = matchFamilies();
+    if (!matched.length) return AWG_ALL;
     const set = new Set();
     matched.forEach(f => f.awgs.forEach(a => set.add(a)));
-    // If filters are too strict and nothing matches, show all AWGs
-    return set.size ? AWG_ALL.filter(a => set.has(a)) : AWG_ALL;
+    return AWG_ALL.filter(a => set.has(a));
   }
 
-  function makePartNo(base, conductor) {
-    if (!base || !conductor) return base;
-    const arr = base.split('');
-    arr[3] = COND_DIGIT[conductor] || '0';
-    return arr.join('');
+  function makePN(base, conductor) {
+    if (!base || !conductor) return base || '';
+    const a = base.split('');
+    a[3] = COND_DIGIT[conductor] || '0';
+    return a.join('');
   }
 
-  // ── AWG GRID ────────────────────────────────────────────────────────────
+  // ── RENDER AWG ─────────────────────────────────────────────────────────
   function renderAWG() {
     const avail = availableAWGs();
-    document.getElementById('awgGrid').innerHTML = AWG_ALL.map(a => {
+    document.getElementById('awgWrap').innerHTML = AWG_ALL.map(a => {
       const ok  = avail.includes(a);
       const sel = S.awg == a;
       return `<div class="awg-tile${sel?' selected':''}${!ok?' disabled':''}"
         data-step="awg" data-val="${a}" onclick="pick(this)">
-        <div class="awg-main">${a}</div>
-        <div class="awg-mm">${AWG_MM[a]}mm²</div>
+        <div class="awg-main">${a} AWG</div>
+        <div class="awg-sub">${AWG_MM[a]} mm²</div>
       </div>`;
     }).join('');
   }
 
-  // ── FILTER SUMMARY BAR ──────────────────────────────────────────────────
-  const STEP_LABEL = {
-    awg: v => `AWG ${v}`, cores: v => ({'1':'Single Core','2':'Twin Core','multi':'Multicore','atc':'ATC'}[v]),
-    shielded: v => v==='yes'?'Shielded':'Unshielded',
-    airframe: v => v==='airframe'?'Airframe':'Standard',
-    spc: v => v==='yes'?'SPC':'Std QC',
-    weight: v => v+' Wt', conductor: v => COND_LABEL[v],
-    voltage: v => v+'V', apptype: v => ({'G':'General','O':'Outer Space','P':'Process'}[v]),
-  };
-  const STEP_TIER = {
-    awg:'t1',cores:'t1',shielded:'t1',
-    airframe:'t2',spc:'t2',weight:'t2',
-    conductor:'t3',voltage:'t3',apptype:'t3',
-  };
-
+  // ── RENDER SUMMARY ─────────────────────────────────────────────────────
   function renderSummary() {
-    const chips = Object.entries(S)
-      .filter(([k,v]) => v !== null)
-      .map(([k,v]) => {
-        const lbl = STEP_LABEL[k] ? STEP_LABEL[k](v) : v;
-        const tier = STEP_TIER[k] || 't1';
-        return `<span class="fs-chip fs-${tier}">${lbl}
-          <span class="fs-x" onclick="clearStep('${k}')">✕</span></span>`;
-      }).join('');
-    const el = document.getElementById('filterSummary');
-    if (!chips) {
-      el.innerHTML = '<span class="fs-empty">Select parameters below to find your part number</span>';
-    } else {
-      el.innerHTML = chips + `<span class="fs-reset" onclick="resetAll()">Reset all</span>`;
-    }
+    const bar = document.getElementById('summaryBar');
+    const chips = Object.entries(S).filter(([,v]) => v !== null).map(([k,v]) => {
+      const lbl = typeof SEL_LABELS[k] === 'function'
+        ? SEL_LABELS[k](v)
+        : (SEL_LABELS[k]?.[v] || v);
+      return `<span class="s-chip">${lbl}
+        <span class="cx" onclick="clearStep('${k}')">✕</span></span>`;
+    }).join('');
+    bar.innerHTML = chips
+      ? chips + `<span class="s-reset" onclick="resetAll()">Reset all</span>`
+      : '<span class="s-empty">Make your selections below to find the exact part number</span>';
+
+    // Update step number circles
+    Object.keys(S).forEach(k => {
+      const el = document.getElementById('num-'+k);
+      if (el) el.className = 'step-num' + (S[k] !== null ? ' done' : '');
+    });
   }
 
-  // ── RESULT ──────────────────────────────────────────────────────────────
+  // ── RENDER RESULT ──────────────────────────────────────────────────────
   function renderResult() {
-    const empty = document.getElementById('resultEmpty');
-    const match = document.getElementById('resultMatch');
+    const empty = document.getElementById('rEmpty');
+    const match = document.getElementById('rMatch');
 
-    // Need at least Tier 1 complete
-    const tier1Done = S.awg && S.cores && S.shielded !== null;
+    // Progress steps
+    const steps = ['cores','shielded','airframe','spc','conductor','awg'];
+    document.getElementById('rProgress').innerHTML = steps.map(k =>
+      `<span class="r-step${S[k]!==null?' done':''}">${STEP_NAMES[k]}</span>`
+    ).join('');
 
-    if (!tier1Done) {
-      empty.style.display = '';
-      match.style.display = 'none';
-      // Show progress indicators
-      document.getElementById('emptySteps').innerHTML =
-        `<span class="res-step${S.awg?' done':''}">AWG size</span>` +
-        `<span class="res-step${S.cores?' done':''}">Cores</span>` +
-        `<span class="res-step${S.shielded?' done':''}">Shielding</span>`;
-      return;
-    }
+    const allDone = steps.every(k => S[k] !== null);
+    if (!allDone) { empty.style.display=''; match.style.display='none'; return; }
 
     const fam = matchFamilies().find(f => f.awgs.includes(+S.awg));
     if (!fam) {
-      empty.style.display = '';
-      match.style.display = 'none';
-      document.getElementById('emptySteps').innerHTML =
-        `<span style="color:rgba(255,255,255,0.4);font-size:13px;">
+      empty.style.display=''; match.style.display='none';
+      document.getElementById('rProgress').innerHTML =
+        `<span style="color:rgba(255,255,255,.4);font-size:13px;">
           No standard variant for this combination —
           <a href="contact.html" style="color:var(--accent);">contact us for a custom build</a>
         </span>`;
@@ -762,42 +627,35 @@
     }
 
     const sz   = fam.sizes[+S.awg];
-    const cond = S.conductor || 'tin';
-    const pn   = makePartNo(sz.base, cond);
-    const temp = COND_TEMP[cond];
+    const pn   = makePN(sz.base, S.conductor);
+    const temp = COND_TEMP[S.conductor];
 
-    empty.style.display = 'none';
-    match.style.display = '';
+    empty.style.display = 'none'; match.style.display = '';
     match.innerHTML = `
-      <div style="margin-bottom:20px;">
-        <div class="result-partno">${pn.slice(0,2)}<span>${pn.slice(2)}</span></div>
-        <div class="result-desc">${fam.label} · ${COND_LABEL[cond]}</div>
-        <div class="result-badges">
-          <span class="rb rb-g">600 V</span>
-          <span class="rb rb-b">${fam.weight} Weight</span>
-          ${fam.airframe?'<span class="rb rb-r">Airframe</span>':''}
-          ${fam.spc?'<span class="rb rb-a">SPC</span>':''}
-          ${fam.shielded?'<span class="rb rb-b">Shielded</span>':''}
-          <span class="rb rb-g">EBXL ETFE</span>
-          <span class="rb rb-g">RoHS</span>
-          <span class="rb rb-p">Catalogue: 55${fam.id}</span>
-        </div>
+      <div class="r-pn">${pn.slice(0,2)}<span>${pn.slice(2)}</span></div>
+      <div class="r-desc">${fam.label} · ${COND_LABEL[S.conductor]}</div>
+      <div class="r-badges">
+        <span class="rb rb-g">600 V</span>
+        ${fam.airframe?'<span class="rb rb-r">Airframe</span>':''}
+        ${fam.spc?'<span class="rb rb-a">SPC</span>':''}
+        ${fam.shielded?'<span class="rb rb-b">Shielded</span>':''}
+        <span class="rb rb-g">EBXL ETFE</span>
+        <span class="rb rb-g">RoHS</span>
+        <span class="rb rb-b">Cat: 55${fam.id}</span>
       </div>
-
       <div class="specs-grid">
-        <div class="sg"><div class="sg-lbl">Wire Size</div><div class="sg-val">${S.awg}<span class="sg-unit">AWG</span></div></div>
-        <div class="sg"><div class="sg-lbl">Cross Section</div><div class="sg-val">${AWG_MM[+S.awg]}<span class="sg-unit">mm²</span></div></div>
-        <div class="sg"><div class="sg-lbl">Strands</div><div class="sg-val">${AWG_STR[+S.awg]}<span class="sg-unit">×</span></div></div>
-        <div class="sg"><div class="sg-lbl">Overall Dia.</div><div class="sg-val">${sz.od}<span class="sg-unit">mm</span></div></div>
-        <div class="sg"><div class="sg-lbl">Weight</div><div class="sg-val">${sz.wt}<span class="sg-unit">kg/km</span></div></div>
-        <div class="sg"><div class="sg-lbl">Voltage</div><div class="sg-val">600<span class="sg-unit">V</span></div></div>
-        <div class="sg"><div class="sg-lbl">Temp. Range</div><div class="sg-val" style="font-size:12px;line-height:1.3;">${temp}</div></div>
-        <div class="sg"><div class="sg-lbl">Scrape Abrasion</div><div class="sg-val">&gt;100<span class="sg-unit">cycles</span></div></div>
+        <div class="sg"><div class="sg-l">Wire Size</div><div class="sg-v">${S.awg}<span class="sg-u">AWG</span></div></div>
+        <div class="sg"><div class="sg-l">Cross Section</div><div class="sg-v">${AWG_MM[+S.awg]}<span class="sg-u">mm²</span></div></div>
+        <div class="sg"><div class="sg-l">Strands</div><div class="sg-v">${AWG_STR[+S.awg]}<span class="sg-u">×</span></div></div>
+        <div class="sg"><div class="sg-l">Overall Dia.</div><div class="sg-v">${sz.od}<span class="sg-u">mm</span></div></div>
+        <div class="sg"><div class="sg-l">Weight</div><div class="sg-v">${sz.wt}<span class="sg-u">kg/km</span></div></div>
+        <div class="sg"><div class="sg-l">Voltage</div><div class="sg-v">600<span class="sg-u">V</span></div></div>
+        <div class="sg"><div class="sg-l">Temp. Range</div><div class="sg-v" style="font-size:12px;line-height:1.4;">${temp}</div></div>
+        <div class="sg"><div class="sg-l">Scrape Abrasion</div><div class="sg-v">&gt;100<span class="sg-u">cycles</span></div></div>
       </div>
-
-      <div class="std-row">
-        <div class="std-row-lbl">Standards Compliance</div>
-        <div class="std-row-list">
+      <div class="std-box">
+        <div class="std-l">Standards Compliance</div>
+        <div class="std-list">
           <span class="std-pill">SAE AS22759/32–46</span>
           <span class="std-pill">NEMA WC-27500</span>
           <span class="std-pill">DEF-STAN 61-12 Pt33</span>
@@ -808,125 +666,96 @@
           <span class="std-pill">ASTM D150</span>
         </div>
       </div>
-
-      <div class="result-cta">
-        <button class="btn-quote" onclick="openModal('${pn}')">Request Quote — ${pn}</button>
-        <button class="btn-reset-all" onclick="resetAll()">↺ Reset</button>
-      </div>
-    `;
+      <div class="r-cta">
+        <button class="btn-q" onclick="openModal('${pn}')">Request Quote — ${pn}</button>
+        <button class="btn-rst" onclick="resetAll()">↺ Reset</button>
+      </div>`;
   }
 
-  // ── INTERACTION ─────────────────────────────────────────────────────────
+  // ── INTERACTION ────────────────────────────────────────────────────────
   function pick(el) {
-    const step = el.dataset.step;
-    const val  = el.dataset.val;
-    // Deselect siblings
+    const step = el.dataset.step, val = el.dataset.val;
     document.querySelectorAll(`[data-step="${step}"]`).forEach(t => t.classList.remove('selected'));
     el.classList.add('selected');
     S[step] = val;
-    // Keep AWG selection unless the chosen size is no longer available
-    if (step !== 'awg' && S.awg !== null) {
-      if (!availableAWGs().includes(+S.awg)) S.awg = null;
-    }
-    renderAWG();
-    renderSummary();
-    renderResult();
+    // Keep AWG selection only if still valid
+    if (step !== 'awg' && S.awg !== null && !availableAWGs().includes(+S.awg)) S.awg = null;
+    renderAWG(); renderSummary(); renderResult();
   }
 
   function clearStep(step) {
     S[step] = null;
     document.querySelectorAll(`[data-step="${step}"]`).forEach(t => t.classList.remove('selected'));
-    // Same: only clear AWG if it's no longer in the available set
     if (S.awg !== null && !availableAWGs().includes(+S.awg)) S.awg = null;
-    renderAWG();
-    renderSummary();
-    renderResult();
+    renderAWG(); renderSummary(); renderResult();
   }
 
   function resetAll() {
     Object.keys(S).forEach(k => S[k] = null);
-    document.querySelectorAll('.choice-tile,.t2-tile,.t3-tile,.awg-tile').forEach(t => t.classList.remove('selected'));
-    renderAWG();
-    renderSummary();
-    renderResult();
+    document.querySelectorAll('.opt,.awg-tile').forEach(t => t.classList.remove('selected'));
+    renderAWG(); renderSummary(); renderResult();
   }
 
-
-  // ── DIRECT SEARCH ───────────────────────────────────────────────────────
-  const searchBox     = document.getElementById('searchBox');
-  const searchResults = document.getElementById('searchResults');
+  // ── DIRECT SEARCH ──────────────────────────────────────────────────────
+  const searchBox  = document.getElementById('searchBox');
+  const searchDrop = document.getElementById('searchDrop');
 
   searchBox.addEventListener('input', () => {
     const q = searchBox.value.trim().toUpperCase();
-    if (q.length < 3) { searchResults.classList.remove('open'); return; }
-
+    if (q.length < 3) { searchDrop.classList.remove('open'); return; }
     const hits = [];
-    FAMILIES.forEach(f => {
-      f.awgs.forEach(a => {
-        const sz = f.sizes[a];
-        const pn = sz.base.toUpperCase();
-        if (pn.includes(q) || ('55'+f.id).includes(q)) {
-          hits.push({ pn: sz.base, label: f.label, awg: a, fam: f });
-        }
-      });
-    });
-
-    if (!hits.length) { searchResults.classList.remove('open'); return; }
-    searchResults.innerHTML = hits.slice(0,8).map(h =>
-      `<div class="sr-item" onclick="applySearch(${JSON.stringify(h).replace(/"/g,'&quot;')})">
-        <div class="sr-pn">${h.pn}</div>
-        <div class="sr-desc">${h.label} · AWG ${h.awg} · Ø${h.fam.sizes[h.awg].od}mm</div>
+    FAMILIES.forEach(f => f.awgs.forEach(a => {
+      const pn = f.sizes[a].base.toUpperCase();
+      if (pn.includes(q) || ('55'+f.id).includes(q))
+        hits.push({pn:f.sizes[a].base, label:f.label, awg:a, fid:f.id});
+    }));
+    if (!hits.length) { searchDrop.classList.remove('open'); return; }
+    searchDrop.innerHTML = hits.slice(0,8).map((h,i) =>
+      `<div class="sd-item" data-i="${i}" onclick="applyHit(${i})">
+        <div class="sd-pn">${h.pn}</div>
+        <div class="sd-desc">${h.label} · AWG ${h.awg} · Ø${FAMILIES.find(f=>f.id===h.fid).sizes[h.awg].od}mm</div>
       </div>`
     ).join('');
-    searchResults.classList.add('open');
+    searchDrop._hits = hits;
+    searchDrop.classList.add('open');
   });
 
-  function applySearch(h) {
-    searchBox.value = h.pn;
-    searchResults.classList.remove('open');
-    const f = FAMILIES.find(x => x.id === h.fam.id);
-    if (!f) return;
-    S.awg      = String(h.awg);
-    S.cores    = String(f.cores);
-    S.shielded = f.shielded ? 'yes' : 'no';
-    S.airframe = f.airframe ? 'airframe' : 'standard';
-    S.spc      = f.spc ? 'yes' : 'no';
-    S.weight   = f.weight;
-    S.conductor= 'tin';
-    S.voltage  = String(f.voltage);
-    S.apptype  = f.apptype;
-    // Sync tiles
-    Object.entries(S).forEach(([step, val]) => {
+  function applyHit(i) {
+    const h = searchDrop._hits[i];
+    const f = FAMILIES.find(x => x.id === h.fid);
+    searchBox.value = h.pn; searchDrop.classList.remove('open');
+    S.cores     = String(f.cores);
+    S.shielded  = f.shielded ? 'yes' : 'no';
+    S.airframe  = f.airframe ? 'airframe' : 'standard';
+    S.spc       = f.spc ? 'yes' : 'no';
+    S.conductor = 'tin';
+    S.awg       = String(h.awg);
+    Object.entries(S).forEach(([step,val]) => {
       if (!val) return;
-      document.querySelectorAll(`[data-step="${step}"]`).forEach(t => {
-        t.classList.toggle('selected', t.dataset.val === val);
-      });
+      document.querySelectorAll(`[data-step="${step}"]`).forEach(t =>
+        t.classList.toggle('selected', t.dataset.val === val));
     });
-    renderAWG();
-    renderSummary();
-    renderResult();
-    document.getElementById('cfgResult').scrollIntoView({behavior:'smooth', block:'start'});
+    renderAWG(); renderSummary(); renderResult();
+    document.getElementById('resultBox').scrollIntoView({behavior:'smooth',block:'start'});
   }
 
   document.addEventListener('click', e => {
-    if (!e.target.closest('.search-top')) searchResults.classList.remove('open');
+    if (!e.target.closest('.search-top')) searchDrop.classList.remove('open');
   });
 
-  // ── MODAL ───────────────────────────────────────────────────────────────
+  // ── MODAL ──────────────────────────────────────────────────────────────
   function openModal(pn) {
-    document.getElementById('modalPartNo').textContent = 'Part Number: ' + pn;
+    document.getElementById('modalPn').textContent = 'Part Number: ' + pn;
     document.getElementById('quoteModal').classList.add('open');
   }
   function closeModal() { document.getElementById('quoteModal').classList.remove('open'); }
   function submitQuote() {
-    alert('Thank you! Your quote request has been received. Our team will respond within 1 business day.');
+    alert('Thank you! Your quote request has been received. We will respond within 1 business day.');
     closeModal();
   }
 
-  // ── INIT ─────────────────────────────────────────────────────────────────
-  renderAWG();
-  renderSummary();
-  renderResult();
+  // Init
+  renderAWG(); renderSummary(); renderResult();
   </script>
 </body>
 </html>
