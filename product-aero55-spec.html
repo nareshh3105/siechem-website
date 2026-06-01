@@ -636,9 +636,9 @@
   // ── FILTERING ───────────────────────────────────────────────────────────
   function matchFamilies() {
     return FAMILIES.filter(f => {
-      if (S.cores === '1'     && f.cores !== 1)      return false;
-      if (S.cores === '2'     && f.cores !== 2)      return false;
-      if (S.cores === 'multi' || S.cores === 'atc')  return false; // no data yet
+      if (S.cores === '1'    && f.cores !== 1) return false;
+      if (S.cores === '2'    && f.cores !== 2) return false;
+      if (S.cores === 'multi'|| S.cores === 'atc') return false; // no data → result shows "contact us"
       if (S.shielded === 'yes' && !f.shielded)       return false;
       if (S.shielded === 'no'  && f.shielded)        return false;
       if (S.airframe === 'airframe' && !f.airframe)  return false;
@@ -652,12 +652,15 @@
     });
   }
 
-  // AWG availability is driven only by Tier 1 + Tier 2 (not Tier 3)
+  // AWG availability is driven only by Tier 1 + Tier 2 (not Tier 3).
+  // Multicore / ATC have no catalogue data yet → show all AWGs so the
+  // result card can display the "contact us" message instead of a grey grid.
   function availableAWGs() {
+    if (S.cores === 'multi' || S.cores === 'atc') return AWG_ALL;
+
     const matched = FAMILIES.filter(f => {
-      if (S.cores === '1'     && f.cores !== 1)      return false;
-      if (S.cores === '2'     && f.cores !== 2)      return false;
-      if (S.cores === 'multi' || S.cores === 'atc')  return false;
+      if (S.cores === '1' && f.cores !== 1) return false;
+      if (S.cores === '2' && f.cores !== 2) return false;
       if (S.shielded === 'yes' && !f.shielded)       return false;
       if (S.shielded === 'no'  && f.shielded)        return false;
       if (S.airframe === 'airframe' && !f.airframe)  return false;
@@ -665,12 +668,13 @@
       if (S.spc === 'yes' && !f.spc)                 return false;
       if (S.spc === 'no'  && f.spc)                  return false;
       if (S.weight && !f.weight.startsWith(S.weight))return false;
-      // Tier 3 (conductor, voltage, apptype) intentionally excluded here
+      // Tier 3 (conductor, voltage, apptype) intentionally excluded
       return true;
     });
     const set = new Set();
     matched.forEach(f => f.awgs.forEach(a => set.add(a)));
-    return AWG_ALL.filter(a => set.has(a));
+    // If filters are too strict and nothing matches, show all AWGs
+    return set.size ? AWG_ALL.filter(a => set.has(a)) : AWG_ALL;
   }
 
   function makePartNo(base, conductor) {
