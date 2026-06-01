@@ -470,52 +470,48 @@
 
       <!-- ══ TIER 3 ══ -->
       <div class="tier">
-        <button class="tier-3-toggle" id="t3Toggle" onclick="toggleTier3()">
+        <div class="tier-header">
           <span class="tier-badge t3">TIER 3</span>
-          <span style="font-size:13px;color:var(--text-muted);font-weight:600;">Advanced Options — Conductor Plating · Voltage · Temperature · Application Type</span>
-          <span class="t3-arrow" style="margin-left:auto;">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6l4 4 4-4"/></svg>
-          </span>
-        </button>
-        <div class="tier-3-panel" id="tier3Panel">
-          <div class="t3-grid">
+          <span class="tier-title">Advanced — Conductor Plating · Voltage · Application Type</span>
+          <span class="tier-hint">Fine-tune for temperature rating and application</span>
+        </div>
+        <div class="t3-grid">
 
-            <!-- Conductor -->
-            <div>
-              <div class="t3-group-label">Conductor Plating</div>
-              <div class="t3-tiles">
-                <div class="t3-tile" data-step="conductor" data-val="tin" onclick="pick(this)">
-                  Tin-Plated<br><span style="font-size:10px;opacity:.6;">−65°C to +150°C</span>
-                </div>
-                <div class="t3-tile" data-step="conductor" data-val="silver" onclick="pick(this)">
-                  Silver-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
-                </div>
-                <div class="t3-tile" data-step="conductor" data-val="nickel" onclick="pick(this)">
-                  Nickel-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
-                </div>
+          <!-- Conductor -->
+          <div class="t2-group">
+            <div class="t3-group-label">Conductor Plating</div>
+            <div class="t3-tiles">
+              <div class="t3-tile" data-step="conductor" data-val="tin" onclick="pick(this)">
+                Tin-Plated<br><span style="font-size:10px;opacity:.6;">−65°C to +150°C</span>
+              </div>
+              <div class="t3-tile" data-step="conductor" data-val="silver" onclick="pick(this)">
+                Silver-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
+              </div>
+              <div class="t3-tile" data-step="conductor" data-val="nickel" onclick="pick(this)">
+                Nickel-Coated<br><span style="font-size:10px;opacity:.6;">−65°C to +200°C</span>
               </div>
             </div>
-
-            <!-- Voltage -->
-            <div>
-              <div class="t3-group-label">Voltage Rating</div>
-              <div class="t3-tiles">
-                <div class="t3-tile" data-step="voltage" data-val="600" onclick="pick(this)">600 V</div>
-                <div class="t3-tile" data-step="voltage" data-val="1000" onclick="pick(this)">1000 V<br><span style="font-size:10px;opacity:.6;">Heavy Duty Airframe</span></div>
-              </div>
-            </div>
-
-            <!-- Application type -->
-            <div>
-              <div class="t3-group-label">Application Type</div>
-              <div class="t3-tiles">
-                <div class="t3-tile" data-step="apptype" data-val="G" onclick="pick(this)">General Purpose<br><span style="font-size:10px;opacity:.6;">Aircraft · Avionics · Military</span></div>
-                <div class="t3-tile" data-step="apptype" data-val="O" onclick="pick(this)">Outer Space<br><span style="font-size:10px;opacity:.6;">Satellites · High vacuum</span></div>
-                <div class="t3-tile" data-step="apptype" data-val="P" onclick="pick(this)">Process Control<br><span style="font-size:10px;opacity:.6;">SPC · Statistical verified</span></div>
-              </div>
-            </div>
-
           </div>
+
+          <!-- Voltage -->
+          <div class="t2-group">
+            <div class="t3-group-label">Voltage Rating</div>
+            <div class="t3-tiles">
+              <div class="t3-tile" data-step="voltage" data-val="600" onclick="pick(this)">600 V</div>
+              <div class="t3-tile" data-step="voltage" data-val="1000" onclick="pick(this)">1000 V<br><span style="font-size:10px;opacity:.6;">Heavy Duty Airframe</span></div>
+            </div>
+          </div>
+
+          <!-- Application type -->
+          <div class="t2-group">
+            <div class="t3-group-label">Application Type</div>
+            <div class="t3-tiles">
+              <div class="t3-tile" data-step="apptype" data-val="G" onclick="pick(this)">General Purpose<br><span style="font-size:10px;opacity:.6;">Aircraft · Avionics · Military</span></div>
+              <div class="t3-tile" data-step="apptype" data-val="O" onclick="pick(this)">Outer Space<br><span style="font-size:10px;opacity:.6;">Satellites · High vacuum</span></div>
+              <div class="t3-tile" data-step="apptype" data-val="P" onclick="pick(this)">Process Control<br><span style="font-size:10px;opacity:.6;">SPC · Statistical verified</span></div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -834,12 +830,6 @@
     renderResult();
   }
 
-  function toggleTier3() {
-    const btn   = document.getElementById('t3Toggle');
-    const panel = document.getElementById('tier3Panel');
-    btn.classList.toggle('open');
-    panel.classList.toggle('open');
-  }
 
   // ── DIRECT SEARCH ───────────────────────────────────────────────────────
   const searchBox     = document.getElementById('searchBox');
