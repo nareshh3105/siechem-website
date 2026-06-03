@@ -559,10 +559,12 @@
     return AWG_ALL.filter(a => set.has(a));
   }
 
+  // Part number structure: 55 [G/P] [construction:3] [class:4] [conductor:5] [size:6-7]
+  // Conductor digit is always at index 5
   function makePN(base, conductor) {
     if (!base || !conductor) return base || '';
     const a = base.split('');
-    a[3] = COND_DIGIT[conductor] || '0';
+    a[5] = COND_DIGIT[conductor] || '0';
     return a.join('');
   }
 
