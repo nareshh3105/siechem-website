@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marine Cable Configurator — Siechem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+  .search-top { position: relative; margin-bottom: 32px; }
+  .search-top input {
+    width:100%; padding:15px 20px 15px 50px;
+    background:var(--bg-card); border:2px solid var(--border);
+    border-radius:12px; font-size:14px; color:var(--text); font-family:var(--sans); transition:border-color .15s;
+  }
+  .search-top input:focus { outline:none; border-color:var(--accent); }
+  .search-top input::placeholder { color:var(--text-faint); }
+  .search-top .s-ico { position:absolute; left:17px; top:50%; transform:translateY(-50%); color:var(--text-faint); pointer-events:none; }
+  .search-drop { position:absolute; top:calc(100% + 6px); left:0; right:0; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; z-index:200; display:none; box-shadow:0 12px 36px rgba(0,0,0,.18); }
+  .search-drop.open { display:block; }
+  .sd-item { padding:12px 18px; cursor:pointer; border-bottom:1px solid var(--border); transition:background .12s; }
+  .sd-item:last-child { border-bottom:none; }
+  .sd-item:hover { background:var(--accent-soft); }
+  .sd-pn { font-family:var(--mono); font-size:13px; font-weight:700; color:var(--accent); }
+  .sd-desc { font-size:12px; color:var(--text-muted); margin-top:2px; }
+
+  .steps { display:flex; flex-direction:column; gap:0; }
+  .step { display:flex; gap:0; border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:12px; background:var(--bg-card); }
+  .step-label-col { width:220px; flex-shrink:0; padding:22px 20px; background:var(--bg-soft); border-right:1px solid var(--border); display:flex; flex-direction:column; justify-content:center; gap:6px; }
+  .step-num { width:24px; height:24px; border-radius:50%; background:var(--accent); color:#fff; font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .step-num.done { background:#22c55e; }
+  .step-name { font-size:13px; font-weight:700; color:var(--text); line-height:1.3; }
+  .step-hint { font-size:11px; color:var(--text-faint); font-family:var(--mono); }
+  .step-options { flex:1; padding:16px 20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+
+  .opt { display:flex; align-items:center; gap:10px; padding:11px 18px; border:2px solid var(--border); border-radius:10px; cursor:pointer; transition:all .14s; background:var(--bg-soft); min-width:160px; }
+  .opt-icon { font-size:18px; flex-shrink:0; }
+  .opt-text { display:flex; flex-direction:column; gap:2px; }
+  .opt-label { font-size:13px; font-weight:600; color:var(--text); }
+  .opt-sub { font-size:11px; color:var(--text-faint); font-family:var(--mono); }
+  .opt:hover:not(.disabled) { border-color:var(--accent); background:var(--accent-soft); }
+  .opt.selected { border-color:var(--accent); background:var(--accent); }
+  .opt.selected .opt-label { color:#fff; }
+  .opt.selected .opt-sub { color:rgba(255,255,255,.65); }
+  .opt.disabled { opacity:.25; pointer-events:none; }
+
+  .mm2-wrap { display:flex; flex-wrap:wrap; gap:8px; padding:16px 20px; }
+  .mm2-tile { display:flex; flex-direction:column; align-items:center; padding:10px 14px; border:2px solid var(--border); border-radius:9px; cursor:pointer; transition:all .14s; background:var(--bg-soft); min-width:60px; text-align:center; }
+  .mm2-main { font-family:var(--mono); font-size:13px; font-weight:700; color:var(--text); }
+  .mm2-sub { font-size:10px; color:var(--text-faint); margin-top:2px; }
+  .mm2-tile:hover:not(.disabled) { border-color:var(--accent); background:var(--accent-soft); }
+  .mm2-tile.selected { border-color:var(--accent); background:var(--accent); }
+  .mm2-tile.selected .mm2-main, .mm2-tile.selected .mm2-sub { color:#fff; }
+  .mm2-tile.disabled { opacity:.2; pointer-events:none; }
+
+  .summary-bar { display:flex; flex-wrap:wrap; gap:7px; align-items:center; padding:11px 16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; margin-bottom:28px; }
+  .s-chip { display:flex; align-items:center; gap:5px; padding:4px 10px; border-radius:20px; font-size:11.5px; font-weight:600; font-family:var(--mono); background:rgba(227,30,36,.1); color:var(--accent); border:1px solid rgba(227,30,36,.2); }
+  .s-chip .cx { cursor:pointer; opacity:.6; margin-left:2px; }
+  .s-chip .cx:hover { opacity:1; }
+  .s-empty { font-size:13px; color:var(--text-faint); }
+  .s-reset { margin-left:auto; font-size:12px; font-weight:600; color:var(--text-faint); cursor:pointer; }
+  .s-reset:hover { color:var(--accent); }
+
+  /* Result */
+  .result-box { margin-top:32px; padding:32px; background:linear-gradient(135deg, #1a2030, #0f1422); border-radius:20px; border:1px solid rgba(255,255,255,.08); }
+  .r-empty { text-align:center; padding:48px 0; color:rgba(255,255,255,.3); }
+  .r-empty-icon { font-size:36px; margin-bottom:12px; }
+  .r-progress { display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin-top:18px; }
+  .r-step { padding:4px 12px; border-radius:20px; font-size:11px; font-weight:600; font-family:var(--mono); border:1px dashed rgba(255,255,255,.2); color:rgba(255,255,255,.25); }
+  .r-step.done { border-color:rgba(34,197,94,.4); color:#4ade80; background:rgba(34,197,94,.08); }
+
+  .r-head { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:20px; }
+  .r-desig { font-family:var(--mono); font-size:36px; font-weight:800; color:var(--accent); letter-spacing:.02em; }
+  .r-name { font-size:14px; color:rgba(255,255,255,.7); margin-top:4px; }
+  .r-badges { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+  .rb { padding:3px 9px; border-radius:20px; font-size:11px; font-weight:600; font-family:var(--mono); }
+  .rb-g { background:rgba(34,197,94,.12); color:#4ade80; border:1px solid rgba(34,197,94,.2); }
+  .rb-b { background:rgba(59,130,246,.12); color:#93c5fd; border:1px solid rgba(59,130,246,.2); }
+  .rb-r { background:rgba(227,30,36,.15); color:#fca5a5; border:1px solid rgba(227,30,36,.25); }
+  .rb-a { background:rgba(251,191,36,.12); color:#fcd34d; border:1px solid rgba(251,191,36,.2); }
+
+  /* Core selection table */
+  .core-section { margin-bottom:20px; }
+  .core-section-title { font-size:11px; font-family:var(--mono); color:rgba(255,255,255,.4); text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px; }
+  .core-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:10px; }
+  .core-row {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:12px 16px; background:rgba(255,255,255,.05);
+    border-radius:10px; cursor:pointer; border:2px solid transparent;
+    transition:all .14s;
+  }
+  .core-row:hover { background:rgba(255,255,255,.09); border-color:rgba(227,30,36,.35); }
+  .core-row.selected { background:rgba(227,30,36,.12); border-color:var(--accent); }
+  .core-config { font-family:var(--mono); font-size:13px; font-weight:700; color:#fff; }
+  .core-pn { font-family:var(--mono); font-size:11px; color:var(--accent); }
+  .core-specs { font-size:11px; color:rgba(255,255,255,.45); text-align:right; }
+
+  .selected-spec { background:rgba(255,255,255,.05); border-radius:12px; padding:20px; margin-bottom:20px; }
+  .specs-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .sg { background:rgba(255,255,255,.06); border-radius:10px; padding:14px 16px; }
+  .sg-l { font-size:10px; font-family:var(--mono); color:rgba(255,255,255,.38); text-transform:uppercase; margin-bottom:5px; }
+  .sg-v { font-size:18px; font-weight:700; color:#fff; }
+  .sg-u { font-size:11px; color:rgba(255,255,255,.45); margin-left:2px; }
+
+  .std-box { padding:14px 16px; background:rgba(255,255,255,.04); border-radius:10px; margin-bottom:20px; }
+  .std-l { font-size:10px; font-family:var(--mono); color:rgba(255,255,255,.38); text-transform:uppercase; margin-bottom:8px; }
+  .std-list { display:flex; flex-wrap:wrap; gap:6px; }
+  .std-pill { padding:3px 9px; border-radius:5px; font-size:11px; font-weight:600; font-family:var(--mono); background:rgba(255,255,255,.07); color:rgba(255,255,255,.55); }
+
+  .r-cta { display:flex; gap:10px; flex-wrap:wrap; border-top:1px solid rgba(255,255,255,.07); padding-top:20px; }
+  .btn-q { padding:12px 28px; background:var(--accent); color:#fff; border:none; border-radius:10px; font-size:14px; font-weight:700; cursor:pointer; transition:background .15s; }
+  .btn-q:hover { background:var(--accent-light); }
+  .btn-q:disabled { opacity:.4; cursor:not-allowed; }
+  .btn-rst { padding:12px 22px; background:rgba(255,255,255,.07); color:rgba(255,255,255,.6); border:1px solid rgba(255,255,255,.12); border-radius:10px; font-size:13px; font-weight:600; cursor:pointer; }
+  .btn-rst:hover { background:rgba(255,255,255,.12); }
+
+  .modal-bd { position:fixed; inset:0; background:rgba(0,0,0,.65); z-index:999; display:none; align-items:center; justify-content:center; }
+  .modal-bd.open { display:flex; }
+  .modal { background:var(--bg); border:1px solid var(--border); border-radius:20px; padding:36px; width:100%; max-width:480px; margin:20px; }
+  .modal h3 { font-size:22px; font-weight:800; margin-bottom:6px; }
+  .modal-sub { color:var(--text-muted); font-size:14px; margin-bottom:18px; }
+  .modal-pn { font-family:var(--mono); font-size:15px; font-weight:700; color:var(--accent); background:var(--accent-soft); padding:10px 16px; border-radius:8px; margin-bottom:16px; }
+  .fr { margin-bottom:12px; }
+  .fr label { display:block; font-size:12px; font-weight:600; color:var(--text-muted); margin-bottom:4px; }
+  .fr input, .fr textarea { width:100%; padding:10px 14px; background:var(--bg-soft); border:1px solid var(--border); border-radius:8px; font-size:14px; color:var(--text); font-family:var(--sans); }
+  .fr textarea { resize:vertical; min-height:65px; }
+  .modal-acts { display:flex; gap:10px; margin-top:16px; }
+  .btn-cancel { padding:10px 20px; background:none; border:1px solid var(--border); border-radius:8px; cursor:pointer; font-size:13px; color:var(--text-muted); }
+
+  @media (max-width:900px) {
+    .step { flex-direction:column; }
+    .step-label-col { width:auto; border-right:none; border-bottom:1px solid var(--border); flex-direction:row; align-items:center; }
+    .specs-grid { grid-template-columns:repeat(2,1fr); }
+    .core-grid { grid-template-columns:1fr; }
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="logo-link">
+        <svg class="logo-svg" viewBox="0 0 160 44" fill="none">
+          <text x="0" y="28" font-family="'Open Sans',sans-serif" font-size="26" font-weight="800" fill="#E31E24">Siechem</text>
+          <text x="2" y="40" font-family="'Open Sans',sans-serif" font-size="10" font-weight="400" fill="#888">Wires &amp; Cables</text>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="tech-support.html" class="nav-link">Tech Support</a>
+        <a href="about.html" class="nav-link">Company</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+      </div>
+      <a href="contact.html" class="nav-cta">Request Quote →</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-links">
+        <a href="products.html">Products</a><a href="tech-support.html">Tech Support</a>
+        <a href="about.html">Company</a><a href="certifications.html">Certifications</a>
+        <a href="customers.html">Customers</a><a href="catalogues.html">Catalogues</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span>
+        <a href="products.html">Products</a><span class="breadcrumb-sep"></span>
+        <span>Marine Cable Configurator</span>
+      </div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Offshore · Marine · Shipboard · Boat Cables</div>
+          <h1 class="page-title">Marine Cable<br/><em>Configurator</em></h1>
+          <p class="page-lede">6 steps to your exact cable. Select function, voltage, screening, fire rating, cross section and cores to identify your part number and full technical data.</p>
+        </div>
+        <div class="fade-up fade-up-2" style="display:flex;flex-direction:column;gap:10px;padding:22px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;">
+          <div class="spec"><span class="spec-label">Voltage Range</span><span class="spec-value">60V — 0.6/1 kV</span></div>
+          <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−40°C to +120°C</span></div>
+          <div class="spec"><span class="spec-label">Insulation</span><span class="spec-value">EBXL XLPO / HEPR / EPR</span></div>
+          <div class="spec"><span class="spec-label">Approvals</span><span class="spec-value">ABS · Lloyd's · IRS · DGQA</span></div>
+          <div class="spec"><span class="spec-label">Cable Types</span><span class="spec-value">50 + designations</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:36px;">
+    <div class="container">
+
+      <div class="search-top">
+        <span class="s-ico"><svg width="17" height="17" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M15 15l3 3"/></svg></span>
+        <input id="searchBox" type="text" placeholder="Direct lookup — type cable name or catalogue no. (e.g. MGCH, 301, LKM-HF, 315…)" autocomplete="off" />
+        <div class="search-drop" id="searchDrop"></div>
+      </div>
+
+      <div class="summary-bar" id="summaryBar">
+        <span class="s-empty">Make your selections below to identify your cable</span>
+      </div>
+
+      <div class="steps">
+
+        <!-- Step 1: Cable Function -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-fn">1</div>
+              <div class="step-name">Cable Function</div>
+            </div>
+            <div class="step-hint">Primary application</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="fn" data-val="control" onclick="pick(this)">
+              <span class="opt-icon">⚡</span>
+              <div class="opt-text"><span class="opt-label">Control Cable</span><span class="opt-sub">Signalling · instrumentation</span></div>
+            </div>
+            <div class="opt" data-step="fn" data-val="power" onclick="pick(this)">
+              <span class="opt-icon">🔋</span>
+              <div class="opt-text"><span class="opt-label">Power Cable</span><span class="opt-sub">Power distribution</span></div>
+            </div>
+            <div class="opt" data-step="fn" data-val="fieldbus" onclick="pick(this)">
+              <span class="opt-icon">📡</span>
+              <div class="opt-text"><span class="opt-label">Field Bus</span><span class="opt-sub">Data communication</span></div>
+            </div>
+            <div class="opt" data-step="fn" data-val="wiring" onclick="pick(this)">
+              <span class="opt-icon">🔌</span>
+              <div class="opt-text"><span class="opt-label">Wiring Cable</span><span class="opt-sub">General wiring · SY type</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Voltage Rating -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-voltage">2</div>
+              <div class="step-name">Voltage Rating</div>
+            </div>
+            <div class="step-hint">U₀/U rated voltage</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="voltage" data-val="60V" onclick="pick(this)">
+              <span class="opt-icon">〰</span>
+              <div class="opt-text"><span class="opt-label">60 V</span><span class="opt-sub">Field bus · low voltage</span></div>
+            </div>
+            <div class="opt" data-step="voltage" data-val="150/250V" onclick="pick(this)">
+              <span class="opt-icon">〰</span>
+              <div class="opt-text"><span class="opt-label">150/250 V</span><span class="opt-sub">300V test · RF / paired</span></div>
+            </div>
+            <div class="opt" data-step="voltage" data-val="250V" onclick="pick(this)">
+              <span class="opt-icon">〰</span>
+              <div class="opt-text"><span class="opt-label">250 V</span><span class="opt-sub">Wiring · SY type</span></div>
+            </div>
+            <div class="opt" data-step="voltage" data-val="500V" onclick="pick(this)">
+              <span class="opt-icon">〰</span>
+              <div class="opt-text"><span class="opt-label">500 V</span><span class="opt-sub">Paired marine control</span></div>
+            </div>
+            <div class="opt" data-step="voltage" data-val="1kV" onclick="pick(this)">
+              <span class="opt-icon">⚡</span>
+              <div class="opt-text"><span class="opt-label">0.6/1 kV</span><span class="opt-sub">Main marine standard</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: EMC Screening -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-screen">3</div>
+              <div class="step-name">Screening</div>
+            </div>
+            <div class="step-hint">EMI / interference</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="screen" data-val="none" onclick="pick(this)">
+              <span class="opt-icon">○</span>
+              <div class="opt-text"><span class="opt-label">Unscreened</span><span class="opt-sub">No outer screen</span></div>
+            </div>
+            <div class="opt" data-step="screen" data-val="overall" onclick="pick(this)">
+              <span class="opt-icon">⊙</span>
+              <div class="opt-text"><span class="opt-label">Overall Screened</span><span class="opt-sub">Collective copper braid</span></div>
+            </div>
+            <div class="opt" data-step="screen" data-val="individual" onclick="pick(this)">
+              <span class="opt-icon">⊕</span>
+              <div class="opt-text"><span class="opt-label">Individual Core Screen</span><span class="opt-sub">Each core screened</span></div>
+            </div>
+            <div class="opt" data-step="screen" data-val="emc" onclick="pick(this)">
+              <span class="opt-icon">⊛</span>
+              <div class="opt-text"><span class="opt-label">EMC Screened</span><span class="opt-sub">Double braid · ≥90% coverage</span></div>
+            </div>
+            <div class="opt" data-step="screen" data-val="steelbraid" onclick="pick(this)">
+              <span class="opt-icon">⋈</span>
+              <div class="opt-text"><span class="opt-label">Steel Wire Braid</span><span class="opt-sub">Galv. / tinned steel</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4: Fire & Halogen Performance -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-fire">4</div>
+              <div class="step-name">Fire &amp; Halogen</div>
+            </div>
+            <div class="step-hint">Safety classification</div>
+          </div>
+          <div class="step-options">
+            <div class="opt" data-step="fire" data-val="standard" onclick="pick(this)">
+              <span class="opt-icon">🔥</span>
+              <div class="opt-text"><span class="opt-label">Standard FR</span><span class="opt-sub">IEC 60332-1 · PVC/XLPO</span></div>
+            </div>
+            <div class="opt" data-step="fire" data-val="hf" onclick="pick(this)">
+              <span class="opt-icon">💨</span>
+              <div class="opt-text"><span class="opt-label">Halogen Free (HF)</span><span class="opt-sub">LSZH · IEC 60754</span></div>
+            </div>
+            <div class="opt" data-step="fire" data-val="frhf" onclick="pick(this)">
+              <span class="opt-icon">🛡</span>
+              <div class="opt-text"><span class="opt-label">Fire Resistant + HF</span><span class="opt-sub">Circuit integrity · FRHF</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 5: Cross Section mm² -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-mm2">5</div>
+              <div class="step-name">Cross Section</div>
+            </div>
+            <div class="step-hint">Conductor area (mm²)</div>
+          </div>
+          <div class="mm2-wrap" id="mm2Wrap"></div>
+        </div>
+
+        <!-- Step 6: Number of Cores -->
+        <div class="step">
+          <div class="step-label-col">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="step-num" id="num-cores">6</div>
+              <div class="step-name">No. of Cores</div>
+            </div>
+            <div class="step-hint">Valid counts highlighted</div>
+          </div>
+          <div class="step-options" id="coresWrap"></div>
+        </div>
+
+      </div>
+
+      <!-- Result -->
+      <div class="result-box" id="resultBox">
+        <div id="rEmpty">
+          <div class="r-empty">
+            <div class="r-empty-icon">⚓</div>
+            <div>Complete all 6 steps to identify your cable and part number</div>
+            <div class="r-progress" id="rProgress"></div>
+          </div>
+        </div>
+        <div id="rMatch" style="display:none;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="modal-bd" id="quoteModal">
+    <div class="modal">
+      <h3>Request Quote</h3>
+      <p class="modal-sub">Marine cable specialists respond within 1 business day.</p>
+      <div class="modal-pn" id="modalPn">—</div>
+      <div class="fr"><label>Full Name *</label><input type="text" placeholder="Your name"></div>
+      <div class="fr"><label>Company / Vessel Name</label><input type="text" placeholder="Company or vessel"></div>
+      <div class="fr"><label>Email *</label><input type="email" placeholder="you@company.com"></div>
+      <div class="fr"><label>Quantity (metres)</label><input type="text" placeholder="e.g. 200 m"></div>
+      <div class="fr"><label>Notes</label><textarea placeholder="Installation location, approval required, delivery…"></textarea></div>
+      <div class="modal-acts">
+        <button class="btn-q" onclick="submitQuote()">Send Request</button>
+        <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="nav-mobile.js" defer></script>
+  <script>
+  // ─── DATA ────────────────────────────────────────────────────────────────
+  // Size code → mm²
+  const SIZECODE = {
+    '70':0.2, '71':0.34, '72':0.35, '73':0.4,
+    '13':1.5, '16':2.5, '19':4, '23':6, '27':10,
+    '28':16, '30':25, '32':35, '34':50, '37':70,
+    '38':95, '41':120, '42':150, '44':185, '46':240, '48':300
+  };
+  // mm² → size code (reverse)
+  const MM2CODE = {};
+  Object.entries(SIZECODE).forEach(([k,v]) => { MM2CODE[String(v)] = k; });
+
+  // All mm² sizes in order
+  const ALL_MM2 = [0.2, 0.34, 0.35, 0.4, 1.5, 2.5, 4, 6, 10, 16, 25, 35, 50, 70, 95, 120, 150, 185, 240, 300];
+  const ALL_CORES = [1,2,3,4,5,7,10,12,14,16,19,24,27,37];
+
+  // Each family: filters + available size/core combos with OD & weight
+  const FAMILIES = [
+    {
+      id:'301', name:'MGCH',
+      desc:'APC, EMC Screened 0.6/1 kV Control Cable',
+      fn:'control', voltage:'1kV', screen:'emc', fire:'hf',
+      insulation:'HEPR / XLPO (EBXL)', tempMax:120,
+      standards:['IEC 60092-350/351/359','IEC 60332-3 Cat A','IEC 60754','DIN EN 50147-1','ABS','Lloyd\'s','IRS','DGQA'],
+      // mm² → { cores→{od,wt} }
+      data:{
+        '1.5': { 1:{od:6.5,wt:115}, 2:{od:11.0,wt:210}, 3:{od:12.0,wt:240}, 4:{od:12.5,wt:270}, 5:{od:13.5,wt:320}, 7:{od:14.0,wt:410}, 10:{od:16.5,wt:480}, 12:{od:18.0,wt:530}, 14:{od:18.5,wt:590}, 16:{od:19.5,wt:660}, 19:{od:20.5,wt:740}, 24:{od:23.5,wt:910} },
+        '2.5': { 1:{od:7.0,wt:120}, 2:{od:12.0,wt:250}, 3:{od:12.5,wt:290}, 4:{od:13.5,wt:330} },
+        '4':   { 1:{od:7.5,wt:140}, 2:{od:13.0,wt:310}, 3:{od:13.5,wt:360}, 4:{od:15.0,wt:460} },
+        '6':   { 1:{od:8.5,wt:170}, 2:{od:14.5,wt:410}, 3:{od:15.5,wt:480}, 4:{od:16.5,wt:570} },
+        '10':  { 1:{od:9.5,wt:220}, 2:{od:17.0,wt:530}, 3:{od:17.5,wt:650}, 4:{od:19.0,wt:810} },
+        '16':  { 1:{od:10.0,wt:300}, 2:{od:19.5,wt:740}, 3:{od:19.5,wt:900}, 4:{od:21.0,wt:1120} },
+        '25':  { 1:{od:12.0,wt:410}, 2:{od:22.5,wt:1050}, 3:{od:23.5,wt:1310} },
+        '35':  { 1:{od:13.0,wt:510}, 3:{od:26.0,wt:1710}, 4:{od:28.5,wt:2150} },
+        '50':  { 1:{od:15.0,wt:690}, 3:{od:29.0,wt:2210}, 4:{od:32.5,wt:2780} },
+        '70':  { 1:{od:17.0,wt:960}, 3:{od:34.5,wt:3080}, 4:{od:38.5,wt:3960} },
+        '95':  { 1:{od:19.0,wt:1230}, 3:{od:39.0,wt:4110}, 4:{od:44.0,wt:5220} },
+        '120': { 1:{od:21.0,wt:1470}, 3:{od:43.0,wt:5060} },
+        '150': { 1:{od:23.0,wt:1810} }, '185':{ 1:{od:25.5,wt:2220} },
+        '240': { 1:{od:28.5,wt:2830} }, '300':{ 1:{od:31.0,wt:3500} }
+      }
+    },
+    {
+      id:'302', name:'MGH',
+      desc:'APC, 0.6/1 kV Control Cable (Unscreened)',
+      fn:'control', voltage:'1kV', screen:'none', fire:'hf',
+      insulation:'HEPR / XLPO (EBXL)', tempMax:120,
+      standards:['IEC 60092-350/351/359','IEC 60332-3 Cat A','IEC 60754','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 1:{od:6.5,wt:80}, 2:{od:9.5,wt:170}, 3:{od:10.0,wt:200}, 4:{od:11.0,wt:230}, 5:{od:12.0,wt:260}, 7:{od:13.0,wt:320}, 10:{od:15.5,wt:390}, 12:{od:16.0,wt:440}, 14:{od:17.0,wt:500}, 16:{od:18.0,wt:560}, 19:{od:19.5,wt:640}, 24:{od:22.0,wt:790} },
+        '2.5': { 1:{od:7.0,wt:90}, 2:{od:10.5,wt:210}, 3:{od:11.0,wt:240}, 4:{od:12.0,wt:280} },
+        '4':   { 1:{od:7.5,wt:110}, 2:{od:11.5,wt:260}, 3:{od:12.0,wt:290}, 4:{od:13.5,wt:360} },
+        '6':   { 1:{od:8.5,wt:140}, 2:{od:12.5,wt:330}, 3:{od:13.5,wt:380}, 4:{od:15.5,wt:470} },
+        '10':  { 1:{od:9.5,wt:180}, 2:{od:14.5,wt:430}, 3:{od:15.5,wt:500}, 4:{od:18.0,wt:690} },
+        '16':  { 1:{od:10.0,wt:250}, 2:{od:16.5,wt:590}, 3:{od:17.5,wt:680}, 4:{od:21.0,wt:980} },
+        '25':  { 1:{od:12.0,wt:350}, 2:{od:19.5,wt:840}, 3:{od:21.0,wt:1000}, 4:{od:24.5,wt:1490} },
+        '35':  { 1:{od:13.0,wt:440}, 3:{od:23.5,wt:1360}, 4:{od:27.0,wt:1950} },
+        '50':  { 1:{od:15.0,wt:600}, 3:{od:28.0,wt:2000}, 4:{od:31.0,wt:2550} },
+        '70':  { 1:{od:17.0,wt:830}, 3:{od:33.0,wt:2830}, 4:{od:36.5,wt:3590} },
+        '95':  { 1:{od:19.0,wt:1070}, 3:{od:37.0,wt:3740}, 4:{od:41.0,wt:4790} },
+        '120': { 1:{od:21.0,wt:1310}, 3:{od:41.0,wt:4640} },
+        '150': { 1:{od:23.0,wt:1610} }, '185':{ 1:{od:25.5,wt:1963} },
+        '240': { 1:{od:28.5,wt:2501} }, '300':{ 1:{od:31.0,wt:3181} }
+      }
+    },
+    {
+      id:'303', name:'MGSGO',
+      desc:'APC, EMC Screened 0.6/1 kV Power Cable',
+      fn:'power', voltage:'1kV', screen:'emc', fire:'hf',
+      insulation:'HEPR / XLPO (EBXL)', tempMax:120,
+      standards:['IEC 60092-350/351/359','IEC 60332-3 Cat A','IEC 60754','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 2:{od:16,wt:330}, 3:{od:18,wt:400}, 4:{od:19,wt:480} },
+        '2.5': { 2:{od:18,wt:470}, 3:{od:19,wt:550}, 4:{od:21,wt:640} },
+        '4':   { 1:{od:10,wt:190}, 2:{od:19,wt:580}, 3:{od:20.5,wt:680}, 4:{od:22,wt:790} },
+        '6':   { 1:{od:11,wt:220}, 2:{od:21,wt:720}, 3:{od:22,wt:830}, 4:{od:24,wt:980} },
+        '10':  { 1:{od:13,wt:300}, 2:{od:25,wt:1000}, 3:{od:27,wt:1180}, 4:{od:28.5,wt:1390} },
+        '16':  { 1:{od:14,wt:400}, 2:{od:28.5,wt:1400}, 3:{od:30,wt:1660}, 4:{od:33,wt:1970} },
+        '25':  { 1:{od:16,wt:540}, 3:{od:35,wt:2250}, 4:{od:38,wt:2680} },
+        '35':  { 1:{od:17.5,wt:670}, 3:{od:39.5,wt:2950}, 4:{od:42.5,wt:3490} },
+        '50':  { 1:{od:20,wt:910}, 3:{od:45.5,wt:3980}, 4:{od:49.5,wt:4740} },
+        '70':  { 1:{od:22.5,wt:1200}, 3:{od:52,wt:5350} },
+        '95':  { 1:{od:25,wt:1580}, 3:{od:57.5,wt:6890} },
+        '120': { 1:{od:27.5,wt:1990} }, '150':{ 1:{od:30.5,wt:2430} },
+        '185': { 1:{od:33.5,wt:2990} }, '240':{ 1:{od:37.5,wt:3800} },
+        '300': { 1:{od:41,wt:4720} }
+      }
+    },
+    {
+      id:'304', name:'MPRX',
+      desc:'APC, 0.6/1 kV Control Cable',
+      fn:'control', voltage:'1kV', screen:'none', fire:'hf',
+      insulation:'XLPO (EBXL)', tempMax:120,
+      standards:['IEC 60092','IEC 60332-3 Cat A','IEC 60754','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 1:{od:6.1,wt:66}, 2:{od:8.5,wt:113}, 3:{od:9.0,wt:136}, 4:{od:9.8,wt:178}, 5:{od:10.1,wt:180}, 7:{od:11.0,wt:230}, 10:{od:14.1,wt:320}, 12:{od:14.7,wt:360}, 14:{od:15.5,wt:405}, 16:{od:16.3,wt:470}, 19:{od:17.4,wt:530}, 24:{od:20.5,wt:660} },
+        '2.5': { 1:{od:6.9,wt:88}, 2:{od:9.6,wt:155}, 3:{od:10.2,wt:190}, 4:{od:11.2,wt:250}, 5:{od:11.2,wt:250} },
+        '4':   { 1:{od:7.6,wt:109}, 2:{od:10.7,wt:200}, 3:{od:11.3,wt:240}, 4:{od:12.4,wt:295} },
+        '6':   { 1:{od:8.4,wt:139}, 2:{od:12.0,wt:270}, 3:{od:12.9,wt:330}, 4:{od:14.0,wt:400} },
+        '10':  { 1:{od:10.0,wt:193}, 2:{od:14.3,wt:380}, 3:{od:15.2,wt:460}, 4:{od:16.9,wt:565} },
+        '16':  { 1:{od:11.1,wt:262}, 2:{od:16.4,wt:520}, 3:{od:17.5,wt:635}, 4:{od:19.5,wt:800} },
+        '25':  { 1:{od:12.8,wt:370}, 3:{od:20.9,wt:915}, 4:{od:23.4,wt:1180} },
+        '35':  { 1:{od:14.2,wt:482}, 3:{od:23.8,wt:1185}, 4:{od:26.3,wt:1545} },
+        '50':  { 1:{od:16.0,wt:665}, 3:{od:27.5,wt:1633}, 4:{od:30.7,wt:2110} },
+        '70':  { 1:{od:18.2,wt:918}, 3:{od:32.3,wt:2260}, 4:{od:36.2,wt:2950} },
+        '95':  { 1:{od:20.3,wt:1228}, 3:{od:37.3,wt:3000}, 4:{od:42.1,wt:3960} },
+        '120': { 1:{od:22.3,wt:1556}, 3:{od:41.1,wt:3820} },
+        '150': { 1:{od:24.6,wt:1920} }, '185':{ 1:{od:27.1,wt:2360} },
+        '240': { 1:{od:30.5,wt:3000} }, '300':{ 1:{od:34.0,wt:3780} }
+      }
+    },
+    {
+      id:'305', name:'MPRXCX',
+      desc:'APC, EMC Screened 0.6/1 kV Control Cable',
+      fn:'control', voltage:'1kV', screen:'emc', fire:'hf',
+      insulation:'XLPO (EBXL)', tempMax:120,
+      standards:['IEC 60092','IEC 60332-3 Cat A','IEC 60754','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 2:{od:11.7,wt:255}, 3:{od:12.5,wt:340}, 4:{od:13.0,wt:380}, 5:{od:13.9,wt:440}, 7:{od:15.0,wt:550}, 10:{od:17.1,wt:680}, 12:{od:17.9,wt:750}, 14:{od:19.0,wt:840}, 16:{od:20.0,wt:920}, 19:{od:21.3,wt:1050}, 24:{od:24.4,wt:1300} },
+        '2.5': { 2:{od:13.1,wt:335}, 3:{od:14.1,wt:420}, 4:{od:15.0,wt:510} },
+        '4':   { 2:{od:14.8,wt:435}, 3:{od:16.0,wt:545}, 4:{od:17.1,wt:670} },
+        '6':   { 2:{od:16.3,wt:560}, 3:{od:17.8,wt:720}, 4:{od:19.4,wt:870} },
+        '10':  { 2:{od:19.2,wt:815}, 3:{od:21.0,wt:1030}, 4:{od:22.9,wt:1240} },
+        '16':  { 2:{od:22.1,wt:1110}, 3:{od:24.4,wt:1420}, 4:{od:27.2,wt:1730} },
+        '25':  { 3:{od:29.2,wt:2000}, 4:{od:33.1,wt:2500} },
+        '35':  { 3:{od:33.4,wt:2600}, 4:{od:38.0,wt:3250} },
+        '50':  { 3:{od:38.7,wt:3500}, 4:{od:43.9,wt:4370} },
+        '70':  { 3:{od:44.5,wt:4760} }, '95':{ 3:{od:51.0,wt:6310} }
+      }
+    },
+    {
+      id:'315', name:'LKM-HF',
+      desc:'APC, 0.6/1 kV Halogen Free Control Cable',
+      fn:'control', voltage:'1kV', screen:'none', fire:'hf',
+      insulation:'XLPE + XLPO', tempMax:120,
+      standards:['IEC 60092','IEC 60332-1-2','IEC 60754','IEC 61034','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 2:{od:8.78,wt:94}, 3:{od:9.30,wt:115} },
+        '2.5': { 2:{od:10.12,wt:130}, 3:{od:10.75,wt:162} },
+        '4':   { 2:{od:11.29,wt:171}, 3:{od:12.01,wt:210} },
+        '6':   { 1:{od:7.42,wt:102}, 2:{od:12.52,wt:224}, 3:{od:13.30,wt:276} },
+        '10':  { 1:{od:8.43,wt:146}, 3:{od:15.38,wt:380} },
+        '16':  { 1:{od:9.45,wt:204} }, '25':{ 1:{od:11.07,wt:300} },
+        '35':  { 1:{od:12.26,wt:396} }, '50':{ 1:{od:13.99,wt:545} },
+        '70':  { 1:{od:15.93,wt:739} }, '95':{ 1:{od:17.88,wt:973} },
+        '120': { 1:{od:19.71,wt:1212} }, '150':{ 1:{od:21.76,wt:1502} },
+        '185': { 1:{od:24.14,wt:1843} }, '240':{ 1:{od:26.95,wt:2356} },
+        '300': { 1:{od:30.19,wt:2923} }
+      }
+    },
+    {
+      id:'312', name:'SY Stranded',
+      desc:'APC, Galvanised Steel Braid, 250V Control Cable',
+      fn:'wiring', voltage:'250V', screen:'steelbraid', fire:'standard',
+      insulation:'PVC', tempMax:70,
+      standards:['DIN VDE 0250','IEC 60332-1','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 2:{od:9.7,wt:176}, 3:{od:10.1,wt:196}, 4:{od:10.8,wt:228}, 5:{od:11.6,wt:260}, 7:{od:13.3,wt:329} },
+        '2.5': { 3:{od:11.6,wt:261}, 4:{od:13.3,wt:328}, 5:{od:14.3,wt:385} },
+        '4':   { 4:{od:16.2,wt:388}, 5:{od:17.5,wt:565} },
+        '6':   { 4:{od:18.4,wt:625}, 5:{od:19.7,wt:744} }
+      }
+    },
+    {
+      id:'313', name:'SY',
+      desc:'APC, Tinned Steel Braid, 250V Power Cable',
+      fn:'power', voltage:'250V', screen:'steelbraid', fire:'standard',
+      insulation:'PVC', tempMax:70,
+      standards:['DIN VDE 0250','IEC 60332-1','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '6':   { 1:{od:8.3,wt:178} }, '10':{ 1:{od:10.3,wt:251} },
+        '16':  { 1:{od:10.3,wt:323} }, '25':{ 1:{od:13.7,wt:477} },
+        '35':  { 1:{od:15.2,wt:595} }, '50':{ 1:{od:18.1,wt:818} },
+        '70':  { 1:{od:21.1,wt:1121} }, '95':{ 1:{od:22.8,wt:1415} }
+      }
+    },
+    {
+      id:'334', name:'PBS',
+      desc:'Field Bus Cable, 60V',
+      fn:'fieldbus', voltage:'60V', screen:'overall', fire:'hf',
+      insulation:'Cross Linked Polyolefin', tempMax:120,
+      standards:['IEC 60332-1-2','IEC 60754','IEC 61034','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '0.34': { 1:{od:10.6,wt:126} }
+      }
+    },
+    {
+      id:'343', name:'LMGSG',
+      desc:'APC, EMC Screened Marine Control Cable',
+      fn:'control', voltage:'1kV', screen:'overall', fire:'standard',
+      insulation:'Heat Resistant EPR', tempMax:85,
+      standards:['IEC 60092','IEC 60332-3 Cat A','ABS','Lloyd\'s','IRS','DGQA'],
+      data:{
+        '1.5': { 2:{od:9.5,wt:131}, 3:{od:9.9,wt:152}, 4:{od:10.8,wt:189}, 5:{od:11.6,wt:219}, 7:{od:12.8,wt:277}, 10:{od:15.5,wt:376}, 12:{od:15.9,wt:417}, 14:{od:16.6,wt:463}, 16:{od:17.4,wt:512}, 19:{od:18.2,wt:578}, 24:{od:19.6,wt:689}, 27:{od:21.3,wt:780}, 33:{od:22.8,wt:913} },
+        '2.5': { 2:{od:10.7,wt:177}, 3:{od:11.2,wt:210}, 4:{od:12.0,wt:250}, 7:{od:14.3,wt:373} }
+      }
+    },
+  ];
+
+  // ─── STATE ────────────────────────────────────────────────────────────────
+  const S = { fn:null, voltage:null, screen:null, fire:null, mm2:null, cores:null };
+
+  const STEP_NAMES = { fn:'Cable Function', voltage:'Voltage', screen:'Screening', fire:'Fire & Halogen', mm2:'Cross Section', cores:'No. of Cores' };
+  const SEL_LABELS = {
+    fn:    {control:'Control',power:'Power',fieldbus:'Field Bus',wiring:'Wiring'},
+    voltage:{...{},'60V':'60 V','150/250V':'150/250 V','250V':'250 V','500V':'500 V','1kV':'0.6/1 kV'},
+    screen: {none:'Unscreened',overall:'Overall Screened',individual:'Indiv. Screened',emc:'EMC Screened',steelbraid:'Steel Braid'},
+    fire:   {standard:'Standard FR',hf:'Halogen Free',frhf:'Fire Resistant HF'},
+    mm2:    v => `${v} mm²`,
+    cores:  v => `${v} Core${+v>1?'s':''}`,
+  };
+
+  // ─── FILTERING ────────────────────────────────────────────────────────────
+  function matchFamilies() {
+    return FAMILIES.filter(f => {
+      if (S.fn      && f.fn      !== S.fn)      return false;
+      if (S.voltage && f.voltage !== S.voltage) return false;
+      if (S.screen  && f.screen  !== S.screen)  return false;
+      if (S.fire    && f.fire    !== S.fire)     return false;
+      return true;
+    });
+  }
+
+  function availableMM2() {
+    const matched = matchFamilies();
+    const set = new Set();
+    matched.forEach(f => Object.keys(f.data).forEach(mm2 => set.add(parseFloat(mm2))));
+    return ALL_MM2.filter(v => set.has(v));
+  }
+
+  function availableCores() {
+    if (!S.mm2) return [];
+    const matched = matchFamilies();
+    const set = new Set();
+    matched.forEach(f => {
+      const sizeData = f.data[String(S.mm2)];
+      if (sizeData) Object.keys(sizeData).forEach(c => set.add(+c));
+    });
+    return ALL_CORES.filter(c => set.has(c));
+  }
+
+  // ─── RENDER MM2 ───────────────────────────────────────────────────────────
+  function renderMM2() {
+    const avail = availableMM2();
+    document.getElementById('mm2Wrap').innerHTML = ALL_MM2.map(v => {
+      const ok = avail.includes(v);
+      const sel = S.mm2 == v;
+      return `<div class="mm2-tile${sel?' selected':''}${!ok?' disabled':''}"
+        data-step="mm2" data-val="${v}" onclick="pick(this)">
+        <div class="mm2-main">${v}</div>
+        <div class="mm2-sub">mm²</div>
+      </div>`;
+    }).join('');
+  }
+
+  // ─── RENDER CORES ────────────────────────────────────────────────────────
+  function renderCores() {
+    const avail = availableCores();
+    document.getElementById('coresWrap').innerHTML = avail.length
+      ? ALL_CORES.filter(c => avail.includes(c)).map(c => {
+          const sel = S.cores == c;
+          return `<div class="opt${sel?' selected':''}"
+            data-step="cores" data-val="${c}" onclick="pick(this)">
+            <span class="opt-icon" style="font-size:14px;font-family:var(--mono);font-weight:700;">${c}C</span>
+            <div class="opt-text">
+              <span class="opt-label">${c} Core${c>1?'s':''}</span>
+              <span class="opt-sub">${c>1?`${c} conductors`:'Single conductor'}</span>
+            </div>
+          </div>`;
+        }).join('')
+      : '<span style="color:var(--text-faint);font-size:13px;padding:8px;">Select cross section first</span>';
+  }
+
+  // ─── RENDER SUMMARY ───────────────────────────────────────────────────────
+  function renderSummary() {
+    const bar = document.getElementById('summaryBar');
+    const chips = Object.entries(S).filter(([,v]) => v!==null).map(([k,v]) => {
+      const lbl = typeof SEL_LABELS[k]==='function' ? SEL_LABELS[k](v) : (SEL_LABELS[k]?.[v]||v);
+      return `<span class="s-chip">${lbl}<span class="cx" onclick="clearStep('${k}')">✕</span></span>`;
+    }).join('');
+    bar.innerHTML = chips
+      ? chips + `<span class="s-reset" onclick="resetAll()">Reset all</span>`
+      : '<span class="s-empty">Make your selections below to identify your cable</span>';
+
+    Object.keys(S).forEach(k => {
+      const el = document.getElementById('num-'+k);
+      if (el) el.className = 'step-num' + (S[k]!==null?' done':'');
+    });
+  }
+
+  // ─── RENDER RESULT ────────────────────────────────────────────────────────
+  function renderResult() {
+    const empty = document.getElementById('rEmpty');
+    const match = document.getElementById('rMatch');
+
+    const steps = ['fn','voltage','screen','fire','mm2','cores'];
+    document.getElementById('rProgress').innerHTML = steps.map(k =>
+      `<span class="r-step${S[k]!==null?' done':''}">${STEP_NAMES[k]}</span>`
+    ).join('');
+
+    const allDone = steps.every(k => S[k]!==null);
+    if (!allDone) { empty.style.display=''; match.style.display='none'; return; }
+
+    const fam = matchFamilies().find(f => f.data[String(S.mm2)]?.[S.cores]);
+    if (!fam) {
+      empty.style.display=''; match.style.display='none';
+      document.getElementById('rProgress').innerHTML =
+        `<span style="color:rgba(255,255,255,.45);font-size:13px;">No standard variant — <a href="contact.html" style="color:var(--accent);">contact us for a custom build</a></span>`;
+      return;
+    }
+
+    const sz  = fam.data[String(S.mm2)][S.cores];
+    const sc  = MM2CODE[String(S.mm2)] || '??';
+    const cc  = String(S.cores).padStart(2,'0');
+    const pn  = S.cores==1 ? `${fam.id} ${sc} XX` : `${fam.id} ${sc} ${cc}`;
+
+    empty.style.display='none'; match.style.display='';
+    match.innerHTML = `
+      <div class="r-head">
+        <div>
+          <div class="r-desig">${fam.name}</div>
+          <div class="r-name">${fam.desc}</div>
+          <div class="r-badges">
+            <span class="rb rb-b">${fam.voltage === '1kV' ? '0.6/1 kV' : fam.voltage}</span>
+            <span class="rb rb-g">−40°C to +${fam.tempMax}°C</span>
+            ${fam.fire==='hf'?'<span class="rb rb-g">Halogen Free</span>':''}
+            ${fam.fire==='frhf'?'<span class="rb rb-r">Fire Resistant</span>':''}
+            ${fam.screen==='emc'?'<span class="rb rb-a">EMC Screened</span>':''}
+            ${fam.screen==='steelbraid'?'<span class="rb rb-a">Steel Braid</span>':''}
+            <span class="rb rb-b">Cat. No: ${fam.id}</span>
+            <span class="rb rb-g">RoHS</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:14px 18px;margin-bottom:20px;">
+        <div style="font-size:11px;font-family:var(--mono);color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:6px;">Part Number</div>
+        <div style="font-family:var(--mono);font-size:24px;font-weight:700;color:#fff;">${pn}${S.cores==1?' <span style="font-size:13px;color:rgba(255,255,255,.4);">(add colour code for XX)</span>':''}</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:4px;">${S.cores==1?S.mm2:S.cores} ${S.cores==1?'mm² · Single Core':'cores'} × ${S.mm2} mm²</div>
+      </div>
+
+      <div class="specs-grid" style="margin-bottom:20px;">
+        <div class="sg"><div class="sg-l">Configuration</div><div class="sg-v">${S.cores}<span class="sg-u">C × ${S.mm2}mm²</span></div></div>
+        <div class="sg"><div class="sg-l">Overall Dia.</div><div class="sg-v">${sz.od}<span class="sg-u">mm</span></div></div>
+        <div class="sg"><div class="sg-l">Cable Weight</div><div class="sg-v">${sz.wt}<span class="sg-u">kg/km</span></div></div>
+        <div class="sg"><div class="sg-l">Voltage</div><div class="sg-v">${fam.voltage==='1kV'?'0.6/1':'fam.voltage'}<span class="sg-u">kV</span></div></div>
+        <div class="sg"><div class="sg-l">Temp. Range</div><div class="sg-v" style="font-size:13px;">−40 to +${fam.tempMax}<span class="sg-u">°C</span></div></div>
+        <div class="sg"><div class="sg-l">Insulation</div><div class="sg-v" style="font-size:13px;line-height:1.3;">${fam.insulation}</div></div>
+        <div class="sg"><div class="sg-l">Bending Radius</div><div class="sg-v">6–8<span class="sg-u">× OD</span></div></div>
+        <div class="sg"><div class="sg-l">Short-circuit</div><div class="sg-v">280<span class="sg-u">°C max</span></div></div>
+      </div>
+
+      <div class="std-box">
+        <div class="std-l">Standards &amp; Approvals</div>
+        <div class="std-list">${fam.standards.map(s=>`<span class="std-pill">${s}</span>`).join('')}</div>
+      </div>
+
+      <div class="r-cta">
+        <button class="btn-q" onclick="openModal('${pn.replace(/'/g,"\\'")}')">Request Quote — ${pn}</button>
+        <button class="btn-rst" onclick="resetAll()">↺ Reset</button>
+      </div>`;
+  }
+
+  // ─── INTERACTION ──────────────────────────────────────────────────────────
+  function pick(el) {
+    const step=el.dataset.step, val=el.dataset.val;
+    document.querySelectorAll(`[data-step="${step}"]`).forEach(t=>t.classList.remove('selected'));
+    el.classList.add('selected');
+    S[step] = step==='mm2'||step==='cores' ? parseFloat(val) : val;
+    if (!['mm2','cores'].includes(step)) {
+      if (S.mm2!==null && !availableMM2().includes(S.mm2)) S.mm2=null;
+      S.cores=null;
+    }
+    if (step==='mm2') {
+      if (S.cores!==null && !availableCores().includes(S.cores)) S.cores=null;
+    }
+    renderMM2(); renderCores(); renderSummary(); renderResult();
+  }
+
+  function clearStep(step) {
+    S[step]=null;
+    document.querySelectorAll(`[data-step="${step}"]`).forEach(t=>t.classList.remove('selected'));
+    if (!['mm2','cores'].includes(step)) {
+      if (S.mm2!==null && !availableMM2().includes(S.mm2)) S.mm2=null;
+      S.cores=null;
+    }
+    renderMM2(); renderCores(); renderSummary(); renderResult();
+  }
+
+  function resetAll() {
+    Object.keys(S).forEach(k=>S[k]=null);
+    document.querySelectorAll('.opt,.mm2-tile,.core-row').forEach(t=>t.classList.remove('selected'));
+    renderMM2(); renderCores(); renderSummary(); renderResult();
+  }
+
+  // ─── DIRECT SEARCH ────────────────────────────────────────────────────────
+  const searchBox = document.getElementById('searchBox');
+  const searchDrop = document.getElementById('searchDrop');
+
+  searchBox.addEventListener('input', () => {
+    const q = searchBox.value.trim().toLowerCase();
+    if (q.length < 2) { searchDrop.classList.remove('open'); return; }
+    const hits = FAMILIES.filter(f =>
+      f.name.toLowerCase().includes(q) || f.id.includes(q) || f.desc.toLowerCase().includes(q)
+    );
+    if (!hits.length) { searchDrop.classList.remove('open'); return; }
+    searchDrop.innerHTML = hits.slice(0,6).map((f,i) =>
+      `<div class="sd-item" onclick="applyFamily(${i})">
+        <div class="sd-pn">${f.name} <span style="font-size:10px;opacity:.6;">(Cat. ${f.id})</span></div>
+        <div class="sd-desc">${f.desc}</div>
+      </div>`
+    ).join('');
+    searchDrop._hits = hits;
+    searchDrop.classList.add('open');
+  });
+
+  function applyFamily(i) {
+    const f = searchDrop._hits[i];
+    searchBox.value = f.name; searchDrop.classList.remove('open');
+    S.fn=f.fn; S.voltage=f.voltage; S.screen=f.screen; S.fire=f.fire;
+    S.mm2=null; S.cores=null;
+    document.querySelectorAll('.opt,.mm2-tile').forEach(el => {
+      ['fn','voltage','screen','fire'].forEach(step => {
+        if (el.dataset.step===step) el.classList.toggle('selected', el.dataset.val===S[step]);
+      });
+    });
+    renderMM2(); renderCores(); renderSummary(); renderResult();
+    document.querySelector('.step#step-mm2, .step')?.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.search-top')) searchDrop.classList.remove('open');
+  });
+
+  // ─── MODAL ────────────────────────────────────────────────────────────────
+  function openModal(pn) {
+    document.getElementById('modalPn').textContent = 'Part Number: ' + pn;
+    document.getElementById('quoteModal').classList.add('open');
+  }
+  function closeModal() { document.getElementById('quoteModal').classList.remove('open'); }
+  function submitQuote() {
+    alert('Thank you! Your quote request has been received. Our marine cable specialists will respond within 1 business day.');
+    closeModal();
+  }
+
+  // Init
+  renderMM2(); renderCores(); renderSummary(); renderResult();
+  </script>
+</body>
+</html>
