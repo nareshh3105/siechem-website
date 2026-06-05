@@ -46,6 +46,40 @@
     .cert-card p { font-size:13.5px; color:var(--text-muted); line-height:1.6; margin-bottom:12px; }
     .cert-card .meta { font-size:11.5px; color:var(--text-faint); font-family:var(--mono); padding-top:12px; border-top:1px solid var(--border); }
 
+    .approvals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .approval-logo {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.18s;
+      min-height: 80px;
+    }
+    .approval-logo:hover {
+      border-color: var(--border-strong);
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card);
+    }
+    .approval-logo img {
+      max-width: 100%;
+      max-height: 56px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(30%);
+      transition: filter 0.18s;
+    }
+    .approval-logo:hover img { filter: grayscale(0%); }
+
     .compliance-band {
       padding: 36px 40px;
       background: var(--bg-soft);
@@ -147,6 +181,66 @@
         <div class="cert-card"><div class="badge">EN<br/>45545</div><div class="scope">Rail Fire</div><h3>EN 45545-2</h3><p>European rail vehicle fire safety. Hazard Level HL3.</p><div class="meta">DEKRA tested</div></div>
         <div class="cert-card"><div class="badge">DNV-<br/>GL</div><div class="scope">Marine</div><h3>DNV-GL Type Approved</h3><p>Det Norske Veritas marine cables. Lloyd's Register equivalent recognition.</p><div class="meta">Type Approval #MT-2022</div></div>
         <div class="cert-card"><div class="badge">ATEX</div><div class="scope">Hazardous Area</div><h3>ATEX Compliant</h3><p>Directive 2014/34/EU. Cables for explosive-atmosphere installations.</p><div class="meta">Zone 1 / Zone 2</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approvals & Licenses -->
+  <section class="section section-divider">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Approvals &amp; Licenses</p>
+        <h2 class="section-title">Approved by the Industry's Best</h2>
+        <p class="section-sub">Siechem products are qualified, tested, and approved by leading OEMs, defence organisations, railways, and standards bodies worldwide.</p>
+      </div>
+
+      <div class="approvals-grid">
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/UL-.jpg" alt="UL"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/UL_1.jpg" alt="UL Listed"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/CSA.jpg" alt="CSA"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/ISI.jpg" alt="ISI"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/IEC.jpg" alt="IEC"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/sgs.jpg" alt="SGS"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/cpri.jpg" alt="CPRI"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/ERDA.jpg" alt="ERDA"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/DSIR.jpg" alt="DSIR"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/labco.jpg" alt="Labco"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/DGQA.jpg" alt="DGQA"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/NAVEY.jpg" alt="Indian Navy"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/HAL.jpg" alt="HAL"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/IAI.jpg" alt="IAI"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/AERB.jpg" alt="AERB"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Abs.jpg" alt="ABS"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/IR-Class.jpg" alt="IR Class"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/IRS-.jpg" alt="IRS"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/CRRC.jpg" alt="CRRC"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Alstom.jpg" alt="Alstom"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/BOMBARDIER.jpg" alt="Bombardier"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/dmde.jpg" alt="DMDE"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/ARAI.jpg" alt="ARAI"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Maruti.jpg" alt="Maruti"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Maruti_Suzuki-1-1.jpg" alt="Maruti Suzuki"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/TATA.jpg" alt="Tata"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Hyundai.jpg" alt="Hyundai"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Ashok-leyland.jpg" alt="Ashok Leyland"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Renault-Nissian.jpg" alt="Renault Nissan"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/TVS.jpg" alt="TVS"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/2.ford-2.jpg" alt="Ford"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Daimalar.jpg" alt="Daimler"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Aptive.jpg" alt="Aptiv"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/6.yazaki.jpg" alt="Yazaki"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Motherson.jpg" alt="Motherson"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/7.ABB-1.jpg" alt="ABB"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/siemens.jpg" alt="Siemens"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/TE.jpg" alt="TE Connectivity"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Harting.jpg" alt="Harting"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/volvo.jpg" alt="Volvo"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Cat.jpg" alt="Caterpillar"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/cummins.jpg" alt="Cummins"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/NTPC.jpg" alt="NTPC"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/BSNL.jpg" alt="BSNL"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/Bharateletronics.jpg" alt="Bharat Electronics"></div>
+        <div class="approval-logo"><img src="https://www.siechem.com/wp-content/uploads/2021/04/26customers-123.jpg" alt="Customers"></div>
       </div>
     </div>
   </section>
