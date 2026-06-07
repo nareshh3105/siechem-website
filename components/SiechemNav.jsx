@@ -1,3 +1,33 @@
+/**
+ * FILE: components/SiechemNav.jsx
+ *
+ * PURPOSE:
+ *   React component for the site navigation bar used in the React prototype
+ *   (siechem-redesign-2d.html). Renders the sticky top nav with the Siechem logo,
+ *   all primary nav links, a search bar with product suggestions, and the
+ *   "Request Quote" CTA button.
+ *
+ * FEATURES:
+ *   - Product search with autocomplete dropdown: SEARCH_SUGGESTIONS contains
+ *     ~30 product/standard terms. As the user types, the dropdown shows matching
+ *     suggestions. Click a suggestion → navigates to that product page.
+ *   - Sticky positioning: the nav stays at the top of the viewport on scroll.
+ *     A scroll listener adds a `.scrolled` class that increases box-shadow intensity.
+ *   - Mobile hamburger: toggles a full-screen mobile menu overlay.
+ *   - Accent colour prop: the brand red (#E31E24) is passed in as `accent` from
+ *     SiechemApp.jsx (via the TweaksPanel design controls) so it can be previewed
+ *     in different colours during demos without touching CSS.
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour string for brand accent (default #E31E24)
+ *
+ * NOTE:
+ *   This component is only used in the React prototype (siechem-redesign-2d.html).
+ *   The static HTML pages (siechem-redesign.html and all other .html files) use
+ *   the nav HTML inlined directly in each page, styled by theme.css, and toggled
+ *   by nav-mobile.js. The two nav implementations are kept intentionally separate
+ *   so the static site has zero React/JSX dependency.
+ */
 const { useState, useRef, useEffect } = React;
 
 const SEARCH_SUGGESTIONS = [

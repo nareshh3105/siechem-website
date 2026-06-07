@@ -1,4 +1,39 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: products.html
+
+  PURPOSE:
+    The main product catalogue / browse page. Lists all 40+ Siechem product segments
+    (Aerospace, Automotive, Marine, Solar, Railway, etc.) with two view modes:
+      - "By Segment" — product cards grouped by application industry
+      - "By Standard" — filterable chips of every compliance standard (IEC, MIL, BS, UL…)
+    Acts as the primary navigation hub for engineers looking for a specific cable type.
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb     — "Home → Products"
+    2. Page hero            — headline + product overview image
+    3. Filter bar           — "By Segment" / "By Standard" toggle buttons
+    4. Segment grid         — responsive card grid, each card = one product family,
+                               links to the detailed product page where available
+                               (e.g. product-aero44.html, product-automotive.html)
+    5. Standard pills       — compact clickable chips for each standard code,
+                               clicking → contact.html to request the specific catalogue
+    6. CTA band             — "Can't find what you need? Contact our engineers"
+
+  WHY TWO VIEWS:
+    Procurement engineers often search by standard (e.g. "MIL-DTL-16878") rather than
+    by application segment. The "By Standard" view lets them find the right product
+    family without having to know what Siechem calls it internally.
+
+  JS LOGIC (inline <script> at bottom):
+    ALL_SEGS and STANDARDS arrays define the full product/standard lists. The filter
+    bar buttons toggle display between #view-segment and #view-standard divs.
+    Both grids are generated entirely by JS (innerHTML) so adding a new product or
+    standard only requires editing the array — no HTML to touch.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

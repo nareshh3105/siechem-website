@@ -1,3 +1,56 @@
+/**
+ * FILE: tweaks-panel.jsx
+ *
+ * PURPOSE:
+ *   Reusable floating design-tweak panel and a full set of form-control primitives.
+ *   Used exclusively in the React prototype (siechem-redesign-2d.html) via SiechemApp.jsx.
+ *   Provides the live design-editing UI that lets a designer change brand accent colour,
+ *   layout density, and other visual parameters in real time without touching code.
+ *
+ * HOW IT FITS INTO THE SYSTEM:
+ *   This file is provided by the Claude design tool environment. It handles the
+ *   host ↔ prototype communication protocol so prototypes don't need to re-implement it.
+ *   The host (Claude's design canvas) sends postMessage events to activate/deactivate
+ *   the panel; the panel sends events back when values change so the host can persist
+ *   them by rewriting the EDITMODE block in SiechemApp.jsx.
+ *
+ * KEY EXPORTS (exposed on window.*):
+ *   useTweaks(defaults)    — React hook. Returns [values, setTweak]. setTweak(key, val)
+ *                            updates local state AND posts __edit_mode_set_keys to parent.
+ *   TweaksPanel            — Floating panel shell. Draggable, dismissible, viewport-clamped.
+ *   TweakSection(label)    — Section header divider inside the panel.
+ *   TweakColor(opts)       — Colour picker with curated palette chips. Single hex or
+ *                            multi-colour palette arrays. Checks luminance for checkmark
+ *                            contrast automatically.
+ *   TweakRadio(opts)       — Segmented control for mutually exclusive choices. Falls back
+ *                            to a <select> dropdown if labels are too long to fit.
+ *   TweakSlider            — Range input with live value display.
+ *   TweakToggle            — iOS-style on/off switch.
+ *   TweakNumber            — Scrub-draggable numeric input (drag the label left/right).
+ *   TweakText              — Simple text field.
+ *   TweakButton            — Action button (primary or secondary style).
+ *   TweakSelect            — Explicit dropdown select for long option lists.
+ *
+ * HOST COMMUNICATION PROTOCOL (postMessage types):
+ *   Outbound (panel → host):
+ *     __edit_mode_available   — panel is mounted and ready to receive activate
+ *     __edit_mode_set_keys    — { edits: { key: value } } — persist these tweaks
+ *     __edit_mode_dismissed   — user clicked the ✕ button (host should flip toolbar toggle)
+ *   Inbound (host → panel):
+ *     __activate_edit_mode    — show the panel
+ *     __deactivate_edit_mode  — hide the panel
+ *
+ * STYLING:
+ *   All panel styles are injected as a single __TWEAKS_STYLE string via a <style> tag
+ *   rendered inside TweaksPanel. Uses CSS class prefix `twk-` to avoid collisions with
+ *   any prototype's own stylesheet. The panel itself is glass-morphism (backdrop-blur +
+ *   semi-transparent background) to stay legible on top of any prototype content.
+ *
+ * NOTE:
+ *   This file should NOT be modified for project-specific functionality.
+ *   It is a shared infrastructure file. Add project controls in SiechemApp.jsx's
+ *   <TweaksPanel> JSX instead.
+ */
 
 // tweaks-panel.jsx
 // Reusable Tweaks shell + form-control helpers.

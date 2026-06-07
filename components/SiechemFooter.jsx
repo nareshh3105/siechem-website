@@ -1,3 +1,38 @@
+/**
+ * FILE: components/SiechemFooter.jsx
+ *
+ * PURPOSE:
+ *   React component that renders the site footer for the React prototype
+ *   (siechem-redesign-2d.html). Displays the full site map, contact information,
+ *   and legal/copyright line.
+ *
+ * CONTENT (FOOTER_COLS array):
+ *   Column 1 — Products:  links to product segment pages (Aerospace, Automotive, Marine,
+ *                          Solar, Industrial, full products listing)
+ *   Column 2 — Engineering: links to tech-support.html tools (AWG Converter, Voltage
+ *                            Drop, Current Capacity, All Tools)
+ *   Column 3 — Company:   About, Certifications, Customers, Careers, Contact
+ *   Column 4 — Contact:   sales@siechem.com, phone number, Chennai / Pondicherry address
+ *
+ *   Brand column (left): Siechem logo SVG, tagline "India's leading specialty wires
+ *   & cables manufacturer since 2002", social links (LinkedIn, Twitter/X).
+ *
+ *   Footer meta bar: copyright line, certifications shorthand (ISO 9001, IATF 16949,
+ *   AS9100D), Vercel hosting note.
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour for link hover states and the logo red
+ *
+ * WHY THE FOOTER IS A COMPONENT:
+ *   In the React prototype, the footer is shared across all "pages" (even though the
+ *   prototype is a single-page app). Extracting it to a component means it's defined
+ *   once and updated in one place. In the static HTML site, the footer is duplicated
+ *   in each HTML file — a known trade-off of the no-bundler static approach.
+ *
+ * NOTE:
+ *   Used only in the React prototype (siechem-redesign-2d.html). The static HTML
+ *   pages each contain the footer HTML inline, styled by theme.css .footer classes.
+ */
 const FOOTER_COLS = [
   {
     heading: 'Products',

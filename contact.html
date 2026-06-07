@@ -1,4 +1,37 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: contact.html
+
+  PURPOSE:
+    General contact and quote request page. The primary conversion point for the site.
+    All "Request Quote" CTAs across every page link here. Visitors fill out their
+    name, company, email, phone, and what they need — the form submits to /api/quote
+    which sends two emails: one to Siechem sales and one acknowledgement to the customer.
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb     — "Home → Contact"
+    2. Page hero            — "Get in Touch" headline
+    3. Contact details band — Chennai office address, phone, email, factory map link
+    4. Quote request form   — fields: Name, Company, Email, Phone, Product/Standard of
+                               interest, Quantity, Delivery timeline, Notes
+    5. Map embed            — Google Maps iframe pointing to Siechem Chennai office
+    6. Branch offices       — Pondicherry plant address
+
+  FORM SUBMISSION:
+    The form posts JSON to /api/quote via fetch(). On success the form is replaced
+    with a thank-you message. On error an inline error message appears. The API
+    sends the company email (to sales@siechem.com) and a confirmation back to the
+    customer. See api/quote.js for full email logic.
+
+  WHY NOT USE A FORM SERVICE (Formspree / Typeform):
+    - We need to send the customer a formatted HTML confirmation email with their
+      reference number and product spec summary — something form services can't do.
+    - Keeping it in-house (Vercel function + nodemailer + Gmail) means no monthly
+      SaaS cost and full control over the email template design.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js, api/quote.js (serverless)
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

@@ -1,3 +1,25 @@
+<!--
+  FILE: index.html
+
+  PURPOSE:
+    Entry-point redirect for the site. When Vercel (or any static host) serves
+    the root URL (e.g. siechem.vercel.app/), it looks for index.html first.
+    This file immediately bounces the visitor to siechem-redesign.html, which
+    is the actual homepage.
+
+  WHY A REDIRECT INSTEAD OF JUST NAMING THE HOMEPAGE index.html:
+    During development the site was iteratively built as siechem-redesign.html
+    (alongside earlier prototypes like siechem-redesign-2d.html). Renaming the
+    file would break all internal anchor links across 20+ pages. Instead, this
+    thin redirect keeps the root URL working without touching any other file.
+
+  HOW THE REDIRECT WORKS:
+    - <meta http-equiv="refresh"> fires the redirect server-side before the
+      browser even renders the body. The `content="0"` means 0-second delay.
+    - The <script> block is a JavaScript fallback for the rare browser that
+      ignores the meta refresh.
+    - The <a> link in <body> is a no-JS last resort for text-only browsers.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

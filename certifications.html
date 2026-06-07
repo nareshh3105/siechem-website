@@ -1,4 +1,47 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: certifications.html
+
+  PURPOSE:
+    Compliance and quality credentials page. Shows every certification, standard
+    approval, and OEM qualification that Siechem holds. Critical for procurement
+    engineers who need to verify a supplier's approvals before they can raise a PO.
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb      — "Home → Certifications"
+    2. Page hero             — "Certified by the People Who Set the Bar" + cert collage image
+    3. Active Certifications — logo image grid using cer-1.png → cer-24.png from
+                                siechem.com (ISO 9001, ISO 14001, ISO 45001, IATF 16949,
+                                TUV, UL, REACH, RoHS, BASEC, Lloyd's, ABS, RDSO, SGS,
+                                EcoVadis, and more). All logos loaded directly from the
+                                live siechem.com WordPress upload URL so they're always
+                                the current versions.
+    4. Approvals & Licenses  — 46 OEM/authority logos (same approvals-grid pattern)
+                                showing every company that has officially approved Siechem
+                                cables: UL, CSA, ISI, DGQA, Indian Navy, HAL, IAI, AERB,
+                                ABS, IR Class, Alstom, Bombardier, CRRC, ARAI, Maruti,
+                                Tata, Hyundai, Ford, Renault-Nissan, TVS, Yazaki, ABB,
+                                Siemens, Volvo, CAT, Cummins, NTPC, BSNL, and more.
+    5. "Need a document?" CTA — prompts visitors to contact sales for certificate PDFs,
+                                 test reports, and declarations of conformity.
+
+  WHY LOGO IMAGES INSTEAD OF TEXT CARDS:
+    The original design used text-badge cards (e.g. "ISO 9001 | QMS | …"). These were
+    replaced with actual certification logo images because:
+    a) Real logos are instantly recognisable to procurement teams — they don't need to
+       read "ISO 9001:2015 Quality Management System" when they already know the mark.
+    b) Visually matches the look of every supplier's qualification page they compare
+       Siechem against (TUV, UL, ABS logos are industry shorthand).
+
+  CSS CLASSES:
+    .approvals-grid  — responsive auto-fill grid (minmax 140px), used for BOTH the
+                        certifications logo section and the OEM approvals section.
+    .approval-logo   — card wrapper with hover lift + grayscale-to-colour image filter.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+    - Logo images: siechem.com/wp-content/uploads/2021/04/ (cer-*.png, Group-*.png, *.jpg)
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

@@ -1,3 +1,35 @@
+/**
+ * FILE: components/SiechemHero.jsx
+ *
+ * PURPOSE:
+ *   React component that renders the homepage hero section for the React prototype
+ *   (siechem-redesign-2d.html). This is the first thing a visitor sees — the large
+ *   headline, brand statement, rotating tagline, animated stat counters, and the
+ *   primary CTA buttons.
+ *
+ * CONTENT:
+ *   - Rotating tagline: cycles through 3-4 phrases ("Precision for Aerospace",
+ *     "Certified for Marine", etc.) with a crossfade animation every 3 seconds.
+ *   - Headline: "India's Precision Wire & Cable Manufacturer Since 2002"
+ *   - Stat strip: animated counters for key company metrics (22M+ configurations,
+ *     40+ years, 80+ countries). Values stored in STATS array.
+ *   - CTA buttons: "Explore Products" → /products and "Request Quote" → /contact
+ *   - Hero image: cable cross-section photograph from the assets/ppt-images folder
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour for the primary red (default #E31E24)
+ *                        Used on the CTA button background and highlighted words
+ *
+ * WHY ROTATING TAGLINES:
+ *   Siechem serves 7+ distinct markets (Aerospace, Automotive, Marine, Solar,
+ *   Railway, Defence, Industrial). A single static headline can't cover all of
+ *   them. Rotating taglines show different visitors the segment most relevant
+ *   to them without requiring separate landing pages.
+ *
+ * NOTE:
+ *   Used only in the React prototype. The static homepage (siechem-redesign.html)
+ *   has equivalent content hardcoded in HTML without the rotating tagline animation.
+ */
 const { useState, useEffect } = React;
 
 const STATS = [

@@ -1,4 +1,47 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: catalogues.html
+
+  PURPOSE:
+    Technical literature download hub. Lists every Siechem product catalogue as a
+    visual card (dark mock-cover design), plus an Engineering Toolkit section of
+    application notes, white papers, and reference tables. The cards don't have
+    real PDF links yet — they link to contact.html so sales can send the right
+    document to the right person (prevents outdated versions from circulating).
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb      — "Home → Catalogues"
+    2. Page hero             — "Every Spec. Every Diagram. One Library." + R&D image
+    3. Filter bar            — "By Segment" / "By Standard" toggle (same pattern as
+                                products.html) — segment shows cat-card covers,
+                                standard shows standard pills
+    4. Catalogue grid        — each card is a .cat-card with:
+                                  • .cat-cover  — dark mock book-cover (3:4 ratio on
+                                    desktop, 2:3 on mobile) with product name, standard
+                                    codes, and "PDF · On Request" label
+                                  No .cat-meta "Technical Catalogue / Contact to download"
+                                  bar — removed at user request (it was redundant and
+                                  cluttered mobile view).
+    5. Engineering Toolkit   — 9 cards for application notes: Cable Selection Guide,
+                                Installation Procedures, Color Code Reference, Derating
+                                Factor Tables, E-Beam white paper, Accelerated Ageing WP,
+                                Packaging & Drum Sizes, NFPA Reference, 3D CAD Models.
+    6. Newsletter band       — email signup for catalogue update notifications.
+
+  MOBILE RESPONSIVENESS:
+    - < 600px  → 2-column grid (col=2, gap=12px, card aspect 2:3, smaller fonts)
+    - 601-900px → 3-column grid
+    - > 900px  → 4-column grid (.grid-4 from theme.css)
+
+  JS LOGIC (inline <script>):
+    ALL_SEGS array (40 product families) and STANDARDS array (44 standard codes)
+    are defined as JS data. innerHTML is used to render both grids from these arrays.
+    This means adding a new product = add one line to ALL_SEGS, no HTML editing needed.
+    The filter-bar click handler shows/hides #view-segment vs #view-standard.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

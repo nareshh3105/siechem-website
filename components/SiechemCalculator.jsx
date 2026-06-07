@@ -1,3 +1,38 @@
+/**
+ * FILE: components/SiechemCalculator.jsx
+ *
+ * PURPOSE:
+ *   React component that renders the interactive AWG ↔ mm² cable size calculator
+ *   on the React prototype homepage. Lets engineers convert between AWG gauge numbers
+ *   and metric cross-sectional area, and look up the associated conductor resistance,
+ *   current capacity, and OD for each size.
+ *
+ * DATA:
+ *   AWG_TABLE — a lookup object keyed by AWG size (e.g. "24", "18", "12") where each
+ *   entry contains: area_mm2, resistance_ohm_per_km, current_amp (in free air, 60°C),
+ *   outer_diameter_mm. Values follow IEC 60228 / ASTM B3 standard conductor data.
+ *
+ * FUNCTIONALITY:
+ *   - Input mode toggle: "AWG → mm²" or "mm² → AWG"
+ *   - User enters a value; the component looks up or interpolates the closest match
+ *     in AWG_TABLE and displays the full row of parameters.
+ *   - Results shown in a clean data card: area, resistance, current, OD.
+ *   - "Request this size" button pre-fills the quote form with the selected size.
+ *
+ * WHY THIS IS ON THE HOMEPAGE (React prototype):
+ *   The AWG converter is one of the most-searched engineering tools for cable
+ *   selection. Embedding it on the homepage (rather than only on tech-support.html)
+ *   gives engineers an immediate reason to engage with the site. The "Request this
+ *   size" CTA provides a direct conversion path from tool use to quote submission.
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour for the "Calculate" button and result highlights
+ *
+ * NOTE:
+ *   The static site's equivalent is on tech-support.html with vanilla JS logic.
+ *   This React version has the same calculation but with live reactivity (results
+ *   update as the user types, no submit button needed).
+ */
 const { useState, useCallback } = React;
 
 const AWG_TABLE = {

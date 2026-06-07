@@ -1,4 +1,41 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: tech-support.html
+
+  PURPOSE:
+    Engineering tools and technical reference page. Gives visiting engineers self-service
+    calculators and reference tables so they can spec Siechem cables without needing
+    to call sales. This reduces low-value enquiries and positions Siechem as a
+    technically credible manufacturer (not just a catalogue supplier).
+
+  TOOLS PROVIDED:
+    1. AWG ↔ mm² Converter   — bidirectional; enter AWG get mm², or mm² get AWG.
+                                Also shows OD, resistance, and current capacity for
+                                the selected size.
+    2. Voltage Drop Calculator — user enters: cable length, current, conductor size,
+                                  system voltage → outputs voltage drop % and whether
+                                  it passes IEC/NEC limits.
+    3. Current Carrying Capacity table — ambient temp correction factors, installation
+                                          methods (in conduit, on tray, buried).
+    4. Conductor Resistance Reference — mΩ/m for standard sizes at 20°C and 90°C.
+    5. Cable size wizard       — guided questionnaire: application → environment →
+                                  current → recommended Siechem part number.
+
+  WHY THIS PAGE EXISTS:
+    Engineers from aerospace, automotive, and marine OEMs are heavy users of these
+    tools. Having them embedded on the site (rather than linking to a third-party
+    calculator) keeps users on the Siechem domain, increases session time, and
+    creates natural conversion to the quote form at the end of the wizard.
+
+  JS LOGIC (inline <script>):
+    All calculator logic is pure vanilla JS. No libraries. Formula references:
+    - Voltage drop: V_drop = (2 × L × I × ρ) / A  where ρ = 0.0175 Ω·mm²/m for copper
+    - Resistance: R = ρ × L / A
+    Correct values are hardcoded as lookup tables for AWG sizes (standard industry values).
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

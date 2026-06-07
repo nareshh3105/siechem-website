@@ -1,4 +1,44 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: siechem-redesign-2d.html
+
+  PURPOSE:
+    An early React-based prototype of the Siechem homepage. This was the v2 design
+    exploration that used React 18 + Babel standalone (no build step) to compose the
+    homepage from modular JSX components (SiechemNav, SiechemHero, SiechemSegments,
+    SiechemCalculator, SiechemCapabilities, SiechemFooter). It was used as a design
+    sandbox during the initial redesign phase.
+
+  STATUS: PROTOTYPE / ARCHIVED
+    This file is NOT the live homepage. The live site uses siechem-redesign.html
+    (pure static HTML with theme.css). The React version was superseded because:
+    a) Babel standalone (CDN) adds ~300KB of JS overhead just to transpile JSX
+       in the browser — unacceptable for a production B2B site where page speed
+       matters for SEO and first impressions.
+    b) Static HTML with vanilla JS achieves identical functionality with zero
+       framework overhead and no build tooling requirement.
+    c) Adding new pages (certifications, catalogues, marine spec, etc.) is faster
+       in plain HTML than in a React component architecture with no bundler.
+
+  HOW IT WORKS (for reference):
+    Loads React 18, ReactDOM 18, and Babel standalone from CDN unpkg. The page has
+    a single `<div id="root">` that React mounts into. SiechemApp.jsx is loaded
+    as a <script type="text/babel"> tag. Babel transpiles the JSX client-side.
+    The TweaksPanel (from tweaks-panel.jsx) provides a floating design-tweak UI
+    for changing accent colour and layout density during demos.
+
+  DO NOT LINK TO THIS PAGE from the main navigation.
+    It is kept in the repo as a reference/backup of the React architecture.
+
+  DEPENDENCIES:
+    - React 18.3.1 (CDN)
+    - ReactDOM 18.3.1 (CDN)
+    - Babel Standalone 7.29.0 (CDN)
+    - SiechemApp.jsx
+    - components/SiechemNav.jsx, SiechemHero.jsx, SiechemSegments.jsx,
+      SiechemCalculator.jsx, SiechemCapabilities.jsx, SiechemFooter.jsx
+    - tweaks-panel.jsx
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

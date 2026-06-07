@@ -1,3 +1,41 @@
+/**
+ * FILE: components/SiechemCapabilities.jsx
+ *
+ * PURPOSE:
+ *   React component that renders the "Manufacturing Capabilities" and "Why Siechem"
+ *   sections on the React prototype homepage. Shows Siechem's key technical
+ *   differentiators as a grid of highlight cards.
+ *
+ * CONTENT (TECH_HIGHLIGHTS array):
+ *   Each card covers one manufacturing capability or quality advantage:
+ *   1. E-Beam Crosslinking  — in-house electron beam irradiation facility (one of
+ *                              very few cable makers in India with this capability).
+ *                              Required for XLPE, XLPE-LSZH, and radiation-crosslinked
+ *                              insulations used in nuclear and aerospace applications.
+ *   2. In-house Test Lab    — NABL-accredited test lab. Can run IEC, UL, MIL-spec,
+ *                              and BS tests without sending samples to a third-party
+ *                              lab, reducing lead time and cost.
+ *   3. 100,000 sq.ft Factory— Combined Chennai + Pondicherry manufacturing footprint.
+ *                              Conveys scale to procurement teams assessing capacity.
+ *   4. 22M+ Configurations  — breadth of customisation (size × insulation × sheath
+ *                              × colour × drum length combinations).
+ *   5. Traceability         — batch-level traceability from raw copper to finished
+ *                              drum. Required by defence and aerospace customers.
+ *   6. Export to 80+ Countries— validates global acceptance and compliance capability.
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour for card icons and accent borders
+ *
+ * WHY THESE SIX:
+ *   These are the questions procurement engineers from defence, aerospace, and
+ *   automotive OEMs ask first: "Do you have an E-beam? Is your lab NABL? What
+ *   capacity do you have? Can you trace every batch?" Answering them visually on
+ *   the homepage pre-qualifies Siechem before the first call.
+ *
+ * NOTE:
+ *   Used only in the React prototype. The static homepage has equivalent content
+ *   in a hardcoded HTML section styled by theme.css.
+ */
 const TECH_HIGHLIGHTS = [
   {
     icon: (c) => (

@@ -1,4 +1,44 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: product-automotive.html
+
+  PURPOSE:
+    Product detail / interactive spec page for Siechem's Automotive Cables range.
+    This is the most feature-complete product page on the site — it combines:
+    a) Marketing overview of the automotive range (standards: JASO D611, ISO 6722,
+       LV216, SAE J1128; customers: Maruti Suzuki, Tata, Hyundai, Ashok Leyland)
+    b) An interactive cable selector where the engineer chooses a standard and the
+       page auto-populates the size table and spec parameters
+    c) An inline quote request form that captures the selected cable spec and
+       passes it as JSON to /api/quote — so the customer confirmation email includes
+       the exact spec table for what they configured
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb        — "Home → Products → Automotive Cables"
+    2. Product hero            — "Automotive Cables" headline, standards badges,
+                                  hero image of automotive wire harness
+    3. Applications            — OEM wiring harnesses, EV battery packs, engine bay,
+                                  door modules, sensor leads
+    4. Standards at a glance   — JASO D611, ISO 6722-1, LV216, SAE J1128,
+                                  DIN 72551, GMW3011 compliance icons
+    5. Interactive selector    — dropdown: choose standard → spec table updates live
+                                  (conductor type, insulation, temp range, voltage,
+                                  available sizes with current rating per size)
+    6. Quote form              — Name, Company, Email, Phone, Part Number, Quantity,
+                                  Delivery, Notes. On submit: posts to /api/quote
+                                  with cable_spec JSON auto-filled from the selector.
+
+  WHY THE AUTOMOTIVE PAGE IS MORE INTERACTIVE THAN OTHERS:
+    Automotive cable selection is high-volume and specification-driven. Tier-1
+    OEM suppliers (Maruti, Tata, Hyundai) require exact compliance to their OEM
+    standard (e.g. JASO D611 vs LV216). The interactive selector reduces back-and-forth
+    email: the engineer picks their standard, sees the spec, and submits a pre-qualified
+    quote request in one flow. Other segments (aerospace, marine) have simpler product
+    families and don't need the same level of self-service tooling.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js, api/quote.js
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

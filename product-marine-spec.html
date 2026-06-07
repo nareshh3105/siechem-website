@@ -1,3 +1,40 @@
+<!--
+  FILE: product-marine-spec.html
+
+  PURPOSE:
+    Full technical specification page for Siechem's Marine, Shipboard & Boat Cable range.
+    Covers cables certified to IEC 60092 (marine shipboard wiring), NEK 606 (Norwegian
+    offshore), Lloyd's Register type approval, and DNV-GL. Used by ship designers,
+    naval architects, offshore platform engineers, and shipyard procurement teams.
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb       — "Home → Products → Marine Cables → Spec Sheet"
+    2. Spec hero              — "Marine & Shipboard Cables" with IEC 60092, NEK 606,
+                                 Lloyd's, DNV-GL badges
+    3. Cable categories       — Power cables (1.1kV, 3.3kV, 6.6kV, 11kV), Control cables,
+                                 Instrumentation cables, Fire-resistant (IEC 60331),
+                                 Halogen-free (IEC 60754), Mud-resistant offshore cables
+    4. IEC 60092 compliance   — Part references: 60092-350 (general), 60092-353 (power),
+                                 60092-354 (HV), 60092-376 (data/instr), 60092-507 (flex)
+    5. Construction details   — conductor (stranded Cu, IEC 60228 Class 2/5);
+                                 insulation (EPR / XLPE / LSZH); armour (SWA, STA, AWA);
+                                 outer sheath (PVC/LSZH/polyurethane)
+    6. Fire performance       — IEC 60332-1/3 flame retardant; IEC 60331 fire resistant;
+                                 IEC 60754 halogen-free; IEC 61034 smoke density
+    7. Full size table        — 1.5mm² to 300mm² per construction type
+    8. Type approval list     — Lloyd's Register, DNV-GL, ABS, BV, ClassNK certificates
+    9. Inline quote form      — pre-fills marine cable spec, posts to /api/quote
+
+  WHY MARINE IS A STANDALONE SPEC PAGE:
+    Marine cables have unique requirements not shared with other segments: salt mist
+    resistance, oil resistance, fire performance to IEC 60331, mud resistance for
+    offshore, and mandatory classification society type approval (Lloyd's, DNV-GL).
+    Combining marine specs with industrial or power cables on a single page would
+    confuse engineers and make the type approval references harder to navigate.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js, api/quote.js
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

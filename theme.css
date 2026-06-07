@@ -1,4 +1,45 @@
 /* ════════════════════════════════════════════════════════════
+   FILE: theme.css
+
+   PURPOSE:
+     The single global stylesheet for the entire Siechem website. Every HTML page
+     links to this one file. It provides:
+       1. CSS custom properties (design tokens) — all colours, radii, shadows, fonts
+       2. Base/reset rules — box-sizing, margin, link, img defaults
+       3. Layout primitives — .container, .grid-2/3/4/auto, .section, .section-divider
+       4. Navigation — .nav, .nav-inner, .nav-link, .nav-logo, .nav-cta, mobile menu
+       5. Typography — .eyebrow, .page-title, .page-lede, .section-head, .section-title
+       6. Button system — .btn-primary, .btn-ghost (used on all CTAs across the site)
+       7. Form elements — .input, .filter-bar (used on tech-support, catalogues, products)
+       8. Hero section — .page-hero, .page-hero-content, .hero-img
+       9. Scroll-reveal animation — .reveal / .visible transition
+      10. Component styles — .cert-card, .approvals-grid, .approval-logo, .compliance-band
+          (defined in individual page <style> blocks to keep them co-located with their HTML,
+          but global components like .reveal are here)
+      11. Back-to-top button — .back-to-top, .btt-visible
+      12. Mobile sticky CTA bar — .mobile-sticky-cta (fixed bottom bar on small screens)
+      13. Footer — .footer, .footer-grid, .footer-brand, .footer-col, .footer-meta
+      14. Mobile nav overrides — html.nav-open overflow:hidden to lock scroll
+
+   WHY ONE FILE FOR THE WHOLE SITE:
+     The site is 20+ standalone HTML files with no bundler. A shared theme.css means:
+     - Colour changes (e.g. updating --accent from #E31E24 to a new red) propagate
+       everywhere by editing one variable in :root.
+     - Layout grids (.grid-3, .grid-4) are consistent across all pages without copying.
+     - The browser caches theme.css after the first page load, so subsequent page
+       navigations load near-instantly (no CSS re-download).
+
+   DESIGN TOKEN PHILOSOPHY:
+     All colours, spacings, shadows are CSS variables in :root so future brand updates
+     require only changing the token value, not hunting through selectors. The --accent
+     variable drives the red across buttons, borders, badges, underlines, and hover states.
+
+   PRIMARY FONT STACK:
+     Body: 'Roboto' (Google Fonts) — clean, neutral, excellent for tables and data
+     Headings: 'Open Sans' — slightly wider, works at large sizes for hero headlines
+     Code/mono: 'JetBrains Mono' — used for standard codes, badge labels, meta text
+                                    (gives an engineering/technical feel to spec data)
+
    Siechem — Light Red & White Theme  (brand-accurate)
    Primary red: #E31E24  |  Background: #FFFFFF
    ════════════════════════════════════════════════════════════ */

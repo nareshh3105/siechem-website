@@ -1,4 +1,35 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: siechem-redesign.html
+
+  PURPOSE:
+    The main homepage of the Siechem website redesign. This is what visitors land on
+    from siechem.vercel.app/ (index.html redirects here). It introduces the brand,
+    showcases product segments, displays headline statistics, and funnels visitors
+    to either the product pages or the contact/quote page.
+
+  PAGE SECTIONS (in order):
+    1. Nav bar              — sticky header with all site links + "Request Quote" CTA
+    2. Hero                 — large headline, brand statement, hero image from PPT assets
+    3. Trusted-by logos     — customer logo strip (TATA, HAL, ISRO, Indian Railways etc.)
+    4. Product segments     — 6 cards linking to Aerospace, Automotive, Marine, Solar etc.
+    5. Stats band           — animated counters: 22M+ configs, 40+ years, 80+ countries
+    6. Capabilities         — 3-column grid of manufacturing capabilities (E-beam, in-house lab etc.)
+    7. Why Siechem          — differentiators section (certifications, traceability, delivery)
+    8. CTA band             — "Request a Quote" and "Browse Catalogues" buttons
+    9. Footer               — full site map + contact details
+
+  WHY STATIC HTML (not React/Next.js):
+    The site is deployed on Vercel as a purely static project. No build step, no
+    bundler, no framework. This makes deployment instant, hosting free on Vercel's
+    free tier, and the site loadable from any CDN without Node.js. All interactivity
+    (scroll animations, nav) is handled by vanilla JS in animations.js and nav-mobile.js.
+
+  SHARED DEPENDENCIES:
+    - theme.css       → all layout, colour tokens, typography, component styles
+    - animations.js   → scroll-reveal, stat counters, nav-blur (loaded at bottom)
+    - nav-mobile.js   → hamburger toggle (loaded at bottom with defer)
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

@@ -1,3 +1,39 @@
+<!--
+  FILE: product-aero44-spec.html
+
+  PURPOSE:
+    Full technical datasheet / specification page for the Aero 44 (MIL-DTL-16878 /
+    AS22759) aerospace wire range. This is the deep-dive engineering reference that
+    procurement engineers and quality engineers use to verify the product meets their
+    design requirements before placing an order.
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb        — "Home → Products → Aerospace → Aero 44 → Spec Sheet"
+    2. Spec hero               — product designation, standard number, key parameters
+    3. Construction details    — conductor: stranded copper / silver-plated copper;
+                                  insulation: PTFE / ETFE / cross-linked ETFE;
+                                  shield options: braided / spiral; outer jacket
+    4. Electrical properties   — voltage rating (600V), conductor resistance table,
+                                  insulation resistance, capacitance
+    5. Mechanical properties   — min bend radius, tensile strength, crush resistance
+    6. Temperature range       — operating temp (-65°C to +260°C for PTFE grades)
+    7. Full size range table   — AWG 28 through AWG 4/0; per-size: conductor stranding,
+                                  conductor OD, insulation thickness, cable OD,
+                                  current capacity, weight per 100m
+    8. Applicable standards    — MIL-DTL-16878, AS22759, MIL-W-22759, NEMA WC 27500
+    9. Quote form panel        — inline abbreviated quote form that submits to /api/quote
+                                  with cable_spec JSON pre-filled (so the customer email
+                                  includes the Aero 44 spec table automatically)
+
+  WHY THIS IS SEPARATE FROM product-aero44.html:
+    The marketing page (product-aero44.html) introduces the product for non-engineers.
+    This spec sheet is for engineers who already know what they want and need to
+    verify exact numbers: conductor resistance, OD, temp range, standard compliance.
+    Separating them keeps each page focused and the URLs shareable/bookmarkable.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js, api/quote.js
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>

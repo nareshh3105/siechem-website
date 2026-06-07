@@ -1,4 +1,40 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: product-detail.html
+
+  PURPOSE:
+    Generic product detail page template. Used as the base layout/design reference
+    when building new product-specific pages. Also serves as the live detail page
+    for product families that don't yet have a dedicated spec page (e.g. Solar Cables,
+    Fire Resistant Cables, Silicone Cables).
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb       — dynamic based on product
+    2. Product hero           — product name, key standards, hero image
+    3. Overview / description — what the product is, typical applications
+    4. Key features           — bullet list of technical differentiators
+    5. Spec summary table     — voltage rating, temp range, insulation, conductor
+    6. Available sizes        — simplified size table (not full datasheet level)
+    7. Related products       — links to other product families in the same segment
+    8. Quote CTA              — links to contact.html
+
+  WHY THIS FILE EXISTS ALONGSIDE DEDICATED PAGES:
+    Building a full spec page for every one of Siechem's 40+ product families is a
+    large undertaking. product-detail.html provides a working, deployable placeholder
+    for the product families not yet given their own dedicated page. When a new
+    dedicated page (e.g. product-solar-spec.html) is ready, the catalogue link is
+    simply updated from product-detail.html to the new URL.
+
+  HOW TO USE AS A TEMPLATE:
+    1. Copy this file and rename it (e.g. product-solar-spec.html)
+    2. Update the breadcrumb path, page title, meta description
+    3. Replace the hero content with the product name and standards
+    4. Fill in the spec table and size range for the new product
+    5. Update the ALL_SEGS entry in products.html and catalogues.html to link here
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

@@ -1,4 +1,36 @@
-﻿<!DOCTYPE html>
+﻿<!--
+  FILE: customers.html
+
+  PURPOSE:
+    Social proof page. Displays logos and brief context for Siechem's major customers
+    across all sectors — Aerospace (HAL, IAI, Boeing supply chain), Automotive
+    (Maruti Suzuki, Tata, Hyundai, Ashok Leyland), Defence (DRDO, Indian Navy),
+    Railway (Indian Railways, CRRC, Alstom, Bombardier), Industrial (ABB, Siemens).
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb     — "Home → Customers"
+    2. Page hero            — "Trusted by the builders who can't afford to fail"
+    3. Customer logo grid   — responsive logo grid (same logo-card pattern as
+                               certifications.html approvals section) pulled from
+                               siechem.com/wp-content/uploads/ URLs
+    4. Sector breakdown     — grouped by industry (Aerospace / Automotive / Marine /
+                               Defence / Railway / Industrial) with sector headings
+    5. Case study teaser    — brief 2-line context per major customer (what they
+                               use Siechem cables for, how long the relationship is)
+    6. CTA                  — "Join our customer list — Request a Quote"
+
+  WHY THIS PAGE EXISTS:
+    B2B buyers almost always check "who else uses this supplier" before qualifying
+    a new vendor. Showing TATA, HAL, Maruti Suzuki, Indian Railways, and Alstom
+    logos immediately validates Siechem's tier-1 supply chain position. This page
+    is also shared in email pitches to new OEM prospects.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+    - Logo images are loaded from siechem.com CDN (no local copies needed since
+      they're the official customer logos served from the live site).
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">

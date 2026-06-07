@@ -1,3 +1,49 @@
+/**
+ * FILE: api/quote.js
+ *
+ * PURPOSE:
+ *   Vercel serverless function that handles all quote / enquiry form submissions
+ *   from the website. Called via POST /api/quote from the contact and product pages.
+ *
+ * WHAT IT DOES:
+ *   When a user submits a quote request form, this function sends TWO emails:
+ *
+ *   1. Company notification email → sent to GMAIL_USER (the Siechem sales inbox).
+ *      Contains: customer name, phone, company, email, part number, cable type,
+ *      quantity, delivery requirement, and any notes. Plain table layout so sales
+ *      can read it quickly on mobile.
+ *
+ *   2. Customer acknowledgement email → sent to the customer's own email address.
+ *      Contains: a generated reference number (SC-XXXXXX), a summary of what they
+ *      requested, full product specification table (if the form passed cable_spec
+ *      JSON — e.g. from the automotive product page which auto-fills spec data),
+ *      and a "what happens next" section explaining the 4-hour response SLA.
+ *
+ * WHY SERVERLESS (not a contact form service):
+ *   - The customer email includes dynamic product spec data (size tables, temp
+ *     ratings, insulation type) pulled from the page's JS — a generic form service
+ *     like Formspree can't render those as a formatted HTML table.
+ *   - Vercel serverless gives us full Node.js so we can use nodemailer to build
+ *     the HTML email ourselves with complete layout control.
+ *   - No external form service subscription needed; cost is zero on Vercel's free tier.
+ *
+ * ENVIRONMENT VARIABLES (set in Vercel project dashboard):
+ *   GMAIL_USER  — sender Gmail address (e.g. nareshkumargs3105@gmail.com)
+ *   GMAIL_PASS  — 16-character Gmail App Password (not the account password)
+ *                 Generate at: myaccount.google.com → Security → App Passwords
+ *
+ * ERROR HANDLING:
+ *   - Each email send is wrapped in try/catch independently.
+ *   - If BOTH emails fail → returns HTTP 500 with error details.
+ *   - If only ONE fails (e.g. customer email bounced) → returns HTTP 200 with a
+ *     `warnings` array so the UI still shows "success" to the customer but the
+ *     partial failure is logged.
+ *
+ * REFERENCE NUMBER FORMAT:
+ *   "SC-" + last 6 chars of Date.now().toString(36).toUpperCase()
+ *   e.g. SC-1Z4FPQ — base-36 is used so the ref is short enough to read over
+ *   the phone but still unique within the same millisecond window.
+ */
 // Vercel serverless function — POST /api/quote
 // Sends two emails via Gmail SMTP (nodemailer):
 //   1. Company notification  → GMAIL_USER (nareshkumargs3105@gmail.com)

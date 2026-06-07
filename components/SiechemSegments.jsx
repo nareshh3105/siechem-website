@@ -1,3 +1,34 @@
+/**
+ * FILE: components/SiechemSegments.jsx
+ *
+ * PURPOSE:
+ *   React component that renders the "Product Segments" section on the React prototype
+ *   homepage. Shows the 6 core market segments Siechem serves as interactive cards:
+ *   Aerospace, Automotive, Marine, Solar, Railway, and Industrial/Defence.
+ *
+ * EACH SEGMENT CARD CONTAINS:
+ *   - Segment icon (custom SVG, rendered by SegIcon sub-component)
+ *   - Segment name + short description (1 line)
+ *   - Key standards for that segment (e.g. "MIL-DTL-16878 · AS22759" for Aerospace)
+ *   - "Explore →" link to the segment's product page
+ *   - Hover state: slight card lift + accent-border highlight
+ *
+ * SEGMENT DATA:
+ *   Stored in the SEGMENTS array. Each entry has:
+ *     name, icon (string type for SegIcon), description, standards, href
+ *
+ * PROPS:
+ *   accent  {string}  — CSS colour for icon fills, hover borders, "Explore" link
+ *
+ * WHY SVG ICONS INLINE (not a library like lucide/heroicons):
+ *   Each segment icon is a custom engineering-domain icon (cable cross-section for
+ *   Marine, circuit board trace for Industrial, rocket for Aerospace). No icon library
+ *   ships these. Inline SVGs keep the component self-contained with zero extra imports.
+ *
+ * NOTE:
+ *   Used only in the React prototype (siechem-redesign-2d.html). The static
+ *   homepage (siechem-redesign.html) has equivalent segment cards hardcoded in HTML.
+ */
 const { useState } = React;
 
 const SegIcon = ({ type, color }) => {
