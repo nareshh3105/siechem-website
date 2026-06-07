@@ -108,6 +108,37 @@
     }
     .cat-card:hover .cat-dl { background: var(--accent-light); }
 
+    /* Mobile grid overrides */
+    @media (max-width: 600px) {
+      #allSegGrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .cat-cover {
+        padding: 14px;
+        aspect-ratio: 2 / 3;
+      }
+      .cat-cover .cat-title {
+        font-size: 15px;
+        margin-top: 36px !important;
+      }
+      .cat-cover .cat-sub {
+        font-size: 9.5px;
+      }
+      .cat-cover .siechem-mark {
+        font-size: 9px;
+      }
+      .cat-cover .pages-count {
+        font-size: 9.5px;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      #allSegGrid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
     .toolkit-link {
       display: flex; align-items: center; gap: 12px;
       padding: 14px 18px;
@@ -390,13 +421,6 @@
             <div class="cat-sub">${seg.std}</div>
           </div>
           <div class="pages-count">PDF · On Request</div>
-        </div>
-        <div class="cat-meta">
-          <div class="info">
-            <span class="info-size">Technical Catalogue</span>
-            <span class="info-ver">Contact us to download</span>
-          </div>
-          <div class="cat-dl">${dlIcon}</div>
         </div>
       </a>
     `).join('');
