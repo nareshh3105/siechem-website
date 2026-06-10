@@ -240,7 +240,7 @@
 
     /* ───────── Section Layouts ───────── */
     .section-padding {
-      padding: 80px 0;
+      padding: 60px 0;
     }
     .bg-light-grey {
       background: #F8FAFC;
@@ -861,6 +861,340 @@
     .mobile-menu.open .mobile-menu-links a:nth-child(7) {
       transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
     }
+    /* ─── Trusted By Marquee ─── */
+    .trusted-band {
+      padding: 40px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .trusted-band-label {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 22px;
+    }
+    .trusted-marquee-row {
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .trusted-marquee-row:last-child { margin-bottom: 0; }
+    .trusted-marquee-track {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      animation: marqueeSlide 36s linear infinite;
+      will-change: transform;
+    }
+    .trusted-marquee-row.rev .trusted-marquee-track {
+      animation-direction: reverse;
+      animation-duration: 42s;
+    }
+    .trusted-band:hover .trusted-marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeSlide {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trusted-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 32px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-faint);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      border-right: 1px solid var(--border);
+      transition: color 0.2s, background 0.2s;
+    }
+    .trusted-item:hover { color: var(--text); background: var(--accent-soft); }
+
+    /* ─── Industries We Serve ─── */
+    .ind-section { background: var(--bg); }
+    .ind-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .ind-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 22px 22px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .ind-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ind-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-border);
+      box-shadow: 0 16px 36px rgba(227,30,36,0.10);
+    }
+    .ind-card:hover::after { transform: scaleX(1); }
+    .ind-icon {
+      width: 46px; height: 46px;
+      border-radius: 11px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      color: var(--accent);
+    }
+    .ind-card:hover .ind-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+      transform: rotate(-4deg) scale(1.08);
+    }
+    .ind-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .ind-cert {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .ind-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      flex: 1;
+      margin-top: 5px;
+    }
+    .ind-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: all 0.25s;
+    }
+    .ind-card:hover .ind-cta { opacity: 1; transform: translateX(0); }
+    @media (max-width: 900px) { .ind-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .ind-grid { grid-template-columns: 1fr; } }
+
+    /* ─── Dark Animated Stats Band ─── */
+    .stats-band {
+      background: #111111;
+      padding: 64px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-band::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.13) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .stats-band::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -60px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .stats-band-head {
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative; z-index: 2;
+    }
+    .stats-band-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .stats-band-title {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.4px;
+    }
+    .stats-band-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .stats-band-item {
+      padding: 32px 24px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.3s;
+    }
+    .stats-band-item:hover { background: rgba(227,30,36,0.06); }
+    .stats-band-item:last-child { border-right: none; }
+    .stats-num {
+      font-size: clamp(38px, 4.5vw, 56px);
+      font-weight: 900;
+      font-family: var(--mono);
+      letter-spacing: -2px;
+      line-height: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      color: #FFFFFF;
+    }
+    .stats-num .num-suffix {
+      color: var(--accent);
+      font-size: 0.62em;
+      margin-top: 8px;
+      letter-spacing: 0;
+    }
+    .stats-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+    }
+    .stats-sub {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.3);
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .stats-band-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-band-item:nth-child(2) { border-right: none; }
+      .stats-band-item:nth-child(1),
+      .stats-band-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    }
+    @media (max-width: 480px) {
+      .stats-band { padding: 44px 0; }
+      .stats-num { font-size: 34px; }
+    }
+
+    /* ─── Process Strip ─── */
+    .process-section { background: var(--bg-soft); }
+    .process-track {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      gap: 0;
+    }
+    .process-connector {
+      position: absolute;
+      top: 27px;
+      left: calc(10% + 27px);
+      right: calc(10% + 27px);
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+      border-radius: 2px;
+    }
+    .process-connector-fill {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      border-radius: 2px;
+      transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    }
+    .process-step {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .process-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .process-step.step-lit .process-num {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(227,30,36,0.40);
+      transform: scale(1.12);
+    }
+    .process-step-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .process-step-desc {
+      font-size: 11.5px;
+      color: var(--text-faint);
+      line-height: 1.5;
+      max-width: 120px;
+    }
+    @media (max-width: 640px) {
+      .process-track { flex-direction: column; gap: 18px; align-items: stretch; }
+      .process-connector { display: none; }
+      .process-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 14px; padding: 0; }
+      .process-num { flex-shrink: 0; margin-bottom: 0; }
+      .process-step-desc { max-width: 100%; }
+    }
+
     /* Certifications ticker */
     .cert-ticker-outer {
       background: #1C1A19;
@@ -1149,6 +1483,75 @@
     </div>
   </section>
 
+  <!-- ═══ Trusted By Marquee ═══ -->
+  <section class="trusted-band" aria-label="Trusted by leading companies">
+    <p class="trusted-band-label">Trusted by industry leaders — aerospace · defence · automotive · energy · rail</p>
+
+    <!-- Row 1 — scrolls left -->
+    <div class="trusted-marquee-row">
+      <div class="trusted-marquee-track">
+        <span class="trusted-item">HAL</span>
+        <span class="trusted-item">ISRO</span>
+        <span class="trusted-item">Indian Railways</span>
+        <span class="trusted-item">Tata Motors</span>
+        <span class="trusted-item">Siemens</span>
+        <span class="trusted-item">Honeywell</span>
+        <span class="trusted-item">Schneider Electric</span>
+        <span class="trusted-item">ABB</span>
+        <span class="trusted-item">Maruti Suzuki</span>
+        <span class="trusted-item">Alstom</span>
+        <span class="trusted-item">GE Energy</span>
+        <span class="trusted-item">Mitsubishi Electric</span>
+      </div>
+      <div class="trusted-marquee-track" aria-hidden="true">
+        <span class="trusted-item">HAL</span>
+        <span class="trusted-item">ISRO</span>
+        <span class="trusted-item">Indian Railways</span>
+        <span class="trusted-item">Tata Motors</span>
+        <span class="trusted-item">Siemens</span>
+        <span class="trusted-item">Honeywell</span>
+        <span class="trusted-item">Schneider Electric</span>
+        <span class="trusted-item">ABB</span>
+        <span class="trusted-item">Maruti Suzuki</span>
+        <span class="trusted-item">Alstom</span>
+        <span class="trusted-item">GE Energy</span>
+        <span class="trusted-item">Mitsubishi Electric</span>
+      </div>
+    </div>
+
+    <!-- Row 2 — scrolls right (reverse) -->
+    <div class="trusted-marquee-row rev">
+      <div class="trusted-marquee-track">
+        <span class="trusted-item">Ashok Leyland</span>
+        <span class="trusted-item">DRDO</span>
+        <span class="trusted-item">Bombardier</span>
+        <span class="trusted-item">Hyundai India</span>
+        <span class="trusted-item">CRRC</span>
+        <span class="trusted-item">Aptiv</span>
+        <span class="trusted-item">Yazaki</span>
+        <span class="trusted-item">Ford India</span>
+        <span class="trusted-item">NTPC</span>
+        <span class="trusted-item">TVS Motors</span>
+        <span class="trusted-item">Renault–Nissan</span>
+        <span class="trusted-item">Daimler India</span>
+      </div>
+      <div class="trusted-marquee-track" aria-hidden="true">
+        <span class="trusted-item">Ashok Leyland</span>
+        <span class="trusted-item">DRDO</span>
+        <span class="trusted-item">Bombardier</span>
+        <span class="trusted-item">Hyundai India</span>
+        <span class="trusted-item">CRRC</span>
+        <span class="trusted-item">Aptiv</span>
+        <span class="trusted-item">Yazaki</span>
+        <span class="trusted-item">Ford India</span>
+        <span class="trusted-item">NTPC</span>
+        <span class="trusted-item">TVS Motors</span>
+        <span class="trusted-item">Renault–Nissan</span>
+        <span class="trusted-item">Daimler India</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Capabilities Section -->
   <section class="section-padding">
     <div class="container">
@@ -1200,6 +1603,97 @@
     </div>
   </section>
 
+  <!-- ═══ Industries We Serve ═══ -->
+  <section class="section-padding ind-section">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 36px;">
+        <span class="section-eyebrow">Our Expertise</span>
+        <h2 class="section-title">Industries We Serve</h2>
+      </div>
+      <div class="ind-grid">
+
+        <!-- Aerospace & Defence -->
+        <a href="product-aero44.html" class="ind-card reveal">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </div>
+          <div class="ind-name">Aerospace &amp; Defence</div>
+          <div class="ind-cert">AS 9100 · MIL-Spec · DGAQA</div>
+          <p class="ind-desc">High-reliability wiring for avionics, airframes, UAVs, missiles and satellite systems — built to survive extreme altitude and vibration.</p>
+          <div class="ind-cta">View Aerospace Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Automotive -->
+        <a href="product-automotive.html" class="ind-card reveal reveal-d1">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+            </svg>
+          </div>
+          <div class="ind-name">Automotive</div>
+          <div class="ind-cert">SAE J1128 · JASO D611 · IS 14465</div>
+          <p class="ind-desc">OEM-approved harness wires for engine bays, EV battery packs, and chassis — meeting ARAI, NABL, and global OEM specifications.</p>
+          <div class="ind-cta">View Automotive Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Marine -->
+        <a href="products.html" class="ind-card reveal reveal-d2">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 013 3v1h3l2 6H4l2-6h3V5a3 3 0 013-3z"/><path d="M3 16l2-5h14l2 5"/><path d="M3 16c0 2.2 4 4 9 4s9-1.8 9-4"/>
+            </svg>
+          </div>
+          <div class="ind-name">Marine</div>
+          <div class="ind-cert">IEC 60092 · ABS · IR Class</div>
+          <p class="ind-desc">Flame-retardant, oil-resistant and salt-spray proof cables for naval vessels, offshore platforms and commercial shipping fleets.</p>
+          <div class="ind-cta">View Marine Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Railway & Metro -->
+        <a href="products.html" class="ind-card reveal">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><circle cx="8.5" cy="16.5" r="1.5"/><circle cx="15.5" cy="16.5" r="1.5"/><path d="M8 21l2-2h4l2 2"/>
+            </svg>
+          </div>
+          <div class="ind-name">Railway &amp; Metro</div>
+          <div class="ind-cert">EN 50264 · RDSO · CRRC</div>
+          <p class="ind-desc">Rolling-stock approved cables for high-speed trains, metro coaches and traction systems — meeting RDSO and European EN standards.</p>
+          <div class="ind-cta">View Railway Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Solar & Renewable -->
+        <a href="products.html" class="ind-card reveal reveal-d1">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+          </div>
+          <div class="ind-name">Solar &amp; Renewable Energy</div>
+          <div class="ind-cert">TÜV · IEC 62930 · UL</div>
+          <p class="ind-desc">UV-stabilised, moisture-resistant PV cables for utility-scale solar farms, wind turbines and battery energy storage systems.</p>
+          <div class="ind-cta">View Solar Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Industrial & Infrastructure -->
+        <a href="products.html" class="ind-card reveal reveal-d2">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="ind-name">Industrial &amp; Infrastructure</div>
+          <div class="ind-cert">IEC 60228 · IS 694 · LSZH</div>
+          <p class="ind-desc">Heavy-duty cables for power plants, process industries, data centres and smart-grid infrastructure — LSZH compliant for safety.</p>
+          <div class="ind-cta">View Industrial Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials & Client logos Section -->
   <section class="section-padding bg-light-grey">
     <div class="container">
@@ -1244,6 +1738,87 @@
         <div class="client-logo-item">Schneider</div>
         <div class="client-logo-item">GE Energy</div>
         <div class="client-logo-item">Mitsubishi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Animated Stats Band ═══ -->
+  <section class="stats-band" id="stats-band">
+    <div class="container">
+      <div class="stats-band-head reveal">
+        <div class="stats-band-eyebrow">Siechem By The Numbers</div>
+        <div class="stats-band-title">Four Decades of Engineering Excellence</div>
+      </div>
+      <div class="stats-band-grid">
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="22" data-count-suffix="">0</span><span class="num-suffix">M+</span>
+          </div>
+          <div class="stats-label">Cable Configurations</div>
+          <div class="stats-sub">Engineered &amp; documented formulations</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="40" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Years of Excellence</div>
+          <div class="stats-sub">Precision manufacturing since 1982</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="80" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Countries Export</div>
+          <div class="stats-sub">Trusted by OEMs across 6 continents</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="38" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Tests Per Cable</div>
+          <div class="stats-sub">Hi-pot, flame, oil &amp; flex in-house</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ From Design to Delivery — Process Strip ═══ -->
+  <section class="section-padding process-section" id="process-section">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 40px;">
+        <span class="section-eyebrow">How We Work</span>
+        <h2 class="section-title">From Design to Delivery</h2>
+      </div>
+      <div class="process-track" id="process-track">
+        <!-- Animated connector line -->
+        <div class="process-connector">
+          <div class="process-connector-fill" id="process-fill"></div>
+        </div>
+        <div class="process-step" id="pstep-1">
+          <div class="process-num">01</div>
+          <div class="process-step-title">Design Consultation</div>
+          <div class="process-step-desc">Application engineers define your exact spec — gauge, insulation, shielding, temperature range.</div>
+        </div>
+        <div class="process-step" id="pstep-2">
+          <div class="process-num">02</div>
+          <div class="process-step-title">Material Compounding</div>
+          <div class="process-step-desc">In-house polymer compounding lab blends custom insulation to meet your chemical and thermal requirements.</div>
+        </div>
+        <div class="process-step" id="pstep-3">
+          <div class="process-num">03</div>
+          <div class="process-step-title">E-Beam Processing</div>
+          <div class="process-step-desc">Electron-beam cross-linking upgrades temperature ratings without any additive — a unique Siechem advantage.</div>
+        </div>
+        <div class="process-step" id="pstep-4">
+          <div class="process-num">04</div>
+          <div class="process-step-title">In-House Testing</div>
+          <div class="process-step-desc">NABL-accredited lab runs 38+ tests: hi-pot, flame, oil immersion, flexing, and salt-spray.</div>
+        </div>
+        <div class="process-step" id="pstep-5">
+          <div class="process-num">05</div>
+          <div class="process-step-title">Global Delivery</div>
+          <div class="process-step-desc">Full traceability documentation and CoC shipped with every order to any destination worldwide.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -1493,6 +2068,58 @@
             closeModal();
           }
         });
+      }
+
+      // ─── Animated Stats Counter ───
+      // When the stats band scrolls into view, count each .num-value up to its data-count-to
+      const statsBand = document.getElementById('stats-band');
+      if (statsBand) {
+        const numEls = statsBand.querySelectorAll('.num-value[data-count-to]');
+        let counted = false;
+        const runCounters = () => {
+          if (counted) return;
+          counted = true;
+          numEls.forEach(el => {
+            const target = parseInt(el.getAttribute('data-count-to'), 10);
+            const duration = 1800; // ms
+            const start = performance.now();
+            const tick = (now) => {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.floor(eased * target);
+              if (progress < 1) requestAnimationFrame(tick);
+              else el.textContent = target;
+            };
+            requestAnimationFrame(tick);
+          });
+        };
+        const statsObs = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) { runCounters(); statsObs.disconnect(); }
+        }, { threshold: 0.25 });
+        statsObs.observe(statsBand);
+      }
+
+      // ─── Process Step Sequential Lighting ───
+      // When the process section enters view, light up each step + grow the connector line
+      const processSection = document.getElementById('process-section');
+      const processFill = document.getElementById('process-fill');
+      if (processSection && processFill) {
+        let lit = false;
+        const processObs = new IntersectionObserver(entries => {
+          if (!entries[0].isIntersecting || lit) return;
+          lit = true;
+          processObs.disconnect();
+          const steps = processSection.querySelectorAll('.process-step');
+          // Grow the connector line first
+          processFill.style.width = '100%';
+          // Light up each step with a stagger
+          steps.forEach((step, i) => {
+            setTimeout(() => step.classList.add('step-lit'), 180 + i * 260);
+          });
+        }, { threshold: 0.3 });
+        processObs.observe(processSection);
       }
 
       // Hero Search Bar Submission Redirect
