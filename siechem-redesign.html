@@ -1195,6 +1195,139 @@
       .process-step-desc { max-width: 100%; }
     }
 
+    /* ─── Cable Wire Visualization Section ─── */
+    .wire-section {
+      background: #080808;
+      padding: 76px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .wire-section::before {
+      content: '';
+      position: absolute;
+      top: -180px; right: -180px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .wire-section::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .wire-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .wire-cs-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .wire-cs-svg {
+      width: 100%;
+      max-width: 380px;
+      display: block;
+      filter: drop-shadow(0 0 48px rgba(227,30,36,0.22)) drop-shadow(0 0 16px rgba(0,0,0,0.9));
+    }
+    /* Rotating shield braid */
+    @keyframes shieldRotate {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .shield-rotate {
+      transform-origin: 200px 200px;
+      animation: shieldRotate 16s linear infinite;
+    }
+    .wire-text-wrap { color: #FFFFFF; }
+    .wire-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .wire-title {
+      font-size: clamp(26px, 3.2vw, 42px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      line-height: 1.18;
+      margin-bottom: 16px;
+      font-family: var(--heading);
+    }
+    .wire-title em { font-style: normal; color: var(--accent); }
+    .wire-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.68;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    /* Animated wire path */
+    .wire-path-wrap {
+      margin: 20px 0 28px;
+      position: relative;
+    }
+    .wire-path-svg { width: 100%; display: block; overflow: visible; }
+    /* Layer callout grid */
+    .wire-layers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .wire-layer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .wire-layer-item:hover {
+      background: rgba(227,30,36,0.08);
+      border-color: rgba(227,30,36,0.22);
+    }
+    .wire-layer-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .wire-layer-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 2px;
+    }
+    .wire-layer-spec {
+      font-size: 11px;
+      color: rgba(255,255,255,0.36);
+      font-family: var(--mono);
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 900px) {
+      .wire-grid { grid-template-columns: 1fr; gap: 44px; }
+      .wire-cs-wrap { order: -1; }
+      .wire-cs-svg { max-width: 300px; }
+    }
+    @media (max-width: 480px) {
+      .wire-section { padding: 48px 0; }
+      .wire-layers { grid-template-columns: 1fr; }
+    }
+
     /* Certifications ticker */
     .cert-ticker-outer {
       background: #1C1A19;
@@ -1548,6 +1681,196 @@
         <span class="trusted-item">TVS Motors</span>
         <span class="trusted-item">Renault–Nissan</span>
         <span class="trusted-item">Daimler India</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Cable Cross-Section Visualization ═══ -->
+  <section class="wire-section">
+    <div class="container">
+      <div class="wire-grid">
+
+        <!-- Left: Animated SVG cable cross-section -->
+        <div class="wire-cs-wrap reveal">
+          <svg class="wire-cs-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="copperG" cx="38%" cy="32%" r="68%">
+                <stop offset="0%"   stop-color="#FDE68A"/>
+                <stop offset="55%"  stop-color="#D97706"/>
+                <stop offset="100%" stop-color="#92400E"/>
+              </radialGradient>
+              <radialGradient id="jacketG" cx="32%" cy="28%" r="72%">
+                <stop offset="0%"   stop-color="#242020"/>
+                <stop offset="100%" stop-color="#080808"/>
+              </radialGradient>
+              <filter id="copperGlow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="2.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <clipPath id="csClip">
+                <circle cx="200" cy="200" r="182"/>
+              </clipPath>
+            </defs>
+
+            <!-- Outer jacket -->
+            <circle cx="200" cy="200" r="185" fill="url(#jacketG)"/>
+            <circle cx="200" cy="200" r="185" fill="none" stroke="#E31E24" stroke-width="2.5"/>
+            <!-- Jacket texture rings -->
+            <circle cx="200" cy="200" r="181" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="5" stroke-dasharray="3 11"/>
+            <circle cx="200" cy="200" r="175" fill="none" stroke="rgba(255,255,255,0.015)" stroke-width="3" stroke-dasharray="2 14"/>
+
+            <!-- Metallic shield braid (slow-rotating) -->
+            <g class="shield-rotate">
+              <circle cx="200" cy="200" r="158" fill="#141210"/>
+              <circle cx="200" cy="200" r="158" fill="none" stroke="rgba(190,165,90,0.55)" stroke-width="11" stroke-dasharray="8 5"/>
+              <circle cx="200" cy="200" r="158" fill="none" stroke="rgba(190,165,90,0.28)" stroke-width="5"  stroke-dasharray="5 8" transform="rotate(22 200 200)"/>
+              <circle cx="200" cy="200" r="158" fill="none" stroke="rgba(255,220,120,0.12)" stroke-width="2"  stroke-dasharray="2 18" transform="rotate(44 200 200)"/>
+            </g>
+
+            <!-- Inner insulation filler -->
+            <circle cx="200" cy="200" r="136" fill="#0E0E0E" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+            <!-- ── 7 Conductors (1 centre + 6 around at r=58) ── -->
+            <!-- Centre — neutral grey -->
+            <circle cx="200" cy="200" r="27" fill="#1E1E1E" stroke="rgba(200,200,200,0.18)" stroke-width="1"/>
+            <circle cx="200" cy="200" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 0° — Red -->
+            <circle cx="258" cy="200" r="27" fill="#3B0808" stroke="rgba(239,68,68,0.45)" stroke-width="1"/>
+            <circle cx="258" cy="200" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.37s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 60° — Blue (228.5, 250) -->
+            <circle cx="229" cy="250" r="27" fill="#0D1F3C" stroke="rgba(59,130,246,0.45)" stroke-width="1"/>
+            <circle cx="229" cy="250" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="0.74s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 120° — Yellow (171, 250) -->
+            <circle cx="171" cy="250" r="27" fill="#2D1800" stroke="rgba(234,179,8,0.45)" stroke-width="1"/>
+            <circle cx="171" cy="250" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.11s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 180° — Green -->
+            <circle cx="142" cy="200" r="27" fill="#031A0C" stroke="rgba(34,197,94,0.45)" stroke-width="1"/>
+            <circle cx="142" cy="200" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.48s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 240° — Charcoal (171, 150) -->
+            <circle cx="171" cy="150" r="27" fill="#1A1A1A" stroke="rgba(156,163,175,0.35)" stroke-width="1"/>
+            <circle cx="171" cy="150" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="1.85s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- 300° — White/cream (229, 150) -->
+            <circle cx="229" cy="150" r="27" fill="#1C1C1C" stroke="rgba(243,244,246,0.30)" stroke-width="1"/>
+            <circle cx="229" cy="150" r="14" fill="url(#copperG)" filter="url(#copperGlow)">
+              <animate attributeName="opacity" values="0.75;1;0.75" dur="2.2s" begin="2.22s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Outer pulse ring (breathes) -->
+            <circle cx="200" cy="200" r="188" fill="none" stroke="rgba(227,30,36,0.55)" stroke-width="1.5">
+              <animate attributeName="r"            values="185;197;185"   dur="4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity"      values="0;0.65;0"      dur="4s" repeatCount="indefinite"/>
+              <animate attributeName="stroke-width" values="2;0.6;2"       dur="4s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Scanning laser line (sweeps top → bottom) -->
+            <line x1="18" y1="0" x2="382" y2="0"
+                  stroke="rgba(227,30,36,0.4)" stroke-width="1.2" clip-path="url(#csClip)">
+              <animateTransform attributeName="transform" type="translate"
+                values="0,-185; 0,185; 0,-185" dur="6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;0.7;0.7;0"
+                keyTimes="0;0.08;0.92;1" dur="6s" repeatCount="indefinite"/>
+            </line>
+          </svg>
+        </div>
+
+        <!-- Right: Title + animated wire path + layer callouts -->
+        <div class="wire-text-wrap reveal reveal-d2">
+          <span class="wire-eyebrow">Precision Cable Engineering</span>
+          <h2 class="wire-title">The <em>Wire</em> Behind<br/>Every Mission</h2>
+          <p class="wire-desc">Every Siechem cable is a precision-engineered system — from the E-beam crosslinked copper core to the flame-retardant outer jacket. 7-conductor shielded designs that survive the environments your aerospace, defence, and automotive systems demand.</p>
+
+          <!-- Animated current-flow wire path -->
+          <div class="wire-path-wrap">
+            <svg class="wire-path-svg" viewBox="0 0 580 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="wireGlow" x="-20%" y="-100%" width="140%" height="300%">
+                  <feGaussianBlur stdDeviation="3.5" result="b"/>
+                  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- Cable body (dark, thick) -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="#1A1818" stroke-width="16" stroke-linecap="round"/>
+              <!-- Cable inner highlight -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="#2C2826" stroke-width="9" stroke-linecap="round"/>
+              <!-- Red stripe on cable -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="rgba(227,30,36,0.22)" stroke-width="2.5" stroke-linecap="round"
+                stroke-dasharray="9 7"/>
+
+              <!-- Current pulse 1 (bright, fast) -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="#E31E24" stroke-width="3.5" stroke-linecap="round"
+                stroke-dasharray="50 680" filter="url(#wireGlow)">
+                <animate attributeName="stroke-dashoffset" values="730;0" dur="2s" repeatCount="indefinite" calcMode="linear"/>
+              </path>
+              <!-- Current pulse 2 (medium) -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="#F24B51" stroke-width="2" stroke-linecap="round"
+                stroke-dasharray="28 702" filter="url(#wireGlow)" opacity="0.7">
+                <animate attributeName="stroke-dashoffset" values="730;0" dur="2s" begin="0.67s" repeatCount="indefinite" calcMode="linear"/>
+              </path>
+              <!-- Current pulse 3 (faint trail) -->
+              <path d="M0,36 C85,36 85,13 175,13 C265,13 265,59 355,59 C445,59 445,13 535,13 C558,13 572,36 580,36"
+                fill="none" stroke="#E31E24" stroke-width="1.5" stroke-linecap="round"
+                stroke-dasharray="14 716" filter="url(#wireGlow)" opacity="0.45">
+                <animate attributeName="stroke-dashoffset" values="730;0" dur="2s" begin="1.34s" repeatCount="indefinite" calcMode="linear"/>
+              </path>
+            </svg>
+          </div>
+
+          <!-- Layer callouts -->
+          <div class="wire-layers">
+            <div class="wire-layer-item">
+              <div class="wire-layer-dot" style="background:#E31E24;"></div>
+              <div>
+                <div class="wire-layer-name">Outer Jacket</div>
+                <div class="wire-layer-spec">FR-PVC / XLPE / LSZH</div>
+              </div>
+            </div>
+            <div class="wire-layer-item">
+              <div class="wire-layer-dot" style="background:#C4A44A;"></div>
+              <div>
+                <div class="wire-layer-name">Shield Braid</div>
+                <div class="wire-layer-spec">Tinned copper, 85%+ coverage</div>
+              </div>
+            </div>
+            <div class="wire-layer-item">
+              <div class="wire-layer-dot" style="background:#3B82F6;"></div>
+              <div>
+                <div class="wire-layer-name">E-Beam Insulation</div>
+                <div class="wire-layer-spec">X-linked, rated to 200 °C</div>
+              </div>
+            </div>
+            <div class="wire-layer-item">
+              <div class="wire-layer-dot" style="background:#D97706;"></div>
+              <div>
+                <div class="wire-layer-name">Copper Core</div>
+                <div class="wire-layer-spec">Class 5 stranded, tinned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
