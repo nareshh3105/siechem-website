@@ -181,12 +181,15 @@
     @media (max-width: 600px) { .logo-wall { grid-template-columns: repeat(3, 1fr); } }
     @media (max-width: 400px) { .logo-wall { grid-template-columns: repeat(2, 1fr); } }
     .logo-cell {
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 3 / 2;
       background: #fff;
       display: flex; align-items: center; justify-content: center;
       padding: 14px;
       transition: background 0.18s, transform 0.18s;
       overflow: hidden;
+    }
+    @media (max-width: 600px) {
+      .logo-cell { padding: 10px; aspect-ratio: 4 / 3; }
     }
     .logo-cell:hover { background: #f8f8f8; transform: scale(1.04); z-index: 1; position: relative; }
     .logo-cell--empty { background: #fff; pointer-events: none; }
@@ -206,7 +209,7 @@
       border-radius: 16px;
       transition: all 0.18s;
     }
-    .case-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .case-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
     .case-card .industry-tag {
       display: inline-block;
       padding: 4px 12px;
@@ -224,6 +227,16 @@
     .case-card h3 { font-size:20px; font-weight:700; letter-spacing:-0.3px; margin-bottom:8px; }
     .case-card .client { font-size: 13.5px; color: var(--text-muted); margin-bottom: 18px; font-style: italic; }
     .case-card .case-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:18px; border-top:1px solid var(--border); }
+    @media (max-width: 640px) {
+      .case-card { padding: 20px; border-radius: 12px; }
+      .case-card h3 { font-size: 17px; }
+      .case-card .case-stats { gap: 16px; }
+      .ind-panel { padding: 18px; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .case-card { padding: 16px; }
+      .ind-tab { padding: 12px 14px; font-size: 13px; }
+    }
 
     .map-wrap {
       position: relative;

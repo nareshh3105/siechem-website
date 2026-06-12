@@ -200,11 +200,21 @@
       font-size: 12px;
       color: var(--text-faint);
     }
+    @media (max-width: 768px) {
+      .search-bar input { font-size: 16px; }
+    }
     @media (max-width: 640px) {
       .filter-bar { width: 100%; overflow-x: auto; scrollbar-width: none; }
       .filter-bar::-webkit-scrollbar { display: none; }
-      .filter-bar button { padding: 9px 14px; font-size: 13px; flex-shrink: 0; }
-      .search-bar { max-width: 100%; }
+      .filter-bar button { padding: 9px 14px; font-size: 13px; flex-shrink: 0; min-height: 40px; }
+      .search-bar { max-width: 100%; padding: 10px 14px; margin-bottom: 18px; }
+      .product-cover .seg-title { font-size: 17px; }
+      .standard-pill { padding: 13px 14px; }
+      .standard-pill .code { font-size: 13px; }
+    }
+    @media (max-width: 480px) {
+      .product-cover { padding: 16px; }
+      .product-meta { padding: 12px 14px; }
     }
   </style>
 </head>

@@ -57,17 +57,31 @@
       gap: 48px;
       align-items: start;
     }
-    @media (max-width: 980px) { .contact-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 980px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
 
     .form-wrap {
       padding: 36px;
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
     .form-row.single { grid-template-columns: 1fr; }
-    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .form-wrap .input, .form-wrap .textarea, .form-wrap .select { font-size: 16px !important; }
+    }
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; gap: 12px; }
+      .form-wrap { padding: 22px 18px; border-radius: 12px; }
+      .map-illustration { max-height: 200px; }
+      .office-card { padding: 18px; }
+      .social-btn { width: 42px; height: 42px; }
+    }
+    @media (max-width: 480px) {
+      .form-wrap { padding: 18px 14px; }
+      .quick-contacts { grid-template-columns: 1fr; }
+    }
 
     .office-card {
       padding: 26px;

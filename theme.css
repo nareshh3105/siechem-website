@@ -63,9 +63,15 @@
   --accent-soft: rgba(227,30,36,0.08);
   --accent-border: rgba(227,30,36,0.28);
   --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-hover:0 8px 28px rgba(0,0,0,0.13), 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-glow: 0 0 0 3px rgba(227,30,36,0.12);
   --shadow-cta:  0 4px 14px rgba(227,30,36,0.38);
+  --radius-sm:   6px;
   --radius:      10px;
   --radius-lg:   14px;
+  --radius-xl:   20px;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --mono:        'JetBrains Mono', ui-monospace, monospace;
   --sans:        'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
   --heading:     'Open Sans', 'Roboto', -apple-system, sans-serif;
@@ -78,13 +84,23 @@ html, body {
   font-size: 15.5px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+p { line-height: 1.65; }
+
 ::selection { background: rgba(227,30,36,0.18); }
 a { color: inherit; text-decoration: none; }
-button { font-family: inherit; cursor: pointer; }
-img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; }
+img { display: block; max-width: 100%; height: auto; }
 
 /* ─────────── Navigation ─────────── */
 .nav {
@@ -418,15 +434,18 @@ html.nav-open, html.nav-open body {
   border-radius: 8px;
   font-size: 14px; font-weight: 700;
   border: none;
-  transition: transform 0.12s, box-shadow 0.18s, background 0.15s;
+  transition: transform 0.14s var(--ease-out), box-shadow 0.18s var(--ease-out), background 0.15s;
   cursor: pointer;
   white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
+.btn:active { transform: translateY(1px) scale(0.985) !important; transition-duration: 0.06s !important; }
 .btn-primary {
   background: var(--accent); color: #FFF;
   box-shadow: var(--shadow-cta);
 }
-.btn-primary:hover { background: var(--accent-2); transform: translateY(-1px); box-shadow: 0 8px 22px rgba(227,30,36,0.5); }
+.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(227,30,36,0.5); }
 .btn-ghost {
   background: #FFFFFF; color: var(--text);
   border: 1.5px solid var(--border-strong);
@@ -436,8 +455,9 @@ html.nav-open, html.nav-open body {
   background: #FFFFFF; color: var(--accent);
   font-weight: 800;
 }
-.btn-white:hover { background: #FEF2F2; }
+.btn-white:hover { background: #FEF2F2; transform: translateY(-1px); }
 .btn-sm { padding: 9px 16px; font-size: 13px; }
+.btn-lg { padding: 16px 32px; font-size: 15.5px; border-radius: 10px; }
 
 /* ─────────── Cards ─────────── */
 .card {
@@ -448,12 +468,14 @@ html.nav-open, html.nav-open body {
   box-shadow: var(--shadow-card);
 }
 .card-hover {
-  transition: box-shadow 0.18s, border-color 0.18s, transform 0.18s;
+  transition: box-shadow 0.22s var(--ease-out), border-color 0.22s, transform 0.22s var(--ease-out);
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
 }
 .card-hover:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-  border-color: var(--accent-border);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.11), 0 0 0 1px rgba(227,30,36,0.09);
+  border-color: rgba(227,30,36,0.22);
+  transform: translateY(-4px);
 }
 .card-soft {
   background: var(--bg-soft);
@@ -462,6 +484,10 @@ html.nav-open, html.nav-open body {
 }
 .card-accent {
   border-top: 3px solid var(--accent);
+}
+.card:focus-within {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px rgba(227,30,36,0.08);
 }
 
 /* ─────────── Grid utilities ─────────── */
@@ -754,21 +780,58 @@ html { scroll-behavior: smooth; }
   font-weight: 600;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
 }
 .filter-bar button.active {
   background: var(--accent);
   color: #fff;
+  box-shadow: 0 2px 8px rgba(227,30,36,0.3);
 }
 .filter-bar button:hover:not(.active) {
   background: var(--bg-soft);
   color: var(--text);
 }
+@media (max-width: 768px) {
+  .filter-bar {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-bar button { flex-shrink: 0; min-height: 40px; }
+}
 
-/* ─────────── Card improvements ─────────── */
-.card-hover:hover {
-  box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-  border-color: var(--accent-border);
-  transform: translateY(-3px);
+/* ─────────── Image utilities ─────────── */
+.img-zoom { overflow: hidden; border-radius: var(--radius-lg); }
+.img-zoom img { transition: transform 0.45s var(--ease-out); }
+.img-zoom:hover img { transform: scale(1.05); }
+.aspect-1-1  { aspect-ratio: 1 / 1;  overflow: hidden; }
+.aspect-4-3  { aspect-ratio: 4 / 3;  overflow: hidden; }
+.aspect-3-2  { aspect-ratio: 3 / 2;  overflow: hidden; }
+.aspect-16-9 { aspect-ratio: 16 / 9; overflow: hidden; }
+
+/* ─────────── Gap utilities ─────────── */
+.gap-xs  { gap: 6px !important; }
+.gap-sm  { gap: 10px !important; }
+.gap-md  { gap: 16px !important; }
+.gap-lg  { gap: 24px !important; }
+.gap-xl  { gap: 36px !important; }
+.gap-2xl { gap: 52px !important; }
+
+/* ─────────── Skeleton shimmer ─────────── */
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-soft) 0%, #E8EAED 50%, var(--bg-soft) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: var(--radius);
 }
 
 /* ─────────── Better focus styles (accessibility) ─────────── */
@@ -882,3 +945,155 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   50%       { transform: translateX(-50%) translateY(7px); }
 }
 @media (max-width: 640px) { .scroll-indicator { bottom: 16px; } }
+
+/* ═══════════════════════════════════════════════════
+   COMPREHENSIVE ENHANCEMENTS — web + mobile polish
+   ═══════════════════════════════════════════════════ */
+
+/* ─────────── iOS input zoom prevention ─────────── */
+@media (max-width: 768px) {
+  .input, .textarea, .select { font-size: 16px !important; }
+}
+
+/* ─────────── Touch targets (minimum 44px) ─────────── */
+@media (max-width: 768px) {
+  .btn          { min-height: 44px; }
+  .nav-cta      { min-height: 44px; }
+  .mobile-sticky-cta .btn { min-height: 46px; border-radius: 10px; }
+}
+
+/* ─────────── Spec table horizontal scroll ─────────── */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.table-wrap .spec-table { border: none; min-width: 480px; }
+@media (max-width: 640px) {
+  .spec-table { min-width: 440px; }
+}
+
+/* ─────────── Page hero left accent bar ─────────── */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ─────────── Dark section text utilities ─────────── */
+.section-dark .section-title,
+.section-dark h1, .section-dark h2, .section-dark h3 { color: #FFFFFF; }
+.section-dark .section-sub  { color: rgba(255,255,255,0.78); }
+.section-dark .section-eyebrow { color: rgba(255,255,255,0.65); }
+.section-dark .tag {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.78);
+}
+.section-dark .card {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.85);
+}
+
+/* ─────────── Red section text utilities ─────────── */
+.section-red .section-title,
+.section-red h1, .section-red h2, .section-red h3 { color: #FFFFFF; }
+.section-red .section-sub    { color: rgba(255,255,255,0.88); }
+.section-red .section-eyebrow { color: rgba(255,255,255,0.75); }
+
+/* ─────────── Eyebrow on dark backgrounds ─────────── */
+.eyebrow-light {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.28);
+  color: #FFFFFF;
+}
+
+/* ─────────── Better tablet grid (840px gap fill) ─────────── */
+@media (max-width: 840px) and (min-width: 641px) {
+  .grid-3:not([class*="grid-auto"]) { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─────────── Tighter container on small phones ─────────── */
+@media (max-width: 480px) {
+  .container, .container-narrow { padding: 0 16px; }
+}
+@media (max-width: 360px) {
+  .container, .container-narrow { padding: 0 12px; }
+  .section { padding: 28px 0; }
+  .section-title { font-size: clamp(20px, 6vw, 26px); }
+}
+
+/* ─────────── Better page hero on mobile ─────────── */
+@media (max-width: 640px) {
+  .page-hero-content { gap: 18px; }
+  .page-lede { max-width: 100%; }
+  .hero-img { min-height: 180px; max-height: 260px; }
+}
+
+/* ─────────── Section sub/head full-width on mobile ─────────── */
+@media (max-width: 640px) {
+  .section-head, .section-sub { max-width: 100%; }
+}
+
+/* ─────────── Mobile menu active link indicator ─────────── */
+.mobile-menu-links a.active { color: var(--accent); }
+
+/* ─────────── Divider with label ─────────── */
+.divider-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-faint);
+  font-size: 12px;
+  font-family: var(--mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.divider-label::before,
+.divider-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─────────── Search input wrapper ─────────── */
+.search-wrap {
+  position: relative;
+  flex: 1;
+}
+.search-wrap .search-icon {
+  position: absolute;
+  left: 13px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-faint);
+  pointer-events: none;
+  line-height: 0;
+}
+.search-wrap .input { padding-left: 38px; }
+
+/* ─────────── Nav CTA active press ─────────── */
+.nav-cta:active { transform: translateY(1px) !important; transition-duration: 0.06s; }
+
+/* ─────────── Product page search mobile ─────────── */
+@media (max-width: 640px) {
+  .search-wrap { max-width: 100%; }
+}
+
+/* ─────────── Better breadcrumb on tiny screens ─────────── */
+@media (max-width: 480px) {
+  .breadcrumb { font-size: 11px; flex-wrap: wrap; }
+}
+
+/* ─────────── Print base ─────────── */
+@media print {
+  .nav, .footer, .mobile-sticky-cta, .back-to-top { display: none !important; }
+  .page-hero { padding: 12px 0; }
+  body { font-size: 12pt; }
+}
