@@ -583,7 +583,7 @@ html.nav-open, html.nav-open body {
 
 /* ─────────── Footer ─────────── */
 .footer {
-  background: #1C1A19;
+  background: #000000;
   color: #FFFFFF;
   padding: 44px 0 24px;
 }
@@ -598,24 +598,45 @@ html.nav-open, html.nav-open body {
 .footer-col h4 {
   font-family: var(--mono); font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255,255,255,0.4); margin-bottom: 18px;
+  color: rgba(255,255,255,0.55); margin-bottom: 18px;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-.footer-col a { font-size: 13.5px; color: rgba(255,255,255,0.65); transition: color 0.15s; }
+.footer-col a { font-size: 13.5px; color: rgba(255,255,255,0.8); transition: color 0.15s; }
 .footer-col a:hover { color: #FFFFFF; }
 .footer-brand p {
-  font-size: 14px; color: rgba(255,255,255,0.55);
+  font-size: 14px; color: rgba(255,255,255,0.7);
   line-height: 1.7; margin: 14px 0 24px; max-width: 280px;
 }
 .footer-meta {
   padding-top: 24px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.12);
   display: flex; justify-content: space-between;
   flex-wrap: wrap; gap: 12px;
-  font-size: 12.5px; color: rgba(255,255,255,0.3);
+  font-size: 12.5px; color: rgba(255,255,255,0.5);
 }
 .footer-logo { color: #FFFFFF; }
 .footer-logo .nav-logo-mark { background: var(--accent); }
+/* Cert badge row inside footer */
+.cert-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.cert {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+}
 
 /* ─────────── Spec table ─────────── */
 .spec-table { width: 100%; border-collapse: collapse; font-size: 14px; }
