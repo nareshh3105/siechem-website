@@ -256,7 +256,27 @@
       <a href="siechem-redesign.html" class="nav-logo"><svg viewBox="0 0 160 46" class="logo-svg" xmlns="http://www.w3.org/2000/svg"><text x="50%" y="26" text-anchor="middle" font-family="'Open Sans', 'Arial Black', Arial, sans-serif" font-weight="900" font-style="italic" font-size="28" fill="#E31E24" letter-spacing="-0.5px">Siechem</text><text x="50%" y="42" text-anchor="middle" font-family="'Roboto', Arial, sans-serif" font-weight="700" font-size="11" fill="currentColor" letter-spacing="0.2px">Wires &amp; Cables</text></svg></a>
       <div class="nav-links">
         <a href="siechem-redesign.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">Company</a>
+        <div class="nav-company-dropdown">
+        <a href="about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="about.html" class="nav-company-item">About Us</a>
+            <a href="mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="ppt.html" class="nav-company-item">PPT</a>
+            <a href="policies.html" class="nav-company-item">Policies</a>
+            <a href="csr.html" class="nav-company-item">CSR</a>
+            <a href="careers.html" class="nav-company-item">Careers</a>
+            <a href="events.html" class="nav-company-item">Events</a>
+            <a href="privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
         <a href="products.html" class="nav-link">Products</a>
         <a href="catalogues.html" class="nav-link">Catalogues</a>
         <a href="certifications.html" class="nav-link">Certifications</a>
@@ -281,7 +301,25 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-links">
-      <a href="about.html">Company</a>
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="about.html">About Us</a>
+        <a href="mds-message.html">MD's Message</a>
+        <a href="key-persons.html">Key Persons</a>
+        <a href="manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="testing-facilities.html">Testing Facilities</a>
+        <a href="research-development.html">Research &amp; Development</a>
+        <a href="ethical-values.html">Ethical Values</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+        <a href="ppt.html">PPT</a>
+        <a href="policies.html">Policies</a>
+        <a href="csr.html">CSR</a>
+        <a href="careers.html">Careers</a>
+        <a href="events.html">Events</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
       <a href="products.html">Products</a>
       <a href="catalogues.html">Catalogues</a>
       <a href="certifications.html">Certifications</a>
