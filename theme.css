@@ -216,6 +216,41 @@ img { display: block; max-width: 100%; height: auto; }
   color: var(--accent);
 }
 
+/* Wide dropdown variant (Tech Support — 3 cols) */
+.nav-company-menu-wide {
+  min-width: 700px;
+}
+.nav-company-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+/* Mobile sub-menus (Resources / Tech Support) */
+.mobile-techsup-links,
+.mobile-resources-links {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent-soft);
+  margin-top: 10px;
+}
+.mobile-techsup-links.open,
+.mobile-resources-links.open { display: flex; }
+.mobile-techsup-links a,
+.mobile-resources-links a {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--text-muted) !important;
+  padding: 7px 0 !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: color 0.15s !important;
+}
+.mobile-techsup-links a:hover,
+.mobile-resources-links a:hover { color: var(--accent) !important; }
+
 /* Mobile company accordion */
 .mobile-company-toggle {
   background: none;
