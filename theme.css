@@ -124,10 +124,11 @@ img { display: block; max-width: 100%; height: auto; }
   flex-shrink: 0;
   text-decoration: none;
 }
-.logo-svg {
-  width: 140px;
+.logo-img {
   height: 40px;
+  width: auto;
   display: block;
+  object-fit: contain;
 }
 .nav-logo-mark {
   width: 32px; height: 32px;
@@ -638,7 +639,7 @@ html.nav-open, html.nav-open body {
   .nav-links { display: none !important; }
   .nav-hamburger { display: flex; }
   .nav-inner { padding: 0 20px; justify-content: space-between; }
-  .logo-svg { width: 112px; height: 32px; }
+  .logo-img { height: 32px; }
 }
 @media (max-width: 640px) {
   /* grid-2 and grid-4 stay 2-col; grid-3/5 go single col */
