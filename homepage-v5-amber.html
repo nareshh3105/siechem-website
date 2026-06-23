@@ -1,0 +1,2571 @@
+﻿<!--
+  FILE: siechem-redesign.html
+
+  PURPOSE:
+    The main homepage of the Siechem website redesign. This is what visitors land on
+    from siechem.vercel.app/ (index.html redirects here). It introduces the brand,
+    showcases product segments, displays headline statistics, and funnels visitors
+    to either the product pages or the contact/quote page.
+
+  PAGE SECTIONS (in order):
+    1. Nav bar              — sticky header with all site links + "Request Quote" CTA
+    2. Hero                 — large headline, brand statement, hero image from PPT assets
+    3. Trusted-by logos     — customer logo strip (TATA, HAL, ISRO, Indian Railways etc.)
+    4. Product segments     — 6 cards linking to Aerospace, Automotive, Marine, Solar etc.
+    5. Stats band           — animated counters: 22M+ configs, 40+ years, 80+ countries
+    6. Capabilities         — 3-column grid of manufacturing capabilities (E-beam, in-house lab etc.)
+    7. Why Siechem          — differentiators section (certifications, traceability, delivery)
+    8. CTA band             — "Request a Quote" and "Browse Catalogues" buttons
+    9. Footer               — full site map + contact details
+
+  WHY STATIC HTML (not React/Next.js):
+    The site is deployed on Vercel as a purely static project. No build step, no
+    bundler, no framework. This makes deployment instant, hosting free on Vercel's
+    free tier, and the site loadable from any CDN without Node.js. All interactivity
+    (scroll animations, nav) is handled by vanilla JS in animations.js and nav-mobile.js.
+
+  SHARED DEPENDENCIES:
+    - theme.css       → all layout, colour tokens, typography, component styles
+    - animations.js   → scroll-reveal, stat counters, nav-blur (loaded at bottom)
+    - nav-mobile.js   → hamburger toggle (loaded at bottom with defer)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siechem — amber palette variant</title>
+  <meta name="description" content="India's leading specialty wires & cables manufacturer. AS9100, TÜV, UL & MIL-Spec qualified for Aerospace, Automotive, Defence, Solar and Industrial applications.">
+  <meta name="keywords" content="specialty cables, automotive cables, aerospace wires, solar cables, defence cables, MIL-spec, siechem, Chennai">
+  <meta property="og:title" content="Siechem Wires & Cables — Precision Wiring for Critical Applications">
+  <meta property="og:description" content="India's leading specialty wires & cables manufacturer. AS9100, TÜV, UL & MIL-Spec qualified.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="theme.css">
+
+  <style>
+    /* ───────── Color Scheme (Unchanged) ───────── */
+    :root {
+      --accent: #E31E24;
+      --accent-2: #B3151A;
+      --accent-soft: rgba(227, 30, 36, 0.06);
+    }
+
+    /* ───────── Hero Section ───────── */
+    .hero-video-section {
+      position: relative;
+      height: 75vh;
+      min-height: 560px;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1A0505 100%);
+    }
+    .hero-video-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+      filter: brightness(1.08) contrast(1.12) saturate(1.25);
+      will-change: transform;
+    }
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.10) 100%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 13px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+      letter-spacing: 0.15em;
+      color: #F24B51;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      color: #FFFFFF;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.7);
+    }
+    .hero-title em {
+      font-style: italic;
+      color: #F24B51;
+    }
+    .hero-subtitle {
+      font-size: 17px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.95);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      margin-bottom: 32px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Hero Search Bar */
+    .hero-search-container {
+      max-width: 580px;
+      margin: 0 auto 32px auto;
+      position: relative;
+    }
+    .hero-search-form {
+      display: flex;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .hero-search-form:focus-within {
+      background: #FFFFFF;
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(227,30,36,0.25);
+    }
+    .hero-search-input {
+      flex: 1;
+      padding: 16px 20px;
+      border: none;
+      background: transparent;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: inherit;
+    }
+    .hero-search-input::placeholder {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s ease;
+    }
+    .hero-search-form:focus-within .hero-search-input {
+      color: var(--text);
+    }
+    .hero-search-form:focus-within .hero-search-input::placeholder {
+      color: var(--text-faint);
+    }
+    .hero-search-input:focus {
+      outline: none;
+    }
+    .hero-search-btn {
+      padding: 0 24px;
+      background: var(--accent);
+      border: none;
+      color: #FFFFFF;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s;
+      cursor: pointer;
+    }
+    .hero-search-btn:hover {
+      background: var(--accent-2);
+    }
+
+    /* ───────── Product Ribbon ───────── */
+    .product-ribbon {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      position: relative;
+      z-index: 10;
+    }
+    .ribbon-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .ribbon-label {
+      font-weight: 700;
+      font-size: 12.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-right: 12px;
+    }
+    .ribbon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .ribbon-link:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .ribbon-link svg {
+      transition: transform 0.2s;
+    }
+    .ribbon-link:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* ───────── Section Layouts ───────── */
+    .section-padding {
+      padding: 60px 0;
+    }
+    .bg-light-grey {
+      background: #F8FAFC;
+    }
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 56px auto;
+      text-align: center;
+    }
+    .section-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      color: var(--text);
+    }
+    
+    /* ───────── At a Glance (Premium Video Carousel) ───────── */
+    .section-header-carousel {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+    .carousel-nav-buttons {
+      display: flex;
+      gap: 12px;
+    }
+    .carousel-nav-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-strong);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+    .carousel-nav-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+      transform: scale(1.06);
+      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.12);
+    }
+    .carousel-nav-btn:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(227,30,36,0.18);
+    }
+    .carousel-scroll-wrap {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 24px;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+    }
+    .carousel-scroll-wrap::-webkit-scrollbar {
+      display: none; /* WebKit */
+    }
+    .video-card {
+      flex: 0 0 calc(33.333% - 16px);
+      scroll-snap-align: start;
+      aspect-ratio: 16 / 10.5;
+      min-width: 320px;
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #FFFFFF;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(227, 30, 36, 0.14);
+      border-color: rgba(227, 30, 36, 0.35);
+    }
+    .video-card-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .video-card-thumb-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10.5;
+      overflow: hidden;
+      background: #0D0C0C;
+    }
+    .video-card-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: grayscale(15%) brightness(95%);
+    }
+    .video-card:hover .video-card-video {
+      opacity: 0.9;
+      transform: scale(1.05);
+      filter: grayscale(0%) brightness(100%);
+    }
+    .video-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.7) 90%);
+      z-index: 1;
+      transition: background 0.4s ease;
+    }
+    .video-card:hover .video-card-overlay {
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.0) 45%, rgba(0,0,0,0.8) 90%);
+    }
+    .video-card-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-card:hover .video-card-badge {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.4);
+    }
+    .video-card-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      z-index: 2;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      opacity: 0.9;
+    }
+    .video-card:hover .video-card-play-btn {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--accent);
+      border-color: var(--accent-light);
+      color: #FFFFFF;
+      opacity: 1;
+      box-shadow: 0 0 24px rgba(227, 30, 36, 0.65);
+    }
+    .video-card-play-btn svg {
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+    }
+    .video-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px;
+      z-index: 2;
+      color: #FFFFFF;
+      transition: all 0.3s ease;
+    }
+    .video-card-title {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      color: #FFFFFF;
+    }
+    .video-card-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.82);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      transition: color 0.3s ease;
+    }
+    .video-card:hover .video-card-desc {
+      color: #FFFFFF;
+    }
+
+    /* ───────── Video Lightbox Modal ───────── */
+    .video-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-modal.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .video-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .video-modal-container {
+      position: relative;
+      width: 90%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      transform: scale(0.94);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .video-modal.open .video-modal-container {
+      transform: scale(1);
+    }
+    .video-modal-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .video-modal-close:hover {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      transform: scale(1.08);
+    }
+    .video-modal-body {
+      width: 100%;
+      height: 100%;
+    }
+    .video-modal-player {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .video-modal-close:hover {
+      background: var(--accent);
+      border-color: var(--accent-light);
+      transform: scale(1.08);
+    }
+    .video-modal-body {
+      width: 100%;
+      height: 100%;
+    }
+    .video-modal-player {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+
+    /* ───────── Capabilities Section ───────── */
+    .caps-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .caps-content h2 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .caps-content p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .caps-badge-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .caps-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .caps-badge-icon {
+      font-size: 18px;
+      color: var(--accent);
+      display: flex;
+    }
+    .caps-badge-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .caps-stats-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.01);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .caps-stat-item {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .caps-stat-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .caps-stat-num {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+      font-family: var(--mono);
+      letter-spacing: -1px;
+    }
+    .caps-stat-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .caps-stat-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.55;
+    }
+    @media (max-width: 640px) {
+      .caps-stats-card {
+        padding: 24px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+      }
+      .caps-stat-item {
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+      }
+      .caps-stat-item:nth-child(even) { border-right: none; }
+      .caps-stat-item:last-child { border-bottom: none; }
+      .caps-stat-item:nth-last-child(2) { border-bottom: none; }
+      .caps-stat-num { font-size: 32px; }
+    }
+
+    /* ───────── Testimonials Section ───────── */
+    .testimonial-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .testimonial-quotes {
+      font-size: 64px;
+      color: var(--accent-soft);
+      line-height: 1;
+      font-family: Georgia, serif;
+      position: absolute;
+      top: 24px; left: 32px;
+      user-select: none;
+    }
+    .testimonial-slide {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .testimonial-slide.active {
+      display: block;
+    }
+    .testimonial-text {
+      font-size: 17px;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .testimonial-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+    }
+    .testimonial-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.2s;
+    }
+    .testimonial-dot.active {
+      background: var(--accent);
+      transform: scale(1.2);
+    }
+
+    /* Client logos */
+    .client-logos {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-top: 56px;
+      opacity: 0.65;
+    }
+    .client-logo-item {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--text-faint);
+      text-transform: uppercase;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ───────── Responsive Sizing ───────── */
+    @media (max-width: 980px) {
+      .video-card { flex: 0 0 calc(50% - 12px); }
+      .carousel-scroll-wrap { gap: 20px; }
+      .caps-split { grid-template-columns: 1fr; gap: 40px; }
+      .hero-title { font-size: 38px; }
+    }
+    @media (max-width: 768px) {
+      .hero-video-section { height: 60vh; min-height: 480px; }
+      .hero-title { font-size: 32px; }
+      .hero-subtitle { font-size: 15px; }
+      .testimonial-box { padding: 32px; }
+      .testimonial-quotes { top: 12px; left: 16px; font-size: 48px; }
+      .testimonial-text { font-size: 15px; }
+    }
+    @media (max-width: 640px) {
+      .video-card {
+        flex: 0 0 82%;
+        aspect-ratio: auto;
+        background: #FFFFFF;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      }
+      .video-card-thumb-wrap {
+        aspect-ratio: 16 / 9.5;
+      }
+      .video-card-content {
+        position: static;
+        padding: 18px;
+        background: #FFFFFF;
+        color: var(--text);
+      }
+      .video-card-title {
+        color: var(--text);
+        font-size: 16px;
+        margin-bottom: 6px;
+        text-shadow: none;
+      }
+      .video-card-desc {
+        color: var(--text-muted);
+        font-size: 12.5px;
+        line-height: 1.45;
+        text-shadow: none;
+      }
+      .carousel-scroll-wrap {
+        gap: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .section-header-carousel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .carousel-nav-buttons {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .ribbon-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+      }
+      .ribbon-label {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 4px;
+        margin-right: 0;
+        font-size: 11px;
+      }
+      .ribbon-link {
+        padding: 8px 10px;
+        font-size: 12px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    @media (max-width: 520px) {
+      .nav-cta {
+        display: none !important;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
+      }
+      .hero-search-container {
+        display: none;
+      }
+      .btn-ghost-hide-mobile {
+        display: none !important;
+      }
+      .caps-badge-list {
+        grid-template-columns: 1fr;
+      }
+      .caps-content h2 {
+        font-size: 24px;
+      }
+    }
+    @media (max-height: 600px) {
+      .video-modal-container {
+        width: auto;
+        height: 85vh;
+        aspect-ratio: 16 / 9;
+      }
+      .video-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+      }
+    }
+    /* Mobile Menu request quote sequence */
+    .mobile-menu.open .mobile-menu-links a:nth-child(7) {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
+    }
+    /* ─── Trusted By Marquee ─── */
+    .trusted-band {
+      padding: 40px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .trusted-band-label {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 22px;
+    }
+    .trusted-marquee-row {
+      display: flex;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .trusted-marquee-row:last-child { margin-bottom: 0; }
+    .trusted-marquee-track {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      animation: marqueeSlide 36s linear infinite;
+      will-change: transform;
+    }
+    .trusted-marquee-row.rev .trusted-marquee-track {
+      animation-direction: reverse;
+      animation-duration: 42s;
+    }
+    .trusted-band:hover .trusted-marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeSlide {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trusted-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 9px 32px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text-faint);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      border-right: 1px solid var(--border);
+      transition: color 0.2s, background 0.2s;
+    }
+    .trusted-item:hover { color: var(--text); background: var(--accent-soft); }
+
+    /* ─── Industries We Serve ─── */
+    .ind-section { background: var(--bg); }
+    .ind-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .ind-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px 22px 22px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .ind-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .ind-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-border);
+      box-shadow: 0 16px 36px rgba(227,30,36,0.10);
+    }
+    .ind-card:hover::after { transform: scaleX(1); }
+    .ind-icon {
+      width: 46px; height: 46px;
+      border-radius: 11px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      color: var(--accent);
+    }
+    .ind-card:hover .ind-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+      transform: rotate(-4deg) scale(1.08);
+    }
+    .ind-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .ind-cert {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .ind-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      flex: 1;
+      margin-top: 5px;
+    }
+    .ind-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: all 0.25s;
+    }
+    .ind-card:hover .ind-cta { opacity: 1; transform: translateX(0); }
+    @media (max-width: 900px) { .ind-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .ind-grid { grid-template-columns: 1fr; } }
+
+    /* ─── Dark Animated Stats Band ─── */
+    .stats-band {
+      background: #111111;
+      padding: 64px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-band::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.13) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .stats-band::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -60px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .stats-band-head {
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative; z-index: 2;
+    }
+    .stats-band-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .stats-band-title {
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.4px;
+    }
+    .stats-band-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .stats-band-item {
+      padding: 32px 24px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      transition: background 0.3s;
+    }
+    .stats-band-item:hover { background: rgba(227,30,36,0.06); }
+    .stats-band-item:last-child { border-right: none; }
+    .stats-num {
+      font-size: clamp(38px, 4.5vw, 56px);
+      font-weight: 900;
+      font-family: var(--mono);
+      letter-spacing: -2px;
+      line-height: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      color: #FFFFFF;
+    }
+    .stats-num .num-suffix {
+      color: var(--accent);
+      font-size: 0.62em;
+      margin-top: 8px;
+      letter-spacing: 0;
+    }
+    .stats-label {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.65);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+    }
+    .stats-sub {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.3);
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .stats-band-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-band-item:nth-child(2) { border-right: none; }
+      .stats-band-item:nth-child(1),
+      .stats-band-item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    }
+    @media (max-width: 480px) {
+      .stats-band { padding: 44px 0; }
+      .stats-num { font-size: 34px; }
+    }
+
+    /* ─── Process Strip ─── */
+    .process-section { background: var(--bg-soft); }
+    .process-track {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      gap: 0;
+    }
+    .process-connector {
+      position: absolute;
+      top: 27px;
+      left: calc(10% + 27px);
+      right: calc(10% + 27px);
+      height: 2px;
+      background: var(--border);
+      z-index: 0;
+      border-radius: 2px;
+    }
+    .process-connector-fill {
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      border-radius: 2px;
+      transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    }
+    .process-step {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .process-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .process-step.step-lit .process-num {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(227,30,36,0.40);
+      transform: scale(1.12);
+    }
+    .process-step-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .process-step-desc {
+      font-size: 11.5px;
+      color: var(--text-faint);
+      line-height: 1.5;
+      max-width: 120px;
+    }
+    @media (max-width: 640px) {
+      .process-track { flex-direction: column; gap: 18px; align-items: stretch; }
+      .process-connector { display: none; }
+      .process-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 14px; padding: 0; }
+      .process-num { flex-shrink: 0; margin-bottom: 0; }
+      .process-step-desc { max-width: 100%; }
+    }
+
+    /* ─── Precision Cable Engineering Section ─── */
+    .precision-section {
+      background: #080808;
+      padding: 76px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .precision-section::before {
+      content: '';
+      position: absolute;
+      top: -180px; right: -180px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(227,30,36,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .precision-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .precision-visual { position: relative; }
+    .precision-img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(227,30,36,0.18);
+    }
+    .precision-text-wrap { color: #FFFFFF; }
+    .wire-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .wire-title {
+      font-size: clamp(26px, 3.2vw, 42px);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+      line-height: 1.18;
+      margin-bottom: 16px;
+      font-family: var(--heading);
+    }
+    .wire-title em { font-style: normal; color: var(--accent); }
+    .wire-desc {
+      font-size: 15px;
+      color: rgba(255,255,255,0.58);
+      line-height: 1.68;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+    /* Animated wire path */
+    .wire-path-wrap {
+      margin: 20px 0 28px;
+      position: relative;
+    }
+    .wire-path-svg { width: 100%; display: block; overflow: visible; }
+    /* Layer callout grid */
+    .wire-layers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .wire-layer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 14px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .wire-layer-item:hover {
+      background: rgba(227,30,36,0.08);
+      border-color: rgba(227,30,36,0.22);
+    }
+    .wire-layer-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .wire-layer-name {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 2px;
+    }
+    .wire-layer-spec {
+      font-size: 11px;
+      color: rgba(255,255,255,0.36);
+      font-family: var(--mono);
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 900px) {
+      .precision-grid { grid-template-columns: 1fr; gap: 44px; padding: 0 24px; }
+      .precision-visual { order: -1; }
+      .precision-img { max-height: 340px; object-fit: cover; }
+    }
+    @media (max-width: 480px) {
+      .precision-section { padding: 48px 0; }
+      .precision-grid { padding: 0 16px; gap: 32px; }
+      .wire-layers { grid-template-columns: 1fr; }
+    }
+
+    /* ─── About Siechem Split Section ─── */
+    .about-siechem-section {
+      padding: 80px 0;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+    }
+    .about-siechem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-siechem-visual { position: relative; }
+    .about-siechem-img {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.16);
+      transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+    }
+    .about-siechem-visual:hover .about-siechem-img { transform: scale(1.02); }
+    .about-siechem-badge {
+      position: absolute;
+      bottom: -18px; right: -18px;
+      background: #111111;
+      padding: 16px 20px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      border: 1px solid rgba(227,30,36,0.28);
+      min-width: 200px;
+    }
+    .about-siechem-badge .badge-star {
+      font-size: 24px;
+      color: var(--accent);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .about-siechem-badge .badge-num {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      font-family: var(--heading);
+    }
+    .about-siechem-badge .badge-lbl {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      font-family: var(--mono);
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .about-siechem-facts {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 24px 0 28px;
+    }
+    .about-fact-item {
+      padding: 16px 12px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      border-top: 3px solid var(--accent);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .about-fact-item:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.07); }
+    .about-fact-n {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.4px;
+      font-family: var(--heading);
+      line-height: 1.1;
+    }
+    .about-fact-l {
+      font-size: 10.5px;
+      color: var(--text-faint);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+    .about-siechem-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 960px) {
+      .about-siechem-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-siechem-visual { max-width: 540px; margin: 0 auto; }
+      .about-siechem-badge { right: 8px; bottom: 8px; }
+    }
+    @media (max-width: 640px) {
+      .about-siechem-section { padding: 48px 0; }
+      .about-siechem-facts { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .about-siechem-badge { display: none; }
+    }
+
+    /* Certifications ticker */
+    .cert-ticker-outer {
+      background: #1C1A19;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      overflow: hidden;
+      padding: 9px 0;
+    }
+    .cert-ticker-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      width: max-content;
+      animation: tickerScroll 34s linear infinite;
+    }
+    .cert-ticker-outer:hover .cert-ticker-inner { animation-play-state: paused; }
+    @keyframes tickerScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .cert-ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 28px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .cert-ticker-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+  </style>
+  <!-- PALETTE: Charcoal & Amber — warm dark, sophisticated -->
+  <style>
+    :root {
+      --bg:            #1C1917;
+      --bg-soft:       #292524;
+      --bg-card:       #292524;
+      --bg-card-hover: #3C3836;
+      --border:        rgba(168,162,158,0.13);
+      --border-strong: rgba(168,162,158,0.24);
+      --text:          #E7E5E4;
+      --text-muted:    #A8A29E;
+      --text-faint:    #78716C;
+      --text-dim:      #57534E;
+      --accent:        #D97706;
+      --accent-2:      #B45309;
+      --accent-light:  #F59E0B;
+      --accent-soft:   rgba(217,119,6,0.1);
+      --accent-border: rgba(217,119,6,0.28);
+      --shadow-cta:    0 4px 14px rgba(217,119,6,0.38);
+      --shadow-glow:   0 0 0 3px rgba(217,119,6,0.16);
+      --shadow-card:   0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.25);
+      --shadow-hover:  0 8px 28px rgba(0,0,0,0.45), 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .nav { background: rgba(28,25,23,0.94); border-bottom-color: rgba(168,162,158,0.1); }
+    .mobile-menu { background: #1C1917; }
+    .footer { background: #111110; border-top: 1px solid rgba(168,162,158,0.1); color: #A8A29E; }
+    .hero-title { color: #FFFFFF !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo">
+        <img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link active">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="about.html" class="nav-company-item">About Us</a>
+            <a href="mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="ppt.html" class="nav-company-item">PPT</a>
+            <a href="policies.html" class="nav-company-item">Policies</a>
+            <a href="csr.html" class="nav-company-item">CSR</a>
+            <a href="careers.html" class="nav-company-item">Careers</a>
+            <a href="events.html" class="nav-company-item">Events</a>
+            <a href="privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="res-5s.html" class="nav-company-item">5S</a>
+              <a href="res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="res-reach.html" class="nav-company-item">REACH</a>
+              <a href="res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta">
+          Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="about.html">About Us</a>
+        <a href="mds-message.html">MD's Message</a>
+        <a href="key-persons.html">Key Persons</a>
+        <a href="manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="testing-facilities.html">Testing Facilities</a>
+        <a href="research-development.html">Research &amp; Development</a>
+        <a href="ethical-values.html">Ethical Values</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+        <a href="ppt.html">PPT</a>
+        <a href="policies.html">Policies</a>
+        <a href="csr.html">CSR</a>
+        <a href="careers.html">Careers</a>
+        <a href="events.html">Events</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="products.html">Products</a>
+      <a href="catalogues.html">Catalogues</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-ts-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Tech Support <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-techsup-links" id="mob-ts-links">
+          <a href="ts-awg-sqmm.html">AWG to Square mm Conversion</a><a href="ts-braid-shield-calc.html">Braid Shield Calculation</a><a href="ts-cable-handling.html">Cable Handling System</a><a href="ts-cable-installation.html">Cable Installation Procedure</a><a href="ts-cable-life-calc.html">Cable Life Calculation</a><a href="ts-cable-size-auto.html">Cable Size Calculation for Automotive</a><a href="ts-cable-size-solar.html">Cable Size for Solar PV Plants</a><a href="ts-capacitance-calc.html">Capacitance Calculation</a><a href="ts-color-code.html">Color Code Chart</a><a href="ts-ptfe-comparison.html">Comparison: PTFE, FEP, PFA, ETFE</a><a href="ts-conductor-resistance.html">Conductor Resistance Calculation</a><a href="ts-current-carrying.html">Current Carrying Capacity</a><a href="ts-derating-factors.html">Derating Factors</a><a href="ts-electrical-losses.html">Electrical Losses Calculation</a><a href="ts-impedance-calc.html">Impedance Calculation</a><a href="ts-inductance-calc.html">Inductance Calculation</a><a href="ts-insulation-resistance.html">Insulation Resistance Calculation</a><a href="ts-nfpa.html">NFPA Electrical Safety Standard</a><a href="ts-packaging.html">Packaging of Wires and Cables</a><a href="ts-publication.html">Publication</a><a href="ts-reactance-calc.html">Reactance Calculation</a><a href="ts-short-circuit-calc.html">Short Circuit Temp Rating</a><a href="ts-toxicity-index.html">Toxicity Index Calculation</a><a href="ts-voltage-drop.html">Voltage Drop Calculation</a><a href="ts-wp-ebeam.html">White Paper: E-Beam Crosslinking</a><a href="ts-wp-ageing.html">White Paper: Accelerated Ageing</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-res-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Resources <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-resources-links" id="mob-res-links">
+          <a href="res-5s.html">5S</a><a href="res-awards.html">Awards / Recognition</a><a href="res-capabilities.html">Capabilities</a><a href="res-covid19.html">COVID-19</a><a href="res-cricket-teams.html">Cricket Teams</a><a href="res-customer-care.html">Customer Care</a><a href="res-customer-comments.html">Customer Comments</a><a href="res-green-technology.html">Green Technology</a><a href="res-metal-trend.html">Metal Trend</a><a href="res-part-number-index.html">Part Number Index</a><a href="res-reach.html">REACH</a><a href="res-rohs.html">RoHS</a><a href="res-siechem-erp.html">Siechem ERP</a><a href="res-un-global-compact.html">UN Global Compact</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary" style="margin-top: 16px; color: #FFFFFF; box-shadow: var(--shadow-cta);">Request Quote</a>
+    </div>
+  </div>
+
+  <!-- Hero Video Section -->
+  <section class="hero-video-section">
+    <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" id="hero-video">
+      <source src="video/cable-video.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">India's #1 Specialty Wires &amp; Cables</div>
+      <h1 class="hero-title" style="font-size: clamp(30px, 5.5vw, 58px); letter-spacing: clamp(-0.5px, -0.08em, -1.5px);">Precision Wiring for<br/><em>Critical</em> Applications.</h1>
+      <p class="hero-subtitle" style="font-size: clamp(14px, 2vw, 17px);">AS 9100, TUV, UL, &amp; MIL-Spec qualified configurations for Aerospace, Defense, Marine, Renewable Energy, and Advanced Industrial systems.</p>
+
+      <div class="ctas" style="justify-content: center; gap: 12px;">
+        <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="contact.html" class="btn btn-white" style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);color:#fff;backdrop-filter:blur(8px);">Request Quote</a>
+      </div>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8l5 5 5-5"/></svg>
+    </div>
+  </section>
+
+  <!-- Product Range Ribbon -->
+  <section class="product-ribbon">
+    <div class="container">
+      <div class="ribbon-inner">
+        <span class="ribbon-label">Quick Links:</span>
+        <a href="products.html?view=segment" class="ribbon-link">
+          Cables By Segment
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="products.html?view=standard" class="ribbon-link">
+          Cables By Standard
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="tech-support.html" class="ribbon-link">
+          Technical Support
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+        <a href="catalogues.html" class="ribbon-link">
+          Product Catalogues
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications ticker -->
+  <div class="cert-ticker-outer" aria-hidden="true">
+    <div class="cert-ticker-inner">
+      <span class="cert-ticker-item">TÜV SÜD</span>
+      <span class="cert-ticker-item">UL Listed</span>
+      <span class="cert-ticker-item">AS 9100</span>
+      <span class="cert-ticker-item">MIL-SPEC</span>
+      <span class="cert-ticker-item">RDSO</span>
+      <span class="cert-ticker-item">NABL</span>
+      <span class="cert-ticker-item">CE</span>
+      <span class="cert-ticker-item">RoHS</span>
+      <span class="cert-ticker-item">IEC</span>
+      <span class="cert-ticker-item">BIS / IS</span>
+      <span class="cert-ticker-item">JASO</span>
+      <span class="cert-ticker-item">SAE</span>
+      <span class="cert-ticker-item">DGAQA</span>
+      <span class="cert-ticker-item">IECEE CB</span>
+      <!-- duplicate for seamless loop -->
+      <span class="cert-ticker-item">TÜV SÜD</span>
+      <span class="cert-ticker-item">UL Listed</span>
+      <span class="cert-ticker-item">AS 9100</span>
+      <span class="cert-ticker-item">MIL-SPEC</span>
+      <span class="cert-ticker-item">RDSO</span>
+      <span class="cert-ticker-item">NABL</span>
+      <span class="cert-ticker-item">CE</span>
+      <span class="cert-ticker-item">RoHS</span>
+      <span class="cert-ticker-item">IEC</span>
+      <span class="cert-ticker-item">BIS / IS</span>
+      <span class="cert-ticker-item">JASO</span>
+      <span class="cert-ticker-item">SAE</span>
+      <span class="cert-ticker-item">DGAQA</span>
+      <span class="cert-ticker-item">IECEE CB</span>
+    </div>
+  </div>
+
+  <!-- At a Glance Section -->
+  <section class="section-padding bg-light-grey glance-section">
+    <div class="container">
+      <div class="section-header-carousel">
+        <div class="section-header-text reveal">
+          <span class="section-eyebrow">Advanced Engineering</span>
+          <h2 class="section-title">Operations &amp; Capabilities At A Glance</h2>
+        </div>
+        <div class="carousel-nav-buttons">
+          <button class="carousel-nav-btn" id="carousel-prev" aria-label="Previous slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-nav-btn" id="carousel-next" aria-label="Next slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+      
+      <div class="carousel-scroll-wrap" id="carousel-scroll-wrap">
+        <!-- Video Card 1 -->
+        <div class="video-card" data-video-src="video/at-a-glance/inside-our-factory.mp4">
+          <div class="video-card-inner">
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/inside-our-factory.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Factory Tour</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Inside Our Factory</h3>
+              <p class="video-card-desc">Take a complete tour of our advanced manufacturing plants, raw compounding divisions, and testing laboratories.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="video-card" data-video-src="video/at-a-glance/she-powers-siechem.mp4">
+          <div class="video-card-inner">
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Culture</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">She Powers Siechem</h3>
+              <p class="video-card-desc">Dedicated to diversity, engineering excellence, and empowering women in our manufacturing operations.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="video-card" data-video-src="video/at-a-glance/happy-labours-day.mp4">
+          <div class="video-card-inner">
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Workforce</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Happy Labour's Day</h3>
+              <p class="video-card-desc">Honoring the hard-working technicians and operators who ensure high quality and zero defects.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 4 -->
+        <div class="video-card" data-video-src="video/at-a-glance/women-empowerment-v1.mp4">
+          <div class="video-card-inner">
+            <div class="video-card-thumb-wrap">
+              <video class="video-card-video" loop muted playsinline preload="metadata">
+                <source src="video/at-a-glance/women-empowerment-v1.mp4" type="video/mp4">
+              </video>
+              <div class="video-card-overlay"></div>
+              <div class="video-card-badge">Equality</div>
+              <div class="video-card-play-btn">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+            <div class="video-card-content">
+              <h3 class="video-card-title">Women Empowerment</h3>
+              <p class="video-card-desc">Fostering skills, independence, and career growth for women across our specialized cable manufacturing divisions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Trusted By Marquee ═══ -->
+  <section class="trusted-band" aria-label="Trusted by leading companies">
+    <p class="trusted-band-label">Trusted by industry leaders — aerospace · defence · automotive · energy · rail</p>
+
+    <!-- Row 1 — scrolls left -->
+    <div class="trusted-marquee-row">
+      <div class="trusted-marquee-track">
+        <span class="trusted-item">HAL</span>
+        <span class="trusted-item">ISRO</span>
+        <span class="trusted-item">Indian Railways</span>
+        <span class="trusted-item">Tata Motors</span>
+        <span class="trusted-item">Siemens</span>
+        <span class="trusted-item">Honeywell</span>
+        <span class="trusted-item">Schneider Electric</span>
+        <span class="trusted-item">ABB</span>
+        <span class="trusted-item">Maruti Suzuki</span>
+        <span class="trusted-item">Alstom</span>
+        <span class="trusted-item">GE Energy</span>
+        <span class="trusted-item">Mitsubishi Electric</span>
+      </div>
+      <div class="trusted-marquee-track" aria-hidden="true">
+        <span class="trusted-item">HAL</span>
+        <span class="trusted-item">ISRO</span>
+        <span class="trusted-item">Indian Railways</span>
+        <span class="trusted-item">Tata Motors</span>
+        <span class="trusted-item">Siemens</span>
+        <span class="trusted-item">Honeywell</span>
+        <span class="trusted-item">Schneider Electric</span>
+        <span class="trusted-item">ABB</span>
+        <span class="trusted-item">Maruti Suzuki</span>
+        <span class="trusted-item">Alstom</span>
+        <span class="trusted-item">GE Energy</span>
+        <span class="trusted-item">Mitsubishi Electric</span>
+      </div>
+    </div>
+
+    <!-- Row 2 — scrolls right (reverse) -->
+    <div class="trusted-marquee-row rev">
+      <div class="trusted-marquee-track">
+        <span class="trusted-item">Ashok Leyland</span>
+        <span class="trusted-item">DRDO</span>
+        <span class="trusted-item">Bombardier</span>
+        <span class="trusted-item">Hyundai India</span>
+        <span class="trusted-item">CRRC</span>
+        <span class="trusted-item">Aptiv</span>
+        <span class="trusted-item">Yazaki</span>
+        <span class="trusted-item">Ford India</span>
+        <span class="trusted-item">NTPC</span>
+        <span class="trusted-item">TVS Motors</span>
+        <span class="trusted-item">Renault–Nissan</span>
+        <span class="trusted-item">Daimler India</span>
+      </div>
+      <div class="trusted-marquee-track" aria-hidden="true">
+        <span class="trusted-item">Ashok Leyland</span>
+        <span class="trusted-item">DRDO</span>
+        <span class="trusted-item">Bombardier</span>
+        <span class="trusted-item">Hyundai India</span>
+        <span class="trusted-item">CRRC</span>
+        <span class="trusted-item">Aptiv</span>
+        <span class="trusted-item">Yazaki</span>
+        <span class="trusted-item">Ford India</span>
+        <span class="trusted-item">NTPC</span>
+        <span class="trusted-item">TVS Motors</span>
+        <span class="trusted-item">Renault–Nissan</span>
+        <span class="trusted-item">Daimler India</span>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Capabilities Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="caps-split">
+        <div class="caps-content reveal">
+          <span class="section-eyebrow">Why Choose Siechem</span>
+          <h2>Specialty Engineering. Full Customization.</h2>
+          <p>Since 2002, Siechem has been at the forefront of the wire and cable industry, designing and manufacturing over 22 million configurations. We combine technical design consultancy, E-Beam polymer modification, and vertically integrated compounding to build the exact wires your systems require.</p>
+          <p>Our team of applications engineers collaborates directly with clients to optimize weight, flexibility, electrical shield coverage, and environmental survivability for critical systems.</p>
+          
+          <div class="caps-badge-list">
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">AS 9100 Certified</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">MIL-Spec Compliance</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">IECEE CB Lab Testing</span>
+            </div>
+            <div class="caps-badge-item">
+              <span class="caps-badge-icon">✓</span>
+              <span class="caps-badge-label">TUV &amp; UL Approved</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="caps-stats-card reveal reveal-d2">
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">22M+</div>
+            <div class="caps-stat-label">Cable Configurations</div>
+            <div class="caps-stat-desc">Engineered and documented formulations for global B2B clients.</div>
+          </div>
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">100k</div>
+            <div class="caps-stat-label">Sq. Ft. Facility</div>
+            <div class="caps-stat-desc">State-of-the-art E-beam extrusion and twisting plant in Chennai.</div>
+          </div>
+          <div class="caps-stat-item">
+            <div class="caps-stat-num">38+</div>
+            <div class="caps-stat-label">Tests Per Cable</div>
+            <div class="caps-stat-desc">Hi-pot, flame, oil, and flex testing conducted in our accredited labs.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ About Siechem ═══ -->
+  <section class="about-siechem-section">
+    <div class="container">
+      <div class="about-siechem-grid">
+
+        <!-- Left: Iconic cable visual -->
+        <div class="about-siechem-visual reveal">
+          <img src="assets/ppt-images/slide-01-1.jpg"
+               alt="Siechem — Crafted with Passion, Engineered to Last"
+               class="about-siechem-img" loading="lazy" />
+          <!-- Floating badge -->
+          <div class="about-siechem-badge">
+            <div class="badge-star">★</div>
+            <div>
+              <div class="badge-num">No. 1</div>
+              <div class="badge-lbl">Specialty Cable<br/>Manufacturer in India</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Company story + facts -->
+        <div class="reveal reveal-d1">
+          <span class="section-eyebrow">Our Story</span>
+          <h2 class="section-title" style="margin-bottom:16px;">Built on 4 Decades of<br/><em style="font-style:normal;color:var(--accent)">Wire Expertise.</em></h2>
+          <p style="color:var(--text-muted);line-height:1.75;font-size:16px;">Established in 2002 by Mr. P. Damodaren — a cable industry veteran with over 40 years of experience — Siechem has grown from a specialty trading company into India's most trusted specialty cable manufacturer. Our 100,000 sq.ft facility in Pondicherry runs four Electron Beam lines 24×7, zero-debt, A1-rated by ICRA.</p>
+
+          <div class="about-siechem-facts">
+            <div class="about-fact-item">
+              <div class="about-fact-n">1000+</div>
+              <div class="about-fact-l">Employees</div>
+            </div>
+            <div class="about-fact-item">
+              <div class="about-fact-n">A1</div>
+              <div class="about-fact-l">ICRA Credit Rating</div>
+            </div>
+            <div class="about-fact-item">
+              <div class="about-fact-n">Zero</div>
+              <div class="about-fact-l">Debt Company</div>
+            </div>
+            <div class="about-fact-item">
+              <div class="about-fact-n">2002</div>
+              <div class="about-fact-l">Year Founded</div>
+            </div>
+          </div>
+
+          <div class="about-siechem-links">
+            <a href="about.html" class="btn btn-primary">
+              Company Story
+              <svg width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+            <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Industries We Serve ═══ -->
+  <section class="section-padding ind-section">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 36px;">
+        <span class="section-eyebrow">Our Expertise</span>
+        <h2 class="section-title">Industries We Serve</h2>
+      </div>
+      <div class="ind-grid">
+
+        <!-- Aerospace & Defence -->
+        <a href="product-aero44.html" class="ind-card reveal">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+            </svg>
+          </div>
+          <div class="ind-name">Aerospace &amp; Defence</div>
+          <div class="ind-cert">AS 9100 · MIL-Spec · DGAQA</div>
+          <p class="ind-desc">High-reliability wiring for avionics, airframes, UAVs, missiles and satellite systems — built to survive extreme altitude and vibration.</p>
+          <div class="ind-cta">View Aerospace Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Automotive -->
+        <a href="product-automotive.html" class="ind-card reveal reveal-d1">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/>
+            </svg>
+          </div>
+          <div class="ind-name">Automotive</div>
+          <div class="ind-cert">SAE J1128 · JASO D611 · IS 14465</div>
+          <p class="ind-desc">OEM-approved harness wires for engine bays, EV battery packs, and chassis — meeting ARAI, NABL, and global OEM specifications.</p>
+          <div class="ind-cta">View Automotive Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Marine -->
+        <a href="products.html" class="ind-card reveal reveal-d2">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 013 3v1h3l2 6H4l2-6h3V5a3 3 0 013-3z"/><path d="M3 16l2-5h14l2 5"/><path d="M3 16c0 2.2 4 4 9 4s9-1.8 9-4"/>
+            </svg>
+          </div>
+          <div class="ind-name">Marine</div>
+          <div class="ind-cert">IEC 60092 · ABS · IR Class</div>
+          <p class="ind-desc">Flame-retardant, oil-resistant and salt-spray proof cables for naval vessels, offshore platforms and commercial shipping fleets.</p>
+          <div class="ind-cta">View Marine Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Railway & Metro -->
+        <a href="products.html" class="ind-card reveal">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><circle cx="8.5" cy="16.5" r="1.5"/><circle cx="15.5" cy="16.5" r="1.5"/><path d="M8 21l2-2h4l2 2"/>
+            </svg>
+          </div>
+          <div class="ind-name">Railway &amp; Metro</div>
+          <div class="ind-cert">EN 50264 · RDSO · CRRC</div>
+          <p class="ind-desc">Rolling-stock approved cables for high-speed trains, metro coaches and traction systems — meeting RDSO and European EN standards.</p>
+          <div class="ind-cta">View Railway Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Solar & Renewable -->
+        <a href="products.html" class="ind-card reveal reveal-d1">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+            </svg>
+          </div>
+          <div class="ind-name">Solar &amp; Renewable Energy</div>
+          <div class="ind-cert">TÜV · IEC 62930 · UL</div>
+          <p class="ind-desc">UV-stabilised, moisture-resistant PV cables for utility-scale solar farms, wind turbines and battery energy storage systems.</p>
+          <div class="ind-cta">View Solar Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <!-- Industrial & Infrastructure -->
+        <a href="products.html" class="ind-card reveal reveal-d2">
+          <div class="ind-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="ind-name">Industrial &amp; Infrastructure</div>
+          <div class="ind-cert">IEC 60228 · IS 694 · LSZH</div>
+          <p class="ind-desc">Heavy-duty cables for power plants, process industries, data centres and smart-grid infrastructure — LSZH compliant for safety.</p>
+          <div class="ind-cta">View Industrial Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Client logos Section -->
+  <section class="section-padding bg-light-grey">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Client Testimonials</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+
+      <div class="testimonial-box reveal reveal-d1">
+        <div class="testimonial-quotes">“</div>
+        
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <p class="testimonial-text">We are highly pleased with the technical consistency and compliance documentation from Siechem. Their ability to deliver customized E-beam crosslinked cables for our high-stress environments makes them an invaluable aerospace partner.</p>
+          <div class="testimonial-author">Siemens Transportation systems</div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <p class="testimonial-text">Honeywell has benefitted directly from Siechem's flexible engineering approach. The high level of quality control in their Chennai laboratories and compliance with military wire standards makes our global sourcing seamless.</p>
+          <div class="testimonial-author">Honeywell Aerospace Division</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <p class="testimonial-text">Consistent quality, certified custom cable designs, and precise logistics timelines. The team at Siechem makes specifying wires for our offshore energy projects straightforward and efficient.</p>
+          <div class="testimonial-author">General Electric Power &amp; Water</div>
+        </div>
+
+        <!-- Testimonial Indicators -->
+        <div class="testimonial-indicators">
+          <button class="testimonial-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+      <!-- Grayscale Corporate Client Logos -->
+      <div class="client-logos reveal reveal-d2">
+        <div class="client-logo-item">Siemens</div>
+        <div class="client-logo-item">Honeywell</div>
+        <div class="client-logo-item">Schneider</div>
+        <div class="client-logo-item">GE Energy</div>
+        <div class="client-logo-item">Mitsubishi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Animated Stats Band ═══ -->
+  <section class="stats-band" id="stats-band">
+    <div class="container">
+      <div class="stats-band-head reveal">
+        <div class="stats-band-eyebrow">Siechem By The Numbers</div>
+        <div class="stats-band-title">Four Decades of Engineering Excellence</div>
+      </div>
+      <div class="stats-band-grid">
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="22" data-count-suffix="">0</span><span class="num-suffix">M+</span>
+          </div>
+          <div class="stats-label">Cable Configurations</div>
+          <div class="stats-sub">Engineered &amp; documented formulations</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="40" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Years of Excellence</div>
+          <div class="stats-sub">Precision manufacturing since 1982</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="80" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Countries Export</div>
+          <div class="stats-sub">Trusted by OEMs across 6 continents</div>
+        </div>
+        <div class="stats-band-item">
+          <div class="stats-num">
+            <span class="num-value" data-count-to="38" data-count-suffix="">0</span><span class="num-suffix">+</span>
+          </div>
+          <div class="stats-label">Tests Per Cable</div>
+          <div class="stats-sub">Hi-pot, flame, oil &amp; flex in-house</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ From Design to Delivery — Process Strip ═══ -->
+  <section class="section-padding process-section" id="process-section">
+    <div class="container">
+      <div class="section-header reveal" style="margin-bottom: 40px;">
+        <span class="section-eyebrow">How We Work</span>
+        <h2 class="section-title">From Design to Delivery</h2>
+      </div>
+      <div class="process-track" id="process-track">
+        <!-- Animated connector line -->
+        <div class="process-connector">
+          <div class="process-connector-fill" id="process-fill"></div>
+        </div>
+        <div class="process-step" id="pstep-1">
+          <div class="process-num">01</div>
+          <div class="process-step-title">Design Consultation</div>
+          <div class="process-step-desc">Application engineers define your exact spec — gauge, insulation, shielding, temperature range.</div>
+        </div>
+        <div class="process-step" id="pstep-2">
+          <div class="process-num">02</div>
+          <div class="process-step-title">Material Compounding</div>
+          <div class="process-step-desc">In-house polymer compounding lab blends custom insulation to meet your chemical and thermal requirements.</div>
+        </div>
+        <div class="process-step" id="pstep-3">
+          <div class="process-num">03</div>
+          <div class="process-step-title">E-Beam Processing</div>
+          <div class="process-step-desc">Electron-beam cross-linking upgrades temperature ratings without any additive — a unique Siechem advantage.</div>
+        </div>
+        <div class="process-step" id="pstep-4">
+          <div class="process-num">04</div>
+          <div class="process-step-title">In-House Testing</div>
+          <div class="process-step-desc">NABL-accredited lab runs 38+ tests: hi-pot, flame, oil immersion, flexing, and salt-spray.</div>
+        </div>
+        <div class="process-step" id="pstep-5">
+          <div class="process-num">05</div>
+          <div class="process-step-title">Global Delivery</div>
+          <div class="process-step-desc">Full traceability documentation and CoC shipped with every order to any destination worldwide.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo">
+            <img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+          </a>
+          <p>India's leading specialty wires &amp; cables manufacturer. Engineering precision for the world's most critical systems since 2002.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html?view=segment">By Segment</a></li>
+            <li><a href="products.html?view=standard">By Standard</a></li>
+            <li><a href="product-aero44.html">Aerospace Cables</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support &amp; Company</h4>
+          <ul>
+            <li><a href="tech-support.html">Technical Support</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact &amp; Media</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="customers.html">Our Customers</a></li>
+            <li><a href="catalogues.html">Catalogues</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cert-row">
+        <span class="cert">TUV</span>
+        <span class="cert">UL</span>
+        <span class="cert">CE</span>
+        <span class="cert">RoHS</span>
+        <span class="cert">IEC</span>
+        <span class="cert">MIL-Spec</span>
+        <span class="cert">BS EN</span>
+        <span class="cert">IS / BIS</span>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Siechem Technologies Pvt. Ltd. · Chennai, India</span>
+        <span>Established 2002 · 100,000 sq.ft · 22M+ configurations</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video Lightbox Modal -->
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Video Player">
+    <div class="video-modal-backdrop"></div>
+    <button class="video-modal-close" id="video-modal-close" aria-label="Close modal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="video-modal-container">
+      <div class="video-modal-body">
+        <video class="video-modal-player" id="video-modal-player" controls playsinline>
+          <source src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loader Script and Menu Logic -->
+  <script>
+    // Navigation Drawer Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hero Video Load & Autoplay Controller
+      const heroVideo = document.getElementById('hero-video');
+      if (heroVideo) {
+        const startVideo = () => {
+          heroVideo.style.opacity = '1';
+        };
+        // Ensure highest decode quality
+        if ('preservesPitch' in heroVideo) heroVideo.preservesPitch = true;
+        heroVideo.setAttribute('playsinline', '');
+        heroVideo.setAttribute('disablepictureinpicture', '');
+        if (heroVideo.readyState >= 3) {
+          startVideo();
+        } else {
+          heroVideo.addEventListener('canplay', startVideo);
+          heroVideo.addEventListener('loadeddata', startVideo);
+        }
+        heroVideo.play().catch(err => {
+          console.log('Autoplay was blocked or delayed:', err);
+        });
+      }
+
+      const hamburger = document.getElementById('nav-hamburger');
+      const menu = document.getElementById('mobile-menu');
+      if (hamburger && menu) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('active');
+          menu.classList.toggle('open');
+          if (menu.classList.contains('open')) {
+            document.documentElement.classList.add('nav-open');
+          } else {
+            document.documentElement.classList.remove('nav-open');
+          }
+        });
+        const links = menu.querySelectorAll('a');
+        links.forEach(l => {
+          l.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            menu.classList.remove('open');
+            document.documentElement.classList.remove('nav-open');
+          });
+        });
+      }
+
+      // Testimonial Carousel Auto-Play and Click Logic
+      const slides = document.querySelectorAll('.testimonial-slide');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      let currentSlide = 0;
+      let slideInterval = setInterval(nextSlide, 6000);
+
+      function showSlide(n) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+
+      function nextSlide() {
+        showSlide(currentSlide + 1);
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          showSlide(index);
+          slideInterval = setInterval(nextSlide, 6000);
+        });
+      });
+
+      // --- At a Glance Video Carousel Logic ---
+      const wrap = document.getElementById('carousel-scroll-wrap');
+      const firstCard = wrap ? wrap.querySelector('.video-card') : null;
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+
+      if (wrap && firstCard && prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const cardWidth = firstCard.offsetWidth;
+          const style = window.getComputedStyle(wrap);
+          const gap = parseFloat(style.gap) || 24;
+          wrap.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+        });
+        prevBtn.addEventListener('click', () => {
+          const cardWidth = firstCard.offsetWidth;
+          const style = window.getComputedStyle(wrap);
+          const gap = parseFloat(style.gap) || 24;
+          wrap.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+        });
+        
+        const toggleButtons = () => {
+          const scrollLeft = wrap.scrollLeft;
+          const maxScroll = wrap.scrollWidth - wrap.clientWidth;
+          prevBtn.style.opacity = scrollLeft <= 4 ? '0.4' : '1';
+          prevBtn.style.pointerEvents = scrollLeft <= 4 ? 'none' : 'auto';
+          nextBtn.style.opacity = scrollLeft >= maxScroll - 4 ? '0.4' : '1';
+          nextBtn.style.pointerEvents = scrollLeft >= maxScroll - 4 ? 'none' : 'auto';
+        };
+        
+        wrap.addEventListener('scroll', toggleButtons);
+        window.addEventListener('resize', toggleButtons);
+        // Initial setup delay to ensure rendering is complete
+        setTimeout(toggleButtons, 200);
+      }
+
+      // Video Hover Preview Logic
+      const videoCards = document.querySelectorAll('.video-card');
+      videoCards.forEach(card => {
+        const video = card.querySelector('.video-card-video');
+        if (video) {
+          card.addEventListener('mouseenter', () => {
+            video.play().catch(err => {
+              console.log('Video hover autoplay blocked/interrupted:', err);
+            });
+          });
+          card.addEventListener('mouseleave', () => {
+            video.pause();
+          });
+        }
+      });
+
+      // Fullscreen Lightbox Modal Controller
+      const modal = document.getElementById('video-modal');
+      const modalPlayer = document.getElementById('video-modal-player');
+      const modalClose = document.getElementById('video-modal-close');
+      const modalBackdrop = modal ? modal.querySelector('.video-modal-backdrop') : null;
+
+      if (modal && modalPlayer && modalClose) {
+        videoCards.forEach(card => {
+          card.addEventListener('click', () => {
+            const src = card.getAttribute('data-video-src');
+            if (src) {
+              const sourceEl = modalPlayer.querySelector('source');
+              if (sourceEl) {
+                sourceEl.src = src;
+                modalPlayer.load();
+                modal.classList.add('open');
+                document.documentElement.classList.add('nav-open'); // lock body scroll
+                
+                // Play inside the modal
+                modalPlayer.play().catch(err => {
+                  console.log('Modal video play failed:', err);
+                });
+              }
+            }
+          });
+        });
+
+        const closeModal = () => {
+          modal.classList.remove('open');
+          document.documentElement.classList.remove('nav-open'); // unlock body scroll
+          modalPlayer.pause();
+          const sourceEl = modalPlayer.querySelector('source');
+          if (sourceEl) {
+            sourceEl.src = '';
+          }
+          modalPlayer.load();
+        };
+
+        modalClose.addEventListener('click', closeModal);
+        if (modalBackdrop) {
+          modalBackdrop.addEventListener('click', closeModal);
+        }
+        
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && modal.classList.contains('open')) {
+            closeModal();
+          }
+        });
+      }
+
+      // ─── Animated Stats Counter ───
+      // When the stats band scrolls into view, count each .num-value up to its data-count-to
+      const statsBand = document.getElementById('stats-band');
+      if (statsBand) {
+        const numEls = statsBand.querySelectorAll('.num-value[data-count-to]');
+        let counted = false;
+        const runCounters = () => {
+          if (counted) return;
+          counted = true;
+          numEls.forEach(el => {
+            const target = parseInt(el.getAttribute('data-count-to'), 10);
+            const duration = 1800; // ms
+            const start = performance.now();
+            const tick = (now) => {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              // Ease-out cubic
+              const eased = 1 - Math.pow(1 - progress, 3);
+              el.textContent = Math.floor(eased * target);
+              if (progress < 1) requestAnimationFrame(tick);
+              else el.textContent = target;
+            };
+            requestAnimationFrame(tick);
+          });
+        };
+        const statsObs = new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) { runCounters(); statsObs.disconnect(); }
+        }, { threshold: 0.25 });
+        statsObs.observe(statsBand);
+      }
+
+      // ─── Process Step Sequential Lighting ───
+      // When the process section enters view, light up each step + grow the connector line
+      const processSection = document.getElementById('process-section');
+      const processFill = document.getElementById('process-fill');
+      if (processSection && processFill) {
+        let lit = false;
+        const processObs = new IntersectionObserver(entries => {
+          if (!entries[0].isIntersecting || lit) return;
+          lit = true;
+          processObs.disconnect();
+          const steps = processSection.querySelectorAll('.process-step');
+          // Grow the connector line first
+          processFill.style.width = '100%';
+          // Light up each step with a stagger
+          steps.forEach((step, i) => {
+            setTimeout(() => step.classList.add('step-lit'), 180 + i * 260);
+          });
+        }, { threshold: 0.3 });
+        processObs.observe(processSection);
+      }
+
+      // Hero Search Bar Submission Redirect
+      const searchForm = document.getElementById('hero-search-form');
+      const searchInput = document.getElementById('hero-search-input');
+      if (searchForm && searchInput) {
+        searchForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = encodeURIComponent(searchInput.value.trim());
+          if (query) {
+            window.location.href = `products.html?search=${query}`;
+          }
+        });
+      }
+    });
+  </script>
+  <script src="nav-mobile.js" defer></script>
+  <script src="animations.js" defer></script>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11l5-5 5 5"/></svg>
+  </button>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-sticky-cta" aria-hidden="true">
+    <a href="contact.html" class="btn btn-primary">Request Quote</a>
+    <a href="tel:+914422220000" class="btn btn-ghost">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 2h3l1.5 3.5L5 7a9 9 0 003 3l1.5-1.5L13 10v3a1 1 0 01-1 1A11 11 0 011 3a1 1 0 011-1z"/></svg>
+      Call Us
+    </a>
+  </div>
+
+  <script>
+    // Back to top
+    (function () {
+      var btn = document.getElementById('backToTop');
+      if (!btn) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) btn.classList.add('btt-visible');
+        else btn.classList.remove('btt-visible');
+      }, { passive: true });
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+</html>
