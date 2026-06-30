@@ -105,17 +105,18 @@
       font-weight: 600;
     }
     .hero-title {
-      font-size: 48px;
+      font-size: clamp(22px, 3.0vw, 38px);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1px;
-      margin-bottom: 20px;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      margin-bottom: 24px;
       color: #FFFFFF;
       text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 24px rgba(0,0,0,0.7);
     }
     .hero-title em {
       font-style: italic;
       color: #F24B51;
+      font-weight: 700;
     }
     .hero-subtitle {
       font-size: 17px;
@@ -1613,10 +1614,8 @@
     </video>
     <div class="hero-video-overlay"></div>
     <div class="hero-content">
-      <div class="hero-eyebrow">India's #1 Specialty Wires &amp; Cables</div>
-      <h1 class="hero-title" style="font-size: clamp(30px, 5.5vw, 58px); letter-spacing: clamp(-0.5px, -0.08em, -1.5px);">Precision Wiring for<br/><em>Critical</em> Applications.</h1>
-      <p class="hero-subtitle" style="font-size: clamp(14px, 2vw, 17px);">AS 9100, TUV, UL, &amp; MIL-Spec qualified configurations for Aerospace, Defense, Marine, Renewable Energy, and Advanced Industrial systems.</p>
-
+      <div class="hero-eyebrow">Engineered in India &middot; Trusted Worldwide</div>
+      <h1 class="hero-title">Specialty Cables Built to<br/><em>Outlast</em> the Extreme.</h1>
       <div class="ctas" style="justify-content: center; gap: 12px;">
         <a href="products.html" class="btn btn-primary">Explore Products</a>
         <a href="contact.html" class="btn btn-white" style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.4);color:#fff;backdrop-filter:blur(8px);">Request Quote</a>
@@ -2273,6 +2272,7 @@
       // Hero Video Load & Autoplay Controller
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
+        heroVideo.playbackRate = 1.5; // slightly faster playback
         const startVideo = () => {
           heroVideo.style.opacity = '1';
         };
