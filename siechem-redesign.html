@@ -2272,6 +2272,7 @@
       // Hero Video Load & Autoplay Controller
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
+        heroVideo.currentTime = 2;
         heroVideo.playbackRate = 1.5; // slightly faster playback
         const startVideo = () => {
           heroVideo.style.opacity = '1';
