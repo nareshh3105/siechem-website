@@ -2238,21 +2238,30 @@
       // Hero Video Load & Autoplay Controller
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
-        heroVideo.currentTime = 2;
+        const HERO_START = 2; // skip the dark opening frames
         heroVideo.playbackRate = 1.5; // slightly faster playback
-        const startVideo = () => {
-          heroVideo.style.opacity = '1';
+        heroVideo.loop = false; // handled manually so it loops back to HERO_START, not 0
+        let revealed = false;
+        const startVideo = () => { if (!revealed) { revealed = true; heroVideo.style.opacity = '1'; } };
+        // Seek to the start offset only once metadata is available, then play
+        const seekToStart = () => {
+          try { heroVideo.currentTime = HERO_START; } catch (e) {}
         };
+        if (heroVideo.readyState >= 1) seekToStart();
+        else heroVideo.addEventListener('loadedmetadata', seekToStart, { once: true });
+        // Reveal only after the seek lands so the first painted frame isn't black
+        heroVideo.addEventListener('seeked', startVideo, { once: true });
+        // Loop back to the start offset instead of the black 0s frame
+        heroVideo.addEventListener('ended', () => {
+          heroVideo.currentTime = HERO_START;
+          heroVideo.play().catch(() => {});
+        });
+        // Fallback: never leave the video permanently hidden
+        setTimeout(startVideo, 1500);
         // Ensure highest decode quality
         if ('preservesPitch' in heroVideo) heroVideo.preservesPitch = true;
         heroVideo.setAttribute('playsinline', '');
         heroVideo.setAttribute('disablepictureinpicture', '');
-        if (heroVideo.readyState >= 3) {
-          startVideo();
-        } else {
-          heroVideo.addEventListener('canplay', startVideo);
-          heroVideo.addEventListener('loadeddata', startVideo);
-        }
         heroVideo.play().catch(err => {
           console.log('Autoplay was blocked or delayed:', err);
         });
