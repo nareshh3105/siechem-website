@@ -1003,24 +1003,8 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 10px; }
 }
 
-/* ─────────── Floating contact strip (mobile) ─────────── */
-.mobile-sticky-cta {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 88;
-  background: #FFFFFF;
-  border-top: 1px solid var(--border);
-  padding: 12px 18px;
-  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
-  gap: 10px;
-}
-@media (max-width: 640px) {
-  .mobile-sticky-cta { display: flex; }
-  .mobile-sticky-cta .btn { flex: 1; justify-content: center; font-size: 13.5px; padding: 11px 16px; }
-  /* Push footer content above the sticky bar */
-  body { padding-bottom: 68px; }
-}
+/* Mobile floating contact strip removed — kept hidden in case any stale markup remains */
+.mobile-sticky-cta { display: none !important; }
 
 /* ─────────── Improved image/media containers ─────────── */
 .img-cover { width: 100%; height: 100%; object-fit: cover; }
@@ -1090,7 +1074,6 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
 @media (max-width: 768px) {
   .btn          { min-height: 44px; }
   .nav-cta      { min-height: 44px; }
-  .mobile-sticky-cta .btn { min-height: 46px; border-radius: 10px; }
 }
 
 /* ─────────── Spec table horizontal scroll ─────────── */
@@ -1227,4 +1210,52 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   .nav, .footer, .mobile-sticky-cta, .back-to-top { display: none !important; }
   .page-hero { padding: 12px 0; }
   body { font-size: 12pt; }
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE POLISH LAYER — site-wide phone refinements
+   (loaded last so it overrides earlier rules)
+   ═══════════════════════════════════════════════════ */
+
+/* Hard guard against horizontal overflow / sideways scroll on phones */
+@media (max-width: 640px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, svg, table, pre, iframe { max-width: 100%; }
+  /* Long product codes / URLs must wrap instead of pushing the layout wider */
+  h1, h2, h3, h4, p, a, li, td, th, .card, .role { overflow-wrap: break-word; word-break: break-word; }
+}
+
+/* Tighter edge padding so content isn't cramped on narrow screens */
+@media (max-width: 600px) {
+  .container, .container-narrow, .nav-inner { padding-left: 18px; padding-right: 18px; }
+}
+@media (max-width: 360px) {
+  .container, .container-narrow, .nav-inner { padding-left: 14px; padding-right: 14px; }
+}
+
+/* CTAs go full-width and stack cleanly on small phones (easier to tap) */
+@media (max-width: 480px) {
+  .ctas { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
+  .ctas .btn { width: 100%; justify-content: center; }
+}
+
+/* Comfortable tap spacing for nav + footer links */
+@media (max-width: 768px) {
+  .footer-col ul li a { display: inline-block; padding: 4px 0; }
+}
+
+/* Reduce oversized hero/section vertical whitespace on short phones */
+@media (max-width: 480px) {
+  .section-padding { padding: 44px 0; }
+  .hero-content { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Honour users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
