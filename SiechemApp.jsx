@@ -44,7 +44,7 @@
 const { useState } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#E31E24",
+  "accent": "#B87333",
   "density": "comfortable"
 }/*EDITMODE-END*/;
 
@@ -78,7 +78,7 @@ function SiechemApp() {
         <TweakColor
           label="Accent Color"
           value={t.accent}
-          options={['#E31E24','#2563EB','#059669','#7C3AED']}
+          options={['#B87333','#2563EB','#059669','#7C3AED']}
           onChange={v => setTweak('accent', v)}
         />
         <TweakSection label="Layout" />

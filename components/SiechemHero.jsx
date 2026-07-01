@@ -17,7 +17,7 @@
  *   - Hero image: cable cross-section photograph from the assets/ppt-images folder
  *
  * PROPS:
- *   accent  {string}  — CSS colour for the primary red (default #E31E24)
+ *   accent  {string}  — CSS colour for the primary red (default #B87333)
  *                        Used on the CTA button background and highlighted words
  *
  * WHY ROTATING TAGLINES:
@@ -41,19 +41,19 @@ const STATS = [
 
 function CableSVG({ accent }) {
   return (
-    <svg viewBox="0 0 320 320" width="440" height="440" style={{ position: 'absolute', right: -60, top: '50%', transform: 'translateY(-50%)', opacity: 0.92, filter: 'drop-shadow(0 0 60px rgba(227,30,36,0.1))' }}>
+    <svg viewBox="0 0 320 320" width="440" height="440" style={{ position: 'absolute', right: -60, top: '50%', transform: 'translateY(-50%)', opacity: 0.92, filter: 'none' }}>
       <defs>
         <radialGradient id="jacketGrad" cx="38%" cy="32%" r="65%">
           <stop offset="0%" stopColor="#263548"/>
           <stop offset="100%" stopColor="#0d1726"/>
         </radialGradient>
         <radialGradient id="coreGrad" cx="35%" cy="30%" r="70%">
-          <stop offset="0%" stopColor="#F24B51"/>
-          <stop offset="100%" stopColor="#B3151A"/>
+          <stop offset="0%" stopColor="#D98E4A"/>
+          <stop offset="100%" stopColor="#8C5520"/>
         </radialGradient>
         <radialGradient id="outerCoreGrad" cx="35%" cy="30%" r="70%">
-          <stop offset="0%" stopColor="#E31E24"/>
-          <stop offset="100%" stopColor="#B3151A"/>
+          <stop offset="0%" stopColor="#B87333"/>
+          <stop offset="100%" stopColor="#8C5520"/>
         </radialGradient>
         <radialGradient id="insGrad" cx="35%" cy="30%" r="70%">
           <stop offset="0%" stopColor="#2d4a7a"/>
@@ -138,7 +138,7 @@ function SiechemHero({ accent }) {
         {/* Left — text */}
         <div style={{ opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(24px)', transition: 'opacity 0.7s, transform 0.7s' }}>
           {/* Eyebrow */}
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(227,30,36,0.08)', border: `1px solid ${accent}25`, borderRadius: 99, padding: '5px 14px', marginBottom: 28 }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(184,115,51,0.08)', border: `1px solid ${accent}25`, borderRadius: 99, padding: '5px 14px', marginBottom: 28 }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: accent, flexShrink: 0 }}></span>
             <span style={{ fontSize: 12, fontWeight: 600, color: accent, letterSpacing: '0.05em' }}>India's #1 Specialty Wires & Cables</span>
           </div>

@@ -14,12 +14,12 @@
  *   - Sticky positioning: the nav stays at the top of the viewport on scroll.
  *     A scroll listener adds a `.scrolled` class that increases box-shadow intensity.
  *   - Mobile hamburger: toggles a full-screen mobile menu overlay.
- *   - Accent colour prop: the brand red (#E31E24) is passed in as `accent` from
+ *   - Accent colour prop: the brand red (#B87333) is passed in as `accent` from
  *     SiechemApp.jsx (via the TweaksPanel design controls) so it can be previewed
  *     in different colours during demos without touching CSS.
  *
  * PROPS:
- *   accent  {string}  — CSS colour string for brand accent (default #E31E24)
+ *   accent  {string}  — CSS colour string for brand accent (default #B87333)
  *
  * NOTE:
  *   This component is only used in the React prototype (siechem-redesign-2d.html).

@@ -299,11 +299,11 @@
       color: var(--accent);
       background: var(--accent-soft);
       transform: scale(1.06);
-      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.12);
+      box-shadow: none;
     }
     .carousel-nav-btn:focus {
       outline: none;
-      box-shadow: 0 0 0 3px rgba(227,30,36,0.18);
+      box-shadow: 0 0 0 3px rgba(184,115,51,0.18);
     }
     .carousel-scroll-wrap {
       display: flex;
@@ -336,8 +336,8 @@
     }
     .video-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(227, 30, 36, 0.14);
-      border-color: rgba(227, 30, 36, 0.35);
+      box-shadow: none;
+      border-color: rgba(184,115,51, 0.35);
     }
     .video-card-inner {
       width: 100%;
@@ -399,7 +399,7 @@
     .video-card:hover .video-card-badge {
       background: var(--accent);
       border-color: var(--accent-light);
-      box-shadow: 0 4px 12px rgba(227, 30, 36, 0.4);
+      box-shadow: none;
     }
     .video-card-play-btn {
       position: absolute;
@@ -427,7 +427,7 @@
       border-color: var(--accent-light);
       color: #FFFFFF;
       opacity: 1;
-      box-shadow: 0 0 24px rgba(227, 30, 36, 0.65);
+      box-shadow: none;
     }
     .video-card-play-btn svg {
       width: 22px;
@@ -951,7 +951,7 @@
     .ind-card:hover {
       transform: translateY(-5px);
       border-color: var(--accent-border);
-      box-shadow: 0 16px 36px rgba(227,30,36,0.10);
+      box-shadow: none;
     }
     .ind-card:hover::after { transform: scaleX(1); }
     .ind-img {
@@ -1013,7 +1013,7 @@
       top: -120px; left: -120px;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(227,30,36,0.13) 0%, transparent 65%);
+      background: none;
       pointer-events: none;
     }
     .stats-band::after {
@@ -1022,7 +1022,7 @@
       bottom: -80px; right: -60px;
       width: 360px; height: 360px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(227,30,36,0.08) 0%, transparent 65%);
+      background: none;
       pointer-events: none;
     }
     .stats-band-head {
@@ -1061,7 +1061,7 @@
       border-right: 1px solid rgba(255,255,255,0.07);
       transition: background 0.3s;
     }
-    .stats-band-item:hover { background: rgba(227,30,36,0.06); }
+    .stats-band-item:hover { background: rgba(184,115,51,0.06); }
     .stats-band-item:last-child { border-right: none; }
     .stats-num {
       font-size: clamp(38px, 4.5vw, 56px);
@@ -1163,7 +1163,7 @@
       background: var(--accent);
       border-color: var(--accent);
       color: #FFFFFF;
-      box-shadow: 0 6px 20px rgba(227,30,36,0.40);
+      box-shadow: none;
       transform: scale(1.12);
     }
     .process-step-title {
@@ -1200,7 +1200,7 @@
       top: -180px; right: -180px;
       width: 600px; height: 600px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(227,30,36,0.09) 0%, transparent 65%);
+      background: none;
       pointer-events: none;
     }
     .precision-grid {
@@ -1219,7 +1219,7 @@
       border-radius: 16px;
       display: block;
       object-fit: cover;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(227,30,36,0.18);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55);
     }
     .precision-text-wrap { color: #FFFFFF; }
     .wire-eyebrow {
@@ -1272,8 +1272,8 @@
       transition: background 0.2s, border-color 0.2s;
     }
     .wire-layer-item:hover {
-      background: rgba(227,30,36,0.08);
-      border-color: rgba(227,30,36,0.22);
+      background: rgba(184,115,51,0.08);
+      border-color: rgba(184,115,51,0.22);
     }
     .wire-layer-dot {
       width: 10px; height: 10px;
@@ -1335,7 +1335,7 @@
       align-items: center;
       gap: 12px;
       box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-      border: 1px solid rgba(227,30,36,0.28);
+      border: 1px solid rgba(184,115,51,0.28);
       min-width: 200px;
     }
     .about-siechem-badge .badge-star {
@@ -2347,6 +2347,10 @@
       videoCards.forEach(card => {
         const video = card.querySelector('.video-card-video');
         if (video) {
+          // Show the 2-second frame as the thumbnail (not the black 0s frame)
+          const seekToStart = () => { try { video.currentTime = 2; } catch (e) {} };
+          if (video.readyState >= 1) seekToStart();
+          else video.addEventListener('loadedmetadata', seekToStart, { once: true });
           card.addEventListener('mouseenter', () => {
             video.play().catch(err => {
               console.log('Video hover autoplay blocked/interrupted:', err);
@@ -2354,6 +2358,7 @@
           });
           card.addEventListener('mouseleave', () => {
             video.pause();
+            video.currentTime = 2;
           });
         }
       });
