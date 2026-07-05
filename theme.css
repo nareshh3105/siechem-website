@@ -23,7 +23,7 @@
 
    WHY ONE FILE FOR THE WHOLE SITE:
      The site is 20+ standalone HTML files with no bundler. A shared theme.css means:
-     - Colour changes (e.g. updating --accent from #B87333 to a new red) propagate
+     - Colour changes (e.g. updating --accent from #E31E24 to a new red) propagate
        everywhere by editing one variable in :root.
      - Layout grids (.grid-3, .grid-4) are consistent across all pages without copying.
      - The browser caches theme.css after the first page load, so subsequent page
@@ -41,7 +41,7 @@
                                     (gives an engineering/technical feel to spec data)
 
    Siechem — Light Red & White Theme  (brand-accurate)
-   Primary red: #B87333  |  Background: #FFFFFF
+   Primary red: #E31E24  |  Background: #FFFFFF
    ════════════════════════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -57,15 +57,15 @@
   --text-muted:  #4B5563;
   --text-faint:  #6B7280;
   --text-dim:    #9CA3AF;
-  --accent:      #B87333;
-  --accent-2:    #8C5520;
-  --accent-light:#D98E4A;
-  --accent-soft: rgba(184,115,51,0.08);
-  --accent-border: rgba(184,115,51,0.28);
+  --accent:      #E31E24;
+  --accent-2:    #B3151A;
+  --accent-light:#F24B51;
+  --accent-soft: rgba(227,30,36,0.08);
+  --accent-border: rgba(227,30,36,0.28);
   --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
   --shadow-hover:0 8px 28px rgba(0,0,0,0.13), 0 2px 6px rgba(0,0,0,0.06);
-  --shadow-glow: 0 0 0 3px rgba(184,115,51,0.12);
-  --shadow-cta:  none;
+  --shadow-glow: 0 0 0 3px rgba(227,30,36,0.12);
+  --shadow-cta:  0 4px 14px rgba(227,30,36,0.38);
   --radius-sm:   6px;
   --radius:      10px;
   --radius-lg:   14px;
@@ -82,8 +82,8 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--sans);
-  font-size: 16.5px;
-  line-height: 1.62;
+  font-size: 15.5px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p { line-height: 1.65; }
 
-::selection { background: rgba(184,115,51,0.18); }
+::selection { background: rgba(227,30,36,0.18); }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; }
 img { display: block; max-width: 100%; height: auto; }
@@ -138,7 +138,7 @@ img { display: block; max-width: 100%; height: auto; }
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(227,30,36,0.35);
 }
 .nav-links {
   display: flex;
@@ -238,6 +238,7 @@ img { display: block; max-width: 100%; height: auto; }
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  box-shadow: var(--shadow-cta);
   transition: background 0.15s, transform 0.12s;
   flex-shrink: 0;
 }
@@ -437,7 +438,7 @@ html.nav-open, html.nav-open body {
   top: -80px; right: -80px;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: none;
+  background: radial-gradient(circle, rgba(227,30,36,0.08) 0%, transparent 70%);
   pointer-events: none;
 }
 .page-hero-content {
@@ -575,8 +576,9 @@ html.nav-open, html.nav-open body {
 .btn:active { transform: translateY(1px) scale(0.985) !important; transition-duration: 0.06s !important; }
 .btn-primary {
   background: var(--accent); color: #FFF;
+  box-shadow: var(--shadow-cta);
 }
-.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(227,30,36,0.5); }
 .btn-ghost {
   background: #FFFFFF; color: var(--text);
   border: 1.5px solid var(--border-strong);
@@ -604,8 +606,8 @@ html.nav-open, html.nav-open body {
   -webkit-tap-highlight-color: transparent;
 }
 .card-hover:hover {
-  box-shadow: 0 12px 36px rgba(0,0,0,0.11);
-  border-color: rgba(184,115,51,0.22);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.11), 0 0 0 1px rgba(227,30,36,0.09);
+  border-color: rgba(227,30,36,0.22);
   transform: translateY(-4px);
 }
 .card-soft {
@@ -618,7 +620,7 @@ html.nav-open, html.nav-open body {
 }
 .card:focus-within {
   border-color: var(--accent-border);
-  box-shadow: 0 0 0 3px rgba(184,115,51,0.08);
+  box-shadow: 0 0 0 3px rgba(227,30,36,0.08);
 }
 
 /* ─────────── Grid utilities ─────────── */
@@ -705,7 +707,7 @@ html.nav-open, html.nav-open body {
 }
 .input:focus, .textarea:focus, .select:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(184,115,51,0.12);
+  box-shadow: 0 0 0 3px rgba(227,30,36,0.12);
 }
 .textarea { resize: vertical; min-height: 120px; line-height: 1.55; }
 .select {
@@ -917,7 +919,7 @@ html { scroll-behavior: smooth; }
 .filter-bar button.active {
   background: var(--accent);
   color: #fff;
-  box-shadow: none;
+  box-shadow: 0 2px 8px rgba(227,30,36,0.3);
 }
 .filter-bar button:hover:not(.active) {
   background: var(--bg-soft);
@@ -991,7 +993,7 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   border: none;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: none;
+  box-shadow: 0 4px 16px rgba(227,30,36,0.45);
   opacity: 0; visibility: hidden;
   transform: translateY(14px);
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.15s;
@@ -1003,8 +1005,24 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 10px; }
 }
 
-/* Mobile floating contact strip removed — kept hidden in case any stale markup remains */
-.mobile-sticky-cta { display: none !important; }
+/* ─────────── Floating contact strip (mobile) ─────────── */
+.mobile-sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 88;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border);
+  padding: 12px 18px;
+  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
+  gap: 10px;
+}
+@media (max-width: 640px) {
+  .mobile-sticky-cta { display: flex; }
+  .mobile-sticky-cta .btn { flex: 1; justify-content: center; font-size: 13.5px; padding: 11px 16px; }
+  /* Push footer content above the sticky bar */
+  body { padding-bottom: 68px; }
+}
 
 /* ─────────── Improved image/media containers ─────────── */
 .img-cover { width: 100%; height: 100%; object-fit: cover; }
@@ -1074,6 +1092,7 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
 @media (max-width: 768px) {
   .btn          { min-height: 44px; }
   .nav-cta      { min-height: 44px; }
+  .mobile-sticky-cta .btn { min-height: 46px; border-radius: 10px; }
 }
 
 /* ─────────── Spec table horizontal scroll ─────────── */
@@ -1210,52 +1229,4 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   .nav, .footer, .mobile-sticky-cta, .back-to-top { display: none !important; }
   .page-hero { padding: 12px 0; }
   body { font-size: 12pt; }
-}
-
-/* ═══════════════════════════════════════════════════
-   MOBILE POLISH LAYER — site-wide phone refinements
-   (loaded last so it overrides earlier rules)
-   ═══════════════════════════════════════════════════ */
-
-/* Hard guard against horizontal overflow / sideways scroll on phones */
-@media (max-width: 640px) {
-  html, body { max-width: 100%; overflow-x: hidden; }
-  img, video, svg, table, pre, iframe { max-width: 100%; }
-  /* Long product codes / URLs must wrap instead of pushing the layout wider */
-  h1, h2, h3, h4, p, a, li, td, th, .card, .role { overflow-wrap: break-word; word-break: break-word; }
-}
-
-/* Tighter edge padding so content isn't cramped on narrow screens */
-@media (max-width: 600px) {
-  .container, .container-narrow, .nav-inner { padding-left: 18px; padding-right: 18px; }
-}
-@media (max-width: 360px) {
-  .container, .container-narrow, .nav-inner { padding-left: 14px; padding-right: 14px; }
-}
-
-/* CTAs go full-width and stack cleanly on small phones (easier to tap) */
-@media (max-width: 480px) {
-  .ctas { flex-direction: column; align-items: stretch; gap: 10px; width: 100%; }
-  .ctas .btn { width: 100%; justify-content: center; }
-}
-
-/* Comfortable tap spacing for nav + footer links */
-@media (max-width: 768px) {
-  .footer-col ul li a { display: inline-block; padding: 4px 0; }
-}
-
-/* Reduce oversized hero/section vertical whitespace on short phones */
-@media (max-width: 480px) {
-  .section-padding { padding: 44px 0; }
-  .hero-content { padding-left: 20px; padding-right: 20px; }
-}
-
-/* Honour users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
 }

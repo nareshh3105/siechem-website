@@ -11,9 +11,3 @@ screenshots/
 *.json
 !package.json
 !package-lock.json
-
-# Interactive catalog: data files MUST deploy; source PDFs are too large for git
-!catalog/**
-catalogue-pdfs/
-catalog-app.part.html
-catalog-app.part.js
