@@ -1,0 +1,699 @@
+<!--
+  FILE: catalog.html — Interactive Product Selector / Configurator
+
+  PURPOSE:
+    Data-driven wire & cable selector replacing static PDF browsing. All content is
+    generated from catalog/data/*.json, machine-extracted from the official Siechem
+    PDF catalogues (see catalog/README.md for the pipeline & how to add new PDFs).
+
+  ARCHITECTURE:
+    - families.json (~40KB) eager: family cards, facet seeds
+    - search-index.json (~670KB) lazy on first search/filter: series-level facets
+    - products/<family>.json lazy per family: full spec tables
+    - Facet counts & configurator options are COMPUTED from data, so invalid
+      combinations can never be selected (validation by construction).
+    - Quote basket -> POST /api/quote with cable_spec JSON (existing serverless fn).
+
+  SHARED DEPENDENCIES: theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Selector — Configure Your Cable | Siechem</title>
+  <meta name="description" content="Interactive Siechem cable selector: filter 28 product families and 1,000+ catalogue series by industry, voltage, material and construction, then request a quotation.">
+  <link rel="canonical" href="https://siechem.vercel.app/catalog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo"><img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="about.html" class="nav-company-item">About Us</a>
+            <a href="mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="ppt.html" class="nav-company-item">PPT</a>
+            <a href="policies.html" class="nav-company-item">Policies</a>
+            <a href="csr.html" class="nav-company-item">CSR</a>
+            <a href="careers.html" class="nav-company-item">Careers</a>
+            <a href="events.html" class="nav-company-item">Events</a>
+            <a href="privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="res-5s.html" class="nav-company-item">5S</a>
+              <a href="res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="res-reach.html" class="nav-company-item">REACH</a>
+              <a href="res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+<!-- CATALOG APP CONTENT — assembled into catalog.html by build script -->
+<style>
+  .cat-wrap { max-width: 1280px; margin: 0 auto; padding: 24px 20px 80px; }
+  .crumbs { font-family: var(--mono); font-size: 12px; color: var(--text-faint); margin: 14px 0 6px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+  .crumbs a { color: var(--accent); text-decoration: none; }
+  .crumbs span.sep { color: var(--text-dim); }
+  .cat-hero { padding: 26px 0 18px; border-bottom: 1px solid var(--border); margin-bottom: 22px; }
+  .cat-hero h1 { font-family:'Open Sans',sans-serif; font-size: clamp(26px,4vw,40px); font-weight: 800; letter-spacing:-0.5px; }
+  .cat-hero p { color: var(--text-muted); margin-top: 8px; max-width: 720px; font-size: 15px; }
+  .hero-stats { display:flex; gap:26px; margin-top:14px; flex-wrap:wrap; }
+  .hero-stat b { font-size:22px; color:var(--accent); font-family:var(--mono); }
+  .hero-stat span { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--text-faint); }
+  .mode-tabs { display:flex; gap:8px; margin:18px 0 20px; flex-wrap:wrap; }
+  .mode-tab { padding:9px 18px; border:1px solid var(--border-strong); border-radius:999px; background:var(--bg); cursor:pointer; font-size:14px; font-weight:600; color:var(--text-muted); }
+  .mode-tab.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .search-row { display:flex; gap:10px; margin-bottom:18px; }
+  .search-box { flex:1; position:relative; }
+  .search-box input { width:100%; padding:13px 16px 13px 42px; border:1px solid var(--border-strong); border-radius:10px; font-size:15px; background:var(--bg); color:var(--text); }
+  .search-box input:focus { outline:2px solid var(--accent); border-color:transparent; }
+  .search-box svg { position:absolute; left:14px; top:50%; transform:translateY(-50%); color:var(--text-dim); }
+  .layout { display:grid; grid-template-columns: 260px 1fr; gap:26px; align-items:start; }
+  @media (max-width: 900px){ .layout{ grid-template-columns:1fr; } .facets{ order:2 } }
+  .facets { border:1px solid var(--border); border-radius:12px; padding:16px; background:var(--bg-soft); position:sticky; top:80px; max-height:calc(100vh - 100px); overflow:auto; }
+  .facet-group { margin-bottom:16px; }
+  .facet-group h4 { font-size:11px; text-transform:uppercase; letter-spacing:.09em; color:var(--text-faint); margin-bottom:8px; font-family:var(--mono); }
+  .facet-opt { display:flex; align-items:center; gap:8px; padding:5px 6px; border-radius:7px; cursor:pointer; font-size:13.5px; color:var(--text-muted); }
+  .facet-opt:hover { background:var(--bg-card-hover); }
+  .facet-opt.on { color:var(--accent); font-weight:700; background:var(--bg-card-hover); }
+  .facet-opt .cnt { margin-left:auto; font-family:var(--mono); font-size:11px; color:var(--text-dim); }
+  .facet-clear { font-size:12px; color:var(--accent); cursor:pointer; background:none; border:none; padding:0; font-weight:600; }
+  .fam-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px; }
+  .fam-card { border:1px solid var(--border); border-radius:12px; background:var(--bg-card); padding:18px; cursor:pointer; transition:all .16s; display:flex; flex-direction:column; gap:8px; }
+  .fam-card:hover { transform:translateY(-3px); border-color:var(--accent); box-shadow:0 8px 22px rgba(0,0,0,.07); }
+  .fam-card .seg { font-family:var(--mono); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+  .fam-card h3 { font-size:16.5px; font-weight:700; line-height:1.25; }
+  .fam-card .meta { font-size:12.5px; color:var(--text-faint); display:flex; flex-wrap:wrap; gap:10px; }
+  .fam-card .meta b { color:var(--text-muted); }
+  .fam-card .sum { font-size:13px; color:var(--text-muted); line-height:1.5; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { font-family:var(--mono); font-size:10.5px; padding:3px 9px; border-radius:999px; background:var(--bg-soft); border:1px solid var(--border); color:var(--text-muted); }
+  .chip.hot { background:#FEF2F2; border-color:var(--accent); color:var(--accent); }
+  .series-list { display:flex; flex-direction:column; gap:12px; }
+  .series-card { border:1px solid var(--border); border-radius:12px; background:var(--bg-card); padding:16px 18px; cursor:pointer; transition:all .15s; }
+  .series-card:hover { border-color:var(--accent); background:var(--bg-card-hover); }
+  .series-card h3 { font-size:15.5px; font-weight:700; margin-bottom:6px; }
+  .series-card .srow { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .btn { display:inline-flex; align-items:center; gap:7px; padding:10px 18px; border-radius:9px; border:1px solid var(--accent); background:var(--accent); color:#fff; font-size:14px; font-weight:600; cursor:pointer; text-decoration:none; }
+  .btn:hover { filter:brightness(1.08); }
+  .btn.ghost { background:transparent; color:var(--accent); }
+  .btn.sm { padding:7px 13px; font-size:12.5px; border-radius:7px; }
+  .btn[disabled] { opacity:.45; cursor:not-allowed; }
+  .spec-table-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:10px; margin:14px 0; }
+  table.spec { border-collapse:collapse; width:100%; font-size:13px; min-width:640px; }
+  table.spec th { background:var(--bg-soft); font-family:var(--mono); font-size:11px; text-align:left; padding:9px 10px; border-bottom:2px solid var(--border-strong); color:var(--text-muted); position:sticky; top:0; }
+  table.spec td { padding:8px 10px; border-bottom:1px solid var(--border); color:var(--text); white-space:nowrap; }
+  table.spec tr:hover td { background:var(--bg-card-hover); }
+  table.spec tr.sel td { background:#FEF2F2; box-shadow:inset 3px 0 0 var(--accent); }
+  .attr-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; margin:14px 0; }
+  .attr-box { border:1px solid var(--border); border-radius:9px; padding:10px 12px; background:var(--bg-soft); }
+  .attr-box .k { font-family:var(--mono); font-size:10px; text-transform:uppercase; letter-spacing:.07em; color:var(--text-faint); }
+  .attr-box .v { font-size:13.5px; font-weight:600; margin-top:3px; }
+  .note { font-size:12.5px; color:var(--text-faint); background:var(--bg-soft); border-left:3px solid var(--accent); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; }
+  .toolbar { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 4px; align-items:center; }
+  .empty { text-align:center; color:var(--text-faint); padding:60px 20px; font-size:15px; }
+  /* configurator */
+  .wizard { border:1px solid var(--border); border-radius:14px; background:var(--bg-card); padding:22px; }
+  .wsteps { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:20px; }
+  .wstep { font-family:var(--mono); font-size:11px; padding:6px 11px; border-radius:999px; border:1px solid var(--border); color:var(--text-dim); }
+  .wstep.done { border-color:var(--accent); color:var(--accent); cursor:pointer; }
+  .wstep.now { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .opt-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px; margin-top:14px; }
+  .opt-card { border:1px solid var(--border-strong); border-radius:10px; padding:14px; cursor:pointer; font-size:14px; font-weight:600; transition:all .13s; background:var(--bg); }
+  .opt-card:hover { border-color:var(--accent); background:var(--bg-card-hover); }
+  .opt-card small { display:block; font-weight:400; color:var(--text-faint); font-size:12px; margin-top:4px; }
+  /* drawers & modals */
+  .drawer-mask { position:fixed; inset:0; background:rgba(17,24,39,.45); z-index:200; display:none; }
+  .drawer-mask.open { display:block; }
+  .drawer { position:fixed; top:0; right:-560px; width:min(560px,100vw); height:100vh; background:var(--bg); z-index:201; transition:right .25s; box-shadow:-12px 0 40px rgba(0,0,0,.18); display:flex; flex-direction:column; }
+  .drawer.open { right:0; }
+  .drawer-head { padding:18px 22px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .drawer-body { padding:20px 22px; overflow:auto; flex:1; }
+  .fld { margin-bottom:13px; }
+  .fld label { display:block; font-size:12px; font-weight:600; color:var(--text-muted); margin-bottom:5px; }
+  .fld input,.fld textarea,.fld select { width:100%; padding:10px 12px; border:1px solid var(--border-strong); border-radius:8px; font-size:14px; background:var(--bg); color:var(--text); font-family:inherit; }
+  .fld input:focus,.fld textarea:focus { outline:2px solid var(--accent); border-color:transparent; }
+  .quote-item { border:1px solid var(--border); border-radius:10px; padding:12px 14px; margin-bottom:10px; background:var(--bg-soft); font-size:13px; }
+  .quote-item b { font-size:13.5px; }
+  .quote-item .rm { float:right; color:var(--accent); cursor:pointer; font-weight:700; background:none; border:none; }
+  .fab { position:fixed; bottom:26px; right:26px; z-index:150; box-shadow:0 10px 28px rgba(184,115,51,.4); border-radius:999px; }
+  .badge-dot { background:#fff; color:var(--accent); border-radius:999px; padding:1px 8px; font-family:var(--mono); font-size:12px; font-weight:700; }
+  .cmp-bar { position:fixed; bottom:0; left:0; right:0; background:var(--text); color:#fff; z-index:140; padding:11px 20px; display:none; align-items:center; gap:14px; font-size:13.5px; }
+  .cmp-bar.show { display:flex; }
+  .modal { position:fixed; inset:0; z-index:300; background:rgba(17,24,39,.5); display:none; align-items:center; justify-content:center; padding:20px; }
+  .modal.open { display:flex; }
+  .modal-card { background:var(--bg); border-radius:14px; max-width:1000px; width:100%; max-height:88vh; overflow:auto; padding:24px; }
+  .flag-warn { font-size:11.5px; color:#92400E; background:#FEF3C7; border-radius:6px; padding:2px 8px; }
+  .recent { margin-top:34px; }
+  .recent h4 { font-size:12px; font-family:var(--mono); text-transform:uppercase; letter-spacing:.08em; color:var(--text-faint); margin-bottom:10px; }
+  .skel { height:120px; border-radius:12px; background:linear-gradient(90deg,var(--bg-soft),#eee,var(--bg-soft)); background-size:200% 100%; animation:sk 1.2s infinite; }
+  @keyframes sk { 0%{background-position:0 0} 100%{background-position:-200% 0} }
+  mark { background:#FDE68A; border-radius:2px; }
+</style>
+
+<main class="cat-wrap">
+  <div class="crumbs" id="crumbs"><a href="siechem-redesign.html">Home</a><span class="sep">→</span><a href="catalogues.html">Catalogues</a><span class="sep">→</span><b>Product Selector</b></div>
+
+  <div class="cat-hero">
+    <h1>Wire &amp; Cable Selector</h1>
+    <p>Configure the exact cable you need — every specification below is extracted directly from Siechem's engineering catalogues. Filter by application, voltage, material and construction, drill into full dimensional &amp; electrical tables, then request a quotation in one click.</p>
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+
+  <div class="mode-tabs">
+    <button class="mode-tab active" data-mode="browse" onclick="setMode('browse')">Browse &amp; Filter</button>
+    <button class="mode-tab" data-mode="wizard" onclick="setMode('wizard')">Guided Configurator</button>
+  </div>
+
+  <div class="search-row" id="searchRow">
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="q" type="search" placeholder="Search part number, series, standard, material… e.g. 44G0, H07RN-F, EN 50306, silicone" autocomplete="off">
+    </div>
+  </div>
+
+  <div id="viewBrowse">
+    <div class="layout">
+      <aside class="facets" id="facets"></aside>
+      <section id="results"></section>
+    </div>
+    <div class="recent" id="recent"></div>
+  </div>
+
+  <div id="viewWizard" style="display:none"></div>
+</main>
+
+<!-- Quote drawer -->
+<div class="drawer-mask" id="mask" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer" aria-label="Quotation request">
+  <div class="drawer-head">
+    <b style="font-size:16px">Request Quotation</b>
+    <button class="btn ghost sm" onclick="closeDrawer()">✕ Close</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<button class="btn fab" id="fab" onclick="openDrawer()" style="display:none">Quote basket <span class="badge-dot" id="fabCount">0</span></button>
+
+<div class="cmp-bar" id="cmpBar">
+  <b>Compare:</b> <span id="cmpNames"></span>
+  <button class="btn sm" style="margin-left:auto" onclick="showCompare()">Compare now</button>
+  <button class="btn ghost sm" style="border-color:#fff;color:#fff" onclick="clearCompare()">Clear</button>
+</div>
+
+<div class="modal" id="modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="siechem-redesign.html" class="nav-logo"><img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a><p>India's leading specialty wires &amp; cables manufacturer since 2002.</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html">By Segment</a></li><li><a href="products.html">By Standard</a></li><li><a href="product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="tech-support.html">AWG Converter</a></li><li><a href="tech-support.html">Voltage Drop</a></li><li><a href="tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="customers.html">Customers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+<script>
+/* Siechem Catalog App — data-driven product selector.
+   Data files (catalog/data/): families.json (eager), search-index.json (lazy),
+   products/<family>.json (lazy per family). All facet options are computed from
+   the data, so impossible combinations can never be offered. */
+'use strict';
+const DATA = 'catalog/data/';
+let FAM = [], IDX = null, state = {
+  mode:'browse', seg:null, fam:null, volt:null, mat:null, cond:null,
+  flags:{}, q:'', series:null, wiz:{step:0, seg:null, fam:null, series:null, row:null, qty:''}
+};
+const famCache = {}, esc = s => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let basket = JSON.parse(localStorage.getItem('sc_basket')||'[]');
+let compare = [], recent = JSON.parse(localStorage.getItem('sc_recent')||'[]');
+
+async function boot(){
+  FAM = (await (await fetch(DATA+'families.json')).json()).families;
+  const nSeries = FAM.reduce((a,f)=>a+f.seriesCount,0);
+  document.getElementById('heroStats').innerHTML =
+    `<div class="hero-stat"><b>${FAM.length}</b><span>Product families</span></div>
+     <div class="hero-stat"><b>${nSeries}</b><span>Cable series</span></div>
+     <div class="hero-stat"><b>${[...new Set(FAM.map(f=>f.segment))].length}</b><span>Industries</span></div>
+     <div class="hero-stat"><b>100%</b><span>Catalogue-sourced data</span></div>`;
+  updateFab(); route(); render();
+  window.addEventListener('hashchange', ()=>{ route(); render(); });
+  document.getElementById('q').addEventListener('input', e=>{ state.q=e.target.value.trim(); ensureIndex().then(render); });
+}
+async function ensureIndex(){ if(!IDX) IDX=(await (await fetch(DATA+'search-index.json')).json()).products; return IDX; }
+function route(){
+  const h = location.hash.slice(1);
+  state.fam=null; state.series=null;
+  if(h.startsWith('family/')) state.fam = h.split('/')[1];
+  if(h.startsWith('series/')){ state.fam=h.split('/')[1]; state.series=h.split('/')[2]; }
+}
+function setMode(m){
+  state.mode=m;
+  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===m));
+  document.getElementById('viewBrowse').style.display = m==='browse'?'':'none';
+  document.getElementById('viewWizard').style.display = m==='wizard'?'':'none';
+  document.getElementById('searchRow').style.display = m==='browse'?'':'none';
+  if(m==='wizard') renderWizard();
+}
+/* ---------- filtering ---------- */
+function famMatches(f){
+  if(state.seg && f.segment!==state.seg) return false;
+  if(state.volt && !(f.voltBuckets||[]).includes(state.volt)) return false;
+  if(state.mat && !(f.materials||[]).includes(state.mat)) return false;
+  if(state.cond && !(f.conductorMaterials||[]).includes(state.cond)) return false;
+  for(const k in state.flags) if(state.flags[k] && !f.flags?.[k]) return false;
+  return true;
+}
+function idxMatches(p, ignore){
+  if(state.seg!==null && ignore!=='seg'){ const f=FAM.find(x=>x.id===p.family); if(!f||f.segment!==state.seg) return false; }
+  if(state.fam && p.family!==state.fam) return false;
+  if(state.volt && ignore!=='volt' && p.voltBucket!==state.volt) return false;
+  if(state.mat && ignore!=='mat' && !p.materials.includes(state.mat)) return false;
+  if(state.cond && ignore!=='cond' && !p.conductors.includes(state.cond)) return false;
+  for(const k in state.flags) if(state.flags[k] && !p[k]) return false;
+  if(state.q){
+    const terms=state.q.toLowerCase().split(/\s+/);
+    const hay=p.search.toLowerCase();
+    if(!terms.every(t=>hay.includes(t))) return false;
+  }
+  return true;
+}
+/* ---------- facets ---------- */
+function facetHtml(){
+  const anyFilter = state.seg||state.volt||state.mat||state.cond||Object.values(state.flags).some(Boolean);
+  const opts=(title,key,values)=>{
+    if(!values.length) return '';
+    return `<div class="facet-group"><h4>${title}</h4>`+values.map(([v,n])=>
+      `<div class="facet-opt ${state[key]===v?'on':''}" onclick="tog('${key}',this.dataset.v)" data-v="${esc(v)}">
+        ${esc(v)} <span class="cnt">${n}</span></div>`).join('')+`</div>`;
+  };
+  // counts from index if loaded, else family-level
+  let segs,volts,mats,conds;
+  if(IDX){
+    const cnt=(key,ignore)=>{ const c={}; IDX.forEach(p=>{ if(!idxMatches(p,ignore))return;
+      let vs = key==='seg' ? [FAM.find(f=>f.id===p.family)?.segment] : key==='volt' ? [p.voltBucket] : key==='mat'? p.materials : p.conductors;
+      vs.filter(Boolean).forEach(v=>c[v]=(c[v]||0)+1); });
+      return Object.entries(c).sort((a,b)=>b[1]-a[1]); };
+    segs=cnt('seg','seg'); volts=cnt('volt','volt'); mats=cnt('mat','mat').slice(0,12); conds=cnt('cond','cond');
+  } else {
+    const fs=FAM.filter(famMatches);
+    const cnt=(get)=>{ const c={}; fs.forEach(f=>get(f).forEach(v=>c[v]=(c[v]||0)+f.seriesCount)); return Object.entries(c).sort((a,b)=>b[1]-a[1]); };
+    segs=cnt(f=>[f.segment]); volts=cnt(f=>f.voltBuckets||[]); mats=cnt(f=>f.materials||[]).slice(0,12); conds=cnt(f=>f.conductorMaterials||[]);
+  }
+  const flagRow=(k,label)=>`<div class="facet-opt ${state.flags[k]?'on':''}" onclick="togFlag('${k}')">${label}</div>`;
+  return `${anyFilter?`<button class="facet-clear" onclick="clearFilters()">✕ Clear all filters</button>`:''}
+    ${opts('Industry / Segment','seg',segs)}
+    ${opts('Voltage class','volt',volts)}
+    ${opts('Insulation / material','mat',mats)}
+    ${opts('Conductor','cond',conds)}
+    <div class="facet-group"><h4>Construction</h4>
+      ${flagRow('shielded','Shielded / Screened')}${flagRow('armoured','Armoured')}
+      ${flagRow('halogenFree','Halogen-free')}${flagRow('fireSafety','Fire performance')}</div>`;
+}
+function tog(key,v){ state[key]=state[key]===v?null:v; ensureIndex().then(render); }
+function togFlag(k){ state.flags[k]=!state.flags[k]; ensureIndex().then(render); }
+function clearFilters(){ state.seg=state.volt=state.mat=state.cond=null; state.flags={}; state.q=''; document.getElementById('q').value=''; render(); }
+/* ---------- views ---------- */
+async function render(){
+  document.getElementById('facets').innerHTML = facetHtml();
+  const R=document.getElementById('results');
+  if(state.series){ R.innerHTML='<div class="skel"></div>'; return renderSeries(R); }
+  if(state.fam){ R.innerHTML='<div class="skel"></div>'; return renderFamily(R); }
+  if(state.q || state.mat || state.volt || state.cond || Object.values(state.flags).some(Boolean)){
+    await ensureIndex(); return renderSeriesResults(R);
+  }
+  renderFamilyGrid(R); renderRecent();
+}
+function renderFamilyGrid(R){
+  const fs=FAM.filter(famMatches);
+  if(!fs.length){ R.innerHTML='<div class="empty">No families match these filters.</div>'; return; }
+  R.innerHTML = `<div class="fam-grid">`+fs.map(f=>`
+    <div class="fam-card" onclick="location.hash='family/${f.id}'">
+      <div class="seg">${esc(f.segment)}</div><h3>${esc(f.name)}</h3>
+      <div class="meta"><span><b>${f.seriesCount}</b> series</span>${f.voltage?`<span>${esc(f.voltage)}</span>`:''}</div>
+      <div class="sum">${esc(f.summary)}</div>
+      <div class="chips">${(f.materials||[]).slice(0,4).map(m=>`<span class="chip">${esc(m)}</span>`).join('')}
+        ${f.flags?.halogenFree?'<span class="chip hot">Halogen-free</span>':''}${f.flags?.fireSafety?'<span class="chip hot">Fire perf.</span>':''}</div>
+    </div>`).join('')+`</div>`;
+}
+async function loadFam(fid){ if(!famCache[fid]) famCache[fid]=(await (await fetch(`${DATA}products/${fid}.json`)).json()).series; return famCache[fid]; }
+async function renderFamily(R){
+  const f=FAM.find(x=>x.id===state.fam); if(!f){ location.hash=''; return; }
+  const ser=await loadFam(f.id);
+  crumbs([['#','Selector'],[null,f.name]]);
+  R.innerHTML = `
+    <div style="margin-bottom:18px">
+      <div class="seg" style="font-family:var(--mono);font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em">${esc(f.segment)}</div>
+      <h2 style="font-size:24px;font-weight:800;margin:4px 0 8px">${esc(f.name)}</h2>
+      <p style="color:var(--text-muted);max-width:760px;font-size:14.5px;line-height:1.55">${esc(f.summary)}</p>
+      <div class="attr-grid">
+        ${f.voltage?attr('Voltage',f.voltage):''}${f.temp?attr('Temperature',f.temp):''}
+        ${f.sizeRange?attr('Size range',f.sizeRange[0]+' – '+f.sizeRange[1]+' mm²'):''}
+        ${f.standards?.length?attr('Standards seen in catalogue',f.standards.slice(0,6).join(', ')):''}
+      </div>
+      <div class="toolbar">
+        ${dsLinks(f,'⭳ Original datasheet (PDF)')}
+        <button class="btn sm" onclick="setMode('wizard');wizJumpFamily('${f.id}')">Configure this family →</button>
+      </div>
+      <div class="chips" style="margin-top:8px">${(f.applications||[]).map(a=>`<span class="chip">${esc(a)}</span>`).join('')}</div>
+    </div>
+    <div class="series-list">`+ser.map(s=>seriesCard(s)).join('')+`</div>`;
+}
+function attr(k,v){ return `<div class="attr-box"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div></div>`; }
+function dsLinks(f,label){
+  const ds=(f.datasheets&&f.datasheets.length)?f.datasheets.map(d=>d.url)
+        :(f.sourcePdfs||[]).map(p=>'catalogue-pdfs/'+encodeURIComponent(p));
+  return ds.map(u=>`<a class="btn ghost sm" href="${u}" target="_blank" rel="noopener">${label}</a>`).join('');
+}
+function seriesCard(s){
+  const a=s.attrs||{};
+  return `<div class="series-card" onclick="location.hash='series/${s.family}/${s.id}'">
+    <h3>${esc(s.name)}</h3>
+    <div class="srow">
+      ${a.voltage?`<span class="chip hot">${esc(a.voltage)}</span>`:''}
+      ${(a.materials||[]).slice(0,3).map(m=>`<span class="chip">${esc(m)}</span>`).join('')}
+      ${a.shielded?'<span class="chip">Shielded</span>':''}${a.armoured?'<span class="chip">Armoured</span>':''}
+      <span class="chip">${s.rows.length} sizes</span>
+      ${s.continuation?'<span class="flag-warn" title="This table continues a multi-page catalogue section">multi-page</span>':''}
+    </div></div>`;
+}
+async function renderSeriesResults(R){
+  const hits=IDX.filter(p=>idxMatches(p));
+  crumbs([['#','Selector'],[null,`${hits.length} matching series`]]);
+  if(!hits.length){ R.innerHTML='<div class="empty">No series match. Try removing a filter or different search terms.</div>'; return; }
+  const byFam={};
+  hits.forEach(h=>{(byFam[h.family]=byFam[h.family]||[]).push(h);});
+  R.innerHTML=Object.entries(byFam).map(([fid,list])=>{
+    const f=FAM.find(x=>x.id===fid);
+    return `<h3 style="margin:18px 0 10px;font-size:14px;color:var(--text-faint);font-family:var(--mono);text-transform:uppercase;letter-spacing:.07em">${esc(f?.name||fid)} · ${list.length}</h3>
+      <div class="series-list">`+list.slice(0,40).map(p=>`
+      <div class="series-card" onclick="location.hash='series/${p.family}/${p.id}'">
+        <h3>${hl(p.name)}</h3>
+        <div class="srow">${p.voltBucket?`<span class="chip hot">${esc(p.voltBucket)}</span>`:''}
+          ${p.materials.slice(0,3).map(m=>`<span class="chip">${esc(m)}</span>`).join('')}
+          <span class="chip">${p.nRows} sizes</span></div>
+      </div>`).join('')+`</div>`;
+  }).join('');
+}
+function hl(t){ if(!state.q) return esc(t); let out=esc(t);
+  state.q.split(/\s+/).filter(Boolean).forEach(w=>{ out=out.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig'),'<mark>$1</mark>'); }); return out; }
+async function renderSeries(R){
+  const ser=await loadFam(state.fam);
+  const s=ser.find(x=>x.id===state.series); if(!s){ location.hash='family/'+state.fam; return; }
+  const f=FAM.find(x=>x.id===state.fam); const a=s.attrs||{};
+  pushRecent(s); crumbs([['#','Selector'],['#family/'+f.id,f.name],[null,s.name]]);
+  const pn=s.canonicalPartCol;
+  R.innerHTML=`
+    <h2 style="font-size:21px;font-weight:800;margin-bottom:8px">${esc(s.name)}</h2>
+    <div class="srow" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+      ${a.voltage?`<span class="chip hot">${esc(a.voltage)}</span>`:''}
+      ${(a.tempMentions||[]).slice(0,2).map(t=>`<span class="chip">${esc(t)}</span>`).join('')}
+      ${(a.materials||[]).map(m=>`<span class="chip">${esc(m)}</span>`).join('')}
+      ${a.shielded?'<span class="chip">Shielded</span>':''}${a.armoured?'<span class="chip">Armoured</span>':''}
+      ${a.halogenFree?'<span class="chip hot">Halogen-free</span>':''}
+    </div>
+    ${(a.standardsFound||[]).length?`<div style="font-size:12.5px;color:var(--text-faint)">Standards referenced: ${a.standardsFound.map(esc).join(' · ')}</div>`:''}
+    <div class="toolbar">
+      <button class="btn sm" onclick="quoteSeries()">Request quotation for a size ↓</button>
+      <button class="btn ghost sm" onclick="addCompare('${s.id}')">+ Compare</button>
+      ${dsLinks(f,`⭳ Datasheet PDF (p.${(s.pages[0]+1)})`)}
+    </div>
+    <p style="font-size:12.5px;color:var(--text-faint);margin-top:6px">Select a row, then request a quotation — the full specification of that size is attached automatically.</p>
+    <div class="spec-table-wrap"><table class="spec"><thead><tr>${s.headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead>
+      <tbody>${s.rows.map((r,i)=>`<tr data-i="${i}" onclick="selRow(this)">${s.headers.map((_,j)=>`<td>${esc(r[j]??'')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+    ${s.notes.map(n=>`<div class="note">${esc(n)}</div>`).join('')}
+    <div id="rowAction"></div>`;
+  window._curSeries={s,f};
+}
+function selRow(tr){
+  document.querySelectorAll('table.spec tr.sel').forEach(x=>x.classList.remove('sel'));
+  tr.classList.add('sel');
+  const {s}=window._curSeries; const i=+tr.dataset.i;
+  window._curRow=i;
+  const pni=s.canonical?s.canonical.indexOf('partNumber'):-1;
+  const label=pni>=0?s.rows[i][pni]:`Row ${i+1}`;
+  document.getElementById('rowAction').innerHTML=
+    `<div class="toolbar"><button class="btn" onclick="addBasket()">Add “${esc(label)}” to quote basket →</button></div>`;
+}
+/* ---------- basket & quote ---------- */
+function specObject(s,i){
+  const o={'Product family':FAM.find(f=>f.id===s.family)?.name,'Series':s.name};
+  s.headers.forEach((h,j)=>{ const v=s.rows[i][j]; if(v) o[h]=v; });
+  const a=s.attrs||{};
+  if(a.voltage)o['Voltage rating']=a.voltage;
+  if((a.materials||[]).length)o['Materials']=a.materials.join(', ');
+  if((a.standardsFound||[]).length)o['Standards']=a.standardsFound.join(', ');
+  return o;
+}
+function addBasket(){
+  const {s}=window._curSeries; const i=window._curRow;
+  const pni=s.canonical?s.canonical.indexOf('partNumber'):-1;
+  basket.push({sid:s.id,fam:s.family,series:s.name,part:pni>=0?s.rows[i][pni]:'',qty:'',spec:specObject(s,i)});
+  saveBasket(); openDrawer();
+}
+function saveBasket(){ localStorage.setItem('sc_basket',JSON.stringify(basket)); updateFab(); }
+function updateFab(){
+  document.getElementById('fab').style.display=basket.length?'':'none';
+  document.getElementById('fabCount').textContent=basket.length;
+}
+function quoteSeries(){ document.querySelector('table.spec tbody tr')?.scrollIntoView({behavior:'smooth',block:'center'}); }
+function openDrawer(){
+  document.getElementById('mask').classList.add('open');
+  document.getElementById('drawer').classList.add('open');
+  renderDrawer();
+}
+function closeDrawer(){ document.getElementById('mask').classList.remove('open'); document.getElementById('drawer').classList.remove('open'); }
+function renderDrawer(){
+  const B=document.getElementById('drawerBody');
+  if(!basket.length){ B.innerHTML='<div class="empty">Your quote basket is empty.<br>Select a size row on any series page.</div>'; return; }
+  B.innerHTML = basket.map((b,i)=>`
+    <div class="quote-item"><button class="rm" onclick="rmBasket(${i})">✕</button>
+      <b>${esc(b.part||b.series)}</b><br><span style="color:var(--text-faint)">${esc(b.series)}</span>
+      <div class="fld" style="margin-top:8px"><label>Quantity (metres)</label>
+      <input value="${esc(b.qty)}" placeholder="e.g. 500" onchange="basket[${i}].qty=this.value;saveBasket()"></div></div>`).join('') + `
+    <hr style="border:none;border-top:1px solid var(--border);margin:18px 0">
+    <div class="fld"><label>Name *</label><input id="qf_name" required></div>
+    <div class="fld"><label>Company</label><input id="qf_company"></div>
+    <div class="fld"><label>Email *</label><input id="qf_email" type="email" required></div>
+    <div class="fld"><label>Phone</label><input id="qf_phone"></div>
+    <div class="fld"><label>Delivery requirement</label><input id="qf_delivery" placeholder="e.g. 4 weeks, Chennai"></div>
+    <div class="fld"><label>Special requirements / notes</label><textarea id="qf_msg" rows="3" placeholder="Colours, packing, standards, test reports…"></textarea></div>
+    <button class="btn" style="width:100%;justify-content:center" onclick="submitQuote(this)">Send quotation request</button>
+    <p id="qStatus" style="font-size:13px;margin-top:10px;color:var(--text-faint)"></p>`;
+}
+function rmBasket(i){ basket.splice(i,1); saveBasket(); renderDrawer(); }
+async function submitQuote(btn){
+  const name=document.getElementById('qf_name').value.trim(), email=document.getElementById('qf_email').value.trim();
+  const st=document.getElementById('qStatus');
+  if(!name||!email){ st.textContent='Please fill name and email.'; st.style.color='#B91C1C'; return; }
+  btn.disabled=true; st.style.color='var(--text-faint)'; st.textContent='Sending…';
+  const items=basket.map(b=>({part_number:b.part,series:b.series,quantity:b.qty,spec:b.spec}));
+  const payload={
+    name, email,
+    company:document.getElementById('qf_company').value,
+    phone:document.getElementById('qf_phone').value,
+    delivery:document.getElementById('qf_delivery').value,
+    message:document.getElementById('qf_msg').value + (items.length>1? `\n\n[${items.length} items in this request — see spec attachment]`:''),
+    part_number:items.map(i=>i.part_number||i.series).join(', ').slice(0,180),
+    quantity:items.map(i=>i.quantity||'—').join(', ').slice(0,120),
+    cable_type:items[0]?.series||'Catalogue selection',
+    cable_spec: items.length===1 ? items[0].spec : Object.fromEntries(items.flatMap((it,n)=>Object.entries(it.spec).map(([k,v])=>[`Item ${n+1} — ${k}`,v]))),
+    subject:'Catalogue configurator quote request'
+  };
+  try{
+    const r=await fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    if(r.ok){ st.style.color='#15803D'; st.textContent='✓ Request sent! Our sales team will reply with pricing shortly.'; basket.length=0; saveBasket(); }
+    else { const j=await r.json().catch(()=>({})); throw new Error(j.error||r.status); }
+  }catch(e){ st.style.color='#B91C1C'; st.textContent='Could not send ('+e.message+'). Please email info@siechem.com directly.'; }
+  btn.disabled=false;
+}
+/* ---------- compare ---------- */
+async function addCompare(id){
+  if(compare.find(c=>c.id===id)) return;
+  if(compare.length>=3){ alert('Compare up to 3 series.'); return; }
+  const {s,f}=window._curSeries; compare.push({id,s,f});
+  document.getElementById('cmpBar').classList.add('show');
+  document.getElementById('cmpNames').textContent=compare.map(c=>c.s.name.slice(0,40)).join('  •  ');
+}
+function clearCompare(){ compare=[]; document.getElementById('cmpBar').classList.remove('show'); }
+function showCompare(){
+  const rows=[['Family',c=>c.f.name],['Voltage',c=>c.s.attrs?.voltage||'—'],['Materials',c=>(c.s.attrs?.materials||[]).join(', ')||'—'],
+    ['Temperature refs',c=>(c.s.attrs?.tempMentions||[]).join(', ')||'—'],['Shielded',c=>c.s.attrs?.shielded?'Yes':'—'],
+    ['Armoured',c=>c.s.attrs?.armoured?'Yes':'—'],['Halogen-free',c=>c.s.attrs?.halogenFree?'Yes':'—'],
+    ['Sizes available',c=>c.s.rows.length],['Standards',c=>(c.s.attrs?.standardsFound||[]).slice(0,5).join(', ')||'—'],
+    ['Catalogue page',c=>'p.'+(c.s.pages[0]+1)]];
+  document.getElementById('modalCard').innerHTML=`<h3 style="margin-bottom:14px">Series comparison</h3>
+    <div class="spec-table-wrap"><table class="spec"><thead><tr><th></th>${compare.map(c=>`<th>${esc(c.s.name.slice(0,60))}</th>`).join('')}</tr></thead>
+    <tbody>${rows.map(([k,fn])=>`<tr><td style="font-weight:600">${k}</td>${compare.map(c=>`<td style="white-space:normal">${esc(String(fn(c)))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  document.getElementById('modal').classList.add('open');
+}
+/* ---------- recent ---------- */
+function pushRecent(s){
+  recent=[{id:s.id,fam:s.family,name:s.name},...recent.filter(r=>r.id!==s.id)].slice(0,6);
+  localStorage.setItem('sc_recent',JSON.stringify(recent));
+}
+function renderRecent(){
+  const R=document.getElementById('recent');
+  if(!recent.length){ R.innerHTML=''; return; }
+  R.innerHTML='<h4>Recently viewed</h4><div class="chips">'+recent.map(r=>
+    `<span class="chip" style="cursor:pointer;font-size:12px;padding:6px 12px" onclick="location.hash='series/${r.fam}/${r.id}'">${esc(r.name.slice(0,55))}</span>`).join('')+'</div>';
+}
+function crumbs(items){
+  document.getElementById('crumbs').innerHTML =
+    `<a href="siechem-redesign.html">Home</a><span class="sep">→</span><a href="catalogues.html">Catalogues</a><span class="sep">→</span>`+
+    items.map(([href,label])=>href?`<a href="${href}">${esc(label)}</a>`:`<b>${esc(label)}</b>`).join('<span class="sep">→</span>');
+}
+/* ---------- wizard ---------- */
+const WSTEPS=['Industry','Family','Series','Size','Quantity','Review'];
+function wizJumpFamily(fid){ const f=FAM.find(x=>x.id===fid); state.wiz={step:2,seg:f.segment,fam:fid,series:null,row:null,qty:''}; renderWizard(); }
+async function renderWizard(){
+  const W=document.getElementById('viewWizard'); const w=state.wiz;
+  const stepChips=WSTEPS.map((s,i)=>`<span class="wstep ${i<w.step?'done':''} ${i===w.step?'now':''}" ${i<w.step?`onclick="state.wiz.step=${i};renderWizard()"`:''}>${i+1}. ${s}</span>`).join('');
+  let body='';
+  if(w.step===0){
+    const segs=[...new Set(FAM.map(f=>f.segment))];
+    body=`<h3>Which industry / application area?</h3><div class="opt-grid">`+segs.map(s=>{
+      const n=FAM.filter(f=>f.segment===s).length;
+      return `<div class="opt-card" onclick="state.wiz.seg='${esc(s)}';state.wiz.step=1;renderWizard()">${esc(s)}<small>${n} product families</small></div>`;}).join('')+`</div>`;
+  } else if(w.step===1){
+    const fams=FAM.filter(f=>f.segment===w.seg);
+    body=`<h3>Choose a product family</h3><div class="opt-grid">`+fams.map(f=>
+      `<div class="opt-card" onclick="state.wiz.fam='${f.id}';state.wiz.step=2;renderWizard()">${esc(f.name)}<small>${f.seriesCount} series · ${esc(f.voltage||'')}</small></div>`).join('')+`</div>`;
+  } else if(w.step===2){
+    const ser=await loadFam(w.fam);
+    body=`<h3>Choose a cable series <small style="font-weight:400;color:var(--text-faint)">(${ser.length} available — only real catalogue constructions shown)</small></h3>
+      <div class="series-list" style="margin-top:12px">`+ser.map(s=>{
+        const a=s.attrs||{};
+        return `<div class="series-card" onclick="state.wiz.series='${s.id}';state.wiz.step=3;renderWizard()">
+          <h3>${esc(s.name)}</h3><div class="srow">
+          ${a.voltage?`<span class="chip hot">${esc(a.voltage)}</span>`:''}
+          ${(a.materials||[]).slice(0,3).map(m=>`<span class="chip">${esc(m)}</span>`).join('')}
+          <span class="chip">${s.rows.length} sizes</span></div></div>`;}).join('')+`</div>`;
+  } else if(w.step===3){
+    const ser=await loadFam(w.fam); const s=ser.find(x=>x.id===w.series);
+    body=`<h3>Select the exact size / construction</h3>
+      <div class="spec-table-wrap"><table class="spec"><thead><tr>${s.headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead>
+      <tbody>${s.rows.map((r,i)=>`<tr onclick="state.wiz.row=${i};state.wiz.step=4;renderWizard()" style="cursor:pointer">${s.headers.map((_,j)=>`<td>${esc(r[j]??'')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+      ${s.notes.map(n=>`<div class="note">${esc(n)}</div>`).join('')}`;
+  } else if(w.step===4){
+    body=`<h3>Quantity &amp; requirements</h3>
+      <div class="fld" style="max-width:340px;margin-top:12px"><label>Quantity (metres)</label>
+      <input id="wqty" value="${esc(w.qty)}" placeholder="e.g. 1000"></div>
+      <button class="btn" onclick="state.wiz.qty=document.getElementById('wqty').value;state.wiz.step=5;renderWizard()">Review configuration →</button>`;
+  } else {
+    const ser=await loadFam(w.fam); const s=ser.find(x=>x.id===w.series); const f=FAM.find(x=>x.id===w.fam);
+    const spec=specObject(s,w.row);
+    body=`<h3>Your configuration</h3>
+      <div class="spec-table-wrap" style="max-width:640px"><table class="spec" style="min-width:0">
+      ${Object.entries(spec).map(([k,v])=>`<tr><td style="font-weight:600;width:45%">${esc(k)}</td><td style="white-space:normal">${esc(v)}</td></tr>`).join('')}
+      <tr><td style="font-weight:600">Quantity</td><td>${esc(w.qty||'—')} m</td></tr></table></div>
+      <div class="toolbar">
+        <button class="btn" onclick="wizToBasket()">Add to quote basket →</button>
+        <button class="btn ghost" onclick="state.wiz={step:0,seg:null,fam:null,series:null,row:null,qty:''};renderWizard()">Start over</button>
+      </div>`;
+  }
+  W.innerHTML=`<div class="wizard"><div class="wsteps">${stepChips}</div>${body}</div>`;
+}
+async function wizToBasket(){
+  const w=state.wiz; const ser=await loadFam(w.fam); const s=ser.find(x=>x.id===w.series);
+  const pni=s.canonical?s.canonical.indexOf('partNumber'):-1;
+  basket.push({sid:s.id,fam:w.fam,series:s.name,part:pni>=0?s.rows[w.row][pni]:'',qty:w.qty,spec:specObject(s,w.row)});
+  saveBasket(); openDrawer();
+}
+/* expose handlers for inline onclick attributes (robust across environments) */
+Object.assign(window,{state,basket,setMode,tog,togFlag,clearFilters,selRow,addBasket,openDrawer,closeDrawer,
+  rmBasket,submitQuote,addCompare,clearCompare,showCompare,wizJumpFamily,renderWizard,wizToBasket,ensureIndex});
+boot();
+
+</script>
+<script src="animations.js" defer></script>
+<script src="nav-mobile.js" defer></script>
+</body>
+</html>

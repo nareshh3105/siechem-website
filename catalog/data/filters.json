@@ -1,0 +1,52 @@
+{
+ "segments": {
+  "Aerospace & Defence": 2,
+  "Automotive & EV": 4,
+  "Power & Industrial": 11,
+  "Railways & Rolling Stock": 5,
+  "Fire Safety & Building": 1,
+  "Communication & Instrumentation": 1,
+  "Marine & Offshore": 1,
+  "Nuclear & Energy": 1,
+  "Renewable Energy": 2
+ },
+ "voltBuckets": {
+  "300\u2013750V": 369,
+  "751\u20131100V": 198,
+  "1.1\u20133.3kV": 49,
+  "Above 3.3kV": 32,
+  "Below 300V": 21
+ },
+ "materials": {
+  "EBXL": 326,
+  "PVC": 305,
+  "Rubber": 228,
+  "Silicone": 168,
+  "XLPE": 144,
+  "XLPO": 48,
+  "LSZH": 20,
+  "EPR": 12,
+  "Polyalkene": 9,
+  "Polyamide": 9,
+  "FEP": 8,
+  "CSPE": 6,
+  "PUR": 5,
+  "Fluoroelastomer": 4,
+  "PTFE": 3,
+  "HFFR": 2
+ },
+ "conductors": {
+  "Tinned Copper": 333,
+  "Aluminium": 105,
+  "Annealed Copper": 104,
+  "Bare Copper": 92,
+  "Nickel Coated Copper": 22,
+  "Silver Coated Copper": 22
+ },
+ "flags": {
+  "shielded": 355,
+  "armoured": 83,
+  "halogenFree": 441,
+  "fireSafety": 565
+ }
+}

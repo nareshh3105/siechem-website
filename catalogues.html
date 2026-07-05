@@ -356,6 +356,10 @@
           <div class="eyebrow">Downloads</div>
           <h1 class="page-title">Every Spec.<br/>Every <em>Diagram.</em><br/>One Library.</h1>
           <p class="page-lede">Complete catalogues for every product segment. Datasheets, technical drawings, dimensional tables, test reports, certifications and CAD models. All up-to-date, all free to download.</p>
+          <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+            <a href="catalog.html" style="display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 8px 22px rgba(184,115,51,.35)">⚙ Open the Interactive Product Selector →</a>
+            <span style="font-size:12.5px;color:var(--text-faint);max-width:260px">Filter 1,000+ catalogue series by industry, voltage &amp; material — no PDF digging needed.</span>
+          </div>
         </div>
         <div class="fade-up fade-up-2">
           <img class="hero-img" src="assets/ppt-images/slide-14-1.jpg" alt="Siechem in-house R&D — cable cross-section engineering and development" loading="lazy" />
@@ -576,19 +580,4 @@
     document.getElementById('allStdGrid').innerHTML = STANDARDS.map(std => `
       <a href="contact.html" class="standard-pill" style="display:flex;flex-direction:column;gap:4px;padding:16px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;transition:all 0.15s;text-decoration:none;">
         <div style="font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent-2);">${std.code}</div>
-        <div style="font-size:13px;color:var(--text-muted);">${std.desc}</div>
-      </a>
-    `).join('');
-
-    document.querySelectorAll('.filter-bar button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const v = btn.dataset.view;
-        document.getElementById('view-segment').style.display = v === 'segment' ? 'block' : 'none';
-        document.getElementById('view-standard').style.display  = v === 'standard'  ? 'block' : 'none';
-      });
-    });
-  </script>
-</body>
-</html>
+        <div style="font-size:13px;color:v
