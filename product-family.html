@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalogue — Siechem Wires &amp; Cables</title>
+  <meta name="description" content="Siechem specialty cable catalogue — browse variants, filter by specification and request a quote.">
+  <meta name="keywords" content="siechem aero 44, aerospace cables, MIL-W-81044, aviation wires, XLPO insulation, airframe wire">
+  <meta property="og:title" content="Siechem Product Catalogue">
+  <meta property="og:description" content="Browse Siechem cable variants and request quotes online.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/product-family.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/product-family.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* ── Filter Strip ─────────────────────────── */
+    .filter-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      align-items: flex-start;
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 8px; }
+    .filter-label {
+      font-family: var(--mono); font-size: 10.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint);
+    }
+    .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .fpill {
+      padding: 7px 14px; border-radius: 6px;
+      border: 1.5px solid var(--border); background: var(--bg-soft);
+      font-size: 12.5px; font-weight: 600; color: var(--text-muted);
+      cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    }
+    .fpill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+    .fpill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .result-count {
+      font-family: var(--mono); font-size: 12px; color: var(--text-faint);
+      padding: 8px 0; letter-spacing: 0.04em;
+    }
+
+    /* ── Product Cards ───────────────────────── */
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 980px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .prod-grid { grid-template-columns: 1fr; } }
+
+    .prod-card {
+      display: flex; flex-direction: column; gap: 0;
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+      cursor: pointer;
+    }
+    .prod-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: 0 8px 32px rgba(227,30,36,0.10);
+      transform: translateY(-2px);
+    }
+    .prod-card-head {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--bg-soft) 0%, rgba(227,30,36,0.025) 100%);
+    }
+    .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+    .badge {
+      padding: 3px 9px; border-radius: 4px; font-family: var(--mono);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .badge-voltage { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .badge-shielded { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
+    .badge-unshielded { background: var(--bg-soft); color: var(--text-faint); border: 1px solid var(--border); }
+    .badge-airframe { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
+    .badge-general { background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-border); }
+    .badge-twin { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+    .prod-card-name { font-size: 14.5px; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .prod-card-body { padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .prod-card-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+    .prod-spec { display: flex; flex-direction: column; gap: 1px; }
+    .prod-spec-label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+    .prod-spec-val { font-size: 13px; font-weight: 600; color: var(--text); }
+    .prod-card-cat { font-family: var(--mono); font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em; }
+    .prod-card-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .prod-card-awg { font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); }
+    .prod-card-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); border: 1px solid var(--accent-border);
+      border-radius: 6px; padding: 6px 12px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .prod-card-btn:hover { background: var(--accent); color: #fff; }
+
+    /* ── Spec Sheet Modal ────────────────────── */
+    .spec-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.55); backdrop-filter: blur(4px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 24px 16px; overflow-y: auto;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+    .spec-overlay.open { opacity: 1; visibility: visible; }
+    .spec-sheet {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      width: 100%; max-width: 920px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      overflow: hidden;
+    }
+    .spec-overlay.open .spec-sheet { transform: translateY(0); }
+    .spec-sheet-header {
+      padding: 22px 28px 18px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #FDFCFC 0%, #FFF5F5 100%);
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    }
+    .spec-sheet-cat { font-family: var(--mono); font-size: 11px; color: var(--accent-2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+    .spec-sheet-title { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; color: var(--text); }
+    .spec-close {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--text-muted); cursor: pointer;
+      flex-shrink: 0; transition: background 0.15s, color 0.15s;
+    }
+    .spec-close:hover { background: var(--accent-soft); color: var(--accent); }
+    .spec-sheet-body { padding: 24px 28px; overflow-y: auto; max-height: 70vh; }
+    .spec-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+    @media (max-width: 640px) { .spec-two-col { grid-template-columns: 1fr; } }
+    .spec-block h4 { font-size: 12px; font-weight: 700; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 10px; }
+    .spec-kv { display: flex; flex-direction: column; gap: 0; }
+    .spec-kv-row { display: flex; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+    .spec-kv-row:last-child { border-bottom: none; }
+    .spec-kv-row .k { color: var(--text-faint); min-width: 140px; font-family: var(--mono); font-size: 12px; flex-shrink: 0; }
+    .spec-kv-row .v { font-weight: 500; color: var(--text); }
+    .standards-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+    .std-chip {
+      padding: 4px 10px; border-radius: 5px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
+      color: var(--text-muted); white-space: nowrap;
+    }
+    /* ── Spec Table Search ───────────────────────── */
+    .spec-search-wrap {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-radius: 8px; padding: 9px 14px; margin-bottom: 10px;
+      transition: border-color 0.15s;
+    }
+    .spec-search-wrap:focus-within { border-color: var(--accent); }
+    .spec-search-wrap svg { flex-shrink: 0; color: var(--text-faint); }
+    .spec-search-input {
+      flex: 1; border: none; background: transparent;
+      font-size: 13px; font-family: var(--mono); color: var(--text);
+      outline: none; min-width: 0;
+    }
+    .spec-search-input::placeholder { color: var(--text-faint); }
+    .spec-search-count {
+      font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .spec-no-match {
+      text-align: center; padding: 20px; font-size: 13px; color: var(--text-faint);
+      font-family: var(--mono); display: none;
+    }
+    .part-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
+    .part-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .part-table thead tr { background: var(--bg-soft); }
+    .part-table th {
+      padding: 10px 12px; text-align: left; font-family: var(--mono);
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-faint);
+      white-space: nowrap; border-bottom: 1px solid var(--border);
+    }
+    .part-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .part-table tbody tr:last-child td { border-bottom: none; }
+    .part-table tbody tr:hover { background: rgba(227,30,36,0.03); }
+    .part-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 600; }
+    .part-table .quote-row-btn {
+      padding: 5px 12px; border-radius: 5px;
+      background: var(--accent-soft); border: 1px solid var(--accent-border);
+      color: var(--accent-2); font-size: 11.5px; font-weight: 700;
+      cursor: pointer; transition: background 0.15s, color 0.15s;
+      font-family: inherit;
+    }
+    .part-table .quote-row-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .color-note {
+      padding: 12px 16px; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 8px; font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
+    }
+    .color-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .color-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 8px; border-radius: 4px; font-size: 11px;
+      font-family: var(--mono); font-weight: 600; color: var(--text-muted);
+      border: 1px solid var(--border); background: #fff;
+    }
+    .color-chip-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); flex-shrink: 0; }
+
+    /* ── Quote Modal ─────────────────────────── */
+    .quote-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+      opacity: 0; visibility: hidden; transition: opacity 0.25s, visibility 0.25s;
+    }
+    .quote-overlay.open { opacity: 1; visibility: visible; }
+    .quote-box {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      width: 100%; max-width: 560px; max-height: 92vh; overflow-y: auto;
+      padding: 32px; border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .quote-overlay.open .quote-box { transform: scale(1); }
+    .quote-box h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .quote-box .sub { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+    .field input, .field textarea, .field select {
+      background: #fff; border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 11px 13px; color: var(--text); font-family: inherit;
+      font-size: 14px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field input:focus, .field textarea:focus, .field select:focus {
+      border-color: var(--accent); box-shadow: 0 0 0 3px rgba(227,30,36,0.10);
+    }
+    .field textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+    .quote-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .q-success, .q-error { display: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; }
+    .q-success { background: #F0FDF4; border: 1px solid #BBF7D0; color: #15803D; }
+    .q-error { background: #FFF1F2; border: 1px solid #FFB3B8; color: #BE123C; }
+
+    /* ── Mobile tweaks ───────────────────────── */
+    @media (max-width: 640px) {
+      .filter-strip { gap: 14px 20px; padding: 16px; }
+      .spec-sheet-body { padding: 18px; }
+      .spec-sheet-header { padding: 18px; }
+      .quote-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="siechem-redesign.html" class="nav-logo">
+        <img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="about.html" class="nav-company-item">About Us</a>
+            <a href="mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="ppt.html" class="nav-company-item">PPT</a>
+            <a href="policies.html" class="nav-company-item">Policies</a>
+            <a href="csr.html" class="nav-company-item">CSR</a>
+            <a href="careers.html" class="nav-company-item">Careers</a>
+            <a href="events.html" class="nav-company-item">Events</a>
+            <a href="privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="catalogues.html" class="nav-link">Catalogues</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="customers.html" class="nav-link">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="res-5s.html" class="nav-company-item">5S</a>
+              <a href="res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="res-reach.html" class="nav-company-item">REACH</a>
+              <a href="res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="about.html">About Us</a>
+        <a href="mds-message.html">MD's Message</a>
+        <a href="key-persons.html">Key Persons</a>
+        <a href="manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="testing-facilities.html">Testing Facilities</a>
+        <a href="research-development.html">Research &amp; Development</a>
+        <a href="ethical-values.html">Ethical Values</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+        <a href="ppt.html">PPT</a>
+        <a href="policies.html">Policies</a>
+        <a href="csr.html">CSR</a>
+        <a href="careers.html">Careers</a>
+        <a href="events.html">Events</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="products.html">Products</a>
+      <a href="catalogues.html">Catalogues</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="customers.html">Customers</a>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-ts-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Tech Support <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-techsup-links" id="mob-ts-links">
+          <a href="ts-awg-sqmm.html">AWG to Square mm Conversion</a><a href="ts-braid-shield-calc.html">Braid Shield Calculation</a><a href="ts-cable-handling.html">Cable Handling System</a><a href="ts-cable-installation.html">Cable Installation Procedure</a><a href="ts-cable-life-calc.html">Cable Life Calculation</a><a href="ts-cable-size-auto.html">Cable Size Calculation for Automotive</a><a href="ts-cable-size-solar.html">Cable Size for Solar PV Plants</a><a href="ts-capacitance-calc.html">Capacitance Calculation</a><a href="ts-color-code.html">Color Code Chart</a><a href="ts-ptfe-comparison.html">Comparison: PTFE, FEP, PFA, ETFE</a><a href="ts-conductor-resistance.html">Conductor Resistance Calculation</a><a href="ts-current-carrying.html">Current Carrying Capacity</a><a href="ts-derating-factors.html">Derating Factors</a><a href="ts-electrical-losses.html">Electrical Losses Calculation</a><a href="ts-impedance-calc.html">Impedance Calculation</a><a href="ts-inductance-calc.html">Inductance Calculation</a><a href="ts-insulation-resistance.html">Insulation Resistance Calculation</a><a href="ts-nfpa.html">NFPA Electrical Safety Standard</a><a href="ts-packaging.html">Packaging of Wires and Cables</a><a href="ts-publication.html">Publication</a><a href="ts-reactance-calc.html">Reactance Calculation</a><a href="ts-short-circuit-calc.html">Short Circuit Temp Rating</a><a href="ts-toxicity-index.html">Toxicity Index Calculation</a><a href="ts-voltage-drop.html">Voltage Drop Calculation</a><a href="ts-wp-ebeam.html">White Paper: E-Beam Crosslinking</a><a href="ts-wp-ageing.html">White Paper: Accelerated Ageing</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-res-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Resources <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-resources-links" id="mob-res-links">
+          <a href="res-5s.html">5S</a><a href="res-awards.html">Awards / Recognition</a><a href="res-capabilities.html">Capabilities</a><a href="res-covid19.html">COVID-19</a><a href="res-cricket-teams.html">Cricket Teams</a><a href="res-customer-care.html">Customer Care</a><a href="res-customer-comments.html">Customer Comments</a><a href="res-green-technology.html">Green Technology</a><a href="res-metal-trend.html">Metal Trend</a><a href="res-part-number-index.html">Part Number Index</a><a href="res-reach.html">REACH</a><a href="res-rohs.html">RoHS</a><a href="res-siechem-erp.html">Siechem ERP</a><a href="res-un-global-compact.html">UN Global Compact</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span>
+        <a href="products.html">Products</a><span class="breadcrumb-sep"></span>
+        <span id="bcName">Catalogue</span>
+      </div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow" id="fSegment"></div>
+          <h1 class="page-title" id="fTitle">Loading catalogue…</h1>
+          <p class="page-lede" id="fSummary"></p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;" id="fStandards"></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;" id="fDatasheets"></div>
+        </div>
+        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;gap:14px;" id="fQuickSpecs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Strip (built per-family from the data) -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="filter-strip reveal" id="filterStrip"></div>
+      <div class="spec-search-wrap" style="margin-top:14px;max-width:420px;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" id="seriesSearch" type="text" placeholder="Search variants by name, standard…" autocomplete="off" spellcheck="false">
+      </div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="prod-grid" id="prodGrid"></div>
+    </div>
+  </section>
+
+  <!-- Spec Sheet Modal -->
+  <div class="spec-overlay" id="specOverlay" onclick="handleSpecOverlayClick(event)">
+    <div class="spec-sheet" id="specSheet">
+      <div class="spec-sheet-header">
+        <div>
+          <div class="spec-sheet-cat" id="ssCat"></div>
+          <div class="spec-sheet-title" id="ssTitle"></div>
+        </div>
+        <button class="spec-close" onclick="closeSpec()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="spec-sheet-body" id="ssBody"></div>
+    </div>
+  </div>
+
+  <!-- Quote Modal -->
+  <div class="quote-overlay" id="quoteOverlay" onclick="handleQuoteOverlayClick(event)">
+    <div class="quote-box" id="quoteBox">
+      <h3>Request a Quote</h3>
+      <p class="sub">Our sales team responds within 4 business hours.</p>
+      <div class="q-success" id="qSuccess">
+        <strong>Enquiry sent!</strong> Check your inbox for a confirmation with your quote reference.
+      </div>
+      <div class="q-error" id="qError"></div>
+      <form id="quoteForm" onsubmit="submitQuote(event)">
+        <input type="hidden" id="qPartNum" name="part_number">
+        <input type="hidden" id="qCableType" name="cable_type">
+        <input type="hidden" id="qCableSpec" name="cable_spec">
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Full Name *</label>
+            <input type="text" name="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Company</label>
+            <input type="text" name="company" placeholder="Company name">
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="you@company.com">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+91 …">
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Part Number</label>
+            <input type="text" id="qPartDisplay" name="part_number_display" readonly style="background:var(--bg-soft);color:var(--text-muted);">
+          </div>
+          <div class="field">
+            <label>Quantity (metres)</label>
+            <input type="text" name="quantity" placeholder="e.g. 500 m">
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:14px;">
+          <label>Required Delivery</label>
+          <input type="text" name="delivery" placeholder="e.g. 4 weeks, urgent, flexible">
+        </div>
+        <div class="field" style="margin-bottom:4px;">
+          <label>Additional Notes</label>
+          <textarea name="message" placeholder="Conductor coating preference, colour, special requirements…"></textarea>
+        </div>
+        <div class="quote-actions">
+          <button type="submit" class="btn btn-primary" id="qSubmitBtn">
+            <span id="qBtnText">Send Enquiry</span>
+          </button>
+          <button type="button" class="btn btn-ghost" onclick="closeQuote()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="siechem-redesign.html" class="nav-logo">
+            <img src="assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+          </a>
+          <p>India's leading specialty wires &amp; cables manufacturer since 2002.</p>
+        </div>
+        <div class="footer-col"><h4>Products</h4><ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="product-aero44.html">Aero 44</a></li>
+          <li><a href="product-automotive.html">Automotive</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul>
+          <li><a href="tech-support.html">AWG Converter</a></li>
+          <li><a href="tech-support.html">Voltage Drop</a></li>
+          <li><a href="tech-support.html">All Tools</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="customers.html">Customers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li>
+          <li><a href="tel:+914425220859">+91 44 2522 0859</a></li>
+          <li>Chennai · Pondicherry</li>
+        </ul></div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Siechem Technologies Pvt. Ltd.</span>
+        <span>Established 2002 · AS9100 Certified</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  /* ══════════════════════════════════════════════════
+     GENERIC FAMILY CATALOGUE ENGINE
+     Loads catalog/data/products/<family>.json and derives
+     family-specific filter parameters from the series data.
+  ══════════════════════════════════════════════════ */
+  const FAMILY_ID = new URLSearchParams(location.search).get('f')
+    || (location.hash.match(/f=([\w-]+)/) || [])[1]
+    || 'marine';
+  window.addEventListener('hashchange', () => location.reload());
+  let FAM = null;      // family metadata from families.json
+  let SERIES = [];     // enriched series list
+  let filters = {};    // active filter selections
+  let searchTerm = '';
+
+  /* ── Attribute extraction (per-family search parameters) ── */
+  function normVolt(v) {
+    return v.replace(/\s+/g, '').replace(/KV/i, 'kV').replace(/v$/, 'V');
+  }
+  const DIMS = [
+    { key: 'voltage', label: 'Voltage', fn: n => {
+        let m = n.match(/\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\s*kV/i);
+        if (m) return normVolt(m[0]);
+        m = n.match(/\b\d+(?:\.\d+)?\s*kV\b/i);
+        if (m) return normVolt(m[0]);
+        m = n.match(/\b(\d{3,4})\s*\/\s*(\d{3,4})\s*V\b/);
+        if (m) return m[1] + '/' + m[2] + 'V';
+        m = n.match(/\b(\d{3,4})\s*V\b/);
+        if (m) return m[1] + 'V';
+        return null;
+      } },
+    { key: 'cores', label: 'Cores', fn: n => {
+        if (/multi\s*core/i.test(n)) return 'Multicore';
+        if (/single\s*core|\b1\s*core/i.test(n)) return 'Single Core';
+        if (/twisted\s+twin|twin\s*core|two\s*core|\b2\s*core/i.test(n)) return '2 Core';
+        if (/3\.5\s*core/i.test(n)) return '3.5 Core';
+        if (/\b(3|three)\s*core/i.test(n)) return '3 Core';
+        if (/\b(4|four)\s*core/i.test(n)) return '4 Core';
+        if (/\b(5|five)\s*core/i.test(n)) return '5 Core';
+        return null;
+      } },
+    { key: 'screen', label: 'Screening', fn: n =>
+        /screen|shield|\bemc\b/i.test(n) ? 'Screened' : 'Unscreened' },
+    { key: 'armour', label: 'Armour', fn: n => {
+        if (/unarmou?r/i.test(n)) return 'Unarmoured';
+        if (/armou?r/i.test(n)) return 'Armoured';
+        return null;
+      } },
+    { key: 'conductor', label: 'Conductor', fn: n => {
+        if (/aluminium|aluminum/i.test(n)) return 'Aluminium';
+        if (/tinned\s+copper/i.test(n)) return 'Tinned Copper';
+        if (/copper/i.test(n)) return 'Copper';
+        return null;
+      } },
+    { key: 'insulation', label: 'Insulation', fn: n => {
+        const mats = ['EBXL','XLPE','XLPO','PVC','Silicone','Rubber','FEP','PTFE','ETFE','EPR','LSZH','PUR','Fluoro'];
+        for (const m of mats) if (new RegExp('\\b' + m, 'i').test(n)) return m === 'Fluoro' ? 'Fluoroelastomer' : m;
+        return null;
+      } },
+    { key: 'temp', label: 'Temp Rating', fn: n => {
+        const m = n.match(/\b(70|85|90|105|110|120|125|150|155|180|200|250)\s*(?:°|º|deg\.?\s*|o)?\s*C\b/i);
+        return m ? m[1] + '°C' : null;
+      } },
+    { key: 'standard', label: 'Standard', fn: n => {
+        const m = n.match(/\b(BS\s?EN\s?\d+(?:-\d+)?|EN\s?\d+(?:-\d+)?|BS\s?\d+|IS\s?\d+|IEC\s?\d+|UL\s?\d+|JIS\s?[A-Z]?\s?\d+|SAE\s?[A-Z]*\s?\d+|MIL-[A-Z]+-?\d+|EMD\/[\w.]+|H0[57][A-Z0-9-]+|RDSO[\/\w.-]*)\b/i);
+        if (!m) return null;
+        return m[1].toUpperCase().replace(/\s+/g, '')
+          .replace(/^BSEN/, 'BS EN')
+          .replace(/([A-Z])(\d)/, '$1 $2');
+      } }
+  ];
+
+  function cleanName(raw, i) {
+    let n = (raw || '')
+      .replace(/A{2,}E{2,}R{2,}O{2,}\s*\d*/g, '')
+      .replace(/Wires\s*&\s*Cables\s*Meet\s*EU\s*RoHS\s*Directive/ig, '')
+      .replace(/Siechem/ig, '')
+      .replace(/\s+/g, ' ')
+      .replace(/^[\s\-–—·,.]+|[\s\-–—·,.]+$/g, '')
+      .trim();
+    if (n.length < 8 || /^per conductor/i.test(n) || /^wires\s*&?\s*cables$/i.test(n)) {
+      n = (FAM ? FAM.name.replace(/\s*Wires\s*&\s*Cables.*$/i, '') : 'Series') + ' — Variant ' + (i + 1);
+    }
+    if (n.length > 150) n = n.slice(0, 147) + '…';
+    return n;
+  }
+
+  /* ── Load data ──────────────────────────────────── */
+  async function init() {
+    let fams, prod;
+    try {
+      [fams, prod] = await Promise.all([
+        fetch('catalog/data/families.json').then(r => r.json()),
+        fetch('catalog/data/products/' + FAMILY_ID + '.json').then(r => r.json())
+      ]);
+    } catch (e) {
+      document.getElementById('fTitle').textContent = 'Catalogue not found';
+      document.getElementById('fSummary').textContent = 'The requested product family could not be loaded. Browse all products instead.';
+      return;
+    }
+    FAM = fams.families.find(f => f.id === FAMILY_ID) || { name: FAMILY_ID, segment: '', summary: '' };
+
+    SERIES = prod.series.map((s, i) => {
+      const display = cleanName(s.name, i);
+      const scanText = (s.name || '') + ' ' + display;
+      const attrs = {};
+      DIMS.forEach(d => attrs[d.key] = d.fn(scanText));
+      return { ...s, idx: i, display, attrs };
+    });
+
+    renderHero();
+    buildFilterStrip();
+    applyFilters();
+  }
+
+  /* ── Hero ───────────────────────────────────────── */
+  function esc(t) { return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  function renderHero() {
+    document.title = FAM.name + ' — Siechem Wires & Cables';
+    document.getElementById('bcName').textContent = FAM.name;
+    document.getElementById('fSegment').textContent = FAM.segment || '';
+    document.getElementById('fTitle').innerHTML = esc(FAM.name);
+    document.getElementById('fSummary').textContent = FAM.summary || '';
+
+    const stds = (FAM.standards || []).slice(0, 6);
+    document.getElementById('fStandards').innerHTML =
+      '<span class="tag tag-accent">' + SERIES.length + ' Variants</span>' +
+      stds.map(s => '<span class="tag">' + esc(s) + '</span>').join('');
+
+    document.getElementById('fDatasheets').innerHTML = (FAM.datasheets || []).map(d =>
+      '<a class="btn btn-ghost" style="font-size:13px;" href="' + d.url + '" target="_blank" rel="noopener">' +
+      '<svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 1v8M4 6l3 3 3-3M2 12h10"/></svg> Download Catalogue PDF</a>'
+    ).join('');
+
+    const qs = [];
+    if (FAM.voltage) qs.push(['Voltage', FAM.voltage]);
+    if (FAM.temp) qs.push(['Temp Rating', FAM.temp]);
+    if (FAM.materials && FAM.materials.length) qs.push(['Insulation', FAM.materials.slice(0, 3).join(' / ')]);
+    if (FAM.conductorMaterials && FAM.conductorMaterials.length) qs.push(['Conductor', FAM.conductorMaterials.slice(0, 2).join(' / ')]);
+    if (FAM.sizeRange && FAM.sizeRange.length === 2) qs.push(['Size Range', FAM.sizeRange[0] + ' – ' + FAM.sizeRange[1] + ' mm²']);
+    qs.push(['Product Variants', SERIES.length]);
+    let html = '';
+    for (let i = 0; i < qs.length; i += 2) {
+      if (i) html += '<hr class="divider" style="margin:0;">';
+      html += '<div style="display:flex;justify-content:space-between;gap:16px;">' +
+        qs.slice(i, i + 2).map(([k, v]) =>
+          '<div class="spec"><span class="spec-label">' + esc(k) + '</span><span class="spec-value" style="font-size:15px;">' + esc(v) + '</span></div>'
+        ).join('') + '</div>';
+    }
+    document.getElementById('fQuickSpecs').innerHTML = html;
+  }
+
+  /* ── Filter strip (derived per family) ──────────── */
+  let activeDims = [];
+  function buildFilterStrip() {
+    activeDims = DIMS.map(d => {
+      const counts = {};
+      SERIES.forEach(s => { const v = s.attrs[d.key]; if (v) counts[v] = (counts[v] || 0) + 1; });
+      const vals = Object.keys(counts);
+      return { ...d, vals, counts };
+    }).filter(d => d.vals.length >= 2).slice(0, 6);
+
+    activeDims.forEach(d => {
+      if (d.key === 'voltage') {
+        const vnum = v => parseFloat(v) * (/kV/i.test(v) ? 1000 : 1);
+        d.vals.sort((a, b) => vnum(a) - vnum(b));
+      } else d.vals.sort();
+      filters[d.key] = 'all';
+    });
+
+    document.getElementById('filterStrip').innerHTML = activeDims.map(d =>
+      '<div class="filter-group"><span class="filter-label">' + d.label + '</span><div class="filter-pills">' +
+      '<button class="fpill active" data-f="' + d.key + '" data-v="all">All</button>' +
+      d.vals.map(v => '<button class="fpill" data-f="' + d.key + '" data-v="' + esc(v) + '">' + esc(v) + ' <span style="opacity:.55;">(' + d.counts[v] + ')</span></button>').join('') +
+      '</div></div>'
+    ).join('');
+
+    document.querySelectorAll('.fpill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters[btn.dataset.f] = btn.dataset.v;
+        btn.closest('.filter-pills').querySelectorAll('.fpill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    document.getElementById('seriesSearch').addEventListener('input', e => {
+      searchTerm = e.target.value.trim().toLowerCase();
+      applyFilters();
+    });
+  }
+
+  function applyFilters() {
+    const visible = SERIES.filter(s => {
+      for (const d of activeDims) {
+        const want = filters[d.key];
+        if (want !== 'all' && s.attrs[d.key] !== want) return false;
+      }
+      if (searchTerm && !(s.display + ' ' + (s.name || '')).toLowerCase().includes(searchTerm)) return false;
+      return true;
+    });
+    renderCards(visible);
+    document.getElementById('resultCount').textContent =
+      visible.length + ' of ' + SERIES.length + ' variant' + (SERIES.length === 1 ? '' : 's') + ' shown';
+  }
+
+  /* ── Cards ──────────────────────────────────────── */
+  const BADGE_CLASS = { voltage: 'badge-voltage', screen: 'badge-shielded', cores: 'badge-twin', armour: 'badge-airframe', standard: 'badge-general', temp: 'badge-unshielded' };
+  function renderCards(list) {
+    const grid = document.getElementById('prodGrid');
+    if (!list.length) {
+      grid.innerHTML = '<div style="grid-column:1/-1;padding:48px;text-align:center;color:var(--text-muted);font-size:15px;">No variants match the selected filters.</div>';
+      return;
+    }
+    grid.innerHTML = list.map(s => {
+      const badges = ['voltage', 'cores', 'screen', 'armour', 'temp']
+        .filter(k => s.attrs[k] && (k !== 'screen' || s.attrs[k] === 'Screened'))
+        .slice(0, 4)
+        .map(k => '<span class="badge ' + (BADGE_CLASS[k] || 'badge-general') + '">' + esc(s.attrs[k]) + '</span>').join('');
+      const specs = [
+        ['Sizes', s.rows.length + ' part' + (s.rows.length === 1 ? '' : 's')],
+        s.attrs.insulation ? ['Insulation', s.attrs.insulation] : null,
+        s.attrs.conductor ? ['Conductor', s.attrs.conductor] : null,
+        s.attrs.standard ? ['Standard', s.attrs.standard] : (s.pages && s.pages.length ? ['Catalogue Page', s.pages[0]] : null)
+      ].filter(Boolean).slice(0, 4).map(([k, v]) =>
+        '<div class="prod-spec"><span class="prod-spec-label">' + esc(k) + '</span><span class="prod-spec-val">' + esc(v) + '</span></div>').join('');
+      return '<div class="prod-card reveal" onclick="openSpec(' + s.idx + ')" role="button" tabindex="0" onkeydown="if(event.key===\'Enter\')openSpec(' + s.idx + ')">' +
+        '<div class="prod-card-head"><div class="prod-card-badges">' + badges + '</div>' +
+        '<div class="prod-card-name">' + esc(s.display) + '</div></div>' +
+        '<div class="prod-card-body"><div class="prod-card-specs">' + specs + '</div></div>' +
+        '<div class="prod-card-footer"><span class="prod-card-awg">' + s.rows.length + ' part numbers</span>' +
+        '<span class="prod-card-btn">View Specs &amp; Parts <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></div></div>';
+    }).join('');
+    if (window.__revealObs) {
+      document.querySelectorAll('.prod-card.reveal:not(.visible)').forEach(el => window.__revealObs.observe(el));
+    }
+  }
+
+  /* ── Spec Sheet Modal ───────────────────────────── */
+  function openSpec(idx) {
+    const s = SERIES[idx];
+    if (!s) return;
+    document.getElementById('ssCat').textContent = FAM.name + (s.pages && s.pages.length ? ' · Catalogue p.' + s.pages.join('–') : '');
+    document.getElementById('ssTitle').textContent = s.display;
+
+    const attrRows = DIMS.filter(d => s.attrs[d.key])
+      .map(d => '<div class="spec-kv-row"><span class="k">' + d.label + '</span><span class="v">' + esc(s.attrs[d.key]) + '</span></div>').join('');
+    const famRows = [
+      FAM.voltage ? ['Family voltage', FAM.voltage] : null,
+      FAM.temp ? ['Family temp range', FAM.temp] : null
+    ].filter(Boolean).map(([k, v]) => '<div class="spec-kv-row"><span class="k">' + esc(k) + '</span><span class="v">' + esc(v) + '</span></div>').join('');
+
+    const headers = (s.headers && s.headers.length ? s.headers : ['Part Number']).map(h => h && h.trim() ? h : '—');
+    const thead = '<tr>' + headers.map(h => '<th>' + esc(h) + '</th>').join('') + '<th></th></tr>';
+    const tbody = s.rows.map(r => {
+      const pn = (r[0] || '').toString().trim();
+      return '<tr>' + headers.map((_, ci) => '<td>' + esc(r[ci] != null ? r[ci] : '') + '</td>').join('') +
+        '<td><button class="quote-row-btn" onclick="openQuote(' + JSON.stringify(pn).replace(/"/g, '&quot;') + ', ' + JSON.stringify(s.display).replace(/"/g, '&quot;') + ', ' + s.idx + ')">Quote</button></td></tr>';
+    }).join('');
+
+    document.getElementById('ssBody').innerHTML =
+      '<div class="spec-two-col"><div class="spec-block"><h4>Variant Attributes</h4><div class="spec-kv">' + attrRows + famRows + '</div></div>' +
+      '<div class="spec-block"><h4>Applicable Standards</h4><div class="standards-list">' +
+      (FAM.standards || []).concat(s.attrs.standard ? [s.attrs.standard] : []).filter((v, i, a) => a.indexOf(v) === i).map(t => '<span class="std-chip">' + esc(t) + '</span>').join('') +
+      '</div><h4 style="margin-top:16px;">Applications</h4><div class="spec-kv">' +
+      (FAM.applications || []).slice(0, 4).map(a => '<div class="spec-kv-row"><span class="v">' + esc(a) + '</span></div>').join('') +
+      '</div></div></div>' +
+      '<h4 style="font-size:12px;font-weight:700;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;color:var(--text-faint);margin-bottom:10px;">Complete Size Range</h4>' +
+      '<div class="spec-search-wrap">' +
+      '<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>' +
+      '<input class="spec-search-input" id="specSearchInput" type="text" placeholder="Search by part no., size…" oninput="filterSpecTable(this.value)" autocomplete="off" spellcheck="false">' +
+      '<span class="spec-search-count" id="specSearchCount">' + s.rows.length + ' parts</span></div>' +
+      '<div class="spec-no-match" id="specNoMatch">No parts match your search</div>' +
+      '<div class="part-table-wrap"><table class="part-table" id="specPartTable"><thead>' + thead + '</thead><tbody>' + tbody + '</tbody></table></div>' +
+      '<div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">' +
+      '<button class="btn btn-primary" onclick="openQuote(\'—\', ' + JSON.stringify(s.display).replace(/"/g, '&quot;') + ', ' + s.idx + ')">Request Quote for this Variant ' +
+      '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></button>' +
+      '<button class="btn btn-ghost" onclick="closeSpec()">Close</button></div>';
+
+    document.getElementById('specOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function filterSpecTable(q) {
+    const rows = document.querySelectorAll('#specPartTable tbody tr');
+    const noMatch = document.getElementById('specNoMatch');
+    const countEl = document.getElementById('specSearchCount');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(row => {
+      const show = !term || row.textContent.toLowerCase().includes(term);
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = term ? visible + ' of ' + rows.length + ' parts' : rows.length + ' parts';
+    noMatch.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+
+  function closeSpec() {
+    document.getElementById('specOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    const inp = document.getElementById('specSearchInput');
+    if (inp) inp.value = '';
+  }
+  function handleSpecOverlayClick(e) {
+    if (e.target === document.getElementById('specOverlay')) closeSpec();
+  }
+
+  /* ── Quote Modal ────────────────────────────────── */
+  function openQuote(partNum, typeName, idx) {
+    const s = SERIES[idx];
+    document.getElementById('qPartNum').value = partNum;
+    document.getElementById('qCableType').value = typeName;
+    document.getElementById('qCableSpec').value = s ? JSON.stringify({
+      label: s.display, family: FAM.name,
+      spec: s.attrs.standard || (FAM.standards || [])[0] || '',
+      voltageRating: s.attrs.voltage || FAM.voltage || '',
+      temp: s.attrs.temp || FAM.temp || ''
+    }) : '{}';
+    document.getElementById('qPartDisplay').value = partNum;
+    document.getElementById('qSuccess').style.display = 'none';
+    document.getElementById('qError').style.display = 'none';
+    document.getElementById('quoteForm').style.display = '';
+    document.getElementById('qBtnText').textContent = 'Send Enquiry';
+    document.getElementById('qSubmitBtn').disabled = false;
+    document.getElementById('quoteOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeQuote() {
+    document.getElementById('quoteOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleQuoteOverlayClick(e) {
+    if (e.target === document.getElementById('quoteOverlay')) closeQuote();
+  }
+  async function submitQuote(e) {
+    e.preventDefault();
+    const btn = document.getElementById('qSubmitBtn');
+    const btnText = document.getElementById('qBtnText');
+    const errEl = document.getElementById('qError');
+    btn.disabled = true; btnText.textContent = 'Sending…';
+    errEl.style.display = 'none';
+    const data = Object.fromEntries(new FormData(e.target));
+    data.subject = FAM.name + ' Quote – ' + (data.part_number || data.cable_type);
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (json.success) {
+        e.target.style.display = 'none';
+        document.getElementById('qSuccess').style.display = 'block';
+      } else throw new Error(json.message || 'Failed');
+    } catch (err) {
+      errEl.textContent = 'Could not send. Please email sales@siechem.com directly.';
+      errEl.style.display = 'block';
+      btn.disabled = false; btnText.textContent = 'Send Enquiry';
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeSpec(); closeQuote(); }
+  });
+
+  init();
+  </script>
+
+  <script src="nav-mobile.js" defer></script>
+  <script src="animations.js" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11l5-5 5 5"/></svg></button>
+  <div class="mobile-sticky-cta"><a href="contact.html" class="btn btn-primary">Request Quote</a><a href="tel:+914422220000" class="btn btn-ghost"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 2h3l1.5 3.5L5 7a9 9 0 003 3l1.5-1.5L13 10v3a1 1 0 01-1 1A11 11 0 011 3a1 1 0 011-1z"/></svg> Call Us</a></div>
+  <script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('btt-visible',window.scrollY>400);},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})()</script>
+</body>
+</html>
