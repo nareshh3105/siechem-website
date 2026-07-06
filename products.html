@@ -605,7 +605,6 @@
       document.getElementById('segmentGrid').innerHTML = SEGMENTS.map(seg => `
         <a href="${seg.url || 'product-detail.html'}" class="product-card">
           <div class="product-cover" ${seg.img ? `style="background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.68)),url('${seg.img}');background-size:cover;background-position:center;"` : ''}>
-            <div class="seg-badge"><div class="logo-sq"></div>SIECHEM</div>
             <div>
               <div class="seg-title">${seg.name}</div>
               <div class="seg-std">${seg.std}</div>
