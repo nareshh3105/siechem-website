@@ -191,6 +191,14 @@ img { display: block; max-width: 100%; height: auto; }
   pointer-events: none;
   z-index: 200;
 }
+/* Invisible bridge so the cursor can cross the 10px gap between the
+   trigger and the menu without losing :hover on the dropdown. */
+.nav-company-menu::before {
+  content: '';
+  position: absolute;
+  top: -14px; left: 0; right: 0;
+  height: 14px;
+}
 .nav-company-dropdown:hover .nav-company-menu {
   opacity: 1;
   visibility: visible;

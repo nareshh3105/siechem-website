@@ -45,9 +45,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://siechem.vercel.app/">
 
+  <link rel="preconnect" href="https://drive.google.com">
+  <link rel="preconnect" href="https://lh3.googleusercontent.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&family=Open+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="theme.css">
 
@@ -1598,7 +1600,7 @@
 
   <!-- Hero Video Section -->
   <section class="hero-video-section">
-    <video class="hero-video-bg" autoplay loop muted playsinline preload="auto" id="hero-video">
+    <video class="hero-video-bg" autoplay loop muted playsinline preload="metadata" id="hero-video">
       <source src="video/cable-video.mp4" type="video/mp4">
       <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
     </video>
@@ -2238,7 +2240,11 @@
       // Hero Video Load & Autoplay Controller
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
-        heroVideo.currentTime = 2;
+        // Seek only once metadata is available; seeking before that throws
+        // on some mobile browsers and can stall loading.
+        const seekToStart = () => { try { heroVideo.currentTime = 2; } catch (e) {} };
+        if (heroVideo.readyState >= 1) seekToStart();
+        else heroVideo.addEventListener('loadedmetadata', seekToStart, { once: true });
         heroVideo.playbackRate = 1.5; // slightly faster playback
         const startVideo = () => {
           heroVideo.style.opacity = '1';
@@ -2258,27 +2264,9 @@
         });
       }
 
-      const hamburger = document.getElementById('nav-hamburger');
-      const menu = document.getElementById('mobile-menu');
-      if (hamburger && menu) {
-        hamburger.addEventListener('click', () => {
-          hamburger.classList.toggle('active');
-          menu.classList.toggle('open');
-          if (menu.classList.contains('open')) {
-            document.documentElement.classList.add('nav-open');
-          } else {
-            document.documentElement.classList.remove('nav-open');
-          }
-        });
-        const links = menu.querySelectorAll('a');
-        links.forEach(l => {
-          l.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            menu.classList.remove('open');
-            document.documentElement.classList.remove('nav-open');
-          });
-        });
-      }
+      // Hamburger toggle is handled by nav-mobile.js (shared across all
+      // pages) — do not bind it here too, or each tap toggles twice and
+      // the menu appears dead.
 
       // Testimonial Carousel Auto-Play and Click Logic
       const slides = document.querySelectorAll('.testimonial-slide');

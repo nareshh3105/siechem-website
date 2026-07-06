@@ -26,6 +26,12 @@
  *      resets all three states — so navigating to another page closes the overlay first.
  */
 document.addEventListener('DOMContentLoaded', () => {
+  // Guard: several pages accidentally include this script more than once.
+  // A second listener would toggle the menu open and immediately closed
+  // again on every tap, making the hamburger appear dead — initialise once.
+  if (window.__navMobileInit) return;
+  window.__navMobileInit = true;
+
   const hamburger = document.getElementById('nav-hamburger');
   const menu = document.getElementById('mobile-menu');
 
