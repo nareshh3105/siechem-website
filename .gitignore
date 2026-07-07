@@ -10,4 +10,5 @@ screenshots/
 *.txt
 *.json
 !package.json
+!vercel.json
 !package-lock.json

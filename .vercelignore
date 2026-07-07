@@ -1,2 +1,4 @@
 catalogue-pdfs/
 catalog/tools/
+catalog/data/search-index.json
+catalog/data/review-flags.json
