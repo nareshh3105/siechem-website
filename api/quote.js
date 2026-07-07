@@ -206,39 +206,6 @@ module.exports = async function handler(req, res) {
   });
   const errors = [];
 
-  // ── 0. Persist to database (Supabase) ─────────────────────────────────────
-  // Every enquiry is stored in the quote_enquiries table so sales has a
-  // permanent, searchable record independent of email delivery. Uses the
-  // anon key + an insert-only RLS policy (no reads possible with this key).
-  // Failure here never blocks the request — email remains the primary path.
-  const supabaseUrl = (process.env.SUPABASE_URL || '').trim();
-  const supabaseKey = (process.env.SUPABASE_ANON_KEY || '').trim();
-  if (supabaseUrl && supabaseKey) {
-    try {
-      let specJson = null;
-      try { specJson = cable_spec ? JSON.parse(cable_spec) : null; } catch (e) { specJson = { raw: String(cable_spec) }; }
-      const dbRes = await fetch(`${supabaseUrl}/rest/v1/quote_enquiries`, {
-        method: 'POST',
-        headers: {
-          'apikey': supabaseKey,
-          'Authorization': `Bearer ${supabaseKey}`,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify({
-          name, company, email, phone,
-          part_number, cable_type, quantity, delivery, message, subject,
-          cable_spec: specJson
-        })
-      });
-      if (!dbRes.ok) throw new Error(`HTTP ${dbRes.status}: ${await dbRes.text()}`);
-      console.log('[quote] Enquiry stored in database');
-    } catch (err) {
-      console.error('[quote] Database insert failed:', err.message);
-      errors.push('db: ' + err.message);
-    }
-  }
-
   // ── 1. Company notification ───────────────────────────────────────────────
   try {
     await transporter.sendMail({
@@ -271,9 +238,7 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  // Fail the request only when BOTH emails failed (db is best-effort)
-  const emailErrors = errors.filter(e => e.startsWith('company:') || e.startsWith('customer:'));
-  if (emailErrors.length === 2) {
+  if (errors.length === 2) {
     return res.status(500).json({ success: false, message: errors.join(' | ') });
   }
   return res.status(200).json({ success: true, warnings: errors.length ? errors : undefined });
