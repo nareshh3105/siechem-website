@@ -14,6 +14,39 @@
     .stub-coming-icon { width:60px;height:60px;background:var(--accent-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:6px; }
     .stub-coming h2 { font-size:22px;font-weight:700; }
     .stub-coming p { font-size:15px;color:var(--text-muted);max-width:460px;line-height:1.65; }
+      .ts-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+    .ts-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    .ts-table thead th {
+      position: sticky; top: 0;
+      background: var(--bg-soft); padding: 11px 14px; text-align: left;
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-faint);
+      border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    .ts-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .ts-table tbody tr:last-child td { border-bottom: none; }
+    .ts-table tbody tr:hover { background: var(--accent-soft); }
+    .ts-table td:first-child { font-weight: 600; color: var(--text); }
+    .ts-section-row td {
+      background: var(--bg-soft); font-family: var(--mono); font-size: 11px;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2);
+    }
+    .ts-swatch {
+      display: inline-block; width: 15px; height: 15px; border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.2); vertical-align: -3px; margin-right: 7px;
+    }
+    .ts-swatch-half { position: relative; overflow: hidden; }
+    .ts-no-match { display: none; text-align: center; padding: 22px; font-size: 13px; color: var(--text-faint); font-family: var(--mono); }
+    .ts-scans summary {
+      cursor: pointer; font-size: 13.5px; font-weight: 700; color: var(--accent);
+      padding: 12px 0; user-select: none;
+    }
+    .ts-scans img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; }
+    .ts-formula {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 18px; font-family: var(--mono); font-size: 14px; color: var(--text);
+      margin: 10px 0 6px; overflow-x: auto; white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -150,9 +183,69 @@
   </section>
   <section class="section-padding">
     <div class="container">
-      <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
-        <img src="assets/tech-support/ptfe-comparison-1.jpg" alt="ptfe comparison — page 1" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/ptfe-comparison-2.jpg" alt="ptfe comparison — page 2" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
+      <div style="max-width:1000px;margin:0 auto;">
+        <p style="font-size:15px;line-height:1.75;color:var(--text-muted);margin-bottom:22px;">Mechanical, thermal, electrical and general property comparison of the four fluoropolymer insulation materials — PTFE, FEP, PFA and ETFE.</p>
+      <div class="spec-search-wrap" style="max-width:460px;margin-bottom:14px;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" type="text" placeholder="Search by property, ASTM, value…" autocomplete="off" spellcheck="false"
+               oninput="tsFilter('ptfeTable', this.value, this.parentElement.querySelector('.spec-search-count'))">
+        <span class="spec-search-count"></span>
+      </div>
+        <div class="ts-table-wrap">
+          <table class="ts-table" id="ptfeTable">
+            <thead><tr><th>Property</th><th>ASTM / Unit</th><th>PTFE</th><th>FEP</th><th>PFA</th><th>ETFE</th></tr></thead>
+            <tbody>
+              <tr class="ts-section-row"><td colspan="6">MECHANICAL PROPERTIES</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Specific Gravity</td><td>D792</td><td>2.13–2.20</td><td>2.12–2.17</td><td>2.12–2.17</td><td>1.70–1.76</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Elongation %</td><td>D638</td><td>200–450</td><td>250–330</td><td>280–400</td><td>420–460</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Tensile Strength (psi)</td><td>D638</td><td>2000–4500</td><td>2800–5000</td><td>4000–4500</td><td>6100–6800</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Flexural Strength (psi)</td><td>D790</td><td>no break</td><td>no break</td><td>no break</td><td>5500</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Compressive Strength (psi)</td><td>D695</td><td>3500</td><td>2200</td><td>—</td><td>2500</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Tensile Elastic Modulus (Young's) (psi)</td><td>D638</td><td>57,000</td><td>50,000</td><td>72,500–87,000</td><td>85,000–95,000</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Flexural Modulus (psi)</td><td>D790</td><td>71,000–85,000</td><td>78,000–92,000</td><td>94,000–99,000</td><td>128,000–171,000</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Flexural Modulus 10³MPa (10³kgf/cm²)</td><td>D790</td><td>0.5–0.6 (5.0–6.0)</td><td>0.5–0.6 (5.5–6.5)</td><td>0.6–0.7 (6.6–7.0)</td><td>0.9–1.4 (9.0–14.0)</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Flex Life (MIT cycles)</td><td>D2176</td><td>&gt;1,000,000</td><td>5,000–80,000</td><td>10,000–500,000</td><td>10,000–27,000</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Hardness Durometer Shore D</td><td>D636</td><td>50–65</td><td>55</td><td>55–60</td><td>75</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Coefficient of Friction</td><td>(on steel)</td><td>0.02</td><td>0.05</td><td>0.2</td><td>0.06</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Abrasion Resistance (1000 revs.)</td><td>Taber</td><td>12</td><td>14–20</td><td>9–17</td><td>na</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Impact Strength IZOD (73°F/23°C notched ft·lbs/in)</td><td>D256</td><td>3</td><td>no break</td><td>no break</td><td>no break</td></tr>
+              <tr class="ts-section-row"><td colspan="6">THERMAL PROPERTIES</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Melting Point</td><td>°C (°F)</td><td>327 (621)</td><td>260 (500)</td><td>305 (582)</td><td>267 (512)</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Upper Service Temperature (20000h)</td><td>°C (°F)</td><td>260 (500)</td><td>204 (400)</td><td>260 (500)</td><td>176 (348)</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Flammability</td><td>UL 94</td><td>V-0</td><td>V-0</td><td>V-0</td><td>V-0</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Thermal Conductivity (BTU/hr/sq ft/°F·in)</td><td>—</td><td>1.7</td><td>1.4</td><td>1.3</td><td>1.65</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Thermal Conductivity (Cal-cm/s-cm², °C)</td><td>—</td><td>6 × 10⁻⁴</td><td>6 × 10⁻⁴</td><td>6 × 10⁻⁶</td><td>5.7 × 10⁻⁴</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Linear Coefficient of Thermal Expansion</td><td>D696 · 10⁻⁵/°C</td><td>&gt;11.6</td><td>8.3–10.5</td><td>13</td><td>13</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Heat of Fusion</td><td>BTU/LB</td><td>29–37</td><td>11</td><td>13</td><td>20</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Heat of Combustion</td><td>BTU/LB</td><td>2200</td><td>2200</td><td>2300</td><td>8100</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Low Temperature Embrittlement</td><td>°C (°F)</td><td>−268 (−450)</td><td>−268 (−450)</td><td>−268 (−450)</td><td>−100 (−148)</td></tr>
+              <tr class="ts-section-row"><td colspan="6">ELECTRICAL PROPERTIES</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Dielectric Constant</td><td>D150 / 10³Hz</td><td>2.1</td><td>2.1</td><td>2.1</td><td>2.6</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Dielectric Constant</td><td>D150 / 10⁶Hz</td><td>2.1</td><td>2.1</td><td>2.1</td><td>2.6</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Dielectric Strength</td><td>D149 / 125 MIL</td><td>500</td><td>500</td><td>500</td><td>na</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Dielectric Strength</td><td>D149 / 10 MIL</td><td>≥1400</td><td>≥1400</td><td>≥1400</td><td>1600</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Volume Resistivity</td><td>D257 / ohm-cm</td><td>&gt;10¹⁸</td><td>&gt;10¹⁸</td><td>&gt;10¹⁸</td><td>&gt;10¹⁶</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Surface Resistivity</td><td>D257 / ohm-cm</td><td>&gt;10¹⁷</td><td>&gt;10¹⁷</td><td>&gt;10¹⁷</td><td>&gt;10¹⁵</td></tr>
+              <tr class="ts-section-row"><td colspan="6">GENERAL PROPERTIES</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Chemical / Solvent Resistance</td><td>D543</td><td>Excellent</td><td>Excellent</td><td>Excellent</td><td>Excellent</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Water Absorption 24h, %</td><td>D570</td><td>&lt;0.01</td><td>&lt;0.01</td><td>&lt;0.03</td><td>&lt;0.03</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Deformation Under Load</td><td>*D621 100°C</td><td>5</td><td>5</td><td>2.4</td><td>5.4</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Deformation Under Load</td><td>**D621 25°C</td><td>7</td><td>3</td><td>2.7</td><td>2.3</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Refractive Index</td><td>—</td><td>1.35</td><td>1.338</td><td>1.34</td><td>1.4</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Arc Resistivity, %</td><td>—</td><td>&gt;300</td><td>&gt;300</td><td>&gt;300</td><td>75</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Arc Resistance, sec</td><td>D495</td><td>&gt;200</td><td>&gt;300</td><td>&gt;300</td><td>122</td></tr>
+              <tr><td style="white-space:normal;min-width:210px;">Limiting Oxygen Index, %</td><td>D2863</td><td>&gt;95</td><td>&gt;95</td><td>&gt;95</td><td>31</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ts-no-match">No properties match your search</div>
+      <details class="ts-scans" style="margin-top:28px;">
+        <summary>View original scanned pages (Comparison Chart of PTFE, FEP, PFA, ETFE)</summary>
+        <div style="max-width:900px;">
+          <img src="assets/tech-support/ptfe-comparison-1.jpg" alt="Comparison Chart of PTFE, FEP, PFA, ETFE — original page 1" loading="lazy" />
+          <img src="assets/tech-support/ptfe-comparison-2.jpg" alt="Comparison Chart of PTFE, FEP, PFA, ETFE — original page 2" loading="lazy" />
+        </div>
+      </details>
       </div>
     </div>
   </section>
@@ -168,6 +261,38 @@
       <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
     </div>
   </footer>
+    <script>
+  function tsFilter(tableId, q, countEl) {
+    const table = document.getElementById(tableId);
+    const rows = table.querySelectorAll('tbody tr:not(.ts-section-row)');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(r => {
+      const show = !term || r.textContent.toLowerCase().includes(term);
+      r.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    // hide section header rows that have no visible rows beneath them
+    table.querySelectorAll('tbody tr.ts-section-row').forEach(sec => {
+      let el = sec.nextElementSibling, any = false;
+      while (el && !el.classList.contains('ts-section-row')) {
+        if (el.style.display !== 'none') { any = true; break; }
+        el = el.nextElementSibling;
+      }
+      sec.style.display = (!term || any) ? '' : 'none';
+    });
+    if (countEl) countEl.textContent = term ? visible + ' of ' + rows.length + ' rows' : rows.length + ' rows';
+    const nm = table.parentElement.nextElementSibling;
+    if (nm && nm.classList.contains('ts-no-match')) nm.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.ts-table').forEach(t => {
+      const wrap = t.closest('.ts-table-wrap');
+      const count = wrap && wrap.previousElementSibling ? wrap.previousElementSibling.querySelector('.spec-search-count') : null;
+      if (count) count.textContent = t.querySelectorAll('tbody tr:not(.ts-section-row)').length + ' rows';
+    });
+  });
+  </script>
   <script src="animations.js"></script>
   <script src="nav-mobile.js"></script>
 </body>

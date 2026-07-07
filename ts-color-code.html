@@ -14,6 +14,39 @@
     .stub-coming-icon { width:60px;height:60px;background:var(--accent-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:6px; }
     .stub-coming h2 { font-size:22px;font-weight:700; }
     .stub-coming p { font-size:15px;color:var(--text-muted);max-width:460px;line-height:1.65; }
+      .ts-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+    .ts-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    .ts-table thead th {
+      position: sticky; top: 0;
+      background: var(--bg-soft); padding: 11px 14px; text-align: left;
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-faint);
+      border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    .ts-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .ts-table tbody tr:last-child td { border-bottom: none; }
+    .ts-table tbody tr:hover { background: var(--accent-soft); }
+    .ts-table td:first-child { font-weight: 600; color: var(--text); }
+    .ts-section-row td {
+      background: var(--bg-soft); font-family: var(--mono); font-size: 11px;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2);
+    }
+    .ts-swatch {
+      display: inline-block; width: 15px; height: 15px; border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.2); vertical-align: -3px; margin-right: 7px;
+    }
+    .ts-swatch-half { position: relative; overflow: hidden; }
+    .ts-no-match { display: none; text-align: center; padding: 22px; font-size: 13px; color: var(--text-faint); font-family: var(--mono); }
+    .ts-scans summary {
+      cursor: pointer; font-size: 13.5px; font-weight: 700; color: var(--accent);
+      padding: 12px 0; user-select: none;
+    }
+    .ts-scans img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; }
+    .ts-formula {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 18px; font-family: var(--mono); font-size: 14px; color: var(--text);
+      margin: 10px 0 6px; overflow-x: auto; white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -150,11 +183,211 @@
   </section>
   <section class="section-padding">
     <div class="container">
-      <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
-        <img src="assets/tech-support/color-code-1.jpg" alt="color code — page 1" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/color-code-2.jpg" alt="color code — page 2" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/color-code-3.jpg" alt="color code — page 3" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/color-code-4.jpg" alt="color code — page 4" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
+      <div style="max-width:900px;margin:0 auto;">
+        <p style="font-size:15px;line-height:1.75;color:var(--text-muted);margin-bottom:22px;">Siechem insulation colour codes for single and double colour wires. The two-digit code forms part of the part number (e.g. the XX suffix in catalogue part numbers).</p>
+      <div class="spec-search-wrap" style="max-width:460px;margin-bottom:14px;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" type="text" placeholder="Search by colour name or code…" autocomplete="off" spellcheck="false"
+               oninput="tsFilter('colorTable', this.value, this.parentElement.querySelector('.spec-search-count'))">
+        <span class="spec-search-count"></span>
+      </div>
+        <div class="ts-table-wrap">
+          <table class="ts-table" id="colorTable">
+            <thead><tr><th>Sl. No</th><th>Colour</th><th>Code</th></tr></thead>
+            <tbody>
+              <tr class="ts-section-row"><td colspan="3">Single Colour</td></tr>
+              <tr><td>1</td><td><span class="ts-swatch" style="background:#DC2626;"></span>Red</td><td>01</td></tr>
+              <tr><td>2</td><td><span class="ts-swatch" style="background:#FACC15;"></span>Yellow</td><td>02</td></tr>
+              <tr><td>3</td><td><span class="ts-swatch" style="background:#2563EB;"></span>Blue</td><td>03</td></tr>
+              <tr><td>4</td><td><span class="ts-swatch" style="background:#111827;"></span>Black</td><td>04</td></tr>
+              <tr><td>5</td><td><span class="ts-swatch" style="background:#16A34A;"></span>Green</td><td>05</td></tr>
+              <tr><td>6</td><td><span class="ts-swatch" style="background:#9CA3AF;"></span>Grey</td><td>07</td></tr>
+              <tr><td>7</td><td><span class="ts-swatch" style="background:#92400E;"></span>Brown</td><td>08</td></tr>
+              <tr><td>8</td><td><span class="ts-swatch" style="background:#FFFFFF;"></span>White</td><td>09</td></tr>
+              <tr><td>9</td><td><span class="ts-swatch" style="background:#F97316;"></span>Orange</td><td>10</td></tr>
+              <tr><td>10</td><td><span class="ts-swatch" style="background:#7C3AED;"></span>Violet</td><td>11</td></tr>
+              <tr><td>11</td><td><span class="ts-swatch" style="background:#5B3A29;"></span>Chocolate</td><td>12</td></tr>
+              <tr><td>12</td><td><span class="ts-swatch" style="background:#D9C7A7;"></span>Beige</td><td>A64</td></tr>
+              <tr><td>13</td><td><span class="ts-swatch" style="background:#374151;"></span>Charcoal</td><td>14</td></tr>
+              <tr><td>14</td><td><span class="ts-swatch" style="background:#7DD3FC;"></span>LT Blue</td><td>15</td></tr>
+              <tr><td>15</td><td><span class="ts-swatch" style="background:#4B5563;"></span>Dk Grey</td><td>16</td></tr>
+              <tr><td>16</td><td><span class="ts-swatch" style="background:#86EFAC;"></span>LT Green</td><td>17</td></tr>
+              <tr><td>17</td><td><span class="ts-swatch" style="background:#14532D;"></span>DK Green</td><td>18</td></tr>
+              <tr><td>18</td><td><span class="ts-swatch" style="background:#1E3A8A;"></span>DK Blue</td><td>19</td></tr>
+              <tr><td>19</td><td><span class="ts-swatch" style="background:#6B21A8;"></span>Purple</td><td>20</td></tr>
+              <tr><td>20</td><td><span class="ts-swatch" style="background:#EC4899;"></span>Pink</td><td>21</td></tr>
+              <tr><td>21</td><td><span class="ts-swatch" style="background:repeating-conic-gradient(#E5E7EB 0% 25%, #fff 0% 50%) 0/8px 8px;"></span>Transparent</td><td>22</td></tr>
+              <tr><td>22</td><td><span class="ts-swatch" style="background:#14B8A6;"></span>Turquoise</td><td>23</td></tr>
+              <tr class="ts-section-row"><td colspan="3">Double Colour</td></tr>
+              <tr><td>23</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #16A34A 50%);"></span>Yellow/Green</td><td>06</td></tr>
+              <tr><td>24</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #111827 50%);"></span>Red/Black</td><td>24</td></tr>
+              <tr><td>25</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #F97316 50%);"></span>Red/Orange</td><td>25</td></tr>
+              <tr><td>26</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #2563EB 50%);"></span>Yellow/Blue</td><td>26</td></tr>
+              <tr><td>27</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #EC4899 50%);"></span>Yellow/Pink</td><td>27</td></tr>
+              <tr><td>28</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #FFFFFF 50%);"></span>Yellow/White</td><td>28</td></tr>
+              <tr><td>29</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #FACC15 50%);"></span>Green/Yellow</td><td>29</td></tr>
+              <tr><td>30</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #111827 50%);"></span>Blue/Black</td><td>30</td></tr>
+              <tr><td>31</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #DC2626 50%);"></span>Blue/Red</td><td>31</td></tr>
+              <tr><td>32</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #FACC15 50%);"></span>Blue/Yellow</td><td>32</td></tr>
+              <tr><td>33</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #16A34A 50%);"></span>Blue/Green</td><td>33</td></tr>
+              <tr><td>34</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #D9C7A7 50%);"></span>Black/Beige</td><td>34</td></tr>
+              <tr><td>35</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #92400E 50%);"></span>Black/Brown</td><td>35</td></tr>
+              <tr><td>36</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #2563EB 50%);"></span>Black/Blue</td><td>36</td></tr>
+              <tr><td>37</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #16A34A 50%);"></span>Black/Green</td><td>37</td></tr>
+              <tr><td>38</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #F97316 50%);"></span>Black/Orange</td><td>38</td></tr>
+              <tr><td>39</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #DC2626 50%);"></span>Black/Red</td><td>39</td></tr>
+              <tr><td>40</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #FFFFFF 50%);"></span>Black/White</td><td>40</td></tr>
+              <tr><td>41</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #FACC15 50%);"></span>Black/Yellow</td><td>41</td></tr>
+              <tr><td>42</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #111827 50%);"></span>Green/Black</td><td>42</td></tr>
+              <tr><td>43</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #DC2626 50%);"></span>Green/Red</td><td>43</td></tr>
+              <tr><td>44</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #9CA3AF 50%);"></span>Green/Grey</td><td>44</td></tr>
+              <tr><td>45</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #92400E 50%);"></span>Green/Brown</td><td>45</td></tr>
+              <tr><td>46</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #FFFFFF 50%);"></span>Grey/White</td><td>46</td></tr>
+              <tr><td>47</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #DC2626 50%);"></span>Grey/Red</td><td>47</td></tr>
+              <tr><td>48</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #7C3AED 50%);"></span>Grey/Violet</td><td>48</td></tr>
+              <tr><td>49</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #111827 50%);"></span>Grey/Black</td><td>49</td></tr>
+              <tr><td>50</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #2563EB 50%);"></span>Grey/Blue</td><td>50</td></tr>
+              <tr><td>51</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #16A34A 50%);"></span>Grey/Green</td><td>51</td></tr>
+              <tr><td>52</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #2563EB 50%);"></span>Brown/Blue</td><td>52</td></tr>
+              <tr><td>53</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #9CA3AF 50%);"></span>Brown/Grey</td><td>53</td></tr>
+              <tr><td>54</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #DC2626 50%);"></span>Brown/Red</td><td>54</td></tr>
+              <tr><td>55</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #F97316 50%);"></span>Brown/Orange</td><td>55</td></tr>
+              <tr><td>56</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #111827 50%);"></span>Brown/Black</td><td>56</td></tr>
+              <tr><td>57</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #FACC15 50%);"></span>Brown/Yellow</td><td>57</td></tr>
+              <tr><td>58</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #FFFFFF 50%);"></span>Brown/White</td><td>58</td></tr>
+              <tr><td>59</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #16A34A 50%);"></span>Brown/Green</td><td>59</td></tr>
+              <tr><td>60</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #F97316 50%);"></span>White/Orange</td><td>60</td></tr>
+              <tr><td>61</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #D9C7A7 50%);"></span>White/Beige</td><td>61</td></tr>
+              <tr><td>62</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #111827 50%);"></span>White/Black</td><td>62</td></tr>
+              <tr><td>63</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #92400E 50%);"></span>White/Brown</td><td>63</td></tr>
+              <tr><td>64</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #2563EB 50%);"></span>White/Blue</td><td>64</td></tr>
+              <tr><td>65</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #9CA3AF 50%);"></span>White/Grey</td><td>65</td></tr>
+              <tr><td>66</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #DC2626 50%);"></span>White/Red</td><td>66</td></tr>
+              <tr><td>67</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #111827 50%);"></span>Orange/Black</td><td>67</td></tr>
+              <tr><td>68</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #9CA3AF 50%);"></span>Orange/Grey</td><td>68</td></tr>
+              <tr><td>69</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #92400E 50%);"></span>Orange/Brown</td><td>69</td></tr>
+              <tr><td>70</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #2563EB 50%);"></span>Orange/Blue</td><td>70</td></tr>
+              <tr><td>71</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #16A34A 50%);"></span>Orange/Green</td><td>71</td></tr>
+              <tr><td>72</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #DC2626 50%);"></span>Orange/Red</td><td>72</td></tr>
+              <tr><td>73</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #FFFFFF 50%);"></span>Orange/White</td><td>73</td></tr>
+              <tr><td>74</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #D9C7A7 50%);"></span>Violet/Beige</td><td>74</td></tr>
+              <tr><td>75</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #9CA3AF 50%);"></span>Violet/Grey</td><td>75</td></tr>
+              <tr><td>76</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #2563EB 50%);"></span>Violet/Blue</td><td>76</td></tr>
+              <tr><td>77</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #16A34A 50%);"></span>Violet/Green</td><td>77</td></tr>
+              <tr><td>78</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #F97316 50%);"></span>Violet/Orange</td><td>78</td></tr>
+              <tr><td>79</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #111827 50%);"></span>Pink/Black</td><td>79</td></tr>
+              <tr><td>80</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #2563EB 50%);"></span>Pink/Blue</td><td>80</td></tr>
+              <tr><td>81</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #F97316 50%);"></span>Pink/Orange</td><td>81</td></tr>
+              <tr><td>82</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #DC2626 50%);"></span>Pink/Red</td><td>82</td></tr>
+              <tr><td>83</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #FFFFFF 50%);"></span>Pink/White</td><td>83</td></tr>
+              <tr><td>84</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #FFFFFF 50%);"></span>Beige/White</td><td>84</td></tr>
+              <tr><td>85</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #111827 50%);"></span>Beige/Black</td><td>85</td></tr>
+              <tr><td>86</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #2563EB 50%);"></span>Beige/Blue</td><td>86</td></tr>
+              <tr><td>87</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #16A34A 50%);"></span>Beige/Green</td><td>87</td></tr>
+              <tr><td>88</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #9CA3AF 50%);"></span>Beige/Grey</td><td>88</td></tr>
+              <tr><td>89</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #F97316 50%);"></span>Beige/Orange</td><td>89</td></tr>
+              <tr><td>90</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #EC4899 50%);"></span>Beige/Pink</td><td>90</td></tr>
+              <tr><td>91</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #DC2626 50%);"></span>Beige/Red</td><td>91</td></tr>
+              <tr><td>92</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #FACC15 50%);"></span>Beige/Yellow</td><td>92</td></tr>
+              <tr><td>93</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #16A34A 50%);"></span>Red/Green</td><td>93</td></tr>
+              <tr><td>94</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #FACC15 50%);"></span>Red/Yellow</td><td>94</td></tr>
+              <tr><td>95</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #DC2626 50%);"></span>Yellow/Red</td><td>95</td></tr>
+              <tr><td>96</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #111827 50%);"></span>Yellow/Black</td><td>96</td></tr>
+              <tr><td>97</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #92400E 50%);"></span>Yellow/Brown</td><td>97</td></tr>
+              <tr><td>98</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #F97316 50%);"></span>Yellow/Orange</td><td>98</td></tr>
+              <tr><td>99</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #7C3AED 50%);"></span>Yellow/Violet</td><td>99</td></tr>
+              <tr><td>100</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #92400E 50%);"></span>Blue/Brown</td><td>A01</td></tr>
+              <tr><td>101</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #FFFFFF 50%);"></span>Blue/White</td><td>A02</td></tr>
+              <tr><td>102</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #2563EB 50%);"></span>Green/Blue</td><td>A03</td></tr>
+              <tr><td>103</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #FFFFFF 50%);"></span>Green/White</td><td>A04</td></tr>
+              <tr><td>104</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #FACC15 50%);"></span>Grey/Yellow</td><td>A05</td></tr>
+              <tr><td>105</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #7C3AED 50%);"></span>White/Violet</td><td>A06</td></tr>
+              <tr><td>106</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #16A34A 50%);"></span>White/Green</td><td>A07</td></tr>
+              <tr><td>107</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #FACC15 50%);"></span>White/Yellow</td><td>A08</td></tr>
+              <tr><td>108</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #DC2626 50%);"></span>Violet/Red</td><td>A09</td></tr>
+              <tr><td>109</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #FACC15 50%);"></span>Violet/Yellow</td><td>A10</td></tr>
+              <tr><td>110</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #FFFFFF 50%);"></span>Violet/White</td><td>A11</td></tr>
+              <tr><td>111</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #FFFFFF 50%);"></span>Red/White</td><td>A12</td></tr>
+              <tr><td>112</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #F97316 50%);"></span>Green/Orange</td><td>A13</td></tr>
+              <tr><td>113</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #F97316 50%);"></span>Blue/Orange</td><td>A14</td></tr>
+              <tr><td>114</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #FACC15 50%);"></span>Pink/Yellow</td><td>A15</td></tr>
+              <tr><td>115</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #9CA3AF 50%);"></span>Black/Grey</td><td>A16</td></tr>
+              <tr><td>116</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #2563EB 50%);"></span>Red/Blue</td><td>A17</td></tr>
+              <tr><td>117</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #9CA3AF 50%);"></span>Red/Grey</td><td>A18</td></tr>
+              <tr><td>118</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #EC4899 50%);"></span>Red/Pink</td><td>A19</td></tr>
+              <tr><td>119</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #16A34A 50%);"></span>Pink/Green</td><td>A20</td></tr>
+              <tr><td>120</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #7C3AED 50%);"></span>Orange/Violet</td><td>A21</td></tr>
+              <tr><td>121</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #7C3AED 50%);"></span>Red/Violet</td><td>A22</td></tr>
+              <tr><td>122</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #EC4899 50%);"></span>Violet/Pink</td><td>A23</td></tr>
+              <tr><td>123</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #92400E 50%);"></span>Pink/Brown</td><td>A24</td></tr>
+              <tr><td>124</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #92400E 50%);"></span>Red/Brown</td><td>A25</td></tr>
+              <tr><td>125</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #F97316 50%);"></span>Grey/Orange</td><td>A26</td></tr>
+              <tr><td>126</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #F97316 50%, #FACC15 50%);"></span>Orange/Yellow</td><td>A27</td></tr>
+              <tr><td>127</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #EC4899 50%);"></span>Green/Pink</td><td>A28</td></tr>
+              <tr><td>128</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #1E3A8A 50%, #111827 50%);"></span>DK Blue/Black</td><td>A29</td></tr>
+              <tr><td>129</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #1E3A8A 50%);"></span>Grey/DK Blue</td><td>A30</td></tr>
+              <tr><td>130</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #4C1D95 50%);"></span>LT Blue/DK Violet</td><td>A31</td></tr>
+              <tr><td>131</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #FACC15 50%);"></span>LT Blue/Yellow</td><td>A32</td></tr>
+              <tr><td>132</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #C4B5FD 50%);"></span>LT Blue/LT Violet</td><td>A33</td></tr>
+              <tr><td>133</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #9CA3AF 50%);"></span>Blue/Grey</td><td>A34</td></tr>
+              <tr><td>134</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #7C3AED 50%);"></span>Green/Violet</td><td>A35</td></tr>
+              <tr><td>135</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #EC4899 50%);"></span>LT Green/Pink</td><td>A36</td></tr>
+              <tr><td>136</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #EC4899 50%);"></span>Grey/Pink</td><td>A37</td></tr>
+              <tr><td>137</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #EC4899 50%);"></span>Blue/Pink</td><td>A38</td></tr>
+              <tr><td>138</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #92400E 50%);"></span>Grey/Brown</td><td>A39</td></tr>
+              <tr><td>139</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #7C3AED 50%);"></span>Brown/Violet</td><td>A40</td></tr>
+              <tr><td>140</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #7C3AED 50%);"></span>Pink/Violet</td><td>A41</td></tr>
+              <tr><td>141</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #111827 50%);"></span>Violet/Black</td><td>A42</td></tr>
+              <tr><td>142</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #9CA3AF 50%);"></span>Yellow/Grey</td><td>A43</td></tr>
+              <tr><td>143</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #DC2626 50%);"></span>LT Green/Red</td><td>A44</td></tr>
+              <tr><td>144</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #86EFAC 50%);"></span>Pink/LT Green</td><td>A45</td></tr>
+              <tr><td>145</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #86EFAC 50%);"></span>Green/LT Green</td><td>A46</td></tr>
+              <tr><td>146</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #7DD3FC 50%);"></span>Green/LT Blue</td><td>A47</td></tr>
+              <tr><td>147</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #9CA3AF 50%, #7DD3FC 50%);"></span>Grey/LT Blue</td><td>A48</td></tr>
+              <tr><td>148</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #7DD3FC 50%);"></span>White/LT Blue</td><td>A49</td></tr>
+              <tr><td>149</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #92400E 50%);"></span>Violet/Brown</td><td>A50</td></tr>
+              <tr><td>150</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #7DD3FC 50%);"></span>Violet/LT Blue</td><td>A51</td></tr>
+              <tr><td>151</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #FFFFFF 50%);"></span>LT Blue/White</td><td>A52</td></tr>
+              <tr><td>152</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7C3AED 50%, #86EFAC 50%);"></span>Violet/LT Green</td><td>A53</td></tr>
+              <tr><td>153</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #F97316 50%);"></span>LT Blue/Orange</td><td>A54</td></tr>
+              <tr><td>154</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #86EFAC 50%);"></span>White/LT Green</td><td>A55</td></tr>
+              <tr><td>155</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #92400E 50%);"></span>LT Blue/Brown</td><td>A56</td></tr>
+              <tr><td>156</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #7DD3FC 50%);"></span>Black/LT Blue</td><td>A57</td></tr>
+              <tr><td>157</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #7DD3FC 50%, #7C3AED 50%);"></span>LT Blue/Violet</td><td>A58</td></tr>
+              <tr><td>158</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #7DD3FC 50%);"></span>LT Green/LT Blue</td><td>A59</td></tr>
+              <tr><td>159</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #7DD3FC 50%);"></span>Blue/LT Blue</td><td>A60</td></tr>
+              <tr><td>160</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #7DD3FC 50%);"></span>Red/LT Blue</td><td>A61</td></tr>
+              <tr><td>161</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #D9C7A7 50%);"></span>Brown/Beige</td><td>A62</td></tr>
+              <tr><td>162</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #16A34A 50%, #D9C7A7 50%);"></span>Green/Beige</td><td>A63</td></tr>
+              <tr><td>163</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #FFFFFF 50%);"></span>LT Green/White</td><td>A65</td></tr>
+              <tr><td>164</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #D9C7A7 50%);"></span>Blue/Beige</td><td>A66</td></tr>
+              <tr><td>165</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #86EFAC 50%);"></span>Blue/LT Green</td><td>A67</td></tr>
+              <tr><td>166</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #2563EB 50%, #7C3AED 50%);"></span>Blue/Violet</td><td>A68</td></tr>
+              <tr><td>167</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #7DD3FC 50%);"></span>Brown/LT Blue</td><td>A69</td></tr>
+              <tr><td>168</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #16A34A 50%);"></span>LT Green/Green</td><td>A70</td></tr>
+              <tr><td>169</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #92400E 50%, #86EFAC 50%);"></span>Brown/LT Green</td><td>A71</td></tr>
+              <tr><td>170</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #9CA3AF 50%);"></span>LT Green/Grey</td><td>A72</td></tr>
+              <tr><td>171</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FACC15 50%, #D9C7A7 50%);"></span>Yellow/Beige</td><td>A73</td></tr>
+              <tr><td>172</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #7DD3FC 50%);"></span>Pink/LT Blue</td><td>A74</td></tr>
+              <tr><td>173</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #D9C7A7 50%, #86EFAC 50%);"></span>Beige/LT Green</td><td>A75</td></tr>
+              <tr><td>174</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #EC4899 50%, #9CA3AF 50%);"></span>Pink/Grey</td><td>A76</td></tr>
+              <tr><td>175</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #DC2626 50%, #86EFAC 50%);"></span>Red/LT Green</td><td>A77</td></tr>
+              <tr><td>176</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #111827 50%, #7C3AED 50%);"></span>Black/Violet</td><td>A78</td></tr>
+              <tr><td>177</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #86EFAC 50%, #14532D 50%);"></span>LT Green/Dark Green</td><td>A79</td></tr>
+              <tr><td>178</td><td><span class="ts-swatch" style="background:linear-gradient(135deg, #FFFFFF 50%, #EC4899 50%);"></span>White/Pink</td><td>A80</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ts-no-match">No colours match your search</div>
+      <details class="ts-scans" style="margin-top:28px;">
+        <summary>View original scanned pages (Color Code Charts)</summary>
+        <div style="max-width:900px;">
+          <img src="assets/tech-support/color-code-1.jpg" alt="Color Code Charts — original page 1" loading="lazy" />
+          <img src="assets/tech-support/color-code-2.jpg" alt="Color Code Charts — original page 2" loading="lazy" />
+          <img src="assets/tech-support/color-code-3.jpg" alt="Color Code Charts — original page 3" loading="lazy" />
+          <img src="assets/tech-support/color-code-4.jpg" alt="Color Code Charts — original page 4" loading="lazy" />
+        </div>
+      </details>
       </div>
     </div>
   </section>
@@ -170,6 +403,38 @@
       <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
     </div>
   </footer>
+    <script>
+  function tsFilter(tableId, q, countEl) {
+    const table = document.getElementById(tableId);
+    const rows = table.querySelectorAll('tbody tr:not(.ts-section-row)');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(r => {
+      const show = !term || r.textContent.toLowerCase().includes(term);
+      r.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    // hide section header rows that have no visible rows beneath them
+    table.querySelectorAll('tbody tr.ts-section-row').forEach(sec => {
+      let el = sec.nextElementSibling, any = false;
+      while (el && !el.classList.contains('ts-section-row')) {
+        if (el.style.display !== 'none') { any = true; break; }
+        el = el.nextElementSibling;
+      }
+      sec.style.display = (!term || any) ? '' : 'none';
+    });
+    if (countEl) countEl.textContent = term ? visible + ' of ' + rows.length + ' rows' : rows.length + ' rows';
+    const nm = table.parentElement.nextElementSibling;
+    if (nm && nm.classList.contains('ts-no-match')) nm.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.ts-table').forEach(t => {
+      const wrap = t.closest('.ts-table-wrap');
+      const count = wrap && wrap.previousElementSibling ? wrap.previousElementSibling.querySelector('.spec-search-count') : null;
+      if (count) count.textContent = t.querySelectorAll('tbody tr:not(.ts-section-row)').length + ' rows';
+    });
+  });
+  </script>
   <script src="animations.js"></script>
   <script src="nav-mobile.js"></script>
 </body>

@@ -14,6 +14,39 @@
     .stub-coming-icon { width:60px;height:60px;background:var(--accent-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:6px; }
     .stub-coming h2 { font-size:22px;font-weight:700; }
     .stub-coming p { font-size:15px;color:var(--text-muted);max-width:460px;line-height:1.65; }
+      .ts-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+    .ts-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    .ts-table thead th {
+      position: sticky; top: 0;
+      background: var(--bg-soft); padding: 11px 14px; text-align: left;
+      font-family: var(--mono); font-size: 11px; font-weight: 700;
+      letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-faint);
+      border-bottom: 1px solid var(--border); white-space: nowrap;
+    }
+    .ts-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .ts-table tbody tr:last-child td { border-bottom: none; }
+    .ts-table tbody tr:hover { background: var(--accent-soft); }
+    .ts-table td:first-child { font-weight: 600; color: var(--text); }
+    .ts-section-row td {
+      background: var(--bg-soft); font-family: var(--mono); font-size: 11px;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-2);
+    }
+    .ts-swatch {
+      display: inline-block; width: 15px; height: 15px; border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.2); vertical-align: -3px; margin-right: 7px;
+    }
+    .ts-swatch-half { position: relative; overflow: hidden; }
+    .ts-no-match { display: none; text-align: center; padding: 22px; font-size: 13px; color: var(--text-faint); font-family: var(--mono); }
+    .ts-scans summary {
+      cursor: pointer; font-size: 13.5px; font-weight: 700; color: var(--accent);
+      padding: 12px 0; user-select: none;
+    }
+    .ts-scans img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; }
+    .ts-formula {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 14px 18px; font-family: var(--mono); font-size: 14px; color: var(--text);
+      margin: 10px 0 6px; overflow-x: auto; white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -150,11 +183,108 @@
   </section>
   <section class="section-padding">
     <div class="container">
-      <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
-        <img src="assets/tech-support/awg-sqmm-1.jpg" alt="awg sqmm — page 1" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/awg-sqmm-2.jpg" alt="awg sqmm — page 2" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/awg-sqmm-3.jpg" alt="awg sqmm — page 3" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
-        <img src="assets/tech-support/awg-sqmm-4.jpg" alt="awg sqmm — page 4" loading="lazy" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;" />
+      <div style="max-width:900px;margin:0 auto;">
+        <p style="font-size:15px;line-height:1.75;color:var(--text-muted);margin-bottom:16px;">American Wire Gauge (AWG) is used for representation of the cross-sectional area of round, solid and stranded non-ferrous conductors. Usage of AWG is mostly practiced in the United States; all other countries express conductor dimensions in millimetres (mm). There are 44 commonly known AWG sizes from 4/0 to 40. There is an inverse relation between the physical size of the conductor and the AWG number — a smaller AWG corresponds to a larger conductor diameter.</p>
+        <p style="font-size:15px;line-height:1.75;color:var(--text-muted);margin-bottom:16px;">Stranded conductors are represented as x/y, where x is the number of strands and y is the diameter of each strand — e.g. 7/0.533 is a 7-strand conductor with 0.533&nbsp;mm strands.</p>
+        <h3 style="font-size:15px;font-weight:800;margin:20px 0 4px;">Conversion formulas</h3>
+        <div class="ts-formula">d<sub>n</sub> = 0.127 × 92<sup>(36−n)/39</sup> mm &nbsp;&nbsp;— diameter of n-gauge wire in mm</div>
+        <div class="ts-formula">A<sub>n</sub> = 0.012668 × 92<sup>(36−n)/19</sup> mm² &nbsp;&nbsp;— cross-sectional area of n-gauge wire</div>
+        <div class="ts-formula">d<sub>in</sub> = 0.005092 × 92<sup>(36−n)/39</sup> inches &nbsp;&nbsp;— diameter of n-gauge wire in inches</div>
+        <p style="font-size:13px;line-height:1.65;color:var(--text-faint);margin:8px 0 26px;">Note: for sizes 1/0 to 2000MCM the formulas above are not applicable — use the table values.</p>
+
+        <h3 style="font-size:15px;font-weight:800;margin:0 0 12px;">Conversion table</h3>
+      <div class="spec-search-wrap" style="max-width:460px;margin-bottom:14px;">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" type="text" placeholder="Search by AWG, mm, mm²…" autocomplete="off" spellcheck="false"
+               oninput="tsFilter('awgTable', this.value, this.parentElement.querySelector('.spec-search-count'))">
+        <span class="spec-search-count"></span>
+      </div>
+        <div class="ts-table-wrap">
+          <table class="ts-table" id="awgTable">
+            <thead><tr><th>AWG / kcmil</th><th>Diameter (inches)</th><th>Diameter (mm)</th><th>Cross Section (mm²)</th></tr></thead>
+            <tbody>
+              <tr><td>40</td><td>0.0031</td><td>0.0799</td><td>0.0050</td></tr>
+              <tr><td>39</td><td>0.0035</td><td>0.0897</td><td>0.0063</td></tr>
+              <tr><td>38</td><td>0.0040</td><td>0.1007</td><td>0.0080</td></tr>
+              <tr><td>37</td><td>0.0045</td><td>0.1131</td><td>0.0100</td></tr>
+              <tr><td>36</td><td>0.0050</td><td>0.1270</td><td>0.0127</td></tr>
+              <tr><td>35</td><td>0.0056</td><td>0.1426</td><td>0.0160</td></tr>
+              <tr><td>34</td><td>0.0063</td><td>0.1601</td><td>0.0201</td></tr>
+              <tr><td>33</td><td>0.0071</td><td>0.1798</td><td>0.0254</td></tr>
+              <tr><td>32</td><td>0.0080</td><td>0.2019</td><td>0.0320</td></tr>
+              <tr><td>31</td><td>0.0089</td><td>0.2268</td><td>0.0404</td></tr>
+              <tr><td>30</td><td>0.0100</td><td>0.2546</td><td>0.0509</td></tr>
+              <tr><td>29</td><td>0.0113</td><td>0.2859</td><td>0.0642</td></tr>
+              <tr><td>28</td><td>0.0126</td><td>0.3211</td><td>0.0810</td></tr>
+              <tr><td>27</td><td>0.0142</td><td>0.3606</td><td>0.1021</td></tr>
+              <tr><td>26</td><td>0.0159</td><td>0.4049</td><td>0.1288</td></tr>
+              <tr><td>25</td><td>0.0179</td><td>0.4547</td><td>0.1624</td></tr>
+              <tr><td>24</td><td>0.0201</td><td>0.5106</td><td>0.2047</td></tr>
+              <tr><td>23</td><td>0.0226</td><td>0.5733</td><td>0.2582</td></tr>
+              <tr><td>22</td><td>0.0253</td><td>0.6438</td><td>0.3255</td></tr>
+              <tr><td>21</td><td>0.0285</td><td>0.7229</td><td>0.4105</td></tr>
+              <tr><td>20</td><td>0.0320</td><td>0.8118</td><td>0.5176</td></tr>
+              <tr><td>19</td><td>0.0359</td><td>0.9116</td><td>0.6527</td></tr>
+              <tr><td>18</td><td>0.0403</td><td>1.0237</td><td>0.8231</td></tr>
+              <tr><td>17</td><td>0.0453</td><td>1.1495</td><td>1.0379</td></tr>
+              <tr><td>16</td><td>0.0508</td><td>1.2908</td><td>1.3087</td></tr>
+              <tr><td>15</td><td>0.0571</td><td>1.4495</td><td>1.6503</td></tr>
+              <tr><td>14</td><td>0.0641</td><td>1.6277</td><td>2.0810</td></tr>
+              <tr><td>13</td><td>0.0720</td><td>1.8278</td><td>2.6240</td></tr>
+              <tr><td>12</td><td>0.0808</td><td>2.0525</td><td>3.3089</td></tr>
+              <tr><td>11</td><td>0.0907</td><td>2.3048</td><td>4.1724</td></tr>
+              <tr><td>10</td><td>0.1019</td><td>2.5882</td><td>5.2613</td></tr>
+              <tr><td>9</td><td>0.1144</td><td>2.9064</td><td>6.6344</td></tr>
+              <tr><td>8</td><td>0.1285</td><td>3.2636</td><td>8.3658</td></tr>
+              <tr><td>7</td><td>0.1443</td><td>3.6649</td><td>10.5490</td></tr>
+              <tr><td>6</td><td>0.1620</td><td>4.1154</td><td>13.3021</td></tr>
+              <tr><td>5</td><td>0.1819</td><td>4.6213</td><td>16.7736</td></tr>
+              <tr><td>4</td><td>0.2043</td><td>5.1894</td><td>21.1512</td></tr>
+              <tr><td>3</td><td>0.2294</td><td>5.8273</td><td>26.6711</td></tr>
+              <tr><td>2</td><td>0.2576</td><td>6.5437</td><td>33.6317</td></tr>
+              <tr><td>1</td><td>0.2893</td><td>7.3481</td><td>42.4087</td></tr>
+              <tr><td>0 (1/0)</td><td>0.3249</td><td>8.2515</td><td>53.4764</td></tr>
+              <tr><td>00 (2/0)</td><td>0.365</td><td>9.27</td><td>67.4</td></tr>
+              <tr><td>000 (3/0)</td><td>0.41</td><td>10.4</td><td>85</td></tr>
+              <tr><td>0000 (4/0)</td><td>0.46</td><td>11.7</td><td>107</td></tr>
+              <tr><td>250MCM</td><td>0.5</td><td>12.70</td><td>126.7</td></tr>
+              <tr><td>300MCM</td><td>0.548</td><td>13.91</td><td>152.0</td></tr>
+              <tr><td>350MCM</td><td>0.592</td><td>15.03</td><td>177.3</td></tr>
+              <tr><td>400MCM</td><td>0.632</td><td>16.06</td><td>202.7</td></tr>
+              <tr><td>450MCM</td><td>0.671</td><td>17.04</td><td>228.0</td></tr>
+              <tr><td>500MCM</td><td>0.707</td><td>17.96</td><td>253.4</td></tr>
+              <tr><td>550MCM</td><td>0.742</td><td>18.84</td><td>278.7</td></tr>
+              <tr><td>600MCM</td><td>0.775</td><td>19.67</td><td>304.0</td></tr>
+              <tr><td>650MCM</td><td>0.806</td><td>20.48</td><td>329.4</td></tr>
+              <tr><td>700MCM</td><td>0.837</td><td>21.25</td><td>354.7</td></tr>
+              <tr><td>750MCM</td><td>0.866</td><td>22.00</td><td>380.0</td></tr>
+              <tr><td>800MCM</td><td>0.894</td><td>22.72</td><td>405.4</td></tr>
+              <tr><td>900MCM</td><td>0.949</td><td>24.10</td><td>456.0</td></tr>
+              <tr><td>1000MCM</td><td>1.000</td><td>25.40</td><td>506.7</td></tr>
+              <tr><td>1100MCM</td><td>1.049</td><td>26.64</td><td>557.4</td></tr>
+              <tr><td>1200MCM</td><td>1.095</td><td>27.82</td><td>608.1</td></tr>
+              <tr><td>1250MCM</td><td>1.118</td><td>28.40</td><td>633.4</td></tr>
+              <tr><td>1300MCM</td><td>1.140</td><td>28.96</td><td>658.7</td></tr>
+              <tr><td>1400MCM</td><td>1.183</td><td>30.05</td><td>709.4</td></tr>
+              <tr><td>1500MCM</td><td>1.225</td><td>31.11</td><td>760.1</td></tr>
+              <tr><td>1600MCM</td><td>1.265</td><td>32.13</td><td>810.7</td></tr>
+              <tr><td>1700MCM</td><td>1.304</td><td>33.12</td><td>861.4</td></tr>
+              <tr><td>1800MCM</td><td>1.342</td><td>34.08</td><td>912.1</td></tr>
+              <tr><td>1900MCM</td><td>1.378</td><td>35.01</td><td>962.7</td></tr>
+              <tr><td>2000MCM</td><td>1.414</td><td>35.92</td><td>1013.4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="ts-no-match">No sizes match your search</div>
+      <details class="ts-scans" style="margin-top:28px;">
+        <summary>View original scanned pages (AWG to Square mm Conversion)</summary>
+        <div style="max-width:900px;">
+          <img src="assets/tech-support/awg-sqmm-1.jpg" alt="AWG to Square mm Conversion — original page 1" loading="lazy" />
+          <img src="assets/tech-support/awg-sqmm-2.jpg" alt="AWG to Square mm Conversion — original page 2" loading="lazy" />
+          <img src="assets/tech-support/awg-sqmm-3.jpg" alt="AWG to Square mm Conversion — original page 3" loading="lazy" />
+          <img src="assets/tech-support/awg-sqmm-4.jpg" alt="AWG to Square mm Conversion — original page 4" loading="lazy" />
+        </div>
+      </details>
       </div>
     </div>
   </section>
@@ -170,6 +300,38 @@
       <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
     </div>
   </footer>
+    <script>
+  function tsFilter(tableId, q, countEl) {
+    const table = document.getElementById(tableId);
+    const rows = table.querySelectorAll('tbody tr:not(.ts-section-row)');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(r => {
+      const show = !term || r.textContent.toLowerCase().includes(term);
+      r.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    // hide section header rows that have no visible rows beneath them
+    table.querySelectorAll('tbody tr.ts-section-row').forEach(sec => {
+      let el = sec.nextElementSibling, any = false;
+      while (el && !el.classList.contains('ts-section-row')) {
+        if (el.style.display !== 'none') { any = true; break; }
+        el = el.nextElementSibling;
+      }
+      sec.style.display = (!term || any) ? '' : 'none';
+    });
+    if (countEl) countEl.textContent = term ? visible + ' of ' + rows.length + ' rows' : rows.length + ' rows';
+    const nm = table.parentElement.nextElementSibling;
+    if (nm && nm.classList.contains('ts-no-match')) nm.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.ts-table').forEach(t => {
+      const wrap = t.closest('.ts-table-wrap');
+      const count = wrap && wrap.previousElementSibling ? wrap.previousElementSibling.querySelector('.spec-search-count') : null;
+      if (count) count.textContent = t.querySelectorAll('tbody tr:not(.ts-section-row)').length + ' rows';
+    });
+  });
+  </script>
   <script src="animations.js"></script>
   <script src="nav-mobile.js"></script>
 </body>
