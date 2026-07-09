@@ -17,7 +17,7 @@
           (defined in individual page <style> blocks to keep them co-located with their HTML,
           but global components like .reveal are here)
       11. Back-to-top button — .back-to-top, .btt-visible
-      12. Mobile sticky CTA bar — .mobile-sticky-cta (fixed bottom bar on small screens)
+      12. (removed) Mobile sticky CTA bar — dropped at client request July 2026
       13. Footer — .footer, .footer-grid, .footer-brand, .footer-col, .footer-meta
       14. Mobile nav overrides — html.nav-open overflow:hidden to lock scroll
 
@@ -86,7 +86,11 @@ html, body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* hidden = fallback; clip = forbids horizontal panning entirely on mobile,
+     which 'hidden' alone does not guarantee (the off-canvas mobile menu sits
+     at translateX(100%) and some engines let the viewport pan to it) */
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1013,25 +1017,6 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 10px; }
 }
 
-/* ─────────── Floating contact strip (mobile) ─────────── */
-.mobile-sticky-cta {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  z-index: 88;
-  background: #FFFFFF;
-  border-top: 1px solid var(--border);
-  padding: 12px 18px;
-  box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
-  gap: 10px;
-}
-@media (max-width: 640px) {
-  .mobile-sticky-cta { display: flex; }
-  .mobile-sticky-cta .btn { flex: 1; justify-content: center; font-size: 13.5px; padding: 11px 16px; }
-  /* Push footer content above the sticky bar */
-  body { padding-bottom: 68px; }
-}
-
 /* ─────────── Improved image/media containers ─────────── */
 .img-cover { width: 100%; height: 100%; object-fit: cover; }
 .img-contain { width: 100%; height: 100%; object-fit: contain; }
@@ -1100,7 +1085,6 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
 @media (max-width: 768px) {
   .btn          { min-height: 44px; }
   .nav-cta      { min-height: 44px; }
-  .mobile-sticky-cta .btn { min-height: 46px; border-radius: 10px; }
 }
 
 /* ─────────── Spec table horizontal scroll ─────────── */

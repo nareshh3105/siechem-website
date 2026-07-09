@@ -19,7 +19,24 @@ const SEARCH_BOX = (id, placeholder) => `      <div class="spec-search-wrap" sty
         <span class="spec-search-count"></span>
       </div>`;
 
-const TABLE_CSS = `    .ts-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+const TABLE_CSS = `    .spec-search-wrap {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-radius: 8px; padding: 9px 14px;
+      transition: border-color 0.15s;
+    }
+    .spec-search-wrap:focus-within { border-color: var(--accent); }
+    .spec-search-wrap svg { flex-shrink: 0; color: var(--text-faint); }
+    .spec-search-input {
+      flex: 1; min-width: 0; border: none; background: transparent;
+      font-size: 13px; font-family: var(--mono); color: var(--text); outline: none;
+    }
+    .spec-search-input::placeholder { color: var(--text-faint); }
+    .spec-search-count {
+      font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .ts-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
     .ts-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
     .ts-table thead th {
       position: sticky; top: 0;
