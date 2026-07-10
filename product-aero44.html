@@ -971,16 +971,9 @@
 
   /* ── Filter State ──────────────────────────────── */
   const filters = { voltage: 'all', shield: 'all', cores: 'all', ptype: 'all' };
-  let hasInteracted = false;
 
   /* ── Apply filters & re-render ─────────────────── */
   function applyFilters() {
-    if (!hasInteracted) {
-      document.getElementById('prodGrid').innerHTML =
-        '<div style="grid-column:1/-1;padding:48px;text-align:center;color:var(--text-muted);font-size:15px;">Select a filter above to view matching cable types.</div>';
-      document.getElementById('resultCount').textContent = '';
-      return;
-    }
     const visible = TYPES.filter(t => {
       if (filters.voltage !== 'all' && t.voltage !== +filters.voltage) return false;
       if (filters.shield  !== 'all' && t.shielded !== (filters.shield === '1')) return false;
@@ -997,7 +990,6 @@
     btn.addEventListener('click', () => {
       const f = btn.dataset.f, v = btn.dataset.v;
       filters[f] = v;
-      hasInteracted = true;
       btn.closest('.filter-pills').querySelectorAll('.fpill').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyFilters();
