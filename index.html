@@ -1,14 +1,14 @@
 <!--
-  FILE: index.html
+  FILE: /index.html
 
   PURPOSE:
     Entry-point redirect for the site. When Vercel (or any static host) serves
-    the root URL (e.g. siechem.vercel.app/), it looks for index.html first.
-    This file immediately bounces the visitor to siechem-redesign.html, which
+    the root URL (e.g. siechem.vercel.app/), it looks for /index.html first.
+    This file immediately bounces the visitor to /siechem-redesign.html, which
     is the actual homepage.
 
-  WHY A REDIRECT INSTEAD OF JUST NAMING THE HOMEPAGE index.html:
-    During development the site was iteratively built as siechem-redesign.html
+  WHY A REDIRECT INSTEAD OF JUST NAMING THE HOMEPAGE /index.html:
+    During development the site was iteratively built as /siechem-redesign.html
     (alongside earlier prototypes like siechem-redesign-2d.html). Renaming the
     file would break all internal anchor links across 20+ pages. Instead, this
     thin redirect keeps the root URL working without touching any other file.
@@ -24,13 +24,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=siechem-redesign.html">
+  <meta http-equiv="refresh" content="0; url=/siechem-redesign.html">
   <title>Redirecting to Siechem Redesign...</title>
   <script>
-    window.location.replace("siechem-redesign.html");
+    window.location.replace("/siechem-redesign.html");
   </script>
 </head>
 <body>
-  <p>If you are not redirected automatically, follow this <a href="siechem-redesign.html">link to Siechem Redesign</a>.</p>
+  <p>If you are not redirected automatically, follow this <a href="/siechem-redesign.html">link to Siechem Redesign</a>.</p>
 </body>
 </html>

@@ -5,26 +5,405 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/video/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
       ]
     },
     {
       "source": "/catalog/data/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=3600"
+        }
       ]
     },
     {
       "source": "/(theme\\.css|animations\\.js|nav-mobile\\.js)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=3600"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/company/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/admin-family.html",
+      "destination": "/admin/admin-family.html",
+      "permanent": true
+    },
+    {
+      "source": "/admin-login.html",
+      "destination": "/admin/admin-login.html",
+      "permanent": true
+    },
+    {
+      "source": "/admin.html",
+      "destination": "/admin/admin.html",
+      "permanent": true
+    },
+    {
+      "source": "/careers.html",
+      "destination": "/company/careers.html",
+      "permanent": true
+    },
+    {
+      "source": "/catalogues.html",
+      "destination": "/company/catalogues.html",
+      "permanent": true
+    },
+    {
+      "source": "/certifications.html",
+      "destination": "/company/certifications.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/company/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/csr.html",
+      "destination": "/company/csr.html",
+      "permanent": true
+    },
+    {
+      "source": "/customers.html",
+      "destination": "/company/customers.html",
+      "permanent": true
+    },
+    {
+      "source": "/ethical-values.html",
+      "destination": "/company/ethical-values.html",
+      "permanent": true
+    },
+    {
+      "source": "/events.html",
+      "destination": "/company/events.html",
+      "permanent": true
+    },
+    {
+      "source": "/key-persons.html",
+      "destination": "/company/key-persons.html",
+      "permanent": true
+    },
+    {
+      "source": "/manufacturing-facility.html",
+      "destination": "/company/manufacturing-facility.html",
+      "permanent": true
+    },
+    {
+      "source": "/mds-message.html",
+      "destination": "/company/mds-message.html",
+      "permanent": true
+    },
+    {
+      "source": "/mission-vision.html",
+      "destination": "/company/mission-vision.html",
+      "permanent": true
+    },
+    {
+      "source": "/policies.html",
+      "destination": "/company/policies.html",
+      "permanent": true
+    },
+    {
+      "source": "/ppt.html",
+      "destination": "/company/ppt.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/company/privacy-policy.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-aero44-spec.html",
+      "destination": "/products/product-aero44-spec.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-aero44.html",
+      "destination": "/products/product-aero44.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-aero55-spec.html",
+      "destination": "/products/product-aero55-spec.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-aero55.html",
+      "destination": "/products/product-aero55.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-automotive-saej1128.html",
+      "destination": "/products/product-automotive-saej1128.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-automotive.html",
+      "destination": "/products/product-automotive.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-detail.html",
+      "destination": "/products/product-detail.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-family.html",
+      "destination": "/products/product-family.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-marine-spec.html",
+      "destination": "/products/product-marine-spec.html",
+      "permanent": true
+    },
+    {
+      "source": "/product-variant.html",
+      "destination": "/products/product-variant.html",
+      "permanent": true
+    },
+    {
+      "source": "/products.html",
+      "destination": "/products/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-5s.html",
+      "destination": "/resources/res-5s.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-awards.html",
+      "destination": "/resources/res-awards.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-capabilities.html",
+      "destination": "/resources/res-capabilities.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-covid19.html",
+      "destination": "/resources/res-covid19.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-cricket-teams.html",
+      "destination": "/resources/res-cricket-teams.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-customer-care.html",
+      "destination": "/resources/res-customer-care.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-customer-comments.html",
+      "destination": "/resources/res-customer-comments.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-green-technology.html",
+      "destination": "/resources/res-green-technology.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-metal-trend.html",
+      "destination": "/resources/res-metal-trend.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-part-number-index.html",
+      "destination": "/resources/res-part-number-index.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-reach.html",
+      "destination": "/resources/res-reach.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-rohs.html",
+      "destination": "/resources/res-rohs.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-siechem-erp.html",
+      "destination": "/resources/res-siechem-erp.html",
+      "permanent": true
+    },
+    {
+      "source": "/res-un-global-compact.html",
+      "destination": "/resources/res-un-global-compact.html",
+      "permanent": true
+    },
+    {
+      "source": "/research-development.html",
+      "destination": "/company/research-development.html",
+      "permanent": true
+    },
+    {
+      "source": "/tech-support.html",
+      "destination": "/tech-support/tech-support.html",
+      "permanent": true
+    },
+    {
+      "source": "/testing-facilities.html",
+      "destination": "/company/testing-facilities.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-awg-sqmm.html",
+      "destination": "/tech-support/ts-awg-sqmm.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-braid-shield-calc.html",
+      "destination": "/tech-support/ts-braid-shield-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-cable-handling.html",
+      "destination": "/tech-support/ts-cable-handling.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-cable-installation.html",
+      "destination": "/tech-support/ts-cable-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-cable-life-calc.html",
+      "destination": "/tech-support/ts-cable-life-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-cable-size-auto.html",
+      "destination": "/tech-support/ts-cable-size-auto.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-cable-size-solar.html",
+      "destination": "/tech-support/ts-cable-size-solar.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-capacitance-calc.html",
+      "destination": "/tech-support/ts-capacitance-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-color-code.html",
+      "destination": "/tech-support/ts-color-code.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-conductor-resistance.html",
+      "destination": "/tech-support/ts-conductor-resistance.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-current-carrying.html",
+      "destination": "/tech-support/ts-current-carrying.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-derating-factors.html",
+      "destination": "/tech-support/ts-derating-factors.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-electrical-losses.html",
+      "destination": "/tech-support/ts-electrical-losses.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-impedance-calc.html",
+      "destination": "/tech-support/ts-impedance-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-inductance-calc.html",
+      "destination": "/tech-support/ts-inductance-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-insulation-resistance.html",
+      "destination": "/tech-support/ts-insulation-resistance.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-nfpa.html",
+      "destination": "/tech-support/ts-nfpa.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-packaging.html",
+      "destination": "/tech-support/ts-packaging.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-ptfe-comparison.html",
+      "destination": "/tech-support/ts-ptfe-comparison.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-publication.html",
+      "destination": "/tech-support/ts-publication.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-reactance-calc.html",
+      "destination": "/tech-support/ts-reactance-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-short-circuit-calc.html",
+      "destination": "/tech-support/ts-short-circuit-calc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-toxicity-index.html",
+      "destination": "/tech-support/ts-toxicity-index.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-voltage-drop.html",
+      "destination": "/tech-support/ts-voltage-drop.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-wp-ageing.html",
+      "destination": "/tech-support/ts-wp-ageing.html",
+      "permanent": true
+    },
+    {
+      "source": "/ts-wp-ebeam.html",
+      "destination": "/tech-support/ts-wp-ebeam.html",
+      "permanent": true
     }
   ]
 }

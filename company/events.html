@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events — Siechem</title>
+  <meta name="description" content="Exhibitions, trade shows, and corporate events where you can meet the Siechem team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <style>
+    .stub-hero {
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0 60px;
+    }
+    .stub-coming {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px;
+      gap: 16px;
+    }
+    .stub-coming-icon {
+      width: 64px; height: 64px;
+      background: var(--accent-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+    .stub-coming h2 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .stub-coming p { font-size: 15px; color: var(--text-muted); max-width: 480px; line-height: 1.65; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a>
+      <div class="nav-links">
+        <a href="/siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="/company/about.html" class="nav-link nav-company-trigger active">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="/company/about.html" class="nav-company-item">About Us</a>
+            <a href="/company/mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="/company/key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="/company/manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="/company/testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="/company/research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="/company/ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="/company/mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="/company/ppt.html" class="nav-company-item">PPT</a>
+            <a href="/company/policies.html" class="nav-company-item">Policies</a>
+            <a href="/company/csr.html" class="nav-company-item">CSR</a>
+            <a href="/company/careers.html" class="nav-company-item">Careers</a>
+            <a href="/company/events.html" class="nav-company-item">Events</a>
+            <a href="/company/privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="/products/products.html" class="nav-link">Products</a>
+        <a href="/company/catalogues.html" class="nav-link">Catalogues</a>
+        <a href="/company/certifications.html" class="nav-link">Certifications</a>
+        <a href="/company/customers.html" class="nav-link">Customers</a>
+        <a href="/tech-support/tech-support.html" class="nav-link">Tech Support</a>
+        <a href="/tech-support/tech-support.html" class="nav-link">Resources</a>
+        <a href="/company/contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="/company/contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="/company/about.html">About Us</a>
+        <a href="/company/mds-message.html">MD's Message</a>
+        <a href="/company/key-persons.html">Key Persons</a>
+        <a href="/company/manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="/company/testing-facilities.html">Testing Facilities</a>
+        <a href="/company/research-development.html">Research &amp; Development</a>
+        <a href="/company/ethical-values.html">Ethical Values</a>
+        <a href="/company/mission-vision.html">Mission &amp; Vision</a>
+        <a href="/company/ppt.html">PPT</a>
+        <a href="/company/policies.html">Policies</a>
+        <a href="/company/csr.html">CSR</a>
+        <a href="/company/careers.html">Careers</a>
+        <a href="/company/events.html">Events</a>
+        <a href="/company/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="/products/products.html">Products</a>
+      <a href="/company/catalogues.html">Catalogues</a>
+      <a href="/company/certifications.html">Certifications</a>
+      <a href="/company/customers.html">Customers</a>
+      <a href="/tech-support/tech-support.html">Tech Support</a>
+      <a href="/tech-support/tech-support.html">Resources</a>
+      <a href="/company/contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="stub-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><a href="/company/about.html">Company</a><span class="breadcrumb-sep"></span><span>Events</span></div>
+      <div style="max-width: 680px; margin-top: 24px;">
+        <div class="eyebrow">News & Events</div>
+        <h1 class="page-title" style="font-size: clamp(30px, 4.5vw, 52px);">Events</h1>
+        <p class="page-lede">Exhibitions, trade shows, and corporate events where you can meet the Siechem team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-innotrans-2018.jpg" alt="InnoTrans, Berlin" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">September 2018</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">InnoTrans, Berlin</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">International trade fair for transport technology</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-irce-2018.jpg" alt="International Rail Coach Expo, ICF Chennai" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">May 2018</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">International Rail Coach Expo, ICF Chennai</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">Rolling stock and rail coach industry expo</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-jito-2018.jpg" alt="JITO Connect, B &amp; C Mills (Binny), Chennai" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">February 2018</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">JITO Connect, B &amp; C Mills (Binny), Chennai</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">Business networking summit</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-elecxpo-2016.jpg" alt="ELECXPO, Chennai" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">2016</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">ELECXPO, Chennai</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">Electrical &amp; electronics industry exhibition</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-innotrans-2016.jpg" alt="InnoTrans, Berlin" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">2016</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">InnoTrans, Berlin</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">International trade fair for transport technology</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-solar.jpg" alt="Misterlight Solar" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">—</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">Misterlight Solar</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">Solar energy exhibition participation</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-innotrans-2014.jpg" alt="InnoTrans, Berlin" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">2014</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">InnoTrans, Berlin</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">International trade fair for transport technology</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;">
+          <img src="/assets/company/event-innotrans-2012.jpg" alt="InnoTrans, Berlin" loading="lazy" style="width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:14px;" />
+          <div style="font-family:var(--mono);font-size:11px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">2012</div>
+          <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">InnoTrans, Berlin</div>
+          <div style="font-size:13px;color:var(--text-muted);line-height:1.55;">International trade fair for transport technology</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a><p>India's leading specialty wires &amp; cables manufacturer since 2002.</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="/products/products.html">By Segment</a></li><li><a href="/products/products.html">By Standard</a></li><li><a href="/products/product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="/tech-support/tech-support.html">AWG Converter</a></li><li><a href="/tech-support/tech-support.html">Voltage Drop</a></li><li><a href="/tech-support/tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="/company/about.html">About</a></li><li><a href="/company/certifications.html">Certifications</a></li><li><a href="/company/customers.html">Customers</a></li><li><a href="/company/contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+  <script src="/animations.js"></script>
+  <script src="/nav-mobile.js"></script>
+</body>
+</html>

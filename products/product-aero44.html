@@ -1,0 +1,1249 @@
+﻿<!--
+  FILE: /products/product-aero44.html
+
+  PURPOSE:
+    Product landing/overview page for Siechem's Aero 44 aerospace wire range.
+    "Aero 44" refers to Siechem's internal designation for MIL-DTL-16878 / AS22759
+    aerospace hook-up wires. This is the entry/marketing page — it explains what the
+    product is, what applications it serves, and funnels engineers to either:
+      a) /products/product-aero44-spec.html — for the full technical spec sheet and size tables
+      b) /company/contact.html             — to request a quote
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb       — "Home → Products → Aerospace → Aero 44"
+    2. Product hero           — name, tagline, key standards (MIL-DTL-16878, AS22759),
+                                 hero image, key badges (Temp rating, Insulation type)
+    3. Application overview   — where Aero 44 is used: avionics, engine bay, airframe
+                                 wiring, flight control systems
+    4. Key differentiators    — low smoke, halogen-free, PTFE or ETFE insulation,
+                                 flame-retardant per FAR 25.869
+    5. At-a-glance specs      — condensed spec table: conductor material, insulation,
+                                 voltage rating, temp range, available sizes
+    6. Related standards      — MIL-W-22759, AS22759, NAS1756 cross-references
+    7. CTA pair               — "Full Spec Sheet" → /products/product-aero44-spec.html
+                                 "Request Quote"  → /company/contact.html
+
+  WHY A SEPARATE MARKETING PAGE VS JUST THE SPEC SHEET:
+    Engineers already know what spec they need (MIL-DTL-16878) and go directly to
+    /products/product-aero44-spec.html. But procurement managers, new engineers, and business
+    development contacts need context first — applications, differentiators, why
+    Siechem's Aero 44 over a competitor's part. This page serves that audience.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aero 44 Wires & Cables — Aerospace & Defence — Siechem</title>
+  <meta name="description" content="Complete Siechem AERO 44 catalogue — 9 product families, 600V/1000V/2500V, single & twin core, shielded & unshielded. AS9100, MIL-W-81044, DGAQA qualified.">
+  <meta name="keywords" content="siechem aero 44, aerospace cables, MIL-W-81044, aviation wires, XLPO insulation, airframe wire">
+  <meta property="og:title" content="Aero 44 Wires – Full Catalogue | Siechem">
+  <meta property="og:description" content="Complete AERO 44 catalogue — 9 families, 600V–2500V, shielded & unshielded. Request quote online.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/products/product-aero44.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/products/product-aero44.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <style>
+    /* ── Filter Strip ─────────────────────────── */
+    .filter-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 32px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      align-items: flex-start;
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 8px; }
+    .filter-label {
+      font-family: var(--mono); font-size: 10.5px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint);
+    }
+    .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+    .fpill {
+      padding: 7px 14px; border-radius: 6px;
+      border: 1.5px solid var(--border); background: var(--bg-soft);
+      font-size: 12.5px; font-weight: 600; color: var(--text-muted);
+      cursor: pointer; transition: all 0.15s; white-space: nowrap;
+    }
+    .fpill:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+    .fpill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .result-count {
+      font-family: var(--mono); font-size: 12px; color: var(--text-faint);
+      padding: 8px 0; letter-spacing: 0.04em;
+    }
+
+    /* ── Product Cards ───────────────────────── */
+    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    @media (max-width: 980px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .prod-grid { grid-template-columns: 1fr; } }
+
+    .prod-card {
+      display: flex; flex-direction: column; gap: 0;
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg); overflow: hidden;
+      transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
+      cursor: pointer;
+    }
+    .prod-card:hover {
+      border-color: var(--accent-border);
+      box-shadow: 0 8px 32px rgba(184,115,51,0.10);
+      transform: translateY(-2px);
+    }
+    .prod-card-head {
+      padding: 18px 20px 14px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--bg-soft) 0%, rgba(184,115,51,0.025) 100%);
+    }
+    .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+    .badge {
+      padding: 3px 9px; border-radius: 4px; font-family: var(--mono);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .badge-voltage { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .badge-shielded { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
+    .badge-unshielded { background: var(--bg-soft); color: var(--text-faint); border: 1px solid var(--border); }
+    .badge-airframe { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
+    .badge-general { background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-border); }
+    .badge-twin { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+    .prod-card-name { font-size: 14.5px; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .prod-card-body { padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .prod-card-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+    .prod-spec { display: flex; flex-direction: column; gap: 1px; }
+    .prod-spec-label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+    .prod-spec-val { font-size: 13px; font-weight: 600; color: var(--text); }
+    .prod-card-cat { font-family: var(--mono); font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em; }
+    .prod-card-footer {
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .prod-card-awg { font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); }
+    .prod-card-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12.5px; font-weight: 700; color: var(--accent);
+      background: var(--accent-soft); border: 1px solid var(--accent-border);
+      border-radius: 6px; padding: 6px 12px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .prod-card-btn:hover { background: var(--accent); color: #fff; }
+
+    /* ── Spec Sheet Modal ────────────────────── */
+    .spec-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.55); backdrop-filter: blur(4px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 24px 16px; overflow-y: auto;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+    .spec-overlay.open { opacity: 1; visibility: visible; }
+    .spec-sheet {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      width: 100%; max-width: 920px;
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+      transform: translateY(20px);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      overflow: hidden;
+    }
+    .spec-overlay.open .spec-sheet { transform: translateY(0); }
+    .spec-sheet-header {
+      padding: 22px 28px 18px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(135deg, #FDFCFC 0%, #F7F7F8 100%);
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    }
+    .spec-sheet-cat { font-family: var(--mono); font-size: 11px; color: var(--accent-2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+    .spec-sheet-title { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; color: var(--text); }
+    .spec-close {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--text-muted); cursor: pointer;
+      flex-shrink: 0; transition: background 0.15s, color 0.15s;
+    }
+    .spec-close:hover { background: var(--accent-soft); color: var(--accent); }
+    .spec-sheet-body { padding: 24px 28px; overflow-y: auto; max-height: 70vh; }
+    .spec-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+    @media (max-width: 640px) { .spec-two-col { grid-template-columns: 1fr; } }
+    .spec-block h4 { font-size: 12px; font-weight: 700; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 10px; }
+    .spec-kv { display: flex; flex-direction: column; gap: 0; }
+    .spec-kv-row { display: flex; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+    .spec-kv-row:last-child { border-bottom: none; }
+    .spec-kv-row .k { color: var(--text-faint); min-width: 140px; font-family: var(--mono); font-size: 12px; flex-shrink: 0; }
+    .spec-kv-row .v { font-weight: 500; color: var(--text); }
+    .standards-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+    .std-chip {
+      padding: 4px 10px; border-radius: 5px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      font-family: var(--mono); font-size: 11px; font-weight: 600;
+      color: var(--text-muted); white-space: nowrap;
+    }
+    /* ── Spec Table Search ───────────────────────── */
+    .spec-search-wrap {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-radius: 8px; padding: 9px 14px; margin-bottom: 10px;
+      transition: border-color 0.15s;
+    }
+    .spec-search-wrap:focus-within { border-color: var(--accent); }
+    .spec-search-wrap svg { flex-shrink: 0; color: var(--text-faint); }
+    .spec-search-input {
+      flex: 1; border: none; background: transparent;
+      font-size: 13px; font-family: var(--mono); color: var(--text);
+      outline: none; min-width: 0;
+    }
+    .spec-search-input::placeholder { color: var(--text-faint); }
+    .spec-search-count {
+      font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .spec-no-match {
+      text-align: center; padding: 20px; font-size: 13px; color: var(--text-faint);
+      font-family: var(--mono); display: none;
+    }
+    .part-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
+    .part-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .part-table thead tr { background: var(--bg-soft); }
+    .part-table th {
+      padding: 10px 12px; text-align: left; font-family: var(--mono);
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-faint);
+      white-space: nowrap; border-bottom: 1px solid var(--border);
+    }
+    .part-table td { padding: 11px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .part-table tbody tr:last-child td { border-bottom: none; }
+    .part-table tbody tr:hover { background: rgba(184,115,51,0.03); }
+    .part-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 600; }
+    .part-table .quote-row-btn {
+      padding: 5px 12px; border-radius: 5px;
+      background: var(--accent-soft); border: 1px solid var(--accent-border);
+      color: var(--accent-2); font-size: 11.5px; font-weight: 700;
+      cursor: pointer; transition: background 0.15s, color 0.15s;
+      font-family: inherit;
+    }
+    .part-table .quote-row-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .color-note {
+      padding: 12px 16px; background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 8px; font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
+    }
+    .color-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .color-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 3px 8px; border-radius: 4px; font-size: 11px;
+      font-family: var(--mono); font-weight: 600; color: var(--text-muted);
+      border: 1px solid var(--border); background: #fff;
+    }
+    .color-chip-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); flex-shrink: 0; }
+
+    /* ── Quote Modal ─────────────────────────── */
+    .quote-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center; padding: 16px;
+      opacity: 0; visibility: hidden; transition: opacity 0.25s, visibility 0.25s;
+    }
+    .quote-overlay.open { opacity: 1; visibility: visible; }
+    .quote-box {
+      background: var(--bg-card); border-radius: var(--radius-lg);
+      width: 100%; max-width: 560px; max-height: 92vh; overflow-y: auto;
+      padding: 32px; border: 1px solid var(--border);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.22);
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .quote-overlay.open .quote-box { transform: scale(1); }
+    .quote-box h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .quote-box .sub { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
+    .field input, .field textarea, .field select {
+      background: #fff; border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 11px 13px; color: var(--text); font-family: inherit;
+      font-size: 14px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .field input:focus, .field textarea:focus, .field select:focus {
+      border-color: var(--accent); box-shadow: 0 0 0 3px rgba(184,115,51,0.10);
+    }
+    .field textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+    .quote-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    .q-success, .q-error { display: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; }
+    .q-success { background: #F0FDF4; border: 1px solid #BBF7D0; color: #15803D; }
+    .q-error { background: #FFF1F2; border: 1px solid #FFB3B8; color: #BE123C; }
+
+    /* ── Mobile tweaks ───────────────────────── */
+    @media (max-width: 640px) {
+      .filter-strip { gap: 14px 20px; padding: 16px; }
+      .spec-sheet-body { padding: 18px; }
+      .spec-sheet-header { padding: 18px; }
+      .quote-box { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/siechem-redesign.html" class="nav-logo">
+        <img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+      </a>
+      <div class="nav-links">
+        <a href="/siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="/company/about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="/company/about.html" class="nav-company-item">About Us</a>
+            <a href="/company/mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="/company/key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="/company/manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="/company/testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="/company/research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="/company/ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="/company/mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="/company/ppt.html" class="nav-company-item">PPT</a>
+            <a href="/company/policies.html" class="nav-company-item">Policies</a>
+            <a href="/company/csr.html" class="nav-company-item">CSR</a>
+            <a href="/company/careers.html" class="nav-company-item">Careers</a>
+            <a href="/company/events.html" class="nav-company-item">Events</a>
+            <a href="/company/privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="/products/products.html" class="nav-link active">Products</a>
+        <a href="/company/catalogues.html" class="nav-link">Catalogues</a>
+        <a href="/company/certifications.html" class="nav-link">Certifications</a>
+        <a href="/company/customers.html" class="nav-link">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="/tech-support/tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="/tech-support/ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="/tech-support/ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="/tech-support/ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="/tech-support/ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="/tech-support/ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="/tech-support/ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="/tech-support/ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="/tech-support/ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="/tech-support/ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="/tech-support/ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="/tech-support/ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="/tech-support/ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="/tech-support/ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="/tech-support/ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="/tech-support/ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="/tech-support/ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="/tech-support/ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="/tech-support/ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="/tech-support/ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="/tech-support/ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="/tech-support/ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="/tech-support/ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="/tech-support/ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="/tech-support/ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="/tech-support/ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="/tech-support/ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="/resources/res-5s.html" class="nav-company-item">5S</a>
+              <a href="/resources/res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="/resources/res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="/resources/res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="/resources/res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="/resources/res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="/resources/res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="/resources/res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="/resources/res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="/resources/res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="/resources/res-reach.html" class="nav-company-item">REACH</a>
+              <a href="/resources/res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="/resources/res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="/resources/res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="/company/contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="/company/contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="/company/about.html">About Us</a>
+        <a href="/company/mds-message.html">MD's Message</a>
+        <a href="/company/key-persons.html">Key Persons</a>
+        <a href="/company/manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="/company/testing-facilities.html">Testing Facilities</a>
+        <a href="/company/research-development.html">Research &amp; Development</a>
+        <a href="/company/ethical-values.html">Ethical Values</a>
+        <a href="/company/mission-vision.html">Mission &amp; Vision</a>
+        <a href="/company/ppt.html">PPT</a>
+        <a href="/company/policies.html">Policies</a>
+        <a href="/company/csr.html">CSR</a>
+        <a href="/company/careers.html">Careers</a>
+        <a href="/company/events.html">Events</a>
+        <a href="/company/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="/products/products.html">Products</a>
+      <a href="/company/catalogues.html">Catalogues</a>
+      <a href="/company/certifications.html">Certifications</a>
+      <a href="/company/customers.html">Customers</a>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-ts-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Tech Support <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-techsup-links" id="mob-ts-links">
+          <a href="/tech-support/ts-awg-sqmm.html">AWG to Square mm Conversion</a><a href="/tech-support/ts-braid-shield-calc.html">Braid Shield Calculation</a><a href="/tech-support/ts-cable-handling.html">Cable Handling System</a><a href="/tech-support/ts-cable-installation.html">Cable Installation Procedure</a><a href="/tech-support/ts-cable-life-calc.html">Cable Life Calculation</a><a href="/tech-support/ts-cable-size-auto.html">Cable Size Calculation for Automotive</a><a href="/tech-support/ts-cable-size-solar.html">Cable Size for Solar PV Plants</a><a href="/tech-support/ts-capacitance-calc.html">Capacitance Calculation</a><a href="/tech-support/ts-color-code.html">Color Code Chart</a><a href="/tech-support/ts-ptfe-comparison.html">Comparison: PTFE, FEP, PFA, ETFE</a><a href="/tech-support/ts-conductor-resistance.html">Conductor Resistance Calculation</a><a href="/tech-support/ts-current-carrying.html">Current Carrying Capacity</a><a href="/tech-support/ts-derating-factors.html">Derating Factors</a><a href="/tech-support/ts-electrical-losses.html">Electrical Losses Calculation</a><a href="/tech-support/ts-impedance-calc.html">Impedance Calculation</a><a href="/tech-support/ts-inductance-calc.html">Inductance Calculation</a><a href="/tech-support/ts-insulation-resistance.html">Insulation Resistance Calculation</a><a href="/tech-support/ts-nfpa.html">NFPA Electrical Safety Standard</a><a href="/tech-support/ts-packaging.html">Packaging of Wires and Cables</a><a href="/tech-support/ts-publication.html">Publication</a><a href="/tech-support/ts-reactance-calc.html">Reactance Calculation</a><a href="/tech-support/ts-short-circuit-calc.html">Short Circuit Temp Rating</a><a href="/tech-support/ts-toxicity-index.html">Toxicity Index Calculation</a><a href="/tech-support/ts-voltage-drop.html">Voltage Drop Calculation</a><a href="/tech-support/ts-wp-ebeam.html">White Paper: E-Beam Crosslinking</a><a href="/tech-support/ts-wp-ageing.html">White Paper: Accelerated Ageing</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-res-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Resources <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-resources-links" id="mob-res-links">
+          <a href="/resources/res-5s.html">5S</a><a href="/resources/res-awards.html">Awards / Recognition</a><a href="/resources/res-capabilities.html">Capabilities</a><a href="/resources/res-covid19.html">COVID-19</a><a href="/resources/res-cricket-teams.html">Cricket Teams</a><a href="/resources/res-customer-care.html">Customer Care</a><a href="/resources/res-customer-comments.html">Customer Comments</a><a href="/resources/res-green-technology.html">Green Technology</a><a href="/resources/res-metal-trend.html">Metal Trend</a><a href="/resources/res-part-number-index.html">Part Number Index</a><a href="/resources/res-reach.html">REACH</a><a href="/resources/res-rohs.html">RoHS</a><a href="/resources/res-siechem-erp.html">Siechem ERP</a><a href="/resources/res-un-global-compact.html">UN Global Compact</a>
+        </div>
+      </div>
+      <a href="/company/contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span>
+        <a href="/products/products.html">Products</a><span class="breadcrumb-sep"></span>
+        <span>Aero 44</span>
+      </div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Aerospace &amp; Defence</div>
+          <h1 class="page-title">Siechem <em>Aero 44</em><br/>Wires &amp; Cables</h1>
+          <p class="page-lede">9 product families — 600V, 1000V and 2500V — single core, twin core, shielded and airframe. Radiation cross-linked XLPO/PVDF dual-wall construction. AS9100 · MIL-W-81044 · DGAQA qualified.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;">
+            <span class="tag tag-accent">AS 9100 : D</span>
+            <span class="tag">MIL-W-81044</span>
+            <span class="tag">VG 95218</span>
+            <span class="tag">NES 714/715</span>
+            <span class="tag">Def-Stan 61-12</span>
+            <span class="tag">NEMA WC 27500</span>
+          </div>
+        </div>
+        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;justify-content:space-between;gap:16px;">
+            <div class="spec"><span class="spec-label">Voltage Range</span><span class="spec-value">600V – 2500V</span></div>
+            <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−65°C <span class="unit">to</span> +200°C</span></div>
+          </div>
+          <hr class="divider" style="margin:0;">
+          <div style="display:flex;justify-content:space-between;gap:16px;">
+            <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">30 – 8 AWG</span></div>
+            <div class="spec"><span class="spec-label">Product Families</span><span class="spec-value">9</span></div>
+          </div>
+          <hr class="divider" style="margin:0;">
+          <div style="display:flex;justify-content:space-between;gap:16px;">
+            <div class="spec"><span class="spec-label">Insulation</span><span class="spec-value">XLPO / PVDF</span></div>
+            <div class="spec"><span class="spec-label">Process</span><span class="spec-value">E-Beam XL</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aerospace Product Lines -->
+  <section class="section section-tight" style="padding-bottom:0;">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:20px;">
+        <p class="section-eyebrow">Aerospace Cables</p>
+        <h2 class="section-title">Choose a Product Line</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;">
+
+        <!-- AERO 44 -->
+        <a href="/products/product-aero44.html" style="text-decoration:none;">
+          <div style="background:var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+            <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.55);margin-bottom:14px;">XLPO · PVDF · E-BEAM XL</div>
+            <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 44</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;">MIL-W-81044 · DGAQA · AS9100</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">600V / 1000V / 2500V</span>
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">9 Families</span>
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">AWG 30–8</span>
+            </div>
+            <div style="margin-top:16px;font-size:13px;font-weight:700;color:#fff;">Browse variants →</div>
+          </div>
+        </a>
+
+        <!-- AERO 55 -->
+        <a href="/products/product-aero55.html" style="text-decoration:none;">
+          <div style="background:linear-gradient(135deg,#1a2030,#0f1422);border:2px solid var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(184,115,51,0.25)'" onmouseout="this.style.boxShadow='none'">
+            <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:14px;">EBXL ETFE · SAE AS22759</div>
+            <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 55</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;">DEF-STAN · Boeing BMS · Airbus ABS</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(184,115,51,.15);color:#fca5a5;border:1px solid rgba(184,115,51,.3);">600V</span>
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(184,115,51,.15);color:#fca5a5;border:1px solid rgba(184,115,51,.3);">15 Families</span>
+              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(184,115,51,.15);color:#fca5a5;border:1px solid rgba(184,115,51,.3);">AWG 30–8</span>
+            </div>
+            <div style="margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);">Browse variants →</div>
+          </div>
+        </a>
+
+      </div>
+      <p style="font-family:var(--mono);font-size:11px;color:var(--text-faint);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;">AERO 44 — All Variants</p>
+    </div>
+  </section>
+
+  <!-- Filter Strip -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="filter-strip reveal">
+        <div class="filter-group">
+          <span class="filter-label">Voltage</span>
+          <div class="filter-pills">
+            <button class="fpill active" data-f="voltage" data-v="all">All</button>
+            <button class="fpill" data-f="voltage" data-v="600">600V</button>
+            <button class="fpill" data-f="voltage" data-v="1000">1000V</button>
+            <button class="fpill" data-f="voltage" data-v="2500">2500V</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Shielding</span>
+          <div class="filter-pills">
+            <button class="fpill active" data-f="shield" data-v="all">All</button>
+            <button class="fpill" data-f="shield" data-v="0">Unshielded</button>
+            <button class="fpill" data-f="shield" data-v="1">Shielded</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Cores</span>
+          <div class="filter-pills">
+            <button class="fpill active" data-f="cores" data-v="all">All</button>
+            <button class="fpill" data-f="cores" data-v="1">Single Core</button>
+            <button class="fpill" data-f="cores" data-v="2">Twin Core</button>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+  </section>
+  <!-- Product Grid -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="prod-grid" id="prodGrid"></div>
+    </div>
+  </section>
+
+  <!-- Spec Sheet Modal -->
+  <div class="spec-overlay" id="specOverlay" onclick="handleSpecOverlayClick(event)">
+    <div class="spec-sheet" id="specSheet">
+      <div class="spec-sheet-header">
+        <div>
+          <div class="spec-sheet-cat" id="ssCat"></div>
+          <div class="spec-sheet-title" id="ssTitle"></div>
+        </div>
+        <button class="spec-close" onclick="closeSpec()">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="spec-sheet-body" id="ssBody"></div>
+    </div>
+  </div>
+
+  <!-- Quote Modal -->
+  <div class="quote-overlay" id="quoteOverlay" onclick="handleQuoteOverlayClick(event)">
+    <div class="quote-box" id="quoteBox">
+      <h3>Request a Quote</h3>
+      <p class="sub">Our sales team responds within 4 business hours.</p>
+      <div class="q-success" id="qSuccess">
+        <strong>Enquiry sent!</strong> Check your inbox for a confirmation with your quote reference.
+      </div>
+      <div class="q-error" id="qError"></div>
+      <form id="quoteForm" onsubmit="submitQuote(event)">
+        <input type="hidden" id="qPartNum" name="part_number">
+        <input type="hidden" id="qCableType" name="cable_type">
+        <input type="hidden" id="qCableSpec" name="cable_spec">
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Full Name *</label>
+            <input type="text" name="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label>Company</label>
+            <input type="text" name="company" placeholder="Company name">
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Email *</label>
+            <input type="email" name="email" required placeholder="you@company.com">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+91 …">
+          </div>
+        </div>
+        <div class="form-row" style="margin-bottom:14px;">
+          <div class="field">
+            <label>Part Number</label>
+            <input type="text" id="qPartDisplay" name="part_number_display" readonly style="background:var(--bg-soft);color:var(--text-muted);">
+          </div>
+          <div class="field">
+            <label>Quantity (metres)</label>
+            <input type="text" name="quantity" placeholder="e.g. 500 m">
+          </div>
+        </div>
+        <div class="field" style="margin-bottom:14px;">
+          <label>Required Delivery</label>
+          <input type="text" name="delivery" placeholder="e.g. 4 weeks, urgent, flexible">
+        </div>
+        <div class="field" style="margin-bottom:4px;">
+          <label>Additional Notes</label>
+          <textarea name="message" placeholder="Conductor coating preference, colour, special requirements…"></textarea>
+        </div>
+        <div class="quote-actions">
+          <button type="submit" class="btn btn-primary" id="qSubmitBtn">
+            <span id="qBtnText">Send Enquiry</span>
+          </button>
+          <button type="button" class="btn btn-ghost" onclick="closeQuote()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/siechem-redesign.html" class="nav-logo">
+            <img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" />
+          </a>
+          <p>India's leading specialty wires &amp; cables manufacturer since 2002.</p>
+        </div>
+        <div class="footer-col"><h4>Products</h4><ul>
+          <li><a href="/products/products.html">All Products</a></li>
+          <li><a href="/products/product-aero44.html">Aero 44</a></li>
+          <li><a href="/products/product-automotive.html">Automotive</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul>
+          <li><a href="/tech-support/tech-support.html">AWG Converter</a></li>
+          <li><a href="/tech-support/tech-support.html">Voltage Drop</a></li>
+          <li><a href="/tech-support/tech-support.html">All Tools</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Company</h4><ul>
+          <li><a href="/company/about.html">About</a></li>
+          <li><a href="/company/certifications.html">Certifications</a></li>
+          <li><a href="/company/customers.html">Customers</a></li>
+          <li><a href="/company/contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li>
+          <li><a href="tel:+914425220859">+91 44 2522 0859</a></li>
+          <li>Chennai · Pondicherry</li>
+        </ul></div>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Siechem Technologies Pvt. Ltd.</span>
+        <span>Established 2002 · AS9100 Certified</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  /* ══════════════════════════════════════════════════
+     AERO 44 — Complete Product Data (all 9 families)
+     Source: Siechem AERO 44 Catalogue
+  ══════════════════════════════════════════════════ */
+  const STANDARDS = [
+    'MIL-W-81044','MIL-C-27500','MIL-C-7078','MIL-W-16878','MIL-W-22759',
+    'MIL-STD-104','MIL-STD-681','MIL-STD-1916',
+    'VG 95218 Pt 20/21/22/23','MSV34401','BS G210','BS 4066',
+    'TDE 74/P/74','TDE 75/R/6','S424 14751',
+    'Def-Stan 61-12 Pt.18','Def-Stan 61-12 Pt.26','NFC 32070',
+    'NES 714','NES 715','ASTM E 595','NEMA WC 27500'
+  ];
+
+  const COLOURS = [
+    { name:'Red',    code:'01', hex:'#E53E3E' },
+    { name:'Yellow', code:'02', hex:'#ECC94B' },
+    { name:'Blue',   code:'03', hex:'#3182CE' },
+    { name:'Black',  code:'04', hex:'#1A202C' },
+    { name:'Green',  code:'05', hex:'#38A169' },
+    { name:'Grey',   code:'07', hex:'#718096' },
+    { name:'Brown',  code:'08', hex:'#744210' },
+    { name:'White',  code:'09', hex:'#F7FAFC' },
+    { name:'Orange', code:'10', hex:'#DD6B20' },
+    { name:'Violet', code:'11', hex:'#553C9A' }
+  ];
+
+  /* Column type helpers */
+  /* A = simple single (AWG,mm²,Strands,WireDia,OD,Wt)
+     B = twin core   (AWG,mm²,Cores,Strands,WireDia,OD,Wt)
+     C = shielded detailed (AWG,mm²,Strands,WireDia,InsTk,ScrnDia,ShthTk,OD,Wt) */
+
+  const TYPES = [
+    /* ── 1 ── 600V Single Core Unsheathed Primary ──────────────────── */
+    {
+      id: 1, cat: '44G000', colType: 'A',
+      name: '600V Single Core Unsheathed Primary Wires',
+      voltage: 600, shielded: false, cores: 1, ptype: 'G',
+      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
+      shield: '—', outerSheath: '—',
+      voltageRating: '600V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour code (see table below)',
+      sizes: [
+        { pn:'44G00087XX', awg:30, mm2:0.051, strands:7,  wireDia:0.10, od:0.70, wt:1.06  },
+        { pn:'44G00086XX', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, od:0.78, wt:1.43  },
+        { pn:'44G00085XX', awg:26, mm2:0.13,  strands:19, wireDia:0.10, od:0.88, wt:2.08  },
+        { pn:'44G00084XX', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:1.04, wt:2.98  },
+        { pn:'44G00083XX', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:1.21, wt:4.46  },
+        { pn:'44G00082XX', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:1.42, wt:6.70  },
+        { pn:'44G00081XX', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:1.67, wt:10.12 },
+        { pn:'44G00080XX', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:1.85, wt:12.80 },
+        { pn:'44G00079XX', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:2.28, wt:19.64 },
+        { pn:'44G00078XX', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:2.76, wt:30.06 },
+        { pn:'44G00077XX', awg:10, mm2:5.26,  strands:37, wireDia:0.40, od:3.30, wt:46.28 }
+      ]
+    },
+
+    /* ── 2 ── 1000V Single Core Insulated Primary ───────────────────── */
+    {
+      id: 2, cat: '44G210', colType: 'A',
+      name: '1000V Single Core Insulated Primary Wires',
+      voltage: 1000, shielded: false, cores: 1, ptype: 'G',
+      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
+      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '1000V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour, YY = Sheath colour',
+      sizes: [
+        { pn:'44G21085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.04, wt:2.38  },
+        { pn:'44G21084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.19, wt:3.57  },
+        { pn:'44G21083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.39, wt:5.20  },
+        { pn:'44G21082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.59, wt:7.59  },
+        { pn:'44G21081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:1.87, wt:11.46 },
+        { pn:'44G21080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.08, wt:14.58 },
+        { pn:'44G21079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.51, wt:21.88 },
+        { pn:'44G21078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:2.99, wt:32.89 },
+        { pn:'44G21077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:3.73, wt:52.98 },
+        { pn:'44G21076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.25, wt:91.97 }
+      ]
+    },
+
+    /* ── 3 ── 2500V Single Core Insulated Primary ───────────────────── */
+    {
+      id: 3, cat: '44G220', colType: 'A',
+      name: '2500V Single Core Insulated Primary Wires',
+      voltage: 2500, shielded: false, cores: 1, ptype: 'G',
+      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall, thick wall)',
+      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '2500V, Light Weight (Thick wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour, YY = Sheath colour',
+      sizes: [
+        { pn:'44G22085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.37, wt:3.13  },
+        { pn:'44G22084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.46, wt:4.46  },
+        { pn:'44G22083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.77, wt:6.40  },
+        { pn:'44G22082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.99, wt:9.08  },
+        { pn:'44G22081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:2.25, wt:12.95 },
+        { pn:'44G22080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.48, wt:16.22 },
+        { pn:'44G22079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.94, wt:24.10 },
+        { pn:'44G22078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:3.34, wt:36.01 },
+        { pn:'44G22077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:4.11, wt:54.32 },
+        { pn:'44G22076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.56, wt:96.73 }
+      ]
+    },
+
+    /* ── 4 ── 600V Single Core Insulated Airframe ───────────────────── */
+    {
+      id: 4, cat: '44A230', colType: 'A',
+      name: '600V Single Core Insulated Airframe Wires',
+      voltage: 600, shielded: false, cores: 1, ptype: 'A',
+      weight: 'Medium Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
+      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '600V, Medium Weight, Airframe (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour, YY = Sheath colour',
+      sizes: [
+        { pn:'44A23085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.24, wt:2.98  },
+        { pn:'44A23084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.39, wt:3.87  },
+        { pn:'44A23083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.59, wt:5.65  },
+        { pn:'44A23082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.80, wt:8.04  },
+        { pn:'44A23081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:2.05, wt:11.91 },
+        { pn:'44A23080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.28, wt:14.73 },
+        { pn:'44A23079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.76, wt:22.17 },
+        { pn:'44A23078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:3.22, wt:32.59 },
+        { pn:'44A23077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:3.96, wt:52.08 },
+        { pn:'44A23076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.46, wt:93.46 }
+      ]
+    },
+
+    /* ── 5 ── 600V Twisted Twin Core Cables ─────────────────────────── */
+    {
+      id: 5, cat: '44G10', colType: 'B',
+      name: '600V Twisted Twin Core Cables',
+      voltage: 600, shielded: false, cores: 2, ptype: 'G',
+      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
+      shield: '—', outerSheath: '—',
+      voltageRating: '600V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'Last two digits = No. of cores (02 for 2 core)',
+      sizes: [
+        { pn:'44G108502', awg:30, mm2:0.051, cores:2, strands:7,  wireDia:0.10, od:1.39, wt:2.38  },
+        { pn:'44G108402', awg:28, mm2:0.08,  cores:2, strands:7,  wireDia:0.13, od:1.54, wt:3.13  },
+        { pn:'44G108102', awg:26, mm2:0.13,  cores:2, strands:19, wireDia:0.10, od:1.75, wt:4.47  },
+        { pn:'44G108202', awg:24, mm2:0.20,  cores:2, strands:19, wireDia:0.13, od:2.05, wt:6.69  },
+        { pn:'44G108102', awg:22, mm2:0.33,  cores:2, strands:19, wireDia:0.16, od:2.40, wt:9.82  },
+        { pn:'44G108002', awg:20, mm2:0.52,  cores:2, strands:19, wireDia:0.20, od:2.81, wt:14.73 },
+        { pn:'44G107902', awg:18, mm2:0.82,  cores:2, strands:19, wireDia:0.25, od:3.32, wt:22.32 },
+        { pn:'44G107802', awg:16, mm2:1.31,  cores:2, strands:19, wireDia:0.29, od:3.67, wt:28.42 },
+        { pn:'44G107702', awg:14, mm2:2.08,  cores:2, strands:19, wireDia:0.36, od:4.54, wt:44.35 },
+        { pn:'44G107602', awg:12, mm2:3.31,  cores:2, strands:37, wireDia:0.32, od:5.50, wt:69.00 }
+      ]
+    },
+
+    /* ── 6 ── 600V Single Core Shielded Primary ─────────────────────── */
+    {
+      id: 6, cat: '44G400', colType: 'A',
+      name: '600V Single Core Shielded Primary Wires',
+      voltage: 600, shielded: true, cores: 1, ptype: 'G',
+      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
+      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '600V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour, YY = Sheath colour',
+      sizes: [
+        { pn:'44G40087XXYY', awg:30, mm2:0.051, strands:7,  wireDia:0.10, od:1.49, wt:5.20  },
+        { pn:'44G40086XXYY', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, od:1.57, wt:5.80  },
+        { pn:'44G40085XXYY', awg:26, mm2:0.13,  strands:19, wireDia:0.10, od:1.59, wt:6.84  },
+        { pn:'44G40084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:1.85, wt:8.63  },
+        { pn:'44G40083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:2.03, wt:10.71 },
+        { pn:'44G40082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:2.28, wt:14.73 },
+        { pn:'44G40081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:2.64, wt:20.68 },
+        { pn:'44G40080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:2.81, wt:24.55 },
+        { pn:'44G40079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:3.24, wt:34.08 },
+        { pn:'44G40078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:3.72, wt:47.77 }
+      ]
+    },
+
+    /* ── 7 ── 1000V Single Core Shielded Primary (detailed) ─────────── */
+    {
+      id: 7, cat: '44G410', colType: 'C',
+      name: '1000V Single Core Insulated Shielded Primary Wires',
+      voltage: 1000, shielded: true, cores: 1, ptype: 'G',
+      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
+      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '1000V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation colour, YY = Sheath colour',
+      sizes: [
+        { pn:'44G41086XXYY', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, insTk:0.20,  scrnDia:0.08,  shthTk:0.18, od:1.80, wt:5.65  },
+        { pn:'44G41085XXYY', awg:26, mm2:0.13,  strands:19, wireDia:0.10, insTk:0.20,  scrnDia:0.08,  shthTk:0.18, od:1.85, wt:6.85  },
+        { pn:'44G41084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, insTk:0.20,  scrnDia:0.10,  shthTk:0.18, od:2.13, wt:9.67  },
+        { pn:'44G41083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, insTk:0.23,  scrnDia:0.10,  shthTk:0.20, od:2.39, wt:12.35 },
+        { pn:'44G41082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, insTk:0.23,  scrnDia:0.127, shthTk:0.20, od:2.67, wt:17.41 },
+        { pn:'44G41081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, insTk:0.25,  scrnDia:0.127, shthTk:0.20, od:3.00, wt:22.62 },
+        { pn:'44G41080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, insTk:0.25,  scrnDia:0.127, shthTk:0.20, od:3.20, wt:26.64 },
+        { pn:'44G41079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, insTk:0.29,  scrnDia:0.127, shthTk:0.20, od:3.63, wt:36.16 },
+        { pn:'44G41078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, insTk:0.31,  scrnDia:0.127, shthTk:0.20, od:4.14, wt:49.56 }
+      ]
+    },
+
+    /* ── 8 ── 600V Single Core Shielded Airframe ────────────────────── */
+    {
+      id: 8, cat: '44A430', colType: 'A',
+      name: '600V Single Core Insulated Shielded Airframe Wires',
+      voltage: 600, shielded: true, cores: 1, ptype: 'A',
+      weight: 'Medium Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
+      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '600V, Medium Weight, Airframe (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'XX = Insulation / Sheath colour code',
+      sizes: [
+        { pn:'44A43084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:2.28, wt:11.76 },
+        { pn:'44A43083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:2.59, wt:15.48 },
+        { pn:'44A43082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:2.79, wt:19.19 },
+        { pn:'44A43081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:3.04, wt:24.11 },
+        { pn:'44A43080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:3.27, wt:28.13 },
+        { pn:'44A43079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:3.75, wt:38.69 },
+        { pn:'44A43078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:4.21, wt:52.38 }
+      ]
+    },
+
+    /* ── 9 ── 600V Twisted Twin Core Shielded ───────────────────────── */
+    {
+      id: 9, cat: '44G50', colType: 'B',
+      name: '600V Twisted Twin Core Shielded Cables',
+      voltage: 600, shielded: true, cores: 2, ptype: 'G',
+      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
+      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
+      voltageRating: '600V, Light Weight (Thin wall)',
+      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
+      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
+      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
+      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
+      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
+      colorNote: 'Last two digits = No. of cores (02 for 2 core)',
+      sizes: [
+        { pn:'44G5008502', awg:30, mm2:0.051, cores:2, strands:7,  wireDia:0.10, od:2.25, wt:8.63  },
+        { pn:'44G5008402', awg:28, mm2:0.08,  cores:2, strands:7,  wireDia:0.13, od:2.40, wt:9.82  },
+        { pn:'44G5008302', awg:26, mm2:0.13,  cores:2, strands:19, wireDia:0.10, od:2.61, wt:12.05 },
+        { pn:'44G5008202', awg:24, mm2:0.20,  cores:2, strands:19, wireDia:0.13, od:3.00, wt:16.82 },
+        { pn:'44G5008102', awg:22, mm2:0.33,  cores:2, strands:19, wireDia:0.16, od:3.37, wt:21.57 },
+        { pn:'44G5008002', awg:20, mm2:0.52,  cores:2, strands:19, wireDia:0.20, od:3.78, wt:27.97 },
+        { pn:'44G5007902', awg:18, mm2:0.82,  cores:2, strands:19, wireDia:0.25, od:4.34, wt:38.24 },
+        { pn:'44G5007802', awg:16, mm2:1.31,  cores:2, strands:19, wireDia:0.29, od:4.69, wt:44.94 },
+        { pn:'44G5007702', awg:14, mm2:2.08,  cores:2, strands:19, wireDia:0.36, od:5.55, wt:64.28 },
+        { pn:'44G5007602', awg:12, mm2:3.31,  cores:2, strands:37, wireDia:0.32, od:6.52, wt:91.51 }
+      ]
+    }
+  ];
+
+  /* ── Filter State ──────────────────────────────── */
+  const filters = { voltage: 'all', shield: 'all', cores: 'all', ptype: 'all' };
+
+  /* ── Apply filters & re-render ─────────────────── */
+  function applyFilters() {
+    const visible = TYPES.filter(t => {
+      if (filters.voltage !== 'all' && t.voltage !== +filters.voltage) return false;
+      if (filters.shield  !== 'all' && t.shielded !== (filters.shield === '1')) return false;
+      if (filters.cores   !== 'all' && t.cores !== +filters.cores) return false;
+      if (filters.ptype   !== 'all' && t.ptype !== filters.ptype) return false;
+      return true;
+    });
+    renderCards(visible);
+    document.getElementById('resultCount').textContent =
+      `${visible.length} of ${TYPES.length} product famil${visible.length === 1 ? 'y' : 'ies'} shown`;
+  }
+
+  document.querySelectorAll('.fpill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.f, v = btn.dataset.v;
+      filters[f] = v;
+      btn.closest('.filter-pills').querySelectorAll('.fpill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    });
+  });
+
+  /* ── AWG range helper ──────────────────────────── */
+  function awgRange(sizes) {
+    const awgs = sizes.map(s => s.awg);
+    const mn = Math.min(...awgs), mx = Math.max(...awgs);
+    return mn === mx ? `AWG ${mn}` : `AWG ${mx} – ${mn}`;
+  }
+
+  /* ── Render product cards ──────────────────────── */
+  function renderCards(list) {
+    const grid = document.getElementById('prodGrid');
+    if (!list.length) {
+      grid.innerHTML = '<div style="grid-column:1/-1;padding:48px;text-align:center;color:var(--text-muted);font-size:15px;">No products match the selected filters.</div>';
+      return;
+    }
+    grid.innerHTML = list.map(t => {
+      const voltBadge = `<span class="badge badge-voltage">${t.voltage}V</span>`;
+      const shieldBadge = t.shielded
+        ? `<span class="badge badge-shielded">Shielded</span>`
+        : `<span class="badge badge-unshielded">Unshielded</span>`;
+      const typeBadge = t.ptype === 'A'
+        ? `<span class="badge badge-airframe">Airframe</span>`
+        : `<span class="badge badge-general">General Purpose</span>`;
+      const coreBadge = t.cores > 1 ? `<span class="badge badge-twin">Twin Core</span>` : '';
+      return `
+        <div class="prod-card reveal" onclick="window.location='/products/product-aero44-spec.html#${t.id}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')window.location='/products/product-aero44-spec.html#${t.id}'">
+          <div class="prod-card-head">
+            <div class="prod-card-badges">${voltBadge}${shieldBadge}${typeBadge}${coreBadge}</div>
+            <div class="prod-card-name">${t.name}</div>
+          </div>
+          <div class="prod-card-body">
+            <div class="prod-card-specs">
+              <div class="prod-spec"><span class="prod-spec-label">Insulation</span><span class="prod-spec-val">${t.insulation.split('(')[0].trim()}</span></div>
+              <div class="prod-spec"><span class="prod-spec-label">Temp (Ag/Ni)</span><span class="prod-spec-val">${t.tempSilNi}</span></div>
+              <div class="prod-spec"><span class="prod-spec-label">Weight Class</span><span class="prod-spec-val">${t.weight}</span></div>
+              <div class="prod-spec"><span class="prod-spec-label">Sizes</span><span class="prod-spec-val">${t.sizes.length} variants</span></div>
+            </div>
+            <div class="prod-card-cat">Catalogue: ${t.cat}…</div>
+          </div>
+          <div class="prod-card-footer">
+            <span class="prod-card-awg">${awgRange(t.sizes)}</span>
+            <span class="prod-card-btn">View Specs &amp; Parts
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+          </div>
+        </div>`;
+    }).join('');
+
+    /* re-observe new .reveal elements */
+    if (window.__revealObs) {
+      document.querySelectorAll('.prod-card.reveal:not(.visible)').forEach(el => window.__revealObs.observe(el));
+    }
+  }
+
+  /* ── Spec Sheet Modal ──────────────────────────── */
+  function openSpec(id) {
+    const t = TYPES.find(x => x.id === id);
+    if (!t) return;
+
+    document.getElementById('ssCat').textContent   = `Catalogue No: ${t.cat}`;
+    document.getElementById('ssTitle').textContent = t.name;
+
+    /* Technical specs */
+    const specRows = [
+      ['Voltage Rating',      t.voltageRating],
+      ['Conductor',           t.conductor],
+      ['Insulation',          t.insulation],
+      ['Shielding',           t.shield],
+      ['Outer Sheath',        t.outerSheath],
+      ['Temp. — Tin Plated',  t.tempTin],
+      ['Temp. — Ag/Ni Plated',t.tempSilNi],
+      ['Tensile Strength',    t.tensile],
+      ['Elongation',          t.elongation],
+      ['Shrinkage (200°C)',    t.shrinkage],
+      ['Low Temp Bend',       t.lowTempBend],
+      ['Smoke Index',         t.smokeIdx],
+      ['Toxicity Index',      t.toxIdx],
+      ['Oxygen Index',        t.oxygenIdx],
+      ['Temp. Index',         t.tempIdx],
+    ].map(([k,v]) => `<div class="spec-kv-row"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('');
+
+    /* Part number table */
+    let thead = '', tbody = '';
+    if (t.colType === 'A') {
+      thead = `<tr><th>Part Number</th><th>AWG</th><th>mm²</th><th>Strands</th><th>Wire Ø (mm)</th><th>OD Max (mm)</th><th>Weight (kg/km)</th><th></th></tr>`;
+      tbody = t.sizes.map(s => `
+        <tr>
+          <td>${s.pn}</td><td>${s.awg}</td><td>${s.mm2}</td><td>${s.strands}</td>
+          <td>${s.wireDia}</td><td>${s.od}</td><td>${s.wt}</td>
+          <td><button class="quote-row-btn" onclick="openQuote('${s.pn}', '${t.name.replace(/'/g,"\\'")}', ${t.id})">Quote</button></td>
+        </tr>`).join('');
+    } else if (t.colType === 'B') {
+      thead = `<tr><th>Part Number</th><th>AWG</th><th>mm²</th><th>Cores</th><th>Strands</th><th>Wire Ø (mm)</th><th>OD Max (mm)</th><th>Weight (kg/km)</th><th></th></tr>`;
+      tbody = t.sizes.map(s => `
+        <tr>
+          <td>${s.pn}</td><td>${s.awg}</td><td>${s.mm2}</td><td>${s.cores}</td><td>${s.strands}</td>
+          <td>${s.wireDia}</td><td>${s.od}</td><td>${s.wt}</td>
+          <td><button class="quote-row-btn" onclick="openQuote('${s.pn}', '${t.name.replace(/'/g,"\\'")}', ${t.id})">Quote</button></td>
+        </tr>`).join('');
+    } else { /* C — shielded detailed */
+      thead = `<tr><th>Part Number</th><th>AWG</th><th>mm²</th><th>Strands</th><th>Wire Ø (mm)</th><th>Ins.Tk (mm)</th><th>Screen Ø (mm)</th><th>Shth.Tk (mm)</th><th>OD Max (mm)</th><th>Weight (kg/km)</th><th></th></tr>`;
+      tbody = t.sizes.map(s => `
+        <tr>
+          <td>${s.pn}</td><td>${s.awg}</td><td>${s.mm2}</td><td>${s.strands}</td>
+          <td>${s.wireDia}</td><td>${s.insTk}</td><td>${s.scrnDia}</td><td>${s.shthTk}</td>
+          <td>${s.od}</td><td>${s.wt}</td>
+          <td><button class="quote-row-btn" onclick="openQuote('${s.pn}', '${t.name.replace(/'/g,"\\'")}', ${t.id})">Quote</button></td>
+        </tr>`).join('');
+    }
+
+    /* Colour chips */
+    const colorChips = COLOURS.map(c =>
+      `<span class="color-chip"><span class="color-chip-dot" style="background:${c.hex};"></span>${c.name} (${c.code})</span>`
+    ).join('');
+
+    document.getElementById('ssBody').innerHTML = `
+      <div class="spec-two-col">
+        <div class="spec-block">
+          <h4>Technical Data</h4>
+          <div class="spec-kv">${specRows}</div>
+        </div>
+        <div class="spec-block">
+          <h4>Applicable Standards</h4>
+          <div class="standards-list">${STANDARDS.map(s => `<span class="std-chip">${s}</span>`).join('')}</div>
+          <h4 style="margin-top:16px;">Applications</h4>
+          <div class="spec-kv">
+            <div class="spec-kv-row"><span class="k">Primary use</span><span class="v">Hook-up &amp; signal wire in aircraft, avionics, military electronics, satellites, helicopters</span></div>
+            <div class="spec-kv-row"><span class="k">Also used in</span><span class="v">Ships, mass transit, offshore platforms, automobiles</span></div>
+          </div>
+        </div>
+      </div>
+      <h4 style="font-size:12px;font-weight:700;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;color:var(--text-faint);margin-bottom:10px;">Complete Size Range</h4>
+      <div class="spec-search-wrap">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <input class="spec-search-input" id="specSearchInput" type="text" placeholder="Search by part no., AWG, mm²…" oninput="filterSpecTable(this.value)" autocomplete="off" spellcheck="false">
+        <span class="spec-search-count" id="specSearchCount">${t.sizes.length} parts</span>
+      </div>
+      <div class="spec-no-match" id="specNoMatch">No parts match your search</div>
+      <div class="part-table-wrap">
+        <table class="part-table" id="specPartTable"><thead>${thead}</thead><tbody>${tbody}</tbody></table>
+      </div>
+      <div class="color-note">
+        <strong>Colour Code:</strong> ${t.colorNote}<br>
+        <div class="color-chips">${colorChips}</div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-primary" onclick="openQuote('${t.cat}…', '${t.name.replace(/'/g,"\\'")}', ${t.id})">
+          Request Quote for this Family
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button class="btn btn-ghost" onclick="closeSpec()">Close</button>
+      </div>`;
+
+    document.getElementById('specOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function filterSpecTable(q) {
+    const rows = document.querySelectorAll('#specPartTable tbody tr');
+    const noMatch = document.getElementById('specNoMatch');
+    const countEl = document.getElementById('specSearchCount');
+    const term = q.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach(row => {
+      const cells = row.querySelectorAll('td');
+      // Search only: part number (col 0), AWG (col 1), mm² (col 2)
+      const searchText = [0, 1, 2].map(i => cells[i] ? cells[i].textContent : '').join(' ').toLowerCase();
+      const show = !term || searchText.includes(term);
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    countEl.textContent = term ? `${visible} of ${rows.length} parts` : `${rows.length} parts`;
+    noMatch.style.display = (visible === 0 && term) ? 'block' : 'none';
+  }
+
+  function closeSpec() {
+    document.getElementById('specOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+    // Clear search on close
+    const inp = document.getElementById('specSearchInput');
+    if (inp) inp.value = '';
+  }
+  function handleSpecOverlayClick(e) {
+    if (e.target === document.getElementById('specOverlay')) closeSpec();
+  }
+
+  /* ── Quote Modal ───────────────────────────────── */
+  function openQuote(partNum, typeName, typeId) {
+    const t = TYPES.find(x => x.id === typeId);
+    document.getElementById('qPartNum').value = partNum;
+    document.getElementById('qCableType').value = typeName;
+    document.getElementById('qCableSpec').value = t ? JSON.stringify({
+      label: t.name, spec: 'AS9100:D / MIL-W-81044', insulation: t.insulation,
+      temp: t.tempSilNi, voltageRating: t.voltageRating,
+      allSizes: t.sizes.map(s => ({ size: s.awg + ' AWG', amps: '—', ohm: '—', od_mm: s.od, weight: s.wt, stdLen: '—' }))
+    }) : '{}';
+    document.getElementById('qPartDisplay').value = partNum;
+    document.getElementById('qSuccess').style.display = 'none';
+    document.getElementById('qError').style.display = 'none';
+    document.getElementById('quoteForm').style.display = '';
+    document.getElementById('qBtnText').textContent = 'Send Enquiry';
+    document.getElementById('qSubmitBtn').disabled = false;
+    document.getElementById('quoteOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeQuote() {
+    document.getElementById('quoteOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleQuoteOverlayClick(e) {
+    if (e.target === document.getElementById('quoteOverlay')) closeQuote();
+  }
+
+  async function submitQuote(e) {
+    e.preventDefault();
+    const btn = document.getElementById('qSubmitBtn');
+    const btnText = document.getElementById('qBtnText');
+    const errEl = document.getElementById('qError');
+    btn.disabled = true; btnText.textContent = 'Sending…';
+    errEl.style.display = 'none';
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    data.subject = `Aero 44 Quote – ${data.part_number || data.cable_type}`;
+
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const json = await res.json();
+      if (json.success) {
+        e.target.style.display = 'none';
+        document.getElementById('qSuccess').style.display = 'block';
+      } else throw new Error(json.message || 'Failed');
+    } catch(err) {
+      errEl.textContent = 'Could not send. Please email sales@siechem.com directly.';
+      errEl.style.display = 'block';
+      btn.disabled = false; btnText.textContent = 'Send Enquiry';
+    }
+  }
+
+  /* ── Keyboard close ───────────────────────────── */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { closeSpec(); closeQuote(); }
+  });
+
+  /* ── Init ─────────────────────────────────────── */
+  applyFilters();
+  </script>
+
+  <script src="/nav-mobile.js" defer></script>
+  <script src="/animations.js" defer></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11l5-5 5 5"/></svg></button>
+  <script>(function(){var b=document.getElementById('backToTop');if(!b)return;window.addEventListener('scroll',function(){b.classList.toggle('btt-visible',window.scrollY>400);},{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});})()</script>
+</body>
+</html>

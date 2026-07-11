@@ -1,0 +1,878 @@
+﻿<!--
+  FILE: /company/customers.html
+
+  PURPOSE:
+    Social proof page. Displays logos and brief context for Siechem's major customers
+    across all sectors — Aerospace (HAL, IAI, Boeing supply chain), Automotive
+    (Maruti Suzuki, Tata, Hyundai, Ashok Leyland), Defence (DRDO, Indian Navy),
+    Railway (Indian Railways, CRRC, Alstom, Bombardier), Industrial (ABB, Siemens).
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb     — "Home → Customers"
+    2. Page hero            — "Trusted by the builders who can't afford to fail"
+    3. Customer logo grid   — responsive logo grid (same logo-card pattern as
+                               /company/certifications.html approvals section) pulled from
+                               siechem.com/wp-content/uploads/ URLs
+    4. Sector breakdown     — grouped by industry (Aerospace / Automotive / Marine /
+                               Defence / Railway / Industrial) with sector headings
+    5. Case study teaser    — brief 2-line context per major customer (what they
+                               use Siechem cables for, how long the relationship is)
+    6. CTA                  — "Join our customer list — Request a Quote"
+
+  WHY THIS PAGE EXISTS:
+    B2B buyers almost always check "who else uses this supplier" before qualifying
+    a new vendor. Showing TATA, HAL, Maruti Suzuki, Indian Railways, and Alstom
+    logos immediately validates Siechem's tier-1 supply chain position. This page
+    is also shared in email pitches to new OEM prospects.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+    - Logo images are loaded from siechem.com CDN (no local copies needed since
+      they're the official customer logos served from the live site).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers — Siechem</title>
+  <meta name="description" content="Trusted by leading OEMs across Aerospace, Defence, Automotive and Energy sectors. Siechem cables in 50+ countries.">
+  <meta name="keywords" content="siechem, specialty cables, wires, Chennai, India">
+  <meta property="og:title" content="Our Customers | Siechem Wires & Cables">
+  <meta property="og:description" content="Trusted by leading OEMs across Aerospace, Defence, Automotive and Energy sectors. Siechem cables in 50+ countries.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/company/customers.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/company/customers.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <style>
+    /* ── Industry Verticals — Tab + Panel ── */
+    .ind-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+    @media (max-width: 800px) { .ind-layout { grid-template-columns: 1fr; } }
+
+    .ind-tabs {
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 800px) {
+      .ind-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        scrollbar-width: none;
+      }
+      .ind-tabs::-webkit-scrollbar { display: none; }
+    }
+    .ind-tab {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .ind-tab:last-child { border-bottom: none; }
+    .ind-tab:hover { background: var(--bg-soft); color: var(--text); }
+    .ind-tab.active {
+      background: var(--accent-soft);
+      color: var(--accent-2);
+      border-right: 2px solid var(--accent);
+    }
+    @media (max-width: 800px) {
+      .ind-tab { border-bottom: none; border-right: none; border-bottom: 3px solid transparent; flex-shrink: 0; }
+      .ind-tab.active { border-bottom: 3px solid var(--accent); border-right: none; background: var(--accent-soft); }
+    }
+    .ind-tab-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .ind-tab.active .ind-tab-icon {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      color: var(--accent-2);
+    }
+
+    .ind-panel { display: none; padding: 40px; flex-direction: column; gap: 28px; }
+    .ind-panel.active { display: flex; }
+    @media (max-width: 640px) { .ind-panel { padding: 24px; gap: 20px; } }
+
+    .ind-panel-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .ind-panel-title { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .ind-panel-sub { font-size: 14px; color: var(--text-muted); line-height: 1.6; max-width: 520px; }
+    .ind-big-count {
+      font-size: 56px; font-weight: 900; letter-spacing: -2px;
+      color: var(--accent); line-height: 1;
+      font-family: var(--mono);
+      flex-shrink: 0;
+    }
+    .ind-big-label { font-size: 11px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-top: 4px; }
+
+    .ind-panel-divider { height: 1px; background: var(--border); }
+
+    .ind-specs-row { display: flex; gap: 32px; flex-wrap: wrap; }
+    .ind-spec { display: flex; flex-direction: column; gap: 3px; }
+    .ind-spec-label { font-size: 11px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+    .ind-spec-value { font-size: 15px; font-weight: 700; color: var(--text); }
+
+    .ind-clients-wrap { display: flex; flex-direction: column; gap: 10px; }
+    .ind-clients-label { font-size: 11px; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); }
+    .ind-clients-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ind-client-pill {
+      padding: 5px 14px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .ind-specs-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ind-spec-chip {
+      padding: 4px 14px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--mono);
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+    .ind-clients { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .logo-wall {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    @media (max-width: 980px) { .logo-wall { grid-template-columns: repeat(4, 1fr); } }
+    @media (max-width: 600px) { .logo-wall { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 400px) { .logo-wall { grid-template-columns: repeat(2, 1fr); } }
+    .logo-cell {
+      aspect-ratio: 3 / 2;
+      background: #fff;
+      display: flex; align-items: center; justify-content: center;
+      padding: 14px;
+      transition: background 0.18s, transform 0.18s;
+      overflow: hidden;
+    }
+    @media (max-width: 600px) {
+      .logo-cell { padding: 10px; aspect-ratio: 4 / 3; }
+    }
+    .logo-cell:hover { background: #f8f8f8; transform: scale(1.04); z-index: 1; position: relative; }
+    .logo-cell--empty { background: #fff; pointer-events: none; }
+    .logo-cell img {
+      max-width: 100%; max-height: 100%;
+      width: auto; height: auto;
+      object-fit: contain;
+      filter: grayscale(30%);
+      transition: filter 0.2s;
+    }
+    .logo-cell:hover img { filter: grayscale(0%); }
+
+    .case-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      transition: all 0.18s;
+    }
+    .case-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .case-card .industry-tag {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-2);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .case-card h3 { font-size:20px; font-weight:700; letter-spacing:-0.3px; margin-bottom:8px; }
+    .case-card .client { font-size: 13.5px; color: var(--text-muted); margin-bottom: 18px; font-style: italic; }
+    .case-card .case-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:18px; border-top:1px solid var(--border); }
+    @media (max-width: 640px) {
+      .case-card { padding: 20px; border-radius: 12px; }
+      .case-card h3 { font-size: 17px; }
+      .case-card .case-stats { gap: 16px; }
+      .ind-panel { padding: 18px; gap: 16px; }
+    }
+    @media (max-width: 480px) {
+      .case-card { padding: 16px; }
+      .ind-tab { padding: 12px 14px; font-size: 13px; }
+    }
+
+    .map-wrap {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      overflow: hidden;
+    }
+    .map-svg { width:100%; height:auto; max-height: 480px; opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a>
+      <div class="nav-links">
+        <a href="/siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="/company/about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="/company/about.html" class="nav-company-item">About Us</a>
+            <a href="/company/mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="/company/key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="/company/manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="/company/testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="/company/research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="/company/ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="/company/mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="/company/ppt.html" class="nav-company-item">PPT</a>
+            <a href="/company/policies.html" class="nav-company-item">Policies</a>
+            <a href="/company/csr.html" class="nav-company-item">CSR</a>
+            <a href="/company/careers.html" class="nav-company-item">Careers</a>
+            <a href="/company/events.html" class="nav-company-item">Events</a>
+            <a href="/company/privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="/products/products.html" class="nav-link">Products</a>
+        <a href="/company/catalogues.html" class="nav-link">Catalogues</a>
+        <a href="/company/certifications.html" class="nav-link">Certifications</a>
+        <a href="/company/customers.html" class="nav-link active">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="/tech-support/tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="/tech-support/ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="/tech-support/ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="/tech-support/ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="/tech-support/ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="/tech-support/ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="/tech-support/ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="/tech-support/ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="/tech-support/ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="/tech-support/ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="/tech-support/ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="/tech-support/ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="/tech-support/ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="/tech-support/ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="/tech-support/ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="/tech-support/ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="/tech-support/ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="/tech-support/ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="/tech-support/ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="/tech-support/ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="/tech-support/ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="/tech-support/ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="/tech-support/ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="/tech-support/ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="/tech-support/ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="/tech-support/ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="/tech-support/ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="/resources/res-5s.html" class="nav-company-item">5S</a>
+              <a href="/resources/res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="/resources/res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="/resources/res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="/resources/res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="/resources/res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="/resources/res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="/resources/res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="/resources/res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="/resources/res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="/resources/res-reach.html" class="nav-company-item">REACH</a>
+              <a href="/resources/res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="/resources/res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="/resources/res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="/company/contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="/company/contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="/company/about.html">About Us</a>
+        <a href="/company/mds-message.html">MD's Message</a>
+        <a href="/company/key-persons.html">Key Persons</a>
+        <a href="/company/manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="/company/testing-facilities.html">Testing Facilities</a>
+        <a href="/company/research-development.html">Research &amp; Development</a>
+        <a href="/company/ethical-values.html">Ethical Values</a>
+        <a href="/company/mission-vision.html">Mission &amp; Vision</a>
+        <a href="/company/ppt.html">PPT</a>
+        <a href="/company/policies.html">Policies</a>
+        <a href="/company/csr.html">CSR</a>
+        <a href="/company/careers.html">Careers</a>
+        <a href="/company/events.html">Events</a>
+        <a href="/company/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="/products/products.html">Products</a>
+      <a href="/company/catalogues.html">Catalogues</a>
+      <a href="/company/certifications.html">Certifications</a>
+      <a href="/company/customers.html">Customers</a>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-ts-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Tech Support <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-techsup-links" id="mob-ts-links">
+          <a href="/tech-support/ts-awg-sqmm.html">AWG to Square mm Conversion</a><a href="/tech-support/ts-braid-shield-calc.html">Braid Shield Calculation</a><a href="/tech-support/ts-cable-handling.html">Cable Handling System</a><a href="/tech-support/ts-cable-installation.html">Cable Installation Procedure</a><a href="/tech-support/ts-cable-life-calc.html">Cable Life Calculation</a><a href="/tech-support/ts-cable-size-auto.html">Cable Size Calculation for Automotive</a><a href="/tech-support/ts-cable-size-solar.html">Cable Size for Solar PV Plants</a><a href="/tech-support/ts-capacitance-calc.html">Capacitance Calculation</a><a href="/tech-support/ts-color-code.html">Color Code Chart</a><a href="/tech-support/ts-ptfe-comparison.html">Comparison: PTFE, FEP, PFA, ETFE</a><a href="/tech-support/ts-conductor-resistance.html">Conductor Resistance Calculation</a><a href="/tech-support/ts-current-carrying.html">Current Carrying Capacity</a><a href="/tech-support/ts-derating-factors.html">Derating Factors</a><a href="/tech-support/ts-electrical-losses.html">Electrical Losses Calculation</a><a href="/tech-support/ts-impedance-calc.html">Impedance Calculation</a><a href="/tech-support/ts-inductance-calc.html">Inductance Calculation</a><a href="/tech-support/ts-insulation-resistance.html">Insulation Resistance Calculation</a><a href="/tech-support/ts-nfpa.html">NFPA Electrical Safety Standard</a><a href="/tech-support/ts-packaging.html">Packaging of Wires and Cables</a><a href="/tech-support/ts-publication.html">Publication</a><a href="/tech-support/ts-reactance-calc.html">Reactance Calculation</a><a href="/tech-support/ts-short-circuit-calc.html">Short Circuit Temp Rating</a><a href="/tech-support/ts-toxicity-index.html">Toxicity Index Calculation</a><a href="/tech-support/ts-voltage-drop.html">Voltage Drop Calculation</a><a href="/tech-support/ts-wp-ebeam.html">White Paper: E-Beam Crosslinking</a><a href="/tech-support/ts-wp-ageing.html">White Paper: Accelerated Ageing</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-res-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Resources <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-resources-links" id="mob-res-links">
+          <a href="/resources/res-5s.html">5S</a><a href="/resources/res-awards.html">Awards / Recognition</a><a href="/resources/res-capabilities.html">Capabilities</a><a href="/resources/res-covid19.html">COVID-19</a><a href="/resources/res-cricket-teams.html">Cricket Teams</a><a href="/resources/res-customer-care.html">Customer Care</a><a href="/resources/res-customer-comments.html">Customer Comments</a><a href="/resources/res-green-technology.html">Green Technology</a><a href="/resources/res-metal-trend.html">Metal Trend</a><a href="/resources/res-part-number-index.html">Part Number Index</a><a href="/resources/res-reach.html">REACH</a><a href="/resources/res-rohs.html">RoHS</a><a href="/resources/res-siechem-erp.html">Siechem ERP</a><a href="/resources/res-un-global-compact.html">UN Global Compact</a>
+        </div>
+      </div>
+      <a href="/company/contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><span>Customers</span></div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Who We Serve</div>
+          <h1 class="page-title">When It<br/>Has to <em>Work,</em><br/>They Choose Siechem.</h1>
+          <p class="page-lede">Tier-1 OEMs across aerospace, defence, automotive, marine, railway and renewable energy specify Siechem because failure isn't on the table. Over 50 countries. 2,000+ active customers. Confidentiality always respected.</p>
+        </div>
+        <div class="fade-up fade-up-2">
+          <img class="hero-img" src="/assets/ppt-images/slide-10-1.jpg" alt="Siechem global presence — customers across Asia, Europe, Americas, Africa and Australia" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo wall -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head center">
+        <p class="section-eyebrow">Trusted By</p>
+        <h2 class="section-title">A Glimpse of Our Customer Base</h2>
+        <p class="section-sub">A representative sample. Many engagements are under NDA; logos shown are those we have permission to display.</p>
+      </div>
+      <div class="logo-wall">
+        <div class="logo-cell"><img src="/assets/partners/AEM.jpg" alt="AEM" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/alshams-.jpg" alt="Al Shams" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Aptiv.jpg" alt="Aptiv" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/ayana-power-.jpg" alt="Ayana Power" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Bii-power-.jpg" alt="BII Power" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/bizlink-.jpg" alt="Bizlink" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Bharat_Electrical-.jpg" alt="Bharat Electrical" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Clw-.jpg" alt="CLW" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/banaras-.jpg" alt="Banaras" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/cable-world.jpg" alt="Cable World" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/desmi.jpg" alt="Desmi" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/DAE.jpg" alt="DAE" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Dhasha.jpg" alt="Dhasha" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/ilisolpower.jpg" alt="Ilisol Power" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/East_central_railway.jpg" alt="East Central Railway" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Hayleys_Solar.jpg" alt="Hayleys Solar" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Harpers.jpg" alt="Harpers" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/delton.jpg" alt="Delton" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Divine.jpg" alt="Divine" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Continuous-.jpg" alt="Continuous" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/JCB.jpg" alt="JCB" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/keysons.jpg" alt="Keysons" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Inspire-.jpg" alt="Inspire" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/india_nippon.jpg" alt="India Nippon" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/JBM-.jpg" alt="JBM" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/kothari-.jpg" alt="Kothari" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Maruti_Suzuki-.jpg" alt="Maruti Suzuki" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/jml-.jpg" alt="JML" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/loom-Solar-.jpg" alt="Loom Solar" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/inpros.jpg" alt="Inpros" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/midlands.jpg" alt="Midlands" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/MCF-.jpg" alt="MCF" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Polyhose-.jpg" alt="Polyhose" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Pvhitech-.jpg" alt="Pvhitech" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/pqs-.jpg" alt="PQS" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/North-western-Railway-.jpg" alt="North-Western Railway" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/nwr.jpg" alt="NWR" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Prozeal.jpg" alt="Prozeal" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/north-central-railway-.jpg" alt="North Central Railway" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Northen-railway-.jpg" alt="Northern Railway" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/schwing-stetter-.jpg" alt="Schwing Stetter" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/webtac.jpg" alt="Webtac" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/winner-.jpg" alt="Winner" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Simith_System.jpg" alt="Smith System" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/sicame.jpg" alt="Sicame" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/soalr_91.jpg" alt="Solar 91" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/WR.jpg" alt="WR" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/stanley_black_decker.jpg" alt="Stanley Black & Decker" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/sunsure-.jpg" alt="Sunsure" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Schaffroth_Gmbh.jpg" alt="Schaffroth GmbH" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Rossell.jpg" alt="Rossell" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Skerion.jpg" alt="Skerion" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Rosenberger.jpg" alt="Rosenberger" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/taro_pumps.jpg" alt="Taro Pumps" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/cable-house-.jpg" alt="Cable House" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/cleveland-cable-.jpg" alt="Cleveland Cable" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Denrex.jpg" alt="Denrex" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/dome-.jpg" alt="Dome" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/gulf.jpg" alt="Gulf" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/hienergy-.jpg" alt="Hi Energy" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Hmws-.jpg" alt="HMWS" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Jabil.jpg" alt="Jabil" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/ojas-.jpg" alt="Ojas" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/PN-Electronics-.jpg" alt="PN Electronics" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Powerrail.jpg" alt="Powerrail" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Pt-indoprima.jpg" alt="PT Indoprima" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/pure-energy-.jpg" alt="Pure Energy" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/ROLLS-ROYCE.jpg" alt="Rolls Royce" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/saietta-.jpg" alt="Saietta" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/sumcab.jpg" alt="Sumcab" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/technicas-cable-.jpg" alt="Technicas Cable" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/total-engineering.jpg" alt="Total Engineering" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/voltago-.jpg" alt="Voltago" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/weidmuller.jpg" alt="Weidmuller" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/yosi-.jpg" alt="Yosi" loading="lazy"></div>
+        <div class="logo-cell"><img src="/assets/partners/Zivav-.jpg" alt="Zivav" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry breakdown -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Industry Verticals</p>
+        <h2 class="section-title">Where Our Cables Live</h2>
+      </div>
+      <div class="ind-layout">
+
+        <!-- ── Tab sidebar ── -->
+        <div class="ind-tabs" role="tablist">
+          <button class="ind-tab active" data-panel="aero" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 L21 15 L17 14 L15 21 L12 18 L9 21 L7 14 L3 15 Z"/></svg>
+            Aerospace &amp; Defence
+          </button>
+          <button class="ind-tab" data-panel="auto" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13 L5 8 L19 8 L21 13 L21 17 L3 17 Z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+            Automotive &amp; EV
+          </button>
+          <button class="ind-tab" data-panel="renew" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+            Renewable Energy
+          </button>
+          <button class="ind-tab" data-panel="marine" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="2"/><line x1="12" y1="9" x2="12" y2="18"/><line x1="6" y1="12" x2="18" y2="12"/><path d="M5 18 Q12 22 19 18"/></svg>
+            Marine &amp; Offshore
+          </button>
+          <button class="ind-tab" data-panel="rail" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="4" width="12" height="14" rx="1.5"/><line x1="6" y1="9" x2="18" y2="9"/><line x1="9" y1="18" x2="8" y2="21"/><line x1="15" y1="18" x2="16" y2="21"/></svg>
+            Railway &amp; Metro
+          </button>
+          <button class="ind-tab" data-panel="oil" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 C12 3 5 11 5 16 A7 7 0 0 0 19 16 C19 11 12 3 12 3Z"/></svg>
+            Oil &amp; Gas
+          </button>
+          <button class="ind-tab" data-panel="build" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="14"/><path d="M3 7 L12 3 L21 7"/><line x1="9" y1="7" x2="9" y2="21"/><line x1="15" y1="7" x2="15" y2="21"/></svg>
+            Building &amp; Infrastructure
+          </button>
+          <button class="ind-tab" data-panel="indus" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 5 L12 9"/><path d="M12 15 L12 19"/><path d="M5 12 L9 12"/><path d="M15 12 L19 12"/></svg>
+            Industrial &amp; Automation
+          </button>
+        </div>
+
+        <!-- ── Panels ── -->
+        <div id="ind-aero" class="ind-panel active" role="tabpanel">
+          <div class="ind-big-count">14</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Aerospace &amp; Defence</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">HAL, BEL, BHEL, DRDO labs, ISRO contractors and MoD-empanelled defence OEMs trust our MIL-Spec wire for airframes, avionics racks, ground support equipment and missile systems.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">MIL-W-16878</span>
+            <span class="ind-spec-chip">AS22759</span>
+            <span class="ind-spec-chip">DEF STAN 61-12</span>
+            <span class="ind-spec-chip">–65 °C to +260 °C</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">HAL</span>
+            <span class="ind-client-pill">BEL</span>
+            <span class="ind-client-pill">ISRO</span>
+            <span class="ind-client-pill">DRDO</span>
+            <span class="ind-client-pill">L&amp;T Defence</span>
+            <span class="ind-client-pill">BHEL</span>
+          </div>
+        </div>
+
+        <div id="ind-auto" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">240+</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Automotive &amp; EV</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Tier-1 OEMs across passenger, commercial and electric vehicle segments. High-temperature wire for ICE, battery management harnesses for EV, and wire harness supply for Tier-2 vendors.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">ISO 6722</span>
+            <span class="ind-spec-chip">JASO D611</span>
+            <span class="ind-spec-chip">LV 216</span>
+            <span class="ind-spec-chip">–40 °C to +150 °C</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">Tata Motors</span>
+            <span class="ind-client-pill">M&amp;M</span>
+            <span class="ind-client-pill">Bosch</span>
+            <span class="ind-client-pill">Continental</span>
+            <span class="ind-client-pill">Delphi</span>
+            <span class="ind-client-pill">Valeo</span>
+          </div>
+        </div>
+
+        <div id="ind-renew" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">85+</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Renewable Energy</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Solar EPCs, wind turbine OEMs and energy storage system integrators rely on our TÜV-certified solar DC cable for utility-scale farms, rooftop installations and off-grid hybrid systems.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">IEC 62930</span>
+            <span class="ind-spec-chip">EN 50618</span>
+            <span class="ind-spec-chip">TÜV 2 Pfg 1169</span>
+            <span class="ind-spec-chip">1.8 kV DC rated</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">Adani Solar</span>
+            <span class="ind-client-pill">Tata Power</span>
+            <span class="ind-client-pill">ReNew Power</span>
+            <span class="ind-client-pill">Suzlon</span>
+            <span class="ind-client-pill">Greenko</span>
+          </div>
+        </div>
+
+        <div id="ind-marine" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">38</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Marine &amp; Offshore</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Naval shipyards, offshore platform contractors and marine equipment OEMs require IEC 60092 and DNV-GL approved shipboard cables for power, control and communication across vessel types.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">IEC 60092</span>
+            <span class="ind-spec-chip">DNV-GL</span>
+            <span class="ind-spec-chip">Lloyds Register</span>
+            <span class="ind-spec-chip">Mud/salt resistant</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">Cochin Shipyard</span>
+            <span class="ind-client-pill">Mazagon Dock</span>
+            <span class="ind-client-pill">L&amp;T Hydrocarbon</span>
+            <span class="ind-client-pill">GRSE</span>
+          </div>
+        </div>
+
+        <div id="ind-rail" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">22</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Railway &amp; Metro</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Rolling stock OEMs, signalling contractors and metro construction projects specify our EN 45545-2 fire-rated rolling stock cables, signalling quads and track-side power cables.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">EN 45545-2</span>
+            <span class="ind-spec-chip">IEC 60228</span>
+            <span class="ind-spec-chip">RDSO approved</span>
+            <span class="ind-spec-chip">Halogen-free</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">Indian Railways</span>
+            <span class="ind-client-pill">RDSO</span>
+            <span class="ind-client-pill">L&amp;T Metro</span>
+            <span class="ind-client-pill">Alstom</span>
+            <span class="ind-client-pill">Bombardier</span>
+          </div>
+        </div>
+
+        <div id="ind-oil" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">45</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Oil &amp; Gas</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Petrochemical EPCs, refinery contractors and hazardous area instrumentation teams rely on our BS 5308 instrumentation cables, ATEX-compliant designs and armoured fire-resistant variants.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">BS 5308 Part 1&amp;2</span>
+            <span class="ind-spec-chip">IEC 60331</span>
+            <span class="ind-spec-chip">ATEX compliant</span>
+            <span class="ind-spec-chip">SWA/AWA armoured</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">IOCL</span>
+            <span class="ind-client-pill">BPCL</span>
+            <span class="ind-client-pill">ONGC</span>
+            <span class="ind-client-pill">Reliance Industries</span>
+            <span class="ind-client-pill">HPCL</span>
+          </div>
+        </div>
+
+        <div id="ind-build" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">600+</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Building &amp; Infrastructure</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Real estate developers, commercial contractors and data centre construction firms choose our fire-survival, low-smoke zero-halogen building wires and structured cabling solutions.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">IS 694</span>
+            <span class="ind-spec-chip">IEC 60332-3</span>
+            <span class="ind-spec-chip">LSZH / LSHF</span>
+            <span class="ind-spec-chip">FR-LSH</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">L&amp;T Construction</span>
+            <span class="ind-client-pill">Shapoorji</span>
+            <span class="ind-client-pill">DLF</span>
+            <span class="ind-client-pill">Brigade Group</span>
+            <span class="ind-client-pill">Prestige</span>
+          </div>
+        </div>
+
+        <div id="ind-indus" class="ind-panel" role="tabpanel">
+          <div class="ind-big-count">950+</div>
+          <div>
+            <h3 style="font-size:1.35rem;font-weight:700;margin:0 0 8px">Industrial Control &amp; Automation</h3>
+            <p style="color:var(--text-muted);line-height:1.7;margin:0">Process plant integrators, machine tool OEMs and robotics manufacturers depend on our flexible control cables, screened instrumentation cables and PROFIBUS-certified communication cables.</p>
+          </div>
+          <div class="ind-specs-row">
+            <span class="ind-spec-chip">IEC 60227</span>
+            <span class="ind-spec-chip">PROFIBUS PA</span>
+            <span class="ind-spec-chip">BS 5308 Part 2</span>
+            <span class="ind-spec-chip">Oil &amp; flex resistant</span>
+          </div>
+          <div class="ind-clients">
+            <span class="ind-client-pill">Siemens</span>
+            <span class="ind-client-pill">ABB</span>
+            <span class="ind-client-pill">Schneider</span>
+            <span class="ind-client-pill">Honeywell</span>
+            <span class="ind-client-pill">Rockwell</span>
+          </div>
+        </div>
+
+      </div><!-- /.ind-layout -->
+    </div>
+  </section>
+
+  <!-- Case studies -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Selected Engagements</p>
+        <h2 class="section-title">Case Studies</h2>
+        <p class="section-sub">Real engineering challenges, custom solutions, measurable outcomes.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="case-card">
+          <span class="industry-tag">Aerospace</span>
+          <h3>Custom MIL-DTL-16878/4 for ISRO satellite harness</h3>
+          <p class="client">— Lead supplier, geostationary communications satellite program · 2023</p>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">Developed silver-plated copper, PTFE-insulated, 26 AWG hi-flex wiring in 8 strict color codes for satellite electrical assembly. Vacuum-baked, EOL outgassing &lt;1% TML. Delivered 12 km within 90 days.</p>
+          <div class="case-stats">
+            <div class="spec"><span class="spec-label">Spec</span><span class="spec-value">M16878/4</span></div>
+            <div class="spec"><span class="spec-label">Lead Time</span><span class="spec-value">90 <span class="unit">days</span></span></div>
+            <div class="spec"><span class="spec-label">Volume</span><span class="spec-value">12 <span class="unit">km</span></span></div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="industry-tag">Solar EPC</span>
+          <h3>500 MW utility-scale solar installation in Rajasthan</h3>
+          <p class="client">— Top-3 Indian renewable energy developer · 2024</p>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">Solar DC cable to TUV 2PfG 1169 in 6 mm² and 10 mm² sections. UV-stabilised for desert ambient of 55 °C. 1,200 km total delivered over 6 months. Zero field failures in first 18 months of operation.</p>
+          <div class="case-stats">
+            <div class="spec"><span class="spec-label">Volume</span><span class="spec-value">1,200 <span class="unit">km</span></span></div>
+            <div class="spec"><span class="spec-label">Capacity</span><span class="spec-value">500 <span class="unit">MW</span></span></div>
+            <div class="spec"><span class="spec-label">Failures</span><span class="spec-value">0</span></div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="industry-tag">Automotive EV</span>
+          <h3>800V battery interconnect for premium EV platform</h3>
+          <p class="client">— Tier-1 European auto OEM (under NDA) · 2024</p>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">Custom 50/70 mm² flexible battery wire to LV216-2 spec. High-voltage 800V rated, electron-beam crosslinked silicone insulation. Survives 150,000 km flex cycle test with no measurable property degradation.</p>
+          <div class="case-stats">
+            <div class="spec"><span class="spec-label">Spec</span><span class="spec-value">LV216-2</span></div>
+            <div class="spec"><span class="spec-label">Voltage</span><span class="spec-value">800<span class="unit">V</span></span></div>
+            <div class="spec"><span class="spec-label">Flex Life</span><span class="spec-value">150K<span class="unit">+ cycles</span></span></div>
+          </div>
+        </div>
+        <div class="case-card">
+          <span class="industry-tag">Railway Metro</span>
+          <h3>Chennai Metro Phase II — rolling stock wiring</h3>
+          <p class="client">— Alstom Transport · 2022–2024</p>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.7;">Full EN 45545-2 HL3 fire-rated wiring package for 78 metro coaches. LSZH compounds, fire-survival circuits, signalling quad cables. Multi-year framework agreement with continuous on-site QA.</p>
+          <div class="case-stats">
+            <div class="spec"><span class="spec-label">Coaches</span><span class="spec-value">78</span></div>
+            <div class="spec"><span class="spec-label">Fire Rating</span><span class="spec-value">HL3</span></div>
+            <div class="spec"><span class="spec-label">Duration</span><span class="spec-value">2+ <span class="unit">years</span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global map -->
+  <section class="section section-divider">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Global Reach</p>
+        <h2 class="section-title">From Pondicherry to 50+ Countries</h2>
+      </div>
+      <div class="map-wrap">
+        <svg class="map-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="dotGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#D4915A"/>
+              <stop offset="100%" stop-color="#B87333" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- World map (equirectangular, public domain — Wikimedia Commons).
+               Dots are plotted with exact lat/lon math: x=(lon+180)/360*800, y=(90-lat)/180*400.
+               Greyscaled + faded so the copper markers stay the focus. -->
+          <image href="/assets/world-map.png" x="0" y="0" width="800" height="400"
+                 style="filter:grayscale(1) brightness(1.06);opacity:0.55;" preserveAspectRatio="none"/>
+          <!-- Connection lines from India (Pondicherry) -->
+          <g stroke="rgba(184,115,51,0.45)" stroke-width="0.9" fill="none" stroke-dasharray="4 3">
+            <path d="M 577 174 Q 380 40 182 113"/>
+            <path d="M 577 174 Q 490 40 397 83"/>
+            <path d="M 577 174 Q 505 55 422 87"/>
+            <path d="M 577 174 Q 550 140 520 147"/>
+            <path d="M 577 174 Q 645 100 707 120"/>
+            <path d="M 577 174 Q 650 215 698 256"/>
+            <path d="M 577 174 Q 515 240 456 264"/>
+            <path d="M 577 174 Q 420 240 284 222"/>
+          </g>
+          <!-- Country dots -->
+          <g>
+            <!-- India (HQ) — Pondicherry -->
+            <circle cx="577" cy="174" r="14" fill="url(#dotGlow)"/>
+            <circle cx="577" cy="174" r="5" fill="#B87333"/>
+            <text x="587" y="187" font-family="var(--mono), monospace" font-size="10" fill="#8C5520" font-weight="700">INDIA · HQ</text>
+
+            <!-- Selected markers -->
+            <circle cx="182" cy="113" r="3.5" fill="#B87333"/>
+            <text x="188" y="116" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">USA</text>
+            <circle cx="284" cy="222" r="3.5" fill="#B87333"/>
+            <text x="290" y="225" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">Brazil</text>
+            <circle cx="397" cy="83" r="3.5" fill="#B87333"/>
+            <text x="383" y="76" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">UK</text>
+            <circle cx="422" cy="87" r="3.5" fill="#B87333"/>
+            <text x="428" y="97" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">Germany</text>
+            <circle cx="456" cy="264" r="3.5" fill="#B87333"/>
+            <text x="462" y="267" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">South Africa</text>
+            <circle cx="520" cy="147" r="3.5" fill="#B87333"/>
+            <text x="498" y="140" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">UAE</text>
+            <circle cx="707" cy="120" r="3.5" fill="#B87333"/>
+            <text x="713" y="123" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">Japan</text>
+            <circle cx="698" cy="256" r="3.5" fill="#B87333"/>
+            <text x="668" y="272" font-family="var(--mono), monospace" font-size="8.5" fill="#475569" font-weight="600">Australia</text>
+          </g>
+        </svg>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,140px), 1fr)); gap:12px; margin-top:24px;">
+          <div class="spec"><span class="spec-label">Active Regions</span><span class="spec-value">7</span></div>
+          <div class="spec"><span class="spec-label">Export %</span><span class="spec-value">38<span class="unit">%</span></span></div>
+          <div class="spec"><span class="spec-label">Countries</span><span class="spec-value">50<span class="unit">+</span></span></div>
+          <div class="spec"><span class="spec-label">Currencies</span><span class="spec-value">12</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a><p>India's leading specialty wires &amp; cables manufacturer since 2002.</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="/products/products.html">By Segment</a></li><li><a href="/products/products.html">By Standard</a></li><li><a href="/products/product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="/tech-support/tech-support.html">AWG Converter</a></li><li><a href="/tech-support/tech-support.html">Voltage Drop</a></li><li><a href="/tech-support/tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="/company/about.html">About</a></li><li><a href="/company/certifications.html">Certifications</a></li><li><a href="/company/customers.html">Customers</a></li><li><a href="/company/contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+  <script src="/nav-mobile.js" defer></script>
+  <script src="/animations.js" defer></script>
+  <script>
+    // Industry verticals tab switching
+    (function () {
+      const tabs = document.querySelectorAll('.ind-tab');
+      const panels = document.querySelectorAll('.ind-panel');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          tabs.forEach(function (t) { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+          panels.forEach(function (p) { p.classList.remove('active'); });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          var target = document.getElementById('ind-' + tab.dataset.panel);
+          if (target) target.classList.add('active');
+          // On mobile, scroll the active tab into view
+          tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

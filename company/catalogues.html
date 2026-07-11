@@ -1,0 +1,571 @@
+﻿<!--
+  FILE: /company/catalogues.html
+
+  PURPOSE:
+    Technical literature download hub. Lists every Siechem product catalogue as a
+    visual card (dark mock-cover design), plus an Engineering Toolkit section of
+    application notes, white papers, and reference tables. The cards don't have
+    real PDF links yet — they link to /company/contact.html so sales can send the right
+    document to the right person (prevents outdated versions from circulating).
+
+  PAGE SECTIONS (in order):
+    1. Nav + breadcrumb      — "Home → Catalogues"
+    2. Page hero             — "Every Spec. Every Diagram. One Library." + R&D image
+    3. Filter bar            — "By Segment" / "By Standard" toggle (same pattern as
+                                /products/products.html) — segment shows cat-card covers,
+                                standard shows standard pills
+    4. Catalogue grid        — each card is a .cat-card with:
+                                  • .cat-cover  — dark mock book-cover (3:4 ratio on
+                                    desktop, 2:3 on mobile) with product name, standard
+                                    codes, and "PDF · On Request" label
+                                  No .cat-meta "Technical Catalogue / Contact to download"
+                                  bar — removed at user request (it was redundant and
+                                  cluttered mobile view).
+    5. Engineering Toolkit   — 9 cards for application notes: Cable Selection Guide,
+                                Installation Procedures, Color Code Reference, Derating
+                                Factor Tables, E-Beam white paper, Accelerated Ageing WP,
+                                Packaging & Drum Sizes, NFPA Reference, 3D CAD Models.
+    6. Newsletter band       — email signup for catalogue update notifications.
+
+  MOBILE RESPONSIVENESS:
+    - < 600px  → 2-column grid (col=2, gap=12px, card aspect 2:3, smaller fonts)
+    - 601-900px → 3-column grid
+    - > 900px  → 4-column grid (.grid-4 from theme.css)
+
+  JS LOGIC (inline <script>):
+    ALL_SEGS array (40 product families) and STANDARDS array (44 standard codes)
+    are defined as JS data. innerHTML is used to render both grids from these arrays.
+    This means adding a new product = add one line to ALL_SEGS, no HTML editing needed.
+    The filter-bar click handler shows/hides #view-segment vs #view-standard.
+
+  SHARED DEPENDENCIES:
+    - theme.css, animations.js, nav-mobile.js
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogues — Siechem</title>
+  <meta name="description" content="Download Siechem product catalogues for Aerospace, Automotive, Solar and Industrial cables. Updated datasheets and compliance documents.">
+  <meta name="keywords" content="siechem, specialty cables, wires, Chennai, India">
+  <meta property="og:title" content="Catalogues & Datasheets | Siechem Wires & Cables">
+  <meta property="og:description" content="Download Siechem product catalogues for Aerospace, Automotive, Solar and Industrial cables. Updated datasheets and compliance documents.">
+  <meta property="og:image" content="https://siechem.vercel.app/screenshots/og-home.jpg">
+  <meta property="og:url" content="https://siechem.vercel.app/company/catalogues.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://siechem.vercel.app/company/catalogues.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/theme.css">
+  <style>
+    .cat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.18s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+    .cat-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-3px); }
+
+    .cat-cover {
+      aspect-ratio: 3 / 4;
+      background: linear-gradient(135deg, #1a2030, #0f1422);
+      position: relative;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+    .cat-cover::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 6px;
+      background: var(--accent);
+    }
+    .cat-cover .siechem-mark {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.55);
+      font-weight: 600;
+    }
+    .cat-cover .siechem-mark .logo-square {
+      width: 22px; height: 22px;
+      border-radius: 5px;
+      background: linear-gradient(135deg, #B87333, #8C5520);
+    }
+    .cat-cover .cat-title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .cat-cover .cat-sub {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent-2);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+    .cat-cover .pages-count {
+      align-self: flex-end;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .cat-meta {
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .cat-meta .info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .cat-meta .info-size { font-family: var(--mono); font-size: 12px; color: var(--text-faint); }
+    .cat-meta .info-ver { font-family: var(--mono); font-size: 11px; color: var(--text-dim); }
+    .cat-dl {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .cat-card:hover .cat-dl { background: var(--accent-light); }
+
+    /* Mobile grid overrides */
+    @media (max-width: 600px) {
+      #allSegGrid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .cat-cover {
+        padding: 14px;
+        aspect-ratio: 2 / 3;
+      }
+      .cat-cover .cat-title {
+        font-size: 15px;
+        margin-top: 36px !important;
+      }
+      .cat-cover .cat-sub {
+        font-size: 9.5px;
+      }
+      .cat-cover .siechem-mark {
+        font-size: 9px;
+      }
+      .cat-cover .pages-count {
+        font-size: 9.5px;
+      }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      #allSegGrid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+      }
+    }
+
+    .toolkit-link {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.15s;
+    }
+    .toolkit-link:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .toolkit-link .ki {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(184,115,51,0.1);
+      border: 1px solid var(--accent-border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent-2);
+      flex-shrink: 0;
+    }
+    .toolkit-link .text { flex: 1; }
+    .toolkit-link h4 { font-size: 14px; font-weight: 700; }
+    .toolkit-link p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a>
+      <div class="nav-links">
+        <a href="/siechem-redesign.html" class="nav-link">Home</a>
+        <div class="nav-company-dropdown">
+        <a href="/company/about.html" class="nav-link nav-company-trigger">Company <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+        <div class="nav-company-menu">
+          <div class="nav-company-grid">
+            <a href="/company/about.html" class="nav-company-item">About Us</a>
+            <a href="/company/mds-message.html" class="nav-company-item">MD's Message</a>
+            <a href="/company/key-persons.html" class="nav-company-item">Key Persons</a>
+            <a href="/company/manufacturing-facility.html" class="nav-company-item">Manufacturing Facility</a>
+            <a href="/company/testing-facilities.html" class="nav-company-item">Testing Facilities</a>
+            <a href="/company/research-development.html" class="nav-company-item">Research &amp; Development</a>
+            <a href="/company/ethical-values.html" class="nav-company-item">Ethical Values</a>
+            <a href="/company/mission-vision.html" class="nav-company-item">Mission &amp; Vision</a>
+            <a href="/company/ppt.html" class="nav-company-item">PPT</a>
+            <a href="/company/policies.html" class="nav-company-item">Policies</a>
+            <a href="/company/csr.html" class="nav-company-item">CSR</a>
+            <a href="/company/careers.html" class="nav-company-item">Careers</a>
+            <a href="/company/events.html" class="nav-company-item">Events</a>
+            <a href="/company/privacy-policy.html" class="nav-company-item">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+        <a href="/products/products.html" class="nav-link">Products</a>
+        <a href="/company/catalogues.html" class="nav-link active">Catalogues</a>
+        <a href="/company/certifications.html" class="nav-link">Certifications</a>
+        <a href="/company/customers.html" class="nav-link">Customers</a>
+        <div class="nav-company-dropdown">
+          <a href="/tech-support/tech-support.html" class="nav-link nav-company-trigger">Tech Support <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu nav-company-menu-wide">
+            <div class="nav-company-grid-3">
+              <a href="/tech-support/ts-awg-sqmm.html" class="nav-company-item">AWG to Square mm Conversion</a>
+              <a href="/tech-support/ts-braid-shield-calc.html" class="nav-company-item">Braid Shield Calculation</a>
+              <a href="/tech-support/ts-cable-handling.html" class="nav-company-item">Cable Handling System</a>
+              <a href="/tech-support/ts-cable-installation.html" class="nav-company-item">Cable Installation Procedure</a>
+              <a href="/tech-support/ts-cable-life-calc.html" class="nav-company-item">Cable Life Calculation</a>
+              <a href="/tech-support/ts-cable-size-auto.html" class="nav-company-item">Cable Size Calculation for Automotive Cable</a>
+              <a href="/tech-support/ts-cable-size-solar.html" class="nav-company-item">Cable Size Selection for Solar PV Plants</a>
+              <a href="/tech-support/ts-capacitance-calc.html" class="nav-company-item">Capacitance Calculation</a>
+              <a href="/tech-support/ts-color-code.html" class="nav-company-item">Color Code Chart</a>
+              <a href="/tech-support/ts-ptfe-comparison.html" class="nav-company-item">Comparison Chart of PTFE, FEP, PFA, ETFE</a>
+              <a href="/tech-support/ts-conductor-resistance.html" class="nav-company-item">Conductor Resistance Calculation</a>
+              <a href="/tech-support/ts-current-carrying.html" class="nav-company-item">Current Carrying Capacity Calculation</a>
+              <a href="/tech-support/ts-derating-factors.html" class="nav-company-item">Derating Factors</a>
+              <a href="/tech-support/ts-electrical-losses.html" class="nav-company-item">Electrical Losses Calculation</a>
+              <a href="/tech-support/ts-impedance-calc.html" class="nav-company-item">Impedance Calculation</a>
+              <a href="/tech-support/ts-inductance-calc.html" class="nav-company-item">Inductance Calculation</a>
+              <a href="/tech-support/ts-insulation-resistance.html" class="nav-company-item">Insulation Resistance Calculation</a>
+              <a href="/tech-support/ts-nfpa.html" class="nav-company-item">NFPA Electrical Safety Standard</a>
+              <a href="/tech-support/ts-packaging.html" class="nav-company-item">Packaging of Wires and Cables</a>
+              <a href="/tech-support/ts-publication.html" class="nav-company-item">Publication</a>
+              <a href="/tech-support/ts-reactance-calc.html" class="nav-company-item">Reactance Calculation</a>
+              <a href="/tech-support/ts-short-circuit-calc.html" class="nav-company-item">Short Circuit Temperature Rating Calculation</a>
+              <a href="/tech-support/ts-toxicity-index.html" class="nav-company-item">Toxicity Index Calculation</a>
+              <a href="/tech-support/ts-voltage-drop.html" class="nav-company-item">Voltage Drop Calculation</a>
+              <a href="/tech-support/ts-wp-ebeam.html" class="nav-company-item">White Paper: Electron-Beam Crosslinking</a>
+              <a href="/tech-support/ts-wp-ageing.html" class="nav-company-item">White Paper: Accelerated Ageing &amp; Cable Life</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-company-dropdown">
+          <a href="#" class="nav-link nav-company-trigger">Resources <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+          <div class="nav-company-menu">
+            <div class="nav-company-grid">
+              <a href="/resources/res-5s.html" class="nav-company-item">5S</a>
+              <a href="/resources/res-awards.html" class="nav-company-item">Awards / Recognition</a>
+              <a href="/resources/res-capabilities.html" class="nav-company-item">Capabilities</a>
+              <a href="/resources/res-covid19.html" class="nav-company-item">COVID-19</a>
+              <a href="/resources/res-cricket-teams.html" class="nav-company-item">Cricket Teams</a>
+              <a href="/resources/res-customer-care.html" class="nav-company-item">Customer Care</a>
+              <a href="/resources/res-customer-comments.html" class="nav-company-item">Customer Comments</a>
+              <a href="/resources/res-green-technology.html" class="nav-company-item">Green Technology</a>
+              <a href="/resources/res-metal-trend.html" class="nav-company-item">Metal Trend</a>
+              <a href="/resources/res-part-number-index.html" class="nav-company-item">Part Number Index</a>
+              <a href="/resources/res-reach.html" class="nav-company-item">REACH</a>
+              <a href="/resources/res-rohs.html" class="nav-company-item">RoHS</a>
+              <a href="/resources/res-siechem-erp.html" class="nav-company-item">Siechem ERP</a>
+              <a href="/resources/res-un-global-compact.html" class="nav-company-item">UN Global Compact</a>
+            </div>
+          </div>
+        </div>
+        <a href="/company/contact.html" class="nav-link">Contact Us</a>
+      </div>
+      <div class="nav-actions">
+        <a href="/company/contact.html" class="nav-cta">Request Quote
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div>
+      <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-co-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Company <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="mobile-company-links" id="mob-co-links">
+        <a href="/company/about.html">About Us</a>
+        <a href="/company/mds-message.html">MD's Message</a>
+        <a href="/company/key-persons.html">Key Persons</a>
+        <a href="/company/manufacturing-facility.html">Manufacturing Facility</a>
+        <a href="/company/testing-facilities.html">Testing Facilities</a>
+        <a href="/company/research-development.html">Research &amp; Development</a>
+        <a href="/company/ethical-values.html">Ethical Values</a>
+        <a href="/company/mission-vision.html">Mission &amp; Vision</a>
+        <a href="/company/ppt.html">PPT</a>
+        <a href="/company/policies.html">Policies</a>
+        <a href="/company/csr.html">CSR</a>
+        <a href="/company/careers.html">Careers</a>
+        <a href="/company/events.html">Events</a>
+        <a href="/company/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+      <a href="/products/products.html">Products</a>
+      <a href="/company/catalogues.html">Catalogues</a>
+      <a href="/company/certifications.html">Certifications</a>
+      <a href="/company/customers.html">Customers</a>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-ts-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Tech Support <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-techsup-links" id="mob-ts-links">
+          <a href="/tech-support/ts-awg-sqmm.html">AWG to Square mm Conversion</a><a href="/tech-support/ts-braid-shield-calc.html">Braid Shield Calculation</a><a href="/tech-support/ts-cable-handling.html">Cable Handling System</a><a href="/tech-support/ts-cable-installation.html">Cable Installation Procedure</a><a href="/tech-support/ts-cable-life-calc.html">Cable Life Calculation</a><a href="/tech-support/ts-cable-size-auto.html">Cable Size Calculation for Automotive</a><a href="/tech-support/ts-cable-size-solar.html">Cable Size for Solar PV Plants</a><a href="/tech-support/ts-capacitance-calc.html">Capacitance Calculation</a><a href="/tech-support/ts-color-code.html">Color Code Chart</a><a href="/tech-support/ts-ptfe-comparison.html">Comparison: PTFE, FEP, PFA, ETFE</a><a href="/tech-support/ts-conductor-resistance.html">Conductor Resistance Calculation</a><a href="/tech-support/ts-current-carrying.html">Current Carrying Capacity</a><a href="/tech-support/ts-derating-factors.html">Derating Factors</a><a href="/tech-support/ts-electrical-losses.html">Electrical Losses Calculation</a><a href="/tech-support/ts-impedance-calc.html">Impedance Calculation</a><a href="/tech-support/ts-inductance-calc.html">Inductance Calculation</a><a href="/tech-support/ts-insulation-resistance.html">Insulation Resistance Calculation</a><a href="/tech-support/ts-nfpa.html">NFPA Electrical Safety Standard</a><a href="/tech-support/ts-packaging.html">Packaging of Wires and Cables</a><a href="/tech-support/ts-publication.html">Publication</a><a href="/tech-support/ts-reactance-calc.html">Reactance Calculation</a><a href="/tech-support/ts-short-circuit-calc.html">Short Circuit Temp Rating</a><a href="/tech-support/ts-toxicity-index.html">Toxicity Index Calculation</a><a href="/tech-support/ts-voltage-drop.html">Voltage Drop Calculation</a><a href="/tech-support/ts-wp-ebeam.html">White Paper: E-Beam Crosslinking</a><a href="/tech-support/ts-wp-ageing.html">White Paper: Accelerated Ageing</a>
+        </div>
+      </div>
+      <div>
+        <button class="mobile-company-toggle" onclick="var s=document.getElementById('mob-res-links');s.classList.toggle('open');this.querySelector('.mobile-company-toggle-arrow').style.transform=s.classList.contains('open')?'rotate(180deg)':'';" aria-expanded="false">Resources <svg class="mobile-company-toggle-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <div class="mobile-resources-links" id="mob-res-links">
+          <a href="/resources/res-5s.html">5S</a><a href="/resources/res-awards.html">Awards / Recognition</a><a href="/resources/res-capabilities.html">Capabilities</a><a href="/resources/res-covid19.html">COVID-19</a><a href="/resources/res-cricket-teams.html">Cricket Teams</a><a href="/resources/res-customer-care.html">Customer Care</a><a href="/resources/res-customer-comments.html">Customer Comments</a><a href="/resources/res-green-technology.html">Green Technology</a><a href="/resources/res-metal-trend.html">Metal Trend</a><a href="/resources/res-part-number-index.html">Part Number Index</a><a href="/resources/res-reach.html">REACH</a><a href="/resources/res-rohs.html">RoHS</a><a href="/resources/res-siechem-erp.html">Siechem ERP</a><a href="/resources/res-un-global-compact.html">UN Global Compact</a>
+        </div>
+      </div>
+      <a href="/company/contact.html">Contact Us</a>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><span>Catalogues</span></div>
+      <div class="page-hero-content">
+        <div class="fade-up">
+          <div class="eyebrow">Downloads</div>
+          <h1 class="page-title">Every Spec.<br/>Every <em>Diagram.</em><br/>One Library.</h1>
+          <p class="page-lede">Complete catalogues for every product segment. Datasheets, technical drawings, dimensional tables, test reports, certifications and CAD models. All up-to-date, all free to download.</p>
+        </div>
+        <div class="fade-up fade-up-2">
+          <img class="hero-img" src="/assets/ppt-images/slide-14-1.jpg" alt="Siechem in-house R&D — cable cross-section engineering and development" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalogues browser -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Product Catalogues</p>
+        <h2 class="section-title">Browse All Catalogues</h2>
+        <p class="section-sub">Technical catalogues for every product segment and standard. Contact us to request a specific PDF.</p>
+      </div>
+      <div class="filter-bar">
+        <button class="active" data-view="segment">By Segment</button>
+        <button data-view="standard">By Standard</button>
+      </div>
+      <div id="view-segment">
+        <div class="grid grid-4" style="gap:20px;" id="allSegGrid"></div>
+      </div>
+      <div id="view-standard" style="display:none;">
+        <div class="grid grid-auto" style="gap:12px;" id="allStdGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toolkit -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Engineering Toolkit</p>
+        <h2 class="section-title">Application Notes &amp; Tools</h2>
+        <p class="section-sub">Selection guides, installation procedures, white papers and reference data — everything you need to spec, install and maintain Siechem cables.</p>
+      </div>
+      <div class="grid grid-3">
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>Cable Selection Guide</h4><p>PDF · 38 pages · 4.2 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>Installation Procedures</h4><p>PDF · 24 pages · 2.8 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>Color Code Reference</h4><p>PDF · 16 pages · 1.6 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>Derating Factor Tables</h4><p>PDF · 12 pages · 1.1 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>WP — E-Beam Crosslinking</h4><p>PDF · 18 pages · 2.4 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>WP — Accelerated Ageing</h4><p>PDF · 22 pages · 3.1 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>Packaging &amp; Drum Sizes</h4><p>PDF · 8 pages · 760 KB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>NFPA Safety Reference</h4><p>PDF · 14 pages · 1.4 MB</p></div>
+        </a>
+        <a href="#" class="toolkit-link">
+          <div class="text"><h4>3D CAD Models (STEP)</h4><p>ZIP · 240 MB</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / get latest -->
+  <section class="section">
+    <div class="container">
+      <div style="padding:clamp(24px,4vw,40px); background:var(--bg-card); border:1px solid var(--border); border-radius:16px; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:32px; align-items:center;">
+        <div>
+          <div class="eyebrow" style="margin-bottom:14px;">Stay Updated</div>
+          <h3 style="font-size:24px; font-weight:800; letter-spacing:-0.5px; line-height:1.2; margin-bottom:10px;">New Editions, New Standards</h3>
+          <p style="color:var(--text-muted); font-size:14.5px;">Get notified when we release updated catalogues, new product lines, or revised compliance documents. Engineer-targeted, low volume, easy unsubscribe.</p>
+        </div>
+        <form style="display:flex; gap:10px; flex-direction:column;">
+          <input class="input" type="email" placeholder="you@company.com">
+          <button type="button" class="btn btn-primary" style="justify-content:center;">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="/siechem-redesign.html" class="nav-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables" class="logo-img" /></a><p>India's leading specialty wires &amp; cables manufacturer since 2002.</p></div>
+        <div class="footer-col"><h4>Products</h4><ul><li><a href="/products/products.html">By Segment</a></li><li><a href="/products/products.html">By Standard</a></li><li><a href="/products/product-detail.html">Solar Cables</a></li></ul></div>
+        <div class="footer-col"><h4>Engineering</h4><ul><li><a href="/tech-support/tech-support.html">AWG Converter</a></li><li><a href="/tech-support/tech-support.html">Voltage Drop</a></li><li><a href="/tech-support/tech-support.html">All Tools</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="/company/about.html">About</a></li><li><a href="/company/certifications.html">Certifications</a></li><li><a href="/company/customers.html">Customers</a></li><li><a href="/company/contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:sales@siechem.com">sales@siechem.com</a></li><li><a href="tel:+914425220859">+91 44 2522 0859</a></li><li>Chennai · Pondicherry</li></ul></div>
+      </div>
+      <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
+    </div>
+  </footer>
+
+  <script src="/nav-mobile.js" defer></script>
+  <script>
+    const GD = id => `assets/cable-images/${id}.jpg`;
+    const ALL_SEGS = [
+      { name: "Aerospace Cables",                   std: "MIL-DTL-16878 · AS22759",           url: "/products/product-aero44.html",       img: GD("1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO") },
+      { name: "Appliance Wires &amp; Cables",        std: "UL 758 · IS 694", url: "/products/product-family.html#f=ul-appliance",                                                     img: GD("1xguTBAXPBU6N1ShHehZ3yHVY4mg7bK4Y") },
+      { name: "Automotive Cables",                   std: "JASO D611 · ISO 6722 · LV216",       url: "/products/product-family.html#f=automotive",   img: GD("1YcTrAW5QxLtbBdhjuwScwH7SX67Nw79n") },
+      { name: "Battery Cables",                      std: "UL 1283 · SAE J1127", url: "/products/product-family.html#f=battery",                                                 img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
+      { name: "Coaxial Cables",                      std: "RG Series · MIL-C-17 · IEC 61196", url: "/products/product-family.html#f=antenna",                                    img: GD("1ivlQPQ_uXknxhMy12Y152zVNCSxFvct-") },
+      { name: "Control &amp; Switchboard Cables",    std: "BS 6231 · IS 1554", url: "/products/product-family.html#f=is1554-control",                                                   img: GD("1dputTfg7BwkuujRqAUMFTQHw-35VV9Pi") },
+      { name: "Fire Resistant Cables",               std: "BS 6387 · IEC 60331", url: "/products/product-family.html#f=fire-resistant",                                                 img: GD("1Mm2yJQBJu0xCvbeiG3W3sFgYudtiGW89") },
+      { name: "Flexible Cables",                     std: "IEC 60245 · IS 9968", url: "/products/product-family.html#f=sflex",                                                 img: GD("1XGt-nXIuzpFLyQVo778yB3yw29D-lD2x") },
+      { name: "High Temperature Cables",             std: "PW 125 · Sietherm 155 · Fluoro 200", url: "/products/product-family.html#f=sietherm-155",                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Irrigation Communication Cables",     std: "Custom · IEC 60332", url: "/products/product-family.html#f=irrigation-comm",                                                  img: GD("1A3HQwZZaOwzRmV7RjA1XdFrhEaWoVjt9") },
+      { name: "Marine, Shipboard &amp; Boat Cables", std: "IEC 60092 · NEK 606 · Lloyd's",       url: "/products/product-family.html#f=marine", img: GD("1kZJfoHzA5DU94B_biqFL_utRDQzHY401") },
+      { name: "Nuclear Cables",                      std: "IEEE 383 · IS 16504", url: "/products/product-family.html#f=nuclear",                                                 img: GD("1DnnJFWY7wmKIhRJ2Zg2V_Hm2-1rxHmnz") },
+      { name: "Power Cables",                        std: "IEC 60502 · IS 7098", url: "/products/product-family.html#f=is7098-power",                                                 img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
+      { name: "PW 125 Wires — High Rise",            std: "Sietherm 125", url: "/products/product-family.html#f=pw-125",                                                        img: GD("1BftiDl6-vMcBerUhkCrU4JA0QBLQcXvM") },
+      { name: "Railway Quad &amp; Signalling Cables",std: "IRS S-23 · RDSO", url: "/products/product-family.html#f=indian-railway",                                                     img: GD("1ae6Wq6uQFmKcNz2e5tG2uzrUVTNI-LZN") },
+      { name: "Rolling Stock Cables",                std: "EN 50264 · EN 50306", url: "/products/product-family.html#f=rolling-stock",                                                 img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
+      { name: "Rubber Cables",                       std: "IS 9968 · IEC 60245", url: "/products/product-family.html#f=rubber",                                                 img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
+      { name: "Silicone Cables",                     std: "VDE 0250 · BS 7919", url: "/products/product-family.html#f=silicone",                                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Solar Cables",                        std: "TUV 2PfG 1169 · EN 50618", url: "/products/product-family.html#f=solar",                                            img: GD("1CUFs8DPlcldhRvYle78trTIu-HDoCgya") },
+      { name: "Welding Cables",                      std: "IEC 60245-6 · IS 9857", url: "/products/product-family.html#f=welding",                                               img: GD("1zApJUtj0n5HxxYUYTgoxVLdAzaI_uDJD") },
+      { name: "Wind Energy Cables",                  std: "DNV-GL · IEC 60228", url: "/products/product-family.html#f=wind",                                                  img: GD("15L1L1WkHXzl6ao4r6b5V-SEIjDfR6z0O") },
+      { name: "EV &amp; Charging Cables",           std: "LV 216 · EBXL 150°C · 1000V AC",     url: "/products/product-family.html#f=ev", img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
+      { name: "Diesel Locomotive Cables (EMD)",     std: "EMD/EL/PT/505 · ATC 125°C",          url: "/products/product-family.html#f=emd-locomotive", img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
+      { name: "BS 5467 Power Cables",               std: "BS 5467 · 600/1000V · XLPE",         url: "/products/product-family.html#f=bs5467-power", img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
+      { name: "Cable Conduits &amp; Fittings",      std: "RDSO/PE/SPEC/0138",                  url: "/products/product-family.html#f=conduits", img: GD("1qxUJf4R3uE-xO609AGXTdlx9qxNhpCE1") },
+      { name: "Sietherm 125 Wires",                 std: "EBXL 125°C · Single & Multicore",    url: "/products/product-family.html#f=sietherm-125", img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Fluoroelastomer Cables",             std: "200°C · Diesel Locomotive",          url: "/products/product-family.html#f=fluoroelastomer", img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
+    ];
+
+    const STANDARDS = [
+      { code: "AS/NZS",          desc: "Australian & NZ Standards" },
+      { code: "BS EN",           desc: "British / European" },
+      { code: "BS",              desc: "British Standard" },
+      { code: "CLW",             desc: "Chittaranjan Locomotive Works" },
+      { code: "DEF",             desc: "UK Defence Standard" },
+      { code: "DIN 72551-6",     desc: "German Automotive" },
+      { code: "EDPS 179/304",    desc: "Engineering Spec" },
+      { code: "EED",             desc: "Engineering & Equipment" },
+      { code: "ELRS/SPEC/ELC",   desc: "ELRS / 0019" },
+      { code: "ESF-M1L59-A",     desc: "Ford Engineering Spec" },
+      { code: "GKW",             desc: "Russian Standard" },
+      { code: "GR/CUG-01/03",    desc: "Indian Telecom" },
+      { code: "GS 95007-1",      desc: "BMW Standard" },
+      { code: "GOST",            desc: "Russian Federation Standard" },
+      { code: "IEC 60092",       desc: "Marine & Shipboard" },
+      { code: "IEC 60228",       desc: "Conductor Specification" },
+      { code: "IEC 60245",       desc: "Rubber Insulated Cables" },
+      { code: "IEC 60331",       desc: "Fire Resistance" },
+      { code: "IEC 60502",       desc: "Power Cables up to 30kV" },
+      { code: "IEC 60794",       desc: "Fibre Optic Cables" },
+      { code: "IRS S-23",        desc: "Indian Railways Signal" },
+      { code: "IS 694",          desc: "Indian Standard PVC Cables" },
+      { code: "IS 1554",         desc: "Indian Standard Cables" },
+      { code: "IS 7098",         desc: "XLPE Insulated Cables" },
+      { code: "IS 9938",         desc: "Telecom Cables" },
+      { code: "ISO 6722-1",      desc: "Automotive Road Vehicles" },
+      { code: "JASO D611",       desc: "Japanese Automotive" },
+      { code: "JIS C 3406/3410", desc: "Japanese Industrial" },
+      { code: "LV 216-2",        desc: "Volkswagen Group" },
+      { code: "MIL-DTL-16878",   desc: "US Military Hook-Up Wire" },
+      { code: "MIL-W-22759",     desc: "Aerospace PTFE Wire" },
+      { code: "NEK 606",         desc: "Norwegian Offshore" },
+      { code: "NES",             desc: "UK Naval Engineering" },
+      { code: "PW 125",          desc: "Siechem Proprietary" },
+      { code: "RDSO",            desc: "Research Designs & Standards Org." },
+      { code: "SAE J1128",       desc: "Automotive Low Voltage" },
+      { code: "Sietherm 125",    desc: "Siechem Proprietary" },
+      { code: "Sietherm 155",    desc: "Siechem Proprietary" },
+      { code: "TUV 2PfG 1169",   desc: "Solar Cable" },
+      { code: "UL 44",           desc: "Thermoset-Insulated Wires" },
+      { code: "UL 758",          desc: "Appliance Wiring Material" },
+      { code: "VDE 0250",        desc: "German Cable Standard" },
+      { code: "VG",              desc: "German Military" },
+      { code: "VW 603 06",       desc: "Volkswagen Cable Spec" },
+      { code: "YPES",            desc: "Yellow Polyethylene Spec" },
+    ];
+
+    const dlIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2 V11"/><path d="M4 8 L8 12 L12 8"/><path d="M2 14 H14"/></svg>`;
+
+    document.getElementById('allSegGrid').innerHTML = ALL_SEGS.map(seg => `
+      <a href="${seg.url || '/company/contact.html'}" class="cat-card">
+        <div class="cat-cover" ${seg.img ? `style="background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.68)),url('${seg.img}');background-size:cover;background-position:center;"` : ''}>
+          <div>
+            <div class="cat-title">${seg.name}</div>
+            <div class="cat-sub">${seg.std}</div>
+          </div>
+          <div class="pages-count">PDF · On Request</div>
+        </div>
+      </a>
+    `).join('');
+
+    document.getElementById('allStdGrid').innerHTML = STANDARDS.map(std => `
+      <a href="/company/contact.html" class="standard-pill" style="display:flex;flex-direction:column;gap:4px;padding:16px 20px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;transition:all 0.15s;text-decoration:none;">
+        <div style="font-family:var(--mono);font-size:13px;font-weight:700;color:var(--accent-2);">${std.code}</div>
+        <div style="font-size:13px;color:var(--text-muted);">${std.desc}</div>
+      </a>
+    `).join('');
+
+    document.querySelectorAll('.filter-bar button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-bar button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const v = btn.dataset.view;
+        document.getElementById('view-segment').style.display = v === 'segment' ? 'block' : 'none';
+        document.getElementById('view-standard').style.display  = v === 'standard'  ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
