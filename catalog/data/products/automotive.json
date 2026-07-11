@@ -3,7 +3,7 @@
   {
    "id": "6fb1927d92",
    "family": "automotive",
-   "name": "Automotive Cables — Selection Table",
+   "name": "Automotive Cables",
    "pages": [5, 5],
    "headers": ["S.NO", ". Type", "Conductor", "Insulation", "Spec", "Temp. Range", "Catalogue"],
    "rows": [
@@ -169,7 +169,7 @@
   {
    "id": "4aafd0241b",
    "family": "automotive",
-   "name": "Special Automotive CableS",
+   "name": "Special Automotive Cables",
    "pages": [6],
    "headers": ["S.NO", ". Type", "Conductor", "Insulation", "Spec", "Temp. Range", "Catalogue"],
    "rows": [
@@ -272,7 +272,7 @@
   {
    "id": "ebf883b10c",
    "family": "automotive",
-   "name": "Special Automotive CableS",
+   "name": "Special Automotive Cables",
    "pages": [6],
    "headers": ["S.NO.", "Type", "Conductor", "Insulation", "Spec", "Temp. Range", "Catalogue"],
    "rows": [
@@ -388,7 +388,7 @@
   {
    "id": "4692130412",
    "family": "automotive",
-   "name": "Special Automotive CableS",
+   "name": "Special Automotive Cables",
    "pages": [7],
    "headers": ["S.NO. — HV EV", "Type — Cables & Charging Cables", "Conductor", "Insulation", "Spec", "Temp. Range", "Catalogue"],
    "rows": [
@@ -540,7 +540,7 @@
   {
    "id": "bb5e0dfa28",
    "family": "automotive",
-   "name": "AVS RoHS — starting, charging, lighting, signal and instrument construction according to JASO D 611: 2014 ü Standard : JASO D 611: 2014",
+   "name": "AVS RoHS",
    "pages": [14],
    "headers": [
     "Part Number",
@@ -974,7 +974,7 @@
   {
    "id": "3692db4b93",
    "family": "automotive",
-   "name": "AEX RoHS — automobiles. E-Cu ETP1 according to JIS C 3102, bare conductor - 40°C to +120°C (3000 Hours)",
+   "name": "AEX RoHS",
    "pages": [23],
    "headers": [
     "Part Number",
@@ -1285,7 +1285,7 @@
   {
    "id": "7772136bc8",
    "family": "automotive",
-   "name": "EB RoHS — for starting, charging, lighting, signal and construction according to JASO D 611 : 2014 ü Standard : JASO D 611: 2014",
+   "name": "EB RoHS",
    "pages": [29],
    "headers": [
     "Part Number",
@@ -1336,7 +1336,7 @@
   {
    "id": "e6d40a68db",
    "family": "automotive",
-   "name": "HEB RoHS — for starting, charging, lighting, signal and ü Standard : JASO D 611: 2014",
+   "name": "HEB RoHS",
    "pages": [30],
    "headers": [
     "Part Number",
@@ -1590,7 +1590,7 @@
   {
    "id": "bd6fb1cab0",
    "family": "automotive",
-   "name": "EEX RoHS — automobiles. E-Cu ETP1 according to JIS C 3102, bare conductor - 40°C to +120°C",
+   "name": "EEX RoHS",
    "pages": [35],
    "headers": [
     "Part Number",
@@ -2071,7 +2071,7 @@
   {
    "id": "cfd48c4526",
    "family": "automotive",
-   "name": "GPT RoHS — Specifies general circuit wiring. ü Insulation : PVC, Polyvinylchloride. - 400C to +850C (3000 Hours)",
+   "name": "GPT RoHS",
    "pages": [44],
    "headers": [
     "Part Number",
@@ -2119,7 +2119,7 @@
   {
    "id": "121c5305ed",
    "family": "automotive",
-   "name": "GPT RoHS — Specifies general circuit wiring.",
+   "name": "GPT RoHS",
    "pages": [45],
    "headers": [
     "Part Number",
@@ -2166,7 +2166,7 @@
   {
    "id": "6503843d0d",
    "family": "automotive",
-   "name": "HDT RoHS — physical threats ü Colour : As per customer order. ü Test Voltage : 1kV",
+   "name": "HDT RoHS",
    "pages": [46],
    "headers": [
     "Part Number",
@@ -2214,7 +2214,7 @@
   {
    "id": "4bb7963ffc",
    "family": "automotive",
-   "name": "TWP RoHS — automobiles. E-Cu ETP1 according to ASTM B3, bare conductor - 400C to + 850C (3000 Hours)",
+   "name": "TWP RoHS ",
    "pages": [47],
    "headers": [
     "Part Number",
@@ -2265,7 +2265,7 @@
   {
    "id": "e0b79d8362",
    "family": "automotive",
-   "name": "TXL RoHS — automobiles. bare conductor E- Cu ETP1 according to - 400C to +1250C (3000 Hours)",
+   "name": "TXL RoHS",
    "pages": [48],
    "headers": [
     "Part Number",
@@ -2378,7 +2378,7 @@
   {
    "id": "b93721361d",
    "family": "automotive",
-   "name": "GXL RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "GXL RoHSS",
    "pages": [51, 52],
    "headers": [
     "Part Number",
@@ -2437,7 +2437,7 @@
   {
    "id": "6e5f0b1332",
    "family": "automotive",
-   "name": "SXL RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "SXL RoHS ",
    "pages": [53],
    "headers": [
     "Part Number",
@@ -2487,7 +2487,7 @@
   {
    "id": "8381c332e1",
    "family": "automotive",
-   "name": "SXL RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "SXL RoHS",
    "pages": [54],
    "headers": [
     "Part Number",
@@ -2536,7 +2536,7 @@
   {
    "id": "4847e38888",
    "family": "automotive",
-   "name": "STT RoHS — - 40 C to +80 C (3000 Hours)",
+   "name": "STT RoHS",
    "pages": [55],
    "headers": [
     "Part Number",
@@ -2586,7 +2586,7 @@
   {
    "id": "38a83dda5f",
    "family": "automotive",
-   "name": "SGT RoHS — - 40°C to +80°C (3000 Hours)",
+   "name": "SGT RoHS ",
    "pages": [56],
    "headers": [
     "Part Number",
@@ -2636,7 +2636,7 @@
   {
    "id": "8d443d387d",
    "family": "automotive",
-   "name": "STX RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "STX RoHS",
    "pages": [57],
    "headers": [
     "Part Number",
@@ -2685,7 +2685,7 @@
   {
    "id": "b7ad135b7a",
    "family": "automotive",
-   "name": "SGX RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "SGX RoHS",
    "pages": [58],
    "headers": [
     "Part Number",
@@ -2734,7 +2734,7 @@
   {
    "id": "a03f611e20",
    "family": "automotive",
-   "name": "SGX RoHS — - 40 C to +125 C (3000 Hours)",
+   "name": "SGX RoHS",
    "pages": [59],
    "headers": [
     "Part Number",
