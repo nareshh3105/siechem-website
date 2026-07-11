@@ -561,7 +561,7 @@
       .replace(/\s+/g, ' ')
       .replace(/^[\s\-–—·,.]+|[\s\-–—·,.]+$/g, '')
       .trim();
-    if (n.length < 8 || /^per conductor/i.test(n) || /^wires\s*&?\s*cables$/i.test(n)) {
+    if (n.length < 3 || /^per conductor/i.test(n) || /^wires\s*&?\s*cables$/i.test(n)) {
       n = (FAM ? FAM.name.replace(/\s*Wires\s*&\s*Cables.*$/i, '') : 'Series') + ' — Variant ' + (i + 1);
     }
     if (n.length > 150) n = n.slice(0, 147) + '…';
