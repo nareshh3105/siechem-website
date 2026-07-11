@@ -1,1 +1,530 @@
-{"series": [{"id": "7899dc754e", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [1], "headers": ["Part Number", "Conductor Construction Insu Conductor Thic Size No. of Strand dia Diameter (N Strands (Nom) (Max) — Sq.mm", "No. of Strands — Nos.", "Strand dia (Nom) — mm", "mm", "lation Insulation kness Core om) Diameter (Nom) — mm Amps", "Braiding Wire dia (Nom) — mm", "Diameter Over Braiding (Nom) — mm", "Sheath Thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B950SA260004", "0.14", "7", "0.16", "0.50 0", ".52 1.52 ± 0.05", "0.10", "1.92 ± 0.1", "0.40", "2.80 ± 0.10", "12", "130"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "20°C"], "materials": ["PVC"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.14], "awg": [], "cores": []}, "partNumbers": ["B950SA260004"]}, {"id": "2ea5deb13e", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [2], "headers": ["Part Number", "Conductor Construction — No.of Core x Size — NosxSq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter Approx. — mm", "Insulatio Thickne (Nom) — mm", "n Diameter ss Over Insulation (Nom) — mm", "Braiding wire dia (Nom) — mm", "Diameter Over Braiding (Nom) — mm", "Outer Sheath Thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Max. Conductor Resistance at 20°C — Ω/km"], "rows": [["B937A2604", "4 x 0.14", "7", "0.16", "0.48", "0.36", "1.20 ± 0.05", "0.10", "3.40 ± 0.20", "0.60", "4.60 ± 0.20", "34", "125"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "100°C", "20°C"], "materials": ["PVC"], "conductors": ["Tinned Copper", "Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.14, 4.0], "awg": [], "cores": [4]}, "partNumbers": ["B937A2604"]}, {"id": "c1de8abb8f", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [3], "headers": ["Part Number", "Conductor Construction — No. of Wire x Size — Nos x Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter (Nom) — mm", "Diameter Over Insulation Thickness — mm", "Laid Up Diameter (Nom) — mm", "Braiding wire dia (Nom) — mm", "Dia over Braiding (Nom) — mm", "Outer Sheath Thickness (Min/Nom) — mm", "Overall Diameter ( N o m ) — mm", "Weight Approx. — kg/km", "Conductor Resistance a t 2 0 ° C (Max) — Ω/km"], "rows": [["B9620604", "4 x 0.5", "19", "0.182", "0.92", "1.70 ± 0.05", "4.10 ± 0.2", "0.10", "4.6±0.2", "0.50/0.70", "6.0 ± 0.20", "54", "39"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "20°C"], "materials": ["PVC"], "conductors": ["Tinned Copper", "Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.5, 4.0], "awg": [], "cores": [4]}, "partNumbers": ["B9620604"]}, {"id": "d7020145bf", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [4], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter Approx. — mm", "Diameter Over Insulation Thickness (nom) — mm", "Braiding Wire Diameter (Nom) — mm", "Diameter Over Braiding (Nom) — mm", "Outer Sheath Thickness (Nom) — mm", "Overall diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 30°C — Ω/km"], "rows": [["B961S050004", "0.35", "7", "0.254", "0.76", "2.5 ± 0.05", "0.10", "2.6", "0.35", "3.3±0.10", "18", "53"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "30°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.35], "awg": [], "cores": []}, "partNumbers": ["B961S050004"]}, {"id": "5e14f80110", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [5], "headers": ["Part Number", "Conductor Construction Nominal Strands Conductor Di No. of No. of Cross- Wire Diameter ( Core Strand Section (Nom.) (Max.) — No. of Core — Nos.", "Nominal Cross- Section — Sq.mm", "No. of Strand — Nos.", "Strands Wire (Nom.) — mm", "mm", "Core Nom. ameter Braiding Nom) Wire Dia — mm mm", "Min. Outer Sheath Thickness — mm", "Nom. Overall Diameter — mm", "Approx. Cable Weight — kg/km", "Max. Conductor Resistance at 20°C — Ω/km"], "rows": [["B949S960004", "1", "0.4", "7", "0.27", "0.82 2.", "1 ± 0.1 0.10", "0.16", "3.3 ± 0.2", "18.5", "52"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "20°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "standardsFound": ["IEC 60332-1"], "voltBucket": null, "sizesSqmm": [0.4], "awg": [], "cores": [1]}, "partNumbers": ["B949S960004"]}, {"id": "adaf10c41c", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [6], "headers": ["Part Number", "Conductor Construction — No. of Core — Nos.", "Nominal Cross- Section — Sq.mm", "No. of Strand — Nos.", "Strands Wire (Nom.) — mm", "Conductor Diameter (Max.) — mm", "Nominal Insulation Wall Thickness — mm", "Core Diameter — mm", "Nom. Braiding Wire Dia — mm", "Nom. Outer Sheath Thickness — mm", "Nom. Overall Diameter — mm", "Approx. Cable Weight — kg/km", "Max. Conductor Resistance at 20°C — Ω/km"], "rows": [["B954SA260004", "1", "0.14", "7", "0.16", "0.48", "0.52", "1.48", "0.10", "0.3", "2.55 ± 0.13", "11.2", "320"]], "notes": [], "attrs": {"tempMentions": ["-20°C", "+85°C", "25°C", "20°C"], "materials": ["PVC"], "conductors": ["Tinned Copper", "Bare Copper"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.14], "awg": [], "cores": [1]}, "partNumbers": ["B954SA260004"]}, {"id": "bf4689f8e7", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [7], "headers": ["Part Number", "Conductor Construction i Conductor Size No. of Strand dia Diameter T Strands Nom. Approx. — Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "mm", "Diameter nsulation hickness (Nom) — mm", "Braiding wire diameter (Nom) — mm", "Outer Sheath Thickness (Min) — mm", "Overall diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 30°C (Max) — Ω/km"], "rows": [["B955SA100004", "0.05", "7", "0.10", "0.30 1.", "42 ± 0.10", "0.10", "0.20", "2.7±0.1", "9.4", "113"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C"], "materials": ["PVC"], "conductors": ["Bare Copper"], "shielded": true, "standardsFound": ["LV213"], "voltBucket": null, "sizesSqmm": [0.05], "awg": [], "cores": []}, "partNumbers": ["B955SA100004"]}, {"id": "7e4cf2b323", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [8], "headers": ["Part Number", "Conductor Construction — No. of Core — Nos.", "Nominal Cross- Section — AWG", "No. of Strand — Nos.", "Diameter of Wire (Nom.) — mm", "Insulation Wall Thicknes (Nom.) — mm", "Al Mylar s Tape Thickness (Nom.) — mm", "Braiding Wire Dia (Nom.) — mm", "Outer Sheath Thickness (Nom.) — mm", "Overall Diameter (Nom.) — mm", "Weight Approx. — kg/km", "Max. Conductor Resistance at 20°C — Ω/km"], "rows": [["B956S810004", "1", "18", "1", "1.02", "2.95 ± 0.08", "0.07", "0.16", "0.63", "4.90 ± 0.10", "42", "21.0"]], "notes": [], "attrs": {"voltage": "300V", "tempMentions": ["-40°C", "+85°C"], "shielded": true, "voltBucket": "300–750V", "sizesSqmm": [], "awg": [18], "cores": [1]}, "partNumbers": ["B956S810004"]}, {"id": "882f1fc78c", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [9], "headers": ["Part Number", "Conductor Construction — No. of Core x Size — Nos x Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter Approx. — mm", "Dia Over Insulation (Min/Max) — mm", "Braiding wire diameter (Nom) — mm", "Outer Sheath Thickness (Min) — mm", "Overall diameter (Min/Max) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B960A2602", "2 x 0.14", "7", "0.17", "0.50", "1.20/1.32", "0.10", "0.26", "3.6/4.0", "20", "125"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C"], "materials": ["PVC"], "conductors": ["Tinned Copper", "Aluminium"], "shielded": true, "standardsFound": ["EN 13602", "LV213 M"], "voltBucket": null, "sizesSqmm": [0.14, 2.0], "awg": [], "cores": [2]}, "partNumbers": ["B960A2602"]}, {"id": "2c7de8ea8b", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [10], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter Approx. — mm", "Insulatio wall diamete (Min/Ma — mm", "n Braiding wire r diameter x) (Max) — mm", "Dia Over Braiding (Nom) — mm", "Outer Sheath Thickness (Min) — mm", "Overall Diameter (Nom) — Amps", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B958S050004", "0.35", "7", "0.26", "0.81", "2.0/2.1", "0.11", "2.6 ± 0.1", "0.20", "3.3 ± 0.10", "19", "52"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "100°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.35], "awg": [], "cores": []}, "partNumbers": ["B958S050004"]}, {"id": "a4352e194f", "family": "antenna", "name": "FL09YHBCYW Copper Foil Tape Antenna Cable", "pages": [11], "headers": ["Part Number", "Conductor Construction Conductor Size No. of Strand dia Diameter Strands Max. Min/Max — Sq.mm", "No. of Strands — Nos.", "Strand dia Max. — mm", "mm", "Insulation Core Diameter (Nom) — mm", "Braiding wire Diameter (Nom) — mm", "Diameter Over Braiding (Max) — mm", "Outer Sheath Thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C — Ω/km"], "rows": [["B952S02004", "0.22", "7", "0.21", "0.57/0.63", "1.6 ± 0.10", "0.11", "2.2", "0.40", "3.0 ± 0.2", "16", "89.4"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C", "20°C"], "materials": ["PVC"], "conductors": ["Tinned Copper"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.22], "awg": [], "cores": []}, "partNumbers": ["B952S02004"]}, {"id": "8adb5a6cfa", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [12], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia Nom. — mm", "Conductor Diameter Max. — mm", "Insulation Core Diameter ((Nom) — mm", "Braiding wire Diameter (Nom) — mm", "Diameter Over Braiding (Nom) — mm", "Outer Sheath thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B951S260004", "0.14", "7", "0.16", "0.50", "1.52 ± 0.05", "0.10", "2.05 ± 0.1", "0.26", "2.8 ± 0.1", "12", "320"]], "notes": [], "attrs": {"tempMentions": ["-40°C", "+105°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.14], "awg": [], "cores": []}, "partNumbers": ["B951S260004"]}, {"id": "268ca67f1b", "family": "antenna", "name": "50 ohm 0.14 Sqmm 105°C Coaxial Antenna Cable", "pages": [13], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia (Nom) — mm", "Conductor Diameter (Max) — mm", "Insulation Core Diameter (Nom) — mm", "Braiding wire Diameter (Nom) — mm", "Outer Sheath thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C — Ω/km"], "rows": [["B953SA260004", "0.14", "7", "0.16", "0.50", "1.52 ± 0.05", "0.10", "0.38", "2.80 ± 0.10", "12", "317"]], "notes": [], "attrs": {"tempMentions": ["105°C", "-40°C", "+105°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "voltBucket": null, "sizesSqmm": [0.14], "awg": [], "cores": []}, "partNumbers": ["B953SA260004"]}, {"id": "28ee66b70a", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [14], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia Max. — mm", "Conductor Diameter Approx. — mm", "Insulation Core Diameter (Nom) — mm", "Braiding wire Diameter (Nom) — mm", "Outer Sheath thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B957SA570004", "0.27", "7", "0.22", "60 ± 0.03", "1.6 ± 0.1", "0.11", "0.31", "3.0 ± 0.2", "15", "120"]], "notes": [], "attrs": {"voltage": "1000V", "tempMentions": ["-40°C", "+105°C"], "materials": ["XLPE", "PVC"], "conductors": ["Tinned Copper"], "shielded": true, "voltBucket": "751–1100V", "sizesSqmm": [0.27], "awg": [], "cores": []}, "partNumbers": ["B957SA570004"]}, {"id": "5821851b83", "family": "antenna", "name": "Wires & Cables Meet EU RoHS Directive", "pages": [15], "headers": ["Part Number", "Conductor Construction — Size — Sq.mm", "No. of Strands — Nos.", "Strand dia (Nom) — mm", "Conductor Diameter (Nom/Max) — mm", "Insu Co Diam (No", "lation Braiding re wire eter Diameter m) (Nom) — m mm", "Diameter Over Braiding (Nom) — mm", "Outer Sheath thickness (Nom) — mm", "Overall Diameter (Nom) — mm", "Weight Approx. — kg/km", "Conductor Resistance at 20°C (Max) — Ω/km"], "rows": [["B959S810004", "18", "1", "1.02", "1.02/1.04", "2.90 ±", "0.10 0.127", "3.56", "0.70", "4.90 ± 0.10", "35", "21.0"]], "notes": [], "attrs": {"voltage": "300V", "tempMentions": ["-40°C", "+105°C"], "materials": ["PVC"], "conductors": ["Aluminium"], "shielded": true, "voltBucket": "300–750V", "sizesSqmm": [18.0], "awg": [], "cores": []}, "partNumbers": ["B959S810004"]}]}
+{
+ "series": [
+  {
+   "id": "7899dc754e",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [1],
+   "headers": [
+    "Part Number",
+    "Conductor Construction Insu Conductor Thic Size No. of Strand dia Diameter (N Strands (Nom) (Max) — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia (Nom) — mm",
+    "mm",
+    "lation Insulation kness Core om) Diameter (Nom) — mm Amps",
+    "Braiding Wire dia (Nom) — mm",
+    "Diameter Over Braiding (Nom) — mm",
+    "Sheath Thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B950SA260004", "0.14", "7", "0.16", "0.50 0", ".52 1.52 ± 0.05", "0.10", "1.92 ± 0.1", "0.40", "2.80 ± 0.10", "12", "130"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "20°C"],
+    "materials": ["PVC"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.14],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B950SA260004"]
+  },
+  {
+   "id": "2ea5deb13e",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [2],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — No.of Core x Size — NosxSq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter Approx. — mm",
+    "Insulatio Thickne (Nom) — mm",
+    "n Diameter ss Over Insulation (Nom) — mm",
+    "Braiding wire dia (Nom) — mm",
+    "Diameter Over Braiding (Nom) — mm",
+    "Outer Sheath Thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Max. Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B937A2604", "4 x 0.14", "7", "0.16", "0.48", "0.36", "1.20 ± 0.05", "0.10", "3.40 ± 0.20", "0.60", "4.60 ± 0.20", "34", "125"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "100°C", "20°C"],
+    "materials": ["PVC"],
+    "conductors": ["Tinned Copper", "Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.14, 4],
+    "awg": [],
+    "cores": [4]
+   },
+   "partNumbers": ["B937A2604"]
+  },
+  {
+   "id": "c1de8abb8f",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [3],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — No. of Wire x Size — Nos x Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter (Nom) — mm",
+    "Diameter Over Insulation Thickness — mm",
+    "Laid Up Diameter (Nom) — mm",
+    "Braiding wire dia (Nom) — mm",
+    "Dia over Braiding (Nom) — mm",
+    "Outer Sheath Thickness (Min/Nom) — mm",
+    "Overall Diameter ( N o m ) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance a t 2 0 ° C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B9620604", "4 x 0.5", "19", "0.182", "0.92", "1.70 ± 0.05", "4.10 ± 0.2", "0.10", "4.6±0.2", "0.50/0.70", "6.0 ± 0.20", "54", "39"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "20°C"],
+    "materials": ["PVC"],
+    "conductors": ["Tinned Copper", "Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.5, 4],
+    "awg": [],
+    "cores": [4]
+   },
+   "partNumbers": ["B9620604"]
+  },
+  {
+   "id": "d7020145bf",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [4],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter Approx. — mm",
+    "Diameter Over Insulation Thickness (nom) — mm",
+    "Braiding Wire Diameter (Nom) — mm",
+    "Diameter Over Braiding (Nom) — mm",
+    "Outer Sheath Thickness (Nom) — mm",
+    "Overall diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 30°C — Ω/km"
+   ],
+   "rows": [
+    ["B961S050004", "0.35", "7", "0.254", "0.76", "2.5 ± 0.05", "0.10", "2.6", "0.35", "3.3±0.10", "18", "53"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "30°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.35],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B961S050004"]
+  },
+  {
+   "id": "5e14f80110",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [5],
+   "headers": [
+    "Part Number",
+    "Conductor Construction Nominal Strands Conductor Di No. of No. of Cross- Wire Diameter ( Core Strand Section (Nom.) (Max.) — No. of Core — Nos.",
+    "Nominal Cross- Section — Sq.mm",
+    "No. of Strand — Nos.",
+    "Strands Wire (Nom.) — mm",
+    "mm",
+    "Core Nom. ameter Braiding Nom) Wire Dia — mm mm",
+    "Min. Outer Sheath Thickness — mm",
+    "Nom. Overall Diameter — mm",
+    "Approx. Cable Weight — kg/km",
+    "Max. Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B949S960004", "1", "0.4", "7", "0.27", "0.82 2.", "1 ± 0.1 0.10", "0.16", "3.3 ± 0.2", "18.5", "52"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "20°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "standardsFound": ["IEC 60332-1"],
+    "voltBucket": null,
+    "sizesSqmm": [0.4],
+    "awg": [],
+    "cores": [1]
+   },
+   "partNumbers": ["B949S960004"]
+  },
+  {
+   "id": "adaf10c41c",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [6],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — No. of Core — Nos.",
+    "Nominal Cross- Section — Sq.mm",
+    "No. of Strand — Nos.",
+    "Strands Wire (Nom.) — mm",
+    "Conductor Diameter (Max.) — mm",
+    "Nominal Insulation Wall Thickness — mm",
+    "Core Diameter — mm",
+    "Nom. Braiding Wire Dia — mm",
+    "Nom. Outer Sheath Thickness — mm",
+    "Nom. Overall Diameter — mm",
+    "Approx. Cable Weight — kg/km",
+    "Max. Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B954SA260004", "1", "0.14", "7", "0.16", "0.48", "0.52", "1.48", "0.10", "0.3", "2.55 ± 0.13", "11.2", "320"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-20°C", "+85°C", "25°C", "20°C"],
+    "materials": ["PVC"],
+    "conductors": ["Tinned Copper", "Bare Copper"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.14],
+    "awg": [],
+    "cores": [1]
+   },
+   "partNumbers": ["B954SA260004"]
+  },
+  {
+   "id": "bf4689f8e7",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [7],
+   "headers": [
+    "Part Number",
+    "Conductor Construction i Conductor Size No. of Strand dia Diameter T Strands Nom. Approx. — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "mm",
+    "Diameter nsulation hickness (Nom) — mm",
+    "Braiding wire diameter (Nom) — mm",
+    "Outer Sheath Thickness (Min) — mm",
+    "Overall diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 30°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B955SA100004", "0.05", "7", "0.10", "0.30 1.", "42 ± 0.10", "0.10", "0.20", "2.7±0.1", "9.4", "113"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C"],
+    "materials": ["PVC"],
+    "conductors": ["Bare Copper"],
+    "shielded": true,
+    "standardsFound": ["LV213"],
+    "voltBucket": null,
+    "sizesSqmm": [0.05],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B955SA100004"]
+  },
+  {
+   "id": "7e4cf2b323",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [8],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — No. of Core — Nos.",
+    "Nominal Cross- Section — AWG",
+    "No. of Strand — Nos.",
+    "Diameter of Wire (Nom.) — mm",
+    "Insulation Wall Thicknes (Nom.) — mm",
+    "Al Mylar s Tape Thickness (Nom.) — mm",
+    "Braiding Wire Dia (Nom.) — mm",
+    "Outer Sheath Thickness (Nom.) — mm",
+    "Overall Diameter (Nom.) — mm",
+    "Weight Approx. — kg/km",
+    "Max. Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B956S810004", "1", "18", "1", "1.02", "2.95 ± 0.08", "0.07", "0.16", "0.63", "4.90 ± 0.10", "42", "21.0"]
+   ],
+   "notes": [],
+   "attrs": {
+    "voltage": "300V",
+    "tempMentions": ["-40°C", "+85°C"],
+    "shielded": true,
+    "voltBucket": "300–750V",
+    "sizesSqmm": [],
+    "awg": [18],
+    "cores": [1]
+   },
+   "partNumbers": ["B956S810004"]
+  },
+  {
+   "id": "882f1fc78c",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [9],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — No. of Core x Size — Nos x Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter Approx. — mm",
+    "Dia Over Insulation (Min/Max) — mm",
+    "Braiding wire diameter (Nom) — mm",
+    "Outer Sheath Thickness (Min) — mm",
+    "Overall diameter (Min/Max) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B960A2602", "2 x 0.14", "7", "0.17", "0.50", "1.20/1.32", "0.10", "0.26", "3.6/4.0", "20", "125"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C"],
+    "materials": ["PVC"],
+    "conductors": ["Tinned Copper", "Aluminium"],
+    "shielded": true,
+    "standardsFound": ["EN 13602", "LV213 M"],
+    "voltBucket": null,
+    "sizesSqmm": [0.14, 2],
+    "awg": [],
+    "cores": [2]
+   },
+   "partNumbers": ["B960A2602"]
+  },
+  {
+   "id": "2c7de8ea8b",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [10],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter Approx. — mm",
+    "Insulatio wall diamete (Min/Ma — mm",
+    "n Braiding wire r diameter x) (Max) — mm",
+    "Dia Over Braiding (Nom) — mm",
+    "Outer Sheath Thickness (Min) — mm",
+    "Overall Diameter (Nom) — Amps",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B958S050004", "0.35", "7", "0.26", "0.81", "2.0/2.1", "0.11", "2.6 ± 0.1", "0.20", "3.3 ± 0.10", "19", "52"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "100°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.35],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B958S050004"]
+  },
+  {
+   "id": "a4352e194f",
+   "family": "antenna",
+   "name": "FL09YHBCYW Copper Foil Tape Antenna Cable",
+   "pages": [11],
+   "headers": [
+    "Part Number",
+    "Conductor Construction Conductor Size No. of Strand dia Diameter Strands Max. Min/Max — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Max. — mm",
+    "mm",
+    "Insulation Core Diameter (Nom) — mm",
+    "Braiding wire Diameter (Nom) — mm",
+    "Diameter Over Braiding (Max) — mm",
+    "Outer Sheath Thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B952S02004", "0.22", "7", "0.21", "0.57/0.63", "1.6 ± 0.10", "0.11", "2.2", "0.40", "3.0 ± 0.2", "16", "89.4"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C", "20°C"],
+    "materials": ["PVC"],
+    "conductors": ["Tinned Copper"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.22],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B952S02004"]
+  },
+  {
+   "id": "8adb5a6cfa",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [12],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Nom. — mm",
+    "Conductor Diameter Max. — mm",
+    "Insulation Core Diameter ((Nom) — mm",
+    "Braiding wire Diameter (Nom) — mm",
+    "Diameter Over Braiding (Nom) — mm",
+    "Outer Sheath thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B951S260004", "0.14", "7", "0.16", "0.50", "1.52 ± 0.05", "0.10", "2.05 ± 0.1", "0.26", "2.8 ± 0.1", "12", "320"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["-40°C", "+105°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.14],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B951S260004"]
+  },
+  {
+   "id": "268ca67f1b",
+   "family": "antenna",
+   "name": "50 ohm 0.14 Sqmm 105°C Coaxial Antenna Cable",
+   "pages": [13],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia (Nom) — mm",
+    "Conductor Diameter (Max) — mm",
+    "Insulation Core Diameter (Nom) — mm",
+    "Braiding wire Diameter (Nom) — mm",
+    "Outer Sheath thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C — Ω/km"
+   ],
+   "rows": [
+    ["B953SA260004", "0.14", "7", "0.16", "0.50", "1.52 ± 0.05", "0.10", "0.38", "2.80 ± 0.10", "12", "317"]
+   ],
+   "notes": [],
+   "attrs": {
+    "tempMentions": ["105°C", "-40°C", "+105°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "voltBucket": null,
+    "sizesSqmm": [0.14],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B953SA260004"]
+  },
+  {
+   "id": "28ee66b70a",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [14],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia Max. — mm",
+    "Conductor Diameter Approx. — mm",
+    "Insulation Core Diameter (Nom) — mm",
+    "Braiding wire Diameter (Nom) — mm",
+    "Outer Sheath thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B957SA570004", "0.27", "7", "0.22", "60 ± 0.03", "1.6 ± 0.1", "0.11", "0.31", "3.0 ± 0.2", "15", "120"]
+   ],
+   "notes": [],
+   "attrs": {
+    "voltage": "1000V",
+    "tempMentions": ["-40°C", "+105°C"],
+    "materials": ["XLPE", "PVC"],
+    "conductors": ["Tinned Copper"],
+    "shielded": true,
+    "voltBucket": "751–1100V",
+    "sizesSqmm": [0.27],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B957SA570004"]
+  },
+  {
+   "id": "5821851b83",
+   "family": "antenna",
+   "name": "Wires & Cables Meet EU RoHS Directive",
+   "pages": [15],
+   "headers": [
+    "Part Number",
+    "Conductor Construction — Size — Sq.mm",
+    "No. of Strands — Nos.",
+    "Strand dia (Nom) — mm",
+    "Conductor Diameter (Nom/Max) — mm",
+    "Insu Co Diam (No",
+    "lation Braiding re wire eter Diameter m) (Nom) — m mm",
+    "Diameter Over Braiding (Nom) — mm",
+    "Outer Sheath thickness (Nom) — mm",
+    "Overall Diameter (Nom) — mm",
+    "Weight Approx. — kg/km",
+    "Conductor Resistance at 20°C (Max) — Ω/km"
+   ],
+   "rows": [
+    ["B959S810004", "18", "1", "1.02", "1.02/1.04", "2.90 ±", "0.10 0.127", "3.56", "0.70", "4.90 ± 0.10", "35", "21.0"]
+   ],
+   "notes": [],
+   "attrs": {
+    "voltage": "300V",
+    "tempMentions": ["-40°C", "+105°C"],
+    "materials": ["PVC"],
+    "conductors": ["Aluminium"],
+    "shielded": true,
+    "voltBucket": "300–750V",
+    "sizesSqmm": [18],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["B959S810004"]
+  }
+ ]
+}

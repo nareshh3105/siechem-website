@@ -1,1 +1,50 @@
-{"series": [{"id": "7d9d6e88dd", "family": "pw-125", "name": "EBXL insulation material has very low calorific value of combustion and do not support fire. This material contains low smoke, halogen free, no emission", "pages": [1], "headers": ["Part No", "Size", "No. of Strands /Nom. Strand dia.", "Nominal Insulation thickness", "Maximum Overall Cable Diameter", "Max. DC resistance at 200 C", "Current Rating"], "rows": [["", "mm2", "Nos/mm", "mm", "mm", "(Ω/km)", "Amps"], ["11206XX*", "0.5", "16/0.20", "0.6", "2.6", "39.0", "21"], ["11208XX", "0.75", "24/0.20", "0.6", "2.8", "26.0", "24"], ["11210XX", "1", "32/0.20", "0.6", "3.0", "19.5", "29"], ["11213XX", "1.5", "30/0.25", "0.6", "3.4", "13.3", "36"], ["11216XX", "2.5", "50/0.25", "0.7", "4.1", "7.98", "49"], ["11219XX", "4", "56/0.30", "0.8", "4.8", "4.95", "66"], ["11223XX", "6", "84/0.30", "0.8", "5.3", "3.30", "85"], ["11227XX", "10", "80/0.40", "1.0", "7.0", "1.91", "121"], ["11228XX", "16", "126/0.40", "1.0", "8.1", "1.21", "163"], ["11230XX", "25", "196/0.40", "1.2", "10.2", "0.780", "219"], ["11232XX", "35", "276/0.40", "1.2", "11.7", "0.554", "272"], ["11234XX", "50", "396/0.40", "1.4", "13.9", "0.386", "344"], ["11237XX", "70", "360/0.50", "1.4", "16.0", "0.272", "439"], ["11238XX", "95", "475/0.50", "1.6", "18.2", "0.206", "523"], ["11241XX", "120", "608/0.50", "1.6", "20.2", "0.161", "621"], ["11242XX", "150", "756/0.50", "1.8", "22.5", "0.129", "723"], ["11244XX", "185", "925/0.50", "2.0", "24.9", "0.106", "825"], ["11246XX", "240", "1221/0.50", "2.2", "28.4", "0.0801", "996"], ["11248XX", "300", "1525/0.50", "2.4", "31.0", "0.0641", "1150"]], "notes": ["Note : XX* :For Singlecore, please add last two digits in the part number as per the colour code given hereunder replacing XX while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21 Green-Yellow-29", "Note : XX* : For Multicore, please add last two digits in the part number as per the number of cores given hereunder replacing XX while ordering. Two core - 02 Three core - 03 Four core - 04"], "attrs": {"voltage": "1100V", "tempMentions": ["-40C", "+125C", "280C", "125C"], "materials": ["EBXL", "PVC"], "halogenFree": true, "fireSafety": true, "standardsFound": ["EN 45545-2", "IEC 60332 - 1", "EN 60228", "IEC 60811", "IEC 60332 -1", "EN 50266"], "voltBucket": "751–1100V", "sizesSqmm": [0.5, 0.75, 1.0, 1.5, 2.0, 2.5, 4.0, 6.0, 10.0, 16.0, 25.0, 35.0, 50.0, 70.0, 95.0, 120.0, 150.0, 185.0, 240.0, 300.0], "awg": [], "cores": []}, "partNumbers": ["11206XX*", "11208XX", "11210XX", "11213XX", "11216XX", "11219XX", "11223XX", "11227XX", "11228XX", "11230XX", "11232XX", "11234XX", "11237XX", "11238XX", "11241XX", "11242XX", "11244XX", "11246XX", "11248XX"]}]}
+{
+ "series": [
+  {
+   "id": "7d9d6e88dd",
+   "family": "pw-125",
+   "name": "EBXL insulation material has very low calorific value of combustion and do not support fire. This material contains low smoke, halogen free, no emission",
+   "pages": [1],
+   "headers": ["Part No", "Size", "No. of Strands /Nom. Strand dia.", "Nominal Insulation thickness", "Maximum Overall Cable Diameter", "Max. DC resistance at 200 C", "Current Rating"],
+   "rows": [
+    ["", "mm2", "Nos/mm", "mm", "mm", "(Ω/km)", "Amps"],
+    ["11206XX*", "0.5", "16/0.20", "0.6", "2.6", "39.0", "21"],
+    ["11208XX", "0.75", "24/0.20", "0.6", "2.8", "26.0", "24"],
+    ["11210XX", "1", "32/0.20", "0.6", "3.0", "19.5", "29"],
+    ["11213XX", "1.5", "30/0.25", "0.6", "3.4", "13.3", "36"],
+    ["11216XX", "2.5", "50/0.25", "0.7", "4.1", "7.98", "49"],
+    ["11219XX", "4", "56/0.30", "0.8", "4.8", "4.95", "66"],
+    ["11223XX", "6", "84/0.30", "0.8", "5.3", "3.30", "85"],
+    ["11227XX", "10", "80/0.40", "1.0", "7.0", "1.91", "121"],
+    ["11228XX", "16", "126/0.40", "1.0", "8.1", "1.21", "163"],
+    ["11230XX", "25", "196/0.40", "1.2", "10.2", "0.780", "219"],
+    ["11232XX", "35", "276/0.40", "1.2", "11.7", "0.554", "272"],
+    ["11234XX", "50", "396/0.40", "1.4", "13.9", "0.386", "344"],
+    ["11237XX", "70", "360/0.50", "1.4", "16.0", "0.272", "439"],
+    ["11238XX", "95", "475/0.50", "1.6", "18.2", "0.206", "523"],
+    ["11241XX", "120", "608/0.50", "1.6", "20.2", "0.161", "621"],
+    ["11242XX", "150", "756/0.50", "1.8", "22.5", "0.129", "723"],
+    ["11244XX", "185", "925/0.50", "2.0", "24.9", "0.106", "825"],
+    ["11246XX", "240", "1221/0.50", "2.2", "28.4", "0.0801", "996"],
+    ["11248XX", "300", "1525/0.50", "2.4", "31.0", "0.0641", "1150"]
+   ],
+   "notes": [
+    "Note : XX* :For Singlecore, please add last two digits in the part number as per the colour code given hereunder replacing XX while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21 Green-Yellow-29",
+    "Note : XX* : For Multicore, please add last two digits in the part number as per the number of cores given hereunder replacing XX while ordering. Two core - 02 Three core - 03 Four core - 04"
+   ],
+   "attrs": {
+    "voltage": "1100V",
+    "tempMentions": ["-40C", "+125C", "280C", "125C"],
+    "materials": ["EBXL", "PVC"],
+    "halogenFree": true,
+    "fireSafety": true,
+    "standardsFound": ["EN 45545-2", "IEC 60332 - 1", "EN 60228", "IEC 60811", "IEC 60332 -1", "EN 50266"],
+    "voltBucket": "751–1100V",
+    "sizesSqmm": [0.5, 0.75, 1, 1.5, 2, 2.5, 4, 6, 10, 16, 25, 35, 50, 70, 95, 120, 150, 185, 240, 300],
+    "awg": [],
+    "cores": []
+   },
+   "partNumbers": ["11206XX*", "11208XX", "11210XX", "11213XX", "11216XX", "11219XX", "11223XX", "11227XX", "11228XX", "11230XX", "11232XX", "11234XX", "11237XX", "11238XX", "11241XX", "11242XX", "11244XX", "11246XX", "11248XX"]
+  }
+ ]
+}
