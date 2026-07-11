@@ -573,8 +573,8 @@
     let fams, prod;
     try {
       [fams, prod] = await Promise.all([
-        fetch('catalog/data/families.json').then(r => r.json()),
-        fetch('catalog/data/products/' + FAMILY_ID + '.json').then(r => r.json())
+        fetch('/catalog/data/families.json').then(r => r.json()),
+        fetch('/catalog/data/products/' + FAMILY_ID + '.json').then(r => r.json())
       ]);
     } catch (e) {
       document.getElementById('fTitle').textContent = 'Catalogue not found';
