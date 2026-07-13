@@ -550,7 +550,21 @@
             <button class="fpill" data-f="cores" data-v="2">Twin Core</button>
           </div>
         </div>
-
+        <div class="filter-group">
+          <span class="filter-label">Insulation</span>
+          <div class="filter-pills">
+            <button class="fpill active" data-f="ins" data-v="all">All</button>
+            <button class="fpill" data-f="ins" data-v="xlpo">XLPO Single Wall</button>
+            <button class="fpill" data-f="ins" data-v="dual">XLPO + PVDF Dual Wall</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Weight Class</span>
+          <div class="filter-pills">
+            <button class="fpill active" data-f="wt" data-v="all">All</button>
+            <button class="fpill" data-f="wt" data-v="light">Light Weight</button>
+            <button class="fpill" data-f="wt" data-v="medium">Medium Weight</button>
+          </div>
         </div>
       </div>
       <div class="result-count" id="resultCount"></div>
@@ -963,7 +977,7 @@
   ];
 
   /* ── Filter State ──────────────────────────────── */
-  const filters = { voltage: 'all', shield: 'all', cores: 'all', ptype: 'all' };
+  const filters = { voltage: 'all', shield: 'all', cores: 'all', ins: 'all', wt: 'all' };
 
   /* ── Apply filters & re-render ─────────────────── */
   function applyFilters() {
@@ -971,7 +985,8 @@
       if (filters.voltage !== 'all' && t.voltage !== +filters.voltage) return false;
       if (filters.shield  !== 'all' && t.shielded !== (filters.shield === '1')) return false;
       if (filters.cores   !== 'all' && t.cores !== +filters.cores) return false;
-      if (filters.ptype   !== 'all' && t.ptype !== filters.ptype) return false;
+      if (filters.ins     !== 'all' && (filters.ins === 'dual') !== /PVDF/i.test(t.insulation)) return false;
+      if (filters.wt      !== 'all' && !t.weight.toLowerCase().startsWith(filters.wt)) return false;
       return true;
     });
     renderCards(visible);
