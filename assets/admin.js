@@ -5,12 +5,12 @@
   function token() { return localStorage.getItem(TOKEN_KEY); }
 
   function requireAuth() {
-    if (!token()) window.location.href = '/admin-login.html';
+    if (!token()) window.location.href = '/admin';
   }
 
   function logout() {
     localStorage.removeItem(TOKEN_KEY);
-    window.location.href = '/admin-login.html';
+    window.location.href = '/admin';
   }
 
   async function api(path, opts = {}) {

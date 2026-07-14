@@ -1,6 +1,12 @@
 {
   "buildCommand": "node scripts/minify.mjs",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin/admin-login.html" },
+    { "source": "/admin/", "destination": "/admin/admin-login.html" },
+    { "source": "/admin/dashboard", "destination": "/admin/admin.html" },
+    { "source": "/admin/family", "destination": "/admin/admin-family.html" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
