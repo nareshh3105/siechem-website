@@ -71,6 +71,12 @@ module.exports = async function handler(req, res) {
 
   const db = supabaseAdmin();
 
+  // Captured before any reads: if an edit lands while this publish's slow
+  // GitHub upload is still in flight, its updated_at will be AFTER this
+  // snapshot time, so the dashboard correctly keeps showing it as a draft
+  // even though the publish that started earlier later logs "success".
+  const snapshotAt = new Date().toISOString();
+
   try {
     const { data: families, error: famErr } = await db.from('admin_families').select('*').order('id');
     if (famErr) throw new Error(famErr.message);
@@ -119,7 +125,6 @@ module.exports = async function handler(req, res) {
       files[`catalog/data/products/${f.id}.json`] = { series: seriesByFamily[f.id] || [] };
     }
 
-    const publishTime = new Date().toISOString();
     await commitFiles(files, `Admin publish: ${families.length} families, ${allSeries.length} series`);
 
     const hookUrl = process.env.VERCEL_DEPLOY_HOOK_URL;
@@ -127,10 +132,13 @@ module.exports = async function handler(req, res) {
       await fetch(hookUrl, { method: 'POST' });
     }
 
-    await db.from('admin_publish_log').insert({ status: 'success', detail: `Published ${families.length} families, ${allSeries.length} series` });
-    return res.status(200).json({ success: true, families: families.length, series: allSeries.length, publishedAt: publishTime });
+    await db.from('admin_publish_log').insert({
+      status: 'success', snapshot_at: snapshotAt,
+      detail: `Published ${families.length} families, ${allSeries.length} series`
+    });
+    return res.status(200).json({ success: true, families: families.length, series: allSeries.length, publishedAt: snapshotAt });
   } catch (err) {
-    await db.from('admin_publish_log').insert({ status: 'failed', detail: err.message });
+    await db.from('admin_publish_log').insert({ status: 'failed', snapshot_at: snapshotAt, detail: err.message });
     return res.status(500).json({ error: err.message });
   }
 };

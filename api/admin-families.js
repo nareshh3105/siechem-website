@@ -39,14 +39,18 @@ module.exports = async function handler(req, res) {
     if (t > (lastEditByFamily[row.family_id] || 0)) lastEditByFamily[row.family_id] = t;
   }
 
+  // Compare against snapshot_at (when the publish started reading the DB),
+  // not created_at (when it finished, after the slow GitHub upload) -- an
+  // edit saved while a publish is mid-flight isn't in that publish's export
+  // even though the success log row gets written after the edit.
   const { data: lastPublish } = await db
     .from('admin_publish_log')
-    .select('created_at')
+    .select('created_at, snapshot_at')
     .eq('status', 'success')
     .order('created_at', { ascending: false })
     .limit(1)
     .maybeSingle();
-  const lastPublishedAt = lastPublish ? lastPublish.created_at : null;
+  const lastPublishedAt = lastPublish ? (lastPublish.snapshot_at || lastPublish.created_at) : null;
   const lastPublishedMs = lastPublishedAt ? new Date(lastPublishedAt).getTime() : 0;
 
   const out = families.map(f => ({
