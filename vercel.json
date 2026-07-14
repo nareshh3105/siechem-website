@@ -1,6 +1,9 @@
 {
   "buildCommand": "node scripts/minify.mjs",
   "outputDirectory": "dist",
+  "functions": {
+    "api/admin-publish.js": { "maxDuration": 60 }
+  },
   "rewrites": [
     { "source": "/", "destination": "/siechem-redesign.html" },
     { "source": "/admin", "destination": "/admin/admin-login.html" },

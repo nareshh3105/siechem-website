@@ -1,4 +1,5 @@
-// GET /api/admin-families — list all families with series counts, for the admin dashboard.
+// GET /api/admin-families — list all families with series counts and draft status,
+// for the admin dashboard.
 const { requireAdmin } = require('./_lib/adminAuth');
 const { supabaseAdmin } = require('./_lib/supabaseAdmin');
 
@@ -15,23 +16,47 @@ module.exports = async function handler(req, res) {
     .order('name');
   if (famErr) return res.status(500).json({ error: famErr.message });
 
-  const { data: counts, error: cntErr } = await db
-    .from('admin_series')
-    .select('family_id');
-  if (cntErr) return res.status(500).json({ error: cntErr.message });
+  // PostgREST caps unpaginated selects at 1000 rows -- there are 1015+
+  // series total, so this must be paged or counts/timestamps silently
+  // miss whatever falls past row 1000.
+  const seriesMeta = [];
+  const PAGE = 1000;
+  for (let from = 0; ; from += PAGE) {
+    const { data: page, error: cntErr } = await db
+      .from('admin_series')
+      .select('family_id, updated_at')
+      .range(from, from + PAGE - 1);
+    if (cntErr) return res.status(500).json({ error: cntErr.message });
+    seriesMeta.push(...page);
+    if (page.length < PAGE) break;
+  }
 
   const countByFamily = {};
-  for (const row of counts) {
+  const lastEditByFamily = {};
+  for (const row of seriesMeta) {
     countByFamily[row.family_id] = (countByFamily[row.family_id] || 0) + 1;
+    const t = row.updated_at ? new Date(row.updated_at).getTime() : 0;
+    if (t > (lastEditByFamily[row.family_id] || 0)) lastEditByFamily[row.family_id] = t;
   }
+
+  const { data: lastPublish } = await db
+    .from('admin_publish_log')
+    .select('created_at')
+    .eq('status', 'success')
+    .order('created_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  const lastPublishedAt = lastPublish ? lastPublish.created_at : null;
+  const lastPublishedMs = lastPublishedAt ? new Date(lastPublishedAt).getTime() : 0;
 
   const out = families.map(f => ({
     id: f.id,
     name: f.name,
     segment: f.segment,
     summary: f.data && f.data.summary,
-    seriesCount: countByFamily[f.id] || 0
+    seriesCount: countByFamily[f.id] || 0,
+    hasDraftChanges: (lastEditByFamily[f.id] || 0) > lastPublishedMs
   }));
 
-  return res.status(200).json({ families: out });
+  return res.status(200).json({ families: out, lastPublishedAt });
 };
