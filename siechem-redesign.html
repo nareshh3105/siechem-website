@@ -1598,8 +1598,8 @@
   <!-- Hero Video Section -->
   <section class="hero-video-section">
     <video class="hero-video-bg" autoplay loop muted playsinline preload="metadata" id="hero-video">
-      <source src="/video/cable-video.mp4" type="/video/mp4">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="/video/mp4">
+      <source src="/video/cable-video.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
     <div class="hero-content">
@@ -1699,8 +1699,8 @@
         <div class="video-card" data-video-src="/video/at-a-glance/inside-our-factory.mp4">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata">
-                <source src="/video/at-a-glance/inside-our-factory.mp4" type="/video/mp4">
+              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/inside-our-factory.jpg">
+                <source src="/video/at-a-glance/inside-our-factory.mp4" type="video/mp4">
               </video>
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Factory Tour</div>
@@ -1721,8 +1721,8 @@
         <div class="video-card" data-video-src="/video/at-a-glance/she-powers-siechem.mp4">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata">
-                <source src="/video/at-a-glance/she-powers-siechem.mp4" type="/video/mp4">
+              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/she-powers-siechem.jpg">
+                <source src="/video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
               </video>
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Culture</div>
@@ -1743,8 +1743,8 @@
         <div class="video-card" data-video-src="/video/at-a-glance/happy-labours-day.mp4">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata">
-                <source src="/video/at-a-glance/happy-labours-day.mp4" type="/video/mp4">
+              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/happy-labours-day.jpg">
+                <source src="/video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
               </video>
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Workforce</div>
@@ -1765,8 +1765,8 @@
         <div class="video-card" data-video-src="/video/at-a-glance/women-empowerment-v1.mp4">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata">
-                <source src="/video/at-a-glance/women-empowerment-v1.mp4" type="/video/mp4">
+              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/women-empowerment-v1.jpg">
+                <source src="/video/at-a-glance/women-empowerment-v1.mp4" type="video/mp4">
               </video>
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Equality</div>
@@ -2223,7 +2223,7 @@
     <div class="video-modal-container">
       <div class="video-modal-body">
         <video class="video-modal-player" id="video-modal-player" controls playsinline>
-          <source src="" type="/video/mp4">
+          <source src="" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -2333,6 +2333,9 @@
         const video = card.querySelector('.video-card-video');
         if (video) {
           card.addEventListener('mouseenter', () => {
+            // Skip past the first couple of seconds (often a dark/fade-in
+            // intro) so playback doesn't start on a black frame.
+            if (video.currentTime < 2.5) video.currentTime = 2.5;
             video.play().catch(err => {
               console.log('Video hover autoplay blocked/interrupted:', err);
             });
