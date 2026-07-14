@@ -53,8 +53,20 @@ module.exports = async function handler(req, res) {
   try {
     const { data: families, error: famErr } = await db.from('admin_families').select('*').order('id');
     if (famErr) throw new Error(famErr.message);
-    const { data: allSeries, error: serErr } = await db.from('admin_series').select('*').order('order_index');
-    if (serErr) throw new Error(serErr.message);
+
+    // PostgREST caps unpaginated selects at 1000 rows -- there are 1015+
+    // series total, so this must be paged or the tail silently truncates.
+    const allSeries = [];
+    const PAGE = 1000;
+    for (let from = 0; ; from += PAGE) {
+      const { data: page, error: serErr } = await db
+        .from('admin_series').select('*')
+        .order('family_id').order('order_index')
+        .range(from, from + PAGE - 1);
+      if (serErr) throw new Error(serErr.message);
+      allSeries.push(...page);
+      if (page.length < PAGE) break;
+    }
 
     const seriesByFamily = {};
     for (const s of allSeries) {
@@ -64,6 +76,7 @@ module.exports = async function handler(req, res) {
         name: s.name,
         headers: s.headers,
         rows: s.rows,
+        ...(s.catalogue_no ? { catalogueNo: s.catalogue_no } : {}),
         ...(s.info ? { info: s.info } : {})
       });
     }

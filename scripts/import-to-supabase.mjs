@@ -40,7 +40,8 @@ for (const f of families) {
     order_index: idx,
     headers: s.headers || [],
     rows: s.rows || [],
-    info: s.info || null
+    info: s.info || null,
+    catalogue_no: s.catalogueNo || null
   }));
   const { error } = await db.from('admin_series').upsert(seriesRows, { onConflict: 'family_id,id' });
   if (error) { console.error(`  ! ${f.id} series import failed:`, error.message); continue; }
