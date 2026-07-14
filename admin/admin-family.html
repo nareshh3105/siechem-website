@@ -34,13 +34,13 @@
   .editor-head input.name-input { font-size: 18px; font-weight: 700; border: 1px solid transparent; padding: 6px 8px; border-radius: 6px; background: none; flex: 1; min-width: 200px; }
   .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-card); }
 
-  table.spec-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 14px; }
-  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 8px 6px; border: 1px solid var(--border); }
-  table.spec-table th input { width: 100%; border: none; background: none; font-weight: 600; font-size: 12.5px; }
-  table.spec-table td { border: 1px solid var(--border); padding: 0; }
-  table.spec-table td input { width: 100%; border: none; padding: 7px 8px; font-size: 13px; background: none; }
+  table.spec-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; margin-bottom: 14px; }
+  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 6px 5px; border: 1px solid var(--border); overflow: hidden; }
+  table.spec-table th input { width: 100%; border: none; background: none; font-weight: 600; font-size: 11.5px; padding: 0; }
+  table.spec-table td { border: 1px solid var(--border); padding: 0; overflow: hidden; }
+  table.spec-table td input { width: 100%; border: none; padding: 6px 5px; font-size: 12.5px; background: none; }
   table.spec-table td input:focus, table.spec-table th input:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
-  table.spec-table td.row-actions, table.spec-table th.col-actions { width: 34px; text-align: center; }
+  table.spec-table td.row-actions, table.spec-table th.col-actions { width: 28px; text-align: center; }
   table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 15px; }
   table.spec-table td.row-actions button:hover { color: #B91C1C; }
 
@@ -119,8 +119,11 @@
       const s = seriesData.find(x => x.id === activeId);
       if (!s) { panel.innerHTML = '<div class="editor-empty">Select a type on the left to edit its specification table.</div>'; return; }
 
+      // Fixed layout needs explicit widths or it just splits evenly --
+      // size each column to what its header/values actually need instead.
+      const colWidthPct = computeColumnWidths(s.headers, s.rows);
       const headerCells = s.headers.map((h, i) => `
-        <th><input type="text" data-h="${i}" value="${escapeAttr(h)}"></th>
+        <th style="width:${colWidthPct[i]}%"><input type="text" data-h="${i}" value="${escapeAttr(h)}"></th>
       `).join('');
 
       const rowCells = s.rows.map((row, ri) => `
@@ -229,6 +232,24 @@
           btn.disabled = false;
         }
       });
+    }
+
+    // Weight each column by the longest of its header text or a sample of
+    // its row values, then convert to percentages (with a floor so no
+    // column collapses to nothing and a cap so one long header can't eat
+    // the whole table). The trailing delete-row column is fixed-width via
+    // CSS and isn't part of this split.
+    function computeColumnWidths(headers, rows) {
+      const sample = rows.slice(0, 30);
+      const weights = headers.map((h, i) => {
+        const headerLen = String(h || '').length;
+        const maxValLen = sample.reduce((m, r) => Math.max(m, String(r[i] ?? '').length), 0);
+        return Math.max(6, Math.min(40, Math.max(headerLen, maxValLen)));
+      });
+      const total = weights.reduce((a, b) => a + b, 0) || 1;
+      // Leave headroom for the fixed 28px delete-row column so percentages
+      // don't push the table wider than its container.
+      return weights.map(w => (w / total * 96).toFixed(2));
     }
 
     function escapeAttr(s) { return String(s ?? '').replace(/"/g, '&quot;'); }
