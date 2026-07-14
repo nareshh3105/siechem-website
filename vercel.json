@@ -2,6 +2,7 @@
   "buildCommand": "node scripts/minify.mjs",
   "outputDirectory": "dist",
   "rewrites": [
+    { "source": "/", "destination": "/siechem-redesign.html" },
     { "source": "/admin", "destination": "/admin/admin-login.html" },
     { "source": "/admin/", "destination": "/admin/admin-login.html" },
     { "source": "/admin/dashboard", "destination": "/admin/admin.html" },
