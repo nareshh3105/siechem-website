@@ -725,256 +725,45 @@
      B = twin core   (AWG,mm²,Cores,Strands,WireDia,OD,Wt)
      C = shielded detailed (AWG,mm²,Strands,WireDia,InsTk,ScrnDia,ShthTk,OD,Wt) */
 
-  const TYPES = [
-    /* ── 1 ── 600V Single Core Unsheathed Primary ──────────────────── */
-    {
-      id: 1, cat: '44G000', colType: 'A',
-      name: '600V Single Core Unsheathed Primary Wires',
-      voltage: 600, shielded: false, cores: 1, ptype: 'G',
-      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
-      shield: '—', outerSheath: '—',
-      voltageRating: '600V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour code (see table below)',
-      sizes: [
-        { pn:'44G00087XX', awg:30, mm2:0.051, strands:7,  wireDia:0.10, od:0.70, wt:1.06  },
-        { pn:'44G00086XX', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, od:0.78, wt:1.43  },
-        { pn:'44G00085XX', awg:26, mm2:0.13,  strands:19, wireDia:0.10, od:0.88, wt:2.08  },
-        { pn:'44G00084XX', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:1.04, wt:2.98  },
-        { pn:'44G00083XX', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:1.21, wt:4.46  },
-        { pn:'44G00082XX', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:1.42, wt:6.70  },
-        { pn:'44G00081XX', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:1.67, wt:10.12 },
-        { pn:'44G00080XX', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:1.85, wt:12.80 },
-        { pn:'44G00079XX', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:2.28, wt:19.64 },
-        { pn:'44G00078XX', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:2.76, wt:30.06 },
-        { pn:'44G00077XX', awg:10, mm2:5.26,  strands:37, wireDia:0.40, od:3.30, wt:46.28 }
-      ]
-    },
+  /* ── AERO 44 — live data ──────────────────────────
+     Fetched from catalog/data/products/aero-44.json (the same source the
+     admin panel edits) instead of a hardcoded array, so this page can
+     never drift out of sync with an admin edit again. Voltage/shielding/
+     cores/insulation/weight-class are derived from each series' name,
+     verified against the family's actual 9 series (all 600V/1000V/2500V
+     single & twin core, shielded & unshielded, general & airframe).
+  ══════════════════════════════════════════════════ */
+  let TYPES = [];
 
-    /* ── 2 ── 1000V Single Core Insulated Primary ───────────────────── */
-    {
-      id: 2, cat: '44G210', colType: 'A',
-      name: '1000V Single Core Insulated Primary Wires',
-      voltage: 1000, shielded: false, cores: 1, ptype: 'G',
-      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
-      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '1000V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour, YY = Sheath colour',
-      sizes: [
-        { pn:'44G21085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.04, wt:2.38  },
-        { pn:'44G21084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.19, wt:3.57  },
-        { pn:'44G21083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.39, wt:5.20  },
-        { pn:'44G21082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.59, wt:7.59  },
-        { pn:'44G21081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:1.87, wt:11.46 },
-        { pn:'44G21080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.08, wt:14.58 },
-        { pn:'44G21079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.51, wt:21.88 },
-        { pn:'44G21078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:2.99, wt:32.89 },
-        { pn:'44G21077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:3.73, wt:52.98 },
-        { pn:'44G21076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.25, wt:91.97 }
-      ]
-    },
+  function deriveType(s, idx) {
+    const n = s.name;
+    const voltMatch = n.match(/(\d+)\s*V/i);
+    const voltage = voltMatch ? +voltMatch[1] : 600;
+    const shielded = /Shielded/i.test(n);
+    const cores = /Twin/i.test(n) ? 2 : 1;
+    const ptype = /Airframe/i.test(n) ? 'A' : 'G';
+    const dualWall = voltage > 600 || ptype === 'A';
+    const insulation = dualWall
+      ? 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)'
+      : 'Radiation Cross-Linked Polyalkene (XLPO)';
+    const weight = ptype === 'A' ? 'Medium Weight' : 'Light Weight';
+    const awgIdx = s.headers.findIndex(h => /AWG/i.test(h));
+    const awgs = awgIdx >= 0 ? s.rows.map(r => +r[awgIdx]).filter(x => !isNaN(x)) : [];
+    return {
+      id: s.id, idx, name: n, cat: s.catalogueNo || (s.rows[0] ? String(s.rows[0][0]).slice(0, 6) : ''),
+      voltage, shielded, cores, ptype, insulation, weight,
+      tempSilNi: '−65°C to +200°C',
+      awgMin: awgs.length ? Math.min(...awgs) : null,
+      awgMax: awgs.length ? Math.max(...awgs) : null,
+      sizesCount: s.rows.length
+    };
+  }
 
-    /* ── 3 ── 2500V Single Core Insulated Primary ───────────────────── */
-    {
-      id: 3, cat: '44G220', colType: 'A',
-      name: '2500V Single Core Insulated Primary Wires',
-      voltage: 2500, shielded: false, cores: 1, ptype: 'G',
-      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall, thick wall)',
-      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '2500V, Light Weight (Thick wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour, YY = Sheath colour',
-      sizes: [
-        { pn:'44G22085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.37, wt:3.13  },
-        { pn:'44G22084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.46, wt:4.46  },
-        { pn:'44G22083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.77, wt:6.40  },
-        { pn:'44G22082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.99, wt:9.08  },
-        { pn:'44G22081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:2.25, wt:12.95 },
-        { pn:'44G22080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.48, wt:16.22 },
-        { pn:'44G22079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.94, wt:24.10 },
-        { pn:'44G22078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:3.34, wt:36.01 },
-        { pn:'44G22077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:4.11, wt:54.32 },
-        { pn:'44G22076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.56, wt:96.73 }
-      ]
-    },
-
-    /* ── 4 ── 600V Single Core Insulated Airframe ───────────────────── */
-    {
-      id: 4, cat: '44A230', colType: 'A',
-      name: '600V Single Core Insulated Airframe Wires',
-      voltage: 600, shielded: false, cores: 1, ptype: 'A',
-      weight: 'Medium Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
-      shield: '—', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '600V, Medium Weight, Airframe (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour, YY = Sheath colour',
-      sizes: [
-        { pn:'44A23085XXYY', awg:26, mm2:0.13,  strands:19,  wireDia:0.10, od:1.24, wt:2.98  },
-        { pn:'44A23084XXYY', awg:24, mm2:0.20,  strands:19,  wireDia:0.13, od:1.39, wt:3.87  },
-        { pn:'44A23083XXYY', awg:22, mm2:0.33,  strands:19,  wireDia:0.16, od:1.59, wt:5.65  },
-        { pn:'44A23082XXYY', awg:20, mm2:0.52,  strands:19,  wireDia:0.20, od:1.80, wt:8.04  },
-        { pn:'44A23081XXYY', awg:18, mm2:0.82,  strands:19,  wireDia:0.25, od:2.05, wt:11.91 },
-        { pn:'44A23080XXYY', awg:16, mm2:1.31,  strands:19,  wireDia:0.29, od:2.28, wt:14.73 },
-        { pn:'44A23079XXYY', awg:14, mm2:2.08,  strands:19,  wireDia:0.36, od:2.76, wt:22.17 },
-        { pn:'44A23078XXYY', awg:12, mm2:3.31,  strands:37,  wireDia:0.32, od:3.22, wt:32.59 },
-        { pn:'44A23077XXYY', awg:10, mm2:5.26,  strands:37,  wireDia:0.40, od:3.96, wt:52.08 },
-        { pn:'44A23076XXYY', awg:8,  mm2:8.37,  strands:133, wireDia:0.29, od:5.46, wt:93.46 }
-      ]
-    },
-
-    /* ── 5 ── 600V Twisted Twin Core Cables ─────────────────────────── */
-    {
-      id: 5, cat: '44G10', colType: 'B',
-      name: '600V Twisted Twin Core Cables',
-      voltage: 600, shielded: false, cores: 2, ptype: 'G',
-      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
-      shield: '—', outerSheath: '—',
-      voltageRating: '600V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'Last two digits = No. of cores (02 for 2 core)',
-      sizes: [
-        { pn:'44G108502', awg:30, mm2:0.051, cores:2, strands:7,  wireDia:0.10, od:1.39, wt:2.38  },
-        { pn:'44G108402', awg:28, mm2:0.08,  cores:2, strands:7,  wireDia:0.13, od:1.54, wt:3.13  },
-        { pn:'44G108102', awg:26, mm2:0.13,  cores:2, strands:19, wireDia:0.10, od:1.75, wt:4.47  },
-        { pn:'44G108202', awg:24, mm2:0.20,  cores:2, strands:19, wireDia:0.13, od:2.05, wt:6.69  },
-        { pn:'44G108102', awg:22, mm2:0.33,  cores:2, strands:19, wireDia:0.16, od:2.40, wt:9.82  },
-        { pn:'44G108002', awg:20, mm2:0.52,  cores:2, strands:19, wireDia:0.20, od:2.81, wt:14.73 },
-        { pn:'44G107902', awg:18, mm2:0.82,  cores:2, strands:19, wireDia:0.25, od:3.32, wt:22.32 },
-        { pn:'44G107802', awg:16, mm2:1.31,  cores:2, strands:19, wireDia:0.29, od:3.67, wt:28.42 },
-        { pn:'44G107702', awg:14, mm2:2.08,  cores:2, strands:19, wireDia:0.36, od:4.54, wt:44.35 },
-        { pn:'44G107602', awg:12, mm2:3.31,  cores:2, strands:37, wireDia:0.32, od:5.50, wt:69.00 }
-      ]
-    },
-
-    /* ── 6 ── 600V Single Core Shielded Primary ─────────────────────── */
-    {
-      id: 6, cat: '44G400', colType: 'A',
-      name: '600V Single Core Shielded Primary Wires',
-      voltage: 600, shielded: true, cores: 1, ptype: 'G',
-      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
-      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '600V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour, YY = Sheath colour',
-      sizes: [
-        { pn:'44G40087XXYY', awg:30, mm2:0.051, strands:7,  wireDia:0.10, od:1.49, wt:5.20  },
-        { pn:'44G40086XXYY', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, od:1.57, wt:5.80  },
-        { pn:'44G40085XXYY', awg:26, mm2:0.13,  strands:19, wireDia:0.10, od:1.59, wt:6.84  },
-        { pn:'44G40084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:1.85, wt:8.63  },
-        { pn:'44G40083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:2.03, wt:10.71 },
-        { pn:'44G40082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:2.28, wt:14.73 },
-        { pn:'44G40081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:2.64, wt:20.68 },
-        { pn:'44G40080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:2.81, wt:24.55 },
-        { pn:'44G40079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:3.24, wt:34.08 },
-        { pn:'44G40078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:3.72, wt:47.77 }
-      ]
-    },
-
-    /* ── 7 ── 1000V Single Core Shielded Primary (detailed) ─────────── */
-    {
-      id: 7, cat: '44G410', colType: 'C',
-      name: '1000V Single Core Insulated Shielded Primary Wires',
-      voltage: 1000, shielded: true, cores: 1, ptype: 'G',
-      weight: 'Light Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
-      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '1000V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation colour, YY = Sheath colour',
-      sizes: [
-        { pn:'44G41086XXYY', awg:28, mm2:0.08,  strands:7,  wireDia:0.13, insTk:0.20,  scrnDia:0.08,  shthTk:0.18, od:1.80, wt:5.65  },
-        { pn:'44G41085XXYY', awg:26, mm2:0.13,  strands:19, wireDia:0.10, insTk:0.20,  scrnDia:0.08,  shthTk:0.18, od:1.85, wt:6.85  },
-        { pn:'44G41084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, insTk:0.20,  scrnDia:0.10,  shthTk:0.18, od:2.13, wt:9.67  },
-        { pn:'44G41083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, insTk:0.23,  scrnDia:0.10,  shthTk:0.20, od:2.39, wt:12.35 },
-        { pn:'44G41082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, insTk:0.23,  scrnDia:0.127, shthTk:0.20, od:2.67, wt:17.41 },
-        { pn:'44G41081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, insTk:0.25,  scrnDia:0.127, shthTk:0.20, od:3.00, wt:22.62 },
-        { pn:'44G41080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, insTk:0.25,  scrnDia:0.127, shthTk:0.20, od:3.20, wt:26.64 },
-        { pn:'44G41079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, insTk:0.29,  scrnDia:0.127, shthTk:0.20, od:3.63, wt:36.16 },
-        { pn:'44G41078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, insTk:0.31,  scrnDia:0.127, shthTk:0.20, od:4.14, wt:49.56 }
-      ]
-    },
-
-    /* ── 8 ── 600V Single Core Shielded Airframe ────────────────────── */
-    {
-      id: 8, cat: '44A430', colType: 'A',
-      name: '600V Single Core Insulated Shielded Airframe Wires',
-      voltage: 600, shielded: true, cores: 1, ptype: 'A',
-      weight: 'Medium Weight', insulation: 'XLPO inner + Radiation Cross-Linked PVDF outer (dual wall)',
-      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '600V, Medium Weight, Airframe (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'XX = Insulation / Sheath colour code',
-      sizes: [
-        { pn:'44A43084XXYY', awg:24, mm2:0.20,  strands:19, wireDia:0.13, od:2.28, wt:11.76 },
-        { pn:'44A43083XXYY', awg:22, mm2:0.33,  strands:19, wireDia:0.16, od:2.59, wt:15.48 },
-        { pn:'44A43082XXYY', awg:20, mm2:0.52,  strands:19, wireDia:0.20, od:2.79, wt:19.19 },
-        { pn:'44A43081XXYY', awg:18, mm2:0.82,  strands:19, wireDia:0.25, od:3.04, wt:24.11 },
-        { pn:'44A43080XXYY', awg:16, mm2:1.31,  strands:19, wireDia:0.29, od:3.27, wt:28.13 },
-        { pn:'44A43079XXYY', awg:14, mm2:2.08,  strands:19, wireDia:0.36, od:3.75, wt:38.69 },
-        { pn:'44A43078XXYY', awg:12, mm2:3.31,  strands:37, wireDia:0.32, od:4.21, wt:52.38 }
-      ]
-    },
-
-    /* ── 9 ── 600V Twisted Twin Core Shielded ───────────────────────── */
-    {
-      id: 9, cat: '44G50', colType: 'B',
-      name: '600V Twisted Twin Core Shielded Cables',
-      voltage: 600, shielded: true, cores: 2, ptype: 'G',
-      weight: 'Light Weight', insulation: 'Radiation Cross-Linked Polyalkene (XLPO)',
-      shield: 'Annealed Tinned Copper braid', outerSheath: 'Radiation Cross-Linked Improved PVDF',
-      voltageRating: '600V, Light Weight (Thin wall)',
-      tempTin: '−65°C to +150°C', tempSilNi: '−65°C to +200°C',
-      tensile: '28 N/mm²', elongation: '230%', shrinkage: '< 1% at 200°C',
-      lowTempBend: '−65°C [−85°F]', smokeIdx: '6 per metre of wire',
-      toxIdx: '0.8 per metre of wire', oxygenIdx: '30%', tempIdx: '> 300°C [572°F]',
-      conductor: 'Annealed Tinned Copper (optional: Silver / Nickel Coated)',
-      colorNote: 'Last two digits = No. of cores (02 for 2 core)',
-      sizes: [
-        { pn:'44G5008502', awg:30, mm2:0.051, cores:2, strands:7,  wireDia:0.10, od:2.25, wt:8.63  },
-        { pn:'44G5008402', awg:28, mm2:0.08,  cores:2, strands:7,  wireDia:0.13, od:2.40, wt:9.82  },
-        { pn:'44G5008302', awg:26, mm2:0.13,  cores:2, strands:19, wireDia:0.10, od:2.61, wt:12.05 },
-        { pn:'44G5008202', awg:24, mm2:0.20,  cores:2, strands:19, wireDia:0.13, od:3.00, wt:16.82 },
-        { pn:'44G5008102', awg:22, mm2:0.33,  cores:2, strands:19, wireDia:0.16, od:3.37, wt:21.57 },
-        { pn:'44G5008002', awg:20, mm2:0.52,  cores:2, strands:19, wireDia:0.20, od:3.78, wt:27.97 },
-        { pn:'44G5007902', awg:18, mm2:0.82,  cores:2, strands:19, wireDia:0.25, od:4.34, wt:38.24 },
-        { pn:'44G5007802', awg:16, mm2:1.31,  cores:2, strands:19, wireDia:0.29, od:4.69, wt:44.94 },
-        { pn:'44G5007702', awg:14, mm2:2.08,  cores:2, strands:19, wireDia:0.36, od:5.55, wt:64.28 },
-        { pn:'44G5007602', awg:12, mm2:3.31,  cores:2, strands:37, wireDia:0.32, od:6.52, wt:91.51 }
-      ]
-    }
-  ];
+  async function loadTypes() {
+    const d = await (await fetch('/catalog/data/products/aero-44.json')).json();
+    TYPES = d.series.map(deriveType);
+    applyFilters();
+  }
 
   /* ── Filter State ──────────────────────────────── */
   const filters = { voltage: 'all', shield: 'all', cores: 'all', ins: 'all', wt: 'all' };
@@ -1005,10 +794,9 @@
   });
 
   /* ── AWG range helper ──────────────────────────── */
-  function awgRange(sizes) {
-    const awgs = sizes.map(s => s.awg);
-    const mn = Math.min(...awgs), mx = Math.max(...awgs);
-    return mn === mx ? `AWG ${mn}` : `AWG ${mx} – ${mn}`;
+  function awgRange(t) {
+    if (t.awgMin == null) return '';
+    return t.awgMin === t.awgMax ? `AWG ${t.awgMin}` : `AWG ${t.awgMax} – ${t.awgMin}`;
   }
 
   /* ── Render product cards ──────────────────────── */
@@ -1028,7 +816,7 @@
         : `<span class="badge badge-general">General Purpose</span>`;
       const coreBadge = t.cores > 1 ? `<span class="badge badge-twin">Twin Core</span>` : '';
       return `
-        <div class="prod-card reveal" onclick="window.location='/products/product-aero44-spec.html#${t.id}'" role="link" tabindex="0" onkeydown="if(event.key==='Enter')window.location='/products/product-aero44-spec.html#${t.id}'">
+        <a class="prod-card reveal" href="/products/product-variant.html#f=aero-44&s=${t.idx}">
           <div class="prod-card-head">
             <div class="prod-card-badges">${voltBadge}${shieldBadge}${typeBadge}${coreBadge}</div>
             <div class="prod-card-name">${t.name}</div>
@@ -1038,26 +826,25 @@
               <div class="prod-spec"><span class="prod-spec-label">Insulation</span><span class="prod-spec-val">${t.insulation.split('(')[0].trim()}</span></div>
               <div class="prod-spec"><span class="prod-spec-label">Temp (Ag/Ni)</span><span class="prod-spec-val">${t.tempSilNi}</span></div>
               <div class="prod-spec"><span class="prod-spec-label">Weight Class</span><span class="prod-spec-val">${t.weight}</span></div>
-              <div class="prod-spec"><span class="prod-spec-label">Sizes</span><span class="prod-spec-val">${t.sizes.length} variants</span></div>
+              <div class="prod-spec"><span class="prod-spec-label">Sizes</span><span class="prod-spec-val">${t.sizesCount} variant${t.sizesCount === 1 ? '' : 's'}</span></div>
             </div>
-            <div class="prod-card-cat">Catalogue: ${t.cat}…</div>
+            <div class="prod-card-cat">Catalogue: ${t.cat}${t.cat ? '…' : ''}</div>
           </div>
           <div class="prod-card-footer">
-            <span class="prod-card-awg">${awgRange(t.sizes)}</span>
+            <span class="prod-card-awg">${awgRange(t)}</span>
             <span class="prod-card-btn">View Specs &amp; Parts
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
             </span>
           </div>
-        </div>`;
+        </a>`;
     }).join('');
 
-    /* re-observe new .reveal elements */
     if (window.__revealObs) {
       document.querySelectorAll('.prod-card.reveal:not(.visible)').forEach(el => window.__revealObs.observe(el));
     }
   }
 
-  /* ── Spec Sheet Modal ──────────────────────────── */
+  /* ── Spec Sheet Modal (unused; cards link to product-variant.html) ── */
   function openSpec(id) {
     const t = TYPES.find(x => x.id === id);
     if (!t) return;
@@ -1253,7 +1040,7 @@
   });
 
   /* ── Init ─────────────────────────────────────── */
-  applyFilters();
+  loadTypes();
   </script>
 
   <script src="/nav-mobile.js" defer></script>

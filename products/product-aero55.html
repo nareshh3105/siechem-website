@@ -413,23 +413,31 @@
      Full spec/size data lives in catalog/data/products/aero-55.json,
      rendered by /products/product-variant.html.
   ══════════════════════════════════════════════════ */
-  const TYPES = [
-    { idx:0,  name:'AERO 55 600V Single Core Unsheathed Wires', shielded:false, cores:1, ptype:'G', spc:false, awgMin:8,  awgMax:30, sizes:12, insulation:'EBXL', weight:'Light Weight' },
-    { idx:1,  name:'AERO 55 600V Twisted Twin Core Cables', shielded:false, cores:2, ptype:'G', spc:false, awgMin:8,  awgMax:30, sizes:12, insulation:'EBXL', weight:'Light Weight' },
-    { idx:2,  name:'AERO 55 600V Multicore Sheathed Cable', shielded:false, cores:'multi', ptype:'G', spc:false, awgMin:20, awgMax:22, sizes:4,  insulation:'EBXL', weight:'Light Weight' },
-    { idx:3,  name:'AERO 55 600V Single Core Shielded Wires', shielded:true,  cores:1, ptype:'G', spc:false, awgMin:8,  awgMax:30, sizes:12, insulation:'EBXL', weight:'Light Weight' },
-    { idx:4,  name:'AERO 55 600V Twisted Twin Core Shielded Cables', shielded:true,  cores:2, ptype:'G', spc:false, awgMin:8,  awgMax:30, sizes:13, insulation:'EBXL', weight:'Light Weight' },
-    { idx:5,  name:'AERO 55 600V Single Core Insulated Airframe Wires', shielded:false, cores:1, ptype:'A', spc:false, awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe' },
-    { idx:6,  name:'AERO 55 600 V Insulated Twisted Twin Core Airframe Cables', shielded:false, cores:2, ptype:'A', spc:false, awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe' },
-    { idx:7,  name:'AERO 55 600 V Single Core Shielded Airframe Wires', shielded:true,  cores:1, ptype:'A', spc:false, awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe' },
-    { idx:8,  name:'AERO 55 600 V Twisted Twin Core Shielded Airframe Cables', shielded:true,  cores:2, ptype:'A', spc:false, awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe' },
-    { idx:9,  name:'AERO 55 600 V Single Core insulated Statistical Process Controlled Airframe Wires', shielded:false, cores:1, ptype:'A', spc:true,  awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe · SPC' },
-    { idx:10, name:'AERO 55 600V Insulated Twisted Twin Core Statistical Process Controlled Airframe Cables', shielded:false, cores:2, ptype:'A', spc:true,  awgMin:10, awgMax:24, sizes:8,  insulation:'ETFE', weight:'Airframe · SPC' },
-    { idx:11, name:'AERO 55 600V Single Core Statistical Process Controlled Shielded Airframe Wires', shielded:true,  cores:1, ptype:'A', spc:true,  awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe · SPC' },
-    { idx:12, name:'AERO 55 600V Twisted Twin Core Statistical Process Controlled Shielded Airframe Cables', shielded:true,  cores:2, ptype:'A', spc:true,  awgMin:10, awgMax:26, sizes:9,  insulation:'ETFE', weight:'Airframe · SPC' },
-    { idx:13, name:'ATC Sie-Foam Skinned, Twin Axial Cable', shielded:false, cores:2, ptype:'G', spc:false, awgMin:24, awgMax:24, sizes:1, insulation:'Sie-Foam', weight:'RF Cable' },
-    { idx:14, name:'ATC Sie-Foam Skinned, Twin Radio Frequency Cable', shielded:false, cores:2, ptype:'G', spc:false, awgMin:24, awgMax:24, sizes:1, insulation:'Sie-Foam', weight:'RF Cable' }
-  ];
+  let TYPES = [];
+
+  function deriveType(s, idx) {
+    const n = s.name;
+    const shielded = /Shielded/i.test(n);
+    const cores = /Multicore/i.test(n) ? 'multi' : (/Twin/i.test(n) ? 2 : 1);
+    const ptype = /Airframe/i.test(n) ? 'A' : 'G';
+    const spc = /Statistical Process Controlled/i.test(n);
+    const insulation = ptype === 'A' ? 'ETFE' : (/Sie-?Foam/i.test(n) ? 'Sie-Foam' : 'EBXL');
+    const weight = /Sie-?Foam/i.test(n) ? 'RF Cable' : (ptype === 'A' ? (spc ? 'Airframe · SPC' : 'Airframe') : 'Light Weight');
+    const awgIdx = s.headers.findIndex(h => /AWG/i.test(h));
+    const awgs = awgIdx >= 0 ? s.rows.map(r => +r[awgIdx]).filter(x => !isNaN(x)) : [];
+    return {
+      idx, name: n, shielded, cores, ptype, spc, insulation, weight,
+      awgMin: awgs.length ? Math.min(...awgs) : null,
+      awgMax: awgs.length ? Math.max(...awgs) : null,
+      sizes: s.rows.length
+    };
+  }
+
+  async function loadTypes() {
+    const d = await (await fetch('/catalog/data/products/aero-55.json')).json();
+    TYPES = d.series.map(deriveType);
+    applyFilters();
+  }
 
   const filters = { shield: 'all', cores: 'all', ptype: 'all', spc: 'all' };
   let hasInteracted = false;
@@ -459,6 +467,7 @@
   });
 
   function awgRange(t) {
+    if (t.awgMin == null) return '';
     return t.awgMin === t.awgMax ? `AWG ${t.awgMin}` : `AWG ${t.awgMax} – ${t.awgMin}`;
   }
 
@@ -507,7 +516,7 @@
     }
   }
 
-  applyFilters();
+  loadTypes();
   </script>
 
   <script src="/nav-mobile.js" defer></script>
