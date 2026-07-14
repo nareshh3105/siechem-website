@@ -133,7 +133,8 @@
     "301 13 16",
     "301 13 19",
     "301 13 24"
-   ]
+   ],
+   "catalogueNo": "301"
   },
   {
    "id": "fe47095862",
@@ -676,7 +677,8 @@
     "319 16 12",
     "319 13 14",
     "319 16 14"
-   ]
+   ],
+   "catalogueNo": "302"
   },
   {
    "id": "391c729948",
@@ -890,7 +892,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["3043803", "3044103", "3041304", "3041604", "3041904", "3042304", "3042704", "3042804", "3043004", "3043204", "3043404", "3043704", "3043804", "3041305", "3041605", "3041307", "3041310", "3041312", "3041314", "3041316", "3041319", "3041324"]
+   "partNumbers": ["3043803", "3044103", "3041304", "3041604", "3041904", "3042304", "3042704", "3042804", "3043004", "3043204", "3043404", "3043704", "3043804", "3041305", "3041605", "3041307", "3041310", "3041312", "3041314", "3041316", "3041319", "3041324"],
+   "catalogueNo": "304"
   },
   {
    "id": "598348bc7b",
@@ -916,7 +919,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["311 70 05", "311 70 12"]
+   "partNumbers": ["311 70 05", "311 70 12"],
+   "catalogueNo": "311"
   },
   {
    "id": "0ffd17ae69",
@@ -951,7 +955,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["312 13 02", "312 13 03", "312 13 04", "312 13 05", "312 13 07", "312 16 03", "312 16 04", "312 16 05", "312 19 04", "312 19 05", "312 23 04", "312 23 05"]
+   "partNumbers": ["312 13 02", "312 13 03", "312 13 04", "312 13 05", "312 13 07", "312 16 03", "312 16 04", "312 16 05", "312 19 04", "312 19 05", "312 23 04", "312 23 05"],
+   "catalogueNo": "312"
   },
   {
    "id": "51a1bc29a0",
@@ -990,7 +995,8 @@
     "application": ["Fixed installations on ships and offshore units in all locations below the upper metallic deck Minimizes radio interferences and electrical influences Installation on passenger ships"],
     "construction": ["Conductor : Electrolytic, stranded, annealed copper wire. IEC 60228 Class 5 (Tinned on request) Insulation : PVC Screen : Tinned Steel wire braid Outer Sheath : PVC (Black) DGQA Siechem WIRING CABLE - SY Number of Cores and mm2 Outer Diameter in Copper"],
     "technical": ["Temperature Range : -400C to +700C Rated Voltage (U/U) : 250 V o Test Voltage : 1500 V Bending Radius(Min) : 7.5 x Cable Diameter Flexing : +50C to +700C Short-circuit temp. (max.) : 1600C"]
-   }
+   },
+   "catalogueNo": "313"
   },
   {
    "id": "e218c6990c",
@@ -1116,7 +1122,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["-40C", "+120C", "\n12C"],
+    "tempMentions": ["-40C", "+120C", "12C"],
     "conductors": ["Annealed Copper"],
     "halogenFree": true,
     "fireSafety": true,
@@ -1186,7 +1192,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["-40C", "+120C", "\n10C", "\n12C"],
+    "tempMentions": ["-40C", "+120C", "10C", "12C"],
     "conductors": ["Tinned Copper", "Annealed Copper", "Aluminium"],
     "shielded": true,
     "halogenFree": true,
@@ -1197,7 +1203,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["317 13 02", "317 16 02", "317 13 03", "317 16 03", "317 13 04", "317 16 04", "317 13 05", "317 16 05", "317 13 07", "317 16 07", "317 13 10", "317 16 10", "317 13 12", "317 16 12", "317 13 19", "317 16 19", "317 13 27", "317 16 27"]
+   "partNumbers": ["317 13 02", "317 16 02", "317 13 03", "317 16 03", "317 13 04", "317 16 04", "317 13 05", "317 16 05", "317 13 07", "317 16 07", "317 13 10", "317 16 10", "317 13 12", "317 16 12", "317 13 19", "317 16 19", "317 13 27", "317 16 27"],
+   "catalogueNo": "317"
   },
   {
    "id": "23cbd60f2c",
@@ -1241,7 +1248,8 @@
     "application": ["Fixed installations in Ships, Switchboards, Control panels and other enclosures"],
     "construction": ["Conductor : Electrolytic, stranded, annealed copper wire. IEC 60228 Class 5 Insulation : Cross Linked Polyethylene DGQA Siechem LKEM-HF Marine Cable Number of Cores and mm2 Outer Diameter in Copper"],
     "technical": ["Temperature Range : -400C to +1200C Rated Voltage (U/U) : 0.6/1k V (1.2kV) o Test Voltage : 3.5 kV"]
-   }
+   },
+   "catalogueNo": "318"
   },
   {
    "id": "6edbbe3826",
@@ -1355,7 +1363,7 @@
    "notes": [],
    "attrs": {
     "voltage": "150/250V",
-    "tempMentions": ["-40C", "+120C", "\n10C", "\n12C"],
+    "tempMentions": ["-40C", "+120C", "10C", "12C"],
     "conductors": ["Annealed Copper"],
     "shielded": true,
     "armoured": true,
@@ -1367,7 +1375,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["320 08 02", "320 08 03", "320 08 04", "320 08 05", "320 08 07", "320 08 10", "320 08 12", "320 08 14", "320 08 16", "320 08 19", "320 08 24", "320 08 27", "320 08 32", "320 08 37"]
+   "partNumbers": ["320 08 02", "320 08 03", "320 08 04", "320 08 05", "320 08 07", "320 08 10", "320 08 12", "320 08 14", "320 08 16", "320 08 19", "320 08 24", "320 08 27", "320 08 32", "320 08 37"],
+   "catalogueNo": "320"
   },
   {
    "id": "9325d7b422",
@@ -1579,7 +1588,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["324 08 02", "324 08 04", "324 08 07", "324 08 08", "324 08 10", "324 08 12", "324 08 14", "324 08 19", "324 08 24", "324 13 02", "324 13 04", "324 13 07", "324 13 08", "324 13 10", "324 13 12", "324 13 14", "324 13 19"]
+   "partNumbers": ["324 08 02", "324 08 04", "324 08 07", "324 08 08", "324 08 10", "324 08 12", "324 08 14", "324 08 19", "324 08 24", "324 13 02", "324 13 04", "324 13 07", "324 13 08", "324 13 10", "324 13 12", "324 13 14", "324 13 19"],
+   "catalogueNo": "324"
   },
   {
    "id": "144cdc60ef",
@@ -1626,7 +1636,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["325 06 01", "326 06 01", "325 06 02", "325 06 04", "325 06 07", "325 06 08", "325 06 10", "325 06 12", "325 06 14", "325 06 19", "325 06 24", "325 06 37", "325 08 01", "326 08 01", "325 08 02", "325 08 04", "325 08 07", "325 08 08", "325 08 10", "325 08 12", "325 08 14", "325 08 19", "325 08 24"]
+   "partNumbers": ["325 06 01", "326 06 01", "325 06 02", "325 06 04", "325 06 07", "325 06 08", "325 06 10", "325 06 12", "325 06 14", "325 06 19", "325 06 24", "325 06 37", "325 08 01", "326 08 01", "325 08 02", "325 08 04", "325 08 07", "325 08 08", "325 08 10", "325 08 12", "325 08 14", "325 08 19", "325 08 24"],
+   "catalogueNo": "325/326"
   },
   {
    "id": "40689c93be",
@@ -1660,7 +1671,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["327 06 02", "327 06 04", "327 06 07", "327 06 08", "327 06 10", "327 06 12", "327 06 14", "327 06 19", "327 06 24"]
+   "partNumbers": ["327 06 02", "327 06 04", "327 06 07", "327 06 08", "327 06 10", "327 06 12", "327 06 14", "327 06 19", "327 06 24"],
+   "catalogueNo": "327"
   },
   {
    "id": "c56336b350",
@@ -1706,7 +1718,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["328 08 01", "329 08 01", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 13 XX", "329 13 XX", "328 13 02", "328 13 04", "328 13 07", "328 13 08", "328 13 10", "328 13 12", "328 13 14", "328 13 19"]
+   "partNumbers": ["328 08 01", "329 08 01", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 08 02", "328 13 XX", "329 13 XX", "328 13 02", "328 13 04", "328 13 07", "328 13 08", "328 13 10", "328 13 12", "328 13 14", "328 13 19"],
+   "catalogueNo": "328/329"
   },
   {
    "id": "7dff1ded40",
@@ -1748,7 +1761,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["330 08 02", "330 08 04", "330 08 07", "330 08 08", "330 08 10", "330 08 12", "330 08 14", "330 08 19", "330 08 24", "330 13 02", "330 13 04", "330 13 07", "330 13 08", "330 13 10", "330 13 12", "330 13 14", "330 13 19"]
+   "partNumbers": ["330 08 02", "330 08 04", "330 08 07", "330 08 08", "330 08 10", "330 08 12", "330 08 14", "330 08 19", "330 08 24", "330 13 02", "330 13 04", "330 13 07", "330 13 08", "330 13 10", "330 13 12", "330 13 14", "330 13 19"],
+   "catalogueNo": "330"
   },
   {
    "id": "6c6bbccd96",
@@ -1783,7 +1797,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["331 08 01", "332 08 01", "331 08 02", "331 08 04", "331 08 07", "331 08 08", "331 08 10", "331 08 12", "331 08 14", "331 08 19", "331 08 24"]
+   "partNumbers": ["331 08 01", "332 08 01", "331 08 02", "331 08 04", "331 08 07", "331 08 08", "331 08 10", "331 08 12", "331 08 14", "331 08 19", "331 08 24"],
+   "catalogueNo": "331/332"
   },
   {
    "id": "7413a88322",
@@ -1816,7 +1831,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["333 08 02", "333 08 04", "333 08 07", "333 08 08", "333 08 10", "333 08 12", "333 08 14", "333 08 19", "333 08 24"]
+   "partNumbers": ["333 08 02", "333 08 04", "333 08 07", "333 08 08", "333 08 10", "333 08 12", "333 08 14", "333 08 19", "333 08 24"],
+   "catalogueNo": "333"
   },
   {
    "id": "48559abf0f",
@@ -1840,7 +1856,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["334 70 01"]
+   "partNumbers": ["334 70 01"],
+   "catalogueNo": "334"
   },
   {
    "id": "d70a1ec21d",
@@ -1964,12 +1981,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["336 08 01", "336 08 02", "336 08 04", "336 08 07", "336 08 10", "336 08 14", "336 08 19", "336 08 24"]
+   "partNumbers": ["336 08 01", "336 08 02", "336 08 04", "336 08 07", "336 08 10", "336 08 14", "336 08 19", "336 08 24"],
+   "catalogueNo": "336"
   },
   {
    "id": "104204fcaa",
    "family": "marine",
-   "name": "MYY-J  Marine Cable",
+   "name": "MYY-J Marine Cable",
    "pages": [64],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2002,7 +2020,7 @@
   {
    "id": "0504ec1955",
    "family": "marine",
-   "name": "MYY-O  Marine Cable",
+   "name": "MYY-O Marine Cable",
    "pages": [65],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2031,12 +2049,13 @@
     "application": ["Fixed installations in communication, radio, control and data processing facilities on ships."],
     "construction": ["Conductor : Electrolytic, stranded, annealed copper wire. Insulation : PVC Outer Sheath : PVC DGQA Siechem MYY-O Marine Cable Number of Cores and mm2 Outer Diameter in Copper"],
     "technical": ["Temperature Range : -400C to +1200C Rated Voltage (U/U) : 60 V o Test Voltage : 1500 V"]
-   }
+   },
+   "catalogueNo": "338"
   },
   {
    "id": "8dd59ebc15",
    "family": "marine",
-   "name": "SY  Marine Cable",
+   "name": "SY Marine Cable",
    "pages": [66],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2067,12 +2086,13 @@
     "application": ["Suited for use in Control units, production lines, communication systems, conveyor belts, ship building. Used for fixed or mobile installation in dry, damp or wet areas."],
     "construction": ["Conductor : Fine wire stranded, plain copper conductor Insulation : PVC Screening : Tinned Steel-wire braided Outer Sheath : PVC DGQA Siechem SY Marine Cable Number of Cores and mm2 Outer Diameter in Copper"],
     "technical": ["Temperature Range : -400C to +1200C Rated Voltage (U/U) : 60 V o Test Voltage : 1500 V"]
-   }
+   },
+   "catalogueNo": "339"
   },
   {
    "id": "cc247771e0",
    "family": "marine",
-   "name": "SY - Stranded  Marine Cable",
+   "name": "SY - Stranded Marine Cable",
    "pages": [67],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2101,12 +2121,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["340 13 02", "340 13 03", "340 13 04", "340 13 05", "340 13 07", "340 16 03", "340 16 04", "340 16 05", "340 19 04", "340 19 05", "340 23 04", "340 23 05"]
+   "partNumbers": ["340 13 02", "340 13 03", "340 13 04", "340 13 05", "340 13 07", "340 16 03", "340 16 04", "340 16 05", "340 19 04", "340 19 05", "340 23 04", "340 23 05"],
+   "catalogueNo": "340"
   },
   {
    "id": "3efa6cf4e3",
    "family": "marine",
-   "name": "LFMKK  Marine Cable",
+   "name": "LFMKK Marine Cable",
    "pages": [68],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2128,12 +2149,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["341 08 02", "341 08 04", "341 08 06", "341 08 08", "341 08 10", "341 08 14"]
+   "partNumbers": ["341 08 02", "341 08 04", "341 08 06", "341 08 08", "341 08 10", "341 08 14"],
+   "catalogueNo": "341"
   },
   {
    "id": "e9d9e1451f",
    "family": "marine",
-   "name": "LMKK  Marine Cable",
+   "name": "LMKK Marine Cable",
    "pages": [69],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2156,7 +2178,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["-40C", "+85C", "\n10C", "\n12C"],
+    "tempMentions": ["-40C", "+85C", "10C", "12C"],
     "materials": ["PVC", "Polyamide"],
     "shielded": true,
     "fireSafety": true,
@@ -2165,12 +2187,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["342 13 02", "342 13 03", "342 13 04", "342 13 05", "342 13 07", "342 13 10", "342 13 12", "342 13 14", "342 13 16", "342 13 19", "342 13 24", "342 13 27", "342 13 33", "342 16 02", "342 16 03", "342 16 04"]
+   "partNumbers": ["342 13 02", "342 13 03", "342 13 04", "342 13 05", "342 13 07", "342 13 10", "342 13 12", "342 13 14", "342 13 16", "342 13 19", "342 13 24", "342 13 27", "342 13 33", "342 16 02", "342 16 03", "342 16 04"],
+   "catalogueNo": "342"
   },
   {
    "id": "6e6d08c8a5",
    "family": "marine",
-   "name": "LMGSG  Marine Cable",
+   "name": "LMGSG Marine Cable",
    "pages": [70],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Total Weight Kg/Km approx."],
    "rows": [
@@ -2194,7 +2217,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["-40C", "+85C", "\n10C", "\n12C"],
+    "tempMentions": ["-40C", "+85C", "10C", "12C"],
     "materials": ["EPR"],
     "shielded": true,
     "halogenFree": true,
@@ -2204,7 +2227,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["343 13 02", "343 13 03", "343 13 04", "343 13 05", "343 13 07", "343 13 10", "343 13 12", "343 13 14", "343 13 16", "343 13 19", "343 13 24", "343 13 27", "343 13 33", "343 16 02", "343 16 03", "343 16 04", "343 16 07"]
+   "partNumbers": ["343 13 02", "343 13 03", "343 13 04", "343 13 05", "343 13 07", "343 13 10", "343 13 12", "343 13 14", "343 13 16", "343 13 19", "343 13 24", "343 13 27", "343 13 33", "343 16 02", "343 16 03", "343 16 04", "343 16 07"],
+   "catalogueNo": "343"
   },
   {
    "id": "a41b9096f6",
@@ -2248,7 +2272,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-6808A1", "N5013-6808", "N5013-6809", "N5013-6810", "N5013-6811", "N5013-6812", "N5013-6813", "N5013-6814", "N5013-6815", "N5013-6816", "N5013-6817", "N5013-6818", "N5013-6819", "N5013-6820", "N5013-6821", "N5013-6822", "N5013-6823", "N5013-6824", "N5013-6825", "N5013-6826", "N5013-6827"]
+   "partNumbers": ["N5013-6808A1", "N5013-6808", "N5013-6809", "N5013-6810", "N5013-6811", "N5013-6812", "N5013-6813", "N5013-6814", "N5013-6815", "N5013-6816", "N5013-6817", "N5013-6818", "N5013-6819", "N5013-6820", "N5013-6821", "N5013-6822", "N5013-6823", "N5013-6824", "N5013-6825", "N5013-6826", "N5013-6827"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "3527eafee1",
@@ -2332,7 +2357,8 @@
     "N5013-6853",
     "N5013-6854",
     "N5013-6855"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "65d6233ee7",
@@ -2368,7 +2394,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n14C"],
+    "tempMentions": ["20C", "-30C", "+120C", "14C"],
     "materials": ["Silicone", "Rubber"],
     "shielded": true,
     "halogenFree": true,
@@ -2402,7 +2428,8 @@
     "N5013-6872",
     "N5013-6873",
     "N5013-6874"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "c3bae11369",
@@ -2443,7 +2470,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n10C"],
+    "tempMentions": ["20C", "-30C", "+120C", "10C"],
     "materials": ["Silicone", "Rubber"],
     "shielded": true,
     "halogenFree": true,
@@ -2482,7 +2509,8 @@
     "N5013-6841",
     "N5013-6889A1",
     "N5013-6890A1"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "b477ed8321",
@@ -2525,7 +2553,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20C", "\n10C", "\n14C", "\n18C"],
+    "tempMentions": ["20C", "10C", "14C", "18C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -2563,7 +2591,8 @@
     "N5013-6907",
     "N5013-6872",
     "N5013-6909"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "c9ad50bb02",
@@ -2603,7 +2632,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-6910A1", "N5013-6911A1", "N5013-6912A1", "N5013-6913A1", "N5013-6914A1", "N5013-6915A1", "N5013-6916A1", "N5013-6917A1", "N5013-6910", "N5013-6911", "N5013-6912", "N5013-6913", "N5013-6914", "N5013-6915", "N5013-6916", "N5013-6917"]
+   "partNumbers": ["N5013-6910A1", "N5013-6911A1", "N5013-6912A1", "N5013-6913A1", "N5013-6914A1", "N5013-6915A1", "N5013-6916A1", "N5013-6917A1", "N5013-6910", "N5013-6911", "N5013-6912", "N5013-6913", "N5013-6914", "N5013-6915", "N5013-6916", "N5013-6917"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "4f6ec506eb",
@@ -2626,7 +2656,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n14C"],
+    "tempMentions": ["20C", "-30C", "+120C", "14C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -2637,7 +2667,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-6918A1", "N5013-6919A1", "N5013-6920A1", "N5013-6921A1", "N5013-6922A1", "N5013-6918", "N5013-6919", "N5013-6920", "N5013-6921", "N5013-6922"]
+   "partNumbers": ["N5013-6918A1", "N5013-6919A1", "N5013-6920A1", "N5013-6921A1", "N5013-6922A1", "N5013-6918", "N5013-6919", "N5013-6920", "N5013-6921", "N5013-6922"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "2ef4f1c637",
@@ -2669,7 +2700,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-6910A1", "N5013-6924A1", "N5013-6925A1", "N5013-6926A1", "N5013-6910", "N5013-6924", "N5013-6925", "N5013-6926"]
+   "partNumbers": ["N5013-6910A1", "N5013-6924A1", "N5013-6925A1", "N5013-6926A1", "N5013-6910", "N5013-6924", "N5013-6925", "N5013-6926"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "ebd9288c40",
@@ -2706,7 +2738,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n12C"],
+    "tempMentions": ["20C", "-30C", "+120C", "12C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -2742,7 +2774,8 @@
     "N5013-6991",
     "N5013-6992",
     "N5013-6993"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "b8c0f380da",
@@ -2777,7 +2810,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-6971", "N5013-6995", "N5013-6996", "N5013-6997", "N5013-6998", "N5013-6999", "N5013-6700", "N5013-7001", "N5013-7002", "N5013-7003", "N5013-7004"]
+   "partNumbers": ["N5013-6971", "N5013-6995", "N5013-6996", "N5013-6997", "N5013-6998", "N5013-6999", "N5013-6700", "N5013-7001", "N5013-7002", "N5013-7003", "N5013-7004"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "8293f96e0e",
@@ -2794,7 +2828,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n12C"],
+    "tempMentions": ["20C", "-30C", "+120C", "12C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -2805,7 +2839,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N5013-1430", "N5013-1431", "N5013-1432", "N5013-1433"]
+   "partNumbers": ["N5013-1430", "N5013-1431", "N5013-1432", "N5013-1433"],
+   "catalogueNo": "50-13"
   },
   {
    "id": "a97ecb0a98",
@@ -2890,7 +2925,8 @@
     "N5013-6854S",
     "N5013-6855S",
     "N5013-6856S"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "0afd6ba354",
@@ -2928,7 +2964,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["20C", "-30C", "+120C", "\n14C"],
+    "tempMentions": ["20C", "-30C", "+120C", "14C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -2965,7 +3001,8 @@
     "N5013-6874S",
     "N5013-6828A1S",
     "N5013-6840A1S"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "438eba2a2c",
@@ -3034,7 +3071,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20C", "\n14C", "\n18C", "\n24C"],
+    "tempMentions": ["20C", "14C", "18C", "24C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -3098,7 +3135,8 @@
     "N5013-6907S",
     "N5013-6872S",
     "N5013-6909S"
-   ]
+   ],
+   "catalogueNo": "50-13"
   },
   {
    "id": "46b5de1ee8",
@@ -3134,12 +3172,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020880", "N6145020881", "N6145020882", "N6145020883", "N6145020979", "N6145020980", "N6145020981", "N6145020982", "N6145020983", "N6145020984", "N6145020985"]
+   "partNumbers": ["N6145020880", "N6145020881", "N6145020882", "N6145020883", "N6145020979", "N6145020980", "N6145020981", "N6145020982", "N6145020983", "N6145020984", "N6145020985"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "8da612b887",
    "family": "marine",
-   "name": "Individually Screened Plus  UnScreened Quad Cables Collectively Screened Marin Cable",
+   "name": "Individually Screened Plus UnScreened Quad Cables Collectively Screened Marin Cable",
    "pages": [90],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Overall Diameter in (Nom.) (mm)", "Max. Conductor Resistance at 200 C (Ω/km)", "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)", "Approx. Weight of Cable (Kg/Km)"],
    "rows": [
@@ -3159,7 +3198,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020884", "N6145020885"]
+   "partNumbers": ["N6145020884", "N6145020885"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "2a89cd8b7f",
@@ -3183,7 +3223,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020886"]
+   "partNumbers": ["N6145020886"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "1c8106a54d",
@@ -3207,7 +3248,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020887"]
+   "partNumbers": ["N6145020887"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "565e1fab6b",
@@ -3231,7 +3273,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020888"]
+   "partNumbers": ["N6145020888"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "bf4605d5f3",
@@ -3255,12 +3298,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020889"]
+   "partNumbers": ["N6145020889"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "25cf9169c6",
    "family": "marine",
-   "name": "Multicore Cable, Collectively Screened  Marine Cable",
+   "name": "Multicore Cable, Collectively Screened Marine Cable",
    "pages": [95],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "No. of Wires (Typical Value) x Single Wire Dia. (max)", "Overall Diameter in (Nom.) (mm)", "Max. Conductor Resistance at 200 C (Ω/km)", "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)", "Approx. Weight of Cable (Kg/Km)"],
    "rows": [
@@ -3269,7 +3313,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-65C", "+120C", "\n12C", "20C"],
+    "tempMentions": ["-65C", "+120C", "12C", "20C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -3279,7 +3323,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020890"]
+   "partNumbers": ["N6145020890"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "b3d64409b1",
@@ -3304,7 +3349,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020891", "N6145020892"]
+   "partNumbers": ["N6145020891", "N6145020892"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "a9b1fc315b",
@@ -3330,7 +3376,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020893", "N6145020894", "N6145020895"]
+   "partNumbers": ["N6145020893", "N6145020894", "N6145020895"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "4db23241e2",
@@ -3356,7 +3403,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020896", "N6145020897"]
+   "partNumbers": ["N6145020896", "N6145020897"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "9feb0e12e0",
@@ -3380,7 +3428,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020898"]
+   "partNumbers": ["N6145020898"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "3da9471943",
@@ -3424,7 +3473,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-65C", "+120C", "\n14C", "\n24C"],
+    "tempMentions": ["-65C", "+120C", "14C", "24C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["IS : 8130 -1984"],
@@ -3465,7 +3514,8 @@
     "N6145020934",
     "N6145020935",
     "N6145020936"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "0265068054",
@@ -3495,7 +3545,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020905", "N6145020906", "N6145020907", "N6145020908", "N6145020909", "N6145020910", "N6145020911"]
+   "partNumbers": ["N6145020905", "N6145020906", "N6145020907", "N6145020908", "N6145020909", "N6145020910", "N6145020911"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "951c2a86f5",
@@ -3538,7 +3589,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020937", "N6145020938", "N6145020939", "N6145020940", "N6145020941", "N6145020942", "N6145020943", "N6145020944", "N6145020945", "N6145020946", "N6145020947", "N6145020948", "N6145020949", "N6145020950", "N6145020951", "N6145020952", "N6145020953", "N6145020954", "N6145020955", "N6145020956"]
+   "partNumbers": ["N6145020937", "N6145020938", "N6145020939", "N6145020940", "N6145020941", "N6145020942", "N6145020943", "N6145020944", "N6145020945", "N6145020946", "N6145020947", "N6145020948", "N6145020949", "N6145020950", "N6145020951", "N6145020952", "N6145020953", "N6145020954", "N6145020955", "N6145020956"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "369a559177",
@@ -3575,12 +3627,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020957", "N6145020958", "N6145020959", "N6145020960", "N6145020961", "N6145020962", "N6145020963", "N6145020964", "N6145020965", "N6145020966", "N6145020967", "N6145020968", "N6145020969", "N6145020970"]
+   "partNumbers": ["N6145020957", "N6145020958", "N6145020959", "N6145020960", "N6145020961", "N6145020962", "N6145020963", "N6145020964", "N6145020965", "N6145020966", "N6145020967", "N6145020968", "N6145020969", "N6145020970"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "2365309963",
    "family": "marine",
-   "name": "Multipair Cables -  Collectively Screened Marine Cable",
+   "name": "Multipair Cables - Collectively Screened Marine Cable",
    "pages": [109],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "No. of Wires (Typical Value) x Single Wire Dia. (max)", "Overall Diameter in (Nom.) (mm)", "Max. Conductor Resistance at 200 C (Ω/km)", "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)", "Approx. Weight of Cable (Kg/Km)"],
    "rows": [
@@ -3606,12 +3659,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020971", "N6145020972", "N6145020973", "N6145020974", "N6145020975", "N6145020976", "N6145020977", "N6145020978"]
+   "partNumbers": ["N6145020971", "N6145020972", "N6145020973", "N6145020974", "N6145020975", "N6145020976", "N6145020977", "N6145020978"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "75dd305afa",
    "family": "marine",
-   "name": "Multipair Cables -  Individually Screened Marine Cable",
+   "name": "Multipair Cables - Individually Screened Marine Cable",
    "pages": [111, 112],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "No. of Wires (Typical Value) x Single Wire Dia. (max)", "Overall Diameter in (Nom.) (mm)", "Max. Conductor Resistance at 200 C (Ω/km)", "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)", "Approx. Weight of Cable (Kg/Km)"],
    "rows": [
@@ -3640,7 +3694,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145020986", "N6145020987", "N6145020988", "N6145020989", "N6145020990", "N6145020991", "N6145020992", "N6145020993"]
+   "partNumbers": ["N6145020986", "N6145020987", "N6145020988", "N6145020989", "N6145020990", "N6145020991", "N6145020992", "N6145020993"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "fd80143100",
@@ -3706,7 +3761,8 @@
     "N6145021013",
     "N6145021014",
     "N6145021015"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "c79375e7e1",
@@ -3744,7 +3800,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021016", "N6145021017", "N6145021018", "N6145021019", "N6145021020", "N6145021021", "N6145021022", "N6145021023", "N6145021024", "N6145021025", "N6145021026", "N6145021027", "N6145021028", "N6145021029", "N6145021030", "N6145022131"]
+   "partNumbers": ["N6145021016", "N6145021017", "N6145021018", "N6145021019", "N6145021020", "N6145021021", "N6145021022", "N6145021023", "N6145021024", "N6145021025", "N6145021026", "N6145021027", "N6145021028", "N6145021029", "N6145021030", "N6145022131"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "b20adf889d",
@@ -3784,7 +3841,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021032", "N6145021033", "N6145021034", "N6145021035", "N6145021036", "N6145021037", "N6145021038", "N6145021039", "N6145021040", "N6145021041", "N6145021042", "N6145021043", "N6145021044", "N6145021045", "N6145021046", "N6145021047", "N6145021048", "N6145021049"]
+   "partNumbers": ["N6145021032", "N6145021033", "N6145021034", "N6145021035", "N6145021036", "N6145021037", "N6145021038", "N6145021039", "N6145021040", "N6145021041", "N6145021042", "N6145021043", "N6145021044", "N6145021045", "N6145021046", "N6145021047", "N6145021048", "N6145021049"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "c3a0f34bc5",
@@ -3859,7 +3917,8 @@
     "N6145021073",
     "N6145021074",
     "N6145021075"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "1a3be96c63",
@@ -3919,7 +3978,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20C", "50C", "\n10C", "\n12C"],
+    "tempMentions": ["20C", "50C", "10C", "12C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -3967,7 +4026,8 @@
     "N6145021111",
     "N6145021112",
     "N6145021113"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "7c8151f122",
@@ -3988,13 +4048,14 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20C", "50C", "\n12C", "19C"],
+    "tempMentions": ["20C", "50C", "12C", "19C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "50-12"
   },
   {
    "id": "8f2d8c90e6",
@@ -4068,7 +4129,8 @@
     "N6145021135",
     "N6145021136",
     "N6145021137"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "bcb6654582",
@@ -4181,7 +4243,8 @@
     "N6145021181",
     "N6145021182",
     "N6145021183"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "aea8464842",
@@ -4266,7 +4329,8 @@
     "N6145021211",
     "N6145021216",
     "N6145021217"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "463ae628d5",
@@ -4343,7 +4407,8 @@
     "N6145021242",
     "N6145021243",
     "N6145021244"
-   ]
+   ],
+   "catalogueNo": "50-12"
   },
   {
    "id": "4f72615f08",
@@ -4366,7 +4431,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021245", "N6145021248"]
+   "partNumbers": ["N6145021245", "N6145021248"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "692ae59145",
@@ -4400,7 +4466,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021247", "N6145021246", "N6145021249", "N6145021250", "N6145021251", "N6145021252", "N6145021253", "N6145021254", "N6145021255", "N6145021256"]
+   "partNumbers": ["N6145021247", "N6145021246", "N6145021249", "N6145021250", "N6145021251", "N6145021252", "N6145021253", "N6145021254", "N6145021255", "N6145021256"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "02de6fb5f5",
@@ -4428,7 +4495,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021257", "N6145021258", "N6145021259"]
+   "partNumbers": ["N6145021257", "N6145021258", "N6145021259"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "726fc886f3",
@@ -4455,7 +4523,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021260", "N6145021261"]
+   "partNumbers": ["N6145021260", "N6145021261"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "272cae7240",
@@ -4485,7 +4554,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021262", "N6145021263", "N6145021264", "N6145021265", "N6145021266", "N6145021267", "N6145021268"]
+   "partNumbers": ["N6145021262", "N6145021263", "N6145021264", "N6145021265", "N6145021266", "N6145021267", "N6145021268"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "84f1a9d3ef",
@@ -4521,7 +4591,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021269", "N6145021270", "N6145021271", "N6145021272", "N6145021273", "N6145021274", "N6145021275", "N6145021276", "N6145021277", "N6145021278", "N6145021279", "N6145021280", "N6145021281"]
+   "partNumbers": ["N6145021269", "N6145021270", "N6145021271", "N6145021272", "N6145021273", "N6145021274", "N6145021275", "N6145021276", "N6145021277", "N6145021278", "N6145021279", "N6145021280", "N6145021281"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "ceceadee45",
@@ -4548,7 +4619,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021282", "N6145021283", "N6145021284", "N6145021285"]
+   "partNumbers": ["N6145021282", "N6145021283", "N6145021284", "N6145021285"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "54a3e855cb",
@@ -4576,7 +4648,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021286", "N6145021287", "N6145021288", "N6145021289", "N6145021290"]
+   "partNumbers": ["N6145021286", "N6145021287", "N6145021288", "N6145021289", "N6145021290"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "263189d448",
@@ -4596,7 +4669,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-65C", "+120C", "\n12C", "\n33C"],
+    "tempMentions": ["-65C", "+120C", "12C", "33C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -4606,7 +4679,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021291", "N6145021292", "N6145021293", "N6145021294", "N6145021295", "N6145021296"]
+   "partNumbers": ["N6145021291", "N6145021292", "N6145021293", "N6145021294", "N6145021295", "N6145021296"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "f231316974",
@@ -4643,7 +4717,8 @@
     "application": ["Power, Lightning, Control & Communication and Instrumentation circuits in surface ships and submarines. Used in fuel and lubrication oils, hydraulic fluids and water surfaces."],
     "construction": ["Conductor : Circular Electroplated, annealed tinned flexible copper wire (Class 5) complying with IS : 8130 -1984 Insulation : Electron Beam Cross Linked Dual layer Polyolefin Compound Outer Sheath : Electron Beam Cross Linked Polyolefin Compound"],
     "technical": ["Temperature Range : -650C to +1200C Rated Voltage (U/U) : 1.8kV o Test Voltage : 6.0 kV Bending Radius(Min) Flexing : 10 x Cable Diameter Fixed : 4 x Cable Diameter Standard : EED 50-12 (Rev 3) IRS Current Rating Approx."]
-   }
+   },
+   "catalogueNo": "50-12"
   },
   {
    "id": "988067ece1",
@@ -4669,7 +4744,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["N6145021306"]
+   "partNumbers": ["N6145021306"],
+   "catalogueNo": "50-12"
   },
   {
    "id": "91e500ba60",
@@ -4706,7 +4782,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "50-12"
   },
   {
    "id": "0bdc5b47b4",
@@ -4741,7 +4818,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-29C", "+85C", "\n14C", "\n24C"],
+    "tempMentions": ["-29C", "+85C", "14C", "24C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -4750,7 +4827,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0456", "743-0457", "743-0458", "743-0459", "743-0460", "743-0461", "891-9293", "891-9294*", "891-9874", "891-9295*", "891-9296", "891-9297*", "891-9875", "891-9298*", "891-9876", "891-9299*", "891-9877", "891-9300*", "891-9878", "891-9301*", "891-9879", "891-9302*"]
+   "partNumbers": ["743-0456", "743-0457", "743-0458", "743-0459", "743-0460", "743-0461", "891-9293", "891-9294*", "891-9874", "891-9295*", "891-9296", "891-9297*", "891-9875", "891-9298*", "891-9876", "891-9299*", "891-9877", "891-9300*", "891-9878", "891-9301*", "891-9879", "891-9302*"],
+   "catalogueNo": "525"
   },
   {
    "id": "4227654f7c",
@@ -4790,7 +4868,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-29C", "+85C", "\n14C", "\n19C"],
+    "tempMentions": ["-29C", "+85C", "14C", "19C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -4827,7 +4905,8 @@
     "891-9308*",
     "891-9886",
     "891-9309*"
-   ]
+   ],
+   "catalogueNo": "525"
   },
   {
    "id": "822181f4c1",
@@ -4867,7 +4946,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["20C", "-29C", "+85C", "\n10C"],
+    "tempMentions": ["20C", "-29C", "+85C", "10C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -4904,7 +4983,8 @@
     "891-9327*",
     "892-0036",
     "891-9328*"
-   ]
+   ],
+   "catalogueNo": "525"
   },
   {
    "id": "cfa0b6b831",
@@ -4932,7 +5012,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["20C", "-29C", "+85C", "\n14C"],
+    "tempMentions": ["20C", "-29C", "+85C", "14C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -4941,7 +5021,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0484", "743-0485", "743-0486", "743-0487", "743-0488", "892-0037", "891-9329 *", "892-0038", "891-9330*", "892-0039", "891-9331*", "892-0040", "891-9332*", "892-0041", "892-9333 *"]
+   "partNumbers": ["743-0484", "743-0485", "743-0486", "743-0487", "743-0488", "892-0037", "891-9329 *", "892-0038", "891-9330*", "892-0039", "891-9331*", "892-0040", "891-9332*", "892-0041", "892-9333 *"],
+   "catalogueNo": "525"
   },
   {
    "id": "7f91a2323c",
@@ -4979,7 +5060,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-29C", "+85C", "\n14C", "\n24C"],
+    "tempMentions": ["-29C", "+85C", "14C", "24C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -5014,7 +5095,8 @@
     "891-9417*",
     "891-9418",
     "891-9419*"
-   ]
+   ],
+   "catalogueNo": "525"
   },
   {
    "id": "5864aa0b72",
@@ -5074,7 +5156,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-29C", "+85C", "\n14C", "\n19C"],
+    "tempMentions": ["-29C", "+85C", "14C", "19C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -5121,7 +5203,8 @@
     "892-9352",
     "891-9359*",
     "892-0087"
-   ]
+   ],
+   "catalogueNo": "525"
   },
   {
    "id": "316915f962",
@@ -5169,7 +5252,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-29C", "+85C", "\n14C", "20C"],
+    "tempMentions": ["-29C", "+85C", "14C", "20C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -5179,7 +5262,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0501", "743-0502", "743-0503", "743-0504", "891-9361", "891-9362*", "891-9363", "891-9364*", "891-9365", "891-9366*", "891-9367", "891-9368*", "891-9369", "891-9370*", "891-9371", "891-9426*", "892-0053", "891-9372*", "892-0054", "891-9373*", "892-0055", "891- 9374*", "892-0056", "891-9375*"]
+   "partNumbers": ["743-0501", "743-0502", "743-0503", "743-0504", "891-9361", "891-9362*", "891-9363", "891-9364*", "891-9365", "891-9366*", "891-9367", "891-9368*", "891-9369", "891-9370*", "891-9371", "891-9426*", "892-0053", "891-9372*", "892-0054", "891-9373*", "892-0055", "891- 9374*", "892-0056", "891-9375*"],
+   "catalogueNo": "525"
   },
   {
    "id": "5bfa999559",
@@ -5221,7 +5305,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0506", "743-0507", "743-0508", "743-0509", "743-0510", "743-0511", "743-0512", "743-0513"]
+   "partNumbers": ["743-0506", "743-0507", "743-0508", "743-0509", "743-0510", "743-0511", "743-0512", "743-0513"],
+   "catalogueNo": "525"
   },
   {
    "id": "02b891d8b5",
@@ -5274,7 +5359,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0514", "743-0515", "743-0641", "743-0516", "743-0517", "743-0518", "743-0519", "892-0064", "891-9385*", "892-0065", "891-9386*", "892-0066", "891-9387*", "892-0067", "891-9388*", "892-0068", "891-9389*", "892-0069", "891-9390*"]
+   "partNumbers": ["743-0514", "743-0515", "743-0641", "743-0516", "743-0517", "743-0518", "743-0519", "892-0064", "891-9385*", "892-0065", "891-9386*", "892-0066", "891-9387*", "892-0067", "891-9388*", "892-0068", "891-9389*", "892-0069", "891-9390*"],
+   "catalogueNo": "525"
   },
   {
    "id": "736f87504d",
@@ -5307,7 +5393,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0520", "743-0521", "743-0522", "743-0523", "892-0070", "891-9392*", "892-0071", "891-9393*", "892-0072", "891-9394*"]
+   "partNumbers": ["743-0520", "743-0521", "743-0522", "743-0523", "892-0070", "891-9392*", "892-0071", "891-9393*", "892-0072", "891-9394*"],
+   "catalogueNo": "525"
   },
   {
    "id": "4de4334b36",
@@ -5340,7 +5427,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0524", "743-0525", "743-0526", "743-0527", "892-0073", "891-9396*", "892-0074", "891-9397*", "892-0075", "891-9398*"]
+   "partNumbers": ["743-0524", "743-0525", "743-0526", "743-0527", "892-0073", "891-9396*", "892-0074", "891-9397*", "892-0075", "891-9398*"],
+   "catalogueNo": "525"
   },
   {
    "id": "ad3237af56",
@@ -5392,7 +5480,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0528", "743-0529", "743-0530", "743-0531", "743-0532", "743-0533", "892-0076", "891-9399*", "892-0077", "891-9400*", "892-0078", "891-9401*", "892-0079", "891-9402*", "892-0080", "891-9403*", "892-0081", "891-9404*"]
+   "partNumbers": ["743-0528", "743-0529", "743-0530", "743-0531", "743-0532", "743-0533", "892-0076", "891-9399*", "892-0077", "891-9400*", "892-0078", "891-9401*", "892-0079", "891-9402*", "892-0080", "891-9403*", "892-0081", "891-9404*"],
+   "catalogueNo": "525"
   },
   {
    "id": "6fc8ade8cc",
@@ -5439,7 +5528,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["743-0534", "743-0535", "743-0536", "743-0537", "743-0538", "892-0082", "891-9406*", "892-0083", "891-9407*", "891-0084", "891-9408*", "891-0085", "891-9409 *"]
+   "partNumbers": ["743-0534", "743-0535", "743-0536", "743-0537", "743-0538", "892-0082", "891-9406*", "892-0083", "891-9407*", "891-0084", "891-9408*", "891-0085", "891-9409 *"],
+   "catalogueNo": "525"
   },
   {
    "id": "604a626db6",
@@ -5493,7 +5583,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8252", "521-8253", "521-8254", "521-8255", "521-8256", "521-8257", "521-8258", "521-8259", "521-8260", "521-8261", "521-8262", "521-8263", "521-8264", "521-8265", "521-8266", "521-8267", "521-8268", "521-8269", "521-8270", "521-8271"]
+   "partNumbers": ["521-8252", "521-8253", "521-8254", "521-8255", "521-8256", "521-8257", "521-8258", "521-8259", "521-8260", "521-8261", "521-8262", "521-8263", "521-8264", "521-8265", "521-8266", "521-8267", "521-8268", "521-8269", "521-8270", "521-8271"],
+   "catalogueNo": "526"
   },
   {
    "id": "7e17a05f2f",
@@ -5544,7 +5635,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8326", "521-8327", "521-8328", "521-8329", "521-8330", "521-8331", "521-8332", "521-8333", "521-8334", "521-8335", "521-8336", "521-8337", "521-8484", "521-8485", "521-8338", "521-2806", "521-8339"]
+   "partNumbers": ["521-8326", "521-8327", "521-8328", "521-8329", "521-8330", "521-8331", "521-8332", "521-8333", "521-8334", "521-8335", "521-8336", "521-8337", "521-8484", "521-8485", "521-8338", "521-2806", "521-8339"],
+   "catalogueNo": "526"
   },
   {
    "id": "60d353dc2b",
@@ -5587,7 +5679,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8526", "521-8527", "521-8528", "521-8529"]
+   "partNumbers": ["521-8526", "521-8527", "521-8528", "521-8529"],
+   "catalogueNo": "526"
   },
   {
    "id": "66078d68f7",
@@ -5626,7 +5719,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8364", "521-8366", "521-8367", "521-8368", "521-8369", "521-8370", "521-8371", "521-8373", "521-8374", "521-8375", "521-8376", "521-8378", "521-8379", "521-8381", "521-8382", "521-8383"]
+   "partNumbers": ["521-8364", "521-8366", "521-8367", "521-8368", "521-8369", "521-8370", "521-8371", "521-8373", "521-8374", "521-8375", "521-8376", "521-8378", "521-8379", "521-8381", "521-8382", "521-8383"],
+   "catalogueNo": "526"
   },
   {
    "id": "7904572ff3",
@@ -5684,7 +5778,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8275", "521-8276", "521-8277", "521-8278", "521-8279", "521-8280", "521-8281", "521-8282", "521-8283", "521-8284", "521-8285", "521-8289", "521-8290", "521-8291", "521-8292", "521-8293", "521-8294", "521-8295", "521-8296", "521-8297", "521-8298", "521-8299", "521-8300", "521-8301", "521-8453"]
+   "partNumbers": ["521-8275", "521-8276", "521-8277", "521-8278", "521-8279", "521-8280", "521-8281", "521-8282", "521-8283", "521-8284", "521-8285", "521-8289", "521-8290", "521-8291", "521-8292", "521-8293", "521-8294", "521-8295", "521-8296", "521-8297", "521-8298", "521-8299", "521-8300", "521-8301", "521-8453"],
+   "catalogueNo": "526"
   },
   {
    "id": "3d7f3f040d",
@@ -5719,7 +5814,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-35C", "+105C", "\n14C", "\n18C"],
+    "tempMentions": ["-35C", "+105C", "14C", "18C"],
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
     "voltBucket": "300–750V",
@@ -5727,7 +5822,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8402", "521-8403", "521-8404", "521-8405", "521-8406", "521-8407", "521-8408", "521-8409", "521-8410", "521-8411", "521-8412", "521-8413", "521-8414", "521-8415", "521-8416", "521-8417", "521-8418", "521-8419", "521-8420", "521-8421", "521-8422", "521-8423"]
+   "partNumbers": ["521-8402", "521-8403", "521-8404", "521-8405", "521-8406", "521-8407", "521-8408", "521-8409", "521-8410", "521-8411", "521-8412", "521-8413", "521-8414", "521-8415", "521-8416", "521-8417", "521-8418", "521-8419", "521-8420", "521-8421", "521-8422", "521-8423"],
+   "catalogueNo": "526"
   },
   {
    "id": "1526f9bfa1",
@@ -5763,7 +5859,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-35C", "+105C", "\n10C", "\n15C"],
+    "tempMentions": ["-35C", "+105C", "10C", "15C"],
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
     "voltBucket": "300–750V",
@@ -5771,7 +5867,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8486", "521-8487", "521-8488", "521-8345", "521-8489", "521-8351", "521-8490", "521-8491", "521-8492", "521-8493", "521-8494", "521-8495", "521-8496", "521-8497", "521-8500", "521-8501", "521-8502", "521-8503", "521-8504", "521-8505", "521-8506", "521-8507", "521-8508"]
+   "partNumbers": ["521-8486", "521-8487", "521-8488", "521-8345", "521-8489", "521-8351", "521-8490", "521-8491", "521-8492", "521-8493", "521-8494", "521-8495", "521-8496", "521-8497", "521-8500", "521-8501", "521-8502", "521-8503", "521-8504", "521-8505", "521-8506", "521-8507", "521-8508"],
+   "catalogueNo": "526"
   },
   {
    "id": "7014f01c5e",
@@ -5799,7 +5896,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8509", "521-8510", "521-8511", "521-8512", "521-8513"]
+   "partNumbers": ["521-8509", "521-8510", "521-8511", "521-8512", "521-8513"],
+   "catalogueNo": "526"
   },
   {
    "id": "563f041e51",
@@ -5817,7 +5915,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-35C", "+105C", "20C", "\n14C"],
+    "tempMentions": ["-35C", "+105C", "20C", "14C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -5827,7 +5925,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8470", "521-8471", "521-8472", "521-8473", "521-8474"]
+   "partNumbers": ["521-8470", "521-8471", "521-8472", "521-8473", "521-8474"],
+   "catalogueNo": "526"
   },
   {
    "id": "ae7153263d",
@@ -5853,7 +5952,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-35C", "+105C", "20C", "\n19C"],
+    "tempMentions": ["-35C", "+105C", "20C", "19C"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -5863,7 +5962,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-8463", "521-8464", "521-0227", "521-0228", "521-0229", "521-0230", "521-0231", "521-8530", "521-8466", "521-8531", "531-7042", "531-7043", "531-7044"]
+   "partNumbers": ["521-8463", "521-8464", "521-0227", "521-0228", "521-0229", "521-0230", "521-0231", "521-8530", "521-8466", "521-8531", "531-7042", "531-7043", "531-7044"],
+   "catalogueNo": "526"
   },
   {
    "id": "13d4b254d0",
@@ -5888,7 +5988,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-7048", "531-7049"]
+   "partNumbers": ["521-7048", "531-7049"],
+   "catalogueNo": "526"
   },
   {
    "id": "21dd04dec9",
@@ -5914,7 +6015,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-7045", "531-7046", "531-7047"]
+   "partNumbers": ["521-7045", "531-7046", "531-7047"],
+   "catalogueNo": "526"
   },
   {
    "id": "22181229da",
@@ -5956,7 +6058,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6808", "521-6809", "521-6810", "521-6811", "521-6812", "521-6813", "521-6814", "521-6815", "521-6816", "521-6817", "521-6818", "521-6819", "521-6820", "521-6821", "521-6822", "521-6823", "521-6824", "521-6825", "521-6826", "521-6827"]
+   "partNumbers": ["521-6808", "521-6809", "521-6810", "521-6811", "521-6812", "521-6813", "521-6814", "521-6815", "521-6816", "521-6817", "521-6818", "521-6819", "521-6820", "521-6821", "521-6822", "521-6823", "521-6824", "521-6825", "521-6826", "521-6827"],
+   "catalogueNo": "527"
   },
   {
    "id": "3f99b6e1ca",
@@ -6035,7 +6138,8 @@
     "521-6853",
     "521-6854",
     "521-6855"
-   ]
+   ],
+   "catalogueNo": "527"
   },
   {
    "id": "b6f7d4a913",
@@ -6067,7 +6171,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-30C", "+105C", "20C", "\n14C"],
+    "tempMentions": ["-30C", "+105C", "20C", "14C"],
     "materials": ["Silicone", "Rubber"],
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -6076,7 +6180,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6856", "521-6857", "521-6858", "521-6859", "521-6860", "521-6861", "521-6862", "521-6863", "521-6864", "521-6865", "521-6866", "521-6867", "521-6868", "521-6869", "521-6870", "521-6871", "521-6872", "521-6873", "521-6874"]
+   "partNumbers": ["521-6856", "521-6857", "521-6858", "521-6859", "521-6860", "521-6861", "521-6862", "521-6863", "521-6864", "521-6865", "521-6866", "521-6867", "521-6868", "521-6869", "521-6870", "521-6871", "521-6872", "521-6873", "521-6874"],
+   "catalogueNo": "527"
   },
   {
    "id": "ad5fee6e8d",
@@ -6119,7 +6224,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-30C", "+105C", "20C", "\n10C"],
+    "tempMentions": ["-30C", "+105C", "20C", "10C"],
     "materials": ["Silicone", "Rubber"],
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -6159,7 +6264,8 @@
     "521-6902",
     "521-6903",
     "521-6904"
-   ]
+   ],
+   "catalogueNo": "527"
   },
   {
    "id": "d2ca6c82f2",
@@ -6176,13 +6282,14 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20C", "\n14C", "\n18C", "\n24C"],
+    "tempMentions": ["20C", "14C", "18C", "24C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6861", "521-6906", "521-6907", "521-6872", "521-6909"]
+   "partNumbers": ["521-6861", "521-6906", "521-6907", "521-6872", "521-6909"],
+   "catalogueNo": "527"
   },
   {
    "id": "3c4c125868",
@@ -6214,7 +6321,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6910", "521-6911", "521-6912", "521-6913", "521-6914", "521-6915", "521-6916", "521-6917"]
+   "partNumbers": ["521-6910", "521-6911", "521-6912", "521-6913", "521-6914", "521-6915", "521-6916", "521-6917"],
+   "catalogueNo": "527"
   },
   {
    "id": "95d25bbcc9",
@@ -6232,7 +6340,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-30C", "+105C", "20C", "\n14C"],
+    "tempMentions": ["-30C", "+105C", "20C", "14C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6243,7 +6351,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6918", "521-6919", "521-6920", "521-6921", "521-6922"]
+   "partNumbers": ["521-6918", "521-6919", "521-6920", "521-6921", "521-6922"],
+   "catalogueNo": "527"
   },
   {
    "id": "a30c138080",
@@ -6271,7 +6380,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6910", "521-6924", "521-6925", "521-6926"]
+   "partNumbers": ["521-6910", "521-6924", "521-6925", "521-6926"],
+   "catalogueNo": "527"
   },
   {
    "id": "e1b8123b23",
@@ -6292,7 +6402,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-30C", "+105C", "20C", "\n12C"],
+    "tempMentions": ["-30C", "+105C", "20C", "12C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6303,7 +6413,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6910", "521-6928", "521-6929", "521-6930", "521-6931", "521-6932", "521-6933", "521-5869"]
+   "partNumbers": ["521-6910", "521-6928", "521-6929", "521-6930", "521-6931", "521-6932", "521-6933", "521-5869"],
+   "catalogueNo": "527"
   },
   {
    "id": "fa49d61a7f",
@@ -6351,7 +6462,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["521-6970", "521-6971", "521-6972", "521-6973", "521-6974", "521-6975", "521-6976", "521-6977", "521-6978", "521-6979", "521-6980", "521-6981", "521-6982", "521-6983", "521-6984", "521-6985", "521-6986", "521-6987", "521-6988", "521-6989", "521-6990", "521-6991", "521-6992", "521-6993"]
+   "partNumbers": ["521-6970", "521-6971", "521-6972", "521-6973", "521-6974", "521-6975", "521-6976", "521-6977", "521-6978", "521-6979", "521-6980", "521-6981", "521-6982", "521-6983", "521-6984", "521-6985", "521-6986", "521-6987", "521-6988", "521-6989", "521-6990", "521-6991", "521-6992", "521-6993"],
+   "catalogueNo": "527"
   },
   {
    "id": "af4464bfea",
@@ -6368,7 +6480,7 @@
    "notes": [],
    "attrs": {
     "voltage": "440V",
-    "tempMentions": ["-30C", "+105C", "20C", "\n12C"],
+    "tempMentions": ["-30C", "+105C", "20C", "12C"],
     "materials": ["Silicone", "Rubber"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6379,7 +6491,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["531-1430", "531-1431", "531-1432", "531-1433"]
+   "partNumbers": ["531-1430", "531-1431", "531-1432", "531-1433"],
+   "catalogueNo": "527"
   },
   {
    "id": "6671db5f25",
@@ -6408,7 +6521,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["20C", "-30C", "+85C", "\n14C"],
+    "tempMentions": ["20C", "-30C", "+85C", "14C"],
     "shielded": true,
     "halogenFree": true,
     "standardsFound": ["BS : 6360"],
@@ -6417,7 +6530,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["891-9310", "891-9311*", "891-9887", "891-9312*", "891-9313", "891-9314*", "891-9888", "891-9315*", "891-9889", "891-9316*", "891-9890", "891-9317*", "891-9891", "891-9318*", "891-9892", "891-9319*"]
+   "partNumbers": ["891-9310", "891-9311*", "891-9887", "891-9312*", "891-9313", "891-9314*", "891-9888", "891-9315*", "891-9889", "891-9316*", "891-9890", "891-9317*", "891-9891", "891-9318*", "891-9892", "891-9319*"],
+   "catalogueNo": "61-12"
   },
   {
    "id": "313a2e2d0b",
@@ -6465,7 +6579,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["892-0057", "891-9377*", "892-0058", "891-9378*", "892-0059", "891-9379*", "892-0060", "891-9380*", "892-0061", "891-9381*", "892-0062", "891-9382*", "891-0063", "892-9383*"]
+   "partNumbers": ["892-0057", "891-9377*", "892-0058", "891-9378*", "892-0059", "891-9379*", "892-0060", "891-9380*", "892-0061", "891-9381*", "892-0062", "891-9382*", "891-0063", "892-9383*"],
+   "catalogueNo": "61-12"
   },
   {
    "id": "2d9b1a58e1",
@@ -6504,12 +6619,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["891-9420", "891-9421*", "891-9422", "891-9423*", "891-9424", "891-9425*"]
+   "partNumbers": ["891-9420", "891-9421*", "891-9422", "891-9423*", "891-9424", "891-9425*"],
+   "catalogueNo": "61-12"
   },
   {
    "id": "ff89ec4388",
    "family": "marine",
-   "name": "Multicore Armoured / Sheathed Type P Control  Marine Cable",
+   "name": "Multicore Armoured / Sheathed Type P Control Marine Cable",
    "pages": [202],
    "headers": ["Part Number", "Number of Cores AWG - mm2", "Outer Diameter in mm approx.", "Total Weight Kg/Km approx."],
    "rows": [
@@ -6542,7 +6658,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-30C", "+125C", "\n10C", "\n12C"],
+    "tempMentions": ["-30C", "+125C", "10C", "12C"],
     "materials": ["XLPO"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6580,12 +6696,13 @@
     "345 76 07",
     "345 76 08",
     "345 76 10"
-   ]
+   ],
+   "catalogueNo": "345"
   },
   {
    "id": "3833432d3f",
    "family": "marine",
-   "name": "Single Core APC Flexible Conductor, EBXL - XLPE  Insulated, XLPO Sheathed Marine Cable as per IEC 60092-353",
+   "name": "Single Core APC Flexible Conductor, EBXL - XLPE Insulated, XLPO Sheathed Marine Cable as per IEC 60092-353",
    "pages": [203],
    "headers": ["Part Number", "No. of Cores and mm2 Per Conductor", "No. of Strands Nom.", "Strand Diameter mm (Max.)", "Insulation Thickness mm (Nom.)", "Outersheath Thickness mm (Nom.)", "Max. conductor Resistance Ω/Km", "Outer Diameter in approx.(mm)", "Total Weight Kg/Km approx."],
    "rows": [
@@ -6618,12 +6735,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["903S130404", "903S160404", "903S190404", "903S230404", "903S270404", "903S280404", "903S300404", "903S320404", "903S340404", "903S370404", "903S380404", "903S410404", "903S420404", "903S440404", "903S460404", "903S480404"]
+   "partNumbers": ["903S130404", "903S160404", "903S190404", "903S230404", "903S270404", "903S280404", "903S300404", "903S320404", "903S340404", "903S370404", "903S380404", "903S410404", "903S420404", "903S440404", "903S460404", "903S480404"],
+   "catalogueNo": "903S"
   },
   {
    "id": "8fcd3a5ab1",
    "family": "marine",
-   "name": "Multicore  APC  Conductor, EBXL -XLPE  Insulated, ATC Screened  XLPO  Sheathed Marine Cable as per IEC60092-353",
+   "name": "Multicore APC Conductor, EBXL -XLPE Insulated, ATC Screened XLPO Sheathed Marine Cable as per IEC60092-353",
    "pages": [204],
    "headers": ["Part Number", "Number of Cores X Sq.mm2", "No. of Strands Nom.", "Strand Diameter mm (Nom.)", "Insulation Thickness mm (Nom.)", "Innersheath Thickness mm (Nom.)", "Braiding Wire dia mm (Nom.)", "Outersheath Thickness mm (Nom.)", "Outer Diameter mm approx.", "Total Weight Kg/Km approx."],
    "rows": [
@@ -6779,7 +6897,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["\n12C"],
+    "tempMentions": ["12C"],
     "shielded": true,
     "voltBucket": null,
     "sizesSqmm": [],
@@ -6837,12 +6955,13 @@
     "904E1937",
     "904E1944",
     "904E1948"
-   ]
+   ],
+   "catalogueNo": "904E"
   },
   {
    "id": "7cc9fd384d",
    "family": "marine",
-   "name": "Multicore APC  Conductor, EBXL - XLPE Insulated, ATC Screened SHF2 (XLPO) Sheathed Marine Cable as per IEC 60092-353",
+   "name": "Multicore APC Conductor, EBXL - XLPE Insulated, ATC Screened SHF2 (XLPO) Sheathed Marine Cable as per IEC 60092-353",
    "pages": [206],
    "headers": [
     "Part Number",
@@ -6893,7 +7012,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-30C", "+125C", "\n10C", "\n12C"],
+    "tempMentions": ["-30C", "+125C", "10C", "12C"],
     "materials": ["EBXL", "XLPE", "XLPO"],
     "shielded": true,
     "halogenFree": true,
@@ -6941,7 +7060,7 @@
   {
    "id": "951e49aff8",
    "family": "marine",
-   "name": "Single Core  ATC Flexible Conductor, EBXL - EPDM/EPR Insulated, XLPO Sheathed Marine Cable as per IEC 60092-353",
+   "name": "Single Core ATC Flexible Conductor, EBXL - EPDM/EPR Insulated, XLPO Sheathed Marine Cable as per IEC 60092-353",
    "pages": [208],
    "headers": ["Part Number", "No. of Cores Sq. mm2", "No. of Strands Nom.", "Strand Diameter mm (Max.)", "Current Ratting mm (Min.)", "Insulation Thickness mm (Nom.)", "Outersheath Thickness mm (Nom.)", "Conductor Resistance at 20°C", "Outer Diameter in approx.(mm)", "Total Weight Kg/Km approx."],
    "rows": [
@@ -6975,7 +7094,8 @@
     "awg": [],
     "cores": [1]
    },
-   "partNumbers": ["905130404", "905160404", "905190404", "905230404", "905270404", "905280404", "905300404", "905320404", "905340404", "905370404", "905380404", "905410404", "905420404", "905440404", "905460404", "905480404"]
+   "partNumbers": ["905130404", "905160404", "905190404", "905230404", "905270404", "905280404", "905300404", "905320404", "905340404", "905370404", "905380404", "905410404", "905420404", "905440404", "905460404", "905480404"],
+   "catalogueNo": "905"
   },
   {
    "id": "13688e5c08",
@@ -7002,7 +7122,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-30C", "+125C", "\n12C", "20C"],
+    "tempMentions": ["-30C", "+125C", "12C", "20C"],
     "materials": ["EBXL", "XLPO", "EPR"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -7013,7 +7133,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["906E1302", "906E1602", "906E1902", "906E2302", "906E2702", "906E1303", "906E1603", "906E1903", "906E1304", "906E1604", "906E1904", "906E2304", "906E1307", "906E1307"]
+   "partNumbers": ["906E1302", "906E1602", "906E1902", "906E2302", "906E2702", "906E1303", "906E1603", "906E1903", "906E1304", "906E1604", "906E1904", "906E2304", "906E1307", "906E1307"],
+   "catalogueNo": "906"
   },
   {
    "id": "611f27ff17",
@@ -7096,7 +7217,8 @@
     "906E0837P",
     "906E0848P",
     "906E0801T"
-   ]
+   ],
+   "catalogueNo": "906E"
   },
   {
    "id": "5931db0f48",
@@ -7136,12 +7258,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["9130801P", "9130802P", "9130804P", "9130807P", "9130810P", "9130814P", "9130819P", "9130824P", "9131301P", "9131302P", "9131304P", "9131307P", "9131310P", "9131314P", "9131319P", "9131324P"]
+   "partNumbers": ["9130801P", "9130802P", "9130804P", "9130807P", "9130810P", "9130814P", "9130819P", "9130824P", "9131301P", "9131302P", "9131304P", "9131307P", "9131310P", "9131314P", "9131319P", "9131324P"],
+   "catalogueNo": "913"
   },
   {
    "id": "254674ae5c",
    "family": "marine",
-   "name": "Single Core  ATC Flexible Conductor, EBXL - XLPE Insulated, SHF2 Sheathed Marine Cable as per IEC 60092-376",
+   "name": "Single Core ATC Flexible Conductor, EBXL - XLPE Insulated, SHF2 Sheathed Marine Cable as per IEC 60092-376",
    "pages": [212],
    "headers": ["Part Number", "No. of Cores and mm2 Per Conductor", "No. of Strands Nom.", "Strand Diameter mm (Max.)", "Insulation Thickness mm (Nom.)", "Outersheath Thickness mm (Nom.)", "Max. Conductor Resistance at 20°C", "Outer Diameter in approx.(mm)", "Total Weight Kg/Km approx."],
    "rows": [
@@ -7157,7 +7280,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-30C", "+125C", "\n14C", "\n16C"],
+    "tempMentions": ["-30C", "+125C", "14C", "16C"],
     "materials": ["EBXL", "XLPE", "XLPO"],
     "conductors": ["Tinned Copper"],
     "halogenFree": true,
@@ -7167,7 +7290,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A493W1002", "A493W1003", "A493W1008", "A493W1014", "A493W1016", "A493W1002", "A493W1003", "A493W1004"]
+   "partNumbers": ["A493W1002", "A493W1003", "A493W1008", "A493W1014", "A493W1016", "A493W1002", "A493W1003", "A493W1004"],
+   "catalogueNo": "A493W"
   }
  ]
 }

@@ -3,7 +3,7 @@
   {
    "id": "ed15949ea6",
    "family": "welding",
-   "name": "EM-5 85 C Copper HO1N2-D  Welding Cable",
+   "name": "EM-5 85 C Copper HO1N2-D Welding Cable",
    "pages": [9],
    "headers": ["Part Number", "Nominal conductor area (mm 2)", "Maximum strand dia (mm)", "Thickness of insulation (mm)", "overall diameter (mm) — MIN", "Max.", "Approx Weight of Cable (kg/km)", "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires", ""],
    "rows": [
@@ -33,12 +33,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A05427XX", "A05428XX", "A05430XX", "A05432XX", "A05434XX", "A05437XX", "A05438XX", "A05441XX", "A05442XX", "A05444XX", "A05446XX"]
+   "partNumbers": ["A05427XX", "A05428XX", "A05430XX", "A05432XX", "A05434XX", "A05437XX", "A05438XX", "A05441XX", "A05442XX", "A05444XX", "A05446XX"],
+   "catalogueNo": "536"
   },
   {
    "id": "4b52a595b3",
    "family": "welding",
-   "name": "HOFR 90 C Copper Welding Cable      IS 9857",
+   "name": "HOFR 90 C Copper Welding Cable IS 9857",
    "pages": [10],
    "headers": ["Part Number", "Nominal conductor area (mm 2)", "Maximum strand dia (mm)", "Thickness of insulation (mm)", "Approx. overall diameter (mm)", "Approx. Weight of Cable (kg/km)", "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires", ""],
    "rows": [
@@ -64,12 +65,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["53728XX", "53730XX", "53732XX", "53734XX", "53737XX", "53738XX", "53741XX"]
+   "partNumbers": ["53728XX", "53730XX", "53732XX", "53734XX", "53737XX", "53738XX", "53741XX"],
+   "catalogueNo": "537"
   },
   {
    "id": "66af82b1ba",
    "family": "welding",
-   "name": "EM-5 85 C Copper HO1N2-E  Welding Cable",
+   "name": "EM-5 85 C Copper HO1N2-E Welding Cable",
    "pages": [11],
    "headers": ["Part Number", "Nominal conductor area (mm 2)", "Maximum strand dia (mm)", "Thickness of insulation (mm)", "overall diameter (mm) — MIN", "Max.", "Approx Weight of Cable (kg/km)", "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires", ""],
    "rows": [
@@ -99,7 +101,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A05427XX", "A05428XX", "A05430XX", "A05432XX", "A05434XX", "A05437XX", "A05438XX", "A05441XX", "A05442XX", "A05444XX", "A05441XX"]
+   "partNumbers": ["A05427XX", "A05428XX", "A05430XX", "A05432XX", "A05434XX", "A05437XX", "A05438XX", "A05441XX", "A05442XX", "A05444XX", "A05441XX"],
+   "catalogueNo": "536"
   },
   {
    "id": "c128731be7",
@@ -133,11 +136,12 @@
    },
    "partNumbers": ["538 27 XX", "538 28 XX", "538 30 XX", "538 32 XX", "538 34 XX", "538 37 XX", "538 38 XX", "538 41 XX", "538 42 XX"],
    "info": {
-    "application": ["ü\u0000For use between welding generator and the hand electrode and the work piece. ü\u0000For use in automobile industry, in ship building, in transport and conveyor systems, tool making machinery, welding robots, etc."],
-    "features": ["ü\u0000Flexibility under rough, open dry, damp conditions. ü\u0000Oli resistant to DIN EN 60811-2-1 ü\u0000High flexibility under the effect of ozone, light oxygen, inert gas, oil or petrol."],
-    "construction": ["ü\u0000Conductor : Fine stranded plain or tinned class-6 copper conductors conforming to DIN VDE 0295, IEC 60228 and HD 383 ü\u0000Separator : Dry Paper, Polyester Tape ü\u0000Sheath : Neoprene outer jacket, chlorinated rubber compound Em5 ü\u0000Colour : Orange or Black"],
-    "technical": ["ü\u0000Temperature Range : 850C ü\u0000Voltage for Testing : 1000 V AC ü\u0000Bending Radius(Minimum) : 12x Overall dia. ISO 45001 Maximum"]
-   }
+    "application": ["For use between welding generator and the hand electrode and the work piece.", "For use in automobile industry, in ship building, in transport and conveyor systems, tool making machinery, welding robots, etc."],
+    "features": ["Flexibility under rough, open dry, damp conditions.", "Oli resistant to DIN EN 60811-2-1", "High flexibility under the effect of ozone, light oxygen, inert gas, oil or petrol."],
+    "construction": ["Conductor : Fine stranded plain or tinned class-6 copper conductors conforming to DIN VDE 0295, IEC 60228 and HD 383", "Separator : Dry Paper, Polyester Tape", "Sheath : Neoprene outer jacket, chlorinated rubber compound Em5", "Colour : Orange or Black"],
+    "technical": ["Temperature Range : 850C", "Voltage for Testing : 1000 V AC", "Bending Radius(Minimum) : 12x Overall dia. ISO 45001 Maximum"]
+   },
+   "catalogueNo": "538"
   }
  ]
 }

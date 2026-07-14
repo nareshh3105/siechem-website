@@ -50,11 +50,12 @@
    },
    "partNumbers": ["A898130910", "A898160910", "A898190910", "A898230910", "A898270910", "A898280910", "A898300910", "A898320910", "A898340910", "A898370910", "A898380910", "A898410910", "A898420910"],
    "info": {
-    "application": ["It is mainly used in hybrid vehicles. Copper braid is used as shielding to prevent the electromagnetic influence on the environment. High flexibility. ü\u0000Outer ü\u0000Sheath"],
+    "application": ["It is mainly used in hybrid vehicles. Copper braid is used as shielding to prevent the electromagnetic influence on the environment. High flexibility.", "Outer", "Sheath"],
     "features": ["Flame retardant. Excellent resistance to battery acids, diesel, oils, window washer fluids, ozone and weathering. Soldering iron resistant. Excellent high and low temperature resistant. Easy to strip and process. Heat resistant."],
-    "construction": ["ü\u0000Conductor : Soft-Annealed Electrolytic Plain ü Flexible Copper Conductor ü ü\u0000Insulation : Sietherm 155 ü Test ü\u0000Insulation Colour : White ü ü\u0000Screening : Annealed Tinned Copper ü Min. ü\u0000Outer Sheath : AX 150 \u0000 ü\u0000Sheath Colour : Orange"],
+    "construction": ["Conductor : Soft-Annealed Electrolytic Plain", "Flexible Copper Conductor", "Insulation : Sietherm 155", "Test", "Insulation Colour : White", "Screening : Annealed Tinned Copper", "Min.", "Outer Sheath : AX 150", "Sheath Colour : Orange"],
     "technical": ["Temperature Range : -400C to +1500C (3000 Hours) Voltage Rating (U 0/U) : 600V AC / 1000V AC Test Voltage, 1min : 3.5 kV AC / 8.4 kV DC Standard : ISO 6722 , Class D Min. Bending Radius (fixed) : 4 X Cable dia."]
-   }
+   },
+   "catalogueNo": "A898"
   },
   {
    "id": "02a4827677",
@@ -370,7 +371,8 @@
     "A7422303",
     "A7422304",
     "A7422305"
-   ]
+   ],
+   "catalogueNo": "A732S"
   },
   {
    "id": "85b0a89e90",
@@ -505,7 +507,8 @@
     "A740S37XX10",
     "A740S38XX10",
     "A740S41XX10"
-   ]
+   ],
+   "catalogueNo": "A721S"
   },
   {
    "id": "1ebea7ef1e",
@@ -671,7 +674,8 @@
     "A743E2303",
     "A743E2304",
     "A743E2305"
-   ]
+   ],
+   "catalogueNo": "A722E"
   },
   {
    "id": "fdec46d79d",
@@ -755,7 +759,8 @@
     "A745S37XX",
     "A745S38XX",
     "A745S41XX"
-   ]
+   ],
+   "catalogueNo": "A744S"
   },
   {
    "id": "35a2918d4e",
@@ -854,7 +859,8 @@
     "A93641XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A936"
   },
   {
    "id": "f2fda28a48",
@@ -932,7 +938,8 @@
     "A93738XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A937"
   },
   {
    "id": "f2846c0fb2",
@@ -1031,7 +1038,8 @@
     "A93841XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A938"
   },
   {
    "id": "375d95522b",
@@ -1109,7 +1117,8 @@
     "A93938XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A939"
   },
   {
    "id": "14238514f1",
@@ -1208,7 +1217,8 @@
     "A94041XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A940"
   },
   {
    "id": "9fa464eea8",
@@ -1286,7 +1296,8 @@
     "A94138XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A941"
   },
   {
    "id": "795952356a",
@@ -1385,7 +1396,8 @@
     "A94241XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A942"
   },
   {
    "id": "74ecb99a34",
@@ -1463,7 +1475,8 @@
     "A94338XX",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A943"
   },
   {
    "id": "f818d896f3",
@@ -1471,7 +1484,7 @@
    "name": "Multi Core Unscreened, Flexible Class C (Thin) 1000V AC EV 125 Cable",
    "pages": [39],
    "headers": [
-    "Application Product Construction Technical Data ü\u0000Especially used in supporting all line ü Conductor : Annealed Plain Copper ü\u0000Rated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) ü\u0000Max. Rated Voltage : 1000V AC / 1500V DC ü\u0000AC & DC Charging (Domestic Use & ü\u0000Insulation : Electron Beam Cross linked ü\u0000Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) ü\u0000Insulation Faults : 8kV AC ü\u0000Insulation Colour : As per ISO 19642-1 ü\u0000Specification : ISO 19642-9, ISO 6722,Generally Features ü\u0000Sheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore easy to handle at the charging station. ISO ISO IATF OHSAS AS ISO ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
+    "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore easy to handle at the charging station. ISO ISO IATF OHSAS AS ISO ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
     "",
     "",
     "",
@@ -1515,7 +1528,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A944"
   },
   {
    "id": "1d4c53aae4",
@@ -1523,7 +1537,7 @@
    "name": "Multi Core Unscreened, Stranded Class C (Thin) 1000V AC EV 125 Cable",
    "pages": [40],
    "headers": [
-    "Application Product Construction Technical Data ü\u0000Especially used in supporting all line ü Conductor : Annealed Plain Copper ü\u0000Rated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) ü\u0000Max. Rated Voltage : 1000V AC / 1500V DC ü\u0000AC & DC Charging (Domestic Use & ü\u0000Insulation : Electron Beam Cross linked ü\u0000Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) ü\u0000Insulation Faults : 8kV AC ü\u0000Insulation Colour : As per ISO 19642-1 ü\u0000Specification : ISO 19642-9, ISO 6722,Generally Features ü\u0000Sheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
+    "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
     "",
     "",
     "",
@@ -1567,7 +1581,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A945"
   },
   {
    "id": "42d554f35d",
@@ -1601,7 +1616,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9461302", "A9461303", "A9461304", "A9461602", "A9461603", "A9461604", "A9461902", "A9461903", "A9461904", "A9462302", "A9462303", "A9462304"]
+   "partNumbers": ["A9461302", "A9461303", "A9461304", "A9461602", "A9461603", "A9461604", "A9461902", "A9461903", "A9461904", "A9462302", "A9462303", "A9462304"],
+   "catalogueNo": "A946"
   },
   {
    "id": "e3fc71d997",
@@ -1635,7 +1651,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9471302", "A9471303", "A9471304", "A9471602", "A9471603", "A9471604", "A9471902", "A9471903", "A9471904", "A9472302", "A9472303", "A9472304"]
+   "partNumbers": ["A9471302", "A9471303", "A9471304", "A9471602", "A9471603", "A9471604", "A9471902", "A9471903", "A9471904", "A9472302", "A9472303", "A9472304"],
+   "catalogueNo": "A947"
   },
   {
    "id": "19ffee8e86",
@@ -1643,7 +1660,7 @@
    "name": "Multi Core Unscreened, Flexible Class D (Thin) 1000V AC EV 150 Cable",
    "pages": [43],
    "headers": [
-    "Application Product Construction Technical Data ü\u0000Especially used in supporting all line ü Conductor : Annealed Plain Copper ü\u0000Rated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) ü\u0000Max. Rated Voltage : 1000V AC / 1500V DC ü\u0000AC & DC Charging (Domestic Use & ü\u0000Insulation : Electron Beam Cross linked ü\u0000Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) ü\u0000Insulation Faults : 8kV AC ü\u0000Insulation Colour : As per ISO 19642-1 ü\u0000Specification : ISO 19642-9, ISO 6722,Generally Features ü\u0000Sheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
+    "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
     "",
     "",
     "",
@@ -1687,7 +1704,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A948"
   },
   {
    "id": "47925581e4",
@@ -1695,7 +1713,7 @@
    "name": "Multi Core Unscreened, Stranded Class D (Thin) 1000V AC EV 150 Cable",
    "pages": [44],
    "headers": [
-    "Application Product Construction Technical Data ü\u0000Especially used in supporting all line ü Conductor : Annealed Plain Copper ü\u0000Rated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) ü\u0000Max. Rated Voltage : 1000V AC / 1500V DC ü\u0000AC & DC Charging (Domestic Use & ü\u0000Insulation : Electron Beam Cross linked ü\u0000Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) ü\u0000Insulation Faults : 8kV AC ü\u0000Insulation Colour : As per ISO 19642-1 ü\u0000Specification : ISO 19642-9, ISO 6722,Generally Features ü\u0000Sheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
+    "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
     "",
     "",
     "",
@@ -1739,7 +1757,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A949"
   },
   {
    "id": "1f2780da44",
@@ -1773,7 +1792,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9501302", "A9501303", "A9501304", "A9501602", "A9501603", "A9501604", "A9501902", "A9501903", "A9501904", "A9502302", "A9502303", "A9502304"]
+   "partNumbers": ["A9501302", "A9501303", "A9501304", "A9501602", "A9501603", "A9501604", "A9501902", "A9501903", "A9501904", "A9502302", "A9502303", "A9502304"],
+   "catalogueNo": "A950"
   },
   {
    "id": "fc682854c5",
@@ -1807,7 +1827,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9511302", "A9511303", "A9511304", "A9511602", "A9511603", "A9511604", "A9511902", "A9511903", "A9511904", "A9512302", "A9512303", "A9512304"]
+   "partNumbers": ["A9511302", "A9511303", "A9511304", "A9511602", "A9511603", "A9511604", "A9511902", "A9511903", "A9511904", "A9512302", "A9512303", "A9512304"],
+   "catalogueNo": "A951"
   },
   {
    "id": "6f90a6c835",
@@ -1866,7 +1887,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A95513XXYY*", "A95514XXYY", "A95516XXYY", "A95517XXYY", "A95519XXYY", "A95521XXYY", "A95523XXYY", "A95525XXYY", "A95527XXYY", "A955A11XXYY", "A95528XXYY", "A95556XXYY", "A95530XXYY", "A95557XXYY", "A95532XXYY", "A95558XXYY", "A95534XXYY", "A95535XXYY", "A95537XXYY", "A95559XXYY", "A95538XXYY"]
+   "partNumbers": ["A95513XXYY*", "A95514XXYY", "A95516XXYY", "A95517XXYY", "A95519XXYY", "A95521XXYY", "A95523XXYY", "A95525XXYY", "A95527XXYY", "A955A11XXYY", "A95528XXYY", "A95556XXYY", "A95530XXYY", "A95557XXYY", "A95532XXYY", "A95558XXYY", "A95534XXYY", "A95535XXYY", "A95537XXYY", "A95559XXYY", "A95538XXYY"],
+   "catalogueNo": "A955"
   },
   {
    "id": "c853d82fd7",
@@ -1925,7 +1947,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A95613XXYY*", "A95614XXYY", "A95616XXYY", "A95617XXYY", "A95619XXYY", "A95621XXYY", "A95623XXYY", "A95625XXYY", "A95627XXYY", "A956A11XXYY", "A95628XXYY", "A95656XXYY", "A95630XXYY", "A95657XXYY", "A95632XXYY", "A95658XXYY", "A95634XXYY", "A95635XXYY", "A95637XXYY", "A95659XXYY", "A95638XXYY"]
+   "partNumbers": ["A95613XXYY*", "A95614XXYY", "A95616XXYY", "A95617XXYY", "A95619XXYY", "A95621XXYY", "A95623XXYY", "A95625XXYY", "A95627XXYY", "A956A11XXYY", "A95628XXYY", "A95656XXYY", "A95630XXYY", "A95657XXYY", "A95632XXYY", "A95658XXYY", "A95634XXYY", "A95635XXYY", "A95637XXYY", "A95659XXYY", "A95638XXYY"],
+   "catalogueNo": "A956"
   },
   {
    "id": "f9168d51ff",
@@ -1970,7 +1993,7 @@
     ["A95759XXYY", "1C x 85", "2660", "0.21", "1.28", "0.26", "1.7", "20.4", "21.2", "1200", "475", "0.219"]
    ],
    "notes": [
-    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 \u0000Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
+    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
    ],
    "attrs": {
     "voltage": "1000V",
@@ -1983,7 +2006,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A95713XXYY*", "A95714XXYY", "A95716XXYY", "A95717XXYY", "A95719XXYY", "A95721XXYY", "A95723XXYY", "A95725XXYY", "A95727XXYY", "A957A11XXYY", "A95728XXYY", "A95756XXYY", "A95730XXYY", "A95757XXYY", "A95732XXYY", "A95758XXYY", "A95734XXYY", "A95735XXYY", "A95737XXYY", "A95759XXYY"]
+   "partNumbers": ["A95713XXYY*", "A95714XXYY", "A95716XXYY", "A95717XXYY", "A95719XXYY", "A95721XXYY", "A95723XXYY", "A95725XXYY", "A95727XXYY", "A957A11XXYY", "A95728XXYY", "A95756XXYY", "A95730XXYY", "A95757XXYY", "A95732XXYY", "A95758XXYY", "A95734XXYY", "A95735XXYY", "A95737XXYY", "A95759XXYY"],
+   "catalogueNo": "A957"
   },
   {
    "id": "76d9d5c18b",
@@ -2028,7 +2052,7 @@
     ["A95859XXYY", "1C x 85", "1197", "0.31", "1.28", "0.26", "1.7", "20.4", "21.2", "1155", "475", "0.219"]
    ],
    "notes": [
-    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 \u0000Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
+    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
    ],
    "attrs": {
     "voltage": "1000V",
@@ -2041,7 +2065,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A95813XXYY*", "A95814XXYY", "A95816XXYY", "A95817XXYY", "A95819XXYY", "A95821XXYY", "A95823XXYY", "A95825XXYY", "A95827XXYY", "A958A11XXYY", "A95828XXYY", "A95856XXYY", "A95830XXYY", "A95857XXYY", "A95832XXYY", "A95858XXYY", "A95834XXYY", "A95835XXYY", "A95837XXYY", "A95859XXYY"]
+   "partNumbers": ["A95813XXYY*", "A95814XXYY", "A95816XXYY", "A95817XXYY", "A95819XXYY", "A95821XXYY", "A95823XXYY", "A95825XXYY", "A95827XXYY", "A958A11XXYY", "A95828XXYY", "A95856XXYY", "A95830XXYY", "A95857XXYY", "A95832XXYY", "A95858XXYY", "A95834XXYY", "A95835XXYY", "A95837XXYY", "A95859XXYY"],
+   "catalogueNo": "A958"
   },
   {
    "id": "5e688ade40",
@@ -2100,7 +2125,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A95913XXYY*", "A95914XXYY", "A95916XXYY", "A95917XXYY", "A95919XXYY", "A95921XXYY", "A95923XXYY", "A95925XXYY", "A95927XXYY", "A959A11XXYY", "A95928XXYY", "A95956XXYY", "A95930XXYY", "A95957XXYY", "A95932XXYY", "A95958XXYY", "A95934XXYY", "A95935XXYY", "A95937XXYY", "A95959XXYY", "A95938XXYY"]
+   "partNumbers": ["A95913XXYY*", "A95914XXYY", "A95916XXYY", "A95917XXYY", "A95919XXYY", "A95921XXYY", "A95923XXYY", "A95925XXYY", "A95927XXYY", "A959A11XXYY", "A95928XXYY", "A95956XXYY", "A95930XXYY", "A95957XXYY", "A95932XXYY", "A95958XXYY", "A95934XXYY", "A95935XXYY", "A95937XXYY", "A95959XXYY", "A95938XXYY"],
+   "catalogueNo": "A959"
   },
   {
    "id": "df355ef61d",
@@ -2159,7 +2185,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A96013XXYY*", "A96014XXYY", "A96016XXYY", "A96017XXYY", "A96019XXYY", "A96021XXYY", "A96023XXYY", "A96025XXYY", "A96027XXYY", "A960A11XXYY", "A96028XXYY", "A96056XXYY", "A96030XXYY", "A96057XXYY", "A96032XXYY", "A96058XXYY", "A96034XXYY", "A96035XXYY", "A96037XXYY", "A96059XXYY", "A96038XXYY"]
+   "partNumbers": ["A96013XXYY*", "A96014XXYY", "A96016XXYY", "A96017XXYY", "A96019XXYY", "A96021XXYY", "A96023XXYY", "A96025XXYY", "A96027XXYY", "A960A11XXYY", "A96028XXYY", "A96056XXYY", "A96030XXYY", "A96057XXYY", "A96032XXYY", "A96058XXYY", "A96034XXYY", "A96035XXYY", "A96037XXYY", "A96059XXYY", "A96038XXYY"],
+   "catalogueNo": "A960"
   },
   {
    "id": "3495bc3396",
@@ -2204,7 +2231,7 @@
     ["A96159XXYY", "1C x 85", "2660", "0.21", "1.28", "0.26", "1.7", "20.4", "21.2", "1200", "475", "0.219"]
    ],
    "notes": [
-    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 \u0000Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
+    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
    ],
    "attrs": {
     "voltage": "1000V",
@@ -2217,7 +2244,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A96113XXYY*", "A96114XXYY", "A96116XXYY", "A96117XXYY", "A96119XXYY", "A96121XXYY", "A96123XXYY", "A96125XXYY", "A96127XXYY", "A961A11XXYY", "A96128XXYY", "A96156XXYY", "A96130XXYY", "A96157XXYY", "A96132XXYY", "A96158XXYY", "A96134XXYY", "A96135XXYY", "A96137XXYY", "A96159XXYY"]
+   "partNumbers": ["A96113XXYY*", "A96114XXYY", "A96116XXYY", "A96117XXYY", "A96119XXYY", "A96121XXYY", "A96123XXYY", "A96125XXYY", "A96127XXYY", "A961A11XXYY", "A96128XXYY", "A96156XXYY", "A96130XXYY", "A96157XXYY", "A96132XXYY", "A96158XXYY", "A96134XXYY", "A96135XXYY", "A96137XXYY", "A96159XXYY"],
+   "catalogueNo": "A961"
   },
   {
    "id": "064a5eb9d2",
@@ -2262,7 +2290,7 @@
     ["A96259XXYY", "1C x 85", "1197", "0.31", "1.28", "0.26", "1.7", "20.4", "21.2", "1155", "475", "0.219"]
    ],
    "notes": [
-    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 \u0000Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
+    "Note : XX*YY* : Please add last two digits in the part number as per the colour code given hereunder replacing XX,YY while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
    ],
    "attrs": {
     "voltage": "1000V",
@@ -2275,7 +2303,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A96213XXYY*", "A96214XXYY", "A96216XXYY", "A96217XXYY", "A96219XXYY", "A96221XXYY", "A96223XXYY", "A96225XXYY", "A96227XXYY", "A962A11XXYY", "A96228XXYY", "A96256XXYY", "A96230XXYY", "A96257XXYY", "A96232XXYY", "A96258XXYY", "A96234XXYY", "A96235XXYY", "A96237XXYY", "A96259XXYY"]
+   "partNumbers": ["A96213XXYY*", "A96214XXYY", "A96216XXYY", "A96217XXYY", "A96219XXYY", "A96221XXYY", "A96223XXYY", "A96225XXYY", "A96227XXYY", "A962A11XXYY", "A96228XXYY", "A96256XXYY", "A96230XXYY", "A96257XXYY", "A96232XXYY", "A96258XXYY", "A96234XXYY", "A96235XXYY", "A96237XXYY", "A96259XXYY"],
+   "catalogueNo": "A962"
   },
   {
    "id": "3552bc9012",
@@ -2327,7 +2356,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9631302", "A9631303", "A9631304", "A9631602", "A9631603", "A9631604", "A9631902", "A9631903", "A9631904", "A9632302", "A9632303", "A9632304", "A9632702", "A9632703", "A9632802", "A9632803"]
+   "partNumbers": ["A9631302", "A9631303", "A9631304", "A9631602", "A9631603", "A9631604", "A9631902", "A9631903", "A9631904", "A9632302", "A9632303", "A9632304", "A9632702", "A9632703", "A9632802", "A9632803"],
+   "catalogueNo": "A963"
   },
   {
    "id": "b7b6ecbd88",
@@ -2379,7 +2409,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9641302", "A9641303", "A9641304", "A9641602", "A9641603", "A9641604", "A9641902", "A9641903", "A9641904", "A9642302", "A9642303", "A9642304", "A9642702", "A9642703", "A9642802", "A9642803"]
+   "partNumbers": ["A9641302", "A9641303", "A9641304", "A9641602", "A9641603", "A9641604", "A9641902", "A9641903", "A9641904", "A9642302", "A9642303", "A9642304", "A9642702", "A9642703", "A9642802", "A9642803"],
+   "catalogueNo": "A964"
   },
   {
    "id": "624f75551b",
@@ -2431,7 +2462,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9651302", "A9651303", "A9651304", "A9651602", "A9651603", "A9651604", "A9651902", "A9651903", "A9651904", "A9652302", "A9652303", "A9652304", "A9652702", "A9652703", "A9652802", "A9652803"]
+   "partNumbers": ["A9651302", "A9651303", "A9651304", "A9651602", "A9651603", "A9651604", "A9651902", "A9651903", "A9651904", "A9652302", "A9652303", "A9652304", "A9652702", "A9652703", "A9652802", "A9652803"],
+   "catalogueNo": "A965"
   },
   {
    "id": "c1b5c78c78",
@@ -2483,7 +2515,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9661302", "A9661303", "A9661304", "A9661602", "A9661603", "A9661604", "A9661902", "A9661903", "A9661904", "A9662302", "A9662303", "A9662304", "A9662702", "A9662703", "A9662802", "A9662803"]
+   "partNumbers": ["A9661302", "A9661303", "A9661304", "A9661602", "A9661603", "A9661604", "A9661902", "A9661903", "A9661904", "A9662302", "A9662303", "A9662304", "A9662702", "A9662703", "A9662802", "A9662803"],
+   "catalogueNo": "A966"
   },
   {
    "id": "5eee08449f",
@@ -2535,7 +2568,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9671302", "A9671303", "A9671304", "A9671602", "A9671603", "A9671604", "A9671902", "A9671903", "A9671904", "A9672302", "A9672303", "A9672304", "A9672702", "A9672703", "A9672802", "A9672803"]
+   "partNumbers": ["A9671302", "A9671303", "A9671304", "A9671602", "A9671603", "A9671604", "A9671902", "A9671903", "A9671904", "A9672302", "A9672303", "A9672304", "A9672702", "A9672703", "A9672802", "A9672803"],
+   "catalogueNo": "A967"
   },
   {
    "id": "4ceb1dd43d",
@@ -2587,7 +2621,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9681302", "A9681303", "A9681304", "A9681602", "A9681603", "A9681604", "A9681902", "A9681903", "A9681904", "A9682302", "A9682303", "A9682304", "A9682702", "A9682703", "A9682802", "A9682803"]
+   "partNumbers": ["A9681302", "A9681303", "A9681304", "A9681602", "A9681603", "A9681604", "A9681902", "A9681903", "A9681904", "A9682302", "A9682303", "A9682304", "A9682702", "A9682703", "A9682802", "A9682803"],
+   "catalogueNo": "A968"
   },
   {
    "id": "fabafb60a0",
@@ -2639,7 +2674,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9691302", "A9691303", "A9691304", "A9691602", "A9691603", "A9691604", "A9691902", "A9691903", "A9691904", "A9692302", "A9692303", "A9692304", "A9692702", "A9692703", "A9692802", "A9692803"]
+   "partNumbers": ["A9691302", "A9691303", "A9691304", "A9691602", "A9691603", "A9691604", "A9691902", "A9691903", "A9691904", "A9692302", "A9692303", "A9692304", "A9692702", "A9692703", "A9692802", "A9692803"],
+   "catalogueNo": "A969"
   },
   {
    "id": "7f006bb465",
@@ -2691,7 +2727,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9701302", "A9701303", "A9701304", "A9701602", "A9701603", "A9701604", "A9701902", "A9701903", "A9701904", "A9702302", "A9702303", "A9702304", "A9702702", "A9702703", "A9702802", "A9702803"]
+   "partNumbers": ["A9701302", "A9701303", "A9701304", "A9701602", "A9701603", "A9701604", "A9701902", "A9701903", "A9701904", "A9702302", "A9702303", "A9702304", "A9702702", "A9702703", "A9702802", "A9702803"],
+   "catalogueNo": "A970"
   },
   {
    "id": "29554a4c84",
@@ -2715,7 +2752,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9711303XE*", "A9711603XE"]
+   "partNumbers": ["A9711303XE*", "A9711603XE"],
+   "catalogueNo": "A971"
   },
   {
    "id": "2589831f6c",
@@ -2739,7 +2777,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9721303XE*", "A9721603XE"]
+   "partNumbers": ["A9721303XE*", "A9721603XE"],
+   "catalogueNo": "A972"
   },
   {
    "id": "c1613990b8",
@@ -2806,7 +2845,8 @@
     "A9732805XE",
     "A9733005XE",
     "A9733205XE"
-   ]
+   ],
+   "catalogueNo": "A973"
   },
   {
    "id": "39078ea600",
@@ -2873,7 +2913,8 @@
     "A9742805XE",
     "A9743005XE",
     "A9743205XE"
-   ]
+   ],
+   "catalogueNo": "A974"
   },
   {
    "id": "713d3908e2",
@@ -2897,7 +2938,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9751303XE*", "A9751603XE"]
+   "partNumbers": ["A9751303XE*", "A9751603XE"],
+   "catalogueNo": "A975"
   },
   {
    "id": "a2170989bc",
@@ -2921,7 +2963,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A9761303XE*", "A9761603XE"]
+   "partNumbers": ["A9761303XE*", "A9761603XE"],
+   "catalogueNo": "A976"
   },
   {
    "id": "ceb9632272",
@@ -2988,7 +3031,8 @@
     "A9772805XE",
     "A9773005XE",
     "A9773205XE"
-   ]
+   ],
+   "catalogueNo": "A977"
   },
   {
    "id": "a1935db512",
@@ -3055,7 +3099,8 @@
     "A9782805XE",
     "A9783005XE",
     "A9783205XE"
-   ]
+   ],
+   "catalogueNo": "A978"
   },
   {
    "id": "bd4ae14df5",
@@ -3098,7 +3143,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A7263709"]
+   "partNumbers": ["A7263709"],
+   "catalogueNo": "A726"
   },
   {
    "id": "cc145da98c",
@@ -3138,7 +3184,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A7263709"]
+   "partNumbers": ["A7263709"],
+   "catalogueNo": "A726"
   },
   {
    "id": "e6205dfd5d",
@@ -3178,7 +3225,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A7263709"]
+   "partNumbers": ["A7263709"],
+   "catalogueNo": "A726"
   }
  ]
 }

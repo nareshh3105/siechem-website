@@ -3,7 +3,7 @@
   {
    "id": "e4896a3fac",
    "family": "wind",
-   "name": "HO7ZZ - F  Flexible Cable",
+   "name": "HO7ZZ - F Flexible Cable",
    "pages": [11],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -33,7 +33,7 @@
    "notes": [],
    "attrs": {
     "voltage": "450/750V",
-    "tempMentions": ["+70C", "\n40C"],
+    "tempMentions": ["+70C", "40C"],
     "materials": ["Rubber"],
     "conductors": ["Bare Copper"],
     "halogenFree": true,
@@ -43,12 +43,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6451303G", "6451304G", "6451305G", "6451307G", "6451314G", "6451318G", "6451603G", "6451604G", "6451605G", "6451607G", "6451614G", "6451618G", "6451904G", "6451905G", "6452304G", "6452305G", "6452704G", "6452705G", "6452804G", "6453004G", "6453204G", "6453404G"]
+   "partNumbers": ["6451303G", "6451304G", "6451305G", "6451307G", "6451314G", "6451318G", "6451603G", "6451604G", "6451605G", "6451607G", "6451614G", "6451618G", "6451904G", "6451905G", "6452304G", "6452305G", "6452704G", "6452705G", "6452804G", "6453004G", "6453204G", "6453404G"],
+   "catalogueNo": "645"
   },
   {
    "id": "ebf145f06a",
    "family": "wind",
-   "name": "HO7BN4 - F  Flexible Cable",
+   "name": "HO7BN4 - F Flexible Cable",
    "pages": [12],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -72,7 +73,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6483804", "6484104", "6484204", "6484404", "6484604", "6484804"]
+   "partNumbers": ["6483804", "6484104", "6484204", "6484404", "6484604", "6484804"],
+   "catalogueNo": "648"
   },
   {
    "id": "c0811a80eb",
@@ -204,7 +206,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6444404G", "6444604G"]
+   "partNumbers": ["6444404G", "6444604G"],
+   "catalogueNo": "644"
   },
   {
    "id": "00595b2e59",
@@ -322,7 +325,8 @@
     "6034104G",
     "6034204G",
     "6034404G"
-   ]
+   ],
+   "catalogueNo": "603"
   },
   {
    "id": "5567a98250",
@@ -360,7 +364,8 @@
     "awg": [],
     "cores": [4, 6, 10, 16, 25, 35, 50, 70, 95, 120, 150, 185, 240, 300]
    },
-   "partNumbers": ["6401304", "6401604", "6401904", "6402304", "6402704", "6402804", "6403004", "6403204", "6403404", "6403704", "6403804", "6404104", "6404204", "6404404", "6404604", "6404804"]
+   "partNumbers": ["6401304", "6401604", "6401904", "6402304", "6402704", "6402804", "6403004", "6403204", "6403404", "6403704", "6403804", "6404104", "6404204", "6404404", "6404604", "6404804"],
+   "catalogueNo": "640"
   },
   {
    "id": "03d8c4e058",
@@ -451,10 +456,10 @@
     "444 77 04"
    ],
    "info": {
-    "application": ["ü\u0000Internal wiring of electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional : Shield & Covering ü\u0000Outersheath : PVC ü\u0000Colour : As per customer order. Siechem UL 21098 RoHS"],
-    "technical": ["ü\u0000Temperature Range : +900C ü\u0000Voltage Rating : 600 V AC"]
+    "application": ["Internal wiring of electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional : Shield & Covering", "Outersheath : PVC", "Colour : As per customer order. Siechem UL 21098 RoHS"],
+    "technical": ["Temperature Range : +900C", "Voltage Rating : 600 V AC"]
    }
   },
   {
@@ -479,7 +484,8 @@
    "partNumbers": ["4447604", "4447504", "4447404", "4447304"],
    "info": {
     "construction": ["Insulation"]
-   }
+   },
+   "catalogueNo": "444"
   },
   {
    "id": "4e80267331",
@@ -590,7 +596,8 @@
     "3033404",
     "3033704",
     "3033804"
-   ]
+   ],
+   "catalogueNo": "303"
   },
   {
    "id": "a8e93e9b03",
@@ -627,11 +634,12 @@
    },
    "partNumbers": ["35130XX", "35132XX", "35134XX", "35137XX", "35138XX", "35141XX", "35142XX", "35144XX", "35146XX", "35148XX", "35149XX"],
    "info": {
-    "application": ["ü\u0000Wind Turbines ü\u0000Transmission of energy from generator to transformer."],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number"],
-    "construction": ["ü\u0000Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228 ü\u0000Insulation : E P R (Ethylene-Propylene-Rubber) ü\u0000Outer Sheath : HF XL EVA Siechem EPR (UA) Power Cable of Cores and mm2 Outer Diameter in"],
-    "technical": ["ü\u0000Temperature Range: -400C to +1250C ü\u0000Test Voltage : 6.5 kV ü\u0000Bending Radius(Minimum): 6 x Cable Dia ü\u0000Rated Voltage (U/U) : 1.8/3 kV 0"]
-   }
+    "application": ["Wind Turbines", "Transmission of energy from generator to transformer."],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number"],
+    "construction": ["Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228", "Insulation : E P R (Ethylene-Propylene-Rubber)", "Outer Sheath : HF XL EVA Siechem EPR (UA) Power Cable of Cores and mm2 Outer Diameter in"],
+    "technical": ["Temperature Range: -400C to +1250C", "Test Voltage : 6.5 kV", "Bending Radius(Minimum): 6 x Cable Dia", "Rated Voltage (U/U) : 1.8/3 kV 0"]
+   },
+   "catalogueNo": "351"
   },
   {
    "id": "50eab76b56",
@@ -669,11 +677,12 @@
    },
    "partNumbers": ["3523003", "3523203", "3523403", "3523703", "3523803", "3524103", "3523004", "3523204", "3523404", "3523704", "3523804", "3524104"],
    "info": {
-    "application": ["ü\u0000Wind Turbines ü\u0000Transmission of energy from generator to transformer."],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number of"],
-    "construction": ["ü\u0000Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228 ü\u0000Insulation : E P R (Ethylene-Propylene-Rubber) ü\u0000Outer Sheath : HF XL EVA"],
-    "technical": ["ü\u0000Temperature Range: -400C to +900C ü\u0000Test Voltage : 3.5 kV ü\u0000Bending Radius(Minimum): 6 x Cable Dia ü\u0000Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"]
-   }
+    "application": ["Wind Turbines", "Transmission of energy from generator to transformer."],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number of"],
+    "construction": ["Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228", "Insulation : E P R (Ethylene-Propylene-Rubber)", "Outer Sheath : HF XL EVA"],
+    "technical": ["Temperature Range: -400C to +900C", "Test Voltage : 3.5 kV", "Bending Radius(Minimum): 6 x Cable Dia", "Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"]
+   },
+   "catalogueNo": "352"
   },
   {
    "id": "cda23e9765",
@@ -711,11 +720,12 @@
    },
    "partNumbers": ["35323XX", "35327XX", "35328XX", "35330XX", "35332XX", "35334XX", "35337XX", "35338XX", "35341XX", "35342XX", "35344XX", "35346XX"],
    "info": {
-    "application": ["ü\u0000Wind Turbines ü\u0000Transmission of energy from generator to transformer."],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number of Cores"],
-    "construction": ["ü\u0000Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228 ü\u0000Insulation : X L P O Siechem EBXL-XLPO (UA) Power Cable Cores and mm2 Outer Diameter in"],
-    "technical": ["ü\u0000Temperature Range: -550C to +1450C ü\u0000Test Voltage : 3.5 kV ü\u0000Bending Radius(Minimum): 6 x Cable Dia ü\u0000Rated Voltage (U/U) : 0.6/1.0 kV 0"]
-   }
+    "application": ["Wind Turbines", "Transmission of energy from generator to transformer."],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number of Cores"],
+    "construction": ["Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228", "Insulation : X L P O Siechem EBXL-XLPO (UA) Power Cable Cores and mm2 Outer Diameter in"],
+    "technical": ["Temperature Range: -550C to +1450C", "Test Voltage : 3.5 kV", "Bending Radius(Minimum): 6 x Cable Dia", "Rated Voltage (U/U) : 0.6/1.0 kV 0"]
+   },
+   "catalogueNo": "353"
   },
   {
    "id": "ab2669f88e",
@@ -769,11 +779,12 @@
    },
    "partNumbers": ["35413XX", "35416XX", "35438XX", "35423XX", "35427XX", "35428XX", "35430XX", "35432XX", "35434XX", "35437XX", "35438XX", "35441XX", "35442XX", "35444XX", "35446XX", "35448XX", "35527XX", "35528XX", "35530XX", "35532XX", "35534XX", "35537XX", "35538XX", "35541XX", "35542XX", "35544XX", "35546XX"],
    "info": {
-    "application": ["ü\u0000Used in linking generators to transformers."],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number of"],
-    "construction": ["ü\u0000Conductor : Flexible Tinned Annealed Copper, Class 5 according to IEC 60228 ü\u0000Separate Tape : Polyester firm (if necessary) ü\u0000Insulation : Silicone ü\u0000Braid : PUR vanished synthetic yarn braid"],
-    "technical": ["ü\u0000Temperature Range: -500C to +1800C ü\u0000Test Voltage : 3.5 kV for 1.1kV ü\u0000Bending Radius(Minimum): 6 x Cable Dia for 1.1kV ü\u0000Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"]
-   }
+    "application": ["Used in linking generators to transformers."],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number of"],
+    "construction": ["Conductor : Flexible Tinned Annealed Copper, Class 5 according to IEC 60228", "Separate Tape : Polyester firm (if necessary)", "Insulation : Silicone", "Braid : PUR vanished synthetic yarn braid"],
+    "technical": ["Temperature Range: -500C to +1800C", "Test Voltage : 3.5 kV for 1.1kV", "Bending Radius(Minimum): 6 x Cable Dia for 1.1kV", "Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"]
+   },
+   "catalogueNo": "354"
   },
   {
    "id": "8c0d0881ff",
@@ -803,11 +814,12 @@
    },
    "partNumbers": ["35644XX", "35646XX", "35648XX", "35649XX"],
    "info": {
-    "application": ["ü\u0000Used in linking generators to transformers."],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number of Cores"],
-    "construction": ["ü\u0000Conductor : Aluminium Conductor, Class 2 according to IEC 60228. ü\u0000Insulation : XLPE ü\u0000Outersheath : HF - PO"],
-    "technical": ["ü\u0000Temperature Range: -500C to +1800C ü\u0000Test Voltage : 3.5 kV ü\u0000Bending Radius(Minimum): 6 x Cable Dia ü\u0000Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"]
-   }
+    "application": ["Used in linking generators to transformers."],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number of Cores"],
+    "construction": ["Conductor : Aluminium Conductor, Class 2 according to IEC 60228.", "Insulation : XLPE", "Outersheath : HF - PO"],
+    "technical": ["Temperature Range: -500C to +1800C", "Test Voltage : 3.5 kV", "Bending Radius(Minimum): 6 x Cable Dia", "Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"]
+   },
+   "catalogueNo": "356"
   },
   {
    "id": "c5af93130e",
@@ -837,11 +849,12 @@
    },
    "partNumbers": ["3573003", "3573403", "3573803", "3574203"],
    "info": {
-    "application": ["ü\u0000Wind Tower ü\u0000Light weight ü\u0000Compact"],
-    "features": ["ü\u0000Halogen free\u0000 ü\u0000Corrosivity of fire effluent ü\u0000Low Smoke ü\u0000Flame Retardant ü\u0000Cold Resistant @ -400C ü\u0000UV Resistant ü\u0000Oil Resistant ü\u0000Ozone Resistant Number of Cores"],
-    "construction": ["ü\u0000Conductor : Aluminium Conductor, sector shaped Solid ü\u0000Insulation : EBXL - XLPE ü\u0000Outersheath: HFFR, HF-PO"],
-    "technical": ["ü\u0000Temperature Range : -300C to +1200C ü\u0000Test Voltage : 3.5 kV ü\u0000Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"]
-   }
+    "application": ["Wind Tower", "Light weight", "Compact"],
+    "features": ["Halogen free", "Corrosivity of fire effluent", "Low Smoke", "Flame Retardant", "Cold Resistant @ -400C", "UV Resistant", "Oil Resistant", "Ozone Resistant Number of Cores"],
+    "construction": ["Conductor : Aluminium Conductor, sector shaped Solid", "Insulation : EBXL - XLPE", "Outersheath: HFFR, HF-PO"],
+    "technical": ["Temperature Range : -300C to +1200C", "Test Voltage : 3.5 kV", "Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"]
+   },
+   "catalogueNo": "357"
   },
   {
    "id": "cf70c9b1e0",
@@ -887,11 +900,12 @@
    },
    "partNumbers": ["35879XX", "35878XX", "35877XX", "35876XX", "35875XX", "35874XX", "35873XX", "35872XX", "35890XX", "35891XX", "35892XX", "35894XX", "35841XX", "35843XX", "35844XX", "35845XX", "35847XX", "35848XX", "35849XX", "35850XX", "35851XX"],
    "info": {
-    "application": ["ü\u0000Used for main power layout from the nacelle to the base of the wind tower"],
-    "features": ["ü\u0000Excellent Flame Retardant. ü\u0000Good Compressive load ü\u0000Cold Resistant ü\u0000Excellent Oil and UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Special stranded copper wires ü\u0000Insulation : EPR or XLPO ü\u0000Outersheath : CPE or XLPO"],
-    "technical": ["ü\u0000Temperature Range: -400C to +1200C ü\u0000Rated Voltage (U/U) : 2kV 0", "Torsion Resistant : 10,000 Twist Cycles 900/m, ±1800/m", "Specification : RHW -2/CPE RHW -2/XL EVA XHHW -2/XL EVA Index Weight"]
-   }
+    "application": ["Used for main power layout from the nacelle to the base of the wind tower"],
+    "features": ["Excellent Flame Retardant.", "Good Compressive load", "Cold Resistant", "Excellent Oil and UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Special stranded copper wires", "Insulation : EPR or XLPO", "Outersheath : CPE or XLPO"],
+    "technical": ["Temperature Range: -400C to +1200C", "Rated Voltage (U/U) : 2kV 0", "Torsion Resistant : 10,000 Twist Cycles 900/m, ±1800/m", "Specification : RHW -2/CPE RHW -2/XL EVA XHHW -2/XL EVA Index Weight"]
+   },
+   "catalogueNo": "358"
   },
   {
    "id": "412dd6c9cb",
@@ -917,11 +931,12 @@
    },
    "partNumbers": ["3590804"],
    "info": {
-    "application": ["ü\u0000Torsion applications in the loop section of wind turbines"],
-    "features": ["ü\u0000Excellent Flame Retardant. ü\u0000Halogen Free ü\u0000Excellent Abrasion Resistant ü\u0000UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Finely copper wires, Class 6 according to IEC 60228 ü\u0000Insulation : Fluorine Polymer ü\u0000Outersheath : Flame Retardant Halogen-Free TPU ü\u0000Braiding : Tinsel braid or spiral shield."],
-    "technical": ["ü\u0000Temperature Range: -500C to +900C ü\u0000Rated Voltage : 24V ü\u0000Min. Bending Radius : 7.5 X Cable Dia Index Weight"]
-   }
+    "application": ["Torsion applications in the loop section of wind turbines"],
+    "features": ["Excellent Flame Retardant.", "Halogen Free", "Excellent Abrasion Resistant", "UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Finely copper wires, Class 6 according to IEC 60228", "Insulation : Fluorine Polymer", "Outersheath : Flame Retardant Halogen-Free TPU", "Braiding : Tinsel braid or spiral shield."],
+    "technical": ["Temperature Range: -500C to +900C", "Rated Voltage : 24V", "Min. Bending Radius : 7.5 X Cable Dia Index Weight"]
+   },
+   "catalogueNo": "359"
   },
   {
    "id": "9b6ddf1a0e",
@@ -1112,7 +1127,8 @@
     "3693404",
     "3693704",
     "3693804"
-   ]
+   ],
+   "catalogueNo": "360"
   },
   {
    "id": "887ade9a4d",
@@ -1146,7 +1162,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["68132XX", "68134XX", "68137XX", "68138XX", "68141XX", "68142XX", "68144XX", "68146XX", "68148XX", "68149XX", "68150XX"]
+   "partNumbers": ["68132XX", "68134XX", "68137XX", "68138XX", "68141XX", "68142XX", "68144XX", "68146XX", "68148XX", "68149XX", "68150XX"],
+   "catalogueNo": "381"
   },
   {
    "id": "fc1b3527de",
@@ -1179,7 +1196,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6822804", "6823004", "6823204", "6823404", "6823704", "6823804", "6824104", "6824204", "6824404", "6824604"]
+   "partNumbers": ["6822804", "6823004", "6823204", "6823404", "6823704", "6823804", "6824104", "6824204", "6824404", "6824604"],
+   "catalogueNo": "682"
   },
   {
    "id": "ce63b2b7d9",
@@ -1439,10 +1457,10 @@
     "3751618"
    ],
    "info": {
-    "application": ["ü\u0000Dry interiors. ü\u0000Switch Cabinets. ü\u0000Trains and Buses."],
-    "features": ["ü\u0000Electron Beam Cross Linked insulation.\u0000 ü\u0000Excellent Flame Retardant. ü\u0000Highly Resistive to Oil and Ozone. ü\u0000Highly short circuit rated and earth fault resistance cable. ü\u0000UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Bare copper, fine wire conductors, IEC 60228 Class 5 ü\u0000Core Insulation : Special PVC-based compound ü\u0000Outersheath : Special PVC based compound"],
-    "technical": ["ü\u0000Temperature Range: Fixed : -400C to +800C ü\u0000Test Voltage : 3.0kV ü\u0000Rated Voltage (U/U) : 300 / 500V 0 ü\u0000Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
+    "application": ["Dry interiors.", "Switch Cabinets.", "Trains and Buses."],
+    "features": ["Electron Beam Cross Linked insulation.", "Excellent Flame Retardant.", "Highly Resistive to Oil and Ozone.", "Highly short circuit rated and earth fault resistance cable.", "UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Bare copper, fine wire conductors, IEC 60228 Class 5", "Core Insulation : Special PVC-based compound", "Outersheath : Special PVC based compound"],
+    "technical": ["Temperature Range: Fixed : -400C to +800C", "Test Voltage : 3.0kV", "Rated Voltage (U/U) : 300 / 500V 0", "Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
    }
   },
   {
@@ -2907,7 +2925,8 @@
     "3713005",
     "3713203",
     "3713204"
-   ]
+   ],
+   "catalogueNo": "370"
   },
   {
    "id": "a873be65ab",
@@ -3090,10 +3109,10 @@
     "3710825"
    ],
    "info": {
-    "application": ["ü\u0000Dry interiors. ü\u0000Switch Cabinets. ü\u0000Trains and Buses."],
-    "features": ["ü\u0000Electron Beam Cross Linked insulation.\u0000 ü\u0000Excellent Flame Retardant. ü\u0000Highly Resistive to Oil and Ozone. ü\u0000Highly short circuit rated and earth fault resistance cable. ü\u0000UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Bare copper, fine wire conductors, IEC 60228 Class 5 ü\u0000Core Insulation: Halogen-free compound ü\u0000Shielding : Screen braid of tinned copper wires (-SB) ü\u0000Outersheath : Halogen-free compound"],
-    "technical": ["ü\u0000Temperature Range: Fixed : -400C to +800C ü\u0000Test Voltage : 3.0kV ü\u0000Rated Voltage (U/U) : 300 / 500V 0 ü\u0000Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
+    "application": ["Dry interiors.", "Switch Cabinets.", "Trains and Buses."],
+    "features": ["Electron Beam Cross Linked insulation.", "Excellent Flame Retardant.", "Highly Resistive to Oil and Ozone.", "Highly short circuit rated and earth fault resistance cable.", "UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Bare copper, fine wire conductors, IEC 60228 Class 5", "Core Insulation: Halogen-free compound", "Shielding : Screen braid of tinned copper wires (-SB)", "Outersheath : Halogen-free compound"],
+    "technical": ["Temperature Range: Fixed : -400C to +800C", "Test Voltage : 3.0kV", "Rated Voltage (U/U) : 300 / 500V 0", "Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
    }
   },
   {
@@ -3301,10 +3320,10 @@
     "3741303"
    ],
    "info": {
-    "application": ["ü\u0000Dry interiors. ü\u0000Switch Cabinets. ü\u0000Trains and Buses."],
-    "features": ["ü\u0000Electron Beam Cross Linked insulation.\u0000 ü\u0000Excellent Flame Retardant. ü\u0000Highly Resistive to Oil and Ozone. ü\u0000Highly short circuit rated and earth fault resistance cable. ü\u0000UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Special stranded Copper wires ü\u0000Core Insulation : EPR or XLPO ü\u0000Outersheath : CPE or XLPO"],
-    "technical": ["ü\u0000Temperature Range: Flexing : -400C to +900C ü\u0000Nominal Voltage : DLO 2kV ü\u0000Specification : RHW -2 / CPE RHW -2 / XL EVA XHHW -2 / XL EVA Index Weight"]
+    "application": ["Dry interiors.", "Switch Cabinets.", "Trains and Buses."],
+    "features": ["Electron Beam Cross Linked insulation.", "Excellent Flame Retardant.", "Highly Resistive to Oil and Ozone.", "Highly short circuit rated and earth fault resistance cable.", "UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Special stranded Copper wires", "Core Insulation : EPR or XLPO", "Outersheath : CPE or XLPO"],
+    "technical": ["Temperature Range: Flexing : -400C to +900C", "Nominal Voltage : DLO 2kV", "Specification : RHW -2 / CPE RHW -2 / XL EVA XHHW -2 / XL EVA Index Weight"]
    }
   },
   {
@@ -3411,10 +3430,10 @@
     "3761605"
    ],
    "info": {
-    "application": ["ü\u0000UL Listed and CSA Certified flexible control cable rated at 600 V."],
-    "features": ["ü\u0000Halogen Free\u0000 ü\u0000Excellent Flame Retardant. ü\u0000Cold resistant at 400C ü\u0000UV Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Flexible Bare Copper Conductor according to IEC 60228, Class 5 ü\u0000Insulation : Heat Resistant Special PVC ü\u0000Shield : ATC (-SB) ü\u0000Outersheath : Heat Resistant Special PVC"],
-    "technical": ["ü\u0000Temperature Range: Fixed : -400C to +1200C Flexing : -50C to +800C ü\u0000Rated Voltage : 600 V ü\u0000Test Voltage : 3.0 kV ü\u0000Breakdown Voltage : Min. 6.0 kV ü\u0000Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 15 x Cable dia Index Weight"]
+    "application": ["UL Listed and CSA Certified flexible control cable rated at 600 V."],
+    "features": ["Halogen Free", "Excellent Flame Retardant.", "Cold resistant at 400C", "UV Resistant. Number of Cores"],
+    "construction": ["Conductor : Flexible Bare Copper Conductor according to IEC 60228, Class 5", "Insulation : Heat Resistant Special PVC", "Shield : ATC (-SB)", "Outersheath : Heat Resistant Special PVC"],
+    "technical": ["Temperature Range: Fixed : -400C to +1200C Flexing : -50C to +800C", "Rated Voltage : 600 V", "Test Voltage : 3.0 kV", "Breakdown Voltage : Min. 6.0 kV", "Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 15 x Cable dia Index Weight"]
    }
   },
   {
@@ -3521,10 +3540,10 @@
     "3771304"
    ],
    "info": {
-    "application": ["ü\u0000Used as wiring cables for control in wind turbines."],
-    "features": ["ü\u0000PVC Self Extinguishing ü\u0000Excellent Flame Retardant. ü\u0000Oil Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Flexible Bare Copper Conductor according to IEC 60228, Class 6 ü\u0000Insulation : Heat Resistant Special PVC ü\u0000Shield : ATC (-SB) ü\u0000Outersheath : Heat Resistant Special PVC"],
-    "technical": ["ü\u0000Temperature Range: Fixed : -400C to +900C Flexing : -50C to +900C (UL /CSA) ü\u0000Rated Voltage : 600 V (UL /CSA) ü\u0000Test Voltage : 3.0 kV ü\u0000Breakdown Voltage : Min. 6.0 kV ü\u0000Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
+    "application": ["Used as wiring cables for control in wind turbines."],
+    "features": ["PVC Self Extinguishing", "Excellent Flame Retardant.", "Oil Resistant. Number of Cores"],
+    "construction": ["Conductor : Flexible Bare Copper Conductor according to IEC 60228, Class 6", "Insulation : Heat Resistant Special PVC", "Shield : ATC (-SB)", "Outersheath : Heat Resistant Special PVC"],
+    "technical": ["Temperature Range: Fixed : -400C to +900C Flexing : -50C to +900C (UL /CSA)", "Rated Voltage : 600 V (UL /CSA)", "Test Voltage : 3.0 kV", "Breakdown Voltage : Min. 6.0 kV", "Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 7.5 x Cable dia Index Weight"]
    }
   },
   {
@@ -3630,10 +3649,10 @@
     "3780805"
    ],
    "info": {
-    "application": ["ü\u0000Used for measuring and controlling purposes in wind turbines."],
-    "features": ["ü\u0000Excellent Flame Retardant. ü\u0000Halogen free ü\u0000Non corrosive ü\u0000Cold Resistant at 500C ü\u0000Oil, Abrasion and Weathering Resistant. Number of Cores"],
-    "construction": ["ü\u0000Conductor : Bare Copper, Fine wire conductors according to IEC 60228, Class 5 ü\u0000Insulation : Polyolefin copolymer ü\u0000Shield : Screen braid of tinned copper wires (-SB) ü\u0000Outersheath : Polyolefin copolymer"],
-    "technical": ["ü\u0000Temperature Range: Fixed : -550C to +1250C Flexing : -350C to +1200C ü\u0000Rated Voltage : 450/750 V (0.75 mm2) 600/1000 V (1.0 mm2) ü\u0000Test Voltage : 4.0 kV ü\u0000Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 12 x Cable dia Index Weight"]
+    "application": ["Used for measuring and controlling purposes in wind turbines."],
+    "features": ["Excellent Flame Retardant.", "Halogen free", "Non corrosive", "Cold Resistant at 500C", "Oil, Abrasion and Weathering Resistant. Number of Cores"],
+    "construction": ["Conductor : Bare Copper, Fine wire conductors according to IEC 60228, Class 5", "Insulation : Polyolefin copolymer", "Shield : Screen braid of tinned copper wires (-SB)", "Outersheath : Polyolefin copolymer"],
+    "technical": ["Temperature Range: Fixed : -550C to +1250C Flexing : -350C to +1200C", "Rated Voltage : 450/750 V (0.75 mm2) 600/1000 V (1.0 mm2)", "Test Voltage : 4.0 kV", "Min. Bending Radius : Fixed : 4 x Cable dia Flexing : 12 x Cable dia Index Weight"]
    }
   },
   {
@@ -3724,7 +3743,8 @@
     "380516P",
     "380518P",
     "3805110P"
-   ]
+   ],
+   "catalogueNo": "379"
   }
  ]
 }

@@ -32,7 +32,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B950SA260004"]
+   "partNumbers": ["B950SA260004"],
+   "catalogueNo": "B950S"
   },
   {
    "id": "2ea5deb13e",
@@ -68,7 +69,8 @@
     "awg": [],
     "cores": [4]
    },
-   "partNumbers": ["B937A2604"]
+   "partNumbers": ["B937A2604"],
+   "catalogueNo": "B937"
   },
   {
    "id": "c1de8abb8f",
@@ -104,7 +106,8 @@
     "awg": [],
     "cores": [4]
    },
-   "partNumbers": ["B9620604"]
+   "partNumbers": ["B9620604"],
+   "catalogueNo": "B962"
   },
   {
    "id": "d7020145bf",
@@ -139,7 +142,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B961S050004"]
+   "partNumbers": ["B961S050004"],
+   "catalogueNo": "B961S"
   },
   {
    "id": "5e14f80110",
@@ -174,7 +178,8 @@
     "awg": [],
     "cores": [1]
    },
-   "partNumbers": ["B949S960004"]
+   "partNumbers": ["B949S960004"],
+   "catalogueNo": "B949S"
   },
   {
    "id": "adaf10c41c",
@@ -210,7 +215,8 @@
     "awg": [],
     "cores": [1]
    },
-   "partNumbers": ["B954SA260004"]
+   "partNumbers": ["B954SA260004"],
+   "catalogueNo": "B954S"
   },
   {
    "id": "bf4689f8e7",
@@ -245,7 +251,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B955SA100004"]
+   "partNumbers": ["B955SA100004"],
+   "catalogueNo": "B955S"
   },
   {
    "id": "7e4cf2b323",
@@ -279,7 +286,8 @@
     "awg": [18],
     "cores": [1]
    },
-   "partNumbers": ["B956S810004"]
+   "partNumbers": ["B956S810004"],
+   "catalogueNo": "B956S"
   },
   {
    "id": "882f1fc78c",
@@ -314,7 +322,8 @@
     "awg": [],
     "cores": [2]
    },
-   "partNumbers": ["B960A2602"]
+   "partNumbers": ["B960A2602"],
+   "catalogueNo": "B960"
   },
   {
    "id": "2c7de8ea8b",
@@ -349,7 +358,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B958S050004"]
+   "partNumbers": ["B958S050004"],
+   "catalogueNo": "B958S"
   },
   {
    "id": "a4352e194f",
@@ -384,7 +394,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B952S02004"]
+   "partNumbers": ["B952S02004"],
+   "catalogueNo": "B952S"
   },
   {
    "id": "8adb5a6cfa",
@@ -419,7 +430,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B951S260004"]
+   "partNumbers": ["B951S260004"],
+   "catalogueNo": "B951S"
   },
   {
    "id": "268ca67f1b",
@@ -453,7 +465,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B953SA260004"]
+   "partNumbers": ["B953SA260004"],
+   "catalogueNo": "B953S"
   },
   {
    "id": "28ee66b70a",
@@ -488,7 +501,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B957SA570004"]
+   "partNumbers": ["B957SA570004"],
+   "catalogueNo": "B957S"
   },
   {
    "id": "5821851b83",
@@ -524,7 +538,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B959S810004"]
+   "partNumbers": ["B959S810004"],
+   "catalogueNo": "B959S"
   }
  ]
 }

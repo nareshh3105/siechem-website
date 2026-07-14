@@ -44,11 +44,12 @@
    },
    "partNumbers": ["41485XX", "41484XX", "41483XX", "41482XX", "41481XX", "41480XX", "41479XX", "41478XX", "41477XX", "414A01XX", "41476XX", "414A50XX", "41475XX", "414A18XX", "S41487XX", "S41486XX", "S41485XX", "S41481XX", "S41480XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC For Electronic use : 2500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC For Electronic use : 2500 V"]
+   },
+   "catalogueNo": "414/S414"
   },
   {
    "id": "c0afe98c98",
@@ -89,11 +90,12 @@
    },
    "partNumbers": ["A41485XX", "A41484XX", "A41483XX", "A41482XX", "A41481XX", "A41480XX", "A41479XX", "A41478XX", "A41477XX", "A41476XX", "A41475XX", "HA41476XX", "HA41475XX", "HA41474XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Stranded Tinned Copper ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001 Cable"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC For Electronic use : 2500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Stranded Tinned Copper", "Insulation : PVC", "Colour : As per customer order. ISO 9001 Cable"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC For Electronic use : 2500 V"]
+   },
+   "catalogueNo": "A414/HA414"
   },
   {
    "id": "5795b07db2",
@@ -127,11 +129,12 @@
    },
    "partNumbers": ["A77083XX", "A77082XX", "A77081XX", "A77080XX", "A77078XX", "A77079XX", "A77077XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Stranded Tinned Copper ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC For Electronic use : 2500 V ü\u0000Flame Test : VW-1 as per UL 1581"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Stranded Tinned Copper", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC For Electronic use : 2500 V", "Flame Test : VW-1 as per UL 1581"]
+   },
+   "catalogueNo": "A770"
   },
   {
    "id": "c41bab5f78",
@@ -168,11 +171,12 @@
    },
    "partNumbers": ["41583XX", "41582XX", "41581XX", "41580XX", "41579XX", "41578XX", "41577XX", "41576XX", "S41581XX", "S41580XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC For Electronic use : 2500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC For Electronic use : 2500 V"]
+   },
+   "catalogueNo": "415"
   },
   {
    "id": "b1bc0fd0f1",
@@ -211,11 +215,12 @@
    },
    "partNumbers": ["41684XX", "41683XX", "41682XX", "41681XX", "41680XX", "41679XX", "41678XX", "41677XX", "416A01XX", "S41681XX", "S41680XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional PVC Covering, braid and Jacket ü\u0000Colour : As per customer order. ISO 9001 Cable"],
-    "technical": ["ü\u0000Temperature Range : +900C ü\u0000Voltage Rating : 1000 V AC For Electronic use : 3500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional PVC Covering, braid and Jacket", "Colour : As per customer order. ISO 9001 Cable"],
+    "technical": ["Temperature Range : +900C", "Voltage Rating : 1000 V AC For Electronic use : 3500 V"]
+   },
+   "catalogueNo": "416"
   },
   {
    "id": "fecd3decff",
@@ -247,11 +252,12 @@
    },
    "partNumbers": ["41781XX", "41780XX", "41779XX", "41778XX", "41777XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Rated Voltage : 600 V AC"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Rated Voltage : 600 V AC"]
+   },
+   "catalogueNo": "417"
   },
   {
    "id": "7d5d8a3c37",
@@ -282,11 +288,12 @@
    },
    "partNumbers": ["41876XX", "41875XX", "41874XX", "41873XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Multi Stranded Bare Copper (Tinning on request) ü\u0000Rated ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001 Cable"],
-    "technical": ["ü\u0000Temperature Range : -400C to +1050C ü\u0000Rated Voltage : 600 V AC For Electronic use : 2500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Multi Stranded Bare Copper (Tinning on request)", "Rated", "Insulation : PVC", "Colour : As per customer order. ISO 9001 Cable"],
+    "technical": ["Temperature Range : -400C to +1050C", "Rated Voltage : 600 V AC For Electronic use : 2500 V"]
+   },
+   "catalogueNo": "418"
   },
   {
    "id": "40d9225c82",
@@ -314,7 +321,7 @@
     "materials": ["PVC"],
     "conductors": ["Bare Copper"],
     "fireSafety": true,
-    "standardsFound": ["UL 1284 APC", "UL 1284 R", "UL  758"],
+    "standardsFound": ["UL 1284 APC", "UL 1284 R", "UL 758"],
     "voltBucket": "300–750V",
     "sizesSqmm": [],
     "awg": [1, 2, 4, 6, 8],
@@ -322,11 +329,12 @@
    },
    "partNumbers": ["41976XX", "41975XX", "41974XX", "41973XX", "41972XX", "41990XX", "41991XX", "41992XX", "41994XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Rated Voltage : 600 V AC ü\u0000Flame Test : UL 758, VW-1"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Rated Voltage : 600 V AC", "Flame Test : UL 758, VW-1"]
+   },
+   "catalogueNo": "419"
   },
   {
    "id": "29d3ad8b58",
@@ -372,11 +380,12 @@
    },
    "partNumbers": [],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 1000 V AC For Electronic use : 3500 V"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 1000 V AC For Electronic use : 3500 V"]
+   },
+   "catalogueNo": "425"
   },
   {
    "id": "fa5649f673",
@@ -409,11 +418,12 @@
    },
    "partNumbers": ["4268402", "4268302", "4268202", "4268102", "4268002", "4267802", "4267802"],
    "info": {
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield ü\u0000Jacket : PVC ü\u0000Colour : As per customer order."],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC"]
-   }
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield", "Jacket : PVC", "Colour : As per customer order."],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC"]
+   },
+   "catalogueNo": "426"
   },
   {
    "id": "deaeeb489f",
@@ -446,11 +456,12 @@
    },
    "partNumbers": ["4278403", "4278303", "4278203", "4278103", "4278003", "4277803", "4277803"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield ü\u0000Jacket : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC ISO AS ISO 14001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield", "Jacket : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC ISO AS ISO 14001 9100 45001"]
+   },
+   "catalogueNo": "427"
   },
   {
    "id": "5c7759201a",
@@ -485,11 +496,12 @@
    },
    "partNumbers": ["4288402", "4288302", "4288202", "4288102", "4288002", "S4288102", "S4288002", "4287802", "4287802"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield ü\u0000Jacket : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 1000 V AC ISO AS ISO 14001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield", "Jacket : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 1000 V AC ISO AS ISO 14001 9100 45001"]
+   },
+   "catalogueNo": "428"
   },
   {
    "id": "3dd464965e",
@@ -542,10 +554,11 @@
    },
    "partNumbers": ["4298002*", "B4298202", "4298302", "B4298402", "M4298502", "4297803", "4298303", "4298004", "4298304", "B4298605", "C4298208", "4298312", "4298201P", "B4298402P", "M4298502P", "M4298503P", "M4298504P"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ISO 9001 14001"],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield, covering, braid ü\u0000Jacket : PVC ü\u0000Colour : As per customer order. ISO OHSAS AS ISO 14001 18001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus. ISO 9001 14001"],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield, covering, braid", "Jacket : PVC", "Colour : As per customer order. ISO OHSAS AS ISO 14001 18001 9100 45001"]
+   },
+   "catalogueNo": "429"
   },
   {
    "id": "723446b7cf",
@@ -597,7 +610,8 @@
     "awg": [14, 16, 20, 22, 24, 26, 28],
     "cores": [2, 3, 4, 8, 10, 11]
    },
-   "partNumbers": ["A0807902*", "BA0808002", "A0808202", "A0808302", "MA808502", "A0807903", "A0808303", "A0808304", "A0808404", "A0808408", "A0808510", "A0808511", "B5358001P", "B5358605P", "B5358615P", "B5358617P", "B5358620P"]
+   "partNumbers": ["A0807902*", "BA0808002", "A0808202", "A0808302", "MA808502", "A0807903", "A0808303", "A0808304", "A0808404", "A0808408", "A0808510", "A0808511", "B5358001P", "B5358605P", "B5358615P", "B5358617P", "B5358620P"],
+   "catalogueNo": "429"
   },
   {
    "id": "65f1e895d9",
@@ -637,7 +651,8 @@
     "awg": [15, 20, 24],
     "cores": [2, 3, 4, 10]
    },
-   "partNumbers": ["A34080202*", "A3401303", "LA3408404", "LA3408410", "A341301P"]
+   "partNumbers": ["A34080202*", "A3401303", "LA3408404", "LA3408410", "A341301P"],
+   "catalogueNo": "429"
   },
   {
    "id": "e3cdb0dbc7",
@@ -818,11 +833,12 @@
     "4307807"
    ],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield, covering ü\u0000Jacket : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +800C ü\u0000Voltage Rating : 150 V AC ISO AS ISO 14001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield, covering", "Jacket : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +800C", "Voltage Rating : 150 V AC ISO AS ISO 14001 9100 45001"]
+   },
+   "catalogueNo": "430"
   },
   {
    "id": "360b317501",
@@ -875,11 +891,12 @@
    },
    "partNumbers": ["4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4318002", "4317902", "4317902", "4317902", "4317902", "4317802", "4317802"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional covering, shield ü\u0000Jacket : PVC ü\u0000Colour : As per customer order."],
-    "technical": ["ü\u0000Temperature Range : +900C ü\u0000Voltage Rating : 600 V AC"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional covering, shield", "Jacket : PVC", "Colour : As per customer order."],
+    "technical": ["Temperature Range : +900C", "Voltage Rating : 600 V AC"]
+   },
+   "catalogueNo": "431"
   },
   {
    "id": "ea96c788e5",
@@ -915,11 +932,12 @@
    },
    "partNumbers": ["4328102", "4328102", "4328102", "4328102", "4328102", "4328102", "4328102", "4328102", "4327802", "4327802"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional Shield, covering ü\u0000Jacket : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +600C ü\u0000Voltage Rating : 300 V AC ISO AS ISO 14001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional Shield, covering", "Jacket : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +600C", "Voltage Rating : 300 V AC ISO AS ISO 14001 9100 45001"]
+   },
+   "catalogueNo": "432"
   },
   {
    "id": "4551427153",
@@ -967,11 +985,12 @@
    },
    "partNumbers": ["BC27684XX", "C27683XX", "C27682XX", "C27681XX", "C27680XX", "C27679XX", "C27678XX", "C27677XX", "HC27676XX", "HC27675XX", "HC27674XX", "HC27673XX", "HC27672XX", "HC27690XX", "HC27691XX", "HC27692XX", "HC27694XX", "SC27687XX", "SC27686XX", "SC27685XX", "SC27681XX", "SC27680XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment. ü\u0000Battery power pack"],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly flexible ü\u0000Soldering iron resistant Very high short circuit resistant."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1250C ü\u0000Voltage Rating : 600 V AC For Electronic use : 2500 V ü\u0000Flame Test : VW-1"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment.", "Battery power pack"],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly flexible", "Soldering iron resistant Very high short circuit resistant."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1250C", "Voltage Rating : 600 V AC For Electronic use : 2500 V", "Flame Test : VW-1"]
+   },
+   "catalogueNo": "C276/SC276"
   },
   {
    "id": "f33154c902",
@@ -1010,10 +1029,11 @@
    },
    "partNumbers": ["BC27884XX", "C27883XX", "C27882XX", "C27881XX", "C27880XX", "C27879XX", "C27878XX", "C27877XX", "C27876XX", "C27875XX", "C27874XX", "SC27881XX", "SC27880XX"],
    "info": {
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly Flexible ü\u0000Soldering iron resistant ü\u0000Very High short circuit resistant"],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1500C ü\u0000Voltage Rating : 600 V AC ü\u0000Flame Test : VW-1"]
-   }
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly Flexible", "Soldering iron resistant", "Very High short circuit resistant"],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1500C", "Voltage Rating : 600 V AC", "Flame Test : VW-1"]
+   },
+   "catalogueNo": "C278"
   },
   {
    "id": "1bae627dbf",
@@ -1058,10 +1078,11 @@
    },
    "partNumbers": ["BC25184XX", "C25183XX", "C25182XX", "C25181XX", "C25180XX", "C25179XX", "C25178XX", "C25177XX", "C25176XX", "C25175XX", "HC25174XX", "HC25173XX", "HC25172XX", "HC25190XX", "HC25191XX", "HC25192XX", "HC25194XX", "SC25181XX", "SC25180XX"],
    "info": {
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly flexible ü\u0000Soldering iron resistant ü\u0000Very high short circuit resistant"],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE / XLPO ü\u0000Colour : As per customer order. ISO 9001 Cable"],
-    "technical": ["ü\u0000Temperature Range : +1500C ü\u0000Voltage Rating : 600 V AC", "For Electronic use : 2500 V Peak", "Flame test : VW-1"]
-   }
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly flexible", "Soldering iron resistant", "Very high short circuit resistant"],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE / XLPO", "Colour : As per customer order. ISO 9001 Cable"],
+    "technical": ["Temperature Range : +1500C", "Voltage Rating : 600 V AC", "For Electronic use : 2500 V Peak", "Flame test : VW-1"]
+   },
+   "catalogueNo": "C251/SC251"
   },
   {
    "id": "ee0f2b564a",
@@ -1136,7 +1157,8 @@
     "SC19885XX",
     "SC19881XX",
     "SC19880XX"
-   ]
+   ],
+   "catalogueNo": "437/S437"
   },
   {
    "id": "cfad4f8221",
@@ -1181,11 +1203,12 @@
    },
    "partNumbers": ["BC27984XX", "C27983XX", "C27982XX", "C27981XX", "C27980XX", "C27979XX", "C27978XX", "C27977XX", "C27976XX", "C27975XX", "HC27974XX", "HC27973XX", "HC27972XX", "HC27990XX", "HC27991XX", "HC27992XX", "HC27994XX", "C27981XX", "C27980XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly flexible. ü\u0000Soldering iron resistant. ü\u0000Very high short circuit resistant."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1500C ü\u0000Voltage Rating : 600 V AC, 750 V DC ü\u0000Flame Test : VW-1"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly flexible.", "Soldering iron resistant.", "Very high short circuit resistant."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1500C", "Voltage Rating : 600 V AC, 750 V DC", "Flame Test : VW-1"]
+   },
+   "catalogueNo": "C279"
   },
   {
    "id": "fbe61cf2e3",
@@ -1230,10 +1253,11 @@
    },
    "partNumbers": ["BC27784XX", "C27783XX", "C27782XX", "C27781XX", "C27780XX", "C27779XX", "C27778XX", "C27777XX", "C27776XX", "C27775XX", "HC27774XX", "HC27773XX", "HC27772XX", "HC27790XX", "HC27791XX", "HC27792XX", "HC27794XX", "SC27781XX", "SC27780XX"],
    "info": {
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly Flexible ü\u0000Soldering iron resistant ü\u0000Very high short circuit resistant"],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Optional Covering ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1500C ü\u0000Voltage Rating : 600 V AC, 750 V DC ü\u0000Flame test : VW-1"]
-   }
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly Flexible", "Soldering iron resistant", "Very high short circuit resistant"],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Optional Covering", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1500C", "Voltage Rating : 600 V AC, 750 V DC", "Flame test : VW-1"]
+   },
+   "catalogueNo": "C277"
   },
   {
    "id": "7f10f93ac9",
@@ -1274,11 +1298,12 @@
    },
    "partNumbers": ["C27581XX", "C27580XX", "C27579XX", "C27578XX", "C27577XX", "C27576XX", "C27575XX", "HC27574XX", "HC27573XX", "HC27572XX", "HC27590XX", "HC27591XX", "HC27592XX", "HC27594XX", "SC275181XX", "SC275180XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus. ü\u0000Highly flexible. ü\u0000Soldering iron resistant. ü\u0000Very high short circuit resistant."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Optional Tape and shield ü\u0000Sheath : EBXL-XLPE ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1250C ü\u0000Voltage Rating : 600 V AC ü\u0000Flame Test : VW-1 ISO AS ISO 14001 9100 45001"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus.", "Highly flexible.", "Soldering iron resistant.", "Very high short circuit resistant."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Optional Tape and shield", "Sheath : EBXL-XLPE", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1250C", "Voltage Rating : 600 V AC", "Flame Test : VW-1 ISO AS ISO 14001 9100 45001"]
+   },
+   "catalogueNo": "C275/SC275"
   },
   {
    "id": "9bfb720494",
@@ -1313,11 +1338,12 @@
    },
    "partNumbers": ["KC2747302", "CC2749202", "CC2747902", "CC2748202", "CC2747602", "KC2748002", "KC2747502", "HC2748102", "IC2747902", "SC2748102"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : EBXL-XLPE ü\u0000Optional Tape, Shield. ü\u0000Sheath : EBXL-XLPE ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1250C ü\u0000Voltage Rating : 1000 V AC"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : EBXL-XLPE", "Optional Tape, Shield.", "Sheath : EBXL-XLPE", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1250C", "Voltage Rating : 1000 V AC"]
+   },
+   "catalogueNo": "C274"
   },
   {
    "id": "fe25b67a00",
@@ -1402,10 +1428,10 @@
     "4447304"
    ],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Optional : Shield & Covering ü\u0000Outersheath : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +900C ü\u0000Voltage Rating : 600 V AC ISO AS ISO 14001 9100 45001"]
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Optional : Shield & Covering", "Outersheath : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +900C", "Voltage Rating : 600 V AC ISO AS ISO 14001 9100 45001"]
    }
   },
   {
@@ -1434,11 +1460,12 @@
    },
    "partNumbers": ["S44582XX"],
    "info": {
-    "application": ["ü\u0000Appliance wiring ü\u0000Internal wiring of meters, panels, electrical and electronic equipment."],
-    "features": ["ü\u0000Flame retardant ü\u0000Resistant to water, oil, acids, solvents and fungus."],
-    "construction": ["ü\u0000Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request) ü\u0000Insulation : PVC ü\u0000Colour : As per customer order. ISO 9001"],
-    "technical": ["ü\u0000Temperature Range : +1050C ü\u0000Voltage Rating : 600 V AC, 750 V DC"]
-   }
+    "application": ["Appliance wiring", "Internal wiring of meters, panels, electrical and electronic equipment."],
+    "features": ["Flame retardant", "Resistant to water, oil, acids, solvents and fungus."],
+    "construction": ["Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)", "Insulation : PVC", "Colour : As per customer order. ISO 9001"],
+    "technical": ["Temperature Range : +1050C", "Voltage Rating : 600 V AC, 750 V DC"]
+   },
+   "catalogueNo": "445"
   }
  ]
 }

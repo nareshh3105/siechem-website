@@ -43,9 +43,10 @@
      "Soldering iron resistant",
      "Electron Beam Cross Linked. Siechem EMD/EL/PT505 ATC, EDPS Number"
     ],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL,1250C ü", "Colour : Grey or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL,1250C", "Colour : Grey or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Specification: EDPS 179 & 304 - EL/PT/505", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "EL/PT/505"
   },
   {
    "id": "952611d0ce",
@@ -141,16 +142,19 @@
    ],
    "info": {
     "application": [
-     "Developed to supply power to traction motors ü of the diesel-electric locomotives",
-     "Portable cable for drilling rigs, on-shore and ü off- shore applications, railroad and transit car wiring, and electric earth-moving equipment ü",
+     "Developed to supply power to traction motors",
+     "of the diesel-electric locomotives",
+     "Portable cable for drilling rigs, on-shore and",
+     "off- shore applications, railroad and transit car wiring, and electric earth-moving equipment",
      "Well-suited for other applications like shipyards",
      "power and control jumper cables, motor leads, and sometimes as a telecom power supply.",
      "At times as a welding cable,especially for high-current applications."
     ],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Siechem EMD/9094883"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor. ü", "Insulation : Dual Layer Thermosetting Irradiation ü Cross Linked Polyolefin as per EDPS179/304 ü", "Inner Layer : EPDM", "Outer Layer : CPE"],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Dual Layer Thermosetting Irradiation", "Cross Linked Polyolefin as per EDPS179/304", "Inner Layer : EPDM", "Outer Layer : CPE"],
     "technical": ["Temperature Range : -650C to +1250C", "Thermal Life Rating : >10000 hrs @ +1250C.", "Specification: EDPS 179 & 304 -9094883", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "9094883"
   },
   {
    "id": "f7b1af34ea",
@@ -177,7 +181,7 @@
    },
    "partNumbers": ["40052869"],
    "info": {
-    "application": ["Thin walled flexible EBXL cables for tap ü changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables. ü"],
+    "application": ["Thin walled flexible EBXL cables for tap", "changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": [
      "Excellent resistance to high and low temperature",
      "Outstanding flame retardant",
@@ -190,15 +194,19 @@
      "Electron Beam Cross Linked. Siechem EMD/40052869 ATC, 1250C Number"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Co-polymer ü EBXL XLPO 1250C ü",
-     "Laying : Laid up ü (1C X 10 AWG + 9C X 12 AWG +17C X 14 AWG) All cores are twisted to form round shape",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Co-polymer",
+     "EBXL XLPO 1250C",
+     "Laying : Laid up",
+     "(1C X 10 AWG + 9C X 12 AWG +17C X 14 AWG) All cores are twisted to form round shape",
      "Tape : AL. Mylar tape",
      "Jacket : EBXL- XLPO",
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 600 V AC", "Specification: EDPS 179 -40052869", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40052869"
   },
   {
    "id": "120f2ecf71",
@@ -225,11 +233,12 @@
    },
    "partNumbers": ["40036046"],
    "info": {
-    "application": ["Thin walled flexible EBXL cables for tap ü changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables. ü"],
+    "application": ["Thin walled flexible EBXL cables for tap", "changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL1250C. ü", "Laid up : Cores are twisted. ü", "Colour : Yellow/White, Yellow/Black or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL1250C.", "Laid up : Cores are twisted.", "Colour : Yellow/White, Yellow/Black or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 600 V AC", "Specification: EDPS 179 -40036046", "NFPA -130 Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** (Nom.) Total Weight"]
-   }
+   },
+   "catalogueNo": "40036046"
   },
   {
    "id": "196e35c0e1",
@@ -258,9 +267,10 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL1250C. ü", "Laid up : Cores are twisted. ü", "Colour : Yellow/Brown, Yellow/Red, Yellow/Orange or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL1250C.", "Laid up : Cores are twisted.", "Colour : Yellow/Brown, Yellow/Red, Yellow/Orange or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 600 V AC", "Specification: EDPS 179 -40036047", "NFPA -130 Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** (Nom) Total Weight"]
-   }
+   },
+   "catalogueNo": "40036047"
   },
   {
    "id": "55a3612b56",
@@ -289,9 +299,10 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL 1250C. ü", "Laid up : Cores are twisted. ü", "Colour : Red, Red/Black, Red/Yellow or as per Customer order"],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL 1250C.", "Laid up : Cores are twisted.", "Colour : Red, Red/Black, Red/Yellow or as per Customer order"],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 600 V AC", "Specification: EDPS 179 -40036048", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40036048"
   },
   {
    "id": "8d41205317",
@@ -320,9 +331,10 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL,1250C. ü", "Laid up : Cores are twisted. ü", "Colour : Blue, Blue/Black, Blue/Red or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL,1250C.", "Laid up : Cores are twisted.", "Colour : Blue, Blue/Black, Blue/Red or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 2000 V AC", "Specification: EDPS 179 -40036049", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40036049"
   },
   {
    "id": "df069f0dab",
@@ -351,9 +363,10 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap Changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL,1250C. ü", "Laid up : Pair twisted. ü", "Colour : Blue, Blue/White or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL,1250C.", "Laid up : Pair twisted.", "Colour : Blue, Blue/White or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 2000 V AC", "Specification: EDPS 179 -40071800", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40071800"
   },
   {
    "id": "1004dce19a",
@@ -382,9 +395,10 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual ü Layer, EBXL,1250C. ü", "Laid up : Pair twisted. ü", "Colour : White, Whiite/Grey or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual", "Layer, EBXL,1250C.", "Laid up : Pair twisted.", "Colour : White, Whiite/Grey or as per Customer order."],
     "technical": ["Temperature Range : -650C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 1000 V AC", "Specification: EDPS 179 -40071801", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40071801"
   },
   {
    "id": "7e7a0472ec",
@@ -425,9 +439,11 @@
      "Electron Beam Cross Linked. Siechem EMD/40071896 ATC, Number"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual ü Layer, EBXL 1250C ü",
-     "Tape : Polyester ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual",
+     "Layer, EBXL 1250C",
+     "Tape : Polyester",
      "Laying : Pairs are twisted",
      "Tape: Polyester",
      "Screening : Al.Mylar tape",
@@ -437,7 +453,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -550C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 600 V AC", "Specification: EDPS 179 -40071896", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40071896"
   },
   {
    "id": "efa3d228e5",
@@ -468,9 +485,11 @@
     "application": ["Thin walled Flexible EBXL Cables for Tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Siechem EMD/40061670 Number"],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual ü Layer, EBXL 1250C ü",
-     "Tape : Polyester ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual",
+     "Layer, EBXL 1250C",
+     "Tape : Polyester",
      "Screening : Al.Mylar tape",
      "Drain wire : ATC",
      "Braiding : ATC",
@@ -478,7 +497,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -550C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 1800 V DC", "Specification: EDPS 179 -40061670", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40061670"
   },
   {
    "id": "335e46f81d",
@@ -518,17 +538,10 @@
      "Soldering iron resistant",
      "Electron Beam Cross Linked. Siechem EMD/40059175 ATC, Number"
     ],
-    "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual Layer, EBXL 1250C ü",
-     "Binder : Polyester ü",
-     "Drain wire : ATC ü",
-     "Screening : Al.Mylar tape",
-     "Outersheath : Specially formulated Dual Layer, EBXL 1250C",
-     "Colour : Grey or as per Customer order."
-    ],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual Layer, EBXL 1250C", "Binder : Polyester", "Drain wire : ATC", "Screening : Al.Mylar tape", "Outersheath : Specially formulated Dual Layer, EBXL 1250C", "Colour : Grey or as per Customer order."],
     "technical": ["Temperature Range : -500C to +1100C (>10000 hrs @ +1250C) (Max. Permissible Temperature125oC)", "Rated Voltage : 250 V DC", "Specification: EDPS 179 -40059175", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40059175"
   },
   {
    "id": "2432cca2e2",
@@ -559,10 +572,11 @@
     "application": ["Thin walled Flexible EBXL Cables for Tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Siechem EMD/40028096 Number"],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual Layer, EBXL 1250C ü",
-     "Binder : Polyester ü",
-     "Pair assembling ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual Layer, EBXL 1250C",
+     "Binder : Polyester",
+     "Pair assembling",
      "Binder : Polyester",
      "Drain wire : ATC",
      "Screening : Al.Mylar tape",
@@ -570,7 +584,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -500C to +1100C (>10000 hrs @ +1250C) (Max. Permissible Temperature125oC)", "Rated Voltage : 300 V AC", "Specification: EDPS 179 -40028096", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40028096"
   },
   {
    "id": "d68cc6354c",
@@ -600,9 +615,10 @@
    "info": {
     "application": ["Thin walled Flexible EBXL Cables for Tap changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding flame retardant", "Halogen free", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Siechem EMD/4002337 Number"],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual Layer, EBXL 1250C ü", "Tape : Polyester ü", "Drain wire : ATC ü", "Screening : Al.Mylar tape", "Outersheath : Specially formulated Dual Layer, EBXL 1250C", "Colour : Grey or as per Customer order."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual Layer, EBXL 1250C", "Tape : Polyester", "Drain wire : ATC", "Screening : Al.Mylar tape", "Outersheath : Specially formulated Dual Layer, EBXL 1250C", "Colour : Grey or as per Customer order."],
     "technical": ["Temperature Range : -500C to +1100C (>10000 hrs @ +1250C) (Max. Permissible Temperature125oC)", "Rated Voltage : 250 V DC", "Specification: EDPS 179 -4002337", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40023377"
   },
   {
    "id": "14517423d7",
@@ -643,10 +659,11 @@
      "Electron Beam Cross Linked. Siechem EMD/40020750 ATC, Number"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual Layer, EBXL 1250C ü",
-     "Binder : Polyester ü",
-     "Pair assembling ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual Layer, EBXL 1250C",
+     "Binder : Polyester",
+     "Pair assembling",
      "Binder : Polyester",
      "Drain wire : ATC",
      "Braiding : ATC",
@@ -655,7 +672,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -500C to +1100C (>10000 hrs @ +1250C). (Max. Permissible Temperature125oC)", "Rated Voltage : 900 V DC", "Specification: EDPS 179 -40020750", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40020750"
   },
   {
    "id": "251057cc5d",
@@ -696,9 +714,11 @@
      "Electron Beam Cross Linked. Siechem EMD/40019324 Number of"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual ü Layer, EBXL 1250C ü",
-     "Braiding ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual",
+     "Layer, EBXL 1250C",
+     "Braiding",
      "Tape : Polyester",
      "Inner shield : Cu.Mylar Tape",
      "Drain wire : ATC",
@@ -707,7 +727,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -550C to +1250C (>10000 hrs @ +1250C).", "Rated Voltage : 250 V DC", "Specification: EDPS 179 -40019324", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40019324"
   },
   {
    "id": "57e39f994b",
@@ -748,9 +769,11 @@
      "Electron Beam Cross Linked. Siechem EMD/9513207 ATC, 800C Diesel Number"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor.",
-     "Insulation : Specially formulated Dual ü Layer, EBXL 1250C ü",
-     "Tape : Polyester ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Specially formulated Dual",
+     "Layer, EBXL 1250C",
+     "Tape : Polyester",
      "Screening : Al.Mylar Tape",
      "Drain wire : ATC",
      "Shielding : ATC",
@@ -759,7 +782,8 @@
      "Colour : Grey or as per Customer order."
     ],
     "technical": ["Temperature Range : -550C to +800C (>10000 hrs @ +1250C).", "Specification: EDPS 179 -9513207", "Voltage : 600 V AC", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "9513207"
   },
   {
    "id": "caa0d9114c",
@@ -799,10 +823,12 @@
      "Electron Beam Cross Linked. Siechem EMD/40210762 ATC, N u m Cob ne dr uo cf tP oa i Srs"
     ],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor. ü",
-     "Insulation : Electron Beam Cross Linked ü Specially formulated polyolefin ü",
-     "Screening : Al. Mylar Tape ü",
-     "Drain Wire : ATC ü",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Electron Beam Cross Linked",
+     "Specially formulated polyolefin",
+     "Screening : Al. Mylar Tape",
+     "Drain Wire : ATC",
      "Shielding : ATC 90% Max Coverage",
      "Filler : Optional",
      "Outersheath : Electron Beam Cross Linked Specially Formulated polyolefin",
@@ -810,7 +836,8 @@
      "Marking : Siechem EMD No. 40210762 2PX20AWG 1250C 600V Year"
     ],
     "technical": ["Temperature Range : -550C to +1250C", "Voltage Grade : 600 V AC (1800 VDC)", "Insulation Resistance (IR) : 3547MΩ/1000ft", "Current Rating (400C in free air ) :11A", "Test Voltage / Dielectric Strength : 1 Min (2.5kV Ac)", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40210762"
   },
   {
    "id": "4883e61e74",
@@ -850,9 +877,10 @@
      "Soldering iron resistant",
      "Electron Beam Cross Linked. Siechem EMD/40012496 ATC, 1100C Number of Pairs"
     ],
-    "construction": ["Conductor : Annealed Tinned Copper ü Flexible Conductor.", "Insulation : Specially formulated Dual Layer, EBXL 1250C ü", "Tape: Polyester ü", "Drain Wire : ATC ü", "Screening : Al. Mylar Tape", "Outersheath : Specially formulated Dual Layer, EBXL 125°C", "Colour : Grey or as per Customer order ."],
+    "construction": ["Conductor : Annealed Tinned Copper", "Flexible Conductor.", "Insulation : Specially formulated Dual Layer, EBXL 1250C", "Tape: Polyester", "Drain Wire : ATC", "Screening : Al. Mylar Tape", "Outersheath : Specially formulated Dual Layer, EBXL 125°C", "Colour : Grey or as per Customer order ."],
     "technical": ["Temperature Range : -550C to +1100C ( > 10000 hrs @+1250C) (Max. Permissible Temperature125oC)", "Rated Voltage :250 V DC", "Sppecification : EDPS 179- 40012496", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "40012496"
   },
   {
    "id": "4f9492ea97",
@@ -881,8 +909,10 @@
     "application": ["Thin walled Flexible EBXL Cables for Tap Changer of Electric Locomotives.", "For Diesel Electric Locomotive Cables."],
     "features": ["Excellent resistance to high and low temperature", "Outstanding Flame retardant", "Excellent flexibility", "Resistance to Oil, Fuel, Ozone and Weathering.", "Easy to strip", "Very Low smoke density", "Soldering iron resistant", "Electron Beam Cross Linked. Siechem EMD2608004"],
     "construction": [
-     "Conductor : Annealed Tinned Copper ü Flexible Conductor. ü",
-     "Insulation : Electron Beam Cross linked ü Specially Formulated Polyolefin",
+     "Conductor : Annealed Tinned Copper",
+     "Flexible Conductor.",
+     "Insulation : Electron Beam Cross linked",
+     "Specially Formulated Polyolefin",
      "Individual Shielding : ATC Min 95% Coverage",
      "Filler:Optional",
      "Tape : Polyester",
@@ -891,7 +921,8 @@
      "Marking : Siechem Part No. 260800 4CX16AWG 1250C 600V Year"
     ],
     "technical": ["Temperature Range : -650C to +1250C", "Voltage Grade : 600 V", "NFPA -130"]
-   }
+   },
+   "catalogueNo": "2608004"
   }
  ]
 }

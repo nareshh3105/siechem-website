@@ -22,7 +22,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["50710XX", "50713XX"]
+   "partNumbers": ["50710XX", "50713XX"],
+   "catalogueNo": "507"
   },
   {
    "id": "6498d17bde",
@@ -61,7 +62,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["50816XX", "50819XX", "50823XX", "50827XX", "50828XX", "50830XX", "50832XX", "50834XX", "50837XX", "50838XX", "50841XX", "50842XX", "50844XX", "50846XX", "50848XX", "50849XX", "50850XX", "50851XX"]
+   "partNumbers": ["50816XX", "50819XX", "50823XX", "50827XX", "50828XX", "50830XX", "50832XX", "50834XX", "50837XX", "50838XX", "50841XX", "50842XX", "50844XX", "50846XX", "50848XX", "50849XX", "50850XX", "50851XX"],
+   "catalogueNo": "508"
   },
   {
    "id": "4759c87d28",
@@ -85,7 +87,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5101002", "5101302"]
+   "partNumbers": ["5101002", "5101302"],
+   "catalogueNo": "510"
   },
   {
    "id": "7fcc99e265",
@@ -123,7 +126,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5121602", "5121902", "5122302", "5122702", "5122802", "5123002", "5123202", "5123402", "5123702", "5123802", "5124102", "5124202", "5124402", "5124602", "5124802", "5124902"]
+   "partNumbers": ["5121602", "5121902", "5122302", "5122702", "5122802", "5123002", "5123202", "5123402", "5123702", "5123802", "5124102", "5124202", "5124402", "5124602", "5124802", "5124902"],
+   "catalogueNo": "512"
   },
   {
    "id": "c4583293dd",
@@ -147,7 +151,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5101003", "5101303"]
+   "partNumbers": ["5101003", "5101303"],
+   "catalogueNo": "510"
   },
   {
    "id": "019e7b9b80",
@@ -185,7 +190,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5121603", "5121903", "5122303", "5122703", "5122803", "5123003", "5123203", "5123403", "5123703", "5123803", "5124103", "5124203", "5124403", "5124603", "5124803", "5124903"]
+   "partNumbers": ["5121603", "5121903", "5122303", "5122703", "5122803", "5123003", "5123203", "5123403", "5123703", "5123803", "5124103", "5124203", "5124403", "5124603", "5124803", "5124903"],
+   "catalogueNo": "512"
   },
   {
    "id": "963dac4550",
@@ -209,7 +215,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5101004", "5101304"]
+   "partNumbers": ["5101004", "5101304"],
+   "catalogueNo": "510"
   },
   {
    "id": "7f6798fc16",
@@ -247,7 +254,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5121604", "5121904", "5122304", "5122704", "5122804", "5123004", "5123204", "5123404", "5123704", "5123804", "5124104", "5124204", "5124404", "5124604", "5124804", "5124904"]
+   "partNumbers": ["5121604", "5121904", "5122304", "5122704", "5122804", "5123004", "5123204", "5123404", "5123704", "5123804", "5124104", "5124204", "5124404", "5124604", "5124804", "5124904"],
+   "catalogueNo": "512"
   },
   {
    "id": "fe399a44fd",
@@ -271,7 +279,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5141002", "5141302"]
+   "partNumbers": ["5141002", "5141302"],
+   "catalogueNo": "514"
   },
   {
    "id": "a000b9b4a5",
@@ -298,7 +307,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5151602", "5151902", "5152302", "5152702", "5152802"]
+   "partNumbers": ["5151602", "5151902", "5152302", "5152702", "5152802"],
+   "catalogueNo": "515"
   },
   {
    "id": "d43598269e",
@@ -322,7 +332,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5161002", "5161302"]
+   "partNumbers": ["5161002", "5161302"],
+   "catalogueNo": "516"
   },
   {
    "id": "862c44cdcb",
@@ -349,7 +360,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5171602", "5171902", "5172302", "5172702", "5172802"]
+   "partNumbers": ["5171602", "5171902", "5172302", "5172702", "5172802"],
+   "catalogueNo": "517"
   },
   {
    "id": "c09df74d04",
@@ -373,7 +385,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5141003", "5141303"]
+   "partNumbers": ["5141003", "5141303"],
+   "catalogueNo": "514"
   },
   {
    "id": "35613acf53",
@@ -400,7 +413,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5151603", "5151903", "5152303", "5152703", "5152803"]
+   "partNumbers": ["5151603", "5151903", "5152303", "5152703", "5152803"],
+   "catalogueNo": "515"
   },
   {
    "id": "47e8238dbb",
@@ -435,7 +449,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["51806XX", "51808XX", "51810XX", "51813XX", "51916XX", "51919XX", "51923XX", "51927XX", "51928XX", "51930XX", "51932XX", "51934XX"]
+   "partNumbers": ["51806XX", "51808XX", "51810XX", "51813XX", "51916XX", "51919XX", "51923XX", "51927XX", "51928XX", "51930XX", "51932XX", "51934XX"],
+   "catalogueNo": "518"
   },
   {
    "id": "f209101309",
@@ -531,7 +546,8 @@
     "5213004",
     "5213204",
     "5213404"
-   ]
+   ],
+   "catalogueNo": "520"
   },
   {
    "id": "94b1e3e3c0",
@@ -569,7 +585,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["52423XX", "52427XX", "52428XX", "52430XX", "52432XX", "52434XX", "52437XX", "52438XX", "52441XX", "52442XX", "52444XX", "52446XX", "52448XX", "52449XX", "52450XX", "52451XX"]
+   "partNumbers": ["52423XX", "52427XX", "52428XX", "52430XX", "52432XX", "52434XX", "52437XX", "52438XX", "52441XX", "52442XX", "52444XX", "52446XX", "52448XX", "52449XX", "52450XX", "52451XX"],
+   "catalogueNo": "524"
   },
   {
    "id": "4fd0d8ca6f",
@@ -605,7 +622,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5262302", "5262702", "5262802", "5263002", "5263202", "5263402", "5263702", "5263802", "5264102", "5264202", "5264402", "5264602", "5264802", "5264902"]
+   "partNumbers": ["5262302", "5262702", "5262802", "5263002", "5263202", "5263402", "5263702", "5263802", "5264102", "5264202", "5264402", "5264602", "5264802", "5264902"],
+   "catalogueNo": "526"
   },
   {
    "id": "5920cd6eaf",
@@ -641,7 +659,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5262303", "5262703", "5262803", "5263003", "5263203", "5263403", "5263703", "5263803", "5264103", "5264203", "5264403", "5264603", "5264803", "5264903"]
+   "partNumbers": ["5262303", "5262703", "5262803", "5263003", "5263203", "5263403", "5263703", "5263803", "5264103", "5264203", "5264403", "5264603", "5264803", "5264903"],
+   "catalogueNo": "526"
   },
   {
    "id": "107ffc9741",
@@ -677,7 +696,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5262304", "5262704", "5262804", "5263004", "5263204", "5263404", "5263704", "5263804", "5264104", "5264204", "5264404", "5264604", "5264804", "5264904"]
+   "partNumbers": ["5262304", "5262704", "5262804", "5263004", "5263204", "5263404", "5263704", "5263804", "5264104", "5264204", "5264404", "5264604", "5264804", "5264904"],
+   "catalogueNo": "526"
   },
   {
    "id": "1a9ad157ec",
@@ -702,7 +722,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5272305", "5272705", "5272805"]
+   "partNumbers": ["5272305", "5272705", "5272805"],
+   "catalogueNo": "527"
   },
   {
    "id": "b0e063795c",
@@ -730,7 +751,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["52806XX", "52808XX", "52810XX", "52813XX", "52816XX", "52819XX"]
+   "partNumbers": ["52806XX", "52808XX", "52810XX", "52813XX", "52816XX", "52819XX"],
+   "catalogueNo": "528"
   },
   {
    "id": "a216569d8b",
@@ -752,13 +774,14 @@
     "materials": ["EBXL", "Rubber"],
     "conductors": ["Tinned Copper"],
     "fireSafety": true,
-    "standardsFound": ["IS 9968 P", "IS 6380-1984", "IS  6380-1984", "IS 9968"],
+    "standardsFound": ["IS 9968 P", "IS 6380-1984", "IS 6380-1984", "IS 9968"],
     "voltBucket": null,
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2, 2.5, 4],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5300602", "5300802", "5301002", "5301302", "5301602", "5301902"]
+   "partNumbers": ["5300602", "5300802", "5301002", "5301302", "5301602", "5301902"],
+   "catalogueNo": "530"
   },
   {
    "id": "267b411a66",
@@ -786,7 +809,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5300603", "5300803", "5301003", "5301303", "5301603", "5301903"]
+   "partNumbers": ["5300603", "5300803", "5301003", "5301303", "5301603", "5301903"],
+   "catalogueNo": "530"
   },
   {
    "id": "e460a5c9f0",
@@ -814,7 +838,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5300604", "5300804", "5301004", "5301304", "5301604", "5301904"]
+   "partNumbers": ["5300604", "5300804", "5301004", "5301304", "5301604", "5301904"],
+   "catalogueNo": "530"
   },
   {
    "id": "f285541f00",
@@ -837,7 +862,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["54513XX"]
+   "partNumbers": ["54513XX"],
+   "catalogueNo": "545"
   },
   {
    "id": "a8160020a3",
@@ -861,7 +887,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["5461302", "5471303"]
+   "partNumbers": ["5461302", "5471303"],
+   "catalogueNo": "546"
   },
   {
    "id": "5516012ea9",
@@ -909,7 +936,7 @@
    "info": {
     "application": ["Used in dry damp and wet interiors. Not applicable to hazardous areas. Applied in Connecting Electrical equipment."],
     "features": ["Protects Electrical Equipment. Can be used upto 1000 V. Excellent Mechanical and Thermal Properties."],
-    "construction": ["Conductor : Finely Stranded Bare Copper Wires. ü", "Foil Separator.", "Insulation : Special Rubber Compound.", "Outer Sheath : Special Blue Color Rubber Compound.", "Colored Cores"],
+    "construction": ["Conductor : Finely Stranded Bare Copper Wires.", "Foil Separator.", "Insulation : Special Rubber Compound.", "Outer Sheath : Special Blue Color Rubber Compound.", "Colored Cores"],
     "technical": [
      "Temperature Range : On conductor : +900C In Water : +400C Flexible applications : -300C to +800C Fixed Installation : -500C to +800C",
      "Voltage for Testing : 2.5 kV",
@@ -917,12 +944,13 @@
      "Rated Voltage : (U/U) 450/750 V 0 Protected and Fixed Installation : 600/1000 V",
      "Specific Insulation Resistance : >20 G Ohm x cm."
     ]
-   }
+   },
+   "catalogueNo": "632"
   },
   {
    "id": "d8c67265a8",
    "family": "rubber",
-   "name": "NSGAFOU  1.8/ 3kV Flexible Cables",
+   "name": "NSGAFOU 1.8/ 3kV Flexible Cables",
    "pages": [42],
    "headers": ["Part Number", "Conductor size", "Outer Diameter Nom.", "Conductor resistance at 200 C", "Weight(Approx)"],
    "rows": [
@@ -961,9 +989,9 @@
    },
    "partNumbers": ["64013XX", "64016XX", "64019XX", "64023XX", "64027XX", "64028XX", "64030XX", "64032XX", "64034XX", "64037XX", "64038XX", "64041XX", "64042XX", "64044XX", "64046XX", "64048XX"],
    "info": {
-    "application": ["For fixed installation in track ü bound vehicles.", "In dry locations ü"],
+    "application": ["For fixed installation in track", "bound vehicles.", "In dry locations"],
     "features": ["Excellent Flexibility. Excellent Flame Retardant. Highly Resistive to Oil and Ozone. Highly short circuit rated and earth fault resistance cable."],
-    "construction": ["Conductor : Fine strands of tinned Copper Wires. ü Class 5 as per EN 60228 ü", "Core Insulation : EBXL - EPR .", "Colour : Light / as per Customer requirement", "Outer Sheath : EBXL - CPE ü", "Colour : Black / as per Customer requirement ü"],
+    "construction": ["Conductor : Fine strands of tinned Copper Wires.", "Class 5 as per EN 60228", "Core Insulation : EBXL - EPR .", "Colour : Light / as per Customer requirement", "Outer Sheath : EBXL - CPE", "Colour : Black / as per Customer requirement"],
     "technical": [
      "Specification : DIN VDE 0207",
      "Temperature Range : Flexible applications : -250C to +1200C Fixed Installation : -400C to +1200C",
@@ -972,7 +1000,8 @@
      "Rated Voltage (U/U) : 1.8/3 kV 0",
      "Minimum Bending Radius : Flexible use : 10 X OD Fixed installation : 6 X OD"
     ]
-   }
+   },
+   "catalogueNo": "640"
   },
   {
    "id": "72ec1e7750",
@@ -1010,7 +1039,8 @@
     "awg": [],
     "cores": [4, 6, 10, 16, 25, 35, 50, 70, 95, 120, 150, 185, 240, 300]
    },
-   "partNumbers": ["6411304", "6411604", "6411904", "6412304", "6412704", "6412804", "6413004", "6413204", "6413404", "6413704", "6413804", "6414104", "6414204", "6414404", "6414604", "6414804"]
+   "partNumbers": ["6411304", "6411604", "6411904", "6412304", "6412704", "6412804", "6413004", "6413204", "6413404", "6413704", "6413804", "6414104", "6414204", "6414404", "6414604", "6414804"],
+   "catalogueNo": "641"
   },
   {
    "id": "dadbd888e7",
@@ -1069,7 +1099,8 @@
      "Rated voltage (u/u) : 300/500 V 0",
      "Max. Operating temperature : 600C Ap p rovals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** diameter Max. c reo sn id stu ac nto cer aW pe pi rg oh xt"
     ]
-   }
+   },
+   "catalogueNo": "A013"
   },
   {
    "id": "75f1e0c60c",
@@ -1106,7 +1137,7 @@
    "info": {
     "application": ["For general use in domestic premises kitchen, offices", "For supplying appliances where the cable are subjected to low mechanical stress", "Other industrial applications."],
     "features": ["Excellent flexibility Flame retardant Ozone resistant."],
-    "construction": ["Conductor : Annealed copper conductor, ü class 5 flexible conductor EN 60228", "Optional : Tinned copper ü", "Insulation : Cross linked elastomeric compound ü Type El 4 to EN 50363-1 ü", "Sheath : Cross-linked elastomeric ü compound Type EM 2 to EN 50363-2-1"],
+    "construction": ["Conductor : Annealed copper conductor", "class 5 flexible conductor EN 60228", "Optional : Tinned copper", "Insulation : Cross linked elastomeric compound", "Type El 4 to EN 50363-1", "Sheath : Cross-linked elastomeric", "compound Type EM 2 to EN 50363-2-1"],
     "technical": [
      "Specification :BS EN 50525-2-21:2011 BS-6500",
      "Test voltage : 2kV",
@@ -1114,7 +1145,8 @@
      "Rated voltage (u/u) : 300/500V 0",
      "Max. Operating Temperature : 600C pr ov a ls Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Max diameter"
     ]
-   }
+   },
+   "catalogueNo": "A014"
   },
   {
    "id": "9f91900955",
@@ -1317,7 +1349,8 @@
     "A0163804",
     "Red - 01",
     "Chocolate - 12"
-   ]
+   ],
+   "catalogueNo": "A016"
   },
   {
    "id": "58b557909d",
@@ -1359,7 +1392,8 @@
     "awg": [],
     "cores": [6, 7, 12, 18, 24, 36]
    },
-   "partNumbers": ["A0161306", "A0161307", "A0161312", "A0161318", "A0161324", "A0161336", "A0161606", "A0161607", "A0161612", "A0161618", "A0161624", "A0161636", "A0161906", "A0161907", "A0161912", "A0161918"]
+   "partNumbers": ["A0161306", "A0161307", "A0161312", "A0161318", "A0161324", "A0161336", "A0161606", "A0161607", "A0161612", "A0161618", "A0161624", "A0161636", "A0161906", "A0161907", "A0161912", "A0161918"],
+   "catalogueNo": "A016"
   },
   {
    "id": "ad15460179",
@@ -1465,7 +1499,7 @@
   {
    "id": "4939d2be86",
    "family": "rubber",
-   "name": "H07RN8-F 450/750 V  Flexible Cables",
+   "name": "H07RN8-F 450/750 V Flexible Cables",
    "pages": [50],
    "headers": ["Part Number", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath — Single layer", "Dual layers — Inner layer", "Outer layer", "Overall diameter — Minimum", "Maximum", "Max conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -1555,7 +1589,8 @@
     "A0182705",
     "A0182805",
     "A0183005"
-   ]
+   ],
+   "catalogueNo": "A018"
   },
   {
    "id": "da0711f2ce",
@@ -1599,11 +1634,12 @@
    },
    "partNumbers": ["A0181306", "A0181307", "A0181312", "A0181318", "A0181324", "A0181336", "A0181606", "A0181607", "A0181612", "A0181618", "A0181624", "A0181636", "A0181906", "A0181907", "A0181912", "A0181918"],
    "info": {
-    "application": ["Suitable for use with submersible pumps. ü For the connection electrical equipments is Class industrial water. (Eg. Floater switches) ü", "Type", "Type"],
+    "application": ["Suitable for use with submersible pumps.", "For the connection electrical equipments is Class industrial water. (Eg. Floater switches)", "Type", "Type"],
     "features": ["Excellent flexibility Water resistant and flame retardant Oil resistance N ofu Cm ob re er C do ian mdu ec teto rr"],
-    "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor EN 60228 Optional : Tinned copper ü Insulation : Cross-linked elastomeric Compound ü Type EI 4 as per EN 50363-1 ü Sheath : Cross-linked elastomeric Compound ü Type EM 2 as per EN 50363-2-1"],
+    "construction": ["Conductor : Annealed Copper conductor", "Class 5 flexible conductor EN 60228 Optional : Tinned copper", "Insulation : Cross-linked elastomeric Compound", "Type EI 4 as per EN 50363-1", "Sheath : Cross-linked elastomeric Compound", "Type EM 2 as per EN 50363-2-1"],
     "technical": ["Specification :BS EN 50525-2-21:2011 BS-6500", "Test voltage: 2kV", "Conductor resistance : EN 60228", "Rated voltage : 450/750V", "Max. Operating temperature : 600C"]
-   }
+   },
+   "catalogueNo": "A018"
   },
   {
    "id": "01b039e92d",
@@ -1645,9 +1681,9 @@
    },
    "partNumbers": ["7040802", "7041002", "7041302", "7041602", "7040803", "7041003", "7041203", "7041303", "7041603", "7040804", "7041004", "7041304", "7041604", "7040805", "7041005", "7041305", "7041605"],
    "info": {
-    "application": ["Used for measuring & controlling in control ü equipment for conveyors and control units. Fixed installation and for flexible use when ü temporarily moved in medium mechanical ü condition ü Used outdoors when protected and in dry or moist conditions indoor."],
+    "application": ["Used for measuring & controlling in control", "equipment for conveyors and control units. Fixed installation and for flexible use when", "temporarily moved in medium mechanical", "condition", "Used outdoors when protected and in dry or moist conditions indoor."],
     "features": ["Flame retardant Flexibility Medium Mechanical Stress."],
-    "construction": ["Conductor : Annealed Tinned Copper conductor, ü Class 5 flexible conductor ü Insulation : Rubber compound Type EI 4 Cores twisted together. Sheath : Rubber compound Type EM 4 ü"],
+    "construction": ["Conductor : Annealed Tinned Copper conductor", "Class 5 flexible conductor", "Insulation : Rubber compound Type EI 4 Cores twisted together. Sheath : Rubber compound Type EM 4"],
     "technical": [
      "Specification : BS 6500",
      "Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C",
@@ -1655,7 +1691,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation **"
     ]
-   }
+   },
+   "catalogueNo": "704"
   },
   {
    "id": "4fa6470dcb",
@@ -1689,7 +1726,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["53627XX", "53628XX", "53630XX", "53632XX", "53634XX", "53637XX", "53638XX", "53641XX", "53642XX", "53644XX"]
+   "partNumbers": ["53627XX", "53628XX", "53630XX", "53632XX", "53634XX", "53637XX", "53638XX", "53641XX", "53642XX", "53644XX"],
+   "catalogueNo": "536"
   },
   {
    "id": "7d90aa7c13",
@@ -1719,7 +1757,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["53728XX", "53730XX", "53732XX", "53734XX", "53737XX", "53738XX"]
+   "partNumbers": ["53728XX", "53730XX", "53732XX", "53734XX", "53737XX", "53738XX"],
+   "catalogueNo": "537"
   },
   {
    "id": "23442f5400",
@@ -1753,11 +1792,12 @@
    },
    "partNumbers": ["53827XX", "53828XX", "53830XX", "53832XX", "53834XX", "53837XX", "53838XX", "53841XX", "53842XX"],
    "info": {
-    "application": ["For use between welding ü generator and the hand electrode and the work piece. For use in automobile industry, in ship building, in transport and conveyor ü systems, tool making machinery, ü Sheath welding robots, etc.", "Colour"],
+    "application": ["For use between welding", "generator and the hand electrode and the work piece. For use in automobile industry, in ship building, in transport and conveyor", "systems, tool making machinery", "Sheath welding robots, etc.", "Colour"],
     "features": ["Flexibility under rough, open dry, damp conditions. Oli resistant to DIN EN 60811-2-1 High flexibility under the effect of ozone, light oxygen, inert gas, oil or petrol."],
-    "construction": ["Conductor : Fine stranded plain or tinned class-6 ü copper conductors conforming ü to DIN VDE 0295, IEC 60228 ü and HD 383 Separator : Dry Paper, Polyester Tape Sheath : Neoprene outer jacket, chlorinated rubber compound Em5 Colour : Orange or Black Approvals"],
+    "construction": ["Conductor : Fine stranded plain or tinned class-6", "copper conductors conforming", "to DIN VDE 0295, IEC 60228", "and HD 383 Separator : Dry Paper, Polyester Tape Sheath : Neoprene outer jacket, chlorinated rubber compound Em5 Colour : Orange or Black Approvals"],
     "technical": ["Temperature Range : 850C Voltage for Testing : 1000 V AC Bending Radius(Minimum) : 6x Overall dia. Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Maximum"]
-   }
+   },
+   "catalogueNo": "538"
   }
  ]
 }

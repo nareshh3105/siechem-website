@@ -35,11 +35,12 @@
    },
    "partNumbers": ["A54079XX", "A54078XX", "A54077XX"],
    "info": {
-    "application": ["Used to transmit and receive signals ü between Irrigation satellites, Central Computers, weather stations and sensors. ü", "Its mainly used in Irrigation satellites & ü Smart Hub Systems.", "Used in Underground Low Energy Systems.", "Used in Sprinklers Systems."],
+    "application": ["Used to transmit and receive signals", "between Irrigation satellites, Central Computers, weather stations and sensors.", "Its mainly used in Irrigation satellites &", "Smart Hub Systems.", "Used in Underground Low Energy Systems.", "Used in Sprinklers Systems."],
     "features": ["Direct Burial. Sunlight and Moisture resistant. Reduces Radio frequency interference. And also minimizing the electrical and magnetic interference."],
-    "construction": ["Conductor : Annealed Plain Solid Copper ü Voltage Conductor ü Insulation : PE (Polyethylene) ü Colour : as per customer order"],
+    "construction": ["Conductor : Annealed Plain Solid Copper", "Voltage Conductor", "Insulation : PE (Polyethylene)", "Colour : as per customer order"],
     "technical": ["Voltage Rating : 600 V Temperature Range : -55ºC to +60ºC Standards : As per customer specifications or Generally as per UL 758 ISO IATF AS ISO 14001 16949 9100 45001"]
-   }
+   },
+   "catalogueNo": "A540"
   },
   {
    "id": "9cd6e74e1e",
@@ -72,7 +73,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A8008002"]
+   "partNumbers": ["A8008002"],
+   "catalogueNo": "A800"
   },
   {
    "id": "67c061e87d",
@@ -106,7 +108,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A8011302", "A8011602"]
+   "partNumbers": ["A8011302", "A8011602"],
+   "catalogueNo": "A801"
   },
   {
    "id": "2fdb81528a",
@@ -152,14 +155,15 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["20°C", "\n13C", "+90ºC", "+250ºC"],
+    "tempMentions": ["20°C", "13C", "+90ºC", "+250ºC"],
     "materials": ["XLPE", "PVC"],
     "voltBucket": null,
     "sizesSqmm": [0.5, 1, 1.5, 2, 2.5, 3, 5, 7, 9, 13],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B5650603", "B5650605", "B5650607", "B5650609", "B5650613", "B5651002", "B5651003", "B5651005", "B5651007", "B5651009", "B5651013", "B5651302", "B5651303", "B5651305", "B5651307", "B5651309", "B5651313", "B5651602", "B5651603", "B5651605", "B5651607", "B5651609", "B5651613"]
+   "partNumbers": ["B5650603", "B5650605", "B5650607", "B5650609", "B5650613", "B5651002", "B5651003", "B5651005", "B5651007", "B5651009", "B5651013", "B5651302", "B5651303", "B5651305", "B5651307", "B5651309", "B5651313", "B5651602", "B5651603", "B5651605", "B5651607", "B5651609", "B5651613"],
+   "catalogueNo": "B565"
   },
   {
    "id": "8f26f54636",
@@ -184,7 +188,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["\n20°C", "-55ºC", "+60ºC", "280ºC"],
+    "tempMentions": ["20°C", "-55ºC", "+60ºC", "280ºC"],
     "materials": ["XLPE"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -192,7 +196,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A8027902"]
+   "partNumbers": ["A8027902"],
+   "catalogueNo": "A802"
   },
   {
    "id": "7b1c196800",
@@ -228,7 +233,7 @@
    ],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["\n20°C", "30°C", "90°C", "-10ºC"],
+    "tempMentions": ["20°C", "30°C", "90°C", "-10ºC"],
     "materials": ["PVC"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -236,7 +241,8 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 16, 18],
     "cores": []
    },
-   "partNumbers": ["B822S81XX", "B822S80XX", "B822S79XX", "B822S78XX", "B822S77XX", "B82276XX", "B82275XX", "B82274XX", "B82273XX", "B82272XX", "B82290XX"]
+   "partNumbers": ["B822S81XX", "B822S80XX", "B822S79XX", "B822S78XX", "B822S77XX", "B82276XX", "B82275XX", "B82274XX", "B82273XX", "B82272XX", "B82290XX"],
+   "catalogueNo": "B822S"
   },
   {
    "id": "09ef00e372",
@@ -253,7 +259,7 @@
     "Note : XX* : Please add last two digits in the part number as per the colour code given hereunder replacing XX while ordering. Red - 01 Yellow - 02 Blue - 03 Black - 04 Green - 05 Yellow-Green - 06 Grey - 07 Brown - 08 White - 09 Orange - 10 Violet - 11 Chocolate - 12 Tan - 13 Charcoal - 14 LT Blue - 15 DK Grey - 16 LT Green - 17 DK Green - 18 DK Blue - 19 Purple - 20 Pink - 21"
    ],
    "attrs": {
-    "tempMentions": ["\n20°C", "-30ºC", "+60ºC"],
+    "tempMentions": ["20°C", "-30ºC", "+60ºC"],
     "materials": ["PVC"],
     "standardsFound": ["UL 493"],
     "voltBucket": null,
@@ -263,11 +269,12 @@
    },
    "partNumbers": ["B823S81XX", "B823S80XX"],
    "info": {
-    "application": ["Used to transmit and receive signals ü between Irrigation satellites, Central Computers, weather stations and sensors.", "Its mainly used in Irrigation satellites & ü Smart Hub Systems. ü", "Used in underground Low Energy systems for lighting and landscaping.", "Used in Sprinklers Systems."],
+    "application": ["Used to transmit and receive signals", "between Irrigation satellites, Central Computers, weather stations and sensors.", "Its mainly used in Irrigation satellites &", "Smart Hub Systems.", "Used in underground Low Energy systems for lighting and landscaping.", "Used in Sprinklers Systems."],
     "features": ["Direct Burial. Sunlight and Moisture resistant. Reduces Radio frequency interference. And also minimizing the electrical and magnetic interference. Gasoline and oil resistant"],
-    "construction": ["Conductor : Annealed Plain Solid ü Voltage Conductor according to ASTM ü Spec.B3 or B4 ü Insulation : PVC (Polyvinyl Chloride) Colour : as per customer order"],
+    "construction": ["Conductor : Annealed Plain Solid", "Voltage Conductor according to ASTM", "Spec.B3 or B4", "Insulation : PVC (Polyvinyl Chloride) Colour : as per customer order"],
     "technical": ["Voltage Rating : 30 V Temperature Range : -30ºC to + 60ºC Standards : As per customer specifications or Generally as per UL 493 and 83 ISO IATF AS ISO 14001 16949 9100 45001"]
-   }
+   },
+   "catalogueNo": "B823S"
   },
   {
    "id": "067a18f30a",
@@ -293,7 +300,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-30ºC", "+75ºC", "\n20°C"],
+    "tempMentions": ["-30ºC", "+75ºC", "20°C"],
     "materials": ["PVC"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -301,7 +308,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B824S7902", "B824S7802"]
+   "partNumbers": ["B824S7902", "B824S7802"],
+   "catalogueNo": "B824S"
   },
   {
    "id": "fc3c4248b7",
@@ -392,7 +400,8 @@
     "B825S8123",
     "B825S8124",
     "B825S8125"
-   ]
+   ],
+   "catalogueNo": "BS825S"
   },
   {
    "id": "e1c3d36fbb",
@@ -424,7 +433,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-55ºC", "+60ºC", "\n20°C"],
+    "tempMentions": ["-55ºC", "+60ºC", "20°C"],
     "materials": ["PVC"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -432,7 +441,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "B826S"
   },
   {
    "id": "ec83549a94",
@@ -457,7 +467,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["-55ºC", "+60ºC", "\n20°C"],
+    "tempMentions": ["-55ºC", "+60ºC", "20°C"],
     "conductors": ["Bare Copper"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -473,9 +483,10 @@
      "between Irrigation satellites, Central Computers, weather stations and sensors. Its mainly used in smart Hub Systems. Used in Underground Low Energy Systems."
     ],
     "features": ["Direct Burial. Sunlight and Moisture resistant. Reduces Radio frequency interference. And also minimizing the electrical and magnetic interference."],
-    "construction": ["Conductor : Annealed Bare Copper ü Voltage Conductor according to ASTM ü Spec.B3 or B4 ü Standards Insulation : Polyethylene Twist Layer length : 100 mm(Min)"],
+    "construction": ["Conductor : Annealed Bare Copper", "Voltage Conductor according to ASTM", "Spec.B3 or B4", "Standards Insulation : Polyethylene Twist Layer length : 100 mm(Min)"],
     "technical": ["Rating : 600 V Temperature Range : -55ºC to +60ºC Standards : As per customer specifications or Generally as per UL 493 and 83 ISO IATF AS ISO 14001 16949 9100 45001"]
-   }
+   },
+   "catalogueNo": "B827S"
   },
   {
    "id": "ced10e1157",
@@ -500,7 +511,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["\n20°C", "-55ºC", "+60ºC", "280ºC"],
+    "tempMentions": ["20°C", "-55ºC", "+60ºC", "280ºC"],
     "materials": ["XLPE"],
     "standardsFound": ["UL 493"],
     "voltBucket": "300–750V",
@@ -508,7 +519,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A8107902"]
+   "partNumbers": ["A8107902"],
+   "catalogueNo": "A810"
   },
   {
    "id": "9f54607241",
@@ -533,7 +545,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B8288102", "B8288002", "B8287902", "B8287802", "B8287702", "B8287602"]
+   "partNumbers": ["B8288102", "B8288002", "B8287902", "B8287802", "B8287702", "B8287602"],
+   "catalogueNo": "B828"
   },
   {
    "id": "865e52aebb",
@@ -560,7 +573,8 @@
     "awg": [10, 12, 14, 16, 18],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "B829"
   },
   {
    "id": "1b54b57291",
@@ -673,7 +687,8 @@
     "B829XX35",
     "B829XX36",
     "B829XX37"
-   ]
+   ],
+   "catalogueNo": "B829"
   },
   {
    "id": "babcb836f0",
@@ -745,7 +760,8 @@
     "B8309402",
     "B8309403",
     "B8309404"
-   ]
+   ],
+   "catalogueNo": "B830"
   },
   {
    "id": "2c16c94651",
@@ -777,7 +793,8 @@
     "awg": [],
     "cores": [2, 3, 4]
    },
-   "partNumbers": ["B830A4202", "B830A4203", "B830A4204", "B830A4302", "B830A4303", "B830A4304", "B830A4402", "B830A4403", "B830A4404", "B830A4502", "B830A4503", "B830A4504", "B830A0402", "B830A0403", "B830A0404"]
+   "partNumbers": ["B830A4202", "B830A4203", "B830A4204", "B830A4302", "B830A4303", "B830A4304", "B830A4402", "B830A4403", "B830A4404", "B830A4502", "B830A4503", "B830A4504", "B830A0402", "B830A0403", "B830A0404"],
+   "catalogueNo": "B830"
   },
   {
    "id": "7e5b221642",
@@ -808,7 +825,8 @@
     "awg": [2, 4, 6, 8, 10, 12, 14],
     "cores": []
    },
-   "partNumbers": ["B831S79XXYY", "B831S78XXYY", "B831S77XXYY", "B831S76XXYY", "B83175XXYY", "B83174XXYY", "B83173XXYY", "B83190XXYY", "B83191XXYY", "B83192XXYY", "B83194XXYY"]
+   "partNumbers": ["B831S79XXYY", "B831S78XXYY", "B831S77XXYY", "B831S76XXYY", "B83175XXYY", "B83174XXYY", "B83173XXYY", "B83190XXYY", "B83191XXYY", "B83192XXYY", "B83194XXYY"],
+   "catalogueNo": "B831"
   },
   {
    "id": "9a9a4acbef",
@@ -848,7 +866,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B832S7902", "B832S7802", "B832S7702", "B8327402", "B8327502", "B832S7903", "B832S7803", "B832S7703", "B8327403", "B8327503"]
+   "partNumbers": ["B832S7902", "B832S7802", "B832S7702", "B8327402", "B8327502", "B832S7903", "B832S7803", "B832S7703", "B8327403", "B8327503"],
+   "catalogueNo": "B832"
   },
   {
    "id": "6182ffc84f",
@@ -893,7 +912,8 @@
     "application": ["Used to transmit and receive signals"],
     "construction": ["Voltage"],
     "technical": ["Rating : 600 V"]
-   }
+   },
+   "catalogueNo": "B833"
   },
   {
    "id": "6a11c5122f",
@@ -941,7 +961,8 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["B8647903E", "B8647803E", "B8647703E", "B8647603E", "B8647503E", "B8647403E", "B8647303E", "B8647203E", "B8649003E", "B8649103E", "B8649203E", "B8649403E", "B864A4203E", "B864A4303E", "B864A0403E", "B864A4603E"]
+   "partNumbers": ["B8647903E", "B8647803E", "B8647703E", "B8647603E", "B8647503E", "B8647403E", "B8647303E", "B8647203E", "B8649003E", "B8649103E", "B8649203E", "B8649403E", "B864A4203E", "B864A4303E", "B864A0403E", "B864A4603E"],
+   "catalogueNo": "B864"
   },
   {
    "id": "c35c87dd60",
@@ -989,7 +1010,8 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["B8657904E", "B8657804E", "B8657704E", "B8657604E", "B8657504E", "B8657404E", "B8657304E", "B8657204E", "B8659004E", "B8659104E", "B8659204E", "B8659404E", "B865A4204E", "B865A4404E", "B865A0404E", "B865A4604E"]
+   "partNumbers": ["B8657904E", "B8657804E", "B8657704E", "B8657604E", "B8657504E", "B8657404E", "B8657304E", "B8657204E", "B8659004E", "B8659104E", "B8659204E", "B8659404E", "B865A4204E", "B865A4404E", "B865A0404E", "B865A4604E"],
+   "catalogueNo": "B865"
   },
   {
    "id": "b99e7ed1a1",
@@ -1055,7 +1077,8 @@
     "B866A05XXYY",
     "B866A46XXYY",
     "B866A47XXYY"
-   ]
+   ],
+   "catalogueNo": "B866"
   },
   {
    "id": "5146c470c3",
@@ -1083,7 +1106,7 @@
    ],
    "attrs": {
     "voltage": "600V",
-    "tempMentions": ["\n20°C", "-55ºC", "+60ºC"],
+    "tempMentions": ["20°C", "-55ºC", "+60ºC"],
     "standardsFound": ["UL 758"],
     "voltBucket": "300–750V",
     "sizesSqmm": [],
@@ -1092,11 +1115,12 @@
    },
    "partNumbers": ["RA54079XX", "RA54078XX", "RA54077XX"],
    "info": {
-    "application": ["Used to transmit and receive signals ü between Irrigation satellites, Central Computers, weather stations and sensors. ü", "Its mainly used in Irrigation satellites & Anti Smart Hub Systems. ü", "Used in Underground Low Energy Systems.", "Used in Sprinklers Systems."],
+    "application": ["Used to transmit and receive signals", "between Irrigation satellites, Central Computers, weather stations and sensors.", "Its mainly used in Irrigation satellites & Anti Smart Hub Systems.", "Used in Underground Low Energy Systems.", "Used in Sprinklers Systems."],
     "features": ["Protection of cable against termite bites and damages. Direct Burial. Sunlight and Moisture resistant. Reduces Radio frequency interference. And also minimizing the electrical and magnetic interference."],
-    "construction": ["Conductor : Annealed Plain Solid Copper ü Conductor ü Insulation : PE (Polyethylene) ü Anti Termite and Rodent Resistant Colour : as per customer order"],
+    "construction": ["Conductor : Annealed Plain Solid Copper", "Conductor", "Insulation : PE (Polyethylene)", "Anti Termite and Rodent Resistant Colour : as per customer order"],
     "technical": ["Voltage Rating : 600 V Temperature Range : -55ºC to +60ºC Standards : As per customer specifications or Generally as per UL 758 ISO IATF AS ISO 14001 16949 9100 45001"]
-   }
+   },
+   "catalogueNo": "RA540"
   }
  ]
 }

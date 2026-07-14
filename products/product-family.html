@@ -586,9 +586,49 @@
     SERIES = prod.series.map((s, i) => {
       const display = cleanName(s.name, i);
       const scanText = (s.name || '') + ' ' + display;
+      const ja = s.attrs || {};   // attrs extracted from the PDF at build time
       const attrs = {};
       DIMS.forEach(d => attrs[d.key] = d.fn(scanText));
-      return { ...s, idx: i, display, attrs };
+      // Specification, best source first: the "Standard : X" line from the
+      // page's Technical Data box, then a standard detected in the name,
+      // then the family-level standards list.
+      let spec = null;
+      if (s.info && s.info.technical) {
+        const line = s.info.technical.find(l => /^Standards?\s*[:\-]/i.test(l));
+        if (line) spec = line.replace(/^Standards?\s*[:\-]\s*/i, '').trim().slice(0, 40);
+      }
+      spec = spec || attrs.standard || null;
+      const colOf = re => s.headers ? s.headers.findIndex(h => re.test(h)) : -1;
+      // Selection-table series carry a per-row Spec column instead: show the
+      // first standard plus a count of the others.
+      if (!spec) {
+        const sc = colOf(/^\.?\s*spec\.?$/i);
+        if (sc >= 0) {
+          const uniq = [...new Set(s.rows.map(r => String(r[sc] || '').trim()).filter(v => v.length > 2))];
+          const first = uniq.length ? (uniq[0].length > 30 ? uniq[0].slice(0, 27) + '…' : uniq[0]) : null;
+          if (uniq.length === 1) spec = first;
+          else if (uniq.length > 1) spec = first + '  +' + (uniq.length - 1) + ' more';
+        }
+      }
+      spec = spec || (FAM.standards && FAM.standards[0]) || null;
+      // Size range (min–max) from the size column of the part table.
+      let sizeRange = null;
+      let ci = colOf(/cross[\s-]*section|sq\.?\s*mm|mm2|mm²/i), unit = 'mm²';
+      if (ci < 0) { ci = colOf(/awg/i); unit = 'AWG'; }
+      if (ci >= 0) {
+        const vals = s.rows.map(r => parseFloat(String(r[ci]).replace(/[^\d.]/g, ''))).filter(v => !isNaN(v) && v > 0);
+        if (vals.length) {
+          const mn = Math.min(...vals), mx = Math.max(...vals);
+          sizeRange = unit === 'AWG'
+            ? (mn === mx ? 'AWG ' + mn : 'AWG ' + mx + ' – ' + mn)
+            : (mn === mx ? mn + ' mm²' : mn + ' – ' + mx + ' mm²');
+        }
+      }
+      if (!sizeRange && ja.sizesSqmm && ja.sizesSqmm.length) {
+        const mn = Math.min(...ja.sizesSqmm), mx = Math.max(...ja.sizesSqmm);
+        sizeRange = mn === mx ? mn + ' mm²' : mn + ' – ' + mx + ' mm²';
+      }
+      return { ...s, idx: i, display, attrs, spec, sizeRange };
     });
 
     renderHero();
@@ -702,17 +742,20 @@
         .slice(0, 4)
         .map(k => '<span class="badge ' + (BADGE_CLASS[k] || 'badge-general') + '">' + esc(s.attrs[k]) + '</span>').join('');
       const specs = [
-        ['Sizes', s.rows.length + ' part' + (s.rows.length === 1 ? '' : 's')],
+        s.spec ? ['Specification', s.spec] : null,
+        s.sizeRange ? ['Size Range', s.sizeRange] : null,
         s.attrs.insulation ? ['Insulation', s.attrs.insulation] : null,
-        s.attrs.conductor ? ['Conductor', s.attrs.conductor] : null,
-        s.attrs.standard ? ['Standard', s.attrs.standard] : (s.pages && s.pages.length ? ['Catalogue Page', s.pages[0]] : null)
+        s.attrs.conductor ? ['Conductor', s.attrs.conductor] : null
       ].filter(Boolean).slice(0, 4).map(([k, v]) =>
         '<div class="prod-spec"><span class="prod-spec-label">' + esc(k) + '</span><span class="prod-spec-val">' + esc(v) + '</span></div>').join('');
+      const footerLeft = s.catalogueNo
+        ? 'Catalogue No: ' + esc(s.catalogueNo)
+        : s.rows.length + ' part number' + (s.rows.length === 1 ? '' : 's');
       return '<a class="prod-card reveal" href="/products/product-variant.html#f=' + encodeURIComponent(FAMILY_ID) + '&s=' + s.idx + '">' +
         '<div class="prod-card-head"><div class="prod-card-badges">' + badges + '</div>' +
         '<div class="prod-card-name">' + esc(s.display) + '</div></div>' +
         '<div class="prod-card-body"><div class="prod-card-specs">' + specs + '</div></div>' +
-        '<div class="prod-card-footer"><span class="prod-card-awg">' + s.rows.length + ' part numbers</span>' +
+        '<div class="prod-card-footer"><span class="prod-card-awg">' + footerLeft + '</span>' +
         '<span class="prod-card-btn">View Specs &amp; Parts <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></div></a>';
     }).join('');
     if (window.__revealObs) {

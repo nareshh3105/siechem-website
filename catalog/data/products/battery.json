@@ -44,11 +44,12 @@
    },
    "partNumbers": ["83028XX*", "83030XX", "83032XX", "83034XX", "83037XX", "83038XX", "83041XX", "83042XX"],
    "info": {
-    "application": ["ü\u0000Low-tension electric wire for automobiles. ü\u0000Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
-    "features": ["ü\u0000Flame retardant ü\u0000Highly resistant against acids, lyes, petrol and diesel. Flexible conductor with PVC normal insulation thickness for battery cables. Extra flexibility."],
-    "construction": ["ü\u0000Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465 ü\u0000Insulation : Lead free PVC. ü\u0000Colour : As per customer order. ü\u0000Single core 22DD VViieeww ISO 9001 IS 2465"],
-    "technical": ["ü\u0000Temperature Range : -400C to +700C (3000 Hours) ü\u0000Standard : IS 2465 ü\u0000Test Voltage : 3 kV ü\u0000Conductor Resistance: IS 8130 ISO IATF AS ISO 14001 16949 9100 45001"]
-   }
+    "application": ["Low-tension electric wire for automobiles.", "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
+    "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel. Flexible conductor with PVC normal insulation thickness for battery cables. Extra flexibility."],
+    "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465", "Insulation : Lead free PVC.", "Colour : As per customer order.", "Single core 22DD VViieeww ISO 9001 IS 2465"],
+    "technical": ["Temperature Range : -400C to +700C (3000 Hours)", "Standard : IS 2465", "Test Voltage : 3 kV", "Conductor Resistance: IS 8130 ISO IATF AS ISO 14001 16949 9100 45001"]
+   },
+   "catalogueNo": "830"
   }
  ]
 }

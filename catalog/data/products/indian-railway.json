@@ -40,7 +40,7 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor", "Insulation : EBXL - EPDM 120ºC (Dual layer)", "Outersheath : Electron Beam Cross Linked ü Polyolefin. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor", "Insulation : EBXL - EPDM 120ºC (Dual layer)", "Outersheath : Electron Beam Cross Linked", "Polyolefin."],
     "technical": [
      "Temperature range : Operating temp. :-40ºC to +120ºC. High insualtion resistance at elevated temp.",
      "Rated voltage : Above 750V upto 1.8/3kV",
@@ -50,12 +50,13 @@
      "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 2."
     ]
-   }
+   },
+   "catalogueNo": "258"
   },
   {
    "id": "33d65edf50",
    "family": "indian-railway",
-   "name": "750V  19C x 2.5 Sq.mm EBXL - HR 120ºC Cable",
+   "name": "750V 19C x 2.5 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [7],
    "headers": ["Part Number", "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)", "No. of Wires x Wire Dia (max) (Nos. x mm)", "Overall Cable Dia (D) (mm)", "Max. Resistance of Conductor at 20 deg. C (ohm/km)", "Approx.Cable Weight(Kg/Km)"],
    "rows": [
@@ -76,7 +77,7 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc. No."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor.", "Insulation : EBXL- EPDM (Dual layer) ü", "Core Identification : By number printing. ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor.", "Insulation : EBXL- EPDM (Dual layer)", "Core Identification : By number printing.", "Outersheath : Electron Beam Cross Linked", "Polyolefin. Black Colour."],
     "technical": [
      "Temperature range : operating remp :-40°C to +120°C.",
      "Rated voltage : Above 750V",
@@ -86,7 +87,8 @@
      "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 2 Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV ** Max. Resistance Dia (D)"
     ]
-   }
+   },
+   "catalogueNo": "259"
   },
   {
    "id": "2a6abbda46",
@@ -125,7 +127,7 @@
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
     "application": ["Thin walled flexible EBXL control cables for Tap changer of electric locomotives, for AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor class 5, unilay constrition upto 6 sq.mm", "Insulation :EBXL - EVA (Single layer) ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor class 5, unilay constrition upto 6 sq.mm", "Insulation :EBXL - EVA (Single layer)"],
     "technical": [
      "Temperature range : Operating temp :-40ºC to +120ºC. High insulation resistance at elevated temp.",
      "Rated voltage : 750V",
@@ -135,12 +137,13 @@
      "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 2."
     ]
-   }
+   },
+   "catalogueNo": "300"
   },
   {
    "id": "8bcaa1e2ea",
    "family": "indian-railway",
-   "name": "1.8/3.0kV  300 Sq.mm  EBXL - HR 120ºC  Cable",
+   "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [9],
    "headers": [
     "Part Number",
@@ -187,7 +190,7 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor", "Insulation : Electron Beam Cross Linked ü Polyolefin. ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor", "Insulation : Electron Beam Cross Linked", "Polyolefin.", "Outersheath : Electron Beam Cross Linked", "Polyolefin."],
     "technical": [
      "Temperature range : Operating temp. :-40°C to 150°C",
      "Rated voltage : Above 750V upto 1.8/3kV",
@@ -197,12 +200,13 @@
      "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 3."
     ]
-   }
+   },
+   "catalogueNo": "R258"
   },
   {
    "id": "12f7fc20e1",
    "family": "indian-railway",
-   "name": "1.8/3.0kV  150 Sq.mm  EBXL - HR 120ºC  Cable",
+   "name": "1.8/3.0kV 150 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [10],
    "headers": ["Part Number", "Nominal Cross Sectional Area of Core (mm 2)", "(max) (Nos. x mm)", "Conductor Dia. Nominal (mm)", "Minimum wall Thickness of Insulation (mm)", "Overall Cable Dia (D) (mm)", "Max. Resistance of Conductor at 20 deg. C (ohm/km)", "Approx. Cable Weight (Kg/Km)"],
    "rows": [
@@ -236,7 +240,7 @@
    "info": {
     "application": ["Thin walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor", "Insulation : Electron Beam Cross Linked ü Polyolefin rated 120°C, Single layer. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor", "Insulation : Electron Beam Cross Linked", "Polyolefin rated 120°C, Single layer."],
     "technical": [
      "Temperature range : Operating temp :-40°C to +150°C.",
      "Rated voltage : 750V",
@@ -246,12 +250,13 @@
      "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 3."
     ]
-   }
+   },
+   "catalogueNo": "R300"
   },
   {
    "id": "29937eaa66",
    "family": "indian-railway",
-   "name": "750V  19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
+   "name": "750V 19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
    "pages": [11],
    "headers": [
     "Part Number",
@@ -283,7 +288,7 @@
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc. No. of Cores x No. of Wires x Wire Dia"],
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor.", "Insulation : Electron Beam Cross Linked ü Polyolefin rated 120°C, Dual layer. ü", "Core Identification : By number printing. ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor.", "Insulation : Electron Beam Cross Linked", "Polyolefin rated 120°C, Dual layer.", "Core Identification : By number printing.", "Outersheath : Electron Beam Cross Linked", "Polyolefin. Black Colour."],
     "technical": [
      "Temperature range : operating remp :-40°C to +150°C.",
      "Rated voltage : Above 750V",
@@ -293,12 +298,13 @@
      "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 3. Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV **"
     ]
-   }
+   },
+   "catalogueNo": "R259"
   },
   {
    "id": "194190a466",
    "family": "indian-railway",
-   "name": "750V  19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
+   "name": "750V 19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
    "pages": [12],
    "headers": [
     "Part Number",
@@ -330,7 +336,7 @@
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc. No. of Cores x No. of Wires x Wire Dia"],
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor.", "Insulation : Electron Beam Cross Linked ü Polyolefin rated 120°C, Dual layer. ü", "Core Identification : By number printing. ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor.", "Insulation : Electron Beam Cross Linked", "Polyolefin rated 120°C, Dual layer.", "Core Identification : By number printing.", "Outersheath : Electron Beam Cross Linked", "Polyolefin. Black Colour."],
     "technical": [
      "Temperature range : operating remp :-40°C to +120°C.",
      "Rated voltage : Above 750V upto 1.8/3kV",
@@ -340,12 +346,13 @@
      "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 4. Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV ** Thickness of Overall Cable Max. Resis t a n c e Approx."
     ]
-   }
+   },
+   "catalogueNo": "A533"
   },
   {
    "id": "d9ca19233b",
    "family": "indian-railway",
-   "name": "750V  16 Sq.mm  EBXL - HR 120ºC  Cable",
+   "name": "750V 16 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [13],
    "headers": [
     "Part Number",
@@ -389,7 +396,7 @@
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
     "application": ["Thin walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor", "Insulation : Electron Beam Cross Linked ü Polyolefin, Single layer. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor", "Insulation : Electron Beam Cross Linked", "Polyolefin, Single layer."],
     "technical": [
      "Temperature range : Operating temp :-40°C to +120°C.",
      "Rated voltage : 750V",
@@ -399,12 +406,13 @@
      "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 4."
     ]
-   }
+   },
+   "catalogueNo": "A531"
   },
   {
    "id": "f79dc9bc94",
    "family": "indian-railway",
-   "name": "1.8/3.0kV  300 Sq.mm  EBXL - HR 120ºC  Cable",
+   "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [14],
    "headers": [
     "Part Number",
@@ -452,7 +460,7 @@
    "info": {
     "application": ["Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."],
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor", "Insulation : Electron Beam Cross Linked ü Polyolefin. ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor", "Insulation : Electron Beam Cross Linked", "Polyolefin.", "Outersheath : Electron Beam Cross Linked", "Polyolefin."],
     "technical": [
      "Temperature range : Operating temp. :-40°C to +120°C",
      "Rated voltage : Above 750V upto 1.8/3kV",
@@ -462,12 +470,13 @@
      "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
      "Specification : ELRS / SPEC / ELC / 0019 Rev 4."
     ]
-   }
+   },
+   "catalogueNo": "A532"
   },
   {
    "id": "bfd53f32f9",
    "family": "indian-railway",
-   "name": "1.8/3.0kV  1C x 1.5 Sq.mm  EBXL - HR 120ºC  Cable",
+   "name": "1.8/3.0kV 1C x 1.5 Sq.mm EBXL - HR 120ºC Cable",
    "pages": [15],
    "headers": ["Part Number", "No. of core x Nominal Cross Sectional Area (Nos x sq. mm)", "No. of Wires x Single Wire dia (max) (Nos / mm)", "Cable Overall Diameter (Nom) (mm)", "Max. Conductor Resistance at 20 0C (Ohm/km)", "Cable Weight Approx. ( Kg/Km)"],
    "rows": [
@@ -500,12 +509,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["2651309YY", "2651609YY", "2651909YY", "2652309YY", "2652709YY", "2652809YY", "2653009YY", "2653209YY", "2653409YY", "2653709YY", "2653809YY", "2654109YY", "2654209YY", "2654409YY", "2654609YY", "2654809YY"]
+   "partNumbers": ["2651309YY", "2651609YY", "2651909YY", "2652309YY", "2652709YY", "2652809YY", "2653009YY", "2653209YY", "2653409YY", "2653709YY", "2653809YY", "2654109YY", "2654209YY", "2654409YY", "2654609YY", "2654809YY"],
+   "catalogueNo": "265"
   },
   {
    "id": "16db17074f",
    "family": "indian-railway",
-   "name": "600/1000V 1C x 2.5 Sq.mm 150 mm  EBXL - HR 120ºC Cable",
+   "name": "600/1000V 1C x 2.5 Sq.mm 150 mm EBXL - HR 120ºC Cable",
    "pages": [16],
    "headers": ["Part Number", "No.of core x Nominal Cross Sectional Area (Nos x sqmm)", "No. of Wires x Single Wire dia (max) (Nos / mm)", "Cable Outer Diameter (mm)", "Max. Resistance of Conductor at 20 0C (Ohm/km)", "Cable Weight Approx. (Kg/Km)"],
    "rows": [
@@ -538,15 +548,16 @@
    "partNumbers": ["26613XX", "26616XX", "26619XX", "26623XX", "26627XX", "26628XX", "26630XX", "26632XX", "26634XX", "26637XX", "26638XX", "26641XX", "26642XX"],
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor, Class 5. Unilay Construction upto 6 sq.mm ü", "Insulation : Electron Beam Cross Linked ü Polyolefin rated 1200C, Single layer. ü", "Grey Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor, Class 5. Unilay Construction upto 6 sq.mm", "Insulation : Electron Beam Cross Linked", "Polyolefin rated 1200C, Single layer.", "Grey Colour."],
     "technical": ["Temperature range : Operating temp :-400C to +1200C.", "Rated voltage : 600/1000V", "Short circuit temperature : +2800C.", "Test voltage : 3kV for 5 mins", "Bending radius : 3D for cable dia <10mm 5D for cable dia >10 mm", "Specification : EDTS 132 Rev-C (DS-2)"],
     "application": ["Data : :-400C to +1200C. 600/1000V temperature : +2800C. for 5 mins 3D for cable dia <10mm 5D for cable dia >10 mm EDTS 132 Rev-C (DS-2)"]
-   }
+   },
+   "catalogueNo": "266"
   },
   {
    "id": "afdd32e95a",
    "family": "indian-railway",
-   "name": "600/1000V  4C x 1.5 Sq. mm EBXL - HR 120ºC Cable",
+   "name": "600/1000V 4C x 1.5 Sq. mm EBXL - HR 120ºC Cable",
    "pages": [17],
    "headers": ["Part Number", "No.of core x Nominal Cross Sectional Area (Nos x sqmm)", "No. of Wires x Single Wire dia (Nom) (Nos / mm)", "Cable Outer Diameter (mm)", "Max. Resistance of Conductor at 200 C (Ohm/km)", "Cable Weight Approx. (Kg/Km)"],
    "rows": [
@@ -577,10 +588,11 @@
    "partNumbers": ["2670602", "2670802", "2671002", "2671302", "2670603", "2670803", "2671003", "2671303", "2670604", "2670804", "2671004", "2671304"],
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor, Class 5.", "Insulation : EBXL - EPDM 120ºC ü", "Outer sheath : Electron Beam Cross Linked ü Polyolefin Black colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor, Class 5.", "Insulation : EBXL - EPDM 120ºC", "Outer sheath : Electron Beam Cross Linked", "Polyolefin Black colour."],
     "technical": ["Temperature range : Operating temp :-40ºC to +120ºC.", "Rated voltage : 600/1000V", "Short circuit temperature : +280ºC.", "Test voltage : 1.5kV for 5 mins", "Bending radius : 4D for cables for 5D for cables for", "Specification : EDTS 132 Rev-C"],
     "application": ["+280ºC. for fixed installation for flexible installation (DS-3)"]
-   }
+   },
+   "catalogueNo": "267"
   },
   {
    "id": "338a925d7f",
@@ -613,10 +625,11 @@
    "partNumbers": ["2680602", "2681002", "2681302", "2680603", "2681003", "2681303", "2680604", "2681004", "2681304"],
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor, Class 5.", "Insulation :EBXL -EPDM 120ºC ü", "Brading : ATC ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor, Class 5.", "Insulation :EBXL -EPDM 120ºC", "Brading : ATC", "Outersheath : Electron Beam Cross Linked", "Polyolefin. Black Colour."],
     "technical": ["Temperature range : Operating temp :-40ºC to", "Rated voltage : 600V", "Short circuit temperature", "Test voltage : 1.5kV for 5", "Bending radius : 3D for 5D for", "Specification : EDTS 132 Approvals Accreditations"],
     "application": ["to +120ºC. : +280ºC. mins cables for fixed installation Cables for flexible installation & Rev-C (DS-4) Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV **"]
-   }
+   },
+   "catalogueNo": "268"
   },
   {
    "id": "0807057ffd",
@@ -641,10 +654,11 @@
    "partNumbers": ["2691018", "2691022"],
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü copper conductor, Class 5.", "Insulation : EBXL- EPDM 120ºC ü", "Brading : ATC ü", "Coloured Insulation : White numbered cores. ü Insulation data-bus - White, Black, ü", "Outersheath : Electron Beam Cross Linked ü Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "copper conductor, Class 5.", "Insulation : EBXL- EPDM 120ºC", "Brading : ATC", "Coloured Insulation : White numbered cores.", "Insulation data-bus - White, Black", "Outersheath : Electron Beam Cross Linked", "Polyolefin. Black Colour."],
     "technical": ["Temperature Range : Operating Temp", "Rated Voltage : 300/300V", "Short Circuit Temperature", "Specification : EDTS 132", "Impedance : 120± 12 Ω/km", "Test Voltage : 2.0 kV", "Temperature range : -40ºc+", "Min bending Radius (i) fixed : 4 x (ii) flexing : 5 x"],
     "application": ["-40ºC to +120ºC. : 280ºC Rev-C DS-5) 90ºC cable O.D x cable O.D"]
-   }
+   },
+   "catalogueNo": "269"
   },
   {
    "id": "412afd34a7",
@@ -675,7 +689,7 @@
    "partNumbers": ["2671312", "2671316", "2671318", "2671325", "2671604", "2671612", "2671912"],
    "info": {
     "features": ["Limited fire hazard type", "Minimum flame spread", "Low smoke emission", "Limited toxic fume emission", "Resistant to mineral oil, diesel, etc."],
-    "construction": ["Conductor : Annealed Tinned Flexible ü Copper Conductor, Class 5.", "Insulation : Electron Beam Cross Linked ü Polyolefin rated 1200C, Single Layer. ü", "Insulation Colour : White insulation with ü number printing. ü", "Outersheath : Electron Beam Cross Linked Polyolefin. Black Colour. ü"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "Copper Conductor, Class 5.", "Insulation : Electron Beam Cross Linked", "Polyolefin rated 1200C, Single Layer.", "Insulation Colour : White insulation with", "number printing.", "Outersheath : Electron Beam Cross Linked Polyolefin. Black Colour."],
     "technical": [
      "Temperature range : Operating temp. :-40ºC to +120ºC.",
      "Rated voltage : 600/1000V",
@@ -685,12 +699,13 @@
      "Specification : EDTS 132 Rev-C Approvals Accreditations ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN"
     ],
     "application": ["for fixed installations for flexible installations (DS-7) spec. Certifications ResearchR Progress through TUV **"]
-   }
+   },
+   "catalogueNo": "267"
   },
   {
    "id": "8b3fdf82fc",
    "family": "indian-railway",
-   "name": "4GKW Single Core 1.8 kV Dual Wall Insulated  Flexible EBXL Cables for Electric Locomotives",
+   "name": "4GKW Single Core 1.8 kV Dual Wall Insulated Flexible EBXL Cables for Electric Locomotives",
    "pages": [21],
    "headers": [
     "Part Number",
@@ -721,7 +736,7 @@
    "notes": [],
    "attrs": {
     "voltage": "1800V",
-    "tempMentions": ["30°C", "\n20C", "120C", "-40C"],
+    "tempMentions": ["30°C", "20C", "120C", "-40C"],
     "materials": ["EBXL"],
     "halogenFree": true,
     "fireSafety": true,
@@ -744,14 +759,15 @@
      "Easy to strip",
      "Excellent resistance to high & low temperature , Oil, Ozone, Weathering and Abrasion N ofeo Ccm oii on rena al (C mAro mres 2as C o Cn s.d xu c Nt to our cT S t l"
     ],
-    "construction": ["Conductor : Annealed Tinned Flexible ü copper conductor, acc. to IEC 228, Class 5 ü", "Insulation : Electron Beam Cross Linked ü Copolymer - Grey ü", "Outersheath : Electron Beam Cross Linked ü Copolymer - Black"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "copper conductor, acc. to IEC 228, Class 5", "Insulation : Electron Beam Cross Linked", "Copolymer - Grey", "Outersheath : Electron Beam Cross Linked", "Copolymer - Black"],
     "technical": ["Temperature Range ::::: -400C to +1200C.", "Rated Voltage 1.8 kV AC", "Short Circuit Temp +2800C.", "Test Voltage 6kV for 15 mins", "Min. Bending Radius 3 x OD for Cable dia ≤10mm 5 x OD for Cable dia >10mm", "Flame Retardant :: As per IEC 332 -1", "Specification CLW/ES/3/0458 DS-1"]
-   }
+   },
+   "catalogueNo": "871"
   },
   {
    "id": "ab8cb0aa56",
    "family": "indian-railway",
-   "name": "9GKW Single Core 4 kV Dual Wall Insulated  Flexible EBXL Cables for Electric Locomotives",
+   "name": "9GKW Single Core 4 kV Dual Wall Insulated Flexible EBXL Cables for Electric Locomotives",
    "pages": [22],
    "headers": [
     "Part Number",
@@ -777,7 +793,7 @@
    "notes": [],
    "attrs": {
     "voltage": "4000V",
-    "tempMentions": ["30°C", "\n20C", "120C", "-40C"],
+    "tempMentions": ["30°C", "20C", "120C", "-40C"],
     "materials": ["EBXL"],
     "halogenFree": true,
     "fireSafety": true,
@@ -800,9 +816,10 @@
      "Easy to strip",
      "Excellent resistance to high & low temperature, Oil, Ozone, Weathering and Abrasion N ofeo Ccm oii on rena al (C mAro mres 2as C o Cn s.d xu c Nt to our cT y xop S t l"
     ],
-    "construction": ["Conductor : Annealed Tinned Flexible ü copper conductor, acc. to IEC 228, Class 5 ü", "Insulation : Electron Beam Cross Linked ü Copolymer - Red ü", "Outersheath : Electron Beam Cross Linked ü Copolymer - Black"],
+    "construction": ["Conductor : Annealed Tinned Flexible", "copper conductor, acc. to IEC 228, Class 5", "Insulation : Electron Beam Cross Linked", "Copolymer - Red", "Outersheath : Electron Beam Cross Linked", "Copolymer - Black"],
     "technical": ["Temperature Range ::::: -400C to +1200C.", "Rated Voltage 4 kV AC", "Short Circuit Temp +2800C.", "Test Voltage 12kV for 15 mins", "Min. Bending Radius 3 x OD for Cable dia ≤10mm 5 x OD for Cable dia >10mm", "Flame Retardant :: As per IEC 332 -1", "Specification CLW/ES/3/0458 DS-2"]
-   }
+   },
+   "catalogueNo": "872"
   },
   {
    "id": "b4fbd868c3",
@@ -826,7 +843,7 @@
    "notes": [],
    "attrs": {
     "voltage": "300/500V",
-    "tempMentions": ["\n20C", "120C", "-40C", "+120C"],
+    "tempMentions": ["20C", "120C", "-40C", "+120C"],
     "materials": ["EBXL"],
     "halogenFree": true,
     "fireSafety": true,
@@ -838,7 +855,7 @@
    },
    "partNumbers": ["87606XX"],
    "info": {
-    "application": ["Thin walled EBXL cables for protected ü permanent installation inside and out side railway rolling stock to connect fixed and ü moving parts.", "For WAG -9 / WAP -5 Locomotive"],
+    "application": ["Thin walled EBXL cables for protected", "permanent installation inside and out side railway rolling stock to connect fixed and", "moving parts.", "For WAG -9 / WAP -5 Locomotive"],
     "features": [
      "Halogen free",
      "Limited fire hazard type",
@@ -849,7 +866,7 @@
      "Easy to strip",
      "Excellent resistance to high & low temperature, Oil, Ozone, Weathering and Abrasion N ofeo Ccm oii on rena al (C mAro mres 2as C o Cn s.d xu c Nt to S t l"
     ],
-    "construction": ["Conductor : Annealed Tinned Stranded ü Copper Conductor ü", "Insulation : Electron Beam Cross Linked ü Copolymer - Red and Yellow - Green ü"],
+    "construction": ["Conductor : Annealed Tinned Stranded", "Copper Conductor", "Insulation : Electron Beam Cross Linked", "Copolymer - Red and Yellow - Green"],
     "technical": [
      "Temperature Range :::: -400C to +1200C.",
      "Rated Voltage 300/500V AC",
@@ -859,7 +876,8 @@
      "Flame Retardant As per IEC 332 -1",
      "Specification CLW / ES / 3 / 0458 DS-3"
     ]
-   }
+   },
+   "catalogueNo": "876"
   },
   {
    "id": "885b2e5013",
@@ -892,7 +910,7 @@
    "notes": [],
    "attrs": {
     "voltage": "300/300V",
-    "tempMentions": ["\n20C", "-40C", "+120C", "+280C"],
+    "tempMentions": ["20C", "-40C", "+120C", "+280C"],
     "materials": ["EBXL", "XLPO"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -916,9 +934,10 @@
      "Easy to strip",
      "Excellent resistance to high & low temperature, Oil, Ozone, Weathering and Abrasion oN o Ccm. oiio rf C lo mAr re sx C o Cn s.d xu c Nt to our cT y xop mic ma l N feo on ena al (C o 2as"
     ],
-    "construction": ["Conductor : Annealed Tinned Copper ü Conductor, acc. to IEC 228, Class 5 ü", "Insulation : EBXL - EPDM ü", "Braiding : ATC ü", "Outersheath : EBXL - XLPO ü"],
+    "construction": ["Conductor : Annealed Tinned Copper", "Conductor, acc. to IEC 228, Class 5", "Insulation : EBXL - EPDM", "Braiding : ATC", "Outersheath : EBXL - XLPO"],
     "technical": ["Temperature Range ::::::: -400C to +1200C.", "Rated Voltage 300/300V", "Short Circuit Temp +2800C.", "Test Voltage 1.5 kV, 50Hz for 15 min", "Min. Bending Radius 5 x OD Cable", "Flame propagation As per IEC 332 -3 Cat C", "Specification CLW / ES / 3 / 0459 DS-1"]
-   }
+   },
+   "catalogueNo": "873-875"
   },
   {
    "id": "c39ec1ef92",
@@ -949,7 +968,7 @@
    "notes": [],
    "attrs": {
     "voltage": "600/1000V",
-    "tempMentions": ["\n20C", "120C", "-40C", "+120C"],
+    "tempMentions": ["20C", "120C", "-40C", "+120C"],
     "materials": ["EBXL", "XLPO"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -973,9 +992,10 @@
      "Easy to strip",
      "Excellent resistance to high & low temperature, Oil, Ozone, Weathering and Abrasion N ofeo Ccm oii on rena al (C mAro mres 2as C o Cn s.d xu c Nt to our cT y xop mic ma l S t l"
     ],
-    "construction": ["Conductor : Annealed Tinned copper ü conductor, acc. to IEC 228, Class 5 ü", "Insulation : EBXL - EPDM ü", "Braaiding : ATC ü", "Outersheath : EBXL - XLPO ü"],
+    "construction": ["Conductor : Annealed Tinned copper", "conductor, acc. to IEC 228, Class 5", "Insulation : EBXL - EPDM", "Braaiding : ATC", "Outersheath : EBXL - XLPO"],
     "technical": ["Temperature Range ::::: -400C to +1200C.", "Rated Voltage 600/1000V", "Short Circuit Temp +2800C.", "Test Voltage 6 kV for 15 min", "Min. Bending Radius 5 x OD Cable 7 x OD Cable", "Flame propagation :: As per IEC 332 -3 Cat C", "Specification CLW / ES / 3 / 0459 DS-2"]
-   }
+   },
+   "catalogueNo": "877-"
   }
  ]
 }

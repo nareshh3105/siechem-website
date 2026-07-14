@@ -158,7 +158,7 @@
     "tempMentions": ["-400C", "+800C", "+1000C", "+1200C"],
     "materials": ["EBXL", "XLPE", "PVC"],
     "conductors": ["Annealed Copper"],
-    "standardsFound": ["JASO\n16 CPE-FR S"],
+    "standardsFound": ["JASO 16 CPE-FR S"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -490,7 +490,8 @@
     "features": ["Flame retardant.", "Highly resistant against acids, lyes, petrol and diesel", "Flexible conductors with PVC insulation for smaller diameter and lesser weight ."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JIS C 3406.", "Insulation : Lead free polyvinyl chloride.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JIS C 3406", "Test Voltage : 1 kV", "A : Low Voltage", "V : Vinyl insulated for automobiles"]
-   }
+   },
+   "catalogueNo": "801"
   },
   {
    "id": "6571957cd1",
@@ -535,7 +536,8 @@
     "features": ["Flame retardant.", "Highly resistant against acids, lyes, petrol and diesel", "Extra flexible conductor with PVC insulation for excellent flexibility for smaller diameter and lesser weight."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JIS C 3406, JASO D 611", "Insulation : Lead free polyvinyl chloride", "Colou2r :D As Vpeire cwustomer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JIS C 3406, JASO D 611", "Voltage : 1 kV", "A : Low Voltage", "V : Vinyl insulated cables for automobiles", "f : Extra Flexible"]
-   }
+   },
+   "catalogueNo": "802"
   },
   {
    "id": "bb5e0dfa28",
@@ -585,7 +587,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel", "Flexible conductor with PVC thin wall insulation for smaller diameter and lesser weight."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102 bare conductor construction according to JASO D 611: 2014", "Insulation : Lead free polyvinyl chloride", "Colour : As per customer order.", "Sing2leD co Vreiew AAAuuutttooommmoootttiiivvveee AVS CCCaaabbbllleeesss"],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611: 2014", "Withstand Voltage : < 0.5 Sq.mm -3kV (rms) ≥ 0.5 Sq.mm -5kV (rms)", "A : Low tension cables for automobiles", "V : Vinyl insulated", "S : Thin Wall type"]
-   }
+   },
+   "catalogueNo": "803"
   },
   {
    "id": "38e094ed9c",
@@ -635,7 +638,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel", "Extra flexible conductors with PVC thin wall insulation for smaller diameter", "Excellent flexibility"],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611: 2014", "Insulation : Lead free polyvinyl chloride", "Colour : As per customer order.", "Single core"],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611 : 2014", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "V : Vinyl insulated", "S : Thin wall type", "f : Extra flexible"]
-   }
+   },
+   "catalogueNo": "804"
   },
   {
    "id": "53fc37e82f",
@@ -685,7 +689,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with PVC very thin wall insulation for smaller diameter and lesser weight."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611: 2014", "Insulation : PVC", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611:2014", "Test Voltage : 1 kV", "A : Low tension cable for automobiles", "V : Vinyl inuslated", "SS : Very thin wall type"]
-   }
+   },
+   "catalogueNo": "805"
   },
   {
    "id": "b0e520e781",
@@ -732,7 +737,8 @@
     "features": ["Flame retardant.", "Highly resistant against acids, alkaline, petrol and diesel.", "Extra flexible conductor with PVC very thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611", "Insulation : PVC", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611: 2014", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "V : Vinyl insulated", "SS : Very Thin type", "f : Extra flexible Conductor"]
-   }
+   },
+   "catalogueNo": "806"
   },
   {
    "id": "79e4c7b845",
@@ -780,7 +786,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexible conductor with HR PVC super thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611: 2014", "Insulation : HR PVC", "Colour : As per customer order.", "DS Ving il ee wcore 2 Automotive AVSSH f Cables"],
     "technical": ["Temperature Range : -40°C to +100°C (3000 Hours)", "Standard : JASO D 611: 2014", "Test Voltage : 1 kV", "A : Low voltage cables for automobiles", "V : Vinyl insulated automobiles", "SS : Very Thin Wall type", "H : Heat resistance", "f : Extra flexible A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "808"
   },
   {
    "id": "258ab79618",
@@ -826,7 +833,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with Electron beam cross linked PVC super thin wall insulation for smaller diameter and lesser weight.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102 , bare conductor construction according to JASO D 608 (reference)", "Insulation : Electron Beam Cross Linked lead free PVC", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1000C (3000 Hours)", "Standard : JASO D 608 (reference)", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "V : Vinyl Insulated", "SS : Very Thin wall type", "X : Electron Beam Cross Linked"]
-   }
+   },
+   "catalogueNo": "809"
   },
   {
    "id": "37fc732466",
@@ -872,7 +880,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexible conductors with Electron beam cross linked PVC super thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102 bare conductor construction according to JASO D 611", "Insulation : Electron beam cross linked PVC.", "Colour : As per customer order.", "Single core"],
     "technical": ["Temperature Range : -400C to +1000C (3000 Hours)", "Standards : JASO D 611", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "V : Vinyl insulated", "SS : Very Thin wall type", "X : Electron beam cross linked", "f : Extra flexible"]
-   }
+   },
+   "catalogueNo": "810"
   },
   {
    "id": "0065d5c90a",
@@ -924,7 +933,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with Electron beam cross linked PVC thin wall insulation for smaller diameter and lesser weight.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 608 (optional) tinned Conductor.", "Insulation : Electron beam cross linked PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +100°C (3000 Hours)", "Standard : JASO D 608", "Test Voltage : 1 kV", "A : Low tension Cable", "V : Vinyl insulated automobiles", "X : Cross linked A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "811"
   },
   {
    "id": "2de3a6a9c0",
@@ -969,7 +979,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexible conductor with electron beam cross linked PVC thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C3102, bare conductor construction according to JASO D 608", "Insulation : Electron beam cross linked PVC.", "Colour : As per customer order.", "Single core"],
     "technical": ["Temperature Range : -40°C to +100°C (3000 Hours)", "Standard : JASO D 608 : 2014", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "V : Vinyl insulated", "X : Cross linked", "f : Extra flexible Conductor A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "812"
   },
   {
    "id": "3692db4b93",
@@ -1017,7 +1028,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 608", "Insulation : Electron beam cross linked polyethylene.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +120°C (3000 Hours)", "Standard : JASO D 608", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "E : Polyethylene insulated", "X : Cross linked"]
-   }
+   },
+   "catalogueNo": "813"
   },
   {
    "id": "48ee3e940c",
@@ -1080,7 +1092,8 @@
      "f : Extra flexible conductor",
      "Conductor Resistance: IEC 60228/BS 6360 A c c r e d i t a tions"
     ]
-   }
+   },
+   "catalogueNo": "814"
   },
   {
    "id": "a01ef9f74c",
@@ -1125,7 +1138,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction According to JASO D 608 (Reference).", "Insulation : Electron beam cross linked Polyethylene", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +120°C (3000 Hours)", "Standard : JASO D 608 (Reference)", "Test Voltage : 1 kV", "A : Low tension cables for automobiles", "E : Polyethylene insulated", "SS : Very Thin wall type", "X : Cross linked A c c r e d i t ations"]
-   }
+   },
+   "catalogueNo": "815"
   },
   {
    "id": "ef5729395e",
@@ -1171,7 +1185,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["81604XX*", "81606XX", "81608XX", "81612XX", "81614XX", "81604XX*", "81606XX", "81608XX", "81612XX", "81614XX"]
+   "partNumbers": ["81604XX*", "81606XX", "81608XX", "81612XX", "81614XX", "81604XX*", "81606XX", "81608XX", "81612XX", "81614XX"],
+   "catalogueNo": "816"
   },
   {
    "id": "ef2343ade8",
@@ -1230,7 +1245,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN EN 13602, bare conductor construction according to ISO 6722-1, Structure B", "Insulation : EBXL- CPE- FR (Thick wall)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standards : ISO 6722-1", "CPE : Chlorinated polyethylene"]
-   }
+   },
+   "catalogueNo": "826"
   },
   {
    "id": "3c7cc973bd",
@@ -1280,7 +1296,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN EN 13602, bare conductor construction according to ISO 6722-1, Structure A", "Insulation : EBXL- CPE- FR (Thin wall)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standards : ISO 6722-1: 2014", "CPE : Chlorinated polyethylene"]
-   }
+   },
+   "catalogueNo": "A826"
   },
   {
    "id": "7772136bc8",
@@ -1331,7 +1348,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with PVC thin wall insulation for smaller diameter and lesser weight.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611 : 2014", "Insulation : Lead free PVC.", "Colour : As per customer order.", "Single core 22DD VViieeww Automotive Grounding Cables Cable(EB)"],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611: 2014", "Test Voltage : 1 kV", "EB - Earth bond low voltages cables for automobiles"]
-   }
+   },
+   "catalogueNo": "831"
   },
   {
    "id": "e6d40a68db",
@@ -1387,7 +1405,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611", "Insulation : Lead free PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +80°C (3000 Hours)", "Standard : JASO D 611: 2014", "Test Voltage : 1 kV", "HEB : Heavy duty earth bond"]
-   }
+   },
+   "catalogueNo": "870"
   },
   {
    "id": "eaf67f27df",
@@ -1435,7 +1454,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D611: 2014", "Insulation : Lead free PVC", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611:2014", "Test Voltage : 1 kV", "HD : Heavy Duty", "EB : Earth Bond A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "832"
   },
   {
    "id": "ddee468942",
@@ -1484,7 +1504,8 @@
     "features": ["Flame retardant", "Heat resistant", "Good flexibility", "Fire : Self extinguishing", "Soldering iron resistant", "Highly resistant against acids, lyes, petrol and diesel."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 624", "Insulation : Specially formulated Cross Linked PE Mixture.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +120°C", "Standard : JASO D 624", "Test Voltage : 5 kV for 5 min.", "E : Use for EV", "E : Polyethylene Insulated", "X : Electron Beam Cross Linked", "f : Extra Flexible conductor"]
-   }
+   },
+   "catalogueNo": "C384"
   },
   {
    "id": "ac70ecaf8b",
@@ -1531,7 +1552,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["C38506XXYY*", "C38512XXYY", "C38514XXYY", "C38517XXYY", "C38521XXYY", "C38525XXYY", "C38527XXYY", "C38558XXYY", "C38534XXYY"]
+   "partNumbers": ["C38506XXYY*", "C38512XXYY", "C38514XXYY", "C38517XXYY", "C38521XXYY", "C38525XXYY", "C38527XXYY", "C38558XXYY", "C38534XXYY"],
+   "catalogueNo": "C385"
   },
   {
    "id": "448cd1a065",
@@ -1585,7 +1607,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 624", "Insulation : Electron Beam Cross Linked Polyethylene", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +150°C", "Standard : JASO D 624", "Test Voltage : 5 kV", "Voltage Rating : 600V AC/750 V DC", "E : Electric Automobile", "EHX : Halogen Free Irradiated Cross Linked Polyethylene."]
-   }
+   },
+   "catalogueNo": "C387"
   },
   {
    "id": "bd6fb1cab0",
@@ -1638,7 +1661,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 624", "Insulation : Electron Beam Cross Linked Polyethylene.", "Colour : As per customer order.", "Single core"],
     "technical": ["Temperature Range : -40°C to +120°C", "Standard : JASO D 624", "Test Voltage : 5 kV", "E : Use for EV", "E : Polyethylene Insulated", "X : Electron Beam Cross Linked", "f : Extra Flexible conductor"]
-   }
+   },
+   "catalogueNo": "C396"
   },
   {
    "id": "5a05d182bf",
@@ -1687,7 +1711,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["C39717XXYY*", "C39721XXYY", "C39725XXYY", "C39727XXYY", "C397A11XXYY", "C39755XXYY", "C39756XXYY", "C39757XXYY", "C39758XXYY", "C39734XXYY", "C39735XXYY"]
+   "partNumbers": ["C39717XXYY*", "C39721XXYY", "C39725XXYY", "C39727XXYY", "C397A11XXYY", "C39755XXYY", "C39756XXYY", "C39757XXYY", "C39758XXYY", "C39734XXYY", "C39735XXYY"],
+   "catalogueNo": "C397"
   },
   {
    "id": "d9c083e84e",
@@ -1737,7 +1762,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["C39517XXYY*", "C39521XXYY", "C39523XXYY", "C39525XXYY", "C39527XXYY", "C395A11XXYY", "C39555XXYY", "C39556XXYY", "C39557XXYY", "C39558XXYY", "C39534XXYY", "DC39534XXYY"]
+   "partNumbers": ["C39517XXYY*", "C39521XXYY", "C39523XXYY", "C39525XXYY", "C39527XXYY", "C395A11XXYY", "C39555XXYY", "C39556XXYY", "C39557XXYY", "C39558XXYY", "C39534XXYY", "DC39534XXYY"],
+   "catalogueNo": "C395"
   },
   {
    "id": "b6d2052ec3",
@@ -1815,7 +1841,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with PVC very thin wall insulation for smaller diameter and lesser weight."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611: 2014", "Insulation : PVC", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : JASO D 611:2014", "Test Voltage : 1 kV", "C : Compacted Strands", "A : Low Voltage wires for automobiles", "V : Vinyl inuslated", "US :Thin wall type"]
-   }
+   },
+   "catalogueNo": "C398"
   },
   {
    "id": "0e58c0cd6e",
@@ -1856,7 +1883,8 @@
     "features": ["Longitudinally applied metal - leaf shielded cables.", "It provide better work ability to terminal processing then braided or spiral shielded cables. No x. o Cf rC oso sres Construction"],
     "construction": ["Conductor : Annealed Plain Flexible Copper Conductor as per JIS 3102", "Insulation : HDPE", "Drain Wire : ATC", "Screening : Copper Tape", "Outer Sheath : PVC"],
     "technical": ["Max. Continuous Working Temp : 80° C", "Rated Voltage : 25V AC", "Specification : Generally as per JASO D 611", "HV Test : 1 kV for 30 min. and then increase Voltage upto 3 kV"]
-   }
+   },
+   "catalogueNo": "A795"
   },
   {
    "id": "ffa46aa15c",
@@ -1914,7 +1942,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC Thin Wall insulation for", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465", "Insulation : Lead free PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +700C (3000 Hours)", "Standard : IS 2465", "Test Voltage : 3 kV", "Conductor Resistance: IS 8130"]
-   }
+   },
+   "catalogueNo": "829"
   },
   {
    "id": "3eb83ca4ab",
@@ -1964,7 +1993,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC Thin Wall insulation for", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465", "Insulation : Lead free PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +700C (3000 Hours)", "Standard : IS 2465", "Test Voltage : 3 kV", "Conductor Resistance: IS 8130"]
-   }
+   },
+   "catalogueNo": "829"
   },
   {
    "id": "1be17c8d42",
@@ -2014,7 +2044,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC normal insulation thickness for battery cables.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465", "Insulation : Lead free PVC.", "Colo22uDDr : AVVs iipeeewwr customer order."],
     "technical": ["Temperature Range : -400C to +700C (3000 Hours)", "Standard : IS 2465", "Test Voltage : 3 kV", "Conductor Resistance: IS 8130"]
-   }
+   },
+   "catalogueNo": "830"
   },
   {
    "id": "ba3ed5e40c",
@@ -2066,7 +2097,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC normal insulation thickness for battery cables.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic extra Flexible copper conductor, ISO 6722", "Insulation : PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -300C to +700C (3000 Hours)", "Standard : ISO 6722 :2015", "Test Voltage : 3 kV", "Conductor Resistance: ISO 6722"]
-   }
+   },
+   "catalogueNo": "B806"
   },
   {
    "id": "cfd48c4526",
@@ -2114,7 +2146,8 @@
     "features": ["Type GPT wire is available in solid colors and stripes with optional custom printing and / or numbering"],
     "construction": ["Conductor : Soft annealed electrolytic copper", "Insulation : PVC, Polyvinylchloride.", "Colour : As per customer order.", "Single core Automotive Cables GPT"],
     "technical": ["Temperature Range : -400C to +850C (3000 Hours)", "Test voltage : 1kv", "Specification :SAE J 1128 :2015", "GP : General Purpose", "T : Thermoplastic insulation"]
-   }
+   },
+   "catalogueNo": "A880"
   },
   {
    "id": "121c5305ed",
@@ -2161,7 +2194,8 @@
     "features": ["Type GPT wire is available in solid colors and stripes with optional custom printing and / or numbering"],
     "construction": ["Conductor : Soft annealed electrolytic copper", "Insulation : PVC, Polyvinylchloride.", "Colour : As per customer order.", "Single core Automotive Cables GPT"],
     "technical": ["Temperature Range : -400C to +850C (3000 Hours)", "Test voltage : 1kv", "Specification :SAE J 1128(2015)", "GP : General Purpose", "T : Thermoplastic insulation"]
-   }
+   },
+   "catalogueNo": "A880"
   },
   {
    "id": "6503843d0d",
@@ -2205,16 +2239,17 @@
    },
    "partNumbers": ["A88106XX*", "A88160XX", "A88110XX", "A88114XX", "A88117XX", "A88121XX", "A88125XX"],
    "info": {
-    "application": ["These cables designed for automotive application required extra protection against physical threats", "They are often used as surface in a variety of vehicles,ü including cars, trucks, RVs, and buses."],
+    "application": ["These cables designed for automotive application required extra protection against physical threats", "They are often used as surface in a variety of vehicles", "including cars, trucks, RVs, and buses."],
     "features": ["Extra protection", "Flexible", "Thick wall"],
     "construction": ["Conductor : Soft annealed electrolytic copper", "Insulation : PVC, Polyvinylchloride.", "Colour : As per customer order. Single core Automotive Cables HDT"],
     "technical": ["Temperature Range : -400C to +850C (3000 Hours)", "Test Voltage : 1kV", "Specification :SAE J 1128 : 2015", "HD : Heavy Duty", "T : Thermoplastic Insulation"]
-   }
+   },
+   "catalogueNo": "A881"
   },
   {
    "id": "4bb7963ffc",
    "family": "automotive",
-   "name": "TWP RoHS ",
+   "name": "TWP RoHS",
    "pages": [47],
    "headers": [
     "Part Number",
@@ -2260,7 +2295,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC thin wall insulation for smaller diameter lesser weight.", "Extra flexibility.", "Light weight", "Excellent resistance to oil and flame."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to ASTM B3, bare conductor construction according to SAE J 1128", "Insulation : Lead free PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to + 850C (3000 Hours)", "Test Voltage : 1 kV", "TW : Thin wall", "P : Thermoplastic insulation.", "Standard : SAE J1128 : 2015"]
-   }
+   },
+   "catalogueNo": "851"
   },
   {
    "id": "e0b79d8362",
@@ -2321,7 +2357,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron beam cross linked Polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper bare conductor E- Cu ETP1 according to ATSM B3 construction according to SAE J 1128", "Insulation : EBXL - XLPO polyolefin.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1128 :2015", "Test Voltage : 1 kV", "Bending Radius : ≤ 6 Sq.mm(3 x cable OD); ≥ 10.5 Sq.mm (5 x cable OD)", "T : Thin wall", "XL : Cross Linked Polyolefin"]
-   }
+   },
+   "catalogueNo": "819/C819"
   },
   {
    "id": "bca06e813e",
@@ -2432,12 +2469,13 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with cross linked polyolefin general purpose insulation for smaller diameter.", "Extra flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1128 : 2015", "Insulation : Electron beam cross linked polyolefin.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1128 : 2015", "Test Voltage : 1 kV", "G : General Purpose", "XL : Cross linked polyolefin"]
-   }
+   },
+   "catalogueNo": "820/C820"
   },
   {
    "id": "6e5f0b1332",
    "family": "automotive",
-   "name": "SXL RoHS ",
+   "name": "SXL RoHS",
    "pages": [53],
    "headers": [
     "Part Number",
@@ -2482,7 +2520,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra Flexible conductor with Electron beam cross linked polyolefin special purpose insulation for smaller diameter and lesser weight.", "Extra flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1128 : 2015", "Insulation : Electron beam cross linked polyolefin.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J 1128 : 2015", "Test Voltage : 1 kV", "S : Special Purpose.", "XL : Cross linked polyolefin ."]
-   }
+   },
+   "catalogueNo": "821/C821"
   },
   {
    "id": "8381c332e1",
@@ -2531,7 +2570,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra Flexible conductor with Electron beam cross linked polyolefin special purpose insulation for smaller diameter and lesser weight.", "Extra flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1128 : 2015", "Insulation : Electron beam cross linked polyolefin.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1128 : 2015", "Test Voltage : 1 kV", "S : Special Purpose.", "XL : Cross linked polyolefin ."]
-   }
+   },
+   "catalogueNo": "821/C821"
   },
   {
    "id": "4847e38888",
@@ -2581,12 +2621,13 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC thin wall insulation for smaller diameter and lesser weight.", "Excellent Flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1127 : 2015", "Insulation : Lead free PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +800C (3000 Hours)", "Standard : SAE J1127 : 2015", "Test Voltage : 1 kV", "S : Starter or Ground", "T : Thin wall", "T : Thermoplastic insulated"]
-   }
+   },
+   "catalogueNo": "824"
   },
   {
    "id": "38a83dda5f",
    "family": "automotive",
-   "name": "SGT RoHS ",
+   "name": "SGT RoHS",
    "pages": [56],
    "headers": [
     "Part Number",
@@ -2631,7 +2672,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with PVC general purpose insulation for smaller diameter and lesser weight.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to ASTM B3, bare conductor construction according to SAE J 1127 : 2015", "Insulation : PVC.", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +80°C (3000 Hours)", "Standard : SAE J1127 : 2015", "Test Voltage : 1 kV", "S : Starter (or) Ground", "G : General Purpose", "T : Thermoplastic insulated"]
-   }
+   },
+   "catalogueNo": "825"
   },
   {
    "id": "8d443d387d",
@@ -2680,7 +2722,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductor with Electron beam cross linked polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1127 : 2015", "Insulation : Electron beam cross linked polyolefin.", "Colour : As per customer order. 222DDD VVViiieeewww"],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1127 : 2015", "Test Voltage : 1 kV", "S : Starter (or) ground", "T : Thin wall", "X : Cross linked polyolefin"]
-   }
+   },
+   "catalogueNo": "822"
   },
   {
    "id": "b7ad135b7a",
@@ -2729,7 +2772,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with Electron beam cross linked"],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1127", "Insulation : Electron beam cross linked polyolefin.", "Colo 22u DDr : A VVs iip eee wwr customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1127", "Test Voltage : 1 kV", "S :Starter or Ground", "G : General purpose", "X : Cross linked polyolefin"]
-   }
+   },
+   "catalogueNo": "823"
   },
   {
    "id": "a03f611e20",
@@ -2776,7 +2820,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with Electron beam cross linked polyolefin general purpose insulation for smaller diameter and lesser weight.", "Extra flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1127", "Insulation : Electron beam cross linked polyolefin.", "Colour : As per customer order. 22DD VViieeww"],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1127", "Test Voltage : 1 kV", "S :Starter or Ground", "G : General purpose", "X : Cross linked polyolefin"]
-   }
+   },
+   "catalogueNo": "823"
   },
   {
    "id": "2fea894d95",
@@ -2824,7 +2869,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible Conductors with synthetic Rubber General purpose insulation.", "Extra flexibility.", "Heat resistant."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 bare conductor construction according to SAE J 1127", "Insulation : Thermoset Elastomer (EPDM)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1127", "Test Voltage : 1 kV", "S : Starter or Ground", "G : General purpose", "R : Thermoset Elastomer (EPDM)"]
-   }
+   },
+   "catalogueNo": "A892"
   },
   {
    "id": "a7dbd7f7ff",
@@ -2873,7 +2919,8 @@
     "features": ["Flexible", "Excellent resistance to oil and flame"],
     "construction": ["Conductor : Soft-annealed electrolytic copper E- Cu ETP1 according to ASTM B3 conductor construction according to customer specifications", "Insulation : PVC Ultra - Thin wall according to SAE J 1678 Ford WSBM1 L134 -A / Chrysler MS 9532 / Lear UTMS 12501 22DD VViieeww Automotive WTA Cables"],
     "technical": ["Temperature Range : -40°C to +85°C (3000 Hours)", "Standard : SAE J1678", "WTA : Ultra Thin wall PVC Insulation"]
-   }
+   },
+   "catalogueNo": "A882"
   },
   {
    "id": "efa18c090b",
@@ -2927,7 +2974,8 @@
      "Insulation : XLPE, Ultra- thin wall flame-retardant, halogen- free material acc. to SAE J 1678 / 22DD VViieeww Ford WSS MIL -135-A / Lear UTMS 12501 Automotive WXC Cables"
     ],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Standard : SAE J1678", "WXC : Ultra thin wall XLPE Insulation"]
-   }
+   },
+   "catalogueNo": "A883"
   },
   {
    "id": "7bb1a651af",
@@ -2974,7 +3022,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Extra flexibility.", "Heat resistant"],
     "construction": ["Conductor : Extra multi stranded bare copper conductor construction according to volvo 1052501", "Insulation : PVC Class TI 1", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +700C (3000 Hours)", "Standard : Volvo type", "Rated voltage, cable of one colour 300 V at rated area ≤ 1mm2 450 V at rated area 1.5 -16mm2 750 V at rated area ≥ 25 mm2 Rated voltage : two-coloured: 100V"]
-   }
+   },
+   "catalogueNo": "868"
   },
   {
    "id": "0dc4e3f4f9",
@@ -3026,7 +3075,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron Beam Cross Linked Polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Plain annealed copper Wires Flexible Class 5 according to IEC 60228", "Insulation : Flame retardant, halogen-free Cross-linked polyethylene (XLPE)", "Sheath : Special lead free PVC Compound type TI 3 according to EN 50363-3 (HD 21.1.S4)", "Colour : Black."],
     "technical": ["Temperature Range : -400C to +900C (3000 Hours)", "Standard : Volvo type", "Rated Voltage : 750 V"]
-   }
+   },
+   "catalogueNo": "864"
   },
   {
    "id": "cfb4dc59b1",
@@ -3078,7 +3128,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron Beam Cross Linked Polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Annealed plain flexible copper wires class 5 according to IEC 60228", "Insulation : Flame retardant, halogen- free Cross-linked polyethylene (XLPE)", "Sheath : Special lead free PVC Compound type TI 3 according to EN 50363-3 (HD 21.1.S4) 222DDD VVViiieeewww", "Colour : Black."],
     "technical": ["Temperature Range : -400C to +1000C (3000 Hours)", "Standard : Volvo type", "Rated Voltage : 750 V"]
-   }
+   },
+   "catalogueNo": "867"
   },
   {
    "id": "141d80f57b",
@@ -3131,7 +3182,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron Beam Cross Linked Polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Extra multi stranded bare copper Conductor construction according to volvo 1052521", "Insulation : Class 2", "Colour : As per customer order"],
     "technical": ["Temperature Range : -400C to +1000C (3000 Hours)", "Standard : Volvo 1052521", "Rated Voltage :100 V"]
-   }
+   },
+   "catalogueNo": "865"
   },
   {
    "id": "1bd5030cba",
@@ -3168,7 +3220,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron Beam Cross Linked Polyolefin thin wall insulation for smaller diameter and lesser weight.", "Excellent flexibility.", "Heat resistant."],
     "construction": ["Conductor : Extra multi stranded bare copper conductor, construction according to volvo 1059032", "Insulation : Class 4, Equivalent to ISO 6722 Temperature Class D", "Colour : As per customer order"],
     "technical": ["Temperature Range : -400C to +1500C (3000 Hours)", "Standard : Volvo 1059032", "Rated Voltage :50 VDC"]
-   }
+   },
+   "catalogueNo": "866"
   },
   {
    "id": "4807a93188",
@@ -3225,9 +3278,10 @@
    "info": {
     "application": ["Low-tension electric wire for automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
     "features": ["Unilay conductor stranding", "thick wall thickness"],
-    "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722 (Symmetrical) tinned copper (optional)", "Insulation : PVC with properties according to ISO 6722 class A, Lead free (thick wall) ü2 C oVloiuer w: As per customer order D", "Cable construction according to ISO 6722, Class A"],
+    "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722 (Symmetrical) tinned copper (optional)", "Insulation : PVC with properties according to ISO 6722 class A, Lead free (thick wall)", "2 C oVloiuer w: As per customer order D", "Cable construction according to ISO 6722, Class A"],
     "technical": ["Temperature Range: -40°C to +85°C (3000 Hours).", "Standard : ISO 6722 Class A", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A822"
   },
   {
    "id": "f0b3fc81d1",
@@ -3275,7 +3329,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A82305XX*", "A82306XX", "A82308XX", "A82310XX", "A82313XX", "A82314XX", "A82316XX", "A82317XX", "A82319XX", "A82321XX", "A82323XX", "A82327XX", "A82328XX", "A82330XX"]
+   "partNumbers": ["A82305XX*", "A82306XX", "A82308XX", "A82310XX", "A82313XX", "A82314XX", "A82316XX", "A82317XX", "A82319XX", "A82321XX", "A82323XX", "A82327XX", "A82328XX", "A82330XX"],
+   "catalogueNo": "A823"
   },
   {
    "id": "90279765ce",
@@ -3315,7 +3370,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A82406XX**", "A82408XX", "A82410XX", "A82413XX", "A82414XX", "A82416XX"]
+   "partNumbers": ["A82406XX**", "A82408XX", "A82410XX", "A82413XX", "A82414XX", "A82416XX"],
+   "catalogueNo": "A824"
   },
   {
    "id": "34dfa369be",
@@ -3373,7 +3429,8 @@
     "features": ["Unilay conductor stranding", "Reduced diameter / thicker wall insulation", "Saving of insulation material, resulting in substantial weight reduction"],
     "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722-1 (Symmetrical).", "Insulation : PVC with properties according to ISO 6722-1 class B, Lead free (Thick wall)", "Colour : As per customer order", "Cable construction according to ISO 6722-1"],
     "technical": ["Temperature Range: -400C to +1000C (3000 Hours)", "Standard : ISO 6722-1 Class B", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A831"
   },
   {
    "id": "ff8901045c",
@@ -3472,7 +3529,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A832"
   },
   {
    "id": "bef124ac46",
@@ -3523,7 +3581,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["82705XX **", "82706XX", "82708XX", "82710XX", "82712XX", "82713XX", "82714XX", "82716XX", "82717XX", "82719XX", "82721XX", "82723XX", "82725XX", "82727XX", "827A11XX", "82728XX", "82730XX"]
+   "partNumbers": ["82705XX **", "82706XX", "82708XX", "82710XX", "82712XX", "82713XX", "82714XX", "82716XX", "82717XX", "82719XX", "82721XX", "82723XX", "82725XX", "82727XX", "827A11XX", "82728XX", "82730XX"],
+   "catalogueNo": "A823"
   },
   {
    "id": "fd3685717a",
@@ -3563,7 +3622,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A83306XX**", "A83308XX", "A83310XX", "A83313XX", "A83314XX", "A83316XX"]
+   "partNumbers": ["A83306XX**", "A83308XX", "A83310XX", "A83313XX", "A83314XX", "A83316XX"],
+   "catalogueNo": "A833"
   },
   {
    "id": "c80c36a87b",
@@ -3623,7 +3683,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Heat resistance", "Halogen free"],
     "construction": ["Conductor : Soft-annealed electrolytic bare or Tinned Copper according to ISO 6722", "Cable construction according to ISO 6722 Class C(thick wall)", "Insulation :Electron Beam Crossed linked Polyolefin Class C", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to + 1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Specification : ISO 6722"]
-   }
+   },
+   "catalogueNo": "A810"
   },
   {
    "id": "da06cc4d60",
@@ -3679,7 +3740,8 @@
     "features": ["Excellent Flame retardant", "Highly resistant against acids, alkali, petrol and diesel", "Extra flexible conductors with Electron beam cross linked polyolefin thin wall insulation for smaller diameter and lesser weight", "Excellent flexibility", "Heat resistant", "Halogen free"],
     "construction": ["Conductor : Soft /annealed Plain Copper according to ISO 6722 (Symmetrical)", "Insulation : Electron beam crossed Linked Polyolefin Class C", "Colour : As per customer order", "Cable construction according to ISO 6722, Class C (Thin wall)"],
     "technical": ["Temperature Range: -400C to +1250C (3000 Hours)", "Standard : ISO 6722 Class C (Thin wall)", "Operating Voltage : (i) (60 V DC (or) 25 V AC) (or) (ii) (600V DC (or) 600 V AC)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A811"
   },
   {
    "id": "16d3a432af",
@@ -3726,7 +3788,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with Electron Beam cross linked polyolefin thin wall insulation with increased mechanical strength.", "Extra flexibility.", "Heat resistance", "Halogen free"],
     "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722 (Symmetrical)", "Insulation : Electron Beam Crossed Linked Polyolefin Class C", "Colour : As per customer order", "Cable construction according to ISO 6722, Class C ( Ultra Thin wall)"],
     "technical": ["Temperature Range : -400C to + 1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "UTW - Ultra Thin wall", "Specification : ISO 6722"]
-   }
+   },
+   "catalogueNo": "A812"
   },
   {
    "id": "5b96d4b1fd",
@@ -3782,14 +3845,15 @@
    "info": {
     "application": ["Low-tension electric wire for Automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
     "features": ["Unilay conductor stranding .", "Thicker wall insulation", "Heat resistance", "Halogen free"],
-    "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722 (Symmetrical)", "Insulation : Electron Beam crossed linked Polyolefin Class D (Thick wall )", "Colour : As per customer order ü2 C aVbilee cwonstruction according to ISO 6722, D Class D"],
+    "construction": ["Conductor : Soft / annealed Plain Copper according to ISO 6722 (Symmetrical)", "Insulation : Electron Beam crossed linked Polyolefin Class D (Thick wall )", "Colour : As per customer order", "2 C aVbilee cwonstruction according to ISO 6722, D Class D"],
     "technical": ["Temperature Range: -400C to +1500C (3000 Hours)", "Standard : ISO 6722 Class D", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A813"
   },
   {
    "id": "5ef9c881a7",
    "family": "automotive",
-   "name": "FLR91X-A  Class D",
+   "name": "FLR91X-A Class D",
    "pages": [79, 80],
    "headers": [
     "Part Number",
@@ -3838,7 +3902,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A81405XX*", "A81406XX", "A81408XX", "A81410XX", "A81413XX", "A81414XX", "A81416XX", "A81417XX", "A81419XX", "A81421XX", "A81423XX", "A81427XX", "A81428XX", "A81430XX*", "A81432XX", "A81434XX", "A81437XX", "A81438XX"]
+   "partNumbers": ["A81405XX*", "A81406XX", "A81408XX", "A81410XX", "A81413XX", "A81414XX", "A81416XX", "A81417XX", "A81419XX", "A81421XX", "A81423XX", "A81427XX", "A81428XX", "A81430XX*", "A81432XX", "A81434XX", "A81437XX", "A81438XX"],
+   "catalogueNo": "A814"
   },
   {
    "id": "3df8167c39",
@@ -3889,7 +3954,8 @@
     "features": ["Unilay conductor PVC Thin wall insulation Saving of insulation material, resulting in substantial weight reduction Heat resistance Halogen free"],
     "construction": ["Conductor : Soft / annealed Plain Copper according to ASTM B3", "Insulation : Electron Beam Cross Linked Polyolefin", "Colour : As per customer order", "Cabl2e Dco nVstiruecwtion according to ISO 6722-1, Class D (Thin wall)"],
     "technical": ["Temperature Range: -400C to +1500C (3000 Hours)", "Standard : ISO 6722-1 Class D (Thin wall)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2 Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation **"]
-   }
+   },
+   "catalogueNo": "A808"
   },
   {
    "id": "3a2f76e871",
@@ -4187,12 +4253,13 @@
    "partNumbers": ["A80828XX *", "A80830XX", "A80832XX", "A80834XX", "A80837XX", "A80838XX", "Red-01", "Yellow-Pink-27", "Grey-White-46", "White-Beige-61", "Pink-Black-79", "Blue-Brown-A01", "Black-Grey-A16", "Brown-Violet-A40", "LTBlue-Brwon-A56", "Brown-LTGreen-A71"],
    "info": {
     "construction": ["Insulation Current"]
-   }
+   },
+   "catalogueNo": "A808"
   },
   {
    "id": "c28c6a9741",
    "family": "automotive",
-   "name": "Auto 150 TW  Class D",
+   "name": "Auto 150 TW Class D",
    "pages": [83],
    "headers": [
     "Part Number",
@@ -4239,12 +4306,13 @@
     "features": ["Thin wall insulation", "Saving of insulation material, resulting in substantial weight reduction", "Heat resistance", "Halogen free"],
     "construction": ["Conductor : Soft / Annealed Plain Copper according to ASTM B3 (Symmetrical structure A).", "Optional : Tinned Copper Conductor", "Insulation : Electron Beam Cross Linked 2 D P oVlyioelewfin", "Colour : As per customer order", "Cable construction according to ISO 6722-1, Class D (Thin wall)"],
     "technical": ["Temperature Range: -400C to +1500C (3000 Hours).", "Standard : ISO 6722-1 Class D (Thin wall)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "B548"
   },
   {
    "id": "444763709f",
    "family": "automotive",
-   "name": "Auto 150-TW  Class D",
+   "name": "Auto 150-TW Class D",
    "pages": [84],
    "headers": [
     "Part Number",
@@ -4277,12 +4345,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["B54830XX*", "B54832XX", "B54834XX", "B54837XX", "B54838XX"]
+   "partNumbers": ["B54830XX*", "B54832XX", "B54834XX", "B54837XX", "B54838XX"],
+   "catalogueNo": "B548"
   },
   {
    "id": "7fe3990985",
    "family": "automotive",
-   "name": "Auto 150 UTW  Class D",
+   "name": "Auto 150 UTW Class D",
    "pages": [85],
    "headers": [
     "Part Number",
@@ -4316,7 +4385,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A81506XX**", "A81508XX", "A81510XX", "A81513XX", "A81514XX", "A81516XX"]
+   "partNumbers": ["A81506XX**", "A81508XX", "A81510XX", "A81513XX", "A81514XX", "A81516XX"],
+   "catalogueNo": "A815"
   },
   {
    "id": "00b7573517",
@@ -4370,7 +4440,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Flexible conductors with PP Thin wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : PP-FR (Polypropylene FR) Low halogen", "Colour : As per customer order.", "Single core Automotive Auto 125 P Cables (FLR9Y-A)"],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standed : Ford ES-AU5T-1A348, ISO 6722, Class C FIAT 91107/17 Renault 36-05-009-N. VW 60306-1"]
-   }
+   },
+   "catalogueNo": "841"
   },
   {
    "id": "918aa7162a",
@@ -4423,7 +4494,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : PE-X with properties according to ISO 6722, Class C", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40°C to +125°C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722,Class C", "FL : Automotive Cable", "R : Reduced wall Thickness", "2X : Cross Linked PE", "A : Symmetrical"]
-   }
+   },
+   "catalogueNo": "842"
   },
   {
    "id": "d478d997b7",
@@ -4474,7 +4546,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : PE-X,with properties according to ISO 6722, Class C", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722,Class C", "FL : Automotive Cable", "R : Reduced wall Thickness", "2X : Cross Linked PE", "B : Asymmetrical A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "843"
   },
   {
    "id": "b5570d8eba",
@@ -4522,7 +4595,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : TPE-E", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1500C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722 , Class D"]
-   }
+   },
+   "catalogueNo": "844"
   },
   {
    "id": "27355744c9",
@@ -4568,11 +4642,12 @@
    },
    "partNumbers": ["84505XX*", "84506XX", "84508XX", "84510XX", "84513XX", "84514XX", "84516XX", "84519XX", "84523XX"],
    "info": {
-    "application": ["Low-tension electric wire for automobiles. ü", "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
+    "application": ["Low-tension electric wire for automobiles.", "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Resistance To hydrolysis", "Resistance to battery cable", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : TPE-E", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to + 1500C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722, Class D"]
-   }
+   },
+   "catalogueNo": "845"
   },
   {
    "id": "4d15d0157f",
@@ -4626,7 +4701,8 @@
      "Single core Automotive Auto 180E-A Cables FLR7Y-A"
     ],
     "technical": ["Temperature Range : -650C to +1800C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722-1 Class E (Thin Wall) LV 112-1"]
-   }
+   },
+   "catalogueNo": "846"
   },
   {
    "id": "b6a296a1c7",
@@ -4675,7 +4751,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Extra flexibility."],
     "construction": ["Conductor : Annealed plain flexible copper conductor construction according to ISO 6722-1", "Insulation : ETFE ( Ethylene tetrafluoroethylene) with properties according to ISO 6722-1 Class E", "Colour : As per customer order.", "Single core Automotive Auto 180E-B Cables FLR7Y-B"],
     "technical": ["Temperature Range : -650C to +180°C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722 Class E (Thin Wall) LV 112-1"]
-   }
+   },
+   "catalogueNo": "847"
   },
   {
    "id": "aa218a3257",
@@ -4731,7 +4808,8 @@
     "features": ["Good Thermal properties", "Highly flexible at low temperatures."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor (also available in multi-stand version)", "Insulation : Silicon Rubber, with properties according to ISO 6722-2 Class F", "Colour : As per customer order. Automotive Auto 200 G Cables"],
     "technical": ["Temperature Range : -800C to +2000C (3000 Hours)", "Standard : ISO 6722 , Class F", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A870"
   },
   {
    "id": "33354f4185",
@@ -4780,7 +4858,8 @@
     "features": ["Good Thermal properties and high flexibility at low temperatures.", "Considerable weight savings over copper.", "Highly temperature resistant."],
     "construction": ["Conductor : Aluminium 99.7 % Conductor Construction According to ISO 6722 -2 (also available in multi-stand version", "Insulation : Silicon Rubber With properties according to ISO 6722 -2 Class F", "Colour : As per customer order."],
     "technical": ["Temperature Range : -800C to +2000C (3000 Hours)", "Standard : ISO 6722, Class F", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A871"
   },
   {
    "id": "c80ecc6cfa",
@@ -4831,7 +4910,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance", "Very good oil and fuel resistance", "High resistance to atmospheric conditions and ozone"],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu - ETP1 according to DIN 13602, bare conductor (Symmetrical)", "Optional : Tinned copper conductor", "Insulation : Teflon", "Colour : As per customer order."],
     "technical": ["Temperature Range : -65˚C to +200˚C (3000 Hours)", "Voltage Rating : 50 V", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : Generally as per ISO 6722-1, Class F"]
-   }
+   },
+   "catalogueNo": "C242S"
   },
   {
    "id": "5270143dbc",
@@ -4878,7 +4958,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance", "Very good oil and fuel resistance", "High resistance to atmospheric conditions and ozone"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : Teflon according to ISO 6722-1, Class F", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +2000C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722-1", "Voltage Rating : 60 VDC"]
-   }
+   },
+   "catalogueNo": "B628"
   },
   {
    "id": "5ab28dd2f4",
@@ -4925,7 +5006,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : FEP (Fluorinated Ethylene propylene) with properties according to ISO 6722-1, Class F", "Colour : As per customer order."],
     "technical": ["Temperature Range : -650C to +2100C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722-1"]
-   }
+   },
+   "catalogueNo": "848"
   },
   {
    "id": "285936549d",
@@ -4974,7 +5056,8 @@
     "features": ["Good mechanical and thermal properties Excellent chemical resistance"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : FEP (Fluorinated ethylene propylene) with properties according to ISO 6722-1, Class F", "Colour : As per customer order."],
     "technical": ["Temperature Range : -650C to +2100C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : LV112-1 VW 60306-1 PSA B25 1110"]
-   }
+   },
+   "catalogueNo": "849"
   },
   {
    "id": "eaeedc5d05",
@@ -5023,7 +5106,8 @@
     "features": ["High temperature resistance", "Very good mechanical stability", "Excellent resistance to chemicals"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-CuETP1 according to DIN EN 13602.", "Insulation : PFA (Perfluoroalkoxy copolymer) With properties according to ISO 6722 -1 Class H", "Colour : As per customer order. Automotive Auto 260 T Cables"],
     "technical": ["Temperature Range : -800C to +2600C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722, Class H"]
-   }
+   },
+   "catalogueNo": "850"
   },
   {
    "id": "966d89ef20",
@@ -5070,11 +5154,12 @@
    },
    "partNumbers": ["A87302XX*", "A87305XX", "A87306XX", "A87308XX", "A87310XX", "A87313XX", "A87316XX", "A87323XX", "A87325XX"],
    "info": {
-    "application": ["Low-tension electric wire for Automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and ü instrument panel circuits."],
+    "application": ["Low-tension electric wire for Automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and", "instrument panel circuits."],
     "features": ["Excellent temperature resistance", "Very good mechanical stability", "Excellent resistance to chemicals"],
     "construction": ["Conductor : Nickel Plated Copper Conductor Construction according to ISO 6722-1", "Insulation : PTFE ( Polytetrafluoroethylene) with Properties according to ISO 6722 -1 Class H", "Colour : As per customer order. Automotive Auto 260R-A Cables"],
     "technical": ["Temperature Range : -900C to +2600C (3000 Hours)", "Standard : ISO 6722-1,Class H", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A873"
   },
   {
    "id": "3d9f2ae1a4",
@@ -5124,7 +5209,8 @@
     "features": ["Excellent temperature resistance", "Very good mechanical stability", "Excellent resistance to chemicals"],
     "construction": ["Conductor : Nickel Plated Flexible Copper Conductor Construction according to ISO 6722-1", "Insulation : PTFE ( Polytetrafluoroethylene) with Properties according to ISO 6722 -1 Class H", "Colour : As per customer order. Automotive Auto 260R-B Cables"],
     "technical": ["Temperature Range : -900C to +2600C (3000 Hours)", "Standard : ISO 6722,Class H", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2"]
-   }
+   },
+   "catalogueNo": "A874"
   },
   {
    "id": "3f76af1eb8",
@@ -5183,7 +5269,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class B, Lead free", "Colour : As per customer order. 22DD VViieeww"],
     "technical": ["Temperature Range : -400C to + 1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "Y : PVC insulation", "Standard : LV112 BMW GS 95007-1-1 VM 60306-1"]
-   }
+   },
+   "catalogueNo": "833"
   },
   {
    "id": "a2906f0f05",
@@ -5243,9 +5330,10 @@
    "info": {
     "application": ["Low-tension electric wire for Automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility.", "Hot pressure resistance test at 1200 C"],
-    "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class C, Lead free", "Colour : As per customer order. ü22 DD VV ingiiee ww S le core Automotive FLYW Cables"],
+    "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class C, Lead free", "Colour : As per customer order.", "22 DD VV ingiiee ww S le core Automotive FLYW Cables"],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "YW : Heat & hot pressure resistance", "Standard : ISO 6722-1 Class C"]
-   }
+   },
+   "catalogueNo": "834"
   },
   {
    "id": "9ed961db0d",
@@ -5297,7 +5385,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class B, Lead free", "Colour : As per customer order."],
     "technical": ["Temperature Range : -500C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "YK : cold resistant PVC", "Standard :ISO 6722,Class B"]
-   }
+   },
+   "catalogueNo": "835"
   },
   {
    "id": "8af186fb96",
@@ -5342,7 +5431,8 @@
     "features": ["Cold resistant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thick wall insulation"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : Soft PVC Cold resistant", "Colour : As per customer order."],
     "technical": ["Temperature Range : -500C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall thickness", "YK : Cold resistant PVC", "Standard : Bosch 5998 342."]
-   }
+   },
+   "catalogueNo": "A884"
   },
   {
    "id": "ef2fc649fb",
@@ -5389,7 +5479,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC Thin wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor.", "Insulation : Plasticized PVC, heat and cold resistant, lead free.", "Colour : As per customer order.", "Single core 22DD VViieeww Automotive FLYWK & Cables FLRYWK"],
     "technical": ["Temperature Range : -500C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "Y : PVC", "WK : Heat and cold resistant", "Standard: Bosch 5998342."]
-   }
+   },
+   "catalogueNo": "836"
   },
   {
    "id": "687a5d5d9b",
@@ -5436,7 +5527,8 @@
     "features": ["Cold resistant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thin wall insulation", "Heat resistant"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN EN 13602, bare conductor", "Insulation : Soft PVC With properties according to ISO 6722, Class C Lead free", "Colour : As per customer order. 22DD VViieeww"],
     "technical": ["Temperature Range : -500C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL: Automotive cable", "R: Reduced wall thickness", "YW: Hot pressure type", "Standard : DBL 6312 Ford ES-AU5T-1A348"]
-   }
+   },
+   "catalogueNo": "A875"
   },
   {
    "id": "90820cf7d4",
@@ -5492,7 +5584,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC Thin wall insulation with increased mechanical strength.", "Extra flexibility.", "Heat resistant"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class C, Lead free", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL: Automotive cable", "R: Reduced wall thickness", "YW: Heat resistant", "B : Un symmetrical", "Standard : DBL 6312 Ford ES- AU5T-1A348"]
-   }
+   },
+   "catalogueNo": "837"
   },
   {
    "id": "20d6bbd2dc",
@@ -5548,7 +5641,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC Thin wall insulation with increased mechanical strength.", "Extra flexibility.", "Heat resistant"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722-1, Class C, Lead free", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL: Automotive cable", "R: Reduced wall thickness", "YW: Heat resistant", "B : Asymmetrical", "Standard : ISO 6722-1"]
-   }
+   },
+   "catalogueNo": "C221"
   },
   {
    "id": "143fda44f4",
@@ -5596,7 +5690,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Type of flexibility.", "Fuel resistance"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor (Symmetrical)", "Insulation : PA (Polyamide) (Thin wall)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall thickness", "4Y : polyamide", "A : Symmetrical (Structure A)", "Standard : ISO 6722, Class B"]
-   }
+   },
+   "catalogueNo": "A876"
   },
   {
    "id": "2133632066",
@@ -5647,7 +5742,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Extra flexibility.", "Out standing fuel resistance"],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor (Asymmetrical)", "Insulation : PA (Polyamide) (Thin Wall)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall thickness", "4Y : Polyamide", "B : Asymmetrical (Structure B)", "Standard : ISO 6722, Class B"]
-   }
+   },
+   "catalogueNo": "A840"
   },
   {
    "id": "efbabc515c",
@@ -5704,7 +5800,8 @@
      "Colour : As per customer order."
     ],
     "technical": ["Temperature Range : -400C to + 1100C (3000 Hours) - FL11Y -400C to + 1250C (3000 Hours) - FL91Y", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "91Y : TPE-O", "FL : Automotive cable", "11Y : TPE-U", "Standard : ISO 6722, Class C"]
-   }
+   },
+   "catalogueNo": "852"
   },
   {
    "id": "5d14a2e7de",
@@ -5753,7 +5850,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thick wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : Plasticized PVC with properties according to ISO 6722, Class B", "Outer Sheath : Plasticized PVC with properties according to ISO 6722, Class B", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "Y : PVC", "Y : PVC", "Standard : ISO 6722,Class B"]
-   }
+   },
+   "catalogueNo": "853"
   },
   {
    "id": "dd87137203",
@@ -5818,7 +5916,8 @@
      "Conductor Resistance : IEC 60228 / BS 6360",
      "Rated Voltage : 600 V AC / 600 V DC"
     ]
-   }
+   },
+   "catalogueNo": "817"
   },
   {
    "id": "4510d5701f",
@@ -5865,7 +5964,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["81805XX*", "81806XX", "81808XX", "81810XX", "81813XX", "81816XX", "81819XX", "81821XX", "81823XX"]
+   "partNumbers": ["81805XX*", "81806XX", "81808XX", "81810XX", "81813XX", "81816XX", "81819XX", "81821XX", "81823XX"],
+   "catalogueNo": "818"
   },
   {
    "id": "3aff9415ea",
@@ -5917,7 +6017,8 @@
      "Colour : As per customer order. Automotive FLRY - H Cables"
     ],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Standard : LV112-1", "Test Voltage : 3KV i.e <0.5mm2 5KV i.e >0.5mm2", "FL : Automotive cable, low voltage", "R : Reduced insulation wall thickness", "Y : PVC", "H : Highly flexible A c c r e d i t a t ions"]
-   }
+   },
+   "catalogueNo": "A877"
   },
   {
    "id": "7040158f71",
@@ -5973,7 +6074,8 @@
     ],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 12602, bare conductor", "Insulation : PVC, Lead free, Class B.", "Colour : As per customer order.", "Single core", "Jacket : Foamed PVC, lead free Automotive FLYOY-FLYKOY Cables"],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "Y : PVC", "OY : Foamed PVC", "FL: Automotive cable", "Y: PVC", "K: Cold Resistance", "OY: Foamed PVC", "Standard : ISO 6722, Class B"]
-   }
+   },
+   "catalogueNo": "854"
   },
   {
    "id": "f4b23aa655",
@@ -6020,7 +6122,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Flexible conductors with PVC thin wall insulation with increased mechanical strength.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : PVC, according to ISO 6722,Class B", "Screen: ATC braiding", "Sheath: PVC, Lead free Class B", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall thickness", "Y : PVC", "D : Copper wire spiral Shield", "Y : PVC", "Standard : ISO 6722, Class B"]
-   }
+   },
+   "catalogueNo": "855"
   },
   {
    "id": "9039e0c26e",
@@ -6079,7 +6182,8 @@
      "Multicore Automotive FLR4G11Y-FL4G11Y Cables"
     ],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall Thickness", "4G : EVA", "11Y : TPE-U", "Standard : ISO 6722, Class C"]
-   }
+   },
+   "catalogueNo": "856/891"
   },
   {
    "id": "e06a7e7357",
@@ -6133,7 +6237,8 @@
      "Multicore Automotive FLR2X11Y Cables"
     ],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL: Automotive cable", "R: Reduced wall Thickness", "2X: XLPE", "11Y: TPE-U", "Standard : ISO 6722, Class C"]
-   }
+   },
+   "catalogueNo": "857"
   },
   {
    "id": "7ede9f96ef",
@@ -6189,7 +6294,8 @@
      "Multicore Automotive FLR31Y11Y Cables"
     ],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "R: Reduced wall thickness", "31Y: TPE- S", "11Y: TPE-U", "Standard : Similar to ISO 6722,Class C"]
-   }
+   },
+   "catalogueNo": "858"
   },
   {
    "id": "a627c19f0e",
@@ -6241,7 +6347,8 @@
      "Multicore Automotive FLRY11Y Cables"
     ],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "R : Reduced wall thickness", "Y: PVC", "11Y: TPE-U Sheath", "Standard : ISO6722,Class B"]
-   }
+   },
+   "catalogueNo": "859"
   },
   {
    "id": "d836ae5f15",
@@ -6295,7 +6402,8 @@
     "features": ["Considerable weight savings compared to copper.", "Cables with cross- section > 10mm2 Can be used as battery cables ."],
     "construction": ["Conductor : Aluminium 99.7 % ≥ 1.25mm2 Aluminium alloy ≤1.25 mm2", "Insulation : Soft -PVC With properties according to ISO 6722-2 Class B Automotive FLALRY Cables"],
     "technical": ["Temperature Range : -400C to +1050C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "AL : Aluminum Conductor", "R : Reduced wall thickness", "Y : PVC insulation", "Standard : ISO 6722, Class B"]
-   }
+   },
+   "catalogueNo": "A878"
   },
   {
    "id": "12918e564d",
@@ -6349,7 +6457,8 @@
     "features": ["Hot pressure resistance", "Considerable weight savings compared to copper"],
     "construction": ["Conductor : Aluminium 99.7 % ≥ 1.25mm2 Aluminium alloy ≤1.25 mm2", "Insulation : Soft -PVC With properties according to ISO 6722-2 Class C Automotive FLALRYW Cables"],
     "technical": ["Temperature Range : -400C to +1250C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "AL : Aluminum Conductor", "R : Reduced wall thickness", "YW : Hot pressure resistance", "Standard : ISO 6722,Class C"]
-   }
+   },
+   "catalogueNo": "A879"
   },
   {
    "id": "f96a8fcee7",
@@ -6404,7 +6513,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Extra flexibility."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu - ETP1 according to DIN 13602, bare conductor (Asymmetrical structure B)", "Optional : Tinned", "Insulation : Silicone Rubber (Thick wall)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40˚C to +200˚C (3000 Hours)", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "2G : Silicone Rubber", "B : Asymmetrical (Structure B)", "Standard : ISO 6722, Class F A c creditations"]
-   }
+   },
+   "catalogueNo": "C413"
   },
   {
    "id": "b3a2aafd47",
@@ -6453,7 +6563,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance", "Very good oil and fuel resistance", "Corrosion resistance", "High resistance to atmospheric conditions and ozone", "Broad temperature range."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu - ETP1 according to DIN 13602, bare conductor (Symmetrical)", "Optional : Tinned.", "Insulation : FEP (Fluorinated Ethylene Propylene), (Thin wall).", "Colour : As per customer order.", "Single core Automotive FLR6Y-A Cables (Auto 210 F-A)"],
     "technical": ["Temperature Range : -65˚C to +210˚C", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "R : Reduced wall thickness", "6Y : Fluorinated Ethylene Propylene", "A : Symmetrical (Structure A)", "Standard : ISO 6722-1 , Class F"]
-   }
+   },
+   "catalogueNo": "848"
   },
   {
    "id": "20ad441740",
@@ -6499,7 +6610,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance", "Very good oil and fuel resistance", "Corrosion resistance", "High resistance to atmospheric conditions and ozone", "Broad temperature range."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu - ETP1 according to DIN 13602, bare conductor (Symmetrical)", "Optional : Tinned.", "Insulation : FEP (Fluorinated Ethylene Propylene), (Thin wall).", "Colour : As per customer order."],
     "technical": ["Temperature Range : -40˚C to +175˚C", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "R : Reduced wall thickness", "6Y : Fluorinated Ethylene Propylene", "A : Symmetrical (Structure A)", "Standard : ISO 6722-1 , Class E LV 112-1"]
-   }
+   },
+   "catalogueNo": "A752"
   },
   {
    "id": "49716e50ee",
@@ -6548,7 +6660,8 @@
     "features": ["Good mechanical and thermal properties", "Excellent chemical resistance", "Very good oil and fuel resistance", "Corrosion resistance", "High resistance to atmospheric conditions and ozone", "Broad temperature range."],
     "construction": ["Conductor : Soft-annealed electrolytic Copper E-Cu - ETP1 according to DIN 13602, bare conductor (Symmetrical)", "Optional : Tinned", "Insulation : FEP (Fluorinated Ethylene Propylene), (Thin wall)", "Colour : As per customer order.", "Single core Automotive FLR6Y-A Cables (Auto 200 F-A)"],
     "technical": ["Temperature Range : -40˚C to +200˚C", "Test Voltage : 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive Cable", "R : Reduced wall thickness", "6Y : Fluorinated Ethylene Propylene", "A : Symmetrical (Structure A)", "Standard : M4754 A c creditations"]
-   }
+   },
+   "catalogueNo": "C787"
   },
   {
    "id": "8b43d90c03",
@@ -6605,7 +6718,8 @@
      "B : Asymmetrical (Structure B)",
      "Standard : ISO 6722, Class F LV 112-1 A c c reditations"
     ]
-   }
+   },
+   "catalogueNo": "A895"
   },
   {
    "id": "adc86a64e9",
@@ -6653,7 +6767,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Excellent mechanical properties", "Fuel resistance", "Excellent thermal stability"],
     "construction": ["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN 13602, bare conductor", "Insulation : TPE- E (Thermoplastic Polyester Elastomer)", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1500C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "FL : Automotive cable", "R : Reduced wall thickness", "12Y : Thermoplastic Polyester Elastomer", "A : Symmertical", "Standard : ISO 6722-1, Class D"]
-   }
+   },
+   "catalogueNo": "A893"
   },
   {
    "id": "974f5ec4cf",
@@ -6691,15 +6806,16 @@
    },
    "partNumbers": ["B937A2604"],
    "info": {
-    "application": ["Data cable for automotive comfort systems for static and dynamic installation after validation. ü", "Autonomous Driving ü", "Driver Assistance Systems ü", "Navigation & Infotainment", "Fond-Entertainment ü", "Internet & Mobile Communication ü"],
+    "application": ["Data cable for automotive comfort systems for static and dynamic installation after validation.", "Autonomous Driving", "Driver Assistance Systems", "Navigation & Infotainment", "Fond-Entertainment", "Internet & Mobile Communication"],
     "features": ["Recyclability", "Extra Flexible", "Heat Resistant", "Flame Resistant", "Steady Impedance", "Lowest Alien NEXT", "Excellent Coupling Resistance", "Superior Environmental Properties", "Very Good Transmission Properties", "Outstanding Shield Attenuation Properties"],
     "construction": [
-     "Conductor : Annealed Tinned Copper Conductor ü",
-     "Insulation : Polypropylene (PP) Class B 100°C ü",
-     "Core identification : Brown, Green, Orange, Blue ü",
-     "Shielding : Aluminium Mylar Tape (Aluminium outside), ü (100% Coverage ) ü",
-     "Braiding : ATC ü",
-     "Sheath : Lead Free PVC, Black ü",
+     "Conductor : Annealed Tinned Copper Conductor",
+     "Insulation : Polypropylene (PP) Class B 100°C",
+     "Core identification : Brown, Green, Orange, Blue",
+     "Shielding : Aluminium Mylar Tape (Aluminium outside)",
+     "(100% Coverage )",
+     "Braiding : ATC",
+     "Sheath : Lead Free PVC, Black",
      "Automotive FL9YBCY Cables"
     ],
     "technical": [
@@ -6717,7 +6833,8 @@
      "C : Braiding",
      "Y : Lead Free PVC"
     ]
-   }
+   },
+   "catalogueNo": "B937"
   },
   {
    "id": "385e49cb87",
@@ -6762,7 +6879,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Heat resistance", "Halogen free"],
     "construction": ["Conductor : Annealed Plain Copper Conductor", "Insulation : FEP", "Core identification : Red, Yellow", "Drain Wire : ATC", "Screen : Al Mylar Tape", "Braiding : ATC", "Outer Sheath : TPE-S", "Colour : Black Automotive FLR6YBC31Y Cables"],
     "technical": ["Temperature Range : -650C to + 2100C (3000 Hours)", "Max. Continuous working Temperature : 200°C", "Max. Conductor Tempature Termination of Short Circuit : 300°C", "Specification : ISO 6722 Class F"]
-   }
+   },
+   "catalogueNo": "B988"
   },
   {
    "id": "c5fd7dc23c",
@@ -6806,7 +6924,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel.", "Heat resistance", "Halogen free"],
     "construction": ["Conductor : Annealed Plain Copper Conductor", "Insulation : PP", "Core identification : Red, Yellow", "Drain Wire : ATC", "Screen : Al Mylar Tape", "Braiding : ATC", "Outer Sheath : TPE-S", "Colour : Black Automotive FLR9YBC31Y Cables"],
     "technical": ["Temperature Range : -400C to + 1250C (3000 Hours)", "Max. Continuous working Temperature : 125°C", "Max. Conductor Tempature Termination of Short Circuit : 280°C", "Specification : ISO 6722 Class C"]
-   }
+   },
+   "catalogueNo": "B989"
   },
   {
    "id": "103747bb44",
@@ -6853,7 +6972,8 @@
     "features": ["Excellent Flame retardant", "Highly resistant against acids, Oil, Grease, Dust, Mud etc.", "Resistance to extremely low temperature", "Extra flexibility", "Class D, 1500C Continuous rated", "Outstanding Electrical properties.", "Halogen tree", "RoHS"],
     "construction": ["Conductor : Soft-annealed electrolytic Tinned Copper conductor", "Insulation : Specially Formulated EBXL - Co-Polymer - ACW", "Outer Sheath : Specially Formulated EBXL - Co-Polymer - AX 150", "Colour : As per customer order. Automotive ABS Sensor Cables"],
     "technical": ["Temperature Range : -400C to +1500C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Test Method : ISO 6722, Class D"]
-   }
+   },
+   "catalogueNo": "A887"
   },
   {
    "id": "ea7bf02379",
@@ -7443,7 +7563,7 @@
    "info": {
     "features": ["Low loss.", "Low capacitance.", "It is high cover, low loss type.", "Characteristic impedance is constant in high frequency domain."],
     "application": ["Capacitances design, suitable for any kind of mobile radio use.", "Low loss transmission"],
-    "construction": ["Conductor : Annealed Plain Solid Copper Conductor as per IS 8130", "Insulation : Cellular PE as per BS 6234", "Colour : White", "Braiding : APC as per IS 8130 ü2 DO Vutieerswheath : PVC ST2 as per IS 5831", "Sheath Colour : As per customer order Automotive 5P3-30B Cables"],
+    "construction": ["Conductor : Annealed Plain Solid Copper Conductor as per IS 8130", "Insulation : Cellular PE as per BS 6234", "Colour : White", "Braiding : APC as per IS 8130", "2 DO Vutieerswheath : PVC ST2 as per IS 5831", "Sheath Colour : As per customer order Automotive 5P3-30B Cables"],
     "technical": ["Rated Temperature : + 60°C", "Characteristic Impedance : 127Ω at 10MHz", "Electrostatic Capacity : 30 pF/ m at 1KHz", "High Temperature Exposure Test : 80°C", "Attenuation Factor : 90 dB/km at 10 MHz (Max)"]
    }
   },
@@ -7517,7 +7637,7 @@
    "info": {
     "features": ["Low loss.", "Characteristic Impedance is constant in high frequency domain.", "We are superior in flexibility workability after being lightweight.", "It is high cover, low loss type."],
     "application": ["Coaxial cable to be used as car antenna cable and feeder cable.", "Automotive inner Wiring for communication and Electronic Devices.", "Automotive TV/ Radio.", "Drop Wire, House wiring to indoor.", "Monitoring / Security camera.", "Ringing circuit connection between high frequency apparatus."],
-    "construction": ["Conductor : Annealed Plain Solid Copper Conductor", "Insulation : Foam PE", "Colour : Natural", "Taping : Al - Mylar tape ü2 D B Vraiideinwg : ATC", "Outer Sheath : Polyvinylchloride", "Sheath Color : As per customer request Automotive RG 58LL Cables"],
+    "construction": ["Conductor : Annealed Plain Solid Copper Conductor", "Insulation : Foam PE", "Colour : Natural", "Taping : Al - Mylar tape", "2 D B Vraiideinwg : ATC", "Outer Sheath : Polyvinylchloride", "Sheath Color : As per customer request Automotive RG 58LL Cables"],
     "technical": [
      "Standard : ES 96220-01",
      "Characteristic Impedance : 50 ± 2 Ω",
@@ -7564,7 +7684,7 @@
    "info": {
     "features": ["Low loss.", "Characteristic Impedance is constant in high frequency domain.", "We are superior in flexibility workability after being lightweight.", "It is high cover, low loss type."],
     "application": ["Used for car antenna cable and feeder cable.", "Automotive inner Wiring for communication and Electronic Devices.", "Automotive TV/ Radio.", "Drop Wire, House wiring to indoor.", "Monitoring / Security camera.", "Ringing circuit connection between high frequency apparatus."],
-    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : XLPE", "Colour : Natural", "Taping : Al -Mylar tape ü2 D B Vraiideinwg : ATC (Coverage 90%)", "Outer Sheath : Polyvinylchloride - Black", "Sheath Color : As per customer request Automotive 1.5D - EXHV - AS Cables"],
+    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : XLPE", "Colour : Natural", "Taping : Al -Mylar tape", "2 D B Vraiideinwg : ATC (Coverage 90%)", "Outer Sheath : Polyvinylchloride - Black", "Sheath Color : As per customer request Automotive 1.5D - EXHV - AS Cables"],
     "technical": [
      "Standard : ES 96220-01",
      "Characteristic Impedance : 50 ± 2 Ω",
@@ -7611,7 +7731,14 @@
    "info": {
     "features": ["Low loss.", "Characteristic Impedance is constant in high frequency domain.", "We are superior in flexibility workability after being lightweight.", "It is high cover, low loss type."],
     "application": ["Used for car antenna cable and feeder cable.", "Automotive inner Wiring for communication and Electronic Devices.", "Automotive TV/ Radio.", "Drop Wire, House wiring to indoor.", "Monitoring / Security camera.", "Ringing circuit connection between high frequency apparatus."],
-    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : Cross linked and foamed polyethylene", "Colour : White ü2 D T aVpiinegw : Copper Mylar tape (100% coverage)", "Braiding : ATC (Coverage 95%)", "Outer Sheath : Heat Resistance Polyvinylchloride - Black. Automotive 1.5DS - QFB(TA) Cables"],
+    "construction": [
+     "Conductor : Annealed Tinned Copper Conductor",
+     "Insulation : Cross linked and foamed polyethylene",
+     "Colour : White",
+     "2 D T aVpiinegw : Copper Mylar tape (100% coverage)",
+     "Braiding : ATC (Coverage 95%)",
+     "Outer Sheath : Heat Resistance Polyvinylchloride - Black. Automotive 1.5DS - QFB(TA) Cables"
+    ],
     "technical": ["Temperature Range : -40°C to +105°C", "Capacitance : 83±4 nF/Km", "Characteristic Impedance : 50 ± 2 Ω", "Min. Insulation Resistance : 1000 MΩ/km"]
    }
   },
@@ -7970,9 +8097,9 @@
    },
    "partNumbers": ["C090SA260004"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, ü CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system", "CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Copper Clad steel Conductor ü", "Insulation : XPE, Natural ü", "Shielded : Double Sided Aluminium Tape (Duofoil) ü", "Braiding : ATC ü", "Sheath : PVC, Black or Customer request ü", "Automotive SieCar 105-462 Cables"],
+    "construction": ["Conductor : Copper Clad steel Conductor", "Insulation : XPE, Natural", "Shielded : Double Sided Aluminium Tape (Duofoil)", "Braiding : ATC", "Sheath : PVC, Black or Customer request", "Automotive SieCar 105-462 Cables"],
     "technical": [
      "Temperature : -40°C to +105°C (3000 hrs)",
      "Voltage :60 VDC",
@@ -8018,9 +8145,9 @@
    },
    "partNumbers": ["B987A260004"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, ü CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas ü", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system", "CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Plain Copper Conductor ü", "Insulation : PP ü", "Core Identification : Natural ü", "Braiding : ATC ü", "Sheath : PVC, Black ü", "Automotive Sie Car 105-140 Cables"],
+    "construction": ["Conductor : Annealed Plain Copper Conductor", "Insulation : PP", "Core Identification : Natural", "Braiding : ATC", "Sheath : PVC, Black", "Automotive Sie Car 105-140 Cables"],
     "technical": [
      "Temperature : -40°C to + 105°C (3000 hrs)",
      "Test Voltage : 2 kV (AC)",
@@ -8064,9 +8191,9 @@
    },
    "partNumbers": ["C0890502"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, ü CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system", "CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Tinned Copper Conductor ü", "Insulation : PP ü", "Core identification : Green & White ü", "Sheath : TPE-S Black ü", "Automotive SieCar 125-546-V Cables"],
+    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : PP", "Core identification : Green & White", "Sheath : TPE-S Black", "Automotive SieCar 125-546-V Cables"],
     "technical": ["Temperature : -40°C to + 125°C (3000hrs)", "Test Voltage : 1 kV (AC) for 1 minute", "Max. operating Voltage : 60V (DC)", "Characteristic Impedance : 100 ± 10 Ω", "Bending radius : 5 x Cable OD"]
    }
   },
@@ -8102,9 +8229,9 @@
    },
    "partNumbers": ["TB6990102"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, ü CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system", "CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compared to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Tinned Copper Conductor ü", "Insulation : PP ü", "Core identification : Green & White ü", "Separating Tape : Provided ü", "Sheath : TPE-S Black ü Automotive SieCar 125-547 Cables"],
+    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : PP", "Core identification : Green & White", "Separating Tape : Provided", "Sheath : TPE-S Black", "Automotive SieCar 125-547 Cables"],
     "technical": ["Temperature : -40°C to + 125°C (3000hrs)", "Test Voltage : 1 kV (AC) for 1 minute", "Max. operating Voltage : 60V (DC)", "Characteristic Impedance : 100 ± 10 Ω", "Bending radius : 3 x Cable OD"]
    }
   },
@@ -8147,12 +8274,13 @@
     "application": ["Data cable for automotive comfort systems for static and dynamic installation after validation.", "Autonomous Driving", "Driver Assistance Systems", "Navigation & Infotainment", "Fond-Entertainment", "Internet & Mobile Communication"],
     "features": ["Recyclebility", "Extra Flexible", "Heat Resistant", "Flame Resistant", "Steady Impedance", "Lowest Alien NEXT", "Excellent Coupling Resistance", "Superior Environmental Properties", "Very Good Transmission Properties", "Outstanding Shield Attenuation Properties"],
     "construction": [
-     "Conductor : Annealed Tinned Copper Conductor ü",
-     "Insulation : Polypropylene (PP) Class B 105°C ü",
-     "Core identification : Brown, Green, Orange, Blue ü",
-     "Shielding : Aluminium Mylar Tape (Aluminium outside), ü (100% Coverage) ü",
-     "Braiding : ATC ü",
-     "Sheath : Lead Free PVC, Black ü",
+     "Conductor : Annealed Tinned Copper Conductor",
+     "Insulation : Polypropylene (PP) Class B 105°C",
+     "Core identification : Brown, Green, Orange, Blue",
+     "Shielding : Aluminium Mylar Tape (Aluminium outside)",
+     "(100% Coverage)",
+     "Braiding : ATC",
+     "Sheath : Lead Free PVC, Black",
      "Automotive SieCar 105-535 Cables"
     ],
     "technical": [
@@ -8208,9 +8336,9 @@
    },
    "partNumbers": ["B9860604"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, ü CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system", "CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Tinned Copper Conductor ü", "Insulation : Foamed PP ü", "Core Identification : Green, Red, Blue & Black ü", "Lay length (Nom) : 50mm ü", "Shielding : Aluminium Mylar Tape ü", "Braiding : ATC ü", "Sheath : PVC, Black ü", "Automotive SieCar 105-566 Cables"],
+    "construction": ["Conductor : Annealed Tinned Copper Conductor", "Insulation : Foamed PP", "Core Identification : Green, Red, Blue & Black", "Lay length (Nom) : 50mm", "Shielding : Aluminium Mylar Tape", "Braiding : ATC", "Sheath : PVC, Black", "Automotive SieCar 105-566 Cables"],
     "technical": [
      "Temperature : -40°C to + 105°C (3000 hrs)",
      "Test Voltage : 1 kV (AC) for 1 Minute",
@@ -8258,9 +8386,9 @@
    },
    "partNumbers": ["B995050004"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Bare Stranded Copper ü Conductor ü", "Insulation : Foamed PP, Natural ü", "Shielding : Aluminium mylar tape", "Braiding : ATC ü", "Sheath : Lead Free PVC, black ü", "Automotive SieCar 105-302-4 Cables"],
+    "construction": ["Conductor : Annealed Bare Stranded Copper", "Conductor", "Insulation : Foamed PP, Natural", "Shielding : Aluminium mylar tape", "Braiding : ATC", "Sheath : Lead Free PVC, black", "Automotive SieCar 105-302-4 Cables"],
     "technical": [
      "Temperature : -40°C to + 105°C (3000hrs)",
      "Max. Operating Voltage : 60V (DC)",
@@ -8274,7 +8402,7 @@
   {
    "id": "c9d69ea412",
    "family": "automotive",
-   "name": "Automotive SieCar  105-302-3 Cable",
+   "name": "Automotive SieCar 105-302-3 Cable",
    "pages": [173],
    "headers": [
     "Part Number",
@@ -8306,9 +8434,9 @@
    },
    "partNumbers": ["B995710004"],
    "info": {
-    "application": ["Wireless and antenna application ü", "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera ü and control unit and video signal transmission. ü", "Automotive radio antennas", "Used for high-frequency signal transmission"],
+    "application": ["Wireless and antenna application", "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera", "and control unit and video signal transmission.", "Automotive radio antennas", "Used for high-frequency signal transmission"],
     "features": ["Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.", "Highly resistant to EMI.", "Noise immunity due to a low error rate."],
-    "construction": ["Conductor : Annealed Bare Stranded Copper ü Conductor ü", "Insulation : Foamed PP, Natural ü", "Shielding : Aluminium mylar tape", "Braiding : ATC ü", "Sheath : Lead Free PVC, black ü", "Automotive SieCar 105-302-3 Cables"],
+    "construction": ["Conductor : Annealed Bare Stranded Copper", "Conductor", "Insulation : Foamed PP, Natural", "Shielding : Aluminium mylar tape", "Braiding : ATC", "Sheath : Lead Free PVC, black", "Automotive SieCar 105-302-3 Cables"],
     "technical": [
      "Temperature : -40°C to + 105°C (3000hrs)",
      "Max. Operating Voltage : 60V (DC)",
@@ -8576,7 +8704,7 @@
    "info": {
     "application": ["Low-tension electric wire for Automobiles.", "Used in Motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],
     "features": ["Flame retardant", "Highly resistant against acids, lyes, Petrol and diesel", "Halogen free"],
-    "construction": ["Conductor : Soft / annealed Plain Copper according to ASTM B3", "Insulation : Electron Beam Cross Linked Polyethylene", "Colour : As per customer order ü2 D C aVbilee cwonstruction according to ISO 6722, Class D (Thin wall)"],
+    "construction": ["Conductor : Soft / annealed Plain Copper according to ASTM B3", "Insulation : Electron Beam Cross Linked Polyethylene", "Colour : As per customer order", "2 D C aVbilee cwonstruction according to ISO 6722, Class D (Thin wall)"],
     "technical": [
      "Temperature Range: -400C to +1500C (3000 Hours)",
      "Standard : ISO 6722 Class D (Thin wall)",
@@ -9155,7 +9283,8 @@
     "features": ["Flame retardant", "Highly resistant against acids, lyes, petrol and diesel.", "Good mechanical & thermal properties", "Excellent chemical resistance", "Extra flexibility."],
     "construction": ["Conductor : Annealed Tinned copper conductor Conductor construction according to ISO 6722-1", "Insulation : ETFE ( Ethylene tetrafluoroethylene) with properties according to ISO 6722-1 Class E", "Colour : As per customer order."],
     "technical": ["Temperature Range : -400C to +1650C (3000 Hours)", "Test Voltage: 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard : ISO 6722 Class E (Thin Wall) MBN LV 112-1", "Voltage : 60V"]
-   }
+   },
+   "catalogueNo": "B695"
   },
   {
    "id": "b229e3e298",
@@ -9201,7 +9330,8 @@
     "features": ["Flame retardant.", "Highly resistant against acids, lyes, petrol and diesel.", "Good mechanical & thermal properties.", "Excellent chemical resistance.", "Extra flexibility.", "Class E Compliant."],
     "construction": ["Conductor : Annealed Tinned Flexible Copper (Symmetrical Structure A) Conductor construction according to ISO 6722-1", "Insulation : ETFE ( Ethylene tetrafluoroethylene) with properties according to ISO 6722-1 Class E", "Colour : As per customer order."],
     "technical": ["Temperature Range : -600C to +1800C (3000 Hours)", "Test Voltage 3kV (r.m.s.) for cables < 0.5 mm2 5kV (r.m.s.) for cables ≥ 0.5 mm2", "Standard ISO 6722-1 Class E (Thin Wall)", "Voltage 60V"]
-   }
+   },
+   "catalogueNo": "C293"
   }
  ]
 }

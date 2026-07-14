@@ -54,12 +54,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["229SE19XX", "229SE23XX", "229SE27XX", "230SE28XX", "230SE30XX", "230SE32XX", "230SE34XX", "230SE37XX", "230SE38XX", "230SE41XX", "230SE42XX", "230SE44XX", "230SE46XX", "230SE48XX", "230SE49XX", "230SE50XX", "230SE51XX"]
+   "partNumbers": ["229SE19XX", "229SE23XX", "229SE27XX", "230SE28XX", "230SE30XX", "230SE32XX", "230SE34XX", "230SE37XX", "230SE38XX", "230SE41XX", "230SE42XX", "230SE44XX", "230SE46XX", "230SE48XX", "230SE49XX", "230SE50XX", "230SE51XX"],
+   "catalogueNo": "229/230SE"
   },
   {
    "id": "89ad364fc9",
    "family": "is7098-power",
-   "name": "2 Core round  Aluminium Conductor EBXL - XLPE 120°C Insulated PVC ST2 Sheathed 1100 V (UA) Power cable as per IS 7098",
+   "name": "2 Core round Aluminium Conductor EBXL - XLPE 120°C Insulated PVC ST2 Sheathed 1100 V (UA) Power cable as per IS 7098",
    "pages": [10],
    "headers": [
     "Part Number",
@@ -96,7 +97,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["229E1902", "229E2302", "229E2702"]
+   "partNumbers": ["229E1902", "229E2302", "229E2702"],
+   "catalogueNo": "299E"
   },
   {
    "id": "f48e17c74b",
@@ -147,7 +149,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["230E2802", "230E3002", "230E3202", "230E3402", "230E3702", "230E3802", "230E4102", "230E4202", "230E4402", "230E4602", "230E4802", "230E4902"]
+   "partNumbers": ["230E2802", "230E3002", "230E3202", "230E3402", "230E3702", "230E3802", "230E4102", "230E4202", "230E4402", "230E4602", "230E4802", "230E4902"],
+   "catalogueNo": "230E"
   },
   {
    "id": "9727810f1d",
@@ -189,7 +192,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["229E1903", "229E2303", "229E2703"]
+   "partNumbers": ["229E1903", "229E2303", "229E2703"],
+   "catalogueNo": "229E"
   },
   {
    "id": "e8d55510d1",
@@ -240,7 +244,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["230E2803", "230E3003", "230E3203", "230E3403", "230E3703", "230E3803", "230E4103", "230E4203", "230E4403", "230E4603", "230E4803", "230E4903"]
+   "partNumbers": ["230E2803", "230E3003", "230E3203", "230E3403", "230E3703", "230E3803", "230E4103", "230E4203", "230E4403", "230E4603", "230E4803", "230E4903"],
+   "catalogueNo": "230E"
   },
   {
    "id": "6d381178df",
@@ -293,12 +298,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["230E303H", "230E323H", "230E343H", "230E373H", "230E383H", "230E413H", "230E423H", "230E443H", "230E463H", "230E483H", "230E493H"]
+   "partNumbers": ["230E303H", "230E323H", "230E343H", "230E373H", "230E383H", "230E413H", "230E423H", "230E443H", "230E463H", "230E483H", "230E493H"],
+   "catalogueNo": "230E"
   },
   {
    "id": "153c49cd30",
    "family": "is7098-power",
-   "name": "4 Core Round  Aluminium Conductor EBXL - XLPE 120°C Insulated PVC ST2 Sheathed 1100 V (UA) Power cable as per IS 7098",
+   "name": "4 Core Round Aluminium Conductor EBXL - XLPE 120°C Insulated PVC ST2 Sheathed 1100 V (UA) Power cable as per IS 7098",
    "pages": [15],
    "headers": [
     "Part Number",
@@ -335,7 +341,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["229E1904", "229E2304", "229E2704"]
+   "partNumbers": ["229E1904", "229E2304", "229E2704"],
+   "catalogueNo": "229E"
   },
   {
    "id": "0b7e728abb",
@@ -386,12 +393,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["230E2804", "230E3004", "230E3204", "230E3404", "230E3604", "230E3804", "230E4104", "230E4204", "230E4404", "230E4604", "230E4804", "230E4904"]
+   "partNumbers": ["230E2804", "230E3004", "230E3204", "230E3404", "230E3604", "230E3804", "230E4104", "230E4204", "230E4404", "230E4604", "230E4804", "230E4904"],
+   "catalogueNo": "230E"
   },
   {
    "id": "7d83ec76ea",
    "family": "is7098-power",
-   "name": "Single Core Aluminium Conductor EBXL - XLPE 120°C Insulated Gl wire Armoured  Sheathed 1100 V Power cable as per IS 7098",
+   "name": "Single Core Aluminium Conductor EBXL - XLPE 120°C Insulated Gl wire Armoured Sheathed 1100 V Power cable as per IS 7098",
    "pages": [17],
    "headers": [
     "Part Number",
@@ -444,7 +452,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["233SER19XX", "233SER23XX", "233SER27XX", "234SER28XX", "234SER30XX", "234SER32XX", "234SER34XX", "234SER37XX", "234SER38XX", "234SER41XX", "234SER4SXX", "234SER44XX", "234SER46XX", "234SER48XX", "234SER49XX", "234SER50XX", "234SER51XX"]
+   "partNumbers": ["233SER19XX", "233SER23XX", "233SER27XX", "234SER28XX", "234SER30XX", "234SER32XX", "234SER34XX", "234SER37XX", "234SER38XX", "234SER41XX", "234SER4SXX", "234SER44XX", "234SER46XX", "234SER48XX", "234SER49XX", "234SER50XX", "234SER51XX"],
+   "catalogueNo": "232E"
   },
   {
    "id": "f1f10b4569",
@@ -488,7 +497,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["233ER1902", "233ER2302", "233ER2702"]
+   "partNumbers": ["233ER1902", "233ER2302", "233ER2702"],
+   "catalogueNo": "233E"
   },
   {
    "id": "72909feb82",
@@ -541,7 +551,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["234ER2802", "234WF3002", "234WF3202", "234WF3402", "234WF3702", "234WF3802", "234WF4102", "234WF4202", "234WF4402", "234WF4602", "234WF4802", "234WF4902"]
+   "partNumbers": ["234ER2802", "234WF3002", "234WF3202", "234WF3402", "234WF3702", "234WF3802", "234WF4102", "234WF4202", "234WF4402", "234WF4602", "234WF4802", "234WF4902"],
+   "catalogueNo": "234E"
   },
   {
    "id": "d014260ec4",
@@ -585,7 +596,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["233ER1903", "233ER2303", "233ER2703"]
+   "partNumbers": ["233ER1903", "233ER2303", "233ER2703"],
+   "catalogueNo": "233E"
   },
   {
    "id": "3fc8e358a6",
@@ -638,7 +650,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["234WF2803", "234WF3003", "234WF3203", "234WF3403", "234WF3703", "234WF3803", "234WF4103", "234WF4203", "234WF4403", "234WF4603", "234WF4803", "234WF4903"]
+   "partNumbers": ["234WF2803", "234WF3003", "234WF3203", "234WF3403", "234WF3703", "234WF3803", "234WF4103", "234WF4203", "234WF4403", "234WF4603", "234WF4803", "234WF4903"],
+   "catalogueNo": "234E"
   },
   {
    "id": "d2a6d98aee",
@@ -693,7 +706,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["234WF303H", "234WF323H", "234WF343H", "234WF373H", "234WF383H", "234WF413H", "234WF423H", "234WF443H", "234WF463H", "234WF483H", "234WF493H"]
+   "partNumbers": ["234WF303H", "234WF323H", "234WF343H", "234WF373H", "234WF383H", "234WF413H", "234WF423H", "234WF443H", "234WF463H", "234WF483H", "234WF493H"],
+   "catalogueNo": "232E"
   },
   {
    "id": "3ea1628b0d",
@@ -737,7 +751,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["233ER1904", "233ER2304", "233ER2704"]
+   "partNumbers": ["233ER1904", "233ER2304", "233ER2704"],
+   "catalogueNo": "233E"
   },
   {
    "id": "eecb7a045b",
@@ -790,7 +805,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["234WF2804", "234WF3004", "234WF3204", "234WF3404", "234WF3704", "234WF3804", "234WF4104", "234WF4204", "234WF4404", "234WF4604", "234WF4804", "234WF4904"]
+   "partNumbers": ["234WF2804", "234WF3004", "234WF3204", "234WF3404", "234WF3704", "234WF3804", "234WF4104", "234WF4204", "234WF4404", "234WF4604", "234WF4804", "234WF4904"],
+   "catalogueNo": "232E"
   },
   {
    "id": "6edfe45f7d",
@@ -847,7 +863,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["239SE13XX", "239SE16XX", "239SE19XX", "239SE23XX", "240SE17XX", "240SE28XX", "240SE30XX", "240SE32XX", "240SE34XX", "240SE37XX", "240SE38XX", "240SE41XX", "240SE42XX", "240SE44XX", "240SE46XX", "240SE48XX", "240SE49XX", "240SE50XX", "240SE51XX"]
+   "partNumbers": ["239SE13XX", "239SE16XX", "239SE19XX", "239SE23XX", "240SE17XX", "240SE28XX", "240SE30XX", "240SE32XX", "240SE34XX", "240SE37XX", "240SE38XX", "240SE41XX", "240SE42XX", "240SE44XX", "240SE46XX", "240SE48XX", "240SE49XX", "240SE50XX", "240SE51XX"],
+   "catalogueNo": "240SE"
   },
   {
    "id": "6a02d7d9e0",
@@ -889,7 +906,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["239E1302", "239E1602", "239E1902", "239E2302"]
+   "partNumbers": ["239E1302", "239E1602", "239E1902", "239E2302"],
+   "catalogueNo": "239E"
   },
   {
    "id": "8edf486846",
@@ -940,7 +958,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["240E2702", "240E2802", "240E3002", "240E3202", "240E3402", "240E3702", "240E3802", "240E4102", "240E4202", "240E4402", "240E4602", "240E4802", "240E4902"]
+   "partNumbers": ["240E2702", "240E2802", "240E3002", "240E3202", "240E3402", "240E3702", "240E3802", "240E4102", "240E4202", "240E4402", "240E4602", "240E4802", "240E4902"],
+   "catalogueNo": "240E"
   },
   {
    "id": "bd34219a71",
@@ -995,7 +1014,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["239E1303", "239E1603", "239E1903", "239E2303", "240E2703", "240E2803", "240E3003", "240E3203", "240E3403", "240E3703", "240E3803", "240E4103", "240E4203", "240E4403", "240E4603", "240E4803", "240E4903"]
+   "partNumbers": ["239E1303", "239E1603", "239E1903", "239E2303", "240E2703", "240E2803", "240E3003", "240E3203", "240E3403", "240E3703", "240E3803", "240E4103", "240E4203", "240E4403", "240E4603", "240E4803", "240E4903"],
+   "catalogueNo": "239E"
   },
   {
    "id": "2a6f44d884",
@@ -1047,7 +1067,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["240E303H", "240E323H", "240E343H", "240E373H", "240E383H", "240E413H", "240E423H", "240E443H", "240E463H", "240E483H", "240E493H"]
+   "partNumbers": ["240E303H", "240E323H", "240E343H", "240E373H", "240E383H", "240E413H", "240E423H", "240E443H", "240E463H", "240E483H", "240E493H"],
+   "catalogueNo": "240E"
   },
   {
    "id": "bd345d91ae",
@@ -1089,7 +1110,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["239E1304", "239E1604", "239E1904", "239E2304"]
+   "partNumbers": ["239E1304", "239E1604", "239E1904", "239E2304"],
+   "catalogueNo": "239E"
   },
   {
    "id": "c1ec7ccf75",
@@ -1139,12 +1161,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["240E2704", "240E3004", "240E3204", "240E3404", "240E3704", "240E3804", "240E4104", "240E4204", "240E4404", "240E4604", "240E4804", "240E4904"]
+   "partNumbers": ["240E2704", "240E3004", "240E3204", "240E3404", "240E3704", "240E3804", "240E4104", "240E4204", "240E4404", "240E4604", "240E4804", "240E4904"],
+   "catalogueNo": "240E"
   },
   {
    "id": "94086c63e6",
    "family": "is7098-power",
-   "name": "Single Core APC Conductor EBXL - XLPE 120°C Insulated GI Wire Armoured PVC ST2  Sheathed 1100 V Power cable as per IS 7098",
+   "name": "Single Core APC Conductor EBXL - XLPE 120°C Insulated GI Wire Armoured PVC ST2 Sheathed 1100 V Power cable as per IS 7098",
    "pages": [33],
    "headers": [
     "Part Number",
@@ -1198,7 +1221,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["243SER13XX", "243SER16XX", "243SER19XX", "243SER23XX", "244SER27XX", "244SER28XX", "244SER30XX", "244SER32XX", "244SER34XX", "244SER37XX", "244SER38XX", "244SER41XX", "244SER42XX", "244SER44XX", "244SER46XX", "244SER48XX", "244SER49XX", "244SER50XX", "244SER51XX"]
+   "partNumbers": ["243SER13XX", "243SER16XX", "243SER19XX", "243SER23XX", "244SER27XX", "244SER28XX", "244SER30XX", "244SER32XX", "244SER34XX", "244SER37XX", "244SER38XX", "244SER41XX", "244SER42XX", "244SER44XX", "244SER46XX", "244SER48XX", "244SER49XX", "244SER50XX", "244SER51XX"],
+   "catalogueNo": "242E"
   },
   {
    "id": "403fa603b0",
@@ -1242,7 +1266,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["243ER1302", "243ER1602", "243ER1902", "243ER2302"]
+   "partNumbers": ["243ER1302", "243ER1602", "243ER1902", "243ER2302"],
+   "catalogueNo": "243E"
   },
   {
    "id": "fc7f09bf03",
@@ -1297,7 +1322,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["244WF2702", "244ER2802", "244WF3002", "244WF3202", "244WF3402", "244WF3702", "244WF3802", "244WF4102", "244WF4202", "244WF4402", "244WF4602", "244WF4802", "244WF4902"]
+   "partNumbers": ["244WF2702", "244ER2802", "244WF3002", "244WF3202", "244WF3402", "244WF3702", "244WF3802", "244WF4102", "244WF4202", "244WF4402", "244WF4602", "244WF4802", "244WF4902"],
+   "catalogueNo": "244W"
   },
   {
    "id": "4834f41433",
@@ -1342,7 +1368,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["243ER1303", "243ER1603", "243ER1903", "243ER2303"]
+   "partNumbers": ["243ER1303", "243ER1603", "243ER1903", "243ER2303"],
+   "catalogueNo": "243E"
   },
   {
    "id": "6231910b5f",
@@ -1396,7 +1423,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["244WF2703", "244WF2803", "244WF3003", "244WF3203", "244WF3403", "244WF3703", "244WF3803", "244WF4103", "244WF4203", "244WF4403", "244WF4603", "244WF4803", "244WF4903"]
+   "partNumbers": ["244WF2703", "244WF2803", "244WF3003", "244WF3203", "244WF3403", "244WF3703", "244WF3803", "244WF4103", "244WF4203", "244WF4403", "244WF4603", "244WF4803", "244WF4903"],
+   "catalogueNo": "244W"
   },
   {
    "id": "fff46abf15",
@@ -1450,7 +1478,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["244WF303H", "244WF323H", "244WF343H", "244WF373H", "244WF383H", "244WF413H", "244WF423H", "244WF443H", "244WF463H", "244WF483H", "244WF493H"]
+   "partNumbers": ["244WF303H", "244WF323H", "244WF343H", "244WF373H", "244WF383H", "244WF413H", "244WF423H", "244WF443H", "244WF463H", "244WF483H", "244WF493H"],
+   "catalogueNo": "244W"
   },
   {
    "id": "7532008d8e",
@@ -1494,7 +1523,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["243ER1304", "243ER1604", "243ER1904", "243ER2304"]
+   "partNumbers": ["243ER1304", "243ER1604", "243ER1904", "243ER2304"],
+   "catalogueNo": "243E"
   },
   {
    "id": "617db0172a",
@@ -1547,7 +1577,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["244WF2704", "244WF2804", "244WF3004", "244WF3204", "244WF3404", "244WF3704", "244WF3804", "244WF4104", "244WF4204", "244WF4404", "244WF4604", "244WF4804", "244WF4904"]
+   "partNumbers": ["244WF2704", "244WF2804", "244WF3004", "244WF3204", "244WF3404", "244WF3704", "244WF3804", "244WF4104", "244WF4204", "244WF4404", "244WF4604", "244WF4804", "244WF4904"],
+   "catalogueNo": "244W"
   }
  ]
 }

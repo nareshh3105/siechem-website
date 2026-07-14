@@ -286,7 +286,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6021303G", "6021304G", "6021305G", "6021603G", "6021604G", "6021605G"]
+   "partNumbers": ["6021303G", "6021304G", "6021305G", "6021603G", "6021604G", "6021605G"],
+   "catalogueNo": "602"
   },
   {
    "id": "3d1df9fdfb",
@@ -416,7 +417,8 @@
      "Bending Radius(Minimum) : Flexing : 20 x Cable Diameter Static : 6 x Cable Diameter",
      "Rated Voltage : (U/U) 0 Up to 1.0mm2 : 300/500 V From 1.5mm2 : 450/750 V From 1.5mm2(Fixed & Protected Installation) : 600/1000 V"
     ]
-   }
+   },
+   "catalogueNo": "603"
   },
   {
    "id": "27abff5da0",
@@ -607,7 +609,8 @@
      "Rated Voltage : (U/U) 0 Up to 1.0mm2 : 300/500 V From 1.5mm2 : 450/750 V From 1.5mm2(Fixed &Protected Installation) : 600/1000 V",
      "Specific Insulation Resistance : >20 G Ohm x cm."
     ]
-   }
+   },
+   "catalogueNo": "604"
   },
   {
    "id": "ea9ff9691d",
@@ -666,7 +669,8 @@
      "Rated Voltage : (U/U) 600/1000V 0",
      "Specific Insulation Resistance : >20 G Ohm x cm."
     ]
-   }
+   },
+   "catalogueNo": "605"
   },
   {
    "id": "cfc51d75e9",
@@ -693,7 +697,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["6051904G", "6052304G", "6052704G", "6052804G", "6053004G", "6053204G", "6053404G", "6053704G", "6053804G", "6054104G"]
+   "partNumbers": ["6051904G", "6052304G", "6052704G", "6052804G", "6053004G", "6053204G", "6053404G", "6053704G", "6053804G", "6054104G"],
+   "catalogueNo": "605"
   },
   {
    "id": "3e57de9a0e",
@@ -884,7 +889,8 @@
     "6063805G",
     "6064103G",
     "6064104G"
-   ]
+   ],
+   "catalogueNo": "606"
   },
   {
    "id": "80d0117ff8",
@@ -1302,7 +1308,8 @@
     "6073007G",
     "6073204G",
     "6073205G"
-   ]
+   ],
+   "catalogueNo": "607"
   },
   {
    "id": "47224cb324",
@@ -1697,7 +1704,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0281"
     ]
-   }
+   },
+   "catalogueNo": "610"
   },
   {
    "id": "6ddea1a217",
@@ -1906,7 +1914,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 7030 Accreditations"
     ]
-   }
+   },
+   "catalogueNo": "611"
   },
   {
    "id": "7f6c303cfd",
@@ -1953,7 +1962,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0281."
     ]
-   }
+   },
+   "catalogueNo": "612"
   },
   {
    "id": "c5cf83d6cb",
@@ -2058,7 +2068,7 @@
   {
    "id": "609247e147",
    "family": "sflex",
-   "name": "SFLEX CLASSIC 110CH  0.5kV Flexible Cables",
+   "name": "SFLEX CLASSIC 110CH 0.5kV Flexible Cables",
    "pages": [35],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -2145,7 +2155,7 @@
   {
    "id": "b47d9fd9e5",
    "family": "sflex",
-   "name": "SFLEX CLASSIC 115 CY  0.5kV Flexible Cables",
+   "name": "SFLEX CLASSIC 115 CY 0.5kV Flexible Cables",
    "pages": [37, 38],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -2226,7 +2236,7 @@
    "notes": [],
    "attrs": {
     "voltage": "300/500V",
-    "tempMentions": ["+70C", "-40C", "+80C", "\n12C"],
+    "tempMentions": ["+70C", "-40C", "+80C", "12C"],
     "materials": ["PVC", "Silicone"],
     "conductors": ["Tinned Copper", "Bare Copper"],
     "shielded": true,
@@ -2324,7 +2334,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0281"
     ]
-   }
+   },
+   "catalogueNo": "615"
   },
   {
    "id": "0557040b7b",
@@ -2376,7 +2387,7 @@
    "notes": [],
    "attrs": {
     "voltage": "300/500V",
-    "tempMentions": ["-15C", "+70C", "-40C", "\n12C"],
+    "tempMentions": ["-15C", "+70C", "-40C", "12C"],
     "conductors": ["Bare Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -2450,7 +2461,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["\n12C"],
+    "tempMentions": ["12C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -2508,7 +2519,8 @@
     "6162805G",
     "6163004G",
     "6163005G"
-   ]
+   ],
+   "catalogueNo": "616"
   },
   {
    "id": "1a032f0f31",
@@ -2604,12 +2616,13 @@
     "6172804G",
     "6172805G",
     "6173004G"
-   ]
+   ],
+   "catalogueNo": "617"
   },
   {
    "id": "01ffc46e63",
    "family": "sflex",
-   "name": "SFLEX CLASSIC 135CH  1kV Flexible Cables",
+   "name": "SFLEX CLASSIC 135CH 1kV Flexible Cables",
    "pages": [42],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -2647,7 +2660,7 @@
    "notes": [],
    "attrs": {
     "voltage": "300/500V",
-    "tempMentions": ["-15C", "+70C", "-40C", "\n12C"],
+    "tempMentions": ["-15C", "+70C", "-40C", "12C"],
     "conductors": ["Tinned Copper", "Bare Copper"],
     "shielded": true,
     "halogenFree": true,
@@ -2708,7 +2721,7 @@
   {
    "id": "18431d55fa",
    "family": "sflex",
-   "name": "SFLEX CLASSIC 135CH  1kV Flexible Cables",
+   "name": "SFLEX CLASSIC 135CH 1kV Flexible Cables",
    "pages": [43, 44, 45],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -2795,7 +2808,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["\n12C", "\n25C"],
+    "tempMentions": ["12C", "25C"],
     "voltBucket": null,
     "sizesSqmm": [],
     "awg": [],
@@ -2896,7 +2909,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0281"
     ]
-   }
+   },
+   "catalogueNo": "618"
   },
   {
    "id": "77dcbf1f25",
@@ -2932,7 +2946,8 @@
     "features": ["Excellent UV resistance. Resistant to oils and Various chemicals. Resistant to cold Number of"],
     "construction": ["Conductor: Finely Stranded Bare Copper Wires.", "Insulation: PVC Compound.", "Outer Sheath: Special PVC Compound.", "Colored Cores."],
     "technical": ["Temperature Range: Fixed Installation : -400C to +850C", "Testing Voltage : 5 kV", "Bending Radius(Minimum): 12 x Cable Diameter", "Rated Voltage:(U/U) 60 V 0", "Specific Insulation Resistance: 10 M Ohm x cm.", "As per VDE 0281"]
-   }
+   },
+   "catalogueNo": "620"
   },
   {
    "id": "09800492fd",
@@ -2965,7 +2980,8 @@
     "features": ["Polarity identification is possible without stripping the sheath or external marking.", "Double sheathed version is extremely tough.", "Very strong connection but offering easy separation of the cable by hand. Number"],
     "construction": ["Conductor : Finely Stranded Bare Copper Wires. ü Insulation : PVC based Compound. ü Outer Sheath : Special PVC Compound. ü Cores : Black with White Numbers."],
     "technical": ["Temperature Range : -400C to +850C", "Testing Voltage : 3 kV", "Protective Conductor(PC) : G-With green/yellow PC X-Without PC", "Bending Radius(Minimum) : 15 x Cable Diameter", "Rated Voltage : 75 V DC", "Specific Insulation Resistance : 10 M Ohm x cm."]
-   }
+   },
+   "catalogueNo": "621"
   },
   {
    "id": "8ff13b4b8c",
@@ -3008,7 +3024,8 @@
      "Specific Insulation Resistance: >20 G Ohm x cm.",
      "As per VDE 0250/0281."
     ]
-   }
+   },
+   "catalogueNo": "622"
   },
   {
    "id": "90b17a2e8c",
@@ -3053,12 +3070,13 @@
      "Specific Insulation Resistance: >20 G Ohm x cm.",
      "As per VDE 0250/0281."
     ]
-   }
+   },
+   "catalogueNo": "623"
   },
   {
    "id": "4474bc2655",
    "family": "sflex",
-   "name": "SFLEX FD CLASSIC 810  0.75kV Flexible Cables",
+   "name": "SFLEX FD CLASSIC 810 0.75kV Flexible Cables",
    "pages": [50],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -3234,12 +3252,13 @@
     "6242705G",
     "6242804G",
     "6242805G"
-   ]
+   ],
+   "catalogueNo": "624"
   },
   {
    "id": "29214abcba",
    "family": "sflex",
-   "name": "SFLEX FD CLASSIC 810CY  0.75kV Flexible Cables",
+   "name": "SFLEX FD CLASSIC 810CY 0.75kV Flexible Cables",
    "pages": [52],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -3322,7 +3341,7 @@
   {
    "id": "cdce318958",
    "family": "sflex",
-   "name": "SFLEX FD 820H  0.75kV Flexible Cables",
+   "name": "SFLEX FD 820H 0.75kV Flexible Cables",
    "pages": [54, 55],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -3443,12 +3462,13 @@
      "Specific Insulation Resistance : 1 T Ohm x cm.",
      "As per VDE 0245/0250/0281/0282"
     ]
-   }
+   },
+   "catalogueNo": "626"
   },
   {
    "id": "71bb461bac",
    "family": "sflex",
-   "name": "SFLEX FD 820CH  0.75kV Flexible Cables",
+   "name": "SFLEX FD 820CH 0.75kV Flexible Cables",
    "pages": [56, 57],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -3569,7 +3589,8 @@
      "Specific Insulation Resistance : >1 T Ohm x cm.",
      "As per VDE 0281"
     ]
-   }
+   },
+   "catalogueNo": "627"
   },
   {
    "id": "e91174c811",
@@ -3678,12 +3699,13 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0245,0250,0281."
     ]
-   }
+   },
+   "catalogueNo": "628"
   },
   {
    "id": "6569200b59",
    "family": "sflex",
-   "name": "SFLEX FD 891 CY  0.5kV Flexible Cables",
+   "name": "SFLEX FD 891 CY 0.5kV Flexible Cables",
    "pages": [60, 61],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -3788,7 +3810,8 @@
      "Specific Insulation Resistance : >20 G Ohm x cm.",
      "As per VDE 0245,0250,0281."
     ]
-   }
+   },
+   "catalogueNo": "629"
   },
   {
    "id": "ee16afcf53",
@@ -3825,7 +3848,7 @@
    ],
    "notes": [],
    "attrs": {
-    "tempMentions": ["+70C", "-40C", "+80C", "\n12C"],
+    "tempMentions": ["+70C", "-40C", "+80C", "12C"],
     "materials": ["PVC", "Silicone"],
     "conductors": ["Bare Copper"],
     "shielded": true,
@@ -3851,7 +3874,8 @@
      "Mutual Capacitance : 110nF / km.",
      "As per VDE 0281."
     ]
-   }
+   },
+   "catalogueNo": "630"
   },
   {
    "id": "f79a07f773",
@@ -3955,7 +3979,8 @@
      "Mutual Capacitance: Core/Core :135 nf / km(approx.) Core/Shielding :185 nf / km(approx.)",
      "As per VDE 0293."
     ]
-   }
+   },
+   "catalogueNo": "631"
   },
   {
    "id": "72817d570c",
@@ -4011,7 +4036,8 @@
      "Rated Voltage : (U/U) 450/750 V 0 Protected and Fixed Installation : 600/1000 V",
      "Specific Insulation Resistance : >20 G Ohm x cm."
     ]
-   }
+   },
+   "catalogueNo": "632"
   },
   {
    "id": "4ae8bbb247",
@@ -4057,7 +4083,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["63319XX", "63323XX", "63327XX", "63328XX", "63330XX", "63332XX", "6331303G", "6331304G", "6331307G", "6331603G", "6331604G", "6331607G", "6331903G", "6331904G", "6331907G", "6332304G", "6332704G", "6332804G", "6333004G", "6333204G", "6333404G", "6333704G", "6333804G", "Red - 01", "Chocolate - 12"]
+   "partNumbers": ["63319XX", "63323XX", "63327XX", "63328XX", "63330XX", "63332XX", "6331303G", "6331304G", "6331307G", "6331603G", "6331604G", "6331607G", "6331903G", "6331904G", "6331907G", "6332304G", "6332704G", "6332804G", "6333004G", "6333204G", "6333404G", "6333704G", "6333804G", "Red - 01", "Chocolate - 12"],
+   "catalogueNo": "633"
   },
   {
    "id": "5efe441bb0",
@@ -4155,7 +4182,8 @@
     "application": ["Suitable for rail coaches. ü Used in Rolling stock. ü"],
     "construction": ["Conductor: Fine Tinned Copper Strand. Insulation: Polyolefin Copolymer Compound."],
     "technical": ["Temperature Range: Fixed applications : -450C to +1200C Occasionally moved : -350C to +900C Short Circuit :+2000C", "Test Voltage : 3.5 kV", "Bending Radius(Minimum): Flexing : 10 x Cable Diameter Static : 4 x Cable Diameter", "Rated Voltage:(U/U) 0 AC 0.6/1(1.2) kV DC 0.9 kV."]
-   }
+   },
+   "catalogueNo": "634"
   },
   {
    "id": "9a9699de80",
@@ -4288,7 +4316,8 @@
     "features": ["Can withstand 1KV.", "Designed for permanent use in water.", "High mechanical stress applications.", "Oil resistant, Ozone resistant.", "UV resistant."],
     "construction": ["Conductor: Tinned Copper Strand Wires.", "Insulation: Polyolefin Copolymer Compound.", "Braiding: Tinned Copper Wire.", "Outer Sheath: Polyolefin Copolymer Compound.", "Cores: Black with White Numbers."],
     "technical": ["Temperature Range: Fixed applications : -450C to +1200C Occasionally moved : -350C to +900C Short Circuit : +2000C", "Test Voltage : 4 kV", "Bending Radius(Minimum): Fixed : > 4 x Cable Diameter Occasionally moved : > 12 x Cable Diameter", "Rated Voltage:(U 0/U) AC 0.6/1(1.2) kV DC 0.9 kV."]
-   }
+   },
+   "catalogueNo": "635"
   },
   {
    "id": "038a465ba5",
@@ -4414,7 +4443,8 @@
      "Bending Radius(Minimum) : Fixed Installations : >4 x Cable Diameter Occasionally Moved : > 12 x Cable Diameter",
      "Rated Voltage : (U/U) 0 AC 0.6/1(1.2) kV DC 0.9 kV Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "636"
   },
   {
    "id": "3d15edb04b",
@@ -4461,7 +4491,8 @@
      "Bending Radius(Minimum): <10 mm: Fixed Installations : >5 x Cable Diameter. Occasionally Moved : >7 x Cable Diameter. >10 mm: Fixed Installations : >6 x Cable Diameter. Occasionally Moved : >8 x Cable Diameter.",
      "Rated Voltage:(U/U) 0 AC 1.8/3 kV DC 2.7 kV"
     ]
-   }
+   },
+   "catalogueNo": "637"
   },
   {
    "id": "b84f644995",
@@ -4509,7 +4540,8 @@
      "Bending Radius(Minimum): <10 mm: Fixed Installations : >5 x Cable Diameter. Occasionally Moved : >7 x Cable Diameter. >10 mm: Fixed Installations : >6 x Cable Diameter. Occasionally Moved : >8 x Cable Diameter.",
      "Rated Voltage:(U/U) 0 AC 1.8/3(3.6) kV DC 2.7 kV"
     ]
-   }
+   },
+   "catalogueNo": "638"
   },
   {
    "id": "d8de64d086",
@@ -4593,7 +4625,8 @@
     "63942XX",
     "63944XX",
     "63946XX"
-   ]
+   ],
+   "catalogueNo": "639"
   },
   {
    "id": "4fbf227478",
@@ -4642,7 +4675,8 @@
      "Bending Radius(Minimum): Flexing : 10 x Cable Diameter Static : 6 x Cable Diameter",
      "Rated Voltage (U/U) : 1.8/3 kV 0 Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Outer Sheath Weight"
     ]
-   }
+   },
+   "catalogueNo": "641"
   },
   {
    "id": "c1962b0b9e",
@@ -4684,12 +4718,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["64013XX", "64016XX", "64019XX", "64023XX", "64027XX", "64028XX", "64030XX", "64032XX", "64034XX", "64037XX", "64038XX", "64041XX", "64042XX", "64044XX", "64046XX", "64048XX"]
+   "partNumbers": ["64013XX", "64016XX", "64019XX", "64023XX", "64027XX", "64028XX", "64030XX", "64032XX", "64034XX", "64037XX", "64038XX", "64041XX", "64042XX", "64044XX", "64046XX", "64048XX"],
+   "catalogueNo": "640"
   },
   {
    "id": "0a0a50e2da",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H03VV-F) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H03VV-F) Type",
    "pages": [79],
    "headers": ["Part Number", "Number", "Size", "Conductor", "Thickness of", "Thickness of", "Overall diameter", "", "Max. Conductor", "Weight"],
    "rows": [
@@ -4726,12 +4761,13 @@
     "features": ["Flame Retardant according to IEC/EN 60332-1-2 Cable flexibility Low Mechanical resistance to impacts Harmonized flexible cable for internal PVC self-extinguishing Oil resistant variant"],
     "construction": ["Conductor : Annealed copper conductor, class 5 ü flexible conductor as per EN 60228 Insulation : PVC Type TI 2 as per EN 50363-3 ü Sheath : PVC Type TM 2 as per EN 50363 -4-1 . ü"],
     "technical": ["Specification : BS EN 50525-2-11:2011 BS-6500", "Test voltage : 2kV", "Conductor resistance : EN 60228", "Working voltage(u/u) : 300/300 V o", "Temperature :70°C"]
-   }
+   },
+   "catalogueNo": "A030"
   },
   {
    "id": "5e16f696b5",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (HO3VVH2-F) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (HO3VVH2-F) Type",
    "pages": [80],
    "headers": ["Part Number", "Number", "Size", "Conductor", "Thickness of", "Thickness of Sheath", "Overall dimension (Height x Width)", "", "Max. Conductor", "Weight"],
    "rows": [
@@ -4771,12 +4807,13 @@
      "Working voltage (u/u): 300/300V o",
      "Max. Operating temperature : 700C Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Overall dimension Max. ui mgh t x W Mi ad xth im) C reo sn isd tu ac nt co er W ppe ri og xh .t"
     ]
-   }
+   },
+   "catalogueNo": "031"
   },
   {
    "id": "14e42ed393",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H05VV-F) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H05VV-F) Type",
    "pages": [81],
    "headers": ["Part Number", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath", "Overall diameter", "", "Max. Conductor resistance", "Weight approx."],
    "rows": [
@@ -4834,12 +4871,13 @@
      "Max. Operating temperature : 700C",
      "Working voltage (u o/u): 300/500V Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Max. diameter C reo sn isd tu ac nt co er W ape pi rg oh xt"
     ]
-   }
+   },
+   "catalogueNo": "A032"
   },
   {
    "id": "2b3ef8a278",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H05VVH2-F) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H05VVH2-F) Type",
    "pages": [82],
    "headers": ["Part Number", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath", "Overall dimension (Height x Width) — Minimum", "Maximum", "Max. Conducto r resistance at 20 0C", "Weight approx."],
    "rows": [
@@ -4880,12 +4918,13 @@
      "Working voltage (u/u) : 300/500 V o",
      "Max. operating temperature : 700C Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** dimension Max. Conducto r Weight"
     ]
-   }
+   },
+   "catalogueNo": "033"
   },
   {
    "id": "278f671d16",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H03V2V2-F ) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H03V2V2-F ) Type",
    "pages": [83],
    "headers": ["Part Number", "Number of Cores", "Size", "Conduct o r diameter", "Thickness of insulation", "Thickness of Sheath", "overall diameter — Minimum", "Maximum", "Max. condutor resistance 20 0C", "Weight approx."],
    "rows": [
@@ -4902,7 +4941,7 @@
    ],
    "attrs": {
     "voltage": "300/500V",
-    "tempMentions": ["\n20C", "90C"],
+    "tempMentions": ["20C", "90C"],
     "materials": ["PVC"],
     "conductors": ["Annealed Copper"],
     "fireSafety": true,
@@ -4923,12 +4962,13 @@
     "features": ["Flame Retardant according to IEC/EN 60332-1-2 Cable flexibility Low Mechanical resistance to impacts Harmonized flexible cable for internal PVC self-extinguishing Oil resistant variant Number Size Conduct o r"],
     "construction": ["Conductor : Annealed copper conductor, Class 5 flexible conductor as per EN 60228", "Insulation : PVC Type TI 3 as per EN 50363-3.", "Sheath : PVC Type TM 3 as per EN 50363-4-1"],
     "technical": ["Specification :BS EN 50525-2-11:2011 BS-6500", "Test voltage -2kV", "Conductor resistance - EN 60228", "Working voltage : 300/300 Volts", "Max. Operating Temp : 900C"]
-   }
+   },
+   "catalogueNo": "034"
   },
   {
    "id": "d667ed9eeb",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H03V2V2H2-F ) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H03V2V2H2-F ) Type",
    "pages": [84],
    "headers": ["Part Number", "Number", "Size", "Conducto r", "Thickness of insulation", "Thickness of Sheath", "Overall dimension (Height x Width)", "", "Max conductor", "Weight"],
    "rows": [
@@ -4963,12 +5003,13 @@
     "features": ["Flame Retardant according to IEC/EN 60332-1-2 Cable flexibility Low Mechanical resistance to impacts Harmonized flexible cable for internal PVC self-extinguishing Oil resistant variant N ofu Cm ob re er C do ian mdu ec teto r T h inic sk"],
     "construction": ["Conductor : Annealed copper conductor, Class 5 flexible conductor as per EN 60228", "Insulation : PVC Type TI 3 as per EN 50363-3.", "Sheath : PVC Type TM 3 as per EN 50363-4-1"],
     "technical": ["Specification :BS EN 50525-2-11:2011 BS-6500", "Test voltage -2kV", "Conductor resistance - EN 60228", "Working Voltage (u 0/u): 300/300 V", "Max operating Temp : 900C"]
-   }
+   },
+   "catalogueNo": "035"
   },
   {
    "id": "e1ac837883",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H05V2V2-F ) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H05V2V2-F ) Type",
    "pages": [85],
    "headers": ["Part Number", "Number", "", "Conducto r", "Thickness of", "Thickness of", "Overall diameter", "", "Max conductor", "Weight"],
    "rows": [
@@ -5026,12 +5067,13 @@
      "Max operating Temps : 900C",
      "Max short circuit temp : 1600C Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Max diameter rc eo sn isd tu ac nt co er W ape pig roh xt"
     ]
-   }
+   },
+   "catalogueNo": "036"
   },
   {
    "id": "bb758b948f",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H05V2V2H2-F ) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H05V2V2H2-F ) Type",
    "pages": [86],
    "headers": ["Part Number", "Number", "", "Conductor", "Thickness of", "Thickness of", "Overall dimension (Height x Width)", "", "Max conducto r", "Weight"],
    "rows": [
@@ -5055,12 +5097,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A0370802", "A0371002", "A0371302"]
+   "partNumbers": ["A0370802", "A0371002", "A0371302"],
+   "catalogueNo": "037"
   },
   {
    "id": "ae84da0321",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable  (H05V2V2D3-F ) Type",
+   "name": "Annealed Plain Copper Conductor PVC Insulated and PVC Sheathed Cable (H05V2V2D3-F ) Type",
    "pages": [87],
    "headers": ["Part Number", "Number", "Size", "conductor", "Thickness of insulation", "Thickness of", "Overall diameter", "", "Max. conductor", "Weight"],
    "rows": [
@@ -5103,12 +5146,13 @@
      "Working Voltage (u 0/u) : 300/500V",
      "Max.Operating Temp : 900C Ap p rovals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** diameter Max."
     ]
-   }
+   },
+   "catalogueNo": "038"
   },
   {
    "id": "3bdbb193ce",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor 300/500V Rubber  Insulated and  Sheathed (H05RR-F ) Ordinary Duty Cable",
+   "name": "Annealed Plain Copper Conductor 300/500V Rubber Insulated and Sheathed (H05RR-F ) Ordinary Duty Cable",
    "pages": [88],
    "headers": [
     "Application Product Construction Technical Data ü Use for medium mechanical stress in dry, damp and ü Conductor : Annealed copper conductor class 5 ü Specification :BS EN 50525-2-21:2011 wet areas flexible conductor as per EN 60228 BS-6500 ü Handling equipment,In open air for agriculture plants ü Optional : Tinned copper ü Test voltage : 2kV ü Installation on plaster, in temporary buildings and ü Insulation :Cross linked elastomeric compound ü Conductor resistance : EN 60228 residential barracks ü Mobile power supplies, Worksites, stage and audio Type EI 4 as per EN 50363-1 ü Rated voltage (u 0/u) : 300/500 V visual equipment ü Outer Sheath : Cross linked elastomeric ü Max. Operating temperature : 600 C ü Port areas and dams, use in drainage and water compound Type EM 3 to treatment EN 50363-2-1 Approvals Accreditations Certifications ü Severe industrial environments like boilers, heating plates for transportable motors or machines at site. Features 2D View ü Flame Retardant according to IEC/EN 60332-1-2 R ü High flexibility, Weather resistance, oil & grease resistant Progress through Research ü Capacity to withstand mechanical and thermal stresses ü In dry, damp and wet areas TUV Research Design & Standards Organisation ** — Part Number",
@@ -5163,12 +5207,13 @@
     "awg": [],
     "cores": [2, 3, 4, 5]
    },
-   "partNumbers": ["A0130802", "A0131002", "A0131302", "A0131602", "A0131902", "A0130803", "A0131003", "A0131303", "A0131603", "A0131903", "A0132303", "A0130804", "A0131004", "A0131304", "A0131604", "A0131904", "A0132304", "A0130805", "A0131005", "A0131305", "A0131605", "A0131905"]
+   "partNumbers": ["A0130802", "A0131002", "A0131302", "A0131602", "A0131902", "A0130803", "A0131003", "A0131303", "A0131603", "A0131903", "A0132303", "A0130804", "A0131004", "A0131304", "A0131604", "A0131904", "A0132304", "A0130805", "A0131005", "A0131305", "A0131605", "A0131905"],
+   "catalogueNo": "A013"
   },
   {
    "id": "3bbb68284d",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor 300/500V Rubber  Insulated and  Sheathed (H05RN-F ) Ordinary duty Cable",
+   "name": "Annealed Plain Copper Conductor 300/500V Rubber Insulated and Sheathed (H05RN-F ) Ordinary duty Cable",
    "pages": [89],
    "headers": ["Part Number", "Number", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath", "Overall diameter", "", "Max conductor resistant", "Weight approx."],
    "rows": [
@@ -5196,12 +5241,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A0140802", "A0141002", "A0140803", "A0141003", "A0140804", "A0141004 4"]
+   "partNumbers": ["A0140802", "A0141002", "A0140803", "A0141003", "A0140804", "A0141004 4"],
+   "catalogueNo": "A014"
   },
   {
    "id": "1351725b03",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and  Sheathed  (H07RN-F) Muilticore Heavy duty Cables",
+   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and Sheathed (H07RN-F) Muilticore Heavy duty Cables",
    "pages": [90],
    "headers": [
     "Application Product Construction Technical Data ü Use for medium mechanical stress in dry, damp and ü Conductor : Annealed Copper Conductor, Class 5 ü Specification :BS EN 50525-2-21:2011 wet areas Flexible Conductor EN 60228 BS-6500 ü Handling equipment, in open air for agriculture plants ü Optional : Tinned Copper ü Operating Temperature : -25°C to +60°C ü Installation on plaster, in temporary buildings and ü Insulation : Cross Linked Elastomeric Compound ü Test voltage : 2.5 kV residential barracks Type EI 4 As Per EN 50363-1 ü Conductor resistance : EN 60228 ü Mobile power supplies, worksites, stage and audio ü Sheath : Cross Linked Elastomeric Compound ü Rated Voltage : (u /u) 450/750 V visual equipment o ü Port areas and dams, use in drainage and water Type EM 2 to EN 50363-2-1 ü Fire resistant : EN 60332-1-2 treatment Approvals Accreditations Certifications ü Severe industrial environments like boilers, heating plates for transportable motors or machines at site. 2D View R Progress through Research Features TUV ü Flame retardant according to IEC/EN 60332-1-2 ü High flexibility, weather resistance, oil & grease resistant ü Capacity to withstand mechanical and thermal stresses ü In dry, damp and wet areas Research Design & Standards Organisation **",
@@ -5288,12 +5334,13 @@
      "Rated Voltage : (u/u) 450/750 V o",
      "Fire resistant : EN 60332-1-2 Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Overall diameter Max"
     ]
-   }
+   },
+   "catalogueNo": "A016"
   },
   {
    "id": "4519f1b665",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and  Sheathed  (H07RN-F ) Muilticore Heavy duty Cables",
+   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and Sheathed (H07RN-F ) Muilticore Heavy duty Cables",
    "pages": [91],
    "headers": ["Part Number", "Number of Cores", "Size", "Thickness of insulation", "Thickness of Sheath — Single layer", "Double layers", "", "Overall diameter — Minimum", "Maximum", "Max conduct o r resisten c e at 200 C", "Weight approx."],
    "rows": [
@@ -5398,7 +5445,8 @@
     "A0163405",
     "A0163705",
     "A0163804"
-   ]
+   ],
+   "catalogueNo": "A016"
   },
   {
    "id": "3f5e26dd9d",
@@ -5439,7 +5487,8 @@
     "awg": [],
     "cores": [6, 7, 12, 18, 24, 36]
    },
-   "partNumbers": ["A0161306", "A0161307", "A0161312", "A0161318", "A0161324", "A0161336", "A0161606", "A0161607", "A0161612", "A0161618", "A0161624", "A0161636", "A0161906", "A0161907", "A0161912", "A0161918"]
+   "partNumbers": ["A0161306", "A0161307", "A0161312", "A0161318", "A0161324", "A0161336", "A0161606", "A0161607", "A0161612", "A0161618", "A0161624", "A0161636", "A0161906", "A0161907", "A0161912", "A0161918"],
+   "catalogueNo": "A016"
   },
   {
    "id": "028c1fec8f",
@@ -5528,7 +5577,7 @@
   {
    "id": "b4af9b9a84",
    "family": "sflex",
-   "name": "H07RN8-F 450/750 V  Flexible Cables",
+   "name": "H07RN8-F 450/750 V Flexible Cables",
    "pages": [94],
    "headers": ["Part Number", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath — Single layer", "Dual layers", "", "Overall diameter — Minimum", "Maximum", "Max conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -5622,7 +5671,8 @@
     "A0182705",
     "A0182805",
     "A0183005"
-   ]
+   ],
+   "catalogueNo": "A018"
   },
   {
    "id": "4c7e8a5caa",
@@ -5672,12 +5722,13 @@
     "features": ["Flame Retardant according to IEC/EN 60332-1-2 High flexibility, Weather resistance, oil & grease resistant Capacity to withstand mechanical and thermal stresses dry, damp and wet areas N ofu Cm ob re er C do ian mdu ec teto rr"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor EN 60228", "Optional : Tinned copper ü", "Insulation : Cross-linked elastomeric Compound ü Type EI 4 as per EN 50363-1 ü", "Sheath : Cross-linked elastomeric Compound ü Type EM 2 as per EN 50363-2-1"],
     "technical": ["Specification :BS EN 50525-2-21:2011 BS-6500", "Test voltage: 2kV", "Conductor resistance : EN 60228", "Rated voltage : 450/750V", "Max. Operating temperature : 600C"]
-   }
+   },
+   "catalogueNo": "A018"
   },
   {
    "id": "69a1eb0689",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor  300/500V Rubber Insulated and Sheathed Cable (H05BB-F) Ordinary duty Cable",
+   "name": "Annealed Plain Copper Conductor 300/500V Rubber Insulated and Sheathed Cable (H05BB-F) Ordinary duty Cable",
    "pages": [96],
    "headers": [
     "Application Product Construction Technical Data ü Use for medium mechanical stress in dry, damp and ü Conductor : Annealed Copper conductor, ü Specification :BS EN 50525-2-21:2011 wet areas Class 5 flexible conductor as per EN 60228 BS-6500 ü Handling equipment,In open air for agriculture plants ü Optional : Tinned copper ü Test voltage - 2kV ü Installation on plaster, in temporary buildings and ü Insulation : Cross-linked elastomeric Compound ü Conductor resistance - EN 60228 residential barracks Type EI 6 as per EN 50363-1 ü Rated voltage : 300/500(u /u) ü Mobile power supplies, Worksites, stage and audio 0 ü Sheath : Cross-linked elastomeric Compound ü Max.Operating temperature : 90 0C visual equipment Type EM 6 as per EN 50363-2-1 ü Port areas and dams, use in drainage and water treatment ü Severe industrial environments like boilers, heating plates for transportable motors or machines at site. Features Approvals Accreditations Certifications 2D View ü Flame Retardant according to IEC/EN 60332-1-2 ü High flexibility, Weather resistance, oil & grease resistant ü Capacity to withstand mechanical and thermal stresses ü In dry, damp and wet areas R Progress through Research TUV Research Design & Standards Organisation ** — Part Number",
@@ -5729,7 +5780,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A0190802", "A0191002", "A0191302", "A0191602", "A0190803", "A0191003", "A0191303", "A0191603", "A0191903", "A0192303", "A0190804", "A0191004", "A0191304", "A0191604", "A0191904", "A0192304", "A0190805", "A0191005", "A0191305", "A0191605"]
+   "partNumbers": ["A0190802", "A0191002", "A0191302", "A0191602", "A0190803", "A0191003", "A0191303", "A0191603", "A0191903", "A0192303", "A0190804", "A0191004", "A0191304", "A0191604", "A0191904", "A0192304", "A0190805", "A0191005", "A0191305", "A0191605"],
+   "catalogueNo": "A019"
   },
   {
    "id": "b089aeda25",
@@ -5950,7 +6002,8 @@
     "A0213405",
     "A0213705",
     "A0213804"
-   ]
+   ],
+   "catalogueNo": "A021"
   },
   {
    "id": "6c3400dceb",
@@ -6153,7 +6206,8 @@
     "A0214404",
     "A0214604",
     "A0214804"
-   ]
+   ],
+   "catalogueNo": "A021"
   },
   {
    "id": "8123c6144e",
@@ -6200,7 +6254,8 @@
      "Rated voltage : 300/500V(U/U) temperat0",
      "Max. Operating ure :900C Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Max diameter"
     ]
-   }
+   },
+   "catalogueNo": "A022"
   },
   {
    "id": "29609344d6",
@@ -6401,12 +6456,13 @@
     "A0242705",
     "A0242805",
     "A0243005"
-   ]
+   ],
+   "catalogueNo": "A024"
   },
   {
    "id": "179e59b867",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and Sheathed  (H07BN4-F) Muilticore Heavy duty cables",
+   "name": "Annealed Plain Copper Conductor 450/750V Rubber Insulated and Sheathed (H07BN4-F) Muilticore Heavy duty cables",
    "pages": [104],
    "headers": ["ü Part Number ü", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath — Single layer", "Double layer — Inner layer", "Outer layer", "Overall diameter — Minimum", "Maximum", "Max conducto r resistanc e at 200 C", "Weight approx."],
    "rows": [
@@ -6442,7 +6498,8 @@
     "awg": [],
     "cores": [6, 7, 12, 18, 24, 36]
    },
-   "partNumbers": ["A0241306", "A0241307", "A0241312", "A0241318", "A0241324", "A0241336", "A0241606", "A0241607", "A0241612", "A0241618", "A0241624", "A0241636", "A0241906", "A0241907", "A0241912", "A0241918"]
+   "partNumbers": ["A0241306", "A0241307", "A0241312", "A0241318", "A0241324", "A0241336", "A0241606", "A0241607", "A0241612", "A0241618", "A0241624", "A0241636", "A0241906", "A0241907", "A0241912", "A0241918"],
+   "catalogueNo": "A024"
   },
   {
    "id": "41bc0d658e",
@@ -6486,12 +6543,13 @@
     "awg": [],
     "cores": [2, 3, 4, 5]
    },
-   "partNumbers": ["A0270802", "A0271002", "A0271302", "A0271602", "A0270803", "A0271003", "A0271303", "A0271603", "A0271903", "A0272303", "A0270804", "A0271004", "A0271304", "A0271604", "A0271904", "A0272304", "A0270805", "A0271005", "A0271305", "A0271605"]
+   "partNumbers": ["A0270802", "A0271002", "A0271302", "A0271602", "A0270803", "A0271003", "A0271303", "A0271603", "A0271903", "A0272303", "A0270804", "A0271004", "A0271304", "A0271604", "A0271904", "A0272304", "A0270805", "A0271005", "A0271305", "A0271605"],
+   "catalogueNo": "A027"
   },
   {
    "id": "0fa535229b",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor EVA Type Insulated and  (HO5GGH2 -F ) Flat Cables",
+   "name": "Annealed Plain Copper Conductor EVA Type Insulated and (HO5GGH2 -F ) Flat Cables",
    "pages": [106],
    "headers": ["Part Number", "Number of Cores", "Size", "Conductor diameter", "Thickness of insulation", "Thickness of Sheath", "Overall diameter (Height X Width ) — Minimum", "Maximum", "Max Conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -6512,7 +6570,8 @@
     "awg": [],
     "cores": [2]
    },
-   "partNumbers": ["A0280802"]
+   "partNumbers": ["A0280802"],
+   "catalogueNo": "A028"
   },
   {
    "id": "935714ee4f",
@@ -6552,12 +6611,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A04113XX", "A04116XX", "A04119XX", "A04123XX", "A04127XX", "A04128XX", "A04130XX", "A04132XX", "A04134XX", "A04137XX", "A04138XX", "A04141XX", "A04142XX", "A04144XX", "A04146XX"]
+   "partNumbers": ["A04113XX", "A04116XX", "A04119XX", "A04123XX", "A04127XX", "A04128XX", "A04130XX", "A04132XX", "A04134XX", "A04137XX", "A04138XX", "A04141XX", "A04142XX", "A04144XX", "A04146XX"],
+   "catalogueNo": "A041"
   },
   {
    "id": "780c62ead0",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V-U)  Cable",
+   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V-U) Cable",
    "pages": [108],
    "headers": ["Part Number", "Size", "Max Conductor diameter Nom", "Thickness of insulation (Nom)", "Overall diameter — Minimum", "Maximum", "Max conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -6581,12 +6641,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A03913XX", "A03916XX", "A03919XX", "A03923XX", "A03927XX"]
+   "partNumbers": ["A03913XX", "A03916XX", "A03919XX", "A03923XX", "A03927XX"],
+   "catalogueNo": "A039"
   },
   {
    "id": "43b2f852a8",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V-R)  Cable",
+   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V-R) Cable",
    "pages": [109],
    "headers": ["Part Number", "Size", "Thickness of insulation (Nom)", "Overall diameter — Minimum", "Maximum", "Max conductor resistance at 200 C", "Min. Insulation Resistance at 70 0C", "Weight approx."],
    "rows": [
@@ -6625,7 +6686,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A04013XX", "A04016XX", "A04019XX", "A04023XX", "A04027XX", "A04028XX", "A04030XX", "A04032XX", "A04034XX", "A04037XX", "A04038XX", "A04041XX", "A04042XX", "A04044XX", "A04046XX", "A04048XX", "A04049XX", "A04050XX", "A04051XX"]
+   "partNumbers": ["A04013XX", "A04016XX", "A04019XX", "A04023XX", "A04027XX", "A04028XX", "A04030XX", "A04032XX", "A04034XX", "A04037XX", "A04038XX", "A04041XX", "A04042XX", "A04044XX", "A04046XX", "A04048XX", "A04049XX", "A04050XX", "A04051XX"],
+   "catalogueNo": "A040"
   },
   {
    "id": "f47752a3f3",
@@ -6654,12 +6716,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A04406XX", "A04408XX", "A04410XX"]
+   "partNumbers": ["A04406XX", "A04408XX", "A04410XX"],
+   "catalogueNo": "A044"
   },
   {
    "id": "7849c39c37",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor Single core 450/750 V  PVC Type TI3 Insulated (HO7V2-K) Single core Cables",
+   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Type TI3 Insulated (HO7V2-K) Single core Cables",
    "pages": [111],
    "headers": ["Part Number", "Size", "Conductor diameter", "Thickness of insulation", "Overall diameter Minimum Maximum", "", "Max. conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -6689,12 +6752,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A04713XX", "A04716XX", "A04719XX", "A04723XX", "A04727XX", "A04728XX", "A04730XX", "A04732XX", "A04734XX", "A04737XX"]
+   "partNumbers": ["A04713XX", "A04716XX", "A04719XX", "A04723XX", "A04727XX", "A04728XX", "A04730XX", "A04732XX", "A04734XX", "A04737XX"],
+   "catalogueNo": "A047"
   },
   {
    "id": "bddc2f43fb",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V2-R)  Cable",
+   "name": "Annealed Plain Copper Conductor Single core 450/750 V PVC Insulated (H07V2-R) Cable",
    "pages": [112],
    "headers": ["Part Number", "Size", "Max Conductor diameter", "Thickness of insulation (Nom)", "Overall diameter — Minimum", "Maximum", "Max conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -6733,12 +6797,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A04613XX", "A04616XX", "A04619XX", "A04623XX", "A04627XX", "A04628XX", "A04630XX", "A04632XX", "A04634XX", "A04637XX", "A04638XX", "A04641XX", "A04642XX", "A04644XX", "A04646XX", "A04648XX", "A04649XX", "A04650XX", "A04651XX"]
+   "partNumbers": ["A04613XX", "A04616XX", "A04619XX", "A04623XX", "A04627XX", "A04628XX", "A04630XX", "A04632XX", "A04634XX", "A04637XX", "A04638XX", "A04641XX", "A04642XX", "A04644XX", "A04646XX", "A04648XX", "A04649XX", "A04650XX", "A04651XX"],
+   "catalogueNo": "A046"
   },
   {
    "id": "a7cb6bea0a",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor  Singlecore 450/750 V  PVC Type   Insulated (HO5V2-K ) Cable",
+   "name": "Annealed Plain Copper Conductor Singlecore 450/750 V PVC Type Insulated (HO5V2-K ) Cable",
    "pages": [113],
    "headers": ["Part Number", "Size", "Conductor diameter", "Thickness of insulation", "overall diameter Minimum Maximum", "", "Max conductor resistance at 200 C", "Weight approx."],
    "rows": [
@@ -6761,12 +6826,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["A05006XX", "A05008XX", "A05010XX"]
+   "partNumbers": ["A05006XX", "A05008XX", "A05010XX"],
+   "catalogueNo": "A050"
   },
   {
    "id": "76795a19ab",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor Rubber  Insulated  Unsheathed  (HO1N2-D ) Welding Cable",
+   "name": "Annealed Plain Copper Conductor Rubber Insulated Unsheathed (HO1N2-D ) Welding Cable",
    "pages": [114],
    "headers": ["Part Number", "Size", "Conductor diameter", "Stand dia Max.", "Thickness of covering", "Overall diameter — Minimum", "Maximum", "Maximum conductor resistance 200 C Ω/km — Tinned Wires", "Plain Wires", "Weight approx."],
    "rows": [
@@ -6804,7 +6870,8 @@
     "application": ["Used as a connection to welding Robots in the automotive industry, shipyards and manually/automatically operated lines and spot welding Interconnecting battery cable or in battery storage systems welding equipment/eletric welding device"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 6 flexible cable as per EN 60228 ü", "Optional : Tinned copper ü", "Insulation : EM 5 as per EN 50363-2-2 ü"],
     "technical": ["Specification :BS EN 50525-2-81:2011", "Test voltage : 1000V", "Conductor resistance : EN 60228", "Rated voltage :100V", "Max. Operating temperature : 850C"]
-   }
+   },
+   "catalogueNo": "A054"
   },
   {
    "id": "eb211f740c",
@@ -6847,12 +6914,13 @@
     "features": ["Flame Retardant according to IEC/EN 60332-1-2 Resistant to low and high temperatures Resistant to ozone and radiation, Resistant to oils, acids, fats and petrol"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 6 flexible cable as per EN 60228", "Optional : Tinned Copper ü", "Insulation : EM 5 as per EN 50363-2-2 ü"],
     "technical": ["Specification :BS EN 50525-2-81:2011 BS-6500", "Test voltage : 1000 V", "Conductor resistance : EN 60228", "Max. Operating temperature : 850C", "Rated voltage : 100V"]
-   }
+   },
+   "catalogueNo": "A055"
   },
   {
    "id": "31d5b19c90",
    "family": "sflex",
-   "name": "APC Conductor,SFLEX SERVO 2YSLCYK - JB 1 kV Flexible  Cable",
+   "name": "APC Conductor,SFLEX SERVO 2YSLCYK - JB 1 kV Flexible Cable",
    "pages": [116],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm Nom.", "Max. conductor resistance at 200 C Ω /km", "Weight Kg/Km approx."],
    "rows": [
@@ -6896,7 +6964,8 @@
      "3+3 Cond version: PVC-outer sheath, black, ü for outdoor use and direct burial"
     ],
     "technical": ["Temperature Range : -50C to +700C Fixed installation : -400C to +700C", "Rated Voltage (U0/U) : 0.6 /1KV", "Test Voltage : 4000V", "Bending Radius : Occasional Flexing : 15 X Outer diameter Fixed installation : 4 X Outer diameter", "Specification Resistance : 20GΩ X cm"]
-   }
+   },
+   "catalogueNo": "A079"
   },
   {
    "id": "bf99250e9a",
@@ -6926,7 +6995,7 @@
    "notes": [],
    "attrs": {
     "voltage": "6500V",
-    "tempMentions": ["120C", "+280°C", "\n120C", "20C"],
+    "tempMentions": ["120C", "+280°C", "120C", "20C"],
     "materials": ["EBXL", "XLPO"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6938,7 +7007,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["64913XX *", "64916XX", "64919XX", "64923XX", "64927XX", "64928XX", "64930XX", "64932XX", "64934XX", "64937XX", "64938XX", "64941XX", "64942XX", "64944XX", "64946XX", "64948XX", "64949XX"]
+   "partNumbers": ["64913XX *", "64916XX", "64919XX", "64923XX", "64927XX", "64928XX", "64930XX", "64932XX", "64934XX", "64937XX", "64938XX", "64941XX", "64942XX", "64944XX", "64946XX", "64948XX", "64949XX"],
+   "catalogueNo": "649"
   },
   {
    "id": "5d287d397b",
@@ -6963,7 +7033,7 @@
    "notes": [],
    "attrs": {
     "voltage": "6500V",
-    "tempMentions": ["120°C", "+280°C", "120C", "\n120C"],
+    "tempMentions": ["120°C", "+280°C", "120C", "120C"],
     "materials": ["EBXL", "XLPO"],
     "conductors": ["Tinned Copper"],
     "shielded": true,
@@ -6975,12 +7045,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["65013XX*", "65016XX", "65019XX", "65023XX", "65027XX", "65028XX", "65030XX", "65032XX", "65034XX", "65037XX"]
+   "partNumbers": ["65013XX*", "65016XX", "65019XX", "65023XX", "65027XX", "65028XX", "65030XX", "65032XX", "65034XX", "65037XX"],
+   "catalogueNo": "650"
   },
   {
    "id": "5b6d25b28f",
    "family": "sflex",
-   "name": "PVC insulated, Non-Sheathed General Purpose  450/750 V SingleCore Flexible Cables",
+   "name": "PVC insulated, Non-Sheathed General Purpose 450/750 V SingleCore Flexible Cables",
    "pages": [119],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7026,7 +7097,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius : 5 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "403"
   },
   {
    "id": "0480de6fa2",
@@ -7083,7 +7155,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius : 5 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "412"
   },
   {
    "id": "658dedae2d",
@@ -7115,12 +7188,13 @@
     "features": ["Flame retardant Flexibility Medium Mechanical Stress. Number of Cores"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor", "Insulation : Rubber compound Type EI 1", "Braiding : Textile braid ü", "Braided cores twisted together. ü"],
     "technical": ["Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C", "Rated Voltage (U 0/U) : 300/500V", "Test Voltage : 1.5 x rated voltage", "Bending Radius (Min) : 10 x OD"]
-   }
+   },
+   "catalogueNo": "701"
   },
   {
    "id": "dc12151b82",
    "family": "sflex",
-   "name": "4 Rubber Insulated, Braided  Flexible Cord, 300/500 V Circular Twin and 3 Core Cable",
+   "name": "4 Rubber Insulated, Braided Flexible Cord, 300/500 V Circular Twin and 3 Core Cable",
    "pages": [122],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7154,7 +7228,8 @@
     "features": ["Flame retardant Flexibility Medium Mechanical Stress. Number of Cores"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor", "Insulation : Rubber compound Type EI 1", "Cores twisted together. ü", "Braiding : Textile braid ü"],
     "technical": ["Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C", "Rated Voltage (U/U) : 300/500V 0", "Test Voltage : 1.5 x rated voltage", "Bending Radius (Min) : 10 x OD"]
-   }
+   },
+   "catalogueNo": "702"
   },
   {
    "id": "d6e6aa8232",
@@ -7196,12 +7271,13 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "703"
   },
   {
    "id": "f0593e283c",
    "family": "sflex",
-   "name": "6 Rubber Insualted, Sheathed, Ordinary Flexible Cord, 300/500 V Circular Twin, 3, 4 & 5  Core Cable",
+   "name": "6 Rubber Insualted, Sheathed, Ordinary Flexible Cord, 300/500 V Circular Twin, 3, 4 & 5 Core Cable",
    "pages": [124],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7243,12 +7319,13 @@
     "application": ["Used for measuring, controlling or regulation in control equipment for conveyors and control units.", "Fixed installation and for flexible use when temporarily moved in medium mechanical condition", "Used outdoors when protected and in dry or moist conditions indoor."],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor", "Insulation : Rubber compound Type EI 1", "Cores twisted together. ü", "Sheath : Rubber compound Type EM 1 ü"],
     "technical": ["Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C", "Rated Voltage (U/U) : 300/500V 0", "Test Voltage : 1.5 x rated voltage", "Bending Radius (Min) : 10 x OD"]
-   }
+   },
+   "catalogueNo": "704"
   },
   {
    "id": "5ae439173e",
    "family": "sflex",
-   "name": "7 Rubber  Insulated, Sheathed, Screened, Sheathed Flexible Cord, 300/500 V Circular Twin, 3, 4 & 5 Core Cable",
+   "name": "7 Rubber Insulated, Sheathed, Screened, Sheathed Flexible Cord, 300/500 V Circular Twin, 3, 4 & 5 Core Cable",
    "pages": [125],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7287,7 +7364,8 @@
     "features": ["Flame retardant Flexibility Medium Mechanical Stress. Number of Cores"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor", "Insulation : Rubber compound Type EI 1", "Cores twisted together. ü", "Inner Sheath : Rubber compound Type EM 1 ü", "Braiding : Tinned annealed Copper wire braid ü", "Outer Sheath : Rubber compound Type EM 2"],
     "technical": ["Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C", "Rated Voltage (U/U) : 300/500V 0", "Test Voltage : 1.5 x rated voltage", "Bending Radius (Min) : 10 x OD"]
-   }
+   },
+   "catalogueNo": "705"
   },
   {
    "id": "e2af3d2e05",
@@ -7337,7 +7415,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "706"
   },
   {
    "id": "ad47772176",
@@ -7373,7 +7452,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["7070602", "7070802", "7071002", "7071302", "7071602", "7070603", "7070803", "7071003", "7071303", "7071603", "7070804", "7071004", "7071304", "7071604"]
+   "partNumbers": ["7070602", "7070802", "7071002", "7071302", "7071602", "7070603", "7070803", "7071003", "7071303", "7071603", "7070804", "7071004", "7071304", "7071604"],
+   "catalogueNo": "707"
   },
   {
    "id": "e8d161e684",
@@ -7419,7 +7499,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "708"
   },
   {
    "id": "ebb3357033",
@@ -7428,8 +7509,8 @@
    "pages": [129],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
-    ["7090602", "2C x 0.5", "2.5 x 5.0/3\u0000.0 x 6.0", "9", "25"],
-    ["7090802", "2C x 0.75", "2.7 x 5.4/3\u0000.2 x 6.4", "14", "31"]
+    ["7090602", "2C x 0.5", "2.5 x 5.0/3.0 x 6.0", "9", "25"],
+    ["7090802", "2C x 0.75", "2.7 x 5.4/3.2 x 6.4", "14", "31"]
    ],
    "notes": [],
    "attrs": {
@@ -7454,12 +7535,13 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "709"
   },
   {
    "id": "60b158b9df",
    "family": "sflex",
-   "name": "15  PVC Insulated, PVC Sheathed Light Cord, 300/500 V Circular Twin, 3 & 4 Core Cable",
+   "name": "15 PVC Insulated, PVC Sheathed Light Cord, 300/500 V Circular Twin, 3 & 4 Core Cable",
    "pages": [130],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7495,12 +7577,13 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "710"
   },
   {
    "id": "13097da59c",
    "family": "sflex",
-   "name": "16  PVC Insulated, PVC Sheathed Ordinary Cord, 300/500 V Circular Twin, 3 ,4 & 5 Core Cable",
+   "name": "16 PVC Insulated, PVC Sheathed Ordinary Cord, 300/500 V Circular Twin, 3 ,4 & 5 Core Cable",
    "pages": [131],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "", "", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx.", ""],
    "rows": [
@@ -7554,12 +7637,13 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "712"
   },
   {
    "id": "4d8f134fd1",
    "family": "sflex",
-   "name": "17  PVC Insulated, Sheathed, Screened, Sheathed  Light Cord, 300/500 V Parallel Twin Circular Twin, 3  Core Cable",
+   "name": "17 PVC Insulated, Sheathed, Screened, Sheathed Light Cord, 300/500 V Parallel Twin Circular Twin, 3 Core Cable",
    "pages": [132],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7597,7 +7681,8 @@
      "Test Voltage : 1.5 x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "714"
   },
   {
    "id": "9607439619",
@@ -7650,7 +7735,8 @@
      "Test Voltage : x rated voltage",
      "Bending Radius (Min) : 10 x OD Approvals Accreditations Certifications R Progress through Research TUV Research Design & Standards Organisation ** Copper Index Weight"
     ]
-   }
+   },
+   "catalogueNo": "715"
   },
   {
    "id": "ba576e3318",
@@ -7680,7 +7766,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["1391303", "1391603", "1391903", "1392303", "1392703", "1392803", "1393003", "1393203", "1393403"]
+   "partNumbers": ["1391303", "1391603", "1391903", "1392303", "1392703", "1392803", "1393003", "1393203", "1393403"],
+   "catalogueNo": "139"
   },
   {
    "id": "26ba33efaa",
@@ -7716,7 +7803,8 @@
     "features": ["Flame retardant Flexibility Medium Mechanical Stress. Number of Cores"],
     "construction": ["Conductor : Annealed Copper conductor, ü Class 5 flexible conductor", "Insulation : PVC compound Type TI 1", "22DD VViieeww Cores and mm2 Outer Diameter in"],
     "technical": ["Temperature Range : Fixed : -350C to +700C Flexing : -150C to +700C", "Rated Voltage (U/U) : 300/500V 0", "Test Voltage : 1.5 x rated voltage", "Bending Radius (Min) : 10 x OD"]
-   }
+   },
+   "catalogueNo": "716"
   },
   {
    "id": "6c4ad74be4",
@@ -7755,7 +7843,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["1781303", "1781603", "1781903", "1782303", "1782703", "1782803", "1783003", "1783203", "1783403", "1781304", "1781604", "1781904", "1782304", "1782704", "1782804", "1783004", "1783204", "1783404"]
+   "partNumbers": ["1781303", "1781603", "1781903", "1782303", "1782703", "1782803", "1783003", "1783203", "1783403", "1781304", "1781604", "1781904", "1782304", "1782704", "1782804", "1783004", "1783204", "1783404"],
+   "catalogueNo": "178"
   },
   {
    "id": "502000124c",
@@ -7780,12 +7869,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["1741303", "1741603", "1741903"]
+   "partNumbers": ["1741303", "1741603", "1741903"],
+   "catalogueNo": "174"
   },
   {
    "id": "9cda331532",
    "family": "sflex",
-   "name": "APC Conductor, PVC Insulated, UnSheathed General Purpose  600/1000 V SingleCore 70 C Flexible Cables as per BS 6231 Type BK",
+   "name": "APC Conductor, PVC Insulated, UnSheathed General Purpose 600/1000 V SingleCore 70 C Flexible Cables as per BS 6231 Type BK",
    "pages": [138],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7823,12 +7913,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["45206XX", "45208XX", "45210XX", "45213XX", "45216XX", "45238XX", "45223XX", "45227XX", "45228XX", "45230XX", "45232XX", "45234XX", "45237XX", "45238XX", "45241XX", "45242XX", "45244XX", "45246XX"]
+   "partNumbers": ["45206XX", "45208XX", "45210XX", "45213XX", "45216XX", "45238XX", "45223XX", "45227XX", "45228XX", "45230XX", "45232XX", "45234XX", "45237XX", "45238XX", "45241XX", "45242XX", "45244XX", "45246XX"],
+   "catalogueNo": "452"
   },
   {
    "id": "8f7f7508e7",
    "family": "sflex",
-   "name": "APC Conductor, PVC Insulated, UnSheathed General Purpose  600/1000 V SingleCore 105 C Flexible Cables as per BS 6231 Type CK",
+   "name": "APC Conductor, PVC Insulated, UnSheathed General Purpose 600/1000 V SingleCore 105 C Flexible Cables as per BS 6231 Type CK",
    "pages": [139],
    "headers": ["Part Number", "Number of Cores and mm2 Per Conductor", "Outer Diameter in mm approx.", "Copper Index Kg/Km", "Weight Kg/Km approx."],
    "rows": [
@@ -7869,7 +7960,8 @@
     "features": ["Flame retardant Flexibility Medium Mechanical Stress. Number of Cores"],
     "construction": ["Conductor : Annealed copper conductor, class 5 ü flexible conductor as per BS 6360 ü", "Insulation : HR PVC 1050C. ü (Green/Yellow, Blue or other colours) ü 22DD VViieeww Cores and mm2 Outer Diameter in"],
     "technical": ["Temperature Range : -250C to +1050C", "Rated Voltage (U/U) : 600/1000V 0", "Test Voltage : 1.5 x rated voltage", "Bending Radius : 5 x OD As per BS 6231, Cable to meet 900C as operating temperature. But Siechem offers enhanced 1050C operating temperature specially formulated PVC Compound"]
-   }
+   },
+   "catalogueNo": "453"
   },
   {
    "id": "6f700fbc9f",
@@ -8023,7 +8115,8 @@
     "B6090807",
     "B6090810",
     "B6090812"
-   ]
+   ],
+   "catalogueNo": "B609"
   },
   {
    "id": "55c279e25b",
@@ -8334,7 +8427,8 @@
     "B6123004G",
     "B6123005G",
     "B6123204G"
-   ]
+   ],
+   "catalogueNo": "B610"
   },
   {
    "id": "e401e2cf1e",
@@ -8401,7 +8495,8 @@
      "Ozone Resistant : EN 50396",
      "Similar Standard : Generally as per EN 50525-3-11 Max."
     ]
-   }
+   },
+   "catalogueNo": "B611"
   },
   {
    "id": "5ff639a16a",
@@ -8460,7 +8555,7 @@
   {
    "id": "16d4a5e5d1",
    "family": "sflex",
-   "name": "Annealed Plain Copper Conductor, EBXL-XLPO Insulated (Halogen Free), ATC Screened & EBXL-XLPO  (Halogen",
+   "name": "Annealed Plain Copper Conductor, EBXL-XLPO Insulated (Halogen Free), ATC Screened & EBXL-XLPO (Halogen",
    "pages": [149],
    "headers": ["Part Number", "Cable Size — No. of Cores (Nos)", "Cross Sectional Area (Sq.mm)", "Cable Size (AWG)", "Construction — Nom. No.of Strands (Nos)", "Max. Strands dia (mm)", "Nominal Outer Diameter (mm)", "Approx. Cable Weight (Kg/Km)", "Max. Conductor DC. Resistance at 20ºC ( Ω/km)"],
    "rows": [
@@ -8496,7 +8591,8 @@
     "application": ["Plant Engineering and industrial machinery Public likes shopping malls, airports and railway station ü Heating and air conditioning system. ü Outdoor application"],
     "construction": ["Conductor : Annealed Plain Flexible Copper ü Conductor as per IEC 60228 Class 5 Insulation : EBXL-XLPO (Halogen Free) Core Identification : Black with White Number ü acc. to VDE 0293-1 Core Twisted in layers Wrapping : Aluminium Mylar Foil Tape ü"],
     "technical": ["Temperature Range : (i) Fixed : -40°C to 90°C (ii) Flexible : -25°C to 90°C", "Test Voltage : (i) Core to Core : 4000 V (ii) Core to Screen : 2000 V", "Nominal Voltage (U/U) : 300 / 500 V o"]
-   }
+   },
+   "catalogueNo": "B613"
   },
   {
    "id": "5606d62eee",
@@ -8640,7 +8736,8 @@
     "B6133004G",
     "B6133005G",
     "B6133204G"
-   ]
+   ],
+   "catalogueNo": "B613"
   },
   {
    "id": "7d69f797cb",
@@ -8771,7 +8868,8 @@
     "B6140812P",
     "B6140815P",
     "B6140818P"
-   ]
+   ],
+   "catalogueNo": "B614"
   }
  ]
 }

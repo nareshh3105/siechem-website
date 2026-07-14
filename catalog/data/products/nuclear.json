@@ -40,7 +40,8 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["95081XX", "95080XX", "95079XX", "95078XX", "95077XX", "95076XX", "95075XX", "95074XX", "95073XX", "95072XX", "95090XX", "95091XX", "95092XX", "95094XX", "95041XX", "95044XX", "95046XX", "95049XX", "95050XX"]
+   "partNumbers": ["95081XX", "95080XX", "95079XX", "95078XX", "95077XX", "95076XX", "95075XX", "95074XX", "95073XX", "95072XX", "95090XX", "95091XX", "95092XX", "95094XX", "95041XX", "95044XX", "95046XX", "95049XX", "95050XX"],
+   "catalogueNo": "950"
   },
   {
    "id": "f1adb3ed54",
@@ -82,12 +83,13 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["95181XX", "95180XX", "95179XX", "95178XX", "95177XX", "95176XX", "95175XX", "95174XX", "95173XX", "95172XX", "95190XX", "95191XX", "95192XX", "95194XX", "95141XX", "95144XX", "95146XX", "95149XX", "95150XX"]
+   "partNumbers": ["95181XX", "95180XX", "95179XX", "95178XX", "95177XX", "95176XX", "95175XX", "95174XX", "95173XX", "95172XX", "95190XX", "95191XX", "95192XX", "95194XX", "95141XX", "95144XX", "95146XX", "95149XX", "95150XX"],
+   "catalogueNo": "951"
   },
   {
    "id": "cf4e378658",
    "family": "nuclear",
-   "name": "Annealed Tinned Copper Conductor,  XLPE 90 C Insulated 600 V rated Cable",
+   "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated 600 V rated Cable",
    "pages": [13],
    "headers": ["Part Number", "Cond. Size (AWG)", "No of strands/ Strand dia", "Insulation Thickness (Nom.) — mm", "Cable Diameter (Nom.) — mm", "Cable Weight (approx.) — kg/km"],
    "rows": [
@@ -122,12 +124,13 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["95279XX", "95278XX", "95277XX", "95276XX", "95275XX", "95274XX", "95273XX", "95272XX", "95290XX", "95291XX", "95292XX", "95294XX", "95241XX", "95244XX", "95246XX", "95249XX", "95250XX"]
+   "partNumbers": ["95279XX", "95278XX", "95277XX", "95276XX", "95275XX", "95274XX", "95273XX", "95272XX", "95290XX", "95291XX", "95292XX", "95294XX", "95241XX", "95244XX", "95246XX", "95249XX", "95250XX"],
+   "catalogueNo": "952"
   },
   {
    "id": "a1088f22dd",
    "family": "nuclear",
-   "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated & CSPE Sheathed  600 V rated Cable",
+   "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated & CSPE Sheathed 600 V rated Cable",
    "pages": [14],
    "headers": ["Part Number", "Cond. Size (AWG)", "No. of Strands/ Strand dia", "Insulation Thickness (Nom.) — mm", "Outer Sheath Thickness — mm", "Cable Diameter (Nom.) — mm", "Cable Weight (approx.) — kg/km"],
    "rows": [
@@ -161,12 +164,13 @@
     "awg": [1, 2, 4, 6, 8, 10, 12, 14, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["95379XX", "95378XX", "95377XX", "95376XX", "95375XX", "95374XX", "95373XX", "95372XX", "95390XX", "95391XX", "95392XX", "95394XX", "95341XX", "95344XX", "95346XX", "95349XX", "95350XX"]
+   "partNumbers": ["95379XX", "95378XX", "95377XX", "95376XX", "95375XX", "95374XX", "95373XX", "95372XX", "95390XX", "95391XX", "95392XX", "95394XX", "95341XX", "95344XX", "95346XX", "95349XX", "95350XX"],
+   "catalogueNo": "953"
   },
   {
    "id": "e78f742262",
    "family": "nuclear",
-   "name": "Annealed Tinned Copper Conductor,  XLPE 90 C Insulated & CSPE sheathed 600 V Rated cable",
+   "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated & CSPE sheathed 600 V Rated cable",
    "pages": [15],
    "headers": ["Part Number", "No.of Cond.", "Size (AWG)", "No. of Strands/ Strand dia", "Insulation Thickness (Nom.) — mm", "Outer Sheath Thickness — mm", "Cable Diameter (Nom.) — mm", "Cable Weight (approx.) — kg/km"],
    "rows": [
@@ -209,12 +213,13 @@
     "awg": [16, 18],
     "cores": []
    },
-   "partNumbers": ["95481XX", "95480XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX"]
+   "partNumbers": ["95481XX", "95480XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95581XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX", "95580XX"],
+   "catalogueNo": "954-955"
   },
   {
    "id": "a9cd26e6c5",
    "family": "nuclear",
-   "name": "Annealed Tinned Copper Conductor,  XLPE 90 C Insulated  overall shielded with aluminium & ATC drain wire & CSPE sheathed 600 V Rated cable",
+   "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated overall shielded with aluminium & ATC drain wire & CSPE sheathed 600 V Rated cable",
    "pages": [16],
    "headers": ["Part Number", "No.of Conductor", "Cond. Size (AWG)", "No. of Strands /Strand dia", "Insulation Thickness (Nom.) — mm", "Outer Sheath Thickness — mm", "Cable Diameter (Nom.) — mm", "Cable Weight (approx.) — kg/km"],
    "rows": [
@@ -255,15 +260,16 @@
     "awg": [16, 18],
     "cores": []
    },
-   "partNumbers": ["95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX"]
+   "partNumbers": ["95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95681XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX", "95680XX"],
+   "catalogueNo": "956"
   },
   {
    "id": "57f1c4e816",
    "family": "nuclear",
-   "name": "ATC Conductor, XLPE 90 C Insulated Individually Shielded Pair or triads , overall shield with aluminium & CSPE Sheathed  600 V rated cable",
+   "name": "ATC Conductor, XLPE 90 C Insulated Individually Shielded Pair or triads , overall shield with aluminium & CSPE Sheathed 600 V rated cable",
    "pages": [17],
    "headers": [
-    "Application Product Construction Technical Data ü\u0003Instrumentation Cable is a 600 V, ü\u0003Conductor : Annealed Tinned copper ü\u0003Rated voltage : 600 V individual shielded pairs or triads with Conductor as per ASTM B33 ü\u0003Temperature rating : 90 oC overall shield, thermoset, Class IE rated ü\u0003Insulation : Cross-Linked polyethylene ü\u0003Specification : (1)Class IE Qualified in accordance with construction specifically designed (EBXL-XLPE 90 oC) for application in nuclear generating ü\u0003Shielding : Pairs or triads are 100% shielded IEEE 323-1974 and IEEE 383-1974 (3) ICEA S-82-552 (formerly ICEA stations and where flame retardancy is critical. with an aluminium/polyester tape S-66 -524 & S-19- 81) ü\u0003Designed for use on critical circuits in contact with a stranded tinned ü\u0003Flame test : IEEE 383 (70,000 BTU/hr) as modified by NRC where total isolation is required between copper drain wire pairs/triads and from external interference. ü\u0003Overall shield : Aluminium/polyester tape in IEEE 383 (70,000 BTU/hr) IEEE1202 (70,000 BTU/hr) contact with a stranded tinned ü Can be installed in trays, conduit, ICEA T-29-520 (210,000 BTU/hr) copper drain wire. ducts, or in direct burial applications. ü Outer sheath : Heavy duty chlorsulphonated UL VW-1 Features polyethylene (CSPE) ü Traceable ü Flame retardant ü Radiation stability ISO ISO IATF AS ISO ü Long term moisture 9001 14001 16949 14001 45001 ü Long term thermal enduarance ü Stripping for ease of termination ü Radiation resistant up to 200 megarads — Part Number",
+    "Application Product Construction Technical Data üInstrumentation Cable is a 600 V, üConductor : Annealed Tinned copper üRated voltage : 600 V individual shielded pairs or triads with Conductor as per ASTM B33 üTemperature rating : 90 oC overall shield, thermoset, Class IE rated üInsulation : Cross-Linked polyethylene üSpecification : (1)Class IE Qualified in accordance with construction specifically designed (EBXL-XLPE 90 oC) for application in nuclear generating üShielding : Pairs or triads are 100% shielded IEEE 323-1974 and IEEE 383-1974 (3) ICEA S-82-552 (formerly ICEA stations and where flame retardancy is critical. with an aluminium/polyester tape S-66 -524 & S-19- 81) üDesigned for use on critical circuits in contact with a stranded tinned üFlame test : IEEE 383 (70,000 BTU/hr) as modified by NRC where total isolation is required between copper drain wire pairs/triads and from external interference. üOverall shield : Aluminium/polyester tape in IEEE 383 (70,000 BTU/hr) IEEE1202 (70,000 BTU/hr) contact with a stranded tinned ü Can be installed in trays, conduit, ICEA T-29-520 (210,000 BTU/hr) copper drain wire. ducts, or in direct burial applications. ü Outer sheath : Heavy duty chlorsulphonated UL VW-1 Features polyethylene (CSPE) ü Traceable ü Flame retardant ü Radiation stability ISO ISO IATF AS ISO ü Long term moisture 9001 14001 16949 14001 45001 ü Long term thermal enduarance ü Stripping for ease of termination ü Radiation resistant up to 200 megarads — Part Number",
     "No.of Pairs/ No.of Triads",
     "Cond. Size (AWG)",
     "No.of Strands/ Strand dia",
@@ -353,7 +359,8 @@
     "95880XX",
     "95880XX",
     "95880XX"
-   ]
+   ],
+   "catalogueNo": "957-958"
   },
   {
    "id": "db06682a4a",
@@ -442,7 +449,8 @@
     "96077XX",
     "96077XX",
     "96077XX"
-   ]
+   ],
+   "catalogueNo": "959"
   },
   {
    "id": "7fb104582b",
@@ -491,7 +499,8 @@
     "awg": [1, 2, 4, 6, 8, 250, 350, 500, 750],
     "cores": []
    },
-   "partNumbers": ["96276XX", "96276XX", "96275XX", "96275XX", "96274XX", "96274XX", "96273XX", "96273XX", "96272XX", "96272XX", "96290XX", "96290XX", "96291XX", "96291XX", "96292XX", "96292XX", "96294XX", "96294XX", "96241XX", "96241XX", "96244XX", "96244XX", "96246XX", "96246XX", "96249XX", "96249XX"]
+   "partNumbers": ["96276XX", "96276XX", "96275XX", "96275XX", "96274XX", "96274XX", "96273XX", "96273XX", "96272XX", "96272XX", "96290XX", "96290XX", "96291XX", "96291XX", "96292XX", "96292XX", "96294XX", "96294XX", "96241XX", "96241XX", "96244XX", "96244XX", "96246XX", "96246XX", "96249XX", "96249XX"],
+   "catalogueNo": "962"
   },
   {
    "id": "0dd419f83b",
@@ -576,7 +585,8 @@
     "96177XX",
     "96177XX",
     "96177XX"
-   ]
+   ],
+   "catalogueNo": "961"
   }
  ]
 }

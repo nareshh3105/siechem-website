@@ -90,18 +90,19 @@
     "conductors": ["Tinned Copper"],
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50306-2", "EN  50306-2 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545"],
+    "standardsFound": ["EN 50306-2", "EN 50306-2 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545"],
     "voltBucket": "300–750V",
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2.5],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["R55006XX*", "R55008XX", "R55010XX", "R55013XX", "R55016XX"]
+   "partNumbers": ["R55006XX*", "R55008XX", "R55010XX", "R55013XX", "R55016XX"],
+   "catalogueNo": "R550"
   },
   {
    "id": "397d64273a",
    "family": "rolling-stock",
-   "name": "BS EN 50306-3  Single and Multi Core, Screened, 300 V AC, EBXL 90 C Rolling Stock Cable",
+   "name": "BS EN 50306-3 Single and Multi Core, Screened, 300 V AC, EBXL 90 C Rolling Stock Cable",
    "pages": [9, 10],
    "headers": [
     "Part Number",
@@ -153,7 +154,7 @@
     "shielded": true,
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50306-3  S", "EN 50306-3 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306-3  300 V  4 X"],
+    "standardsFound": ["EN 50306-3 S", "EN 50306-3 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306-3 300 V 4 X"],
     "voltBucket": "300–750V",
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 6, 8],
     "awg": [],
@@ -191,7 +192,8 @@
    ],
    "info": {
     "construction": ["Strands x Strand dia. Resistance at 200C Diameter Thickness (mm) (Kg/Km) approx."]
-   }
+   },
+   "catalogueNo": "R551/R552"
   },
   {
    "id": "892fbffbed",
@@ -290,7 +292,8 @@
     "R5531602",
     "R5531603",
     "R5531604"
-   ]
+   ],
+   "catalogueNo": "R553"
   },
   {
    "id": "66d3ea4192",
@@ -389,7 +392,8 @@
     "R5541602",
     "R5541603",
     "R5541604"
-   ]
+   ],
+   "catalogueNo": "R554"
   },
   {
    "id": "50208e9639",
@@ -442,7 +446,8 @@
     "awg": [],
     "cores": [2, 3, 4, 6, 8]
    },
-   "partNumbers": ["R5550602", "R5550603", "R5550604", "R5550606", "R5550608", "R5550802", "R5550803", "R5550804", "R5550806", "R5550808", "R5551002", "R5551003", "R5551004", "R5551006", "R5551008", "R5551302", "R5551303", "R5551304"]
+   "partNumbers": ["R5550602", "R5550603", "R5550604", "R5550606", "R5550608", "R5550802", "R5550803", "R5550804", "R5550806", "R5550808", "R5551002", "R5551003", "R5551004", "R5551006", "R5551008", "R5551302", "R5551303", "R5551304"],
+   "catalogueNo": "R555"
   },
   {
    "id": "806ddb18bf",
@@ -479,7 +484,8 @@
     "awg": [],
     "cores": [2, 3, 4, 6, 8]
    },
-   "partNumbers": ["R5551306", "R5551308", "R5551602", "R5551603", "R5551604"]
+   "partNumbers": ["R5551306", "R5551308", "R5551602", "R5551603", "R5551604"],
+   "catalogueNo": "R555"
   },
   {
    "id": "f4b8e26fc8",
@@ -526,13 +532,14 @@
     "shielded": true,
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50306-4 3E M", "EN 50306-4 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306- 4 3E 300V  4"],
+    "standardsFound": ["EN 50306-4 3E M", "EN 50306-4 : 2020", "EN 45545-2", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306- 4 3E 300V 4"],
     "voltBucket": "300–750V",
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2, 3, 4, 6, 8],
     "awg": [],
     "cores": [2, 3, 4, 6, 8]
    },
-   "partNumbers": ["R5560602", "R5560603", "R5560604", "R5560606", "R5560608", "R5560802", "R5560803", "R5560804", "R5560806", "R5560808", "R5561002", "R5561003", "R5561004", "R5561006", "R5561008", "R5561302", "R5561303", "R5561304"]
+   "partNumbers": ["R5560602", "R5560603", "R5560604", "R5560606", "R5560608", "R5560802", "R5560803", "R5560804", "R5560806", "R5560808", "R5561002", "R5561003", "R5561004", "R5561006", "R5561008", "R5561302", "R5561303", "R5561304"],
+   "catalogueNo": "556"
   },
   {
    "id": "9282b8c094",
@@ -569,7 +576,8 @@
     "awg": [],
     "cores": [2, 3, 4, 6, 8]
    },
-   "partNumbers": ["R5561306", "R5561308", "R5561602", "R5561603", "R5561604"]
+   "partNumbers": ["R5561306", "R5561308", "R5561602", "R5561603", "R5561604"],
+   "catalogueNo": "556"
   },
   {
    "id": "7e6fbdd14a",
@@ -614,13 +622,14 @@
     "shielded": true,
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50306-4 5P M", "EN  50306-4 : 2020", "EN 45545-2", "EN 50306-3 : 2020", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306-4  5P 300 V 2"],
+    "standardsFound": ["EN 50306-4 5P M", "EN 50306-4 : 2020", "EN 45545-2", "EN 50306-3 : 2020", "EN 50306-2 : 2020", "EN 50306", "DIN 5510-2", "EN 45545", "EN 50306-4 5P 300 V 2"],
     "voltBucket": "300–750V",
     "sizesSqmm": [2, 3, 4, 7],
     "awg": [],
     "cores": [2, 3, 4, 7]
    },
-   "partNumbers": ["R5570602P", "R5570603P", "R5570604P", "R5570607P", "R5570802P", "R5570803P", "R5570804P", "R5570807P", "R5571002P", "R5571003P", "R5571004P", "R5571007P", "R5571302P", "R5571303P", "R5571304P", "R5571307P"]
+   "partNumbers": ["R5570602P", "R5570603P", "R5570604P", "R5570607P", "R5570802P", "R5570803P", "R5570804P", "R5570807P", "R5571002P", "R5571003P", "R5571004P", "R5571007P", "R5571302P", "R5571303P", "R5571304P", "R5571307P"],
+   "catalogueNo": "R557"
   },
   {
    "id": "1b6df7a2ca",
@@ -671,7 +680,8 @@
     "awg": [],
     "cores": [2, 3, 4, 7]
    },
-   "partNumbers": ["R5580602P", "R5580603P", "R5580604P", "R5580607P", "R5580802P", "R5580803P", "R5580804P", "R5580807P", "R5581002P", "R5581003P", "R5581004P", "R5581007P", "R5581302P", "R5581303P", "R5581304P", "R5581307P"]
+   "partNumbers": ["R5580602P", "R5580603P", "R5580604P", "R5580607P", "R5580802P", "R5580803P", "R5580804P", "R5580807P", "R5581002P", "R5581003P", "R5581004P", "R5581007P", "R5581302P", "R5581303P", "R5581304P", "R5581307P"],
+   "catalogueNo": "R558"
   },
   {
    "id": "55db2e735e",
@@ -718,7 +728,8 @@
    "partNumbers": ["RA5370602P", "RA5370603P", "RA5370604P", "RA5370607P", "RA5370802P", "RA5370803P", "RA5370804P", "RA5370807P", "RA5371002P", "RA5371003P", "RA5371004P", "RA5371007P", "RA5371302P", "RA5371303P", "RA5371304P", "RA5371307P", "B7460605P", "B7460606P", "B7460806P"],
    "info": {
     "construction": ["Strands x Strand dia. Resistance at 200C of Overall Sheath"]
-   }
+   },
+   "catalogueNo": "RA537"
   },
   {
    "id": "60d9dc5aa7",
@@ -760,12 +771,13 @@
     "awg": [],
     "cores": [2, 3, 4, 6, 7]
    },
-   "partNumbers": ["RA5380602P", "RA5380603P", "RA5380604P", "RA5380607P", "RA5380802P", "RA5380803P", "RA5380804P", "RA5380807P", "RA5381002P", "RA5381003P", "RA5381004P", "RA5381007P", "RA5381302P", "RA5381303P", "RA5381304P", "RA5381307P", "C2050606P"]
+   "partNumbers": ["RA5380602P", "RA5380603P", "RA5380604P", "RA5380607P", "RA5380802P", "RA5380803P", "RA5380804P", "RA5380807P", "RA5381002P", "RA5381003P", "RA5381004P", "RA5381007P", "RA5381302P", "RA5381303P", "RA5381304P", "RA5381307P", "C2050606P"],
+   "catalogueNo": "RA538"
   },
   {
    "id": "a0a5938840",
    "family": "rolling-stock",
-   "name": "BS EN 50264-3-1 Single Core, 600/1000V AC,  EBXL 90 C Rolling Stock Cable",
+   "name": "BS EN 50264-3-1 Single Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
    "pages": [24],
    "headers": [
     "Part Number",
@@ -814,12 +826,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["55910XX*", "55913XX", "55916XX", "55919XX", "55923XX", "55927XX", "55928XX", "55930XX", "55932XX", "55934XX", "55937XX", "55938XX", "55941XX", "55942XX", "55944XX", "55946XX", "55948XX", "55949XX"]
+   "partNumbers": ["55910XX*", "55913XX", "55916XX", "55919XX", "55923XX", "55927XX", "55928XX", "55930XX", "55932XX", "55934XX", "55937XX", "55938XX", "55941XX", "55942XX", "55944XX", "55946XX", "55948XX", "55949XX"],
+   "catalogueNo": "559"
   },
   {
    "id": "d960854fe0",
    "family": "rolling-stock",
-   "name": "BS EN 50264-3-1 Single Core, 600/1000V AC,  EBXL 90 C Rolling Stock Cable",
+   "name": "BS EN 50264-3-1 Single Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
    "pages": [25],
    "headers": [
     "Part Number",
@@ -851,7 +864,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["C20306XX*", "C20308XX"]
+   "partNumbers": ["C20306XX*", "C20308XX"],
+   "catalogueNo": "559"
   },
   {
    "id": "56f799969d",
@@ -894,12 +908,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56013XX*", "56016XX", "56019XX", "56023XX", "56027XX", "56028XX", "56030XX", "56032XX", "56034XX", "56037XX", "56038XX", "56041XX", "56042XX", "56044XX", "56046XX", "56048XX", "56049XX"]
+   "partNumbers": ["56013XX*", "56016XX", "56019XX", "56023XX", "56027XX", "56028XX", "56030XX", "56032XX", "56034XX", "56037XX", "56038XX", "56041XX", "56042XX", "56044XX", "56046XX", "56048XX", "56049XX"],
+   "catalogueNo": "560"
   },
   {
    "id": "4544f511a3",
    "family": "rolling-stock",
-   "name": "BS EN 50264-3-1 Single Core,  Sheathed 1800/3000V AC, 2700V DC EBXL 90 C Rolling Stock Cable",
+   "name": "BS EN 50264-3-1 Single Core, Sheathed 1800/3000V AC, 2700V DC EBXL 90 C Rolling Stock Cable",
    "pages": [27],
    "headers": [
     "Part Number",
@@ -948,7 +963,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56113XXYY*", "56116XXYY", "56119XXYY", "56123XXYY", "56127XXYY", "56128XXYY", "56130XXYY", "56132XXYY", "56134XXYY", "56137XXYY", "56138XXYY", "56141XXYY", "56142XXYY", "56144XXYY", "56146XXYY", "56148XXYY", "56149XXYY"]
+   "partNumbers": ["56113XXYY*", "56116XXYY", "56119XXYY", "56123XXYY", "56127XXYY", "56128XXYY", "56130XXYY", "56132XXYY", "56134XXYY", "56137XXYY", "56138XXYY", "56141XXYY", "56142XXYY", "56144XXYY", "56146XXYY", "56148XXYY", "56149XXYY"],
+   "catalogueNo": "561"
   },
   {
    "id": "416984ae51",
@@ -1001,7 +1017,8 @@
     "awg": [],
     "cores": [2, 4, 7, 9, 12, 19, 24, 32, 37, 40]
    },
-   "partNumbers": ["5861002", "5861004", "5861007", "5861009", "5861012", "5861019", "5861024", "5861032", "5861037", "5861040", "5861304", "5861307", "5861309", "5861312", "5861319", "5861324", "5861332", "5861337"]
+   "partNumbers": ["5861002", "5861004", "5861007", "5861009", "5861012", "5861019", "5861024", "5861032", "5861037", "5861040", "5861304", "5861307", "5861309", "5861312", "5861319", "5861324", "5861332", "5861337"],
+   "catalogueNo": "586"
   },
   {
    "id": "07c1b0d326",
@@ -1039,7 +1056,8 @@
     "awg": [],
     "cores": [4, 7, 9, 12, 19, 24]
    },
-   "partNumbers": ["5861604", "5861607", "5861609", "5861612", "5861619", "5861624"]
+   "partNumbers": ["5861604", "5861607", "5861609", "5861612", "5861619", "5861624"],
+   "catalogueNo": "586"
   },
   {
    "id": "57ea02d1ad",
@@ -1100,7 +1118,8 @@
     "awg": [],
     "cores": [2, 4, 7, 9, 12, 19, 24, 32, 37, 40]
    },
-   "partNumbers": ["5871002", "5871004", "5871007", "5871009", "5871012", "5871019", "5871024", "5871032", "5871037", "5871040", "5871304", "5871307", "5871309", "5871312", "5871319", "5871324", "5871332", "5871337", "5871604", "5871607", "5871609", "5871612", "5871619", "5871624"]
+   "partNumbers": ["5871002", "5871004", "5871007", "5871009", "5871012", "5871019", "5871024", "5871032", "5871037", "5871040", "5871304", "5871307", "5871309", "5871312", "5871319", "5871324", "5871332", "5871337", "5871604", "5871607", "5871609", "5871612", "5871619", "5871624"],
+   "catalogueNo": "587"
   },
   {
    "id": "8e6ba92fc1",
@@ -1150,13 +1169,14 @@
     "conductors": ["Tinned Copper"],
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50264-3-2 M", "EN 50264-3-2", "EN 45545-2", "EN 60228", "EN 50264", "DIN 5510-2", "EN 45545", "EN 50264-3-2  600 V 4"],
+    "standardsFound": ["EN 50264-3-2 M", "EN 50264-3-2", "EN 45545-2", "EN 60228", "EN 50264", "DIN 5510-2", "EN 45545", "EN 50264-3-2 600 V 4"],
     "voltBucket": "751–1100V",
     "sizesSqmm": [1.5, 2, 2.5, 3, 4, 6, 10, 16, 25],
     "awg": [],
     "cores": [2, 3, 4]
    },
-   "partNumbers": ["5621302", "5621303", "5621304", "5621602", "5621603", "5621604", "5621902", "5621903", "5621904", "5622302", "5622303", "5622304", "5622702", "5622703", "5622704", "5622802", "5622803", "5622804", "5623002", "5623003", "5623004"]
+   "partNumbers": ["5621302", "5621303", "5621304", "5621602", "5621603", "5621604", "5621902", "5621903", "5621904", "5622302", "5622303", "5622304", "5622702", "5622703", "5622704", "5622802", "5622803", "5622804", "5623002", "5623003", "5623004"],
+   "catalogueNo": "562"
   },
   {
    "id": "b39130e9c3",
@@ -1194,7 +1214,8 @@
     "awg": [],
     "cores": [2, 3]
    },
-   "partNumbers": ["5623202", "5623203", "C1753204", "5623402", "5623403", "C1753404"]
+   "partNumbers": ["5623202", "5623203", "C1753204", "5623402", "5623403", "C1753404"],
+   "catalogueNo": "562"
   },
   {
    "id": "3fe8f93505",
@@ -1247,7 +1268,7 @@
     "shielded": true,
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50264-3-2 M", "EN 50264-3-2", "EN 45545-2", "EN 60228", "EN 50264", "DIN 5510-2", "EN 45545", "EN 50264-3-2  600V 4 X"],
+    "standardsFound": ["EN 50264-3-2 M", "EN 50264-3-2", "EN 45545-2", "EN 60228", "EN 50264", "DIN 5510-2", "EN 45545", "EN 50264-3-2 600V 4 X"],
     "voltBucket": "751–1100V",
     "sizesSqmm": [1.5, 2, 2.5, 3, 4, 5, 6, 10, 16, 25],
     "awg": [],
@@ -1257,14 +1278,15 @@
    "info": {
     "application": ["For mechanically protected installation in Rail / Bus and other transport vehicles.", "Cables are used in Driver desks, Control panels, wiring harness in inside/outside the moving vehicles."],
     "features": ["Excellent resistance to high and low temperature Outstanding Flame retardant Halogen free Thin walled with excellent flexibility Resistance to oil, fuel, ozone and weathering. E Soa ows ldy t rmo os gkt r ii rp"],
-    "construction": ["Conductor : Finely Stranded Annealed ü Electro Tinned Copper, Class 5. ü", "Insulation : EBXL - EI 109 ü", "Screen : Tinned Copper Braid ü", "Separator Tape", "Outersheath :EBXL - EM 104", "Colour : Black or as per customer order"],
+    "construction": ["Conductor : Finely Stranded Annealed", "Electro Tinned Copper, Class 5.", "Insulation : EBXL - EI 109", "Screen : Tinned Copper Braid", "Separator Tape", "Outersheath :EBXL - EM 104", "Colour : Black or as per customer order"],
     "technical": [
      "Temperature Range : -400C to +900C.",
      "Rated Voltage : 600/1000V AC 900V DC",
      "Specification : BS EN 50264-3-2, Table 9",
      "Hazard Level Classification as per EN 45545-2, HL3 Conductor : BS EN 60228,Class 5 Cable Ref : Table 3 to Table 7 In addition to BS EN 50264 spec, cables also meet fire performance tests as per UNI CEI 11170-3, DIN 5510-2, NF F 16-101 NFPA -130, EN 45545"
     ]
-   }
+   },
+   "catalogueNo": "563"
   },
   {
    "id": "2c7ace2031",
@@ -1304,7 +1326,8 @@
     "awg": [],
     "cores": [2, 3]
    },
-   "partNumbers": ["5633202", "5633203", "C1763204", "5633402", "5633403", "C1763404"]
+   "partNumbers": ["5633202", "5633203", "C1763204", "5633402", "5633403", "C1763404"],
+   "catalogueNo": "563"
   },
   {
    "id": "9453847fbd",
@@ -1357,12 +1380,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56416XXYY*", "56419XXYY", "56423XXYY", "56427XXYY", "56428XXYY", "56430XXYY", "56432XXYY", "56434XXYY", "56437XXYY", "56438XXYY", "56441XXYY", "56442XXYY", "56444XXYY", "56446XXYY", "56448XXYY", "56449 XXYY"]
+   "partNumbers": ["56416XXYY*", "56419XXYY", "56423XXYY", "56427XXYY", "56428XXYY", "56430XXYY", "56432XXYY", "56434XXYY", "56437XXYY", "56438XXYY", "56441XXYY", "56442XXYY", "56444XXYY", "56446XXYY", "56448XXYY", "56449 XXYY"],
+   "catalogueNo": "564"
   },
   {
    "id": "190b561284",
    "family": "rolling-stock",
-   "name": "BS EN 50382-2 Single Core,  ATC Conductor, Silicone Insulated Unsheathed, 1.8/3kV, Rated Type F 120 C Rolling Stock Cable",
+   "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Insulated Unsheathed, 1.8/3kV, Rated Type F 120 C Rolling Stock Cable",
    "pages": [37],
    "headers": ["Part Number", "Cross Section (mm2 )", "Conductor Construction No.of Strands x Strand dia. (Nos x mm)", "Max. Conductor Resistance at 200 C (Ω/km)", "Insulation Thickness (mm) (Nom)", "Overall Diameter (mm) ( (Min) (Max)", "", "Cable Weight Kg/Km) approx."],
    "rows": [
@@ -1400,7 +1424,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56513XX*", "56516XX", "56519XX", "56523XX", "56527XX", "56528XX", "56530XX", "56532XX", "56534XX", "56537XX", "56538XX", "56541XX", "56542XX", "56544XX", "56546XX", "56548XX", "56549XX"]
+   "partNumbers": ["56513XX*", "56516XX", "56519XX", "56523XX", "56527XX", "56528XX", "56530XX", "56532XX", "56534XX", "56537XX", "56538XX", "56541XX", "56542XX", "56544XX", "56546XX", "56548XX", "56549XX"],
+   "catalogueNo": "565"
   },
   {
    "id": "2df22ee8fc",
@@ -1441,7 +1466,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56613XXYY*", "56616XXYY", "56619XXYY", "56623XXYY", "56627XXYY", "56628XXYY", "56630XXYY", "56632XXYY", "56634XXYY", "56637XXYY", "56638XXYY", "56641XXYY", "56642XXYY", "56644XXYY", "56646XXYY", "56648XXYY", "56649XXYY"]
+   "partNumbers": ["56613XXYY*", "56616XXYY", "56619XXYY", "56623XXYY", "56627XXYY", "56628XXYY", "56630XXYY", "56632XXYY", "56634XXYY", "56637XXYY", "56638XXYY", "56641XXYY", "56642XXYY", "56644XXYY", "56646XXYY", "56648XXYY", "56649XXYY"],
+   "catalogueNo": "566"
   },
   {
    "id": "389fc4048b",
@@ -1483,12 +1509,13 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56716XX*", "56719XX", "56723XX", "56727XX", "56728XX", "56730XX", "56732XX", "56734XX", "56737XX", "56738XX", "56741XX", "56742XX", "56744XX", "56746XX", "56748XX", "56749XX"]
+   "partNumbers": ["56716XX*", "56719XX", "56723XX", "56727XX", "56728XX", "56730XX", "56732XX", "56734XX", "56737XX", "56738XX", "56741XX", "56742XX", "56744XX", "56746XX", "56748XX", "56749XX"],
+   "catalogueNo": "567"
   },
   {
    "id": "400b7723ed",
    "family": "rolling-stock",
-   "name": "BS EN 50382-2  3.6 kV 1 X 50 FX 120",
+   "name": "BS EN 50382-2 3.6 kV 1 X 50 FX 120",
    "pages": [40],
    "headers": ["Part Number", "Cross Section (mm2 )", "Conductor Construction No.of Strands x Strand dia. (Nos x mm)", "Max. Conductor Resistance at 20 0C (Ω/km)", "Insulation Thickness (mm) (Nom)", "Overall Diameter (mm) — (Min)", "(Max)", "Cable Weight (Kg/Km) approx."],
    "rows": [
@@ -1509,18 +1536,19 @@
     "conductors": ["Tinned Copper"],
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50382-2  3.6", "EN 50382-2 : 2008", "EN 45545-2", "EN 50382-2", "DIN 5510-2", "BS 6853", "EN 60228", "EN 50382-1"],
+    "standardsFound": ["EN 50382-2 3.6", "EN 50382-2 : 2008", "EN 45545-2", "EN 50382-2", "DIN 5510-2", "BS 6853", "EN 60228", "EN 50382-1"],
     "voltBucket": "Above 3.3kV",
     "sizesSqmm": [50, 70, 95, 120, 150, 185],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56834XX*", "56837XX", "56838XX", "56841XX", "56842XX", "56844XX"]
+   "partNumbers": ["56834XX*", "56837XX", "56838XX", "56841XX", "56842XX", "56844XX"],
+   "catalogueNo": "568"
   },
   {
    "id": "c801c02fc4",
    "family": "rolling-stock",
-   "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated, Screened and Unsheathed  3.6/6kV  Rated Type FXZ 120 C Rolling Stock Cable",
+   "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated, Screened and Unsheathed 3.6/6kV Rated Type FXZ 120 C Rolling Stock Cable",
    "pages": [41],
    "headers": ["Part Number", "Cross Section (mm2 )", "Conductor Construction No.of Strands x Strand dia. (Nos x mm)", "Max. Conductor Resistance at 20 0C (Ω/km)", "Insulation Thickness (mm) (Nom)", "Overall Diameter (mm) — (Min)", "(Max)", "Cable Weight (kg/km) approx."],
    "rows": [
@@ -1542,18 +1570,19 @@
     "shielded": true,
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50382-2 S", "EN 50382-2  3.6", "EN 50382-2 : 2008", "EN 45545-2", "EN 50382-2", "DIN 5510-2", "BS 6853", "EN 60228", "EN 50382-1"],
+    "standardsFound": ["EN 50382-2 S", "EN 50382-2 3.6", "EN 50382-2 : 2008", "EN 45545-2", "EN 50382-2", "DIN 5510-2", "BS 6853", "EN 60228", "EN 50382-1"],
     "voltBucket": "Above 3.3kV",
     "sizesSqmm": [50, 70, 95, 120, 150, 185],
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["59834XX*", "59837XX", "59838XX", "59841XX", "59842XX", "59844XX"]
+   "partNumbers": ["59834XX*", "59837XX", "59838XX", "59841XX", "59842XX", "59844XX"],
+   "catalogueNo": "598"
   },
   {
    "id": "abc8201871",
    "family": "rolling-stock",
-   "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated and sheathed  3.6/6kV Rated Type FF 120 C Rolling Stock Cable",
+   "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated and sheathed 3.6/6kV Rated Type FF 120 C Rolling Stock Cable",
    "pages": [42],
    "headers": ["Part Number", "Cross Section (mm2 )", "Conductor Construction No.of Strands x Strand dia. (Nos x mm)", "Max. Conductor Resistance at 20 0C (Ω/km)", "Inuslation Thickness (mm) ( Nom)", "Sheath Thickness (mm) ( Nom)", "Overall Diameter (mm ) (Min) (Max)", "", "Cable Weight (Kg/Km) approx."],
    "rows": [
@@ -1588,7 +1617,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["56916XXYY*", "56919XXYY", "56923XXYY", "56927XXYY", "56928XXYY", "56930XXYY", "56932XXYY", "56934XXYY", "56937XXYY", "56938XXYY", "56941XXYY", "56942XXYY", "56944XXYY", "56946XXYY", "56948XXYY", "56949XXYY"]
+   "partNumbers": ["56916XXYY*", "56919XXYY", "56923XXYY", "56927XXYY", "56928XXYY", "56930XXYY", "56932XXYY", "56934XXYY", "56937XXYY", "56938XXYY", "56941XXYY", "56942XXYY", "56944XXYY", "56946XXYY", "56948XXYY", "56949XXYY"],
+   "catalogueNo": "569"
   },
   {
    "id": "f1ba40fe53",
@@ -1621,7 +1651,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["57270XX*", "57206XX", "57208XX", "57210XX", "57213XX", "57216XX", "57279XX"]
+   "partNumbers": ["57270XX*", "57206XX", "57208XX", "57210XX", "57213XX", "57216XX", "57279XX"],
+   "catalogueNo": "572"
   },
   {
    "id": "f990dbd490",
@@ -1779,7 +1810,8 @@
     "5731620",
     "5731630",
     "5731636"
-   ]
+   ],
+   "catalogueNo": "573"
   },
   {
    "id": "ede51cb6d8",
@@ -1858,7 +1890,7 @@
     "conductors": ["Tinned Copper"],
     "shielded": true,
     "halogenFree": true,
-    "standardsFound": ["EN 50306", "EN 50264 I", "EN  45545 - 2 HL3", "BS 6853", "DIN 5510-2"],
+    "standardsFound": ["EN 50306", "EN 50264 I", "EN 45545 - 2 HL3", "BS 6853", "DIN 5510-2"],
     "voltBucket": "751–1100V",
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15, 16, 18, 22, 24, 25, 30, 36, 37, 42],
     "awg": [],
@@ -1926,7 +1958,8 @@
     "5741610",
     "5741616",
     "5741630"
-   ]
+   ],
+   "catalogueNo": "574"
   },
   {
    "id": "58e51b0588",
@@ -1957,7 +1990,7 @@
     "conductors": ["Tinned Copper"],
     "halogenFree": true,
     "fireSafety": true,
-    "standardsFound": ["EN 50306", "EN 50264 I", "EN  45545 - 2 HL3", "BS 6853", "DIN 5510-2"],
+    "standardsFound": ["EN 50306", "EN 50264 I", "EN 45545 - 2 HL3", "BS 6853", "DIN 5510-2"],
     "voltBucket": "751–1100V",
     "sizesSqmm": [0.5, 0.75, 1, 1.5, 2.5, 4, 12, 14, 16, 18, 20],
     "awg": [],
@@ -1966,14 +1999,15 @@
    "partNumbers": ["57506XX*", "57581XX", "57508XX", "57580XX", "57510XX", "57579XX", "57513XX", "57578XX", "57516XX", "57577XX", "57519XX"],
    "info": {
     "application": ["For carriage wiring, terminal boxes, control", "panels, wiring harness in inside/outside the moving vehicle.", "For Rail/Bus and other transport vehicles. For switch gears and control gear manufacturing. Features"],
-    "construction": ["Conductor : Finely Stranded Annealed ü Electro Tinned Copper, Flexible. (Unilay*) ü", "Insulation : EBXL - LSZH. (Code M) ü White colour or as per customer order. ü"],
+    "construction": ["Conductor : Finely Stranded Annealed", "Electro Tinned Copper, Flexible. (Unilay*)", "Insulation : EBXL - LSZH. (Code M)", "White colour or as per customer order."],
     "technical": [
      "Temperature Range : -500C to +1200C.",
      "Rated Voltage : 600/1000V AC 900/1500V DC",
      "Test voltage : 2 kV AC for 5 min.",
      "Specification : Generally as per BS EN 50306 & BS EN 50264 In addition to BS EN 50306 spec, cables also meet fire performance tests as per EN 45545 -2 HL3, BS 6853, DIN 5510-2 NF F 16-101, NFPA -130 ."
     ]
-   }
+   },
+   "catalogueNo": "575"
   },
   {
    "id": "99d3da4b22",
@@ -2066,7 +2100,8 @@
     "5761630",
     "5761636",
     "D5222303"
-   ]
+   ],
+   "catalogueNo": "576"
   },
   {
    "id": "23c2d1c8c3",
@@ -2130,7 +2165,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "577"
   },
   {
    "id": "15b8dfaa47",
@@ -2243,7 +2279,8 @@
    ],
    "info": {
     "construction": ["200C"]
-   }
+   },
+   "catalogueNo": "577"
   },
   {
    "id": "cf40c4c04f",
@@ -2310,14 +2347,15 @@
    "partNumbers": ["57806XX*", "57808XX", "57810XX", "57813XX", "57816XX", "57819XX", "57823XX", "57827XX", "57828XX", "57830XX", "57832XX", "57834XX", "57837XX", "57838XX", "57841XX", "57842XX", "57844XX", "57846XX", "57848XX", "57849XX", "Red - 01", "Chocolate - 12"],
    "info": {
     "application": ["For carriage wiring, terminal boxes, control panels, wiring harness in inside/outside the moving vehicle.", "For Rail/Bus and other transport vehicles.", "For switch gears and control gear manufacturing."],
-    "construction": ["Conductor : Finely Stranded Annealed ü Electro Tinned Copper, Class 5. (Unilay*) ü", "Insulation : EBXL - LSZH ü", "Grey or as per customer order. ü"],
+    "construction": ["Conductor : Finely Stranded Annealed", "Electro Tinned Copper, Class 5. (Unilay*)", "Insulation : EBXL - LSZH", "Grey or as per customer order."],
     "technical": [
      "Temperature Range : -500C to +1200C.",
      "Rated Voltage : 600/1000V AC 900/1500V DC",
      "Test voltage : 2 kV AC for 5 min.",
      "Specification : Generally as per BS EN 50306 & BS EN 50264 In addition to BS EN 50306 spec, cables also meet fire performance tests as per EN 45545 -2 HL3, BS 6853, DIN 5510-2, NF F 16-101, NFPA -130"
     ]
-   }
+   },
+   "catalogueNo": "578"
   },
   {
    "id": "79c5b79abf",
@@ -2398,7 +2436,8 @@
     "5791325",
     "5791602",
     "5791603"
-   ]
+   ],
+   "catalogueNo": "579"
   },
   {
    "id": "c32baea1ff",
@@ -2481,7 +2520,8 @@
     "5793204",
     "5793204G",
     "5793404G"
-   ]
+   ],
+   "catalogueNo": "579"
   },
   {
    "id": "d33a33118d",
@@ -2526,7 +2566,8 @@
     "awg": [],
     "cores": [2, 3, 4, 5, 7, 9, 16]
    },
-   "partNumbers": ["5800602", "5800603", "5800604", "5800607", "A5800602P", "5800802", "5800803", "5800804", "5800809", "5800816", "A5800805P", "5801002", "5801003", "5801004", "5801007", "5801302", "5801303", "5801304", "5801305", "A5801302P"]
+   "partNumbers": ["5800602", "5800603", "5800604", "5800607", "A5800602P", "5800802", "5800803", "5800804", "5800809", "5800816", "A5800805P", "5801002", "5801003", "5801004", "5801007", "5801302", "5801303", "5801304", "5801305", "A5801302P"],
+   "catalogueNo": "580"
   },
   {
    "id": "fed2493462",
@@ -2572,14 +2613,15 @@
    "partNumbers": ["5801602", "5801603G", "5801604", "5801607", "5801903", "5801904", "5802302", "5802303", "5802304", "5802703", "5802704", "5802803", "5802804", "5822805", "5803002", "5803003", "5803004", "5803204", "5803402"],
    "info": {
     "application": ["For carriage wiring, terminal boxes, control panels, wiring harness in inside/outside the moving vehicle.", "For Rail/Bus and other transport vehicles.", "For switch gears and control gear manufacturing. Features"],
-    "construction": ["Conductor : Finely Stranded Annealed ü Electro Tinned Copper, Class 5. (Unilay*) ü", "Insulation :EBXL - LSZH Grey Colour. (X) ü", "Screen : Tinned Copper Braid-S ü", "Separator Tape", "Outersheath : EBXL - LSZH (EM104) Code M Black colour or as per customer order."],
+    "construction": ["Conductor : Finely Stranded Annealed", "Electro Tinned Copper, Class 5. (Unilay*)", "Insulation :EBXL - LSZH Grey Colour. (X)", "Screen : Tinned Copper Braid-S", "Separator Tape", "Outersheath : EBXL - LSZH (EM104) Code M Black colour or as per customer order."],
     "technical": [
      "Temperature Range : -500C to +1200C.",
      "Rated Voltage : 600/1000V AC 900/1500V DC",
      "Test voltage : 3.5 kV AC for 5 min.",
      "Specification : Generally as per BS EN 50264 & BS EN 50306 In addition to BS EN 50264 spec, cables also meet fire performance tests as per EN 45545 -2 HL3, BS 6853, DIN 5510-2, NF F 16-101, NFPA -130"
     ]
-   }
+   },
+   "catalogueNo": "580"
   },
   {
    "id": "b3f1808e0d",
@@ -2675,7 +2717,8 @@
     "PH30A527W1320",
     "PH30A527W1602",
     "PH30A527W1603"
-   ]
+   ],
+   "catalogueNo": "PH30A527W"
   },
   {
    "id": "b2e86fcb64",
@@ -2719,7 +2762,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["58106XXYY*", "58108XXYY", "58110XXYY", "58113XXYY", "58116XXYY", "58119XXYY", "58123XXYY", "58127XXYY", "58128XXYY", "58130XXYY", "58132XXYY", "58134XXYY", "58137XXYY", "58138XXYY", "58141XXYY", "58142XXYY", "58144XXYY", "58146XXYY", "58148XXYY", "58149XXYY"]
+   "partNumbers": ["58106XXYY*", "58108XXYY", "58110XXYY", "58113XXYY", "58116XXYY", "58119XXYY", "58123XXYY", "58127XXYY", "58128XXYY", "58130XXYY", "58132XXYY", "58134XXYY", "58137XXYY", "58138XXYY", "58141XXYY", "58142XXYY", "58144XXYY", "58146XXYY", "58148XXYY", "58149XXYY"],
+   "catalogueNo": "581"
   },
   {
    "id": "f7a103eeda",
@@ -2745,7 +2789,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["Red - 01", "Chocolate - 12"]
+   "partNumbers": ["Red - 01", "Chocolate - 12"],
+   "catalogueNo": "581"
   },
   {
    "id": "ca3eddb1af",
@@ -2798,7 +2843,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["58213XXYY*", "58216XXYY", "58219XXYY", "58223XXYY", "58227XXYY", "58228XXYY", "58230XXYY", "58232XXYY", "58234XXYY", "58237XXYY", "58238XXYY", "58241XXYY", "58242XXYY", "58244XXYY", "58246XXYY", "58248XXYY", "58249XXYY"]
+   "partNumbers": ["58213XXYY*", "58216XXYY", "58219XXYY", "58223XXYY", "58227XXYY", "58228XXYY", "58230XXYY", "58232XXYY", "58234XXYY", "58237XXYY", "58238XXYY", "58241XXYY", "58242XXYY", "58244XXYY", "58246XXYY", "58248XXYY", "58249XXYY"],
+   "catalogueNo": "582"
   },
   {
    "id": "85ffc231a3",
@@ -2824,7 +2870,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["Red - 01", "Chocolate - 12"]
+   "partNumbers": ["Red - 01", "Chocolate - 12"],
+   "catalogueNo": "582"
   },
   {
    "id": "a53e08bcf5",
@@ -2898,7 +2945,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "583"
   },
   {
    "id": "67981c3c49",
@@ -2935,7 +2983,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["C21528XXYY*", "C21530XXYY", "C21532XXYY", "C21534XXYY", "C21537XXYY", "C21538XXYY", "C21541XXYY", "C21542XXYY", "C21544XXYY", "C21546XXYY", "C21548XXYY"]
+   "partNumbers": ["C21528XXYY*", "C21530XXYY", "C21532XXYY", "C21534XXYY", "C21537XXYY", "C21538XXYY", "C21541XXYY", "C21542XXYY", "C21544XXYY", "C21546XXYY", "C21548XXYY"],
+   "catalogueNo": "C215"
   },
   {
    "id": "ade05330d5",
@@ -2977,7 +3026,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["58413XXYY*", "58416XXYY", "58419XXYY", "58423XXYY", "58427XXYY", "58428XXYY", "58430XXYY", "58432XXYY", "58434XXYY", "58437XXYY", "58438XXYY", "58441XXYY", "58442XXYY", "58444XXYY", "58446XXYY", "58448XXYY", "58449XXYY"]
+   "partNumbers": ["58413XXYY*", "58416XXYY", "58419XXYY", "58423XXYY", "58427XXYY", "58428XXYY", "58430XXYY", "58432XXYY", "58434XXYY", "58437XXYY", "58438XXYY", "58441XXYY", "58442XXYY", "58444XXYY", "58446XXYY", "58448XXYY", "58449XXYY"],
+   "catalogueNo": "584"
   },
   {
    "id": "7607252f60",
@@ -3017,7 +3067,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["58513XXYY*", "58516XXYY", "58519XXYY", "58523XXYY", "58527XXYY", "58528XXYY", "58530XXYY", "58532XXYY", "58534XXYY", "58537XXYY", "58538XXYY", "58541XXYY", "58542XXYY", "58544XXYY", "58546XXYY", "58548XXYY"]
+   "partNumbers": ["58513XXYY*", "58516XXYY", "58519XXYY", "58523XXYY", "58527XXYY", "58528XXYY", "58530XXYY", "58532XXYY", "58534XXYY", "58537XXYY", "58538XXYY", "58541XXYY", "58542XXYY", "58544XXYY", "58546XXYY", "58548XXYY"],
+   "catalogueNo": "585"
   },
   {
    "id": "3735e83414",
@@ -3043,7 +3094,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": ["Red - 01", "Chocolate - 12"]
+   "partNumbers": ["Red - 01", "Chocolate - 12"],
+   "catalogueNo": "585"
   },
   {
    "id": "7e84cd0396",
@@ -3085,7 +3137,8 @@
     "awg": [],
     "cores": [2, 3, 4, 6]
    },
-   "partNumbers": ["C1991903 *", "C1991906", "C1992304", "C1992702", "C1993204"]
+   "partNumbers": ["C1991903 *", "C1991906", "C1992304", "C1992702", "C1993204"],
+   "catalogueNo": "C199"
   },
   {
    "id": "cea8805281",
@@ -3114,7 +3167,8 @@
     "awg": [],
     "cores": [1]
    },
-   "partNumbers": ["A54506XX", "A54508XX", "A54510XX", "A54513XX", "A54516XX"]
+   "partNumbers": ["A54506XX", "A54508XX", "A54510XX", "A54513XX", "A54516XX"],
+   "catalogueNo": "A545"
   },
   {
    "id": "e2cdb5eb31",
@@ -3164,7 +3218,8 @@
     "awg": [],
     "cores": []
    },
-   "partNumbers": []
+   "partNumbers": [],
+   "catalogueNo": "A546"
   },
   {
    "id": "723f16c531",
@@ -3286,7 +3341,8 @@
     "A5461324G",
     "A5461327",
     "A5461327G"
-   ]
+   ],
+   "catalogueNo": "A546"
   },
   {
    "id": "f50f71eff4",
@@ -3321,7 +3377,8 @@
     "awg": [],
     "cores": [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 27]
    },
-   "partNumbers": ["A5461602", "A5461603", "A5461604", "A5461605", "A5461606", "A5461607", "A5461608", "A5461609", "A5461610", "A5461612", "A5461612G", "A5461614", "A5461616", "A5461620", "A5461624", "A5461627"]
+   "partNumbers": ["A5461602", "A5461603", "A5461604", "A5461605", "A5461606", "A5461607", "A5461608", "A5461609", "A5461610", "A5461612", "A5461612G", "A5461614", "A5461616", "A5461620", "A5461624", "A5461627"],
+   "catalogueNo": "A546"
   },
   {
    "id": "7681bc9481",
@@ -3365,7 +3422,8 @@
     "awg": [],
     "cores": [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 27]
    },
-   "partNumbers": ["A5470602", "A5470602P", "A5470603", "A5470603P", "A5470604", "A547064P", "A5470605", "A5470605P", "A5470606", "A5470607", "A5470608", "A5470609", "A5470610", "A5470612", "A5470614", "A5470616", "A5470616G", "A5470620", "A5470620G", "A5470624", "A5470627"]
+   "partNumbers": ["A5470602", "A5470602P", "A5470603", "A5470603P", "A5470604", "A547064P", "A5470605", "A5470605P", "A5470606", "A5470607", "A5470608", "A5470609", "A5470610", "A5470612", "A5470614", "A5470616", "A5470616G", "A5470620", "A5470620G", "A5470624", "A5470627"],
+   "catalogueNo": "A547"
   },
   {
    "id": "4fa6be9bf8",
@@ -3480,7 +3538,8 @@
     "A5471310",
     "A5471312",
     "A5471312G"
-   ]
+   ],
+   "catalogueNo": "A547"
   },
   {
    "id": "a478079c97",
@@ -3521,7 +3580,8 @@
     "awg": [],
     "cores": [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 27]
    },
-   "partNumbers": ["A5471314", "A5471316", "A5471320", "A5471324", "A5471327", "A5471602", "A5471603", "A5471604", "A5471605", "A5471606", "A5471607", "A5471608", "A5471609", "A5471610", "A5471612", "A5471612G", "A5471614", "A5471616", "A5471620", "A5471624", "A5471627"]
+   "partNumbers": ["A5471314", "A5471316", "A5471320", "A5471324", "A5471327", "A5471602", "A5471603", "A5471604", "A5471605", "A5471606", "A5471607", "A5471608", "A5471609", "A5471610", "A5471612", "A5471612G", "A5471614", "A5471616", "A5471620", "A5471624", "A5471627"],
+   "catalogueNo": "A547"
   }
  ]
 }
