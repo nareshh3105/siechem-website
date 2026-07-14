@@ -35,8 +35,10 @@
   .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-card); }
 
   table.spec-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; margin-bottom: 14px; }
-  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 6px 5px; border: 1px solid var(--border); overflow: hidden; }
-  table.spec-table th input { width: 100%; border: none; background: none; font-weight: 600; font-size: 11.5px; padding: 0; }
+  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 5px 5px; border: 1px solid var(--border); overflow: hidden; }
+  table.spec-table th input { width: 100%; border: none; background: none; padding: 0; display: block; }
+  table.spec-table th input.h-label { font-weight: 600; font-size: 11px; color: var(--text); }
+  table.spec-table th input.h-unit { font-weight: 500; font-size: 9.5px; color: var(--text-faint); margin-top: 1px; }
   table.spec-table td { border: 1px solid var(--border); padding: 0; overflow: hidden; }
   table.spec-table td input { width: 100%; border: none; padding: 6px 5px; font-size: 12.5px; background: none; }
   table.spec-table td input:focus, table.spec-table th input:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -122,9 +124,13 @@
       // Fixed layout needs explicit widths or it just splits evenly --
       // size each column to what its header/values actually need instead.
       const colWidthPct = computeColumnWidths(s.headers, s.rows);
-      const headerCells = s.headers.map((h, i) => `
-        <th style="width:${colWidthPct[i]}%"><input type="text" data-h="${i}" value="${escapeAttr(h)}"></th>
-      `).join('');
+      const headerCells = s.headers.map((h, i) => {
+        const { label, unit } = splitHeaderLabelUnit(h);
+        return `<th style="width:${colWidthPct[i]}%">
+          <input type="text" class="h-label" data-h="${i}" value="${escapeAttr(label)}" placeholder="Name">
+          <input type="text" class="h-unit" data-hu="${i}" value="${escapeAttr(unit)}" placeholder="Unit">
+        </th>`;
+      }).join('');
 
       const rowCells = s.rows.map((row, ri) => `
         <tr data-row="${ri}">
@@ -169,9 +175,13 @@
         </div>
       `;
 
-      panel.querySelectorAll('[data-h]').forEach(inp => inp.addEventListener('input', e => {
-        s.headers[+e.target.dataset.h] = e.target.value;
-      }));
+      function syncHeader(i) {
+        const label = panel.querySelector(`[data-h="${i}"]`).value.trim();
+        const unit = panel.querySelector(`[data-hu="${i}"]`).value.trim();
+        s.headers[i] = unit ? `${label} ${unit}` : label;
+      }
+      panel.querySelectorAll('[data-h]').forEach(inp => inp.addEventListener('input', e => syncHeader(+e.target.dataset.h)));
+      panel.querySelectorAll('[data-hu]').forEach(inp => inp.addEventListener('input', e => syncHeader(+e.target.dataset.hu)));
       panel.querySelectorAll('[data-r]').forEach(inp => inp.addEventListener('input', e => {
         s.rows[+e.target.dataset.r][+e.target.dataset.c] = e.target.value;
       }));
@@ -234,6 +244,17 @@
       });
     }
 
+    // Splits "Wire Size (AWG)" -> { label: "Wire Size", unit: "(AWG)" } so the
+    // name and unit can render on separate lines instead of one long string.
+    // Headers with multiple parenthetical groups (e.g. "Diameter (Nom.) (mm)")
+    // keep everything from the first "(" onward as the unit line.
+    function splitHeaderLabelUnit(h) {
+      const s = String(h || '');
+      const i = s.indexOf('(');
+      if (i === -1) return { label: s, unit: '' };
+      return { label: s.slice(0, i).trim(), unit: s.slice(i).trim() };
+    }
+
     // Weight each column by the longest of its header text or a sample of
     // its row values, then convert to percentages (with a floor so no
     // column collapses to nothing and a cap so one long header can't eat
@@ -242,7 +263,11 @@
     function computeColumnWidths(headers, rows) {
       const sample = rows.slice(0, 30);
       const weights = headers.map((h, i) => {
-        const headerLen = String(h || '').length;
+        // Header now renders as two lines (name / unit), so its footprint
+        // is however long the longer of those two lines is, not the
+        // combined string length.
+        const { label, unit } = splitHeaderLabelUnit(h);
+        const headerLen = Math.max(label.length, unit.length);
         const maxValLen = sample.reduce((m, r) => Math.max(m, String(r[i] ?? '').length), 0);
         return Math.max(6, Math.min(40, Math.max(headerLen, maxValLen)));
       });
