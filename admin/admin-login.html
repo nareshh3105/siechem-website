@@ -8,27 +8,69 @@
 <link rel="icon" href="/assets/favicon.png">
 <link rel="stylesheet" href="/theme.css">
 <style>
-  body { background: var(--bg-soft); min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-  .login-card {
-    width: 100%; max-width: 380px; background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 40px 36px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  body {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(1200px 600px at 50% -10%, rgba(184,115,51,0.16), transparent 60%),
+                linear-gradient(180deg, #0f0f14 0%, #1a0a0b 100%);
+    padding: 24px;
   }
-  .login-card h1 { font-size: 20px; margin-bottom: 6px; color: var(--text); }
-  .login-card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 24px; }
-  .login-card .input { width: 100%; margin-bottom: 16px; }
+  .login-shell { width: 100%; max-width: 400px; }
+  .login-logo { display: flex; justify-content: center; margin-bottom: 22px; }
+  .login-logo img { height: 40px; border-radius: 6px; }
+  .login-card {
+    width: 100%; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 38px 34px 32px; box-shadow: 0 24px 64px rgba(0,0,0,0.35);
+    position: relative; overflow: hidden;
+  }
+  .login-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2, var(--accent)));
+  }
+  .login-eyebrow {
+    display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-border);
+    padding: 4px 10px; border-radius: 20px; margin-bottom: 16px;
+  }
+  .login-card h1 { font-size: 21px; font-weight: 800; margin-bottom: 6px; color: var(--text); letter-spacing: -0.3px; }
+  .login-card p { font-size: 13.5px; color: var(--text-muted); margin-bottom: 26px; line-height: 1.5; }
+  .field-wrap { position: relative; margin-bottom: 18px; }
+  .field-wrap svg {
+    position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+    color: var(--text-dim); pointer-events: none;
+  }
+  .login-card .input { width: 100%; padding-left: 38px; }
   .login-card .btn { width: 100%; justify-content: center; }
-  .err { color: #B91C1C; font-size: 13px; margin: -8px 0 16px; display: none; }
+  .err {
+    display: none; align-items: center; gap: 8px; color: #B91C1C; font-size: 12.5px;
+    background: #FFF1F2; border: 1px solid #FFB3B8; border-radius: 8px; padding: 9px 12px; margin: -6px 0 16px;
+  }
+  .login-foot { text-align: center; margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.4); }
 </style>
 </head>
 <body>
-  <div class="login-card">
-    <h1>Siechem Admin</h1>
-    <p>Sign in to edit cable specifications and part numbers.</p>
-    <form id="loginForm">
-      <input type="password" class="input" id="password" placeholder="Password" autocomplete="current-password" required>
-      <div class="err" id="err">Incorrect password.</div>
-      <button type="submit" class="btn btn-primary" id="submitBtn">Sign In</button>
-    </form>
+  <div class="login-shell">
+    <div class="login-logo"><img src="/assets/logo.jpg" alt="Siechem Wires &amp; Cables"></div>
+    <div class="login-card">
+      <span class="login-eyebrow">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        Admin Portal
+      </span>
+      <h1>Siechem Admin</h1>
+      <p>Sign in to edit cable specifications and part numbers across the catalogue.</p>
+      <form id="loginForm">
+        <div class="field-wrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="5" y="11" width="14" height="9" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>
+          <input type="password" class="input" id="password" placeholder="Password" autocomplete="current-password" required>
+        </div>
+        <div class="err" id="err">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 8v5M12 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Incorrect password.
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Sign In</button>
+      </form>
+    </div>
+    <p class="login-foot">Siechem Technologies Pvt. Ltd. &middot; Internal use only</p>
   </div>
   <script>
     document.getElementById('loginForm').addEventListener('submit', async (e) => {
@@ -49,7 +91,7 @@
         localStorage.setItem('siechem_admin_token', data.token);
         window.location.href = '/admin/admin.html';
       } catch (e2) {
-        err.style.display = 'block';
+        err.style.display = 'flex';
         btn.disabled = false;
         btn.textContent = 'Sign In';
       }

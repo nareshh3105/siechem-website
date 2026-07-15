@@ -8,68 +8,147 @@
 <link rel="icon" href="/assets/favicon.png">
 <link rel="stylesheet" href="/theme.css">
 <style>
+  body { background: var(--bg-soft); }
   .admin-topbar {
     display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 28px; border-bottom: 1px solid var(--border); background: var(--bg-card);
+    padding: 14px 28px; border-bottom: 1px solid var(--border); background: var(--bg-card);
+    position: sticky; top: 0; z-index: 10;
   }
-  .admin-topbar .brand { font-weight: 700; font-size: 17px; color: var(--text); }
-  .admin-topbar .brand a { color: var(--text-muted); font-weight: 400; font-size: 13px; margin-right: 10px; text-decoration: none; }
-  .admin-wrap { max-width: 1300px; margin: 0 auto; padding: 28px 24px 100px; display: grid; grid-template-columns: 260px 1fr; gap: 24px; }
+  .admin-topbar .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .admin-topbar .brand img { height: 26px; border-radius: 4px; flex-shrink: 0; }
+  .admin-topbar .brand a {
+    display: inline-flex; align-items: center; gap: 4px; color: var(--text-muted); font-weight: 500;
+    font-size: 13px; text-decoration: none; flex-shrink: 0;
+  }
+  .admin-topbar .brand a:hover { color: var(--accent); }
+  .admin-topbar .brand .sep { color: var(--border-strong); flex-shrink: 0; }
+  .admin-topbar .brand #familyName { font-weight: 700; font-size: 14.5px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .admin-wrap { max-width: 1320px; margin: 0 auto; padding: 24px 24px 100px; display: grid; grid-template-columns: 270px 1fr; gap: 20px; }
   @media (max-width: 900px) { .admin-wrap { grid-template-columns: 1fr; } }
 
-  .series-list { border: 1px solid var(--border); border-radius: 10px; background: var(--bg-card); overflow: hidden; align-self: start; }
-  .series-list h2 { font-size: 13px; padding: 14px 16px; border-bottom: 1px solid var(--border); color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
-  .series-item {
-    display: flex; align-items: center; justify-content: space-between; padding: 11px 16px;
-    font-size: 13.5px; cursor: pointer; border-bottom: 1px solid var(--border); color: var(--text);
+  .series-list { border: 1px solid var(--border); border-radius: 12px; background: var(--bg-card); overflow: hidden; align-self: start; position: sticky; top: 80px; }
+  .series-list-head { padding: 13px 15px 10px; border-bottom: 1px solid var(--border); }
+  .series-list-head h2 { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin-bottom: 8px; }
+  .series-search { position: relative; }
+  .series-search svg { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); }
+  .series-search input {
+    width: 100%; padding: 7px 10px 7px 28px; border: 1.5px solid var(--border); border-radius: 7px;
+    font-size: 12.5px; outline: none; transition: border-color .15s;
   }
-  .series-item:hover { background: var(--bg-soft); }
-  .series-item.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
-  .add-series-btn { width: 100%; padding: 12px 16px; font-size: 13px; color: var(--accent); background: none; border: none; cursor: pointer; text-align: left; }
-  .add-series-btn:hover { background: var(--bg-soft); }
+  .series-search input:focus { border-color: var(--accent); }
+  #seriesListItems { max-height: 60vh; overflow-y: auto; }
+  .series-item {
+    position: relative; display: flex; align-items: center; justify-content: space-between; padding: 10px 15px 10px 18px;
+    font-size: 13px; cursor: pointer; border-bottom: 1px solid var(--border); color: var(--text-muted);
+    transition: background .12s, color .12s;
+  }
+  .series-item:last-child { border-bottom: none; }
+  .series-item:hover { background: var(--bg-soft); color: var(--text); }
+  .series-item.active { background: var(--accent-soft); color: var(--accent-2); font-weight: 600; }
+  .series-item.active::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+  .series-item .row-count { font-family: var(--mono); font-size: 10.5px; color: var(--text-dim); flex-shrink: 0; margin-left: 8px; }
+  .series-item.active .row-count { color: var(--accent); }
+  .add-series-btn {
+    display: flex; align-items: center; gap: 6px; width: 100%; padding: 12px 16px; font-size: 13px;
+    font-weight: 600; color: var(--accent); background: var(--bg-soft); border: none; border-top: 1px solid var(--border);
+    cursor: pointer; text-align: left;
+  }
+  .add-series-btn:hover { background: var(--accent-soft); }
 
   .editor-panel { min-height: 300px; }
-  .editor-empty { color: var(--text-muted); padding: 60px 0; text-align: center; }
-  .editor-head { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
-  .editor-head input.name-input { font-size: 18px; font-weight: 700; border: 1px solid transparent; padding: 6px 8px; border-radius: 6px; background: none; flex: 1; min-width: 200px; }
-  .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-card); }
+  .editor-empty {
+    color: var(--text-muted); padding: 90px 20px; text-align: center; background: var(--bg-card);
+    border: 1px dashed var(--border-strong); border-radius: 12px; font-size: 13.5px;
+  }
+  .editor-head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+  }
+  .editor-head input.name-input {
+    font-size: 17px; font-weight: 700; border: 1px solid transparent; padding: 7px 9px; border-radius: 7px;
+    background: none; flex: 1; min-width: 200px; color: var(--text);
+  }
+  .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-soft); }
+  .btn-danger-ghost {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+    color: #B91C1C; background: none; border: 1px solid #FCA5A5; border-radius: 8px; padding: 8px 14px; cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-danger-ghost:hover { background: #FEF2F2; }
 
-  table.spec-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; margin-bottom: 14px; }
-  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 5px 5px; border: 1px solid var(--border); overflow: hidden; }
+  .card-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+  .card-section-title {
+    display: flex; align-items: center; gap: 7px; font-size: 12.5px; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 700; letter-spacing: .04em; margin-bottom: 14px;
+  }
+  .card-section-title svg { color: var(--accent); }
+
+  .info-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 700px) { .info-editor { grid-template-columns: 1fr; } }
+  .info-editor .block { border: 1px solid var(--border); border-radius: 9px; padding: 11px 13px; background: var(--bg-soft); }
+  .info-editor .block h4 { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; }
+  .info-editor .block h4 .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .info-editor textarea {
+    width: 100%; min-height: 84px; border: 1px solid var(--border); border-radius: 7px; padding: 8px;
+    font-size: 12.5px; font-family: inherit; resize: vertical; background: var(--bg-card); outline: none; transition: border-color .15s;
+  }
+  .info-editor textarea:focus { border-color: var(--accent); }
+
+  .table-scroll { overflow-x: auto; border-radius: 9px; border: 1px solid var(--border); }
+  table.spec-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; }
+  table.spec-table th { background: var(--bg-soft); text-align: left; padding: 5px 5px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); overflow: hidden; }
   table.spec-table th input { width: 100%; border: none; background: none; padding: 0; display: block; }
   table.spec-table th input.h-label { font-weight: 600; font-size: 11px; color: var(--text); }
   table.spec-table th input.h-unit { font-weight: 500; font-size: 9.5px; color: var(--text-faint); margin-top: 1px; }
-  table.spec-table td { border: 1px solid var(--border); padding: 0; overflow: hidden; }
+  table.spec-table td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 0; overflow: hidden; }
+  table.spec-table tr:last-child td { border-bottom: none; }
+  table.spec-table tbody tr:hover td { background: rgba(184,115,51,0.035); }
   table.spec-table td input { width: 100%; border: none; padding: 6px 5px; font-size: 12.5px; background: none; }
   table.spec-table td input:focus, table.spec-table th input:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
-  table.spec-table td.row-actions, table.spec-table th.col-actions { width: 28px; text-align: center; }
-  table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 15px; }
-  table.spec-table td.row-actions button:hover { color: #B91C1C; }
+  table.spec-table td.row-actions, table.spec-table th.col-actions { width: 28px; text-align: center; border-right: none; }
+  table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 15px; padding: 4px; border-radius: 4px; }
+  table.spec-table td.row-actions button:hover { color: #B91C1C; background: #FEF2F2; }
 
-  .table-actions { display: flex; gap: 10px; margin-bottom: 24px; }
+  .table-actions { display: flex; gap: 10px; margin-top: 14px; }
+  .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
 
-  .info-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-  @media (max-width: 700px) { .info-editor { grid-template-columns: 1fr; } }
-  .info-editor .block { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
-  .info-editor .block h4 { font-size: 12.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-  .info-editor textarea { width: 100%; min-height: 90px; border: 1px solid var(--border); border-radius: 6px; padding: 8px; font-size: 12.5px; font-family: inherit; resize: vertical; }
-  .info-editor p.hint { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
-
-  .save-bar { display: flex; align-items: center; gap: 12px; }
-  #saveMsg { font-size: 12.5px; }
+  .save-bar {
+    position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
+  }
+  #saveMsg { font-size: 12.5px; font-weight: 500; }
 </style>
 </head>
 <body>
   <div class="admin-topbar">
-    <div class="brand"><a href="/admin/admin.html">&larr; All Segments</a><span id="familyName">Loading…</span></div>
+    <div class="brand">
+      <img src="/assets/logo.jpg" alt="Siechem">
+      <a href="/admin/admin.html">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All Segments
+      </a>
+      <span class="sep">/</span>
+      <span id="familyName">Loading…</span>
+    </div>
     <button class="btn btn-ghost btn-sm" onclick="SiechemAdmin.logout()">Log Out</button>
   </div>
 
   <div class="admin-wrap">
     <div class="series-list">
-      <h2>Types</h2>
+      <div class="series-list-head">
+        <h2>Types</h2>
+        <div class="series-search">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="text" id="typeSearchInput" placeholder="Filter types…" autocomplete="off">
+        </div>
+      </div>
       <div id="seriesListItems"></div>
-      <button class="add-series-btn" id="addSeriesBtn">+ Add New Type</button>
+      <button class="add-series-btn" id="addSeriesBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Add New Type
+      </button>
     </div>
 
     <div class="editor-panel" id="editorPanel">
@@ -102,9 +181,16 @@
 
     function renderSeriesList() {
       const el = document.getElementById('seriesListItems');
-      el.innerHTML = seriesData.map(s => `
+      const q = (document.getElementById('typeSearchInput').value || '').trim().toLowerCase();
+      const filtered = !q ? seriesData : seriesData.filter(s => (s.name || '').toLowerCase().includes(q));
+      if (!filtered.length) {
+        el.innerHTML = '<div style="padding:16px;font-size:12.5px;color:var(--text-dim);text-align:center;">No types match.</div>';
+        return;
+      }
+      el.innerHTML = filtered.map(s => `
         <div class="series-item ${s.id === activeId ? 'active' : ''}" data-id="${s.id}">
-          <span>${s.name || '(unnamed)'}</span>
+          <span>${escapeHtml(s.name) || '(unnamed)'}</span>
+          <span class="row-count">${s.rows.length}</span>
         </div>
       `).join('');
       el.querySelectorAll('.series-item').forEach(item => {
@@ -143,7 +229,7 @@
         const label = { application: 'Application', construction: 'Product Construction', technical: 'Technical Data', features: 'Features' }[key];
         const lines = (s.info && s.info[key]) ? s.info[key].join('\n') : '';
         return `<div class="block">
-          <h4>${label}</h4>
+          <h4><span class="dot"></span>${label}</h4>
           <textarea data-info="${key}" placeholder="One bullet per line…">${escapeHtml(lines)}</textarea>
         </div>`;
       }).join('');
@@ -151,22 +237,42 @@
       panel.innerHTML = `
         <div class="editor-head">
           <input class="name-input" id="seriesNameInput" value="${escapeAttr(s.name)}">
-          <button class="btn btn-ghost btn-sm" id="deleteSeriesBtn">Delete Type</button>
+          <button class="btn-danger-ghost" id="deleteSeriesBtn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6h16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Delete Type
+          </button>
         </div>
 
-        <h3 style="font-size:13px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Application / Construction / Technical / Features</h3>
-        <div class="info-editor">${infoBlocks}</div>
-
-        <h3 style="font-size:13px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px;">Size Range &amp; Part Numbers</h3>
-        <div style="overflow-x:auto;">
-          <table class="spec-table">
-            <thead><tr>${headerCells}<th class="col-actions"></th></tr></thead>
-            <tbody id="specRows">${rowCells}</tbody>
-          </table>
+        <div class="card-section">
+          <div class="card-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="currentColor" stroke-width="1.8"/></svg>
+            Application / Construction / Technical / Features
+          </div>
+          <div class="info-editor">${infoBlocks}</div>
         </div>
-        <div class="table-actions">
-          <button class="btn btn-ghost btn-sm" id="addRowBtn">+ Add Row</button>
-          <button class="btn btn-ghost btn-sm" id="addColBtn">+ Add Column</button>
+
+        <div class="card-section">
+          <div class="card-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M9 4v16" stroke="currentColor" stroke-width="1.8"/></svg>
+            Size Range &amp; Part Numbers
+            <span style="margin-left:auto;font-weight:500;text-transform:none;letter-spacing:0;color:var(--text-dim);">${s.rows.length} row${s.rows.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <thead><tr>${headerCells}<th class="col-actions"></th></tr></thead>
+              <tbody id="specRows">${rowCells}</tbody>
+            </table>
+          </div>
+          <div class="table-actions">
+            <button class="btn btn-ghost btn-sm" id="addRowBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Add Row
+            </button>
+            <button class="btn btn-ghost btn-sm" id="addColBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Add Column
+            </button>
+          </div>
         </div>
 
         <div class="save-bar">
@@ -287,6 +393,8 @@
       renderSeriesList();
       renderEditor();
     });
+
+    document.getElementById('typeSearchInput').addEventListener('input', renderSeriesList);
 
     async function load() {
       try {
