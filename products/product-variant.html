@@ -461,8 +461,6 @@
   <!-- Variant Spec Body -->
   <section class="section section-tight">
     <div class="container">
-      <div class="spec-two-col" id="ssBody"></div>
-
       <h4 style="font-size:12px;font-weight:700;font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;color:var(--text-faint);margin-bottom:10px;">Complete Size Range</h4>
       <div class="spec-search-wrap">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -721,21 +719,6 @@
 
     document.getElementById('ssCat').textContent = FAM.name + (S.pages && S.pages.length ? ' · Catalogue p.' + S.pages.join('–') : '');
     document.getElementById('ssTitle').textContent = S.display;
-
-    const attrRows = DIMS.filter(d => S.attrs[d.key])
-      .map(d => '<div class="spec-kv-row"><span class="k">' + d.label + '</span><span class="v">' + esc(S.attrs[d.key]) + '</span></div>').join('');
-    const famRows = [
-      FAM.voltage ? ['Family voltage', FAM.voltage] : null,
-      FAM.temp ? ['Family temp range', FAM.temp] : null
-    ].filter(Boolean).map(([k, v]) => '<div class="spec-kv-row"><span class="k">' + esc(k) + '</span><span class="v">' + esc(v) + '</span></div>').join('');
-
-    document.getElementById('ssBody').innerHTML =
-      '<div class="spec-block"><h4>Variant Attributes</h4><div class="spec-kv">' + attrRows + famRows + '</div></div>' +
-      '<div class="spec-block"><h4>Applicable Standards</h4><div class="standards-list">' +
-      (FAM.standards || []).concat(S.attrs.standard ? [S.attrs.standard] : []).filter((v, i, a) => a.indexOf(v) === i).map(t => '<span class="std-chip">' + esc(t) + '</span>').join('') +
-      '</div><h4 style="margin-top:16px;">Applications</h4><div class="spec-kv">' +
-      (FAM.applications || []).slice(0, 4).map(a => '<div class="spec-kv-row"><span class="v">' + esc(a) + '</span></div>').join('') +
-      '</div></div>';
 
     const headers = (S.headers && S.headers.length ? S.headers : ['Part Number']).map(h => h && h.trim() ? h : '—');
     document.getElementById('ssThead').innerHTML = '<tr>' + headers.map(h => '<th>' + esc(h) + '</th>').join('') + '<th></th></tr>';
