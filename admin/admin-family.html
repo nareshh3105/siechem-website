@@ -118,7 +118,16 @@
     background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
   }
-  #saveMsg { font-size: 12.5px; font-weight: 500; }
+  #saveMsg { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 500; color: var(--text-muted); }
+  #saveMsg .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--text-dim); }
+  #saveMsg.pending .dot { background: #D97706; }
+  #saveMsg.saving .dot { background: #2563EB; animation: pulse 1s ease-in-out infinite; }
+  #saveMsg.saved .dot { background: #16A34A; }
+  #saveMsg.error .dot { background: #DC2626; }
+  #saveMsg.saving { color: #2563EB; }
+  #saveMsg.saved { color: #15803D; }
+  #saveMsg.error { color: #B91C1C; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 </style>
 </head>
 <body>
@@ -167,6 +176,62 @@
     let seriesData = [];
     let activeId = null;
 
+    // ── Autosave ──────────────────────────────────────────────────────
+    // Edits save automatically after a short pause in typing. "Save Now"
+    // stays available for an explicit immediate save. Publishing to the
+    // live site remains a separate, manual action on the dashboard.
+    const AUTOSAVE_DELAY_MS = 1200;
+    let autosaveTimer = null;
+    let autosaveSeriesId = null;
+
+    function setSaveStatus(state, text) {
+      const msg = document.getElementById('saveMsg');
+      if (!msg) return;
+      msg.className = state;
+      msg.innerHTML = '<span class="dot"></span>' + text;
+    }
+
+    function scheduleAutosave(s) {
+      clearTimeout(autosaveTimer);
+      autosaveSeriesId = s.id;
+      setSaveStatus('pending', 'Unsaved changes…');
+      autosaveTimer = setTimeout(() => saveSeries(s), AUTOSAVE_DELAY_MS);
+    }
+
+    // Flushes a pending autosave immediately (used before switching type,
+    // deleting, or navigating away) so a debounced edit is never lost.
+    async function flushAutosave() {
+      if (!autosaveTimer) return;
+      clearTimeout(autosaveTimer);
+      autosaveTimer = null;
+      const s = seriesData.find(x => x.id === autosaveSeriesId);
+      if (s) await saveSeries(s);
+    }
+
+    async function saveSeries(s) {
+      clearTimeout(autosaveTimer);
+      autosaveTimer = null;
+      const btn = document.getElementById('saveBtn');
+      setSaveStatus('saving', 'Saving…');
+      if (btn) btn.disabled = true;
+      try {
+        await SiechemAdmin.api('/api/admin-series', {
+          method: s._isNew ? 'POST' : 'PUT',
+          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info })
+        });
+        s._isNew = false;
+        setSaveStatus('saved', 'Saved automatically · Publish on the dashboard to go live');
+      } catch (e) {
+        setSaveStatus('error', 'Save failed: ' + e.message);
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+
+    window.addEventListener('beforeunload', (e) => {
+      if (autosaveTimer) { e.preventDefault(); e.returnValue = ''; }
+    });
+
     function newSeries() {
       return {
         id: 'new-' + Date.now().toString(36),
@@ -194,7 +259,9 @@
         </div>
       `).join('');
       el.querySelectorAll('.series-item').forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', async () => {
+          if (item.dataset.id === activeId) return;
+          await flushAutosave();
           activeId = item.dataset.id;
           renderSeriesList();
           renderEditor();
@@ -276,8 +343,8 @@
         </div>
 
         <div class="save-bar">
-          <button class="btn btn-primary" id="saveBtn">Save Changes</button>
-          <span id="saveMsg"></span>
+          <button class="btn btn-ghost" id="saveBtn">Save Now</button>
+          <span id="saveMsg"><span class="dot"></span>No changes yet</span>
         </div>
       `;
 
@@ -285,29 +352,35 @@
         const label = panel.querySelector(`[data-h="${i}"]`).value.trim();
         const unit = panel.querySelector(`[data-hu="${i}"]`).value.trim();
         s.headers[i] = unit ? `${label} ${unit}` : label;
+        scheduleAutosave(s);
       }
       panel.querySelectorAll('[data-h]').forEach(inp => inp.addEventListener('input', e => syncHeader(+e.target.dataset.h)));
       panel.querySelectorAll('[data-hu]').forEach(inp => inp.addEventListener('input', e => syncHeader(+e.target.dataset.hu)));
       panel.querySelectorAll('[data-r]').forEach(inp => inp.addEventListener('input', e => {
         s.rows[+e.target.dataset.r][+e.target.dataset.c] = e.target.value;
+        scheduleAutosave(s);
       }));
       panel.querySelectorAll('[data-del-row]').forEach(btn => btn.addEventListener('click', e => {
         s.rows.splice(+e.target.dataset.delRow, 1);
         renderEditor();
+        saveSeries(s);
       }));
       panel.querySelectorAll('[data-info]').forEach(ta => ta.addEventListener('input', e => {
         const key = e.target.dataset.info;
         const lines = e.target.value.split('\n').map(l => l.trim()).filter(Boolean);
         if (!s.info) s.info = {};
         s.info[key] = lines;
+        scheduleAutosave(s);
       }));
       document.getElementById('seriesNameInput').addEventListener('input', e => {
         s.name = e.target.value;
         renderSeriesList();
+        scheduleAutosave(s);
       });
       document.getElementById('addRowBtn').addEventListener('click', () => {
         s.rows.push(new Array(s.headers.length).fill(''));
         renderEditor();
+        saveSeries(s);
       });
       document.getElementById('addColBtn').addEventListener('click', () => {
         const name = prompt('Column name?');
@@ -315,9 +388,11 @@
         s.headers.push(name);
         s.rows.forEach(r => r.push(''));
         renderEditor();
+        saveSeries(s);
       });
       document.getElementById('deleteSeriesBtn').addEventListener('click', async () => {
         if (!confirm(`Delete "${s.name}"? This cannot be undone.`)) return;
+        if (autosaveSeriesId === s.id) { clearTimeout(autosaveTimer); autosaveTimer = null; }
         if (!s._isNew) {
           try { await SiechemAdmin.api('/api/admin-series', { method: 'DELETE', body: JSON.stringify({ family: familyId, id: s.id }) }); }
           catch (e) { alert('Delete failed: ' + e.message); return; }
@@ -327,27 +402,7 @@
         renderSeriesList();
         renderEditor();
       });
-      document.getElementById('saveBtn').addEventListener('click', async () => {
-        const msg = document.getElementById('saveMsg');
-        const btn = document.getElementById('saveBtn');
-        btn.disabled = true;
-        msg.style.color = 'var(--text-muted)';
-        msg.textContent = 'Saving…';
-        try {
-          await SiechemAdmin.api('/api/admin-series', {
-            method: s._isNew ? 'POST' : 'PUT',
-            body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info })
-          });
-          s._isNew = false;
-          msg.style.color = '#15803D';
-          msg.textContent = 'Saved as draft. Click "Publish Changes" on the dashboard to go live.';
-        } catch (e) {
-          msg.style.color = '#B91C1C';
-          msg.textContent = 'Save failed: ' + e.message;
-        } finally {
-          btn.disabled = false;
-        }
-      });
+      document.getElementById('saveBtn').addEventListener('click', () => saveSeries(s));
     }
 
     // Splits "Wire Size (AWG)" -> { label: "Wire Size", unit: "(AWG)" } so the
@@ -386,7 +441,8 @@
     function escapeAttr(s) { return String(s ?? '').replace(/"/g, '&quot;'); }
     function escapeHtml(s) { return String(s ?? '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])); }
 
-    document.getElementById('addSeriesBtn').addEventListener('click', () => {
+    document.getElementById('addSeriesBtn').addEventListener('click', async () => {
+      await flushAutosave();
       const s = newSeries();
       seriesData.push(s);
       activeId = s.id;
