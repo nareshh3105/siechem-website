@@ -74,7 +74,7 @@
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
       object-fit: cover;
-      opacity: 0;
+      opacity: 1;
       transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
       filter: brightness(1.08) contrast(1.12) saturate(1.25);
       will-change: transform;
@@ -1590,10 +1590,18 @@
   <!-- Hero Video Section -->
   <main>
   <section class="hero-video-section">
-    <video class="hero-video-bg" autoplay loop muted playsinline preload="metadata" poster="/assets/video-posters/hero-poster.webp" id="hero-video">
-      <source src="/video/cable-video-hero.mp4" type="video/mp4">
-      <source src="https://assets.mixkit.co/videos/preview/mixkit-circuit-board-details-44371-large.mp4" type="video/mp4">
+    <video class="hero-video-bg" autoplay loop muted playsinline preload="none" poster="/assets/video-posters/hero-poster.webp" data-src="/video/cable-video-hero.mp4" id="hero-video">
     </video>
+    <script>
+      // Defer the hero video download until the page has finished loading;
+      // the poster (a frame of the same video) paints immediately instead.
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const v = document.getElementById('hero-video');
+          if (v && !v.src) { v.src = v.dataset.src; v.play().catch(() => {}); }
+        }, 200);
+      });
+    </script>
     <div class="hero-video-overlay"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">Engineered in India &middot; Trusted Worldwide</div>
