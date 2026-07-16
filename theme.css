@@ -587,10 +587,10 @@ html.nav-open, html.nav-open body {
 }
 .btn:active { transform: translateY(1px) scale(0.985) !important; transition-duration: 0.06s !important; }
 .btn-primary {
-  background: var(--accent); color: #FFF;
+  background: var(--accent-2); color: #FFF;
   box-shadow: var(--shadow-cta);
 }
-.btn-primary:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(184,115,51,0.5); }
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(184,115,51,0.5); }
 .btn-ghost {
   background: #FFFFFF; color: var(--text);
   border: 1.5px solid var(--border-strong);
@@ -766,7 +766,7 @@ html.nav-open, html.nav-open body {
 }
 @media (max-width: 980px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
-.footer-col h4 {
+.footer-col h3, .footer-col h4 {
   font-family: var(--mono); font-size: 12.5px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: rgba(255,255,255,0.55); margin-bottom: 18px;
