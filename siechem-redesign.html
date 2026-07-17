@@ -751,6 +751,10 @@
     @media (max-width: 640px) {
       .video-card {
         flex: 0 0 82%;
+        /* The 320px desktop min-width (sized for a 3-up grid) otherwise wins
+           over this 82% basis on narrow phones, leaving only a sliver of
+           the next card peeking in instead of a clean "swipe" affordance. */
+        min-width: 0;
         aspect-ratio: auto;
         background: #FFFFFF;
         box-shadow: 0 4px 15px rgba(0,0,0,0.06);
