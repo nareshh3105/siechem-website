@@ -25,9 +25,18 @@
   .admin-topbar .brand #familyName { font-weight: 700; font-size: 14.5px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   .admin-wrap { max-width: 1320px; margin: 0 auto; padding: 24px 24px 100px; display: grid; grid-template-columns: 270px 1fr; gap: 20px; }
+  /* Grid items default to min-width:auto, so content with its own min-width
+     (e.g. .name-input below) can force the track wider than the viewport
+     instead of shrinking or wrapping — min-width:0 lets them shrink properly. */
+  .admin-wrap > * { min-width: 0; }
   @media (max-width: 900px) { .admin-wrap { grid-template-columns: 1fr; } }
 
   .series-list { border: 1px solid var(--border); border-radius: 12px; background: var(--bg-card); overflow: hidden; align-self: start; position: sticky; top: 80px; }
+  @media (max-width: 900px) {
+    /* A sticky sidebar-with-its-own-scroll-region is awkward once it's
+       stacked above the editor instead of beside it — let it scroll inline. */
+    .series-list { position: static; }
+  }
   .series-list-head { padding: 13px 15px 10px; border-bottom: 1px solid var(--border); }
   .series-list-head h2 { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; margin-bottom: 8px; }
   .series-search { position: relative; }
@@ -78,6 +87,17 @@
   .btn-danger-ghost:hover { background: #FEF2F2; }
 
   .card-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+  @media (max-width: 480px) {
+    .admin-topbar { padding: 12px 16px; }
+    .admin-topbar .brand a span, .admin-topbar .brand a { font-size: 12.5px; }
+    .admin-wrap { padding: 16px 16px 90px; gap: 14px; }
+    .card-section { padding: 14px; }
+    .editor-head { padding: 12px 14px; }
+    /* 200px was sized for the desktop two-column layout; on a single-column
+       mobile card it leaves no room for the delete button beside it and
+       forces the whole card wider than the viewport. */
+    .editor-head input.name-input { min-width: 0; font-size: 15px; }
+  }
   .card-section-title {
     display: flex; align-items: center; gap: 7px; font-size: 12.5px; text-transform: uppercase;
     color: var(--text-muted); font-weight: 700; letter-spacing: .04em; margin-bottom: 14px;
@@ -114,7 +134,7 @@
   .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
 
   .save-bar {
-    position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px;
+    position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px; flex-wrap: wrap;
     background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
   }
