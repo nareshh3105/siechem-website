@@ -1,1 +1,164 @@
-{"series":[{"id":"ed0f876c48","family":"battery","name":"Wires & Cables Meet EU RoHS Directive","headers":["Part Number","Conductor Construction — Nominal Cross- Section","No. of Strands","Diameter of Single wire max.","Conductor Diameter Apporx.","Insulation Wall Thickness Nom .","Cable — Overall Diameter Max.","Weight Approx.","Max. Conductor Resistance at 200C","Current Carrying Capacity","Standard Length*"],"rows":[["","mm2","nos.","mm","mm","mm","mm","kg/km","Ω/km","Amps","mtrs"],["83028XX*","16","126","0.41","5.7","1.0","8.1","171","1.21","86","500"],["83030XX","25","196","0.41","7.1","1.2","10.0","263","0.780","115","500"],["83032XX","35","276","0.41","8.5","1.2","11.4","357","0.554","143","500"],["83034XX","50","396","0.41","10.3","1.4","13.7","506","0.386","178","500"],["83037XX","70","360","0.51","12.4","1.4","15.8","703","0.272","213","500"],["83038XX","95","475","0.51","14.5","1.6","18.4","925","0.206","257","500"],["83041XX","120","608","0.51","16.0","1.6","19.9","1161","0.161","291","500"],["83042XX","150","756","0.51","18.0","1.8","22.4","1442","0.129","553","500"]],"catalogueNo":"830","info":{"features":["Flame retardant","Highly resistant against acids, lyes, petrol and diesel. Flexible conductor with PVC normal insulation thickness for battery cables. Extra flexibility."],"technical":["Temperature Range : -400C to +700C (3000 Hours)","Standard : IS 2465","Test Voltage : 3 kV","Conductor Resistance: IS 8130 ISO IATF AS ISO 14001 16949 9100 45001"],"application":["Low-tension electric wire for automobiles.","Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."],"construction":["Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465","Insulation : Lead free PVC.","Colour : As per customer order.","Single core 22DD VViieeww ISO 9001 IS 2465"]}}]}
+{
+  "series": [
+    {
+      "id": "ed0f876c48",
+      "family": "battery",
+      "name": "Wires & Cables Meet EU RoHS Directive",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — Nominal Cross- Section",
+        "No. of Strands",
+        "Diameter of Single wire max.",
+        "Conductor Diameter Apporx.",
+        "Insulation Wall Thickness Nom .",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200C",
+        "Current Carrying Capacity",
+        "Standard Length*"
+      ],
+      "rows": [
+        [
+          "",
+          "mm2",
+          "nos.",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km",
+          "Amps",
+          "mtrs"
+        ],
+        [
+          "83028XX*",
+          "16",
+          "126",
+          "0.41",
+          "5.7",
+          "1.0",
+          "8.1",
+          "171",
+          "1.21",
+          "86",
+          "500"
+        ],
+        [
+          "83030XX",
+          "25",
+          "196",
+          "0.41",
+          "7.1",
+          "1.2",
+          "10.0",
+          "263",
+          "0.780",
+          "115",
+          "500"
+        ],
+        [
+          "83032XX",
+          "35",
+          "276",
+          "0.41",
+          "8.5",
+          "1.2",
+          "11.4",
+          "357",
+          "0.554",
+          "143",
+          "500"
+        ],
+        [
+          "83034XX",
+          "50",
+          "396",
+          "0.41",
+          "10.3",
+          "1.4",
+          "13.7",
+          "506",
+          "0.386",
+          "178",
+          "500"
+        ],
+        [
+          "83037XX",
+          "70",
+          "360",
+          "0.51",
+          "12.4",
+          "1.4",
+          "15.8",
+          "703",
+          "0.272",
+          "213",
+          "500"
+        ],
+        [
+          "83038XX",
+          "95",
+          "475",
+          "0.51",
+          "14.5",
+          "1.6",
+          "18.4",
+          "925",
+          "0.206",
+          "257",
+          "500"
+        ],
+        [
+          "83041XX",
+          "120",
+          "608",
+          "0.51",
+          "16.0",
+          "1.6",
+          "19.9",
+          "1161",
+          "0.161",
+          "291",
+          "500"
+        ],
+        [
+          "83042XX",
+          "150",
+          "756",
+          "0.51",
+          "18.0",
+          "1.8",
+          "22.4",
+          "1442",
+          "0.129",
+          "553",
+          "500"
+        ]
+      ],
+      "catalogueNo": "830",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Highly resistant against acids, lyes, petrol and diesel. Flexible conductor with PVC normal insulation thickness for battery cables. Extra flexibility."
+        ],
+        "technical": [
+          "Temperature Range : -400C to +700C (3000 Hours)",
+          "Standard : IS 2465",
+          "Test Voltage : 3 kV",
+          "Conductor Resistance: IS 8130 ISO IATF AS ISO 14001 16949 9100 45001"
+        ],
+        "application": [
+          "Low-tension electric wire for automobiles.",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."
+        ],
+        "construction": [
+          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to IS 8130, bare conductor construction according to IS 2465",
+          "Insulation : Lead free PVC.",
+          "Colour : As per customer order.",
+          "Single core 22DD VViieeww ISO 9001 IS 2465"
+        ]
+      }
+    }
+  ]
+}

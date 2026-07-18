@@ -44,7 +44,8 @@ async function commitFiles(files, message) {
     path,
     mode: '100644',
     type: 'blob',
-    content: JSON.stringify(contentObj)
+    // Pretty-printed so the committed files stay hand-editable in the repo.
+    content: JSON.stringify(contentObj, null, 2) + '\n'
   }));
 
   const newTree = await gh('/git/trees', {
