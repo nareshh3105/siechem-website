@@ -29,17 +29,27 @@
     }
     .ts-doc-sidebar a:hover { background: var(--bg-soft); color: var(--text); }
     .ts-doc-sidebar a.active { background: var(--accent-soft); color: var(--accent-2); font-weight: 700; }
+    .ts-doc-main { max-width: 860px; }
     .ts-doc-page {
-      width: 100%; height: auto; display: block;
+      width: 100%; height: auto; display: none;
       border: 1px solid var(--border); border-radius: 10px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.07);
-      margin-bottom: 20px; background: #fff;
+      background: #fff;
     }
+    .ts-doc-page.current { display: block; }
     .ts-doc-pdf {
       width: 100%; height: 84vh; border: 1px solid var(--border); border-radius: 10px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.07); background: #fff;
     }
-    .ts-doc-count { font-family: var(--mono); font-size: 11.5px; color: var(--text-faint); margin-bottom: 16px; }
+    .ts-doc-pager { display: flex; justify-content: center; gap: 8px; margin: 18px 0; flex-wrap: wrap; }
+    .ts-doc-pager button {
+      min-width: 40px; height: 40px; padding: 0 8px;
+      background: #fff; border: 1px solid var(--border); border-radius: 6px;
+      font-family: inherit; font-size: 14px; font-weight: 500; color: var(--accent);
+      cursor: pointer; transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .ts-doc-pager button:hover { border-color: var(--border-strong); }
+    .ts-doc-pager button.current { color: var(--text); font-weight: 700; border-color: var(--border-strong); cursor: default; }
     @media (max-width: 980px) {
       .ts-doc-layout { grid-template-columns: 1fr; }
       .ts-doc-sidebar { position: static; max-height: none; }
@@ -172,7 +182,6 @@
       <a href="/company/contact.html" class="btn btn-primary" style="margin-top:16px;color:#fff;box-shadow:var(--shadow-cta);">Request Quote</a>
     </div>
   </div>
-  
   <section class="stub-hero">
     <div class="container">
       <div class="breadcrumb"><a href="/siechem-redesign.html">Home</a><span class="breadcrumb-sep"></span><a href="/tech-support/tech-support.html">Tech Support</a><span class="breadcrumb-sep"></span><span>Capacitance Calculation</span></div>
@@ -217,9 +226,17 @@
         </div>
       </aside>
         <div class="ts-doc-main">
-        <div class="ts-doc-count">2 pages</div>
-        <img class="ts-doc-page" src="/tech-support-docs/capacitance-2/page-01.jpg" alt="Capacitance Calculation — page 1" />
+        <img class="ts-doc-page current" src="/tech-support-docs/capacitance-2/page-01.jpg" alt="Capacitance Calculation — page 1" />
         <img class="ts-doc-page" src="/tech-support-docs/capacitance-2/page-02.jpg" alt="Capacitance Calculation — page 2" loading="lazy" />
+        <div class="ts-doc-pager"><button type="button" class="current" onclick="tsGoPage(0, this)">1</button><button type="button" onclick="tsGoPage(1, this)">2</button></div>
+        <script>
+        function tsGoPage(n, btn) {
+          document.querySelectorAll('.ts-doc-page').forEach((im, i) => im.classList.toggle('current', i === n));
+          document.querySelectorAll('.ts-doc-pager button').forEach((b, i) => b.classList.toggle('current', i === n));
+          document.querySelector('.ts-doc-page.current').scrollIntoView({ behavior: 'instant', block: 'start' });
+          window.scrollBy(0, -90);
+        }
+        </script>
         </div>
       </div>
     </div>
