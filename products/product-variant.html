@@ -205,27 +205,23 @@
       font-family: var(--mono); display: none;
     }
     .part-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
-    .part-table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 13px; }
+    .part-table { width: 100%; min-width: max-content; table-layout: auto; border-collapse: collapse; font-size: 13px; }
     .part-table thead tr { background: var(--bg-soft); }
     .part-table th {
-      padding: 8px 8px; text-align: left; font-family: var(--mono);
+      padding: 8px 12px; text-align: left; font-family: var(--mono);
       font-size: 10px; font-weight: 700; letter-spacing: 0.03em;
       text-transform: uppercase; color: var(--text-faint);
-      white-space: normal; word-break: break-word; line-height: 1.3;
+      white-space: nowrap; line-height: 1.3;
       border-bottom: 1px solid var(--border);
     }
     .part-table th .th-label { display: block; }
     .part-table th .th-unit { display: block; font-weight: 500; opacity: 0.75; margin-top: 1px; letter-spacing: 0.01em; }
-    .part-table td { padding: 9px 8px; border-bottom: 1px solid var(--border); white-space: normal; word-break: break-word; }
+    .part-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
     .part-table tbody tr:last-child td { border-bottom: none; }
     .part-table tbody tr:hover { background: rgba(184,115,51,0.03); }
     .part-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 600; white-space: nowrap; }
     .part-table th:first-child { white-space: nowrap; }
     .part-table th:last-child, .part-table td:last-child { width: 68px; white-space: nowrap; text-align: center; }
-    @media (max-width: 900px) {
-      .part-table { table-layout: auto; }
-      .part-table th, .part-table td { white-space: nowrap; }
-    }
     .part-table .quote-row-btn {
       padding: 5px 12px; border-radius: 5px; white-space: nowrap;
       background: var(--accent-soft); border: 1px solid var(--accent-border);
@@ -607,24 +603,6 @@
     return { label: s.slice(0, i).trim(), unit: s.slice(i).trim() };
   }
 
-  // table-layout: fixed needs explicit widths or every column ends up equal
-  // regardless of content. Weight each column by the longer of its two
-  // header lines (name / unit) or a sample of its row values, so short
-  // columns (Part Number, No. of Strands) stay compact instead of matching
-  // the widest column -- same approach used in the admin editor's table.
-  function computeColumnWidths(headers, rows) {
-    const sample = rows.slice(0, 30);
-    const weights = headers.map((h, i) => {
-      const { label, unit } = splitHeaderLabelUnit(h);
-      const headerLen = Math.max(label.length, unit.length);
-      const maxValLen = sample.reduce((m, r) => Math.max(m, String(r[i] ?? '').length), 0);
-      return Math.max(6, Math.min(40, Math.max(headerLen, maxValLen)));
-    });
-    const total = weights.reduce((a, b) => a + b, 0) || 1;
-    // Leave headroom for the fixed-width Quote-button column.
-    return weights.map(w => (w / total * 92).toFixed(2));
-  }
-
   const DIMS = [
     { key: 'voltage', label: 'Voltage' },
     { key: 'cores', label: 'Cores' },
@@ -753,10 +731,9 @@
     document.getElementById('ssTitle').textContent = S.display;
 
     const headers = (S.headers && S.headers.length ? S.headers : ['Part Number']).map(h => h && h.trim() ? h : '—');
-    const colWidthPct = computeColumnWidths(headers, S.rows);
-    document.getElementById('ssThead').innerHTML = '<tr>' + headers.map((h, hi) => {
+    document.getElementById('ssThead').innerHTML = '<tr>' + headers.map((h) => {
       const { label, unit } = splitHeaderLabelUnit(h);
-      return '<th style="width:' + colWidthPct[hi] + '%"><span class="th-label">' + esc(label) + '</span>' + (unit ? '<span class="th-unit">' + esc(unit) + '</span>' : '') + '</th>';
+      return '<th><span class="th-label">' + esc(label) + '</span>' + (unit ? '<span class="th-unit">' + esc(unit) + '</span>' : '') + '</th>';
     }).join('') + '<th></th></tr>';
     document.getElementById('ssTbody').innerHTML = S.rows.map(r => {
       const pn = (r[0] || '').toString().trim();
