@@ -228,6 +228,11 @@
     .part-table tbody tr:last-child td { border-bottom: none; }
     .part-table tbody tr:hover { background: rgba(184,115,51,0.03); }
     .part-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 600; white-space: nowrap; }
+    .part-table tr.units-row td {
+      background: var(--bg-soft); font-family: var(--mono); font-size: 11px;
+      font-weight: 600; color: var(--text-faint); padding-top: 6px; padding-bottom: 6px;
+    }
+    .part-table tr.units-row:hover { background: none; }
     .part-table th:first-child { white-space: nowrap; }
     .part-table th:last-child, .part-table td:last-child { width: 68px; white-space: nowrap; text-align: center; }
     .part-table .quote-row-btn {
@@ -745,16 +750,22 @@
     }).join('') + '<th></th></tr>';
     document.getElementById('ssTbody').innerHTML = S.rows.map(r => {
       const pn = (r[0] || '').toString().trim();
+      // A blank Part Number marks the units row -- style it as such and
+      // don't offer a Quote button for it.
+      if (!pn) {
+        return '<tr class="units-row">' + headers.map((_, ci) => '<td>' + esc(r[ci] != null ? r[ci] : '') + '</td>').join('') + '<td></td></tr>';
+      }
       return '<tr>' + headers.map((_, ci) => '<td>' + esc(r[ci] != null ? r[ci] : '') + '</td>').join('') +
         '<td><button class="quote-row-btn" onclick="openQuote(' + JSON.stringify(pn).replace(/"/g, '&quot;') + ')">Quote</button></td></tr>';
     }).join('');
-    document.getElementById('specSearchCount').textContent = S.rows.length + ' parts';
+    const dataRowCount = S.rows.filter(r => (r[0] || '').toString().trim() !== '').length;
+    document.getElementById('specSearchCount').textContent = dataRowCount + ' parts';
 
     document.getElementById('ssQuoteBtn').addEventListener('click', () => openQuote('—'));
   }
 
   function filterSpecTable(q) {
-    const rows = document.querySelectorAll('#specPartTable tbody tr');
+    const rows = document.querySelectorAll('#specPartTable tbody tr:not(.units-row)');
     const noMatch = document.getElementById('specNoMatch');
     const countEl = document.getElementById('specSearchCount');
     const term = q.trim().toLowerCase();

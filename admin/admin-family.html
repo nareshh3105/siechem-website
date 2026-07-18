@@ -136,6 +136,11 @@
   table.spec-table td.row-actions, table.spec-table th.col-actions { width: 36px; text-align: center; border-right: none; }
   table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 17px; padding: 6px; border-radius: 4px; }
   table.spec-table td.row-actions button:hover { color: #B91C1C; background: #FEF2F2; }
+  table.spec-table th button.col-del {
+    border: none; background: none; color: var(--text-dim); cursor: pointer;
+    font-size: 15px; padding: 2px 6px; border-radius: 4px; display: block; margin: 0 auto 4px;
+  }
+  table.spec-table th button.col-del:hover { color: #B91C1C; background: #FEF2F2; }
 
   .table-actions { display: flex; gap: 10px; margin-top: 14px; }
   .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
@@ -308,6 +313,7 @@
       const headerCells = s.headers.map((h, i) => {
         const { label, unit } = splitHeaderLabelUnit(h);
         return `<th style="min-width:${colMinWidths[i]}ch">
+          <button class="col-del" data-del-col="${i}" title="Delete column">&times;</button>
           <textarea class="h-label" data-h="${i}" rows="2" placeholder="Name">${escapeHtml(label)}</textarea>
           <input type="text" class="h-unit" data-hu="${i}" value="${escapeAttr(unit)}" placeholder="Unit">
         </th>`;
@@ -390,6 +396,15 @@
       }));
       panel.querySelectorAll('[data-del-row]').forEach(btn => btn.addEventListener('click', e => {
         s.rows.splice(+e.target.dataset.delRow, 1);
+        renderEditor();
+        saveSeries(s);
+      }));
+      panel.querySelectorAll('[data-del-col]').forEach(btn => btn.addEventListener('click', e => {
+        const ci = +e.target.dataset.delCol;
+        const colName = (s.headers[ci] || '').trim() || `column ${ci + 1}`;
+        if (!confirm(`Delete column "${colName}" and all its values? This cannot be undone.`)) return;
+        s.headers.splice(ci, 1);
+        s.rows.forEach(r => r.splice(ci, 1));
         renderEditor();
         saveSeries(s);
       }));
