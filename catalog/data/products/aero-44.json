@@ -1,111 +1,309 @@
 {
   "series": [
     {
-      "id": "33622b0669",
+      "id": "e19725403e",
       "family": "aero-44",
-      "name": "AERO 44 2500V Single Core Insulated Primary Wires",
+      "name": "AERO 44 600V Single Core Insulated Shielded Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
         [
-          "44G22085XXYY",
-          "26",
-          "0.13",
-          "19",
-          "0.10",
-          "1.37",
-          "3.13"
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
         ],
         [
-          "44G22084XXYY",
+          "44A43084XXYY",
           "24",
           "0.20",
           "19",
           "0.13",
-          "1.46",
-          "4.46"
+          "2.28",
+          "11.76"
         ],
         [
-          "44G22083XXYY",
+          "44A43083XXYY",
           "22",
           "0.33",
           "19",
           "0.16",
-          "1.77",
-          "6.40"
+          "2.59",
+          "15.48"
         ],
         [
-          "44G22082XXYY",
+          "44A43082XXYY",
           "20",
           "0.52",
           "19",
           "0.20",
-          "1.99",
-          "9.08"
+          "2.79",
+          "19.19"
         ],
         [
-          "44G22081XXYY",
+          "44A43081XXYY",
           "18",
           "0.82",
           "19",
           "0.25",
-          "2.25",
-          "12.95"
+          "3.04",
+          "24.11"
         ],
         [
-          "44G22080XXYY",
+          "44A43080XXYY",
           "16",
           "1.31",
           "19",
           "0.29",
-          "2.48",
-          "16.22"
+          "3.27",
+          "28.13"
         ],
         [
-          "44G22079XXYY",
+          "44A43079XXYY",
           "14",
           "2.08",
           "19",
           "0.36",
-          "2.94",
-          "24.10"
+          "3.75",
+          "38.69"
         ],
         [
-          "44G22078XXYY",
+          "44A43078XXYY",
           "12",
           "3.31",
           "37",
           "0.32",
-          "3.34",
-          "36.01"
+          "4.21",
+          "52.38"
+        ]
+      ],
+      "catalogueNo": "44A430",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor                      :   -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                                          :   -65°C to +200°C",
+          "Voltage Rating(Thin wall)                  :  600V, Medium Weight, Airframe",
+          "Tensile Strength                                :   28 N/mm2",
+          "Elongation of Insulation                    :    230%",
+          "Shrinkage,200°C                              :    < 1%",
+          "Low Temperature Bend                    :    -65°C [-85°F]",
+          "Flammability                                     :    Pass",
+          "Resistance                                       :    Pass (fuels, oils, solvents)",
+          "Smoke/Toxicity Index                                                                              :",
+          "i) Smoke index                                  :     6 per meter of wire",
+          "ii) Toxicity index                                :      0.8 per meter of wire",
+          "iii) Oxygen index                               :     30% Oxygen",
+          "iv) Temperature index                       :     > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        : Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene",
+          "Fluoride)",
+          "Shielding         : Annealed Tinned Copper",
+          "Outer sheath   : Radiation Cross-Linked Improved",
+          "PVDF (Polyvinylidene Fluoride)",
+          "Colour             : As Per Customer Order.",
+          "Single core."
+        ]
+      }
+    },
+    {
+      "id": "84e0bdfbe7",
+      "family": "aero-44",
+      "name": "AERO 44 1000V Single Core Insulated Primary Wires",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
         ],
         [
-          "44G22077XXYY",
+          "44G21085XXYY",
+          "26",
+          "0.13",
+          "19",
+          "0.10",
+          "1.04",
+          "2.38"
+        ],
+        [
+          "44G21084XXYY",
+          "24",
+          "0.20",
+          "19",
+          "0.13",
+          "1.19",
+          "3.57"
+        ],
+        [
+          "44G21083XXYY",
+          "22",
+          "0.33",
+          "19",
+          "0.16",
+          "1.39",
+          "5.20"
+        ],
+        [
+          "44G21082XXYY",
+          "20",
+          "0.52",
+          "19",
+          "0.20",
+          "1.59",
+          "7.59"
+        ],
+        [
+          "44G21081XXYY",
+          "18",
+          "0.82",
+          "19",
+          "0.25",
+          "1.87",
+          "11.46"
+        ],
+        [
+          "44G21080XXYY",
+          "16",
+          "1.31",
+          "19",
+          "0.29",
+          "2.08",
+          "14.58"
+        ],
+        [
+          "44G21079XXYY",
+          "14",
+          "2.08",
+          "19",
+          "0.36",
+          "2.51",
+          "21.88"
+        ],
+        [
+          "44G21078XXYY",
+          "12",
+          "3.31",
+          "37",
+          "0.32",
+          "2.99",
+          "32.89"
+        ],
+        [
+          "44G21077XXYY",
           "10",
           "5.26",
           "37",
           "0.40",
-          "4.11",
-          "54.32"
+          "3.73",
+          "52.98"
         ],
         [
-          "44G22076XXYY",
+          "44G21076XXYY",
           "8",
           "8.37",
           "133",
           "0.29",
-          "5.56",
-          "96.73"
+          "5.25",
+          "91.97"
         ]
       ],
-      "catalogueNo": "44G220"
+      "catalogueNo": "44G210",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -650C to + 2000C [-850F to + 3920F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "ü Temperature Rating",
+          "i) Tin Plated Conductor                       : -65°C to + 150°C",
+          "ii) Silver or Nickel Plated Conductor   : -65°C to +200°C",
+          "ü Voltage Rating(Thin wall)                : 1000V, light weight",
+          "ü Tensile Strength                               : 28 N/mm2",
+          "ü Elongation of Insulation                   : 230%",
+          "0 ü Shrinkage,200 C                           : < 1%",
+          "ü Low Temperature Bend                    : -65°C [-85°F]",
+          "ü Flammability                                     : Pass",
+          "ü Resistance                                       : Pass(fuels, oils, solvents)",
+          "ü Smoke/Toxicity Index",
+          "i) Smoke index                                    : 6 per meter of wire",
+          "ii) Toxicity index                                   : 0.8 per meter of wire",
+          "iii) Oxygen index                                 : 30% Oxygen",
+          "iv) Temperature index                         : > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor   :  Annealed Tinned Copper Conductor",
+          "(Optional : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation :  Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene Fluoride)",
+          "Colour  : As Per Customer Order.",
+          "Single core"
+        ]
+      }
     },
     {
       "id": "7b92b69a03",
@@ -113,14 +311,23 @@
       "name": "AERO 44 600V Single Core Insulated Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "44A23085XXYY",
           "26",
@@ -214,11 +421,49 @@
       ],
       "catalogueNo": "44A230",
       "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions. Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor                       : -65°C to + 150°C",
+          "ii) Silver or Nickel Plated Conductor   :  -65°C to + 200°C",
+          "Voltage Rating(Thin wall)                    :  600V, Medium Weight, Airframe Tensile Strength                                  : 28 N/mm2",
+          "Elongation of Insulation                      : 230%",
+          "Shrinkage,200° C                               : < 1%",
+          "ü Low Temperature Bend                   : -65°C [-85°F]",
+          "ü Flammability                                    : Pass",
+          "ü Resistance                                      : Pass (fuels, oils, solvents)",
+          "ü Smoke/Toxicity Index",
+          "i) Smoke index                                   : 6 per meter of wire",
+          "ii) Toxicity index                                  : 0.8 per meter of wire",
+          "iii) Oxygen index                                 : 30% Oxygen",
+          "iv) Temperature index                         : > 300°C [572°F]"
+        ],
         "application": [
-          "Hook up and signal wire and cable used in",
-          "aircraft, avionics, military electronics, satellites",
-          "helicopters, ships, mass transit, offshore",
-          "platforms, and automobiles."
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor  : Annealed Tinned Copper Conductor",
+          "(Optional    : Silver Coated Copper Conductor /  Nickel Coated Copper                     Conductor)",
+          "Insulation    : Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene",
+          "Fluoride)",
+          "Colour         : As Per Customer Order.",
+          "Single core"
         ]
       }
     },
@@ -228,17 +473,29 @@
       "name": "AERO 44 1000V Single Core Insulated Shielded Primary Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos)",
-        "Diameter of Single Wire (Nom) (mm)",
-        "Insulation Thickness (mm)",
-        "Screen Wire dia (mm)",
-        "Sheath Thickness (Nom) (mm)",
-        "Overall Diameter (Max) (mm)",
-        "Cable Weight (Max) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom)",
+        "Insulation Thickness",
+        "Screen Wire dia",
+        "Sheath Thickness (Nom)",
+        "Overall Diameter (Max)",
+        "Cable Weight (Max)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "44G41086XXYY",
           "28",
@@ -348,125 +605,226 @@
           "49.56"
         ]
       ],
-      "catalogueNo": "44G410"
+      "catalogueNo": "44G410",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor                      :   -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                                          :   -65°C to +200°C",
+          "Voltage Rating(Thin wall)                  :  1000V, light Weight,",
+          "Tensile Strength                                :   28 N/mm2",
+          "Elongation of Insulation                    :    230%",
+          "Shrinkage,200°C                              :    < 1%",
+          "Low Temperature Bend                    :    -65°C [-85°F]",
+          "Flammability                                     :    Pass",
+          "Resistance                                       :    Pass (fuels, oils, solvents)",
+          "Smoke/Toxicity Index                                                                              :",
+          "i) Smoke index                                  :     6 per meter of wire",
+          "ii) Toxicity index                                :      0.8 per meter of wire",
+          "iii) Oxygen index                               :     30% Oxygen",
+          "iv) Temperature index                       :     > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        :Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene",
+          "Fluoride)",
+          "Shielding          :Annealed Tinned Copper.",
+          "ü Outer sheath Radiation Cross-Linked Improved",
+          "PVDF (Polyvinylidene Fluoride)",
+          "ü Colour As Per Customer Order.",
+          "ü Single core"
+        ]
+      }
     },
     {
-      "id": "e4224923b2",
+      "id": "33622b0669",
       "family": "aero-44",
-      "name": "AERO 44 600V Twisted Twin Core Shielded Cables",
+      "name": "AERO 44 2500V Single Core Insulated Primary Wires",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
         [
-          "44G5008502",
-          "30",
-          "0.051",
-          "2",
-          "7",
-          "0.10",
-          "2.25",
-          "8.63"
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
         ],
         [
-          "44G5008402",
-          "28",
-          "0.08",
-          "2",
-          "7",
-          "0.13",
-          "2.40",
-          "9.82"
-        ],
-        [
-          "44G5008302",
+          "44G22085XXYY",
           "26",
           "0.13",
-          "2",
           "19",
           "0.10",
-          "2.61",
-          "12.05"
+          "1.37",
+          "3.13"
         ],
         [
-          "44G5008202",
+          "44G22084XXYY",
           "24",
           "0.20",
-          "2",
           "19",
           "0.13",
-          "3.00",
-          "16.82"
+          "1.46",
+          "4.46"
         ],
         [
-          "44G5008102",
+          "44G22083XXYY",
           "22",
           "0.33",
-          "2",
           "19",
           "0.16",
-          "3.37",
-          "21.57"
+          "1.77",
+          "6.40"
         ],
         [
-          "44G5008002",
+          "44G22082XXYY",
           "20",
           "0.52",
-          "2",
           "19",
           "0.20",
-          "3.78",
-          "27.97"
+          "1.99",
+          "9.08"
         ],
         [
-          "44G5007902",
+          "44G22081XXYY",
           "18",
           "0.82",
-          "2",
           "19",
           "0.25",
-          "4.34",
-          "38.24"
+          "2.25",
+          "12.95"
         ],
         [
-          "44G5007802",
+          "44G22080XXYY",
           "16",
           "1.31",
-          "2",
           "19",
           "0.29",
-          "4.69",
-          "44.94"
+          "2.48",
+          "16.22"
         ],
         [
-          "44G5007702",
+          "44G22079XXYY",
           "14",
           "2.08",
-          "2",
           "19",
           "0.36",
-          "5.55",
-          "64.28"
+          "2.94",
+          "24.10"
         ],
         [
-          "44G5007602",
+          "44G22078XXYY",
           "12",
           "3.31",
-          "2",
           "37",
           "0.32",
-          "6.52",
-          "91.51"
+          "3.34",
+          "36.01"
+        ],
+        [
+          "44G22077XXYY",
+          "10",
+          "5.26",
+          "37",
+          "0.40",
+          "4.11",
+          "54.32"
+        ],
+        [
+          "44G22076XXYY",
+          "8",
+          "8.37",
+          "133",
+          "0.29",
+          "5.56",
+          "96.73"
         ]
       ],
-      "catalogueNo": "44G50"
+      "catalogueNo": "44G220",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working",
+          "environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor                       : -65°C to + 150°C",
+          "ii) Silver or Nickel Plated Conductor   :  -65°C to + 200°C",
+          "Voltage Rating(Thin wall)                    :  600V, Medium Weight, Airframe Tensile Strength                                  : 28 N/mm2",
+          "Elongation of Insulation                      : 230%",
+          "Shrinkage,200° C                               : < 1%",
+          "ü Low Temperature Bend                   : -65°C [-85°F]",
+          "ü Flammability                                    : Pass",
+          "ü Resistance                                      : Pass (fuels, oils, solvents)",
+          "ü Smoke/Toxicity Index",
+          "i) Smoke index                                   : 6 per meter of wire",
+          "ii) Toxicity index                                  : 0.8 per meter of wire",
+          "iii) Oxygen index                                 : 30% Oxygen",
+          "iv) Temperature index                         : > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore",
+          "platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor     :   Annealed Tinned Copper Conductor",
+          "(Optional       :Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation      : Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene",
+          "Fluoride)",
+          "Colour           :  As Per Customer Order.",
+          "Single core"
+        ]
+      }
     },
     {
       "id": "def4703153",
@@ -474,15 +832,25 @@
       "name": "AERO 44 600V Twisted Twin Core Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "44G108502",
           "30",
@@ -584,239 +952,54 @@
           "69.00"
         ]
       ],
-      "catalogueNo": "44G10"
-    },
-    {
-      "id": "e19725403e",
-      "family": "aero-44",
-      "name": "AERO 44 600V Single Core Insulated Shielded Airframe Wires",
-      "headers": [
-        "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
-      ],
-      "rows": [
-        [
-          "44A43084XXYY",
-          "24",
-          "0.20",
-          "19",
-          "0.13",
-          "2.28",
-          "11.76"
-        ],
-        [
-          "44A43083XXYY",
-          "22",
-          "0.33",
-          "19",
-          "0.16",
-          "2.59",
-          "15.48"
-        ],
-        [
-          "44A43082XXYY",
-          "20",
-          "0.52",
-          "19",
-          "0.20",
-          "2.79",
-          "19.19"
-        ],
-        [
-          "44A43081XXYY",
-          "18",
-          "0.82",
-          "19",
-          "0.25",
-          "3.04",
-          "24.11"
-        ],
-        [
-          "44A43080XXYY",
-          "16",
-          "1.31",
-          "19",
-          "0.29",
-          "3.27",
-          "28.13"
-        ],
-        [
-          "44A43079XXYY",
-          "14",
-          "2.08",
-          "19",
-          "0.36",
-          "3.75",
-          "38.69"
-        ],
-        [
-          "44A43078XXYY",
-          "12",
-          "3.31",
-          "37",
-          "0.32",
-          "4.21",
-          "52.38"
-        ]
-      ],
-      "catalogueNo": "44A430"
-    },
-    {
-      "id": "84e0bdfbe7",
-      "family": "aero-44",
-      "name": "AERO 44 1000V Single Core Insulated Primary Wires",
-      "headers": [
-        "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
-      ],
-      "rows": [
-        [
-          "44G21085XXYY",
-          "26",
-          "0.13",
-          "19",
-          "0.10",
-          "1.04",
-          "2.38"
-        ],
-        [
-          "44G21084XXYY",
-          "24",
-          "0.20",
-          "19",
-          "0.13",
-          "1.19",
-          "3.57"
-        ],
-        [
-          "44G21083XXYY",
-          "22",
-          "0.33",
-          "19",
-          "0.16",
-          "1.39",
-          "5.20"
-        ],
-        [
-          "44G21082XXYY",
-          "20",
-          "0.52",
-          "19",
-          "0.20",
-          "1.59",
-          "7.59"
-        ],
-        [
-          "44G21081XXYY",
-          "18",
-          "0.82",
-          "19",
-          "0.25",
-          "1.87",
-          "11.46"
-        ],
-        [
-          "44G21080XXYY",
-          "16",
-          "1.31",
-          "19",
-          "0.29",
-          "2.08",
-          "14.58"
-        ],
-        [
-          "44G21079XXYY",
-          "14",
-          "2.08",
-          "19",
-          "0.36",
-          "2.51",
-          "21.88"
-        ],
-        [
-          "44G21078XXYY",
-          "12",
-          "3.31",
-          "37",
-          "0.32",
-          "2.99",
-          "32.89"
-        ],
-        [
-          "44G21077XXYY",
-          "10",
-          "5.26",
-          "37",
-          "0.40",
-          "3.73",
-          "52.98"
-        ],
-        [
-          "44G21076XXYY",
-          "8",
-          "8.37",
-          "133",
-          "0.29",
-          "5.25",
-          "91.97"
-        ]
-      ],
-      "catalogueNo": "44G210",
+      "catalogueNo": "44G10",
       "info": {
         "features": [
-          "ü Insulation does not shrink in hostile working environment .",
-          "ü AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
-          "ü Dual wall constructions.",
-          "ü 600, 1000 and 2500 voltage rating.",
-          "ü Small size and light weight.",
-          "ü No melting or dripping due to prolonging excess heat, because of EBXL process.",
-          "ü Resistance to soldering iron & over load.",
-          "ü Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
-          "ü Temperature rating -650C to + 2000C [-850F to + 3920F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
-          "ü Outstanding electrical arc tracking resistance in wet and dry conditions.",
-          "ü Very low toxic.",
-          "ü Prevents cold flow of the insulations.",
-          "ü Excellent scrape abrasion.",
-          "ü Good flexibility.",
-          "ü RoHS Compliant."
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
         ],
         "technical": [
-          "ü Temperature Rating",
-          "i) Tin Plated Conductor                       : -65°C to + 150°C",
-          "ii) Silver or Nickel Plated Conductor   : -65°C to +200°C",
-          "ü Voltage Rating(Thin wall)                : 1000V, light weight",
-          "ü Tensile Strength                               : 28 N/mm2",
-          "ü Elongation of Insulation                   : 230%",
-          "0 ü Shrinkage,200 C                           : < 1%",
-          "ü Low Temperature Bend                    : -65°C [-85°F]",
-          "ü Flammability                                     : Pass",
-          "ü Resistance                                       : Pass(fuels, oils, solvents)",
-          "ü Smoke/Toxicity Index",
-          "i) Smoke index                                    : 6 per meter of wire",
-          "ii) Toxicity index                                   : 0.8 per meter of wire",
-          "iii) Oxygen index                                 : 30% Oxygen",
-          "iv) Temperature index                         : > 300°C [572°F]"
+          "Temperature Rating",
+          "i) Tin Plated Conductor                      :   -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                                          :   -65°C to +200°C",
+          "Voltage Rating(Thin wall)                  :  600V, light Weight,",
+          "Tensile Strength                                :   28 N/mm2",
+          "Elongation of Insulation                    :    230%",
+          "Shrinkage,200°C                              :    < 1%",
+          "Low Temperature Bend                    :    -65°C [-85°F]",
+          "Flammability                                     :    Pass",
+          "Resistance                                       :    Pass (fuels, oils, solvents)",
+          "Smoke/Toxicity Index                                                                              :",
+          "i) Smoke index                                  :     6 per meter of wire",
+          "ii) Toxicity index                                :      0.8 per meter of wire",
+          "iii) Oxygen index                               :     30% Oxygen",
+          "iv) Temperature index                       :     > 300°C [572°F]"
         ],
         "application": [
           "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
         ],
         "construction": [
-          "Conductor   :  Annealed Tinned Copper Conductor",
-          "(Optional : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
-          "Insulation :  Radiation Cross-Linked Specially Formulated Polyalkene",
-          "Extruded & Radiation Cross-Linked Improved PVDF (Polyvinylidene Fluoride)",
-          "ü Colour  : As Per Customer Order.",
-          "ü Single core"
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        :Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded",
+          "Colour As Per Customer Order.",
+          "No of cores       : 2"
         ]
       }
     },
@@ -826,14 +1009,23 @@
       "name": "AERO 44 600V Single Core Shielded Primary Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "44G40087XXYY",
           "30",
@@ -925,22 +1117,81 @@
           "47.77"
         ]
       ],
-      "catalogueNo": "44G400"
+      "catalogueNo": "44G400",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -650C to + 2000C [-850F to + 3920F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "ü Temperature Rating",
+          "i) Tin Plated Conductor                       : -65°C to + 150°C",
+          "ii) Silver or Nickel Plated Conductor   : -65°C to +200°C",
+          "ü Voltage Rating(Thin wall)                : 600V, light weight",
+          "ü Tensile Strength                               : 28 N/mm2",
+          "ü Elongation of Insulation                   : 230%",
+          "0 ü Shrinkage,200 C                           : < 1%",
+          "ü Low Temperature Bend                    : -65°C [-85°F]",
+          "ü Flammability                                     : Pass",
+          "ü Resistance                                       : Pass(fuels, oils, solvents)",
+          "ü Smoke/Toxicity Index",
+          "i) Smoke index                                    : 6 per meter of wire",
+          "ii) Toxicity index                                   : 0.8 per meter of wire",
+          "iii) Oxygen index                                 : 30% Oxygen",
+          "iv) Temperature index                         : > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        :Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded",
+          "Shielding          : Annealed Tinned Copper.",
+          "Outer sheath    : Radiation Cross-Linked Improved PVDF (Polyvinylidene Fluoride)",
+          "Colour As Per Customer Order.",
+          "Single Core"
+        ]
+      }
     },
     {
       "id": "3110bdfb4f",
       "family": "aero-44",
-      "name": "AERO 44 600V Single Core",
+      "name": "AERO 44 600V Single Core Unsheathed Primary Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "44G00087XX",
           "30",
@@ -1039,18 +1290,236 @@
           "0.40",
           "3.30",
           "46.28"
-        ],
-        [
-          "hi",
-          "1",
-          "22",
-          "4",
-          "64",
-          "6",
-          "2444"
         ]
       ],
-      "catalogueNo": "44G000"
+      "catalogueNo": "44G000",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -650C to + 2000C [-850F to + 3920F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "ü Temperature Rating",
+          "i) Tin Plated Conductor                       : -65°C to + 150°C",
+          "ii) Silver or Nickel Plated Conductor   : -65°C to +200°C",
+          "ü Voltage Rating(Thin wall)                : 600V, light weight",
+          "ü Tensile Strength                               : 28 N/mm2",
+          "ü Elongation of Insulation                   : 230%",
+          "0 ü Shrinkage,200 C                           : < 1%",
+          "ü Low Temperature Bend                    : -65°C [-85°F]",
+          "ü Flammability                                     : Pass",
+          "ü Resistance                                       : Pass(fuels, oils, solvents)",
+          "ü Smoke/Toxicity Index",
+          "i) Smoke index                                    : 6 per meter of wire",
+          "ii) Toxicity index                                   : 0.8 per meter of wire",
+          "iii) Oxygen index                                 : 30% Oxygen",
+          "iv) Temperature index                         : > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        :Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded",
+          "Colour As Per Customer Order.",
+          "Single Core"
+        ]
+      }
+    },
+    {
+      "id": "e4224923b2",
+      "family": "aero-44",
+      "name": "AERO 44 600V Twisted Twin Core Shielded Cables",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "44G5008502",
+          "30",
+          "0.051",
+          "2",
+          "7",
+          "0.10",
+          "2.25",
+          "8.63"
+        ],
+        [
+          "44G5008402",
+          "28",
+          "0.08",
+          "2",
+          "7",
+          "0.13",
+          "2.40",
+          "9.82"
+        ],
+        [
+          "44G5008302",
+          "26",
+          "0.13",
+          "2",
+          "19",
+          "0.10",
+          "2.61",
+          "12.05"
+        ],
+        [
+          "44G5008202",
+          "24",
+          "0.20",
+          "2",
+          "19",
+          "0.13",
+          "3.00",
+          "16.82"
+        ],
+        [
+          "44G5008102",
+          "22",
+          "0.33",
+          "2",
+          "19",
+          "0.16",
+          "3.37",
+          "21.57"
+        ],
+        [
+          "44G5008002",
+          "20",
+          "0.52",
+          "2",
+          "19",
+          "0.20",
+          "3.78",
+          "27.97"
+        ],
+        [
+          "44G5007902",
+          "18",
+          "0.82",
+          "2",
+          "19",
+          "0.25",
+          "4.34",
+          "38.24"
+        ],
+        [
+          "44G5007802",
+          "16",
+          "1.31",
+          "2",
+          "19",
+          "0.29",
+          "4.69",
+          "44.94"
+        ],
+        [
+          "44G5007702",
+          "14",
+          "2.08",
+          "2",
+          "19",
+          "0.36",
+          "5.55",
+          "64.28"
+        ],
+        [
+          "44G5007602",
+          "12",
+          "3.31",
+          "2",
+          "37",
+          "0.32",
+          "6.52",
+          "91.51"
+        ]
+      ],
+      "catalogueNo": "44G50",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
+          "Dual wall constructions.",
+          "600, 1000 and 2500 voltage rating.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat, because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to + 392°F] stable installed performance in very hot, extremely cold and available with low outgassing characteristics for use in an environment of high vacuum and high temperature.",
+          "Outstanding electrical arc tracking resistance in wet and dry conditions.",
+          "Very low toxic.",
+          "Prevents cold flow of the insulations.",
+          "Excellent scrape abrasion.",
+          "Good flexibility.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor                      :   -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                                          :   -65°C to +200°C",
+          "Voltage Rating(Thin wall)                  :  600V, light Weight,",
+          "Tensile Strength                                :   28 N/mm2",
+          "Elongation of Insulation                    :    230%",
+          "Shrinkage,200°C                              :    < 1%",
+          "Low Temperature Bend                    :    -65°C [-85°F]",
+          "Flammability                                     :    Pass",
+          "Resistance                                       :    Pass (fuels, oils, solvents)",
+          "Smoke/Toxicity Index                                                                              :",
+          "i) Smoke index                                  :     6 per meter of wire",
+          "ii) Toxicity index                                :      0.8 per meter of wire",
+          "iii) Oxygen index                               :     30% Oxygen",
+          "iv) Temperature index                       :     > 300°C [572°F]"
+        ],
+        "application": [
+          "Hook up and signal wire and cable used in aircraft, avionics, military electronics, satellites helicopters, ships, mass transit, offshore platforms, and automobiles."
+        ],
+        "construction": [
+          "Conductor      :   Annealed Tinned Copper Conductor",
+          "(Optional        : Silver Coated Copper Conductor /",
+          "Nickel Coated Copper Conductor)",
+          "Insulation        :Radiation Cross-Linked Specially Formulated Polyalkene",
+          "Extruded",
+          "Shielding          : Annealed Tinned Copper.",
+          "Outer sheath    : Radiation Cross-Linked Improved PVDF (Polyvinylidene Fluoride)",
+          "Colour As Per Customer Order.",
+          "No of cores       : 2"
+        ]
+      }
     }
   ]
 }

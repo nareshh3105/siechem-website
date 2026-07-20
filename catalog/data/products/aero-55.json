@@ -6,14 +6,23 @@
       "name": "AERO 55 600V Single Core Unsheathed Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G00087XX",
           "30",
@@ -131,15 +140,25 @@
       "name": "AERO 55 600V Twisted Twin Core Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G1008702",
           "30",
@@ -269,15 +288,25 @@
       "name": "AERO 55 600V Multicore Sheathed Cable",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G3008304",
           "22",
@@ -327,14 +356,23 @@
       "name": "AERO 55 600V Single Core Shielded Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G40087XXYY",
           "30",
@@ -452,15 +490,25 @@
       "name": "AERO 55 600V Twisted Twin Core Shielded Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G5008702",
           "30",
@@ -600,14 +648,23 @@
       "name": "AERO 55 600V Single Core Insulated Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G24085XXYY",
           "26",
@@ -698,15 +755,25 @@
       "name": "AERO 55 600 V Insulated Twisted Twin Core Airframe Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G1408502",
           "26",
@@ -806,14 +873,23 @@
       "name": "AERO 55 600 V Single Core Shielded Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Max.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G44085XXYY",
           "26",
@@ -904,15 +980,25 @@
       "name": "AERO 55 600 V Twisted Twin Core Shielded Airframe Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
+        "Wire Size",
+        "Cross Section Area",
         "No.of Cores (N o s.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55G5408502",
           "26",
@@ -1012,14 +1098,23 @@
       "name": "AERO 55 600 V Single Core insulated Statistical Process Controlled Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55P21085XXYY",
           "26",
@@ -1110,15 +1205,25 @@
       "name": "AERO 55 600V Insulated Twisted Twin Core Statistical Process Controlled Airframe Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55P1108402",
           "24",
@@ -1208,14 +1313,23 @@
       "name": "AERO 55 600V Single Core Statistical Process Controlled Shielded Airframe Wires",
       "headers": [
         "Part Number",
-        "Wire Size (AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55P41085XXYY",
           "26",
@@ -1306,15 +1420,25 @@
       "name": "AERO 55 600V Twisted Twin Core Statistical Process Controlled Shielded Airframe Cables",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "55P5108502",
           "26",
@@ -1414,15 +1538,25 @@
       "name": "ATC Sie-Foam Skinned, Twin Axial Cable",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "0011118402",
           "24",
@@ -1442,15 +1576,25 @@
       "name": "ATC Sie-Foam Skinned, Twin Radio Frequency Cable",
       "headers": [
         "Part Number",
-        "Wire Size ( AWG)",
-        "Cross Section Area (Sq.mm)",
-        "No.of Cores (Nos.)",
-        "No.of Strands (Nos.)",
-        "Diameter of Single Wire (Nom.) (mm)",
-        "Overall Diameter (Nom.) (mm)",
-        "Cable Weight (Approx.) (kg/km)"
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "2011118402",
           "24",
