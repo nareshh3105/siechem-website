@@ -1,238 +1,12 @@
 {
   "series": [
     {
-      "id": "e4896a3fac",
-      "family": "wind",
-      "name": "HO7ZZ - F Flexible Cable",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm2 Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "6451303G",
-          "3G1.5",
-          "8.5",
-          "39.8",
-          "112"
-        ],
-        [
-          "6451304G",
-          "4G1.5",
-          "9.4",
-          "53.0",
-          "140"
-        ],
-        [
-          "6451305G",
-          "5G1.5",
-          "10.4",
-          "66.3",
-          "171"
-        ],
-        [
-          "6451307G",
-          "7G1.5",
-          "11.4",
-          "95.6",
-          "220"
-        ],
-        [
-          "6451314G",
-          "14G1.5",
-          "15.7",
-          "191.1",
-          "373"
-        ],
-        [
-          "6451318G",
-          "18G1.5",
-          "17.7",
-          "245.7",
-          "473"
-        ],
-        [
-          "6451603G",
-          "3G2.5",
-          "10.0",
-          "66.7",
-          "163"
-        ],
-        [
-          "6451604G",
-          "4G2.5",
-          "11.0",
-          "88.9",
-          "205"
-        ],
-        [
-          "6451605G",
-          "5G2.5",
-          "12.1",
-          "111.2",
-          "251"
-        ],
-        [
-          "6451607G",
-          "7G2.5",
-          "13.4",
-          "160.2",
-          "326"
-        ],
-        [
-          "6451614G",
-          "14G2.5",
-          "18.6",
-          "320.5",
-          "561"
-        ],
-        [
-          "6451618G",
-          "18G2.5",
-          "21.0",
-          "412.0",
-          "713"
-        ],
-        [
-          "6451904G",
-          "4G4",
-          "12.5",
-          "143.2",
-          "287"
-        ],
-        [
-          "6451905G",
-          "5G4",
-          "13.8",
-          "179.0",
-          "354"
-        ],
-        [
-          "6452304G",
-          "4G6",
-          "14.8",
-          "215.0",
-          "414"
-        ],
-        [
-          "6452305G",
-          "5G6",
-          "16.4",
-          "268.8",
-          "509"
-        ],
-        [
-          "6452704G",
-          "4G10",
-          "17.5",
-          "365.6",
-          "630"
-        ],
-        [
-          "6452705G",
-          "5G10",
-          "19.3",
-          "457.0",
-          "774"
-        ],
-        [
-          "6452804G",
-          "4G16",
-          "20.1",
-          "585.5",
-          "914"
-        ],
-        [
-          "6453004G",
-          "4G25",
-          "25.2",
-          "910.3",
-          "1428"
-        ],
-        [
-          "6453204G",
-          "4G35",
-          "28.2",
-          "1281.1",
-          "1895"
-        ],
-        [
-          "6453404G",
-          "4G50",
-          "33.8",
-          "1836.0",
-          "2723"
-        ]
-      ],
-      "catalogueNo": "645"
-    },
-    {
-      "id": "ebf145f06a",
-      "family": "wind",
-      "name": "HO7BN4 - F Flexible Cable",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm2 Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "6483804",
-          "1 x 95",
-          "20.6",
-          "861.4",
-          "1156"
-        ],
-        [
-          "6484104",
-          "1 x 120",
-          "22.3",
-          "1102.6",
-          "1427"
-        ],
-        [
-          "6484204",
-          "1 x 150",
-          "24.8",
-          "1370.9",
-          "1768"
-        ],
-        [
-          "6484404",
-          "1 x 185",
-          "26.8",
-          "1676.9",
-          "2131"
-        ],
-        [
-          "6484604",
-          "1 x 240",
-          "30.2",
-          "2213.4",
-          "2772"
-        ],
-        [
-          "6484804",
-          "1 x 300",
-          "31.9",
-          "2814.2",
-          "3449"
-        ]
-      ],
-      "catalogueNo": "648"
-    },
-    {
       "id": "c0811a80eb",
       "family": "wind",
-      "name": "HO7RN - F Control Cable",
+      "name": "Multi Core Flexible Copper Conductor Rubber Insulated & Polychloroprene Rubber Sheathed 450/750V (UA) Control Cable (HO7RN - F)",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
         "Copper Index Kg/Km",
         "Weight Kg/Km approx."
@@ -247,7 +21,7 @@
         ],
         [
           "6441302",
-          "2Cx1.5",
+          "2C1.5",
           "8.0",
           "26.5",
           "95"
@@ -310,7 +84,7 @@
         ],
         [
           "6441602",
-          "2Cx2.5",
+          "2C2.5",
           "8.9",
           "44.5",
           "128"
@@ -373,7 +147,7 @@
         ],
         [
           "6441902",
-          "2Cx4",
+          "2C4",
           "10.6",
           "71.6",
           "188"
@@ -553,12 +327,240 @@
           "8853.6",
           "11960"
         ]
-      ]
+      ],
+      "info": {
+        "features": [
+          "Heavy Duty Cable.",
+          "Excellent Flame retardant, Ozone resistant and oil-resistant Outer Sheath."
+        ],
+        "technical": [
+          "Temperature Range: - 25°C to +60°C",
+          "Voltage for Testing: 2.5 kV",
+          "Protective Conductor (PC): G-With green/yellow",
+          "X-Without PC",
+          "Bending Radius (Minimum): Flexing: 6 x Cable Diameter",
+          "Rated Voltage: (U₀/U):450/750 V",
+          "In Protected &Fixed Installations: 600/1000 V",
+          "Specific Insulation Resistance: 1G Ohm x cm.",
+          "As per VDE 0282"
+        ],
+        "application": [
+          "Used in dry and damp interiors",
+          "Also, in Outdoor Use.",
+          "Used in Agricultural Machinery"
+        ],
+        "construction": [
+          "Conductor: Fine Strands of Copper.",
+          "Insulation: Rubber Compound.",
+          "Outer Sheath: Polychloroprene Rubber Compound.",
+          "Colored Cores."
+        ]
+      }
     },
     {
-      "id": "2c886bf50a",
+      "id": "e4896a3fac",
       "family": "wind",
-      "name": "Per Conductor — Outer Diameter in",
+      "name": "Multi Core Flexible Plain Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750 V (UA) Control Cable (HO7ZZ - F)",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index Kg/Km",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "6451303G",
+          "3G1.5",
+          "8.5",
+          "39.8",
+          "112"
+        ],
+        [
+          "6451304G",
+          "4G1.5",
+          "9.4",
+          "53.0",
+          "140"
+        ],
+        [
+          "6451305G",
+          "5G1.5",
+          "10.4",
+          "66.3",
+          "171"
+        ],
+        [
+          "6451307G",
+          "7G1.5",
+          "11.4",
+          "95.6",
+          "220"
+        ],
+        [
+          "6451314G",
+          "14G1.5",
+          "15.7",
+          "191.1",
+          "373"
+        ],
+        [
+          "6451318G",
+          "18G1.5",
+          "17.7",
+          "245.7",
+          "473"
+        ],
+        [
+          "6451603G",
+          "3G2.5",
+          "10.0",
+          "66.7",
+          "163"
+        ],
+        [
+          "6451604G",
+          "4G2.5",
+          "11.0",
+          "88.9",
+          "205"
+        ],
+        [
+          "6451605G",
+          "5G2.5",
+          "12.1",
+          "111.2",
+          "251"
+        ],
+        [
+          "6451607G",
+          "7G2.5",
+          "13.4",
+          "160.2",
+          "326"
+        ],
+        [
+          "6451614G",
+          "14G2.5",
+          "18.6",
+          "320.5",
+          "561"
+        ],
+        [
+          "6451618G",
+          "18G2.5",
+          "21.0",
+          "412.0",
+          "713"
+        ],
+        [
+          "6451904G",
+          "4G4",
+          "12.5",
+          "143.2",
+          "287"
+        ],
+        [
+          "6451905G",
+          "5G4",
+          "13.8",
+          "179.0",
+          "354"
+        ],
+        [
+          "6452304G",
+          "4G6",
+          "14.8",
+          "215.0",
+          "414"
+        ],
+        [
+          "6452305G",
+          "5G6",
+          "16.4",
+          "268.8",
+          "509"
+        ],
+        [
+          "6452704G",
+          "4G10",
+          "17.5",
+          "365.6",
+          "630"
+        ],
+        [
+          "6452705G",
+          "5G10",
+          "19.3",
+          "457.0",
+          "774"
+        ],
+        [
+          "6452804G",
+          "4G16",
+          "20.1",
+          "585.5",
+          "914"
+        ],
+        [
+          "6453004G",
+          "4G25",
+          "25.2",
+          "910.3",
+          "1428"
+        ],
+        [
+          "6453204G",
+          "4G35",
+          "28.2",
+          "1281.1",
+          "1895"
+        ],
+        [
+          "6453404G",
+          "4G50",
+          "33.8",
+          "1836.0",
+          "2723"
+        ]
+      ],
+      "catalogueNo": "645",
+      "info": {
+        "features": [
+          "Flame retardant.",
+          "No flame propagation.",
+          "Low corrosivity of gases"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications            - 5°C to +70°C",
+          "Fixed Installation                 - 40°C to +70°C",
+          "Test Voltage: 2.5 kV",
+          "Protective Conductor (PC): G- With green/yellow",
+          "X-Without PC",
+          "Bending Radius (Minimum):",
+          "Flexing:  6 x Cable Diameter",
+          "Static:   4 x Cable Diameter",
+          "Rated Voltage: 450/750 (U₀/U)",
+          "In Protected & Fixed Installation:  600/1000 V"
+        ],
+        "application": [
+          "Used in dry and damp interiors.",
+          "Low smoke density.",
+          "Used in mobile equipment"
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires.",
+          "Insulation: Halogen Free Rubber Compound.",
+          "Outer Sheath: Black Halogen Free Rubber Compound.",
+          "Colored Cores."
+        ]
+      }
+    },
+    {
+      "id": "ebf145f06a",
+      "family": "wind",
+      "name": "Single Core Flexible Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750V (UA) Power Cable(HO7BN4 - F)",
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
@@ -568,21 +570,83 @@
       ],
       "rows": [
         [
-          "6444404G",
-          "4 G 185",
-          "57.9",
-          "6707.5",
-          "9174"
+          "6483804",
+          "1 x 95",
+          "20.6",
+          "861.4",
+          "1156"
         ],
         [
-          "6444604G",
-          "4 G 240",
-          "65.4",
-          "8853.6",
-          "11960"
+          "6484104",
+          "1 x 120",
+          "22.3",
+          "1102.6",
+          "1427"
+        ],
+        [
+          "6484204",
+          "1 x 150",
+          "24.8",
+          "1370.9",
+          "1768"
+        ],
+        [
+          "6484404",
+          "1 x 185",
+          "26.8",
+          "1676.9",
+          "2131"
+        ],
+        [
+          "6484604",
+          "1 x 240",
+          "30.2",
+          "2213.4",
+          "2772"
+        ],
+        [
+          "6484804",
+          "1 x 300",
+          "31.9",
+          "2814.2",
+          "3449"
         ]
       ],
-      "catalogueNo": "644"
+      "catalogueNo": "648",
+      "info": {
+        "features": [
+          "Formation of Toxic dioxins and furnaces in case of fire is considerably reduced.",
+          "Highly resistant to grease, oil and other emulsions.",
+          "Halogen free material is recyclable",
+          "Excellent Flame retardant.",
+          "Excellent UV protection.",
+          "Low Smoke Density.",
+          "Halogen free control cable"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications            - 15°C to +90°C",
+          "Fixed Installation                 - 35°C to +90°C",
+          "Test Voltage: 2.5 kV",
+          "Bending Radius (Minimum):",
+          "Flexing:  6 x Cable Diameter",
+          "Static:   4 x Cable Diameter",
+          "Rated Voltage: 450/750 (U₀/U)",
+          "In Protected & Fixed Installation:  600/1000 V"
+        ],
+        "application": [
+          "Used in dry or damp interiors.",
+          "Air conditioning systems.",
+          "Not Suitable for direct burial.",
+          "Used in machine tools.",
+          "Data processing systems."
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires.",
+          "Insulation:  Rubber Compound.",
+          "Outer Sheath: Special Rubber Compound"
+        ]
+      }
     },
     {
       "id": "00595b2e59",
