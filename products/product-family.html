@@ -93,6 +93,18 @@
     .prod-card-name { font-size: 14.5px; font-weight: 700; color: var(--text); line-height: 1.35; }
     .prod-card-body { padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
     .prod-card-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+    /* Cards with a 2D product image: specs stack in one column on the left,
+       the cross-section render sits on the right where the second spec
+       column used to be. */
+    .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
+    .prod-card-bodyimg .prod-card-specs { grid-template-columns: 1fr; }
+    .prod-card-media {
+      width: 140px; height: 140px; background: #fff;
+      border: 1px solid var(--border); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; padding: 8px;
+    }
+    .prod-card-media img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
     .prod-spec { display: flex; flex-direction: column; gap: 1px; }
     .prod-spec-label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
     .prod-spec-val { font-size: 13px; font-weight: 600; color: var(--text); }
@@ -501,6 +513,7 @@
   window.addEventListener('hashchange', () => location.reload());
   let FAM = null;      // family metadata from families.json
   let SERIES = [];     // enriched series list
+  let IMG2D = {};      // seriesId -> 2D product image path (from manifest)
   let filters = {};    // active filter selections
   let searchTerm = '';
 
@@ -590,6 +603,13 @@
       return;
     }
     FAM = fams.families.find(f => f.id === FAMILY_ID) || { name: FAMILY_ID, segment: '', summary: '' };
+
+    // Optional 2D product renders (assets/products-2d/manifest.json) — absent
+    // for most families; cards fall back to the text-only layout.
+    try {
+      const m = await fetch('/assets/products-2d/manifest.json').then(r => r.ok ? r.json() : {});
+      IMG2D = m[FAMILY_ID] || {};
+    } catch (e) { IMG2D = {}; }
 
     SERIES = prod.series.map((s, i) => {
       const display = cleanName(s.name, i);
@@ -759,10 +779,15 @@
       const footerLeft = s.catalogueNo
         ? 'Catalogue No: ' + esc(s.catalogueNo)
         : s.rows.length + ' part number' + (s.rows.length === 1 ? '' : 's');
+      const img2d = IMG2D[s.id];
+      const body = img2d
+        ? '<div class="prod-card-body"><div class="prod-card-bodyimg"><div class="prod-card-specs">' + specs + '</div>' +
+          '<div class="prod-card-media"><img src="' + esc(img2d) + '" alt="' + esc(s.display) + ' — cross section" loading="lazy"></div></div></div>'
+        : '<div class="prod-card-body"><div class="prod-card-specs">' + specs + '</div></div>';
       return '<a class="prod-card reveal" href="/products/product-variant.html#f=' + encodeURIComponent(FAMILY_ID) + '&s=' + s.idx + '">' +
         '<div class="prod-card-head"><div class="prod-card-badges">' + badges + '</div>' +
         '<div class="prod-card-name">' + esc(s.display) + '</div></div>' +
-        '<div class="prod-card-body"><div class="prod-card-specs">' + specs + '</div></div>' +
+        body +
         '<div class="prod-card-footer"><span class="prod-card-awg">' + footerLeft + '</span>' +
         '<span class="prod-card-btn">View Specs &amp; Parts <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></div></a>';
     }).join('');
