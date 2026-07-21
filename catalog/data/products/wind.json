@@ -1,6 +1,104 @@
 {
   "series": [
     {
+      "id": "ebf145f06a",
+      "family": "wind",
+      "name": "Single Core Flexible Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750V (UA) Power Cable(HO7BN4 - F)",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm2 Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
+        [
+          "6483804",
+          "1 x 95",
+          "20.6",
+          "861.4",
+          "1156"
+        ],
+        [
+          "6484104",
+          "1 x 120",
+          "22.3",
+          "1102.6",
+          "1427"
+        ],
+        [
+          "6484204",
+          "1 x 150",
+          "24.8",
+          "1370.9",
+          "1768"
+        ],
+        [
+          "6484404",
+          "1 x 185",
+          "26.8",
+          "1676.9",
+          "2131"
+        ],
+        [
+          "6484604",
+          "1 x 240",
+          "30.2",
+          "2213.4",
+          "2772"
+        ],
+        [
+          "6484804",
+          "1 x 300",
+          "31.9",
+          "2814.2",
+          "3449"
+        ]
+      ],
+      "catalogueNo": "648",
+      "info": {
+        "features": [
+          "Formation of Toxic dioxins and furnaces in case of fire is considerably reduced.",
+          "Highly resistant to grease, oil and other emulsions.",
+          "Halogen free material is recyclable",
+          "Excellent Flame retardant.",
+          "Excellent UV protection.",
+          "Low Smoke Density.",
+          "Halogen free control cable"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications            - 15°C to +90°C",
+          "Fixed Installation                 - 35°C to +90°C",
+          "Test Voltage: 2.5 kV",
+          "Bending Radius (Minimum):",
+          "Flexing:  6 x Cable Diameter",
+          "Static:   4 x Cable Diameter",
+          "Rated Voltage: 450/750 (U₀/U)",
+          "In Protected & Fixed Installation:  600/1000 V"
+        ],
+        "application": [
+          "Used in dry or damp interiors.",
+          "Air conditioning systems.",
+          "Not Suitable for direct burial.",
+          "Used in machine tools.",
+          "Data processing systems."
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires.",
+          "Insulation:  Rubber Compound.",
+          "Outer Sheath: Special Rubber Compound"
+        ]
+      }
+    },
+    {
       "id": "c0811a80eb",
       "family": "wind",
       "name": "Multi Core Flexible Copper Conductor Rubber Insulated & Polychloroprene Rubber Sheathed 450/750V (UA) Control Cable (HO7RN - F)",
@@ -8,10 +106,17 @@
         "Part Number",
         "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "6441003G",
           "3G1",
@@ -358,311 +463,27 @@
       }
     },
     {
-      "id": "e4896a3fac",
+      "id": "00595b2e59",
       "family": "wind",
-      "name": "Multi Core Flexible Plain Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750 V (UA) Control Cable (HO7ZZ - F)",
+      "name": "Multi Core Flexible Copper Conductor PVC Insulated, Cores Twisted in layer, Special PVC Inner Sheathed,  Tinned Copper Braiding and Special PVC Transparent Outer Sheathed (UA) Control Cable (SFLEX CLASSIC 100 CY)",
       "headers": [
         "Part Number",
         "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "6451303G",
-          "3G1.5",
-          "8.5",
-          "39.8",
-          "112"
-        ],
-        [
-          "6451304G",
-          "4G1.5",
-          "9.4",
-          "53.0",
-          "140"
-        ],
-        [
-          "6451305G",
-          "5G1.5",
-          "10.4",
-          "66.3",
-          "171"
-        ],
-        [
-          "6451307G",
-          "7G1.5",
-          "11.4",
-          "95.6",
-          "220"
-        ],
-        [
-          "6451314G",
-          "14G1.5",
-          "15.7",
-          "191.1",
-          "373"
-        ],
-        [
-          "6451318G",
-          "18G1.5",
-          "17.7",
-          "245.7",
-          "473"
-        ],
-        [
-          "6451603G",
-          "3G2.5",
-          "10.0",
-          "66.7",
-          "163"
-        ],
-        [
-          "6451604G",
-          "4G2.5",
-          "11.0",
-          "88.9",
-          "205"
-        ],
-        [
-          "6451605G",
-          "5G2.5",
-          "12.1",
-          "111.2",
-          "251"
-        ],
-        [
-          "6451607G",
-          "7G2.5",
-          "13.4",
-          "160.2",
-          "326"
-        ],
-        [
-          "6451614G",
-          "14G2.5",
-          "18.6",
-          "320.5",
-          "561"
-        ],
-        [
-          "6451618G",
-          "18G2.5",
-          "21.0",
-          "412.0",
-          "713"
-        ],
-        [
-          "6451904G",
-          "4G4",
-          "12.5",
-          "143.2",
-          "287"
-        ],
-        [
-          "6451905G",
-          "5G4",
-          "13.8",
-          "179.0",
-          "354"
-        ],
-        [
-          "6452304G",
-          "4G6",
-          "14.8",
-          "215.0",
-          "414"
-        ],
-        [
-          "6452305G",
-          "5G6",
-          "16.4",
-          "268.8",
-          "509"
-        ],
-        [
-          "6452704G",
-          "4G10",
-          "17.5",
-          "365.6",
-          "630"
-        ],
-        [
-          "6452705G",
-          "5G10",
-          "19.3",
-          "457.0",
-          "774"
-        ],
-        [
-          "6452804G",
-          "4G16",
-          "20.1",
-          "585.5",
-          "914"
-        ],
-        [
-          "6453004G",
-          "4G25",
-          "25.2",
-          "910.3",
-          "1428"
-        ],
-        [
-          "6453204G",
-          "4G35",
-          "28.2",
-          "1281.1",
-          "1895"
-        ],
-        [
-          "6453404G",
-          "4G50",
-          "33.8",
-          "1836.0",
-          "2723"
-        ]
-      ],
-      "catalogueNo": "645",
-      "info": {
-        "features": [
-          "Flame retardant.",
-          "No flame propagation.",
-          "Low corrosivity of gases"
-        ],
-        "technical": [
-          "Temperature Range:",
-          "Flexible applications            - 5°C to +70°C",
-          "Fixed Installation                 - 40°C to +70°C",
-          "Test Voltage: 2.5 kV",
-          "Protective Conductor (PC): G- With green/yellow",
-          "X-Without PC",
-          "Bending Radius (Minimum):",
-          "Flexing:  6 x Cable Diameter",
-          "Static:   4 x Cable Diameter",
-          "Rated Voltage: 450/750 (U₀/U)",
-          "In Protected & Fixed Installation:  600/1000 V"
-        ],
-        "application": [
-          "Used in dry and damp interiors.",
-          "Low smoke density.",
-          "Used in mobile equipment"
-        ],
-        "construction": [
-          "Conductor: Finely Stranded Bare Copper Wires.",
-          "Insulation: Halogen Free Rubber Compound.",
-          "Outer Sheath: Black Halogen Free Rubber Compound.",
-          "Colored Cores."
-        ]
-      }
-    },
-    {
-      "id": "ebf145f06a",
-      "family": "wind",
-      "name": "Single Core Flexible Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750V (UA) Power Cable(HO7BN4 - F)",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm2 Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "6483804",
-          "1 x 95",
-          "20.6",
-          "861.4",
-          "1156"
-        ],
-        [
-          "6484104",
-          "1 x 120",
-          "22.3",
-          "1102.6",
-          "1427"
-        ],
-        [
-          "6484204",
-          "1 x 150",
-          "24.8",
-          "1370.9",
-          "1768"
-        ],
-        [
-          "6484404",
-          "1 x 185",
-          "26.8",
-          "1676.9",
-          "2131"
-        ],
-        [
-          "6484604",
-          "1 x 240",
-          "30.2",
-          "2213.4",
-          "2772"
-        ],
-        [
-          "6484804",
-          "1 x 300",
-          "31.9",
-          "2814.2",
-          "3449"
-        ]
-      ],
-      "catalogueNo": "648",
-      "info": {
-        "features": [
-          "Formation of Toxic dioxins and furnaces in case of fire is considerably reduced.",
-          "Highly resistant to grease, oil and other emulsions.",
-          "Halogen free material is recyclable",
-          "Excellent Flame retardant.",
-          "Excellent UV protection.",
-          "Low Smoke Density.",
-          "Halogen free control cable"
-        ],
-        "technical": [
-          "Temperature Range:",
-          "Flexible applications            - 15°C to +90°C",
-          "Fixed Installation                 - 35°C to +90°C",
-          "Test Voltage: 2.5 kV",
-          "Bending Radius (Minimum):",
-          "Flexing:  6 x Cable Diameter",
-          "Static:   4 x Cable Diameter",
-          "Rated Voltage: 450/750 (U₀/U)",
-          "In Protected & Fixed Installation:  600/1000 V"
-        ],
-        "application": [
-          "Used in dry or damp interiors.",
-          "Air conditioning systems.",
-          "Not Suitable for direct burial.",
-          "Used in machine tools.",
-          "Data processing systems."
-        ],
-        "construction": [
-          "Conductor: Finely Stranded Bare Copper Wires.",
-          "Insulation:  Rubber Compound.",
-          "Outer Sheath: Special Rubber Compound"
-        ]
-      }
-    },
-    {
-      "id": "00595b2e59",
-      "family": "wind",
-      "name": "SFLEX CLASSIC 100 CY Control Cable",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm2 Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
         [
+          "",
+          "Nos x   mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km "
+        ],
+        [
           "6030602",
-          "2C x 0.5",
+          "2C 0.5",
           "7.4",
           "41.0",
           "88"
@@ -697,7 +518,7 @@
         ],
         [
           "6030802G",
-          "2C x 0.75",
+          "2C 0.75",
           "8.8",
           "46.0",
           "117"
@@ -732,7 +553,7 @@
         ],
         [
           "6031002",
-          "2C x 1",
+          "2C 1",
           "9.4",
           "56.0",
           "140"
@@ -767,7 +588,7 @@
         ],
         [
           "6031302",
-          "2C x 1.5",
+          "2C 1.5",
           "10.2",
           "65.0",
           "162"
@@ -990,20 +811,277 @@
           "10864"
         ]
       ],
-      "catalogueNo": "603"
+      "catalogueNo": "603",
+      "info": {
+        "features": [
+          "Highly resistive to oil, chemicals, soiling and mechanical damage.",
+          "High insulation performance.",
+          "Lower transfer impedance",
+          "Flame retardant.",
+          "Transparent sheath provides excellent mechanical strength."
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications: - 5°C to +70°C",
+          "Fixed Installation: - 40°C to +80°C",
+          "Test Voltage: 4 kV",
+          "Protective Conductor(PC): G-With green/yellow PC",
+          "X-Without PC",
+          "Bending Radius (Minimum):",
+          "Flexing: 20 x Cable Diameter",
+          "Static:  6 x Cable Diameter",
+          "Rated Voltage: U₀/U",
+          "Up to 1.0mm: 300/500 V",
+          "From 1.5mm: 450/750 V",
+          "From 1.5mm (Fixed & Protected Installation): 600/1000 V",
+          "Specific Insulation Resistance: >20 G Ohm x cm"
+        ],
+        "application": [
+          "Electrical interference fields.",
+          "Transport and data processing systems.",
+          "Air conditioning systems.",
+          "Servo drives.",
+          "Power stations.",
+          "Plant engineering and construction.",
+          "Fixed installations."
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires",
+          "Insulation: PVC Compound",
+          "Cores: Twisted in layer",
+          "Inner Sheath: Special PVC Compound",
+          "Braiding: Tinned Copper wires",
+          "Outer Sheath: Transparent Special PVC Material",
+          "Colored Cores"
+        ]
+      }
+    },
+    {
+      "id": "e4896a3fac",
+      "family": "wind",
+      "name": "Multi Core Flexible Plain Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750 V (UA) Control Cable (HO7ZZ - F)",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
+        [
+          "6451303G",
+          "3G1.5",
+          "8.5",
+          "39.8",
+          "112"
+        ],
+        [
+          "6451304G",
+          "4G1.5",
+          "9.4",
+          "53.0",
+          "140"
+        ],
+        [
+          "6451305G",
+          "5G1.5",
+          "10.4",
+          "66.3",
+          "171"
+        ],
+        [
+          "6451307G",
+          "7G1.5",
+          "11.4",
+          "95.6",
+          "220"
+        ],
+        [
+          "6451314G",
+          "14G1.5",
+          "15.7",
+          "191.1",
+          "373"
+        ],
+        [
+          "6451318G",
+          "18G1.5",
+          "17.7",
+          "245.7",
+          "473"
+        ],
+        [
+          "6451603G",
+          "3G2.5",
+          "10.0",
+          "66.7",
+          "163"
+        ],
+        [
+          "6451604G",
+          "4G2.5",
+          "11.0",
+          "88.9",
+          "205"
+        ],
+        [
+          "6451605G",
+          "5G2.5",
+          "12.1",
+          "111.2",
+          "251"
+        ],
+        [
+          "6451607G",
+          "7G2.5",
+          "13.4",
+          "160.2",
+          "326"
+        ],
+        [
+          "6451614G",
+          "14G2.5",
+          "18.6",
+          "320.5",
+          "561"
+        ],
+        [
+          "6451618G",
+          "18G2.5",
+          "21.0",
+          "412.0",
+          "713"
+        ],
+        [
+          "6451904G",
+          "4G4",
+          "12.5",
+          "143.2",
+          "287"
+        ],
+        [
+          "6451905G",
+          "5G4",
+          "13.8",
+          "179.0",
+          "354"
+        ],
+        [
+          "6452304G",
+          "4G6",
+          "14.8",
+          "215.0",
+          "414"
+        ],
+        [
+          "6452305G",
+          "5G6",
+          "16.4",
+          "268.8",
+          "509"
+        ],
+        [
+          "6452704G",
+          "4G10",
+          "17.5",
+          "365.6",
+          "630"
+        ],
+        [
+          "6452705G",
+          "5G10",
+          "19.3",
+          "457.0",
+          "774"
+        ],
+        [
+          "6452804G",
+          "4G16",
+          "20.1",
+          "585.5",
+          "914"
+        ],
+        [
+          "6453004G",
+          "4G25",
+          "25.2",
+          "910.3",
+          "1428"
+        ],
+        [
+          "6453204G",
+          "4G35",
+          "28.2",
+          "1281.1",
+          "1895"
+        ],
+        [
+          "6453404G",
+          "4G50",
+          "33.8",
+          "1836.0",
+          "2723"
+        ]
+      ],
+      "catalogueNo": "645",
+      "info": {
+        "features": [
+          "Flame retardant.",
+          "No flame propagation.",
+          "Low corrosivity of gases"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications            - 5°C to +70°C",
+          "Fixed Installation                 - 40°C to +70°C",
+          "Test Voltage: 2.5 kV",
+          "Protective Conductor (PC): G- With green/yellow",
+          "X-Without PC",
+          "Bending Radius (Minimum):",
+          "Flexing:  6 x Cable Diameter",
+          "Static:   4 x Cable Diameter",
+          "Rated Voltage: 450/750 (U₀/U)",
+          "In Protected & Fixed Installation:  600/1000 V"
+        ],
+        "application": [
+          "Used in dry and damp interiors.",
+          "Low smoke density.",
+          "Used in mobile equipment"
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires.",
+          "Insulation: Halogen Free Rubber Compound.",
+          "Outer Sheath: Black Halogen Free Rubber Compound.",
+          "Colored Cores."
+        ]
+      }
     },
     {
       "id": "5567a98250",
       "family": "wind",
-      "name": "NSGAFOU 3kV Flexible Cables",
+      "name": "Single Core Flexible Tinned Copper Conductor EBXL - Polyolefin Insulated & Sheathed 1.8 /3 kV (UA) Power Cable (NSGAFOU 3kV Flexible)",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km"
+        ],
         [
           "6401304",
           "1.5",
@@ -1117,21 +1195,59 @@
           "3413.94"
         ]
       ],
-      "catalogueNo": "640"
+      "catalogueNo": "640",
+      "info": {
+        "features": [
+          "Electron Beam Cross Linked insulation.",
+          "Excellent Flame Retardant.",
+          "Highly Resistive to Oil and Ozone.",
+          "Highly short circuit rated and earth fault resistance cable."
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications:- 25°C to +125°C",
+          "Fixed Installation: - 40°C to +125°C",
+          "Test Voltage: 6 kV",
+          "Bending Radius (Minimum):",
+          "Flexing:  10 x Cable Diameter",
+          "Fixed Installation: 6 x Cable Diameter",
+          "Rated Voltage (U₀/U): 1.8/3 kV"
+        ],
+        "application": [
+          "Dry interiors.",
+          "Switch Cabinets.",
+          "Trains and Buses.",
+          "Equipment wiring",
+          "High voltage applications."
+        ],
+        "construction": [
+          "Conductor           Fine strands of tinned Copper Wires.",
+          "Core Insulation   Electron Beam Cross Linked Polyolefin.",
+          "Outer Sheath      Electron Beam Cross Linked Polyolefin"
+        ]
+      }
     },
     {
       "id": "03d8c4e058",
       "family": "wind",
-      "name": "UL 21098",
+      "name": "Multi Core Stranded Bare Copper Conductor PVC Insulated & Sheathed 600 V AC UL 21098 Style Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx."
       ],
       "rows": [
+        [
+          "",
+          "Nos x AWG",
+          "Nos/mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "4448203",
           "3 x 20",
@@ -1387,42 +1503,7 @@
           "1.2",
           "14.6",
           "630.95"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
         ],
-        "technical": [
-          "Temperature Range : +900C",
-          "Voltage Rating : 600 V AC"
-        ],
-        "application": [
-          "Internal wiring of electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Optional : Shield & Covering",
-          "Outersheath : PVC",
-          "Colour : As per customer order. Siechem UL 21098 RoHS"
-        ]
-      }
-    },
-    {
-      "id": "b7e3bda03a",
-      "family": "wind",
-      "name": "Size",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km"
-      ],
-      "rows": [
         [
           "4447604",
           "4 x 8",
@@ -1456,25 +1537,46 @@
           "2098.22"
         ]
       ],
-      "catalogueNo": "444",
       "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +90°C",
+          "Voltage Rating: 600 V AC"
+        ],
+        "application": [
+          "Internal wiring of electronic equipment."
+        ],
         "construction": [
-          "Insulation"
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Optional: Shield & Covering",
+          "Outer sheath: PVC",
+          "Color: As per customer order."
         ]
       }
     },
     {
       "id": "4e80267331",
       "family": "wind",
-      "name": "Per Conductor — Outer Diameter in",
+      "name": "Multi Core Stranded Copper Conductor, HEPR (Halogen free) Insulated, Al- Mylar Tape, Electrolytic Copper Braided Screen, Polyester Tape & Polyolefin Sheathed 600/1000V (UA) Marine Cable (MGSGO)",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km"
+        ],
         [
           "30319XX*",
           "1 x 4",
@@ -1770,20 +1872,56 @@
           "5990"
         ]
       ],
-      "catalogueNo": "303"
+      "catalogueNo": "303",
+      "info": {
+        "features": [
+          "Flame retardant: IEC - 60332-3 (Cat A)",
+          "Tests & Materials: IEC - 60092/350-351-359",
+          "Halogen free: IEC 60754 / 1-2",
+          "Electron Beam Cross Linked",
+          "Smoke Density: IEC 60134 / 1-2",
+          "(DIN EN 50147-1)",
+          "Oil resistant"
+        ],
+        "technical": [
+          "Temperature Range: - 40°C to +120°C",
+          "Rated Voltage U₀/U: 0.6/1kV",
+          "Bending Radius (Min): 5 x Cable Diameter",
+          "Max. Short Circuit Temperature: 280 Short-circuit temp"
+        ],
+        "application": [
+          "Permanent installations in marine crafts",
+          "Installations in open decks as Control and Power cables"
+        ],
+        "construction": [
+          "Conductor: Electrolytic, stranded, annealed copper wire.IEC 60228 Class 2 (Class 5 / tinned on request)",
+          "Insulation:  HEPR (Halogen free)",
+          "Foil Screen: Al-Mylar Tape",
+          "Screen: Electrolytic Copper Braided Screen",
+          "Separator: Polyester Tape",
+          "Outer Sheath: Halogen free, flame retardant, thermoset, polyolefin-based jacket compound (Black)"
+        ]
+      }
     },
     {
       "id": "a8e93e9b03",
       "family": "wind",
-      "name": "EPR (UA) Power Cable",
+      "name": "Single Core Flexible Tinned Copper Conductor EPR Insulated & HF XL EVA Sheathed 1.8/3 kV Power Cable conforming to IEC 60502",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km"
+        ],
         [
           "35130XX",
           "1 x 25",
@@ -1869,25 +2007,25 @@
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
-          "Ozone Resistant Number"
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range: -400C to +1250C",
-          "Test Voltage : 6.5 kV",
-          "Bending Radius(Minimum): 6 x Cable Dia",
-          "Rated Voltage (U/U) : 1.8/3 kV 0"
+          "Temperature Range: -40°C to +125°C",
+          "Test Voltage: 6.5 kV",
+          "Bending Radius (Minimum): 6 x Cable Dia",
+          "Rated Voltage (U₀/U): 1.8/3 kV"
         ],
         "application": [
           "Wind Turbines",
           "Transmission of energy from generator to transformer."
         ],
         "construction": [
-          "Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
-          "Insulation : E P R (Ethylene-Propylene-Rubber)",
-          "Outer Sheath : HF XL EVA Siechem EPR (UA) Power Cable of Cores and mm2 Outer Diameter in"
+          "Conductor: Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
+          "Insulation: EPR (Ethylene-Propylene-Rubber)",
+          "Outer Sheath: HF XL EVA"
         ]
       }
     },
@@ -1899,10 +2037,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "3523003",
           "3 x 25",
@@ -2025,10 +2170,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "35323XX",
           "1 x 6",
@@ -2150,10 +2302,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "35413XX",
           "1 x 1.5",
@@ -2381,10 +2540,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "35644XX",
           "1 x 185",
@@ -3436,10 +3602,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Aluminium Index Kg/Km",
+        "Aluminium Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "6822804",
           "4C x 16",
@@ -15230,11 +15403,17 @@
       "name": "EBXL - XLPE Control Cable",
       "headers": [
         "Part Number",
-        "No. of Cores x Cross Section. AWG (mm2 )",
+        "No. of Cores x Cross Section.",
         "Outer Diameter in mm approx.",
         "Copper Index Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          ""
+        ],
         [
           "3795102",
           "2 X 18AWG",

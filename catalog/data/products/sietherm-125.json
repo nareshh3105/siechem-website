@@ -7,15 +7,26 @@
       "headers": [
         "Part No.",
         "Size (Sq.mm2 )",
-        "No. of Stands / Max. Stand Dia. (mm)",
-        "Nominal Insulation Thickness (mm)",
+        "No. of Stands / Max. Stand Dia.",
+        "Nominal Insulation Thickness",
         "Overall Cable Diameter Min Max",
         "",
-        "Max. DC Resistance at 200 C ATC (Ohm/Km)",
-        "Nom. Cable Weight (kg/km)",
-        "Current Rating (Amps)"
+        "Max. DC Resistance at 200 C ATC",
+        "Nom. Cable Weight",
+        "Current Rating"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ohm/Km",
+          "kg/km",
+          "Amps"
+        ],
         [
           "18003XX*",
           "0.25",
@@ -268,16 +279,29 @@
         "Part Number",
         "No. of Core X Size (NosxSq.mm)",
         "No. of Strands / Nom. Strand Dia. (Nos/mm)",
-        "Maximum Diameter of Wire in Conductor (mm)",
-        "Nomina Insulatio Thickne (mm)",
-        "l Nominal n Sheath ss Thickness (mm)",
+        "Maximum Diameter of Wire in Conductor",
+        "Nomina Insulatio Thickne",
+        "l Nominal n Sheath ss Thickness",
         "Overall Cable Diameter (mm) — Min",
         "",
         "Max",
-        "Max. DC Resistance at 200 C ATC (Ohm/km)",
-        "Nom Weight (kg/km)"
+        "Max. DC Resistance at 200 C ATC",
+        "Nom Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          "Ohm/km",
+          "kg/km"
+        ],
         [
           "1810304",
           "4 x 0.25",

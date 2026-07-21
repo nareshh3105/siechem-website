@@ -475,14 +475,25 @@
         "Part Number",
         "Cross Section (mm 2)",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Diameter (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Min. Insulatio Thickness (mm)",
+        "Max. Conductor Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Min. Insulatio Thickness",
         "Outer Diameter n (mm) (Min) (Max)",
         "",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R55006XX*",
           "0.5",
@@ -547,16 +558,27 @@
       "name": "BS EN 50306-3 Single and Multi Core, Screened, 300 V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R551060904",
           "1 X 0.5",
@@ -881,14 +903,25 @@
         "Part Number",
         "No. of cores x Cross Section (Nos) x (mm 2)",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5530602",
           "2 X 0.5",
@@ -1250,16 +1283,27 @@
       "name": "BS EN 50306-4 1E Multi Core, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5540602",
           "2 X 0.5",
@@ -1621,16 +1665,27 @@
       "name": "BS EN 50306-4 3P Multi Core, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter ( m m ) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5550602",
           "2 X 0.5",
@@ -1838,16 +1893,27 @@
       "name": "BS EN 50306-4 3P Multi Core, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter ( m m ) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5551306",
           "6 X 1.5",
@@ -1912,16 +1978,27 @@
       "name": "BS EN 50306-4 3E Multi Core, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No. of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (m m ) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5560602",
           "2 X 0.5",
@@ -2129,16 +2206,27 @@
       "name": "BS EN 50306-4 3E Multi Core, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No. of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (m m ) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5561306",
           "6 X 1.5",
@@ -2203,16 +2291,27 @@
       "name": "BS EN 50306-4 5P Multi Pair, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (m m ) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5570602P",
           "2 X 2 X 0.5",
@@ -2398,16 +2497,27 @@
       "name": "BS EN 50306-4 5E Multi Pair, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Core Diameter (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Max. Core Diameter",
+        "Min. Sheath Thickness",
         "Outer Diameter (m m ) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "R5580602P",
           "2 X 2 X 0.5",
@@ -2593,15 +2703,25 @@
       "name": "BS EN 50306-4 7P Multi Pair, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Nom. Thickness of Overall Sheath (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Nom. Thickness of Overall Sheath",
         "Outer Diameter (mm ) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "RA5370602P",
           "2 X 2 X 0.5",
@@ -2806,15 +2926,25 @@
       "name": "BS EN 50306-4 7E Multi Pair, Screened, 300V AC, 450V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Nom. Thickness of Overall Sheath (mm)",
+        "Max. Conductor Resistance at 20 0C",
+        "Nom. Thickness of Overall Sheath",
         "Outer Diameter (mm ) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "RA5380602P",
           "2 X 2 X 0.5",
@@ -2994,18 +3124,31 @@
       "name": "BS EN 50264-3-1 Single Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Max. Conductor Resistance at 20 0C",
         "Insulation Thickne (mm) — (Min)",
         "(Nom",
         "ss Outer Diameter (mm) — ) (Min)",
         "(Max)",
-        "Cable Weight approx (Kg/Km)",
+        "Cable Weight approx",
         "Current Rating at 45ºC (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "55910XX*",
           "1",
@@ -3249,18 +3392,31 @@
       "name": "BS EN 50264-3-1 Single Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) — (Min)",
         "(Nom)",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
-        "Cable Weight approx (Kg/Km)",
+        "Cable Weight approx",
         "Current Rating at 45ºC (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "C20306XX*",
           "0.5",
@@ -3296,16 +3452,27 @@
       "name": "BS EN 50264-3-1 Single Core, 1800/3000V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
-        "Max. Conductor Resistance at 20 0C Ω/km",
+        "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56013XX*",
           "1.5",
@@ -3502,10 +3669,10 @@
       "name": "BS EN 50264-3-1 Single Core, Sheathed 1800/3000V AC, 2700V DC EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Insulation Thicknes s (mm) (N o m )",
         "Sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) (Min) (Max)",
@@ -3513,6 +3680,18 @@
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56113XXYY*",
           "1.5",
@@ -3726,17 +3905,29 @@
       "name": "BS EN 50264-3-2 Multi Core, 300/500 V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Cor e Diameter (mm)",
+        "Max. Cor e Diameter",
         "Outer sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5861002",
           "2 X 1",
@@ -3962,17 +4153,29 @@
       "name": "BS EN 50264-3-2 Multi Core, 300/500 V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Cor e Diameter (mm)",
+        "Max. Cor e Diameter",
         "Outer sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) (Min) (Max)",
         "",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5861604",
           "4 X 2.5",
@@ -4054,18 +4257,31 @@
       "name": "BS EN 50264-3-2 Multi Core, Screened 300/500 V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max.Core Diameter (mm)",
-        "Max. Wire Diameter of Screen (mm)",
+        "Max.Core Diameter",
+        "Max. Wire Diameter of Screen",
         "Outer sheath Thickness (mm) (Nom)",
         "Outer Diameter (m m ) (Min) (Max)",
         "",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5871002",
           "2 X 1",
@@ -4387,17 +4603,29 @@
       "name": "BS EN 50264-3-2 Multi Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Core Diameter (mm)",
+        "Max. Core Diameter",
         "Outer sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) (Min) (Max)",
         "",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5621302",
           "2 X 1.5",
@@ -4659,17 +4887,29 @@
       "name": "BS EN 50264-3-2 Multi Core, 600/1000V AC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Core Diameter (mm)",
+        "Max. Core Diameter",
         "Outer sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5623202",
           "2 X 35",
@@ -4751,18 +4991,31 @@
       "name": "BS EN 50264-3-2 Multi Core, Screened, 600/1000V AC, 900V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 20 0C (Ω/km)",
+        "No. of cores x Cross Section (Nos) x",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Core Diameter (mm)",
-        "Max. Wire Diameter of Screen (mm)",
+        "Max. Core Diameter",
+        "Max. Wire Diameter of Screen",
         "Outer Sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5631302",
           "2 X 1.5",
@@ -5083,17 +5336,30 @@
       "headers": [
         "Part Number",
         "No. of cores x Cross Section (Nos) x (mm 2)",
-        "Conductor Diameter (mm)",
-        "Max. Conducto r Resistance at 200 C (Ω/km)",
+        "Conductor Diameter",
+        "Max. Conducto r Resistance at 200 C",
         "Insulation Thickness (mm) (Nom)",
-        "Max. Core Diameter (mm)",
-        "Max. Wire Diameter of Screen (mm)",
+        "Max. Core Diameter",
+        "Max. Wire Diameter of Screen",
         "Outer Sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "5633202",
           "2 X 35",
@@ -5181,10 +5447,10 @@
       "name": "BS EN 50264-3-1 Single Core, Sheathed, 3600/6000V AC, 5400V DC, EBXL 90 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
+        "Max. Conductor Resistance at 200 C",
         "Insulation Thickness (mm) (Nom)",
         "Sheath Thickness (mm) (Nom)",
         "Outer Diameter (mm) Ca (Kg/ (Min) (Max)",
@@ -5192,6 +5458,18 @@
         "ble Weight Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56416XXYY*",
           "2.5",
@@ -5393,15 +5671,25 @@
       "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Insulated Unsheathed, 1.8/3kV, Rated Type F 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
+        "Max. Conductor Resistance at 200 C",
         "Insulation Thickness (mm) (Nom)",
         "Overall Diameter (mm) ( (Min) (Max)",
         "",
         "Cable Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56513XX*",
           "1.5",
@@ -5581,9 +5869,9 @@
       "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Insulated, Sheathed, 1.8/3kV Rated Type FF 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
+        "Max. Conductor Resistance at 200 C",
         "Insulation Thickness (mm) (Nom)",
         "Sheath Thickness (mm) (Nom)",
         "Overall Diameter (mm) (Min) (Max)",
@@ -5591,6 +5879,17 @@
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56613XXYY*",
           "1.5",
@@ -5787,15 +6086,25 @@
       "name": "BS EN 50382-2 3.6kV 1 x 240 F 120",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conduct o r Resistance at 200 C (Ω/km)",
+        "Max. Conduct o r Resistance at 200 C",
         "Insulation Thickness (mm) (Nom)",
         "Overall Diameter (mm) Ca (Kg/ (Min) (Max)",
         "",
         "ble Weight Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56716XX*",
           "2.5",
@@ -5965,15 +6274,25 @@
       "name": "BS EN 50382-2 3.6 kV 1 X 50 FX 120",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
         "Overall Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56834XX*",
           "50",
@@ -6043,15 +6362,25 @@
       "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated, Screened and Unsheathed 3.6/6kV Rated Type FXZ 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
         "Overall Diameter (mm) — (Min)",
         "(Max)",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "59834XX*",
           "50",
@@ -6121,9 +6450,9 @@
       "name": "BS EN 50382-2 Single Core, ATC Conductor, Silicone Rubber Insulated and sheathed 3.6/6kV Rated Type FF 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Max. Conductor Resistance at 20 0C",
         "Inuslation Thickness (mm) ( Nom)",
         "Sheath Thickness (mm) ( Nom)",
         "Overall Diameter (mm ) (Min) (Max)",
@@ -6131,6 +6460,17 @@
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "56916XXYY*",
           "2.5",
@@ -6316,14 +6656,23 @@
       "name": "TW Single Core 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No.of Strands x Strand dia (Nos x mm)",
-        "Conductor diameter (mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Nom.Outer diameter (mm)",
+        "Conductor diameter",
+        "Max conductor resistance at 20 0C",
+        "Nom.Outer diameter",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "57270XX*",
           "0.34",
@@ -6396,14 +6745,23 @@
       "name": "TW/T Multi Core, 600/1000V AC, 900/1500 V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No.of Strands xStrand dia (Nos x mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Nom. Core dia (mm)",
-        "Nom. Outer diameter (mm)",
+        "Max conductor resistance at 20 0C",
+        "Nom. Core dia",
+        "Nom. Outer diameter",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5730304",
           "4 X 0.25",
@@ -7016,14 +7374,23 @@
       "name": "TW/T EMC Multi Core, Screened, 600/1000V AC, 900/1500 V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Nom. Core dia (mm)",
-        "Nom. Outer diameter (mm)",
+        "Max conductor resistance at 20 0C",
+        "Nom. Core dia",
+        "Nom. Outer diameter",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5740602",
           "2 X 0.5",
@@ -7582,14 +7949,23 @@
       "name": "GKW-LW Single Core 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Nom.Conducto r dia (mm)",
+        "Nom.Conducto r dia",
         "Conductor Resistanc (ohm/km) (Max.)",
-        "e Nom. Outer Diameter (mm)",
+        "e Nom. Outer Diameter",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "",
+          "mm",
+          ""
+        ],
         [
           "57506XX*",
           "0.5",
@@ -7717,14 +8093,23 @@
       "name": "GKW-LW/T Multi Core, 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Nom.Core dia (mm)",
-        "Nom. Outer diamete r (mm)",
+        "Max conductor resistance at 20 0C",
+        "Nom.Core dia",
+        "Nom. Outer diamete r",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5761302",
           "2 X 1.5",
@@ -8386,14 +8771,23 @@
       "name": "GKW-LW/T EMC Multi Core, Screened, 600/1000V AC, 900/1500V DC, EBXL 125 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No.of Cores x Cross Section (mm2 )",
-        "Conductor Construction No of Strands X Strand dia Nos X mm",
-        "Max conductor resistance at 20 0C Ω/km",
-        "Nom. Core dia (mm)",
-        "Nom. Outer diamete r (mm)",
+        "No.of Cores x Cross Section",
+        "Conductor Construction No of Strands X Strand dia Nos X",
+        "Max conductor resistance at 20 0C",
+        "Nom. Core dia",
+        "Nom. Outer diamete r",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5770816",
           "16 X 0.75",
@@ -8805,23 +9199,42 @@
       "headers": [
         "Part Number",
         "",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "",
-        "Conductor Construction No of Strands X Strand dia Nos X mm",
-        "",
-        "",
-        "Conductor Diameter (mm)",
-        "",
-        "Max Conductor Resistance at 20 0C Ω/km",
+        "Conductor Construction No of Strands X Strand dia Nos X",
         "",
         "",
-        "Insulation Thickness (Nom) (mm)",
+        "Conductor Diameter",
+        "",
+        "Max Conductor Resistance at 20 0C",
+        "",
+        "",
+        "Insulation Thickness (Nom)",
         "",
         "Outer Diam e t e r (Nom)(m m ) (k",
         "",
         "Cable Weight g/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm2",
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "",
+          "Ω/km",
+          "",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "57806XX*",
           "",
@@ -9269,14 +9682,24 @@
       "headers": [
         "Part Number",
         "No. of cores x Cross Section (Nos) x (mm 2)",
-        "Conductor Construction No of Strands X Strand dia Nos X mm",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0 C Ω/km",
+        "Conductor Construction No of Strands X Strand dia Nos X",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0 C",
         "Nom.Co Dia (m",
-        "re Nom.Outer Diam e t e r m) (mm)",
+        "re Nom.Outer Diam e t e r m)",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "",
+          "mm",
+          ""
+        ],
         [
           "5790602",
           "2 X 0.5",
@@ -9566,15 +9989,25 @@
       "name": "3 GKW/T Multi Core 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nom.Core Dia (mm)",
-        "Nom.Outer Diam e te r (mm)",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nom.Core Dia",
+        "Nom.Outer Diam e te r",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5791604",
           "4 X 2.5",
@@ -9894,15 +10327,25 @@
       "name": "3 GKW/T EMC Multi Core, Screened, 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nom.Core Dia (mm)",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nom.Core Dia",
         "Nom. Outer Diam e t e r C (mm) (k",
         "able Weight g/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "",
+          ""
+        ],
         [
           "5800602",
           "2 X 0.5",
@@ -10112,15 +10555,25 @@
       "name": "3 GKW/T EMC Multi Core, Screened, 600/1000V AC, 900/1500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nom.Core Dia (mm)",
-        "Nom.Outer Diameter (mm)",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nom.Core Dia",
+        "Nom.Outer Diameter",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "5801602",
           "2 X 2.5",
@@ -10341,16 +10794,27 @@
       "name": "3 GKW Multi Core 300/500V AC, 450/750 V DC, EBXL 120 C FS RW Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "No. of cores x Cross Section (Nos) x (mm2 )",
+        "No. of cores x Cross Section (Nos) x",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Screen Dia (mm)",
-        "Nom.Core Dia (mm)",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Screen Dia",
+        "Nom.Core Dia",
         "Nom. Ou t e r Diameter ( m m )",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          ""
+        ],
         [
           "PH30A527W0602",
           "2 X 0.5",
@@ -10712,16 +11176,27 @@
       "name": "4 GKW Single Core, Sheathed, 1800/3000V AC, 2700/4500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Insulation Thickness (mm)",
-        "Min.Sheath Thickness (mm)",
+        "Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Insulation Thickness",
+        "Min.Sheath Thickness",
         "Outer Diamet e r (mm) (Nom)",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          ""
+        ],
         [
           "58106XXYY*",
           "0.5",
@@ -10998,18 +11473,31 @@
       "name": "4 GKW/T EMC Single Core, Screened, 1800/3000V AC, 2700/4500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (mm)",
-        "Screen Dia. Max (mm)",
-        "Screen Cross Section (mm2 )",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Max. Screen Resistance at 200 C (Ω/km)",
-        "Nom.Core Dia (mm)",
+        "Conductor Diameter",
+        "Screen Dia. Max",
+        "Screen Cross Section",
+        "Max Conductor Resistance at 20 0C",
+        "Max. Screen Resistance at 200 C",
+        "Nom.Core Dia",
         "Outer Diam e t e r C (mm) (N o m ) (kg/",
         "able Weight km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "mm",
+          "mm2",
+          "Ω/km",
+          "Ω/km",
+          "mm",
+          "",
+          ""
+        ],
         [
           "58213XXYY*",
           "1.5",
@@ -11659,14 +12147,23 @@
       "name": "4 GKW Single Core, Sheathed, 1800/3000V AC, 2700/4500V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor Diameter (Nom)(mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
+        "Conductor Diameter (Nom)",
+        "Max Conductor Resistance at 20 0C",
         "Outer Diameter (mm) (Nom)",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "",
+          ""
+        ],
         [
           "C21528XXYY*",
           "16",
@@ -11775,16 +12272,27 @@
       "name": "9 GKW Single Core, Sheathed, 3600/6000V AC, 5400/9000V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Conductor diameter (mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Min. Insulation Thickness (mm)",
-        "Min. Sheath Thickness (mm)",
+        "Conductor diameter",
+        "Max conductor resistance at 20 0C",
+        "Min. Insulation Thickness",
+        "Min. Sheath Thickness",
         "Outer diameter (mm)( Nom)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "Ω/km",
+          "mm",
+          "mm",
+          "",
+          ""
+        ],
         [
           "58413XXYY*",
           "1.5",
@@ -11981,14 +12489,23 @@
       "name": "9 GKW/T EMC Single Core, Screened, 3600/6000V AC, 5400/9000V DC, EBXL 120 C Rolling Stock Cable",
       "headers": [
         "Part Number",
-        "Cross Section (mm2 )",
+        "Cross Section",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Max conductor resistance at 20 0C (Ω/km)",
-        "Min. Core dia (mm)",
+        "Max conductor resistance at 20 0C",
+        "Min. Core dia",
         "Outer diameter (mm) (Nom)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "",
+          ""
+        ],
         [
           "58513XXYY*",
           "1.5",
@@ -12191,14 +12708,25 @@
         "Part Number",
         "No.of Cores X size (Nos X mm2 )",
         "Conductor Construction No of Strands X Strand dia (Nos X mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nom.Core dia (mm)",
-        "Max. Dia over Screen (mm)",
-        "Cross section Screen (mm)",
+        "Max Conductor Resistance at 20 0C",
+        "Nom.Core dia",
+        "Max. Dia over Screen",
+        "Cross section Screen",
         "Outer diam e te r C (mm) (No m ) (Kg",
         "able Weight /Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          ""
+        ],
         [
           "C1991903 *",
           "3 X 4",
@@ -12263,14 +12791,23 @@
       "name": "Sietrans GKW US FS 180 Fire Resistant Cables",
       "headers": [
         "Part Number",
-        "No.of Cores X Cross Section (Nos) X (mm2 )",
-        "Conductor Construction No.of Strands X Strand dia (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diameter (mm)",
+        "No.of Cores X Cross Section (Nos) X",
+        "Conductor Construction No.of Strands X Strand dia (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diameter",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A54506XX",
           "1 X 0.5",
@@ -12523,13 +13060,22 @@
       "headers": [
         "Part Number",
         "No.of Cores x Cross Section (Nos) X (mm 2)",
-        "Conductor Construction No of Strands X Strand Dia. (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diamet e r (mm)",
+        "Conductor Construction No of Strands X Strand Dia. (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diamet e r",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A5460806",
           "6 X 0.75",
@@ -12999,13 +13545,22 @@
       "headers": [
         "Part Number",
         "No. of Cores X Cross Section (Nos) X (mm 2)",
-        "Conductor Construction No of Strands X Strand Dia (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diamete r (mm)",
+        "Conductor Construction No of Strands X Strand Dia (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diamete r",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A5461602",
           "2 X 2.5",
@@ -13160,13 +13715,22 @@
       "headers": [
         "Part Number",
         "No. of Cores X Cross Section (Nos) X (mm 2)",
-        "Conductor Construction No of Strands X Strand Dia (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diamete r (mm)",
+        "Conductor Construction No of Strands X Strand Dia (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diamete r",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A5470602",
           "2 X 0.5",
@@ -13366,13 +13930,22 @@
       "headers": [
         "Part Number",
         "No. of Cores X Cross Section (Nos) X (mm 2)",
-        "Conductor Construction No of Strands X Strand Dia. (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diameter (mm)",
+        "Conductor Construction No of Strands X Strand Dia. (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diameter",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A5470802",
           "2 X 0.75",
@@ -13806,13 +14379,22 @@
       "headers": [
         "Part Number",
         "No. of Cores X Cross Section (Nos) X (mm 2)",
-        "Conductor Construction No of Strands X Strand Dia. (Nos) X (mm)",
-        "Nominal Conductor Diameter (mm)",
-        "Max Conductor Resistance at 20 0C (Ω/km)",
-        "Nominal Overall Diamet e r (mm)",
+        "Conductor Construction No of Strands X Strand Dia. (Nos) X",
+        "Nominal Conductor Diameter",
+        "Max Conductor Resistance at 20 0C",
+        "Nominal Overall Diamet e r",
         "Cable Weight (Kg/Km) Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "mm",
+          ""
+        ],
         [
           "A5471314",
           "14 X 1.5",

@@ -6,15 +6,25 @@
       "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
       "headers": [
         "Part Number",
-        "Nom. Cross Sectional Area (Sq.mm)",
+        "Nom. Cross Sectional Area",
         "No.of Wires / Max.Strand Dia. of Conductor (Nos/mm)",
-        "Nom. Conductor Diameter (mm)",
-        "Nom. Insulation Thickness (mm)",
-        "Nom.Overall Cable Diameter (mm)",
-        "Cable Weight (Approx.) (Kg/Km)",
-        "Max.DC Resistance at 200C (Ω/Km)"
+        "Nom. Conductor Diameter",
+        "Nom. Insulation Thickness",
+        "Nom.Overall Cable Diameter",
+        "Cable Weight (Approx.)",
+        "Max.DC Resistance at 200C"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Kg/Km",
+          "Ω/Km"
+        ],
         [
           "6993404",
           "50",
@@ -83,11 +93,17 @@
       "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
       "headers": [
         "S.No.",
-        "Conductor Size (Sq.mm)",
-        "AC test Voltage (kV)",
-        "DC test Voltage (kV)"
+        "Conductor Size",
+        "AC test Voltage",
+        "DC test Voltage"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "kV",
+          "kV"
+        ],
         [
           "1",
           "100",
@@ -120,11 +136,17 @@
       "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
       "headers": [
         "S.No.",
-        "Conductor Size (Sq.mm)",
+        "Conductor Size",
         "Min.Insulation Resistance at 200C (MΩ/Km)",
         "Min.Surface Leakage Resistance (MΩ)"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "",
+          ""
+        ],
         [
           "1",
           "50",

@@ -8,12 +8,21 @@
         "EMD Part Number",
         "EDPS Specification",
         "Number of Cores and mm2 Per Conductor",
-        "Voltage Rating AC (V)",
+        "Voltage Rating AC",
         "Overall Cable Diameter (mm ) — (Min.)",
         "(Max.)",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "V",
+          "",
+          "",
+          ""
+        ],
         [
           "12330772",
           "179",
@@ -124,17 +133,29 @@
       "name": "Diesel Electric Locomotive Cables ATC, 1250C, As per EMD/9094883, upto 2100V",
       "headers": [
         "EMD Part Number",
-        "Voltage Rating AC (V)",
+        "Voltage Rating AC",
         "EDPS Specification",
         "Conductor Size (AWG/MCM)",
         "No of Strands /Strand dia (Nos/AWG)",
-        "Insulation Thickness (Nom) (Inches)",
-        "Outer Diameter (Nom.) (Inches)",
+        "Insulation Thickness (Nom)",
+        "Outer Diameter (Nom.)",
         "Weight (Approx) (LBS/1000FT)",
         "Insulation Colour",
         "N.E.C 30°C Single Conductor Free Air Ampacity (A)"
       ],
       "rows": [
+        [
+          "",
+          "V",
+          "",
+          "",
+          "",
+          "Inches",
+          "Inches",
+          "",
+          "",
+          ""
+        ],
         [
           "8466845-G",
           "600",
@@ -1021,11 +1042,18 @@
       "headers": [
         "EMD Part Number",
         "Number of Cores and Conductor Size",
-        "Outer Diameter in m m Inches",
+        "Outer Diameter in m m",
         "",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "Inches",
+          "",
+          ""
+        ],
         [
           "40059175",
           "14Cx16 AWG",
@@ -1133,11 +1161,18 @@
       "headers": [
         "EMD Part Number",
         "Number of Cores and Conductor Size",
-        "Outer Diameter in m m Inches",
+        "Outer Diameter in m m",
         "",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "Inches",
+          "",
+          ""
+        ],
         [
           "40023377",
           "4Cx16 AWG",
@@ -1246,11 +1281,18 @@
       "headers": [
         "EMD Part Number",
         "Number of Cores and Conductor Size",
-        "Outer Diameter in — mm",
+        "Outer Diameter in",
         "Inches",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "",
+          ""
+        ],
         [
           "40019324",
           "2Cx20 AWG",
@@ -1304,11 +1346,18 @@
       "headers": [
         "EMD Part Number",
         "Number of Cores and Conductor Size",
-        "Outer Diameter in m m Inches",
+        "Outer Diameter in m m",
         "",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "Inches",
+          "",
+          ""
+        ],
         [
           "9513207",
           "5Cx16 AWG",

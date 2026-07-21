@@ -8,16 +8,29 @@
         "Part Number",
         "No.of Core X Size (NosxSq.mm)",
         "No. of Strands / Nom. Strand Dia. ( Nos/mm)",
-        "Maximum Diameter of Wire in Conductor (mm)",
-        "Nominal Insulatio Thicknes (mm)",
-        "Nominal n Sheath s Thickness (mm)",
+        "Maximum Diameter of Wire in Conductor",
+        "Nominal Insulatio Thicknes",
+        "Nominal n Sheath s Thickness",
         "Overall Cable Diameter (mm) — Min",
         "",
         "Max",
-        "Max. DC Resistance at 200 C ATC (Ohm/km)",
-        "Nom Weight (kg/km)"
+        "Max. DC Resistance at 200 C ATC",
+        "Nom Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          "Ohm/km",
+          "kg/km"
+        ],
         [
           "1890304",
           "4 x 0.25",
@@ -247,16 +260,27 @@
       "name": "Sietherm 155 C — SIETHERM 155 SINGLE CORE FLEXIBLE CABLES",
       "headers": [
         "Part Number",
-        "Size (Sq.mm)",
-        "No. of Wires / Max. Stand dia of Conductor (mm)",
-        "Conductor Diameter (mm)",
+        "Size",
+        "No. of Wires / Max. Stand dia of Conductor",
+        "Conductor Diameter",
         "Nom Insula Thick (m",
-        "inal Nominal tion Overall ness Cable m) Diameter (mm)",
-        "Max. DC Resistance at 200 C (Ohm/Km)",
-        "Nom. Cable Weight (kg/km)",
-        "Current Rating (Amps)"
+        "inal Nominal tion Overall ness Cable m) Diameter",
+        "Max. DC Resistance at 200 C",
+        "Nom. Cable Weight",
+        "Current Rating"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "mm",
+          "",
+          "mm",
+          "Ohm/Km",
+          "kg/km",
+          "Amps"
+        ],
         [
           "18803XX*",
           "0.25",

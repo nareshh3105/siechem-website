@@ -8,10 +8,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "301 13 XX*",
           "1 x 1.5",
@@ -401,10 +408,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "302 13 XX*",
           "1 x 1.5",
@@ -632,10 +646,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "302 34 03",
           "3 x 50",
@@ -2306,10 +2327,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "303 19 XX*",
           "1 x 4",
@@ -2537,10 +2565,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "304S19XX*",
           "1 x 4",
@@ -2768,10 +2803,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "3043803",
           "3 x 95",
@@ -2937,10 +2979,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "311 70 05",
           "5 x 3 x 0.4",
@@ -2966,10 +3015,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "312 13 02",
           "2 x 1.5",
@@ -3065,10 +3121,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "313 23 XX*",
           "1 x 6",
@@ -3150,10 +3213,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "315 23 XX*",
           "1C x 6",
@@ -3381,10 +3451,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "316 13 02",
           "2C x 1.5",
@@ -3598,10 +3675,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "317 13 02",
           "2C x 1.5",
@@ -3739,10 +3823,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "318 08 XX*",
           "1C x 0.75",
@@ -3866,10 +3957,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "319 23 XX*",
           "1C x 6",
@@ -4097,10 +4195,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "320 08 02",
           "2C x 0.75",
@@ -4210,10 +4315,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "321 13 02",
           "2C x 1.5",
@@ -4420,10 +4532,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "322 06 01",
           "1 x 2 x 0.5",
@@ -4651,10 +4770,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "324 08 02",
           "2 x 2 x 0.75",
@@ -4785,10 +4911,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "325 06 01",
           "1 x 2 x 0.5",
@@ -4961,10 +5094,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "327 06 02",
           "2 x 2 x 0.5",
@@ -5039,10 +5179,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "328 08 01",
           "1 x 2 x 0.75",
@@ -5201,10 +5348,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "330 08 02",
           "2 x 2 x 0.75",
@@ -5335,10 +5489,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "331 08 01",
           "1 x 2 x 0.75",
@@ -5427,10 +5588,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "333 08 02",
           "2 x 2 x 0.75",
@@ -5505,10 +5673,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "334 70 01",
           "1C x 2 x 0.34",
@@ -5527,10 +5702,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "335 19 XX",
           "1C x 4",
@@ -5779,10 +5961,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "336 08 01",
           "1P x 0.75",
@@ -5850,10 +6039,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "337 13 03G",
           "3G1.5",
@@ -5913,10 +6109,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "338 13 02",
           "2C x 1.5",
@@ -5984,10 +6187,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "339 23 XX",
           "1C X 6",
@@ -6069,10 +6279,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "340 13 02",
           "2C X 1.5",
@@ -6168,10 +6385,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "341 08 02",
           "2 x 2 x 0.75",
@@ -6225,10 +6449,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "342 13 02",
           "2C X 1.5",
@@ -6352,10 +6583,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "343 13 02",
           "2C X 1.5",
@@ -6486,12 +6724,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6808A1",
           "1C x 0.75",
@@ -6692,12 +6939,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6828A1",
           "2C x 0.75",
@@ -6979,12 +7235,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6858A1",
           "7C x 10",
@@ -7203,12 +7468,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6828A1",
           "2C x 0.75",
@@ -7472,12 +7746,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6891A1",
           "7C x 1.5",
@@ -7768,12 +8051,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6910A1",
           "1P x 0.75",
@@ -7929,12 +8221,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6918A1",
           "3C x 0.75",
@@ -8036,12 +8337,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6910A1",
           "1P x 0.75",
@@ -8125,12 +8435,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6970",
           "2C x 0.35",
@@ -8358,12 +8677,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6971",
           "1P x 0.35",
@@ -8474,12 +8802,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-1430",
           "6C x 0.35",
@@ -8527,12 +8864,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (Max.)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx Weight of Cable . (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating",
+        "Approx Weight of Cable ."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6828A1S",
           "2C x 0.75",
@@ -8815,11 +9161,20 @@
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (Max.)",
         "Overall Diameter in (Nom . ) O(mumte)r Diam mm app",
-        "Max. Conductor Resistance eter in at 200 C rox. (Ω/km)",
-        "Current Rating (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Max. Conductor Resistance eter in at 200 C rox.",
+        "Current Rating",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6856A1S",
           "7C x 10",
@@ -9057,11 +9412,20 @@
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (Max.)",
         "Overall Diameter in (Nom . ) (Omumte)r Dia mm a",
-        "Max. Conductor Resistance meter in at 200 C pprox. (Ω/km)",
-        "Current Rating (Amps)",
-        "Weight of Cable approx. (Kg/Km)"
+        "Max. Conductor Resistance meter in at 200 C pprox.",
+        "Current Rating",
+        "Weight of Cable approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N5013-6877A1S",
           "4C x 0.75",
@@ -9586,12 +9950,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020880",
           "1P x 0.2",
@@ -9719,12 +10092,20 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020884",
           "2P x 0.2",
@@ -9751,12 +10132,20 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020886",
           "2P x 0.6",
@@ -9776,12 +10165,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020887",
           "6P x 0.6",
@@ -9802,12 +10200,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020888",
           "7q x 0.2",
@@ -9828,12 +10235,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020889",
           "1P + 3C xS 0ie.c2hem Tab",
@@ -9854,12 +10270,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020890",
           "12C X 0.35",
@@ -9880,12 +10305,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020891",
           "4C x 0.6",
@@ -9915,12 +10349,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020893",
           "3C x 0.6",
@@ -9959,12 +10402,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020896",
           "9P x 0.6",
@@ -10003,12 +10455,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020898",
           "19 X 0.35",
@@ -10029,12 +10490,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020899",
           "3C x 0.2",
@@ -10326,12 +10796,22 @@
         "",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020905",
           "",
@@ -10423,12 +10903,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020937",
           "2 x 0.35",
@@ -10620,12 +11109,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020957",
           "2 x 0.75",
@@ -10763,12 +11261,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020971",
           "1P x 0.35",
@@ -10852,12 +11359,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020986",
           "1P x 0.35",
@@ -10969,12 +11485,22 @@
         "",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145020994",
           "",
@@ -11206,12 +11732,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (max)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 200 C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 200 C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021016",
           "2C X 0.5",
@@ -11367,12 +11902,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire Dia. (Max.)",
-        "Overall Diameter in (Nom.) (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in (Nom.)",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021032",
           "3C X 0.5",
@@ -11546,12 +12090,21 @@
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021050",
           "4C X 0.5",
@@ -11797,12 +12350,21 @@
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021076",
           "10C X 0.5",
@@ -12246,12 +12808,21 @@
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "New Addition",
           "4C X 25",
@@ -12344,12 +12915,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021114",
           "1 x 10",
@@ -12595,12 +13175,21 @@
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz (Amps)",
-        "Approx. Weightof Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weightof Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021138",
           "3 x 16",
@@ -13035,12 +13624,21 @@
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz (Amps)",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021184",
           "3 x 1.5",
@@ -13376,12 +13974,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021218",
           "1P x 0.5",
@@ -13636,12 +14243,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx. (mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021245",
           "16P x 1",
@@ -13698,12 +14314,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021247",
           "2 x 0.5",
@@ -13814,12 +14439,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021257",
           "1T x 0.5",
@@ -13876,12 +14510,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021260",
           "3T x 0.5",
@@ -13929,12 +14572,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021262",
           "1C x 0.5",
@@ -14009,12 +14661,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021269",
           "2C x 0.5",
@@ -14143,12 +14804,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021282",
           "1C x 1",
@@ -14196,12 +14866,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021286",
           "3C x 0.5",
@@ -14258,12 +14937,21 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "No. of Wires (Typical Value) x Single Wire dia (Max.)",
-        "Overall Diameter in Approx.(mm)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60Hz Amps",
-        "Approx. Weight of Cable (Kg/Km)"
+        "Overall Diameter in Approx.",
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ω/km",
+          "Amps",
+          "Kg/Km"
+        ],
         [
           "N6145021291",
           "2C x 0.75",
@@ -14339,11 +15027,20 @@
         "Number of Cores and mm2 Per Conductor",
         "No. of Wire Typical Value X Single Wire Dia (Max.)",
         "Overall Diameter in (mm) (Nom.)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (kg/km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Amps",
+          "kg/km"
+        ],
         [
           "N6145021297",
           "1C X 35",
@@ -14451,11 +15148,20 @@
         "Number of Cores and mm2 Per Conductor",
         "No. of Wire Typical Value X Single Wire Dia (Max.)",
         "Overall Diameter in (mm) (Nom.)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (kg/km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Amps",
+          "kg/km"
+        ],
         [
           "N6145021306",
           "19 x 6.633",
@@ -14495,11 +15201,20 @@
         "Number of Cores and mm2 Per Conductor",
         "No. of Wire Typical Value X Single Wire Dia (Max.)",
         "Overall Diameter in (mm) (Nom.)",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Current Rating (Air ambient 50 0C) at 50-60 Hz (Amps)",
-        "Approx. Weight of Cable (kg/km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Current Rating (Air ambient 50 0C) at 50-60 Hz",
+        "Approx. Weight of Cable"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Amps",
+          "kg/km"
+        ],
         [
           "New Addition",
           "2P x 0.5",
@@ -14636,14 +15351,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0456",
           "3C x 0.2",
@@ -14874,14 +15599,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0462",
           "3C X 0.35",
@@ -15162,14 +15897,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0475",
           "2C x 1.0",
@@ -15450,14 +16195,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0484",
           "2C x 1.5",
@@ -15618,14 +16373,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0489",
           "2C x 2.5",
@@ -15886,16 +16651,28 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0493",
           "2C x 0.35",
@@ -16338,16 +17115,28 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0501",
           "2C x 1.0",
@@ -16646,16 +17435,28 @@
       "headers": [
         "Part Number",
         "Number of Pair and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0506",
           "1P x 0.35",
@@ -16762,16 +17563,28 @@
       "headers": [
         "Part Number",
         "Number of Pairs and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0514",
           "1P x 1.0",
@@ -17010,14 +17823,24 @@
       "headers": [
         "Part Number",
         "Number of Pairs and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
-        "Total Weight approx. (Kg/Km)"
+        "Max. Conduc t o r Resistance at 2 0 0 C",
+        "Total Weight approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0520",
           "1P x 0.35",
@@ -17128,14 +17951,24 @@
       "headers": [
         "Part Number",
         "Number of Pairs and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conduc t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conduc t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "743-0524",
           "1P x 1.0",
@@ -17246,16 +18079,28 @@
       "headers": [
         "Part Number",
         "Number of Pairs and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
         "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0528",
           "3P x 0.25",
@@ -17482,16 +18327,28 @@
       "headers": [
         "Part Number",
         "Number of Triple and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
         "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "743-0534",
           "1T x 0.35",
@@ -17657,19 +18514,33 @@
       "name": "Singlecore Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Nominal Cross Strand Diameter section Area (mm) (mm) (mm2 )",
+        "Conductor Nominal Cross Strand Diameter section Area",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8252",
           "1.0",
@@ -17959,19 +18830,33 @@
       "name": "Singlecore Flexible Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Nominal Cross sectional Strand Diameter (Sq.mm) (mm) (mm)",
+        "Conductor Nominal Cross sectional Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8326",
           "1.0",
@@ -18219,10 +19104,10 @@
       "name": "Singlecore Cables - Low Capacitance Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Number of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor Number of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
+        "Insulation Thickness",
         "Diameter Over Insulation — Min.",
         "Max.",
         "Tinned Copper Braid — Size mm .",
@@ -18230,11 +19115,28 @@
         "Max.",
         "Diameter Over Sheath — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          ""
+        ],
         [
           "521-8526",
           "1C x 1.0",
@@ -18312,19 +19214,33 @@
       "name": "Single and Multicore Cables, Copper Wire Braided Overall Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Number of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor Number of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8364",
           "1C x 0.5",
@@ -18558,20 +19474,35 @@
       "name": "Multicore Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Number of Cores Strand Diameter (mm2 ) (mm) (mm)",
+        "Conductor Number of Cores Strand Diameter",
         "",
         "",
-        "Insulation Radial Thickness Diameter (mm) (mm)",
+        "Insulation Radial Thickness Diameter",
         "",
         "Sheath Radial Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8275",
           "2C x 4",
@@ -18956,19 +19887,33 @@
       "name": "Multicore Cables (For DG) Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter (mm2 ) (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8402",
           "7C x 4.0",
@@ -19286,19 +20231,33 @@
       "name": "Multicore Specially Flexing Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8486",
           "2C x 1.0",
@@ -19630,19 +20589,33 @@
       "name": "Multicore Cables Specially Flexing Cables, Collectively Screened Marine Cables",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8509",
           "2C x 2.5",
@@ -19722,19 +20695,33 @@
       "name": "Multicore Cables Cores Individually Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8470",
           "3C X 0.75",
@@ -19814,19 +20801,33 @@
       "name": "Multicore Cables, Cores Collectively Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-8463",
           "2C x 4.0",
@@ -20018,19 +21019,33 @@
       "name": "Multitriple Cables Triples Individually Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Triples Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Triples Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-7048",
           "3T x 0.5",
@@ -20068,19 +21083,33 @@
       "name": "Multitriple Cables Triples Collectively Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Strand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Strand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
+        "Insulation Thickness",
+        "Sheath Thickness",
         "Diameter Overall (mm) — Min.",
         "Max.",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-7045",
           "1T x 0.5",
@@ -20132,19 +21161,33 @@
       "name": "Singlecore Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Stand Diameter Cores (mm) (mm) mm2",
+        "Conductor No. of Stand Diameter Cores",
         "",
         "",
         "Insulation Thickness (mm) — Type E",
         "Type T",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6808",
           "1C x 1.0",
@@ -20434,19 +21477,33 @@
       "name": "Twin and Three Core Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
         "Insulation Thickness (mm) — Type E",
         "Type T",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Weight approx. Kg/Km",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6828",
           "2 x 1.0",
@@ -20848,19 +21905,33 @@
       "name": "Multicore Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
         "Insulation Thickness (mm) — Type E",
         "Type T",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6856",
           "7C x 16",
@@ -21136,18 +22207,31 @@
       "name": "Twin and Multicore Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6828",
           "2C x 1.0",
@@ -21547,18 +22631,31 @@
       "name": "521-6861 — 521-6906",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6861",
           "14C x 4.0",
@@ -21633,18 +22730,31 @@
       "name": "Multi-Paired Cables Collectively Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity A"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6910",
           "1P x 1.0",
@@ -21758,18 +22868,31 @@
       "name": "Multicore Cables Individually Screened Cores Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6918",
           "3C x 1.0",
@@ -21844,18 +22967,31 @@
       "name": "Multi-Paired Cables Pairs Individually Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6910",
           "1P x1.0",
@@ -21917,18 +23053,31 @@
       "name": "Multicore Cables Collectively Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor No. of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor No. of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum",
         "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "521-6910",
           "2C x 1.0",
@@ -22042,17 +23191,29 @@
       "name": "Miniature Multicore Cables Unscreened or Individually or Collectively Screened Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Number of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor Number of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          ""
+        ],
         [
           "521-6970",
           "2 x 0.35",
@@ -22350,17 +23511,29 @@
       "name": "Miniature Multicore Cables Individually & Collectively Screened Cores Marine Cable",
       "headers": [
         "Part Number",
-        "Conductor Number of Cores Stand Diameter mm2 (mm) (mm)",
+        "Conductor Number of Cores Stand Diameter",
         "",
         "",
-        "Insulation Thickness (mm)",
-        "Sheath Thickness (mm)",
-        "Diameter Overall (mm)",
-        "Max.Conductor Resistance at 20 OC (Ω/km)",
-        "Total Weight approx. Kg/Km",
+        "Insulation Thickness",
+        "Sheath Thickness",
+        "Diameter Overall",
+        "Max.Conductor Resistance at 20",
+        "Total Weight approx.",
         "Length on Drum"
       ],
       "rows": [
+        [
+          "",
+          "mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          ""
+        ],
         [
           "531-1430",
           "6C x 0.35",
@@ -22419,14 +23592,24 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Conductor Resistance at 2 0 0 C (Ω/km)",
+        "Max. Conductor Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "891-9310",
           "2C x 0.6",
@@ -22597,16 +23780,28 @@
       "headers": [
         "Part Number",
         "Number of Pair and mm2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) Min Max",
         "",
-        "Max. Conductor Resistance at 20 0C (Ω/km)",
-        "Total Weight (approx.) (Kg/Km)"
+        "Max. Conductor Resistance at 20 0C",
+        "Total Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "892-0057",
           "3P x 0.35",
@@ -22785,16 +23980,28 @@
       "headers": [
         "Part Number",
         "Number of Cores and mm 2 Per Conductor",
-        "Nominal Diameter Over Cores (mm)",
-        "Diameter of Collective screen wire (mm)",
-        "Nominal Diameter of Over collective screen (mm)",
-        "Radial Thickness of Sheath (mm)",
+        "Nominal Diameter Over Cores",
+        "Diameter of Collective screen wire",
+        "Nominal Diameter of Over collective screen",
+        "Radial Thickness of Sheath",
         "Outer Diameter in (mm) — Min",
         "Max",
-        "Max. Condu c t o r Resistance at 2 0 0 C (Ω/km)",
+        "Max. Condu c t o r Resistance at 2 0 0 C",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "",
+          "Ω/km",
+          ""
+        ],
         [
           "891-9420",
           "3C x1.0",
@@ -22876,11 +24083,17 @@
       "name": "Multicore Armoured / Sheathed Type P Control Marine Cable",
       "headers": [
         "Part Number",
-        "Number of Cores AWG - mm2",
+        "Number of Cores AWG -",
         "Outer Diameter in mm approx.",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          ""
+        ],
         [
           "345 77 02",
           "2C x 12 AWG - 3.08 mm2",
@@ -23045,11 +24258,22 @@
         "Strand Diameter mm (Max.)",
         "Insulation Thickness mm (Nom.)",
         "Outersheath Thickness mm (Nom.)",
-        "Max. conductor Resistance Ω/Km",
-        "Outer Diameter in approx.(mm)",
+        "Max. conductor Resistance",
+        "Outer Diameter in approx.",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Ω/Km",
+          "mm",
+          ""
+        ],
         [
           "903S130404",
           "1 x 1.5",
@@ -24661,17 +25885,29 @@
       "name": "Single Core ATC Flexible Conductor, EBXL - EPDM/EPR Insulated, XLPO Sheathed Marine Cable as per IEC 60092-353",
       "headers": [
         "Part Number",
-        "No. of Cores Sq. mm2",
+        "No. of Cores Sq.",
         "No. of Strands Nom.",
         "Strand Diameter mm (Max.)",
         "Current Ratting mm (Min.)",
         "Insulation Thickness mm (Nom.)",
         "Outersheath Thickness mm (Nom.)",
         "Conductor Resistance at 20°C",
-        "Outer Diameter in approx.(mm)",
+        "Outer Diameter in approx.",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          ""
+        ],
         [
           "905130404",
           "1 x 1.5",
@@ -24873,9 +26109,9 @@
       "name": "ATC Flexible Conductor, EBXL - EPR/EPDM Insulated, Overall ATC Screened XLPO Sheathed Marine Cable as per IEC 60092-353",
       "headers": [
         "Part Number",
-        "Number of Cores X Sq. mm2",
-        "Insulation Thickness (mm)",
-        "Nominal Thickness Inner Sheath (mm)",
+        "Number of Cores X Sq.",
+        "Insulation Thickness",
+        "Nominal Thickness Inner Sheath",
         "Braiding wire dia (Nom.)",
         "Nom. Thickness of Sheath",
         "Outer Diameter in mm approx.",
@@ -24883,6 +26119,17 @@
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "mm",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "906E1302",
           "2C x 1.5",
@@ -25329,7 +26576,7 @@
       "name": "Multi Pair APC Flexible Conductor, EBXL - XLPE Insulated, ATC Screened",
       "headers": [
         "Part Number",
-        "No. of Cores X Sq. mm2",
+        "No. of Cores X Sq.",
         "No. of Strands Nom.",
         "Strand Diameter mm (Nom.)",
         "Insulation Thickness mm (Nom.)",
@@ -25339,6 +26586,17 @@
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "9130801P",
           "1P x 0.75",
@@ -25530,10 +26788,21 @@
         "Insulation Thickness mm (Nom.)",
         "Outersheath Thickness mm (Nom.)",
         "Max. Conductor Resistance at 20°C",
-        "Outer Diameter in approx.(mm)",
+        "Outer Diameter in approx.",
         "Total Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          ""
+        ],
         [
           "A493W1002",
           "2C x 1",

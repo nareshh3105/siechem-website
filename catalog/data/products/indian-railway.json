@@ -6,13 +6,21 @@
       "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm2)",
+        "Nominal Cross Sectional Area of Core",
         "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistance of Conductor at 20 deg.C (ohm/km)",
-        "Approx. Cable Weight (Kg/Km)"
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20",
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "25813XXYY",
           "1.5",
@@ -180,11 +188,19 @@
         "Part Number",
         "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
         "No. of Wires x Wire Dia (max) (Nos. x mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistance of Conductor at 20 deg. C (ohm/km)",
-        "Approx.Cable Weight(Kg/Km)"
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20 deg. C",
+        "Approx.Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "2591619",
           "19C x 2.5",
@@ -241,11 +257,19 @@
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
         "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistance of Conductor at 20 deg.C (ohm/km)",
-        "Appro x Cable Weight(Kg/Km)"
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20",
+        "Appro x Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "30013XX",
           "1.5",
@@ -387,14 +411,25 @@
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
         "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum wall Thickness of Insulation (mm)",
-        "Minimum wall Thickness of Sheath (mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistanc e of Conductor at 20 deg. C (ohm/km)",
-        "Approx. Cable Weight (Kg/Km)"
+        "Conductor Dia. Nominal",
+        "Minimum wall Thickness of Insulation",
+        "Minimum wall Thickness of Sheath",
+        "Overall Cable Dia (D)",
+        "Max. Resistanc e of Conductor at 20 deg. C",
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "R2581309XX",
           "1.5",
@@ -611,13 +646,23 @@
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
         "(max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum wall Thickness of Insulation (mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistance of Conductor at 20 deg. C (ohm/km)",
-        "Approx. Cable Weight (Kg/Km)"
+        "Conductor Dia. Nominal",
+        "Minimum wall Thickness of Insulation",
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20 deg. C",
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "R30013XX",
           "1.5",
@@ -786,15 +831,27 @@
         "Part Number",
         "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
         "No. of Wires x Wire Dia (max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum Wall Thickness of Core — Core Insulation (mm)",
-        "Core Sheath (mm)",
-        "Thickness of Outer Sheath (mm)",
-        "Overall Cable M Dia (D) (mm)",
-        "ax. Resis t a n c e of Conduc t o r at 20 deg . C (ohm/km )",
-        "Approx. Cable Weight (Kg/Km)"
+        "Conductor Dia. Nominal",
+        "Minimum Wall Thickness of Core — Core Insulation",
+        "Core Sheath",
+        "Thickness of Outer Sheath",
+        "Overall Cable M Dia (D)",
+        "ax. Resis t a n c e of Conduc t o r at 20 deg . C",
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
         [
           "R2591619",
           "19C x 2.5",
@@ -860,15 +917,27 @@
         "Part Number",
         "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
         "No. of Wires x Wire Dia (max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum Wall Thickness of Core — Core Insulation (mm)",
-        "Core Sheath (mm)",
-        "Thickness of Outer Sheath (mm)",
-        "Overall Cable Dia (D) (mm)",
+        "Conductor Dia. Nominal",
+        "Minimum Wall Thickness of Core — Core Insulation",
+        "Core Sheath",
+        "Thickness of Outer Sheath",
+        "Overall Cable Dia (D)",
         "Max. Resis t a n c e of Conduc t o r at 20 deg . C (ohm/km ) (",
         "Approx. Cable Weight Kg/Km)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          ""
+        ],
         [
           "A5331619",
           "19C x 2.5",
@@ -934,14 +1003,25 @@
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
         "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum wall Thickness of Insulation (mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistance of Conductor at 20 deg. C (ohm/km)",
+        "Conductor Dia. Nominal",
+        "Minimum wall Thickness of Insulation",
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20 deg. C",
         "Current Rating in air 30°C",
-        "Approx. Cable Weight (Kg/Km)"
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "ohm/km",
+          "",
+          "Kg/Km"
+        ],
         [
           "A53113XX",
           "1.5",
@@ -1123,15 +1203,27 @@
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
         "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Conductor Dia. Nominal (mm)",
-        "Minimum wall Thickness of Insulation (mm)",
-        "Minimum wall Thickness of Sheath (mm)",
-        "Overall Cable Dia (D) (mm)",
-        "Max. Resistanc of Conductor at 20 deg. C (ohm/km)",
+        "Conductor Dia. Nominal",
+        "Minimum wall Thickness of Insulation",
+        "Minimum wall Thickness of Sheath",
+        "Overall Cable Dia (D)",
+        "Max. Resistanc of Conductor at 20 deg. C",
         "e Curr e n t Rati n g in air 3 0 ° C",
-        "Approx. Cable Weight (Kg/Km)"
+        "Approx. Cable Weight"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "ohm/km",
+          "",
+          "Kg/Km"
+        ],
         [
           "A5321309XX",
           "1.5",
@@ -1364,11 +1456,19 @@
         "Part Number",
         "No. of core x Nominal Cross Sectional Area (Nos x sq. mm)",
         "No. of Wires x Single Wire dia (max) (Nos / mm)",
-        "Cable Overall Diameter (Nom) (mm)",
-        "Max. Conductor Resistance at 20 0C (Ohm/km)",
-        "Cable Weight Approx. ( Kg/Km)"
+        "Cable Overall Diameter (Nom)",
+        "Max. Conductor Resistance at 20 0C",
+        "Cable Weight Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
         [
           "2651309YY",
           "1C x 1.5",
@@ -1508,11 +1608,19 @@
         "Part Number",
         "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
         "No. of Wires x Single Wire dia (max) (Nos / mm)",
-        "Cable Outer Diameter (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
-        "Cable Weight Approx. (Kg/Km)"
+        "Cable Outer Diameter",
+        "Max. Resistance of Conductor at 20 0C",
+        "Cable Weight Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
         [
           "26613XX",
           "1C x 1.5",
@@ -1655,11 +1763,19 @@
         "Part Number",
         "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
         "No. of Wires x Single Wire dia (Nom) (Nos / mm)",
-        "Cable Outer Diameter (mm)",
-        "Max. Resistance of Conductor at 200 C (Ohm/km)",
-        "Cable Weight Approx. (Kg/Km)"
+        "Cable Outer Diameter",
+        "Max. Resistance of Conductor at 200 C",
+        "Cable Weight Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
         [
           "2670602",
           "2C x 0.50",
@@ -1794,11 +1910,19 @@
         "Part Number",
         "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
         "No. of Wires x Single Wire dia (Nom) (Nos / mm)",
-        "Cable Outer Diameter (mm)",
-        "Max. Resistance of Conductor at 20ºC (Ohm/km)",
-        "Cable Weight Approx.(Kg/Km)"
+        "Cable Outer Diameter",
+        "Max. Resistance of Conductor at 20ºC",
+        "Cable Weight Approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
         [
           "2680602",
           "2C x 0.5",
@@ -1910,11 +2034,19 @@
         "Part Number",
         "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
         "No. of Wires x Single Wire dia (Nom) (Nos / mm)",
-        "Cable Outer Diameter ( mm)",
+        "Cable Outer Diameter",
         "Max. Resistance of Conductor at 20ºC (Ohm / k m )",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "",
+          ""
+        ],
         [
           "2691018",
           "4 Quad. 4 x 1mm 2 + 1Pair 2 x 0.75 mm2 (data bus) 18 core cable",
@@ -1974,11 +2106,19 @@
         "Part Number",
         "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
         "No. of Wires x Single Wire dia (Nom) (Nos / mm)",
-        "Cable Outer Diamete (mm)",
+        "Cable Outer Diamete",
         "r Max. Resistance of Conductor at 20 0C (Ohm/ k m )",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "mm",
+          "",
+          ""
+        ],
         [
           "2671312",
           "12C x 1.5",
@@ -2073,17 +2213,29 @@
       "name": "4GKW Single Core 1.8 kV Dual Wall Insulated Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm2 )",
+        "Nominal Cross Sectional Area of Core",
         "Conductor Typical Construction (Nos. x Nos. x mm)",
-        "Nom. Conductor Dia (mm)",
-        "Minimum Wall Thickness — Insulation (mm)",
-        "Sheath (mm)",
-        "Cable Dia (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
+        "Nom. Conductor Dia",
+        "Minimum Wall Thickness — Insulation",
+        "Sheath",
+        "Cable Dia",
+        "Max. Resistance of Conductor at 20 0C",
         "Cable Weight (Kg/Km) Nom.",
         "Current Rating in Air at 30°C (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ohm/km",
+          "",
+          ""
+        ],
         [
           "871130704",
           "1.5",
@@ -2270,17 +2422,29 @@
       "name": "9GKW Single Core 4 kV Dual Wall Insulated Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm2 )",
+        "Nominal Cross Sectional Area of Core",
         "Conductor Typical Construction (Nos. x Nos. x mm)",
-        "Nom. Conductor Dia (mm)",
-        "Minimum Wall Thickness — Insulation (mm)",
-        "Sheath (mm)",
-        "Cable Dia (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
+        "Nom. Conductor Dia",
+        "Minimum Wall Thickness — Insulation",
+        "Sheath",
+        "Cable Dia",
+        "Max. Resistance of Conductor at 20 0C",
         "Cable Weight (Kg/Km) Nom.",
         "Current Rating in Air at 30°C (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ohm/km",
+          "",
+          ""
+        ],
         [
           "872270104",
           "10",
@@ -2407,16 +2571,27 @@
       "name": "3GKW Single Core 300/500V Single Wall Insulated Stranded EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm2 )",
+        "Nominal Cross Sectional Area of Core",
         "Conductor Typical Construction (Nos. x Nos. x mm)",
-        "Nom. Conductor Dia (mm)",
-        "Minimum Insulation Thickness (mm)",
-        "Cable Dia (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
+        "Nom. Conductor Dia",
+        "Minimum Insulation Thickness",
+        "Cable Dia",
+        "Max. Resistance of Conductor at 20 0C",
         "Cable Weight (Kg/Km) Nom.",
         "Current Rating in Air at 30°C (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "Ohm/km",
+          "",
+          ""
+        ],
         [
           "87606XX",
           "0.5",
@@ -2470,17 +2645,29 @@
       "name": "Multicore/Multipair Core 300/300V Dual Wall Insulated EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "No. of Core x Nominal Cross Sectional Area of Core (mm2 )",
+        "No. of Core x Nominal Cross Sectional Area of Core",
         "Conductor Typical Construction (Nos. x Nos. x mm)",
         "Nom. Conductor Dia (mm) — Multicore S",
         "Minimum Wall Thickness — Insulation (mm) — creened",
         "Sheath (mm) — Cable",
-        "Cable Dia (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
+        "Cable Dia",
+        "Max. Resistance of Conductor at 20 0C",
         "Cable Weight (Kg/Km) Nom.",
         "Current Rating in Air at 30°C (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "",
+          ""
+        ],
         [
           "8730602",
           "2 x 0.5",
@@ -2630,17 +2817,29 @@
       "name": "Multicore/Multipair 600/1000V Dual Wall Insulated EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm2 )",
+        "Nominal Cross Sectional Area of Core",
         "Conductor Typical Construction (Nos. x Nos. x mm)",
         "Nom. Conductor Dia (mm) — Multicore",
         "Minimum Wall Thickness — Insulation (mm) — Screene",
         "Sheath (mm) — d Cable",
-        "Cable Dia (mm)",
-        "Max. Resistance of Conductor at 20 0C (Ohm/km)",
+        "Cable Dia",
+        "Max. Resistance of Conductor at 20 0C",
         "Cable Weight (Kg/Km) Nom.",
         "Current Rating in Air at 30°C (A)"
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "Ohm/km",
+          "",
+          ""
+        ],
         [
           "8771002",
           "2C x 1.0",

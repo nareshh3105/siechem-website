@@ -6,14 +6,23 @@
       "name": "UL 1015 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "41485XX",
           "26",
@@ -213,14 +222,23 @@
       "name": "UL 1015 ATC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx. (Nom) — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx. (Nom)",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "A41485XX",
           "26",
@@ -375,14 +393,23 @@
       "name": "UL 1015 ATC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "A77083XX",
           "22",
@@ -475,14 +502,23 @@
       "name": "UL 1028 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "41583XX",
           "22",
@@ -601,14 +637,23 @@
       "name": "UL 1032 APC, PVC Insulated 90 C, 1000 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "41684XX",
           "24",
@@ -737,14 +782,23 @@
       "name": "UL 1275 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "41781XX",
           "18",
@@ -818,15 +872,25 @@
       "name": "UL 1283 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Bare — Ω/km",
-        "Tinned — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C — Bare",
+        "Tinned"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km",
+          "Ω/km"
+        ],
         [
           "41876XX",
           "8",
@@ -896,14 +960,23 @@
       "name": "UL 1284 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "41976XX",
           "8",
@@ -1221,15 +1294,25 @@
       "name": "UL 2127 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4268402",
           "24",
@@ -1330,15 +1413,25 @@
       "name": "UL 2128 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4278403",
           "24",
@@ -1439,15 +1532,25 @@
       "name": "UL 2129 APC, PVC Insulated 105 C, 1000 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4288402",
           "24",
@@ -1568,17 +1671,29 @@
       "name": "UL 2464 APC, PVC Insulated and Sheathed 80 C, 300 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores — Nos",
-        "Conductor Size — AWG",
-        "No. of Strands (Nom) — Nos.",
-        "Stands dia (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 20 0C — Ω/km"
+        "Conductor Construction** — No.of cores",
+        "Conductor Size",
+        "No. of Strands (Nom)",
+        "Stands dia (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20 0C"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "AWG",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4298002*",
           "2",
@@ -1809,17 +1924,29 @@
       "name": "UL 2464 APC, PVC Insulated ATC Braiding, with Al Mylar Tape, PVC Outersheathed 300V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores — Nos",
-        "Conductor Size — AWG",
+        "Conductor Construction** — No.of cores",
+        "Conductor Size",
         "No. of Strands/ Wire dia (Nom) — Nos/mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Thickness of Braiding wire (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 20 0C — Ω/km"
+        "Insulation Wall Thickness (Nom)",
+        "Thickness of Braiding wire (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20 0C"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "A0807902*",
           "2",
@@ -2033,17 +2160,29 @@
       "name": "UL 2464 APC, PVC Insulated, Al Mylar tape with Drain wire, PVC Outersheathed 300 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores — Nos",
-        "Conductor Size — AWG",
+        "Conductor Construction** — No.of cores",
+        "Conductor Size",
         "No. of Strands/ Wire dia (Nom) — Nos/mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Shielding tape Thickness (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 20 0C — Ω/km"
+        "Insulation Wall Thickness (Nom)",
+        "Shielding tape Thickness (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20 0C"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "A34080202*",
           "2",
@@ -2113,16 +2252,27 @@
       "name": "UL 2576 APC, PVC Insulated 80 C, 150 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Number of Cores — Nos.",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Number of Cores",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4308302",
           "22",
@@ -2945,16 +3095,27 @@
       "name": "UL 2587 APC, PVC Insulated 90 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Number of Cores — Nos.",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Number of Cores",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4318002",
           "16",
@@ -3172,15 +3333,25 @@
       "name": "UL 2598 APC, PVC Insulated 60 C, 300 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4328102",
           "18",
@@ -3311,14 +3482,23 @@
       "name": "S 3271 APC, EBXL-XLPE Insulated 125 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "BC27684XX",
           "24",
@@ -3549,14 +3729,23 @@
       "name": "S 3288 APC, EBXL-XLPE Insulated 150 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "BC27884XX",
           "24",
@@ -3702,14 +3891,23 @@
       "name": "S 3289 APC, EBXL-XLPE Insulated 150 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "BC25184XX",
           "24",
@@ -3910,14 +4108,23 @@
       "name": "S 3321 APC, EBXL-XLPE Insulated 150 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "C19884XX",
           "24",
@@ -4152,14 +4359,23 @@
       "name": "S 3456 APC, EBXL-XLPE Insulated 150 C, 600 V AC, 750 V DC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "BC27984XX",
           "24",
@@ -4363,14 +4579,23 @@
       "name": "S 3505 APC, EBXL-XLPE Insulated 150 C, 600 V AC, 750 V DC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "BC27784XX",
           "24",
@@ -4571,15 +4796,25 @@
       "name": "S 4417 APC, EBXL-XLPE Insulated 125 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — Nos X AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Nom. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size — Nos X",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Nom.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "C27581XX",
           "2C X 18",
@@ -4774,15 +5009,25 @@
       "name": "S 4486 APC, EBXL-XLPE Insulated 125 C, 1000 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — Nos X AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Outer Sheath Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size — Nos X",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "KC2747302",
           "2C X 22",
@@ -4913,14 +5158,23 @@
       "name": "UL 21098 APC, PVC Insulated 90 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "4448203",
           "3 X 20",
@@ -5211,14 +5465,23 @@
       "name": "UL 10531 APC, PVC Insulated 105 C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size — AWG",
-        "No. of Strands / Wire dia — nos. / mm",
-        "Insulation Wall Thickness Nom. — mm",
-        "Cable — Overall Diameter Max. — mm",
-        "Weight Approx. — kg/km",
-        "Max. Conductor Resistance at 200 C — Ω/km"
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 200 C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "S44582XX",
           "18",

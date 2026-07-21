@@ -10,13 +10,13 @@
         "No. of Strands",
         "Strand dia (Nom)",
         "mm",
-        "lation Insulation kness Core om) Diameter (Nom) — mm Amps",
+        "lation Insulation kness Core om) Diameter (Nom)",
         "Braiding Wire dia (Nom)",
         "Diameter Over Braiding (Nom)",
         "Sheath Thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
@@ -25,13 +25,13 @@
           "Nos.",
           "mm",
           "",
-          "",
+          "Amps",
           "mm",
           "mm",
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B950SA260004",
@@ -67,7 +67,7 @@
         "Outer Sheath Thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20°C — Ω/km"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -83,7 +83,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B937A2604",
@@ -109,7 +109,7 @@
       "name": "Wires & Cables Meet EU RoHS Directive",
       "headers": [
         "Part Number",
-        "Conductor Construction — No. of Wire x Size — Nos x Sq.mm",
+        "Conductor Construction — No. of Wire x Size — Nos x",
         "No. of Strands",
         "Strand dia Nom.",
         "Conductor Diameter (Nom)",
@@ -120,12 +120,12 @@
         "Outer Sheath Thickness (Min/Nom)",
         "Overall Diameter ( N o m )",
         "Weight Approx.",
-        "Conductor Resistance a t 2 0 ° C (Max) — Ω/km"
+        "Conductor Resistance a t 2 0 ° C (Max)"
       ],
       "rows": [
         [
           "",
-          "",
+          "Sq.mm",
           "Nos.",
           "mm",
           "mm",
@@ -136,7 +136,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B9620604",
@@ -172,7 +172,7 @@
         "Outer Sheath Thickness (Nom)",
         "Overall diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 30°C — Ω/km"
+        "Conductor Resistance at 30°C"
       ],
       "rows": [
         [
@@ -187,7 +187,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B961S050004",
@@ -217,11 +217,11 @@
         "No. of Strand",
         "Strands Wire (Nom.)",
         "mm",
-        "Core Nom. ameter Braiding Nom) Wire Dia — mm mm",
+        "Core Nom. ameter Braiding Nom) Wire Dia",
         "Min. Outer Sheath Thickness",
         "Nom. Overall Diameter",
         "Approx. Cable Weight",
-        "Max. Conductor Resistance at 20°C — Ω/km"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -231,11 +231,11 @@
           "Nos.",
           "mm",
           "",
-          "",
+          "mm",
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B949S960004",
@@ -270,7 +270,7 @@
         "Nom. Outer Sheath Thickness",
         "Nom. Overall Diameter",
         "Approx. Cable Weight",
-        "Max. Conductor Resistance at 20°C — Ω/km"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -286,7 +286,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B954SA260004",
@@ -321,7 +321,7 @@
         "Outer Sheath Thickness (Min)",
         "Overall diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 30°C (Max) — Ω/km"
+        "Conductor Resistance at 30°C (Max)"
       ],
       "rows": [
         [
@@ -335,7 +335,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B955SA100004",
@@ -369,7 +369,7 @@
         "Outer Sheath Thickness (Nom.)",
         "Overall Diameter (Nom.)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20°C — Ω/km"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -384,7 +384,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B956S810004",
@@ -409,7 +409,7 @@
       "name": "Wires & Cables Meet EU RoHS Directive",
       "headers": [
         "Part Number",
-        "Conductor Construction — No. of Core x Size — Nos x Sq.mm",
+        "Conductor Construction — No. of Core x Size — Nos x",
         "No. of Strands",
         "Strand dia Nom.",
         "Conductor Diameter Approx.",
@@ -418,12 +418,12 @@
         "Outer Sheath Thickness (Min)",
         "Overall diameter (Min/Max)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
           "",
-          "",
+          "Sq.mm",
           "Nos.",
           "mm",
           "mm",
@@ -432,7 +432,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B960A2602",
@@ -466,7 +466,7 @@
         "Outer Sheath Thickness (Min)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
@@ -481,7 +481,7 @@
           "mm",
           "Amps",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B958S050004",
@@ -516,7 +516,7 @@
         "Outer Sheath Thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C — Ω/km"
+        "Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -531,7 +531,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B952S02004",
@@ -566,7 +566,7 @@
         "Outer Sheath thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
@@ -581,7 +581,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B951S260004",
@@ -615,7 +615,7 @@
         "Outer Sheath thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C — Ω/km"
+        "Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -629,7 +629,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B953SA260004",
@@ -662,7 +662,7 @@
         "Outer Sheath thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
@@ -676,7 +676,7 @@
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B957SA570004",
@@ -705,12 +705,12 @@
         "Strand dia (Nom)",
         "Conductor Diameter (Nom/Max)",
         "Insu Co Diam (No",
-        "lation Braiding re wire eter Diameter m) (Nom) — m mm",
+        "lation Braiding re wire eter Diameter m) (Nom) — m",
         "Diameter Over Braiding (Nom)",
         "Outer Sheath thickness (Nom)",
         "Overall Diameter (Nom)",
         "Weight Approx.",
-        "Conductor Resistance at 20°C (Max) — Ω/km"
+        "Conductor Resistance at 20°C (Max)"
       ],
       "rows": [
         [
@@ -720,12 +720,12 @@
           "mm",
           "mm",
           "",
-          "",
+          "mm",
           "mm",
           "mm",
           "mm",
           "kg/km",
-          ""
+          "Ω/km"
         ],
         [
           "B959S810004",

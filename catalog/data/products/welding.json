@@ -7,15 +7,26 @@
       "headers": [
         "Part Number",
         "Nominal conductor area (mm 2)",
-        "Maximum strand dia (mm)",
-        "Thickness of insulation (mm)",
+        "Maximum strand dia",
+        "Thickness of insulation",
         "overall diameter (mm) — MIN",
         "Max.",
-        "Approx Weight of Cable (kg/km)",
+        "Approx Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "A05427XX",
           "10",
@@ -147,14 +158,24 @@
       "headers": [
         "Part Number",
         "Nominal conductor area (mm 2)",
-        "Maximum strand dia (mm)",
-        "Thickness of insulation (mm)",
-        "Approx. overall diameter (mm)",
-        "Approx. Weight of Cable (kg/km)",
+        "Maximum strand dia",
+        "Thickness of insulation",
+        "Approx. overall diameter",
+        "Approx. Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "53728XX",
           "16",
@@ -235,15 +256,26 @@
       "headers": [
         "Part Number",
         "Nominal conductor area (mm 2)",
-        "Maximum strand dia (mm)",
-        "Thickness of insulation (mm)",
+        "Maximum strand dia",
+        "Thickness of insulation",
         "overall diameter (mm) — MIN",
         "Max.",
-        "Approx Weight of Cable (kg/km)",
+        "Approx Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "A05427XX",
           "10",
@@ -374,15 +406,25 @@
       "name": "EM-5 85 C Copper Welding Cable DIN VDE 0282",
       "headers": [
         "Part Number",
-        "Nominal Conductor Area (mm2 )",
-        "Maximum Strand dia (mm)",
-        "Thickness of Insulation (mm)",
-        "Approx. Overall diameter (mm)",
-        "Approx Weight of Cable (kg/km)",
+        "Nominal Conductor Area",
+        "Maximum Strand dia",
+        "Thickness of Insulation",
+        "Approx. Overall diameter",
+        "Approx Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "538 27 XX",
           "10",

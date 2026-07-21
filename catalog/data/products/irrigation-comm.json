@@ -6,16 +6,27 @@
       "name": "Single Core Sprinkler Wire",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strand/Max Stand dia Diameter (Nom) — AWG",
+        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strand/Max Stand dia Diameter (Nom)",
         "Nos/mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
+        "Insulation Wall Thickness (Nom)",
         "Overall Diameter (Nom) — m m",
-        "Cable We ight App rox — kg/km",
+        "Cable We ight App rox",
         "DC Conductor Resistance 20°C (Max) — Ω/k m",
-        "Current Rating in air — Amp"
+        "Current Rating in air"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "",
+          "mm",
+          "",
+          "kg/km",
+          "",
+          "Amp"
+        ],
         [
           "A54079XX",
           "14",
@@ -80,17 +91,29 @@
       "name": "Irrigation Communication Cable",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strands Single Wire Diameter (Nom) (Nom) (Nom) — AWG",
+        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strands Single Wire Diameter (Nom) (Nom) (Nom)",
         "Nos",
         "mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Cable Wei ght App rox — kg/km",
+        "Insulation Wall Thickness (Nom)",
+        "Sheath Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Cable Wei ght App rox",
         "DC Conductor Resistance 20°C (Max) — Ω/k m"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          ""
+        ],
         [
           "A8008002",
           "2C x 16",
@@ -112,19 +135,33 @@
       "name": "Irrigation Control Cables",
       "headers": [
         "Part number",
-        "Conductor Construction — Nominal Cross Sectional — Sq.mm",
+        "Conductor Construction — Nominal Cross Sectional",
         "No . of Strand — N o",
-        "Diameter of Single Wire (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Insulation Diameter (Nom) — mm",
-        "Inner Sheath Thickness (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Max. Conductor Resistance at 20°C — Ω/km",
-        "Approx Weight of Cable — kg/km",
+        "Diameter of Single Wire (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Insulation Diameter (Nom)",
+        "Inner Sheath Thickness (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Max. Conductor Resistance at 20°C",
+        "Approx Weight of Cable",
         "Current Rating in Air at 30ºC"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "kg/km",
+          ""
+        ],
         [
           "A8011302",
           "2C x 1.5",
@@ -162,17 +199,29 @@
       "name": "Wires & Cables Meet EU RoHS Directive",
       "headers": [
         "Part number",
-        "Conductor Construction — Nominal Cross Sectional — Sq.mm",
-        "No. of Strand — Nos",
-        "Diameter of Single Wire (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Max. Conductor Resistance at 20°C — Ω/km",
-        "Approx Weight of Cable — kg/km",
+        "Conductor Construction — Nominal Cross Sectional",
+        "No. of Strand",
+        "Diameter of Single Wire (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Max. Conductor Resistance at 20°C",
+        "Approx Weight of Cable",
         "Current Rating"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "kg/km",
+          ""
+        ],
         [
           "B5650603",
           "3C x 0.5",
@@ -458,17 +507,29 @@
       "name": "Jacketed Decoder Wire",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strand Single Wire Diameter (Nom) (Nom) (Nom) — AWG",
+        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strand Single Wire Diameter (Nom) (Nom) (Nom)",
         "No",
         "mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Cable Overall Weight Diameter Approx (Nom) — mm",
+        "Insulation Wall Thickness (Nom)",
+        "Sheath Thickness (Nom)",
+        "Cable Overall Weight Diameter Approx (Nom)",
         "kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km"
+        "DC Conductor Resistance 20°C (Max)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "",
+          "Ω/km"
+        ],
         [
           "A8027902",
           "2C x 14",
@@ -490,16 +551,27 @@
       "name": "Irrigation Under Ground Feeder Cable (UF) & TWU",
       "headers": [
         "Part number",
-        "Nominal Cross Sectional Area — AWG",
-        "No. of Strands — Nos",
-        "Conductor Diameter (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Cable Weight Approx — kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km",
+        "Nominal Cross Sectional Area",
+        "No. of Strands",
+        "Conductor Diameter (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Cable Weight Approx",
+        "DC Conductor Resistance 20°C (Max)",
         "Current Rating in air at 30 °C (Conductor Temperature at 90°C)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km",
+          ""
+        ],
         [
           "B822S81XX",
           "18",
@@ -700,17 +772,29 @@
       "name": "Special Direct Burial Irrigation Control Cable",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strands Diameter (Nom) — AWG(Sq.mm)",
+        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strands Diameter (Nom)",
         "Nos",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Dimension of Cable (Nom) — Width — mm",
-        "Height — mm",
-        "Cable Weight Approx — kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km"
+        "Insulation Wall Thickness (Nom)",
+        "Sheath Thickness (Nom)",
+        "Dimension of Cable (Nom) — Width",
+        "Height",
+        "Cable Weight Approx",
+        "DC Conductor Resistance 20°C (Max)"
       ],
       "rows": [
+        [
+          "",
+          "Sq.mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "B824S7902",
           "14(2.5)",
@@ -745,16 +829,16 @@
       "headers": [
         "Application Product Construction Technical Data ü Used to transmit and receive signals ü Conductor : Annealed Bare solid Copper ü Voltage Rating :30 V between Irrigation satellites, Central Conductor according to ASTM ü Temperature Range : -30ºC to +80ºC Computers, weather stations and sensors. Spec.B3 ü Standards : As per customer specifications or ü Its mainly used in Irrigation satellites & ü Insulation : PVC (Polyvinyl Chloride) Generally as per UL 493 and 83 Smart Hub Systems. Nylon ripcord ü DC Conductor Resistance at 20°C : 21 4 Ω/km ü Used in Underground Low Energy Systems. ü Jacket : HDPE (Black) ü Used in Sprinklers Systems. ü Controller outputs to the solenoid values ü Outdoor Accent Lighting, Landscape Lighting, & Security Lighting. 2D View Features ü Direct Burial. ISO ISO IATF AS ISO ü Sunlight and Moisture resistant. 9001 14001 16949 9100 45001 ü Reduces Radio frequency interference. ü And also minimizing the electrical and magnetic interference. ü UV and Sunlight Resistant — Part number",
         "",
-        "Conductor Construction Nominal No. of Cross No. of Conductor Cores Sectional Strands Diameter Area (Nom) — Nos",
+        "Conductor Construction Nominal No. of Cross No. of Conductor Cores Sectional Strands Diameter Area (Nom)",
         "AWG",
         "",
         "Nos",
         "",
         "mm",
         "",
-        "Overall Diameter (Nom) — mm",
+        "Overall Diameter (Nom)",
         "",
-        "Cable Weight Approx — kg/km",
+        "Cable Weight Approx",
         "Colour Code",
         "",
         "",
@@ -764,6 +848,27 @@
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "Nos",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "mm",
+          "",
+          "kg/km",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
         [
           "B825S8102",
           "",
@@ -1437,16 +1542,27 @@
       "name": "Irrigation Direct Burial Decoder Cables Golf Course Sprinkler Wire",
       "headers": [
         "Part number",
-        "Conductor Construction No. of Nominal Cross No. of Conductor core Sectional Area Strands/ Diameter Strand dia (Nom) — Nos",
-        "AWG(Sq.mm)",
+        "Conductor Construction No. of Nominal Cross No. of Conductor core Sectional Area Strands/ Diameter Strand dia (Nom)",
+        "AWG",
         "Nos/mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Cable Weight Approx — kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km"
+        "Insulation Wall Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Cable Weight Approx",
+        "DC Conductor Resistance 20°C (Max)"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "Sq.mm",
+          "",
+          "",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "B827S7902",
           "2",
@@ -1497,17 +1613,29 @@
       "name": "Irrigation Jacketed Decoder Wire",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strand Single Wire Diameter (Nom) (Nom) (Nom) — AWG",
+        "Conductor Construction Nominal Cross No. of Diameter of Conductor Sectional Area Strand Single Wire Diameter (Nom) (Nom) (Nom)",
         "No",
         "mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx — kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km"
+        "Insulation Wall Thickness (Nom)",
+        "Sheath Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx",
+        "DC Conductor Resistance 20°C (Max)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "A8107902",
           "2C x 14",
@@ -1529,15 +1657,25 @@
       "name": "Irrigation Under Ground Low Energy Circuit Cable Spt Style (Parallel & Stranded Conductor)",
       "headers": [
         "Part number",
-        "No. of Cores x Nominal Cross Sectional Area — AWG",
-        "No. of Strands — Nos",
-        "Diameter of single wire (Nom) — mm",
-        "Insulation Wall Thickness (Min) — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx — kg/km",
-        "DC. Conductor Resistance at 20°C — Ω/km"
+        "No. of Cores x Nominal Cross Sectional Area",
+        "No. of Strands",
+        "Diameter of single wire (Nom)",
+        "Insulation Wall Thickness (Min)",
+        "Cable — Overall Diameter",
+        "Weight Approx",
+        "DC. Conductor Resistance at 20°C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "B8288102",
           "2 x 18",
@@ -1606,13 +1744,20 @@
       "family": "irrigation-comm",
       "name": "Irrigation Control or Instrumentation Cable",
       "headers": [
-        "Nominal Cross Sectional Area — AWG",
+        "Nominal Cross Sectional Area",
         "No. of Strands/ Strand dia — Nos/mm",
-        "PVC Insulation — mm",
-        "Nylon Armor — mm",
-        "Apporx OD — mm"
+        "PVC Insulation",
+        "Nylon Armor",
+        "Apporx OD"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm"
+        ],
         [
           "18",
           "16/0.254",
@@ -1657,24 +1802,43 @@
       "name": "Irrigation Control or Instrumentation Cable",
       "headers": [
         "Part number",
-        "No.of Cores — Nos",
-        "18 AWG — Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km",
-        "16 AWG — Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km",
-        "14AWG — Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km",
-        "12AWG — Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km",
-        "10 AWG — Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km"
+        "No.of Cores",
+        "18 AWG — Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight",
+        "16 AWG — Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight",
+        "14AWG — Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight",
+        "12AWG — Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight",
+        "10 AWG — Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "mm",
+          "mm",
+          "kg/km",
+          "mm",
+          "mm",
+          "kg/km",
+          "mm",
+          "mm",
+          "kg/km",
+          "mm",
+          "mm",
+          "kg/km",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "B829XX02",
           "2",
@@ -2368,13 +2532,21 @@
       "name": "Power Cable",
       "headers": [
         "Part Number",
-        "No.of Cores — Nos",
-        "Cross Section — AWG",
-        "Approx out side diameter — mm",
-        "Over all Jacket Thickness — mm",
-        "Approx Weight — kg/km"
+        "No.of Cores",
+        "Cross Section",
+        "Approx out side diameter",
+        "Over all Jacket Thickness",
+        "Approx Weight"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "AWG",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "B8307602",
           "2",
@@ -2600,13 +2772,21 @@
       "name": "Power Cable",
       "headers": [
         "Part Number",
-        "No.of Cores — Nos",
-        "Cross Section — MCM",
-        "Over all Jacket Thickness — mm",
-        "Approx out side diameter — mm",
-        "Approx Weight — kg/km"
+        "No.of Cores",
+        "Cross Section",
+        "Over all Jacket Thickness",
+        "Approx out side diameter",
+        "Approx Weight"
       ],
       "rows": [
+        [
+          "",
+          "Nos",
+          "MCM",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "B830A4202",
           "2",
@@ -2736,15 +2916,25 @@
       "name": "Single Core TYPE UF/ NMC-B Irrigation Cable",
       "headers": [
         "Part number",
-        "Nominal Cross Sectional Area — AWG",
+        "Nominal Cross Sectional Area",
         "No. of Stranding/ Strand dia — Nos/mm",
-        "Conductor Diameter (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Cable — Overall Diameter (Nom) — mm",
-        "Weight Approx — kg/km",
+        "Conductor Diameter (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx",
         "Current Carrying Capacity at 60°C"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          ""
+        ],
         [
           "B831S79XXYY",
           "14",
@@ -2864,16 +3054,27 @@
       "name": "Two/Three Conductor TYPE UF/ NMC-B irrigation Cable (Without Ground Conductor)",
       "headers": [
         "Part number",
-        "No of Cores x Nominal Cross Sectional Area — Nos x AWG",
+        "No of Cores x Nominal Cross Sectional Area — Nos x",
         "No. of Stranding — Nos/mm",
-        "Conductor Diameter (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Jacket Thickness (Nom) — mm",
-        "Cable — Dimension of cable Height x Width — mm",
-        "Weight Approx — kg/km",
-        "Current Carrying Capacity — Ω/km"
+        "Conductor Diameter (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Jacket Thickness (Nom)",
+        "Cable — Dimension of cable Height x Width",
+        "Weight Approx",
+        "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "B832S7902",
           "2 x 14",
@@ -2993,16 +3194,27 @@
       "name": "TYPE UF/ NMC-B (With Ground Conductor) Irrigation Cable",
       "headers": [
         "Part number",
-        "No of Cores x Nominal Cross Sectional Area — Nos x AWG",
+        "No of Cores x Nominal Cross Sectional Area — Nos x",
         "No. of Stranding — Nos/mm",
-        "Conductor Diameter (Nom) — mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Jacket Thickness (Nom) — mm",
-        "Cable — Dimension of cable Height x Width — mm",
-        "Weight Approx — kg/km",
-        "Current Carrying Capacity — Ω/km"
+        "Conductor Diameter (Nom)",
+        "Insulation Wall Thickness (Nom)",
+        "Jacket Thickness (Nom)",
+        "Cable — Dimension of cable Height x Width",
+        "Weight Approx",
+        "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
         [
           "B833S7902",
           "2 x 14",
@@ -3133,17 +3345,29 @@
       "name": "Interlocked Armour 3 Core + Neutral Conductor Cable 600 Volt Ul Type",
       "headers": [
         "Part number",
-        "Nominal Cross Sectional Area — AWG",
-        "Min. No. of Stranding — Nos",
-        "Insulation Thickness Nom. — mm",
-        "Ground Conductor Size — AWG",
-        "Diameter Over Armour (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx — kg/km",
-        "Current Carrying Capacity — Amps"
+        "Nominal Cross Sectional Area",
+        "Min. No. of Stranding",
+        "Insulation Thickness Nom.",
+        "Ground Conductor Size",
+        "Diameter Over Armour (Nom)",
+        "Sheath Thickness (Nom)",
+        "Cable — Overall Diameter",
+        "Weight Approx",
+        "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Nos",
+          "mm",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Amps"
+        ],
         [
           "B8647903E",
           "14",
@@ -3345,17 +3569,29 @@
       "name": "Interlocked Armour 4 Core + 2 Neutral conductor Cable 600 Volt Ul Type",
       "headers": [
         "Part number",
-        "Nominal Cross Sectional Area — AWG",
-        "Min. No. of Stranding — Nos",
-        "Insulation Thickness Nom. — mm",
-        "Conductor Ground size — AWG",
-        "Diameter Over Armour (Nom) — mm",
-        "Sheath Thickness (Nom) — mm",
-        "Cable — Overall Diameter — mm",
-        "Weight Approx — kg/km",
-        "Current Carrying Capacity — Amps"
+        "Nominal Cross Sectional Area",
+        "Min. No. of Stranding",
+        "Insulation Thickness Nom.",
+        "Conductor Ground size",
+        "Diameter Over Armour (Nom)",
+        "Sheath Thickness (Nom)",
+        "Cable — Overall Diameter",
+        "Weight Approx",
+        "Current Carrying Capacity"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Nos",
+          "mm",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Amps"
+        ],
         [
           "B8657904E",
           "14",
@@ -3557,14 +3793,23 @@
       "name": "THHN/THWN Irrigation Type of Cable",
       "headers": [
         "Part number",
-        "Nominal Cross Sectional Area — AWG",
-        "No. of Strands — Nos",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Outer Sheath Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Weight Approx — kg/km"
+        "Nominal Cross Sectional Area",
+        "No. of Strands",
+        "Insulation Wall Thickness (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Weight Approx"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "B86679XXYY",
           "14",
@@ -3772,16 +4017,27 @@
       "name": "Single Core Sprinkler Wire with Anti Termite and Rodent Resistant",
       "headers": [
         "Part number",
-        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strand/Max Stand dia Diameter (Nom) — AWG",
+        "Conductor Construction Nominal Cross No. of Conductor Sectional Area Strand/Max Stand dia Diameter (Nom)",
         "Nos/mm",
         "mm",
-        "Insulation Wall Thickness (Nom) — mm",
-        "Overall Diameter (Nom) — mm",
-        "Cable Weight Approx — kg/km",
-        "DC Conductor Resistance 20°C (Max) — Ω/km",
-        "Current Rating in air — Amp"
+        "Insulation Wall Thickness (Nom)",
+        "Overall Diameter (Nom)",
+        "Cable Weight Approx",
+        "DC Conductor Resistance 20°C (Max)",
+        "Current Rating in air"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km",
+          "Amp"
+        ],
         [
           "RA54079XX",
           "14",

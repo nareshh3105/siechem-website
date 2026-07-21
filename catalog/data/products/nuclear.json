@@ -6,13 +6,21 @@
       "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated 600 V rated Cable",
       "headers": [
         "Part Number",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No. of Strands /Strand dia.",
-        "Insulation Thickness (Nom.) — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95081XX",
           "18",
@@ -174,13 +182,21 @@
       "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated 600 V rated Cable",
       "headers": [
         "Part Number",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No.of Strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95181XX",
           "18",
@@ -342,13 +358,21 @@
       "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated 600 V rated Cable",
       "headers": [
         "Part Number",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No of strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95279XX",
           "14",
@@ -494,14 +518,23 @@
       "name": "Annealed Tinned Copper Conductor, XLPE 90 C Insulated & CSPE Sheathed 600 V rated Cable",
       "headers": [
         "Part Number",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No. of Strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95379XX",
           "14",
@@ -665,14 +698,24 @@
       "headers": [
         "Part Number",
         "No.of Cond.",
-        "Size (AWG)",
+        "Size",
         "No. of Strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95481XX",
           "2/C flat",
@@ -923,14 +966,24 @@
       "headers": [
         "Part Number",
         "No.of Conductor",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No. of Strands /Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95681XX",
           "2/C",
@@ -1161,14 +1214,24 @@
       "headers": [
         "Application Product Construction Technical Data üInstrumentation Cable is a 600 V, üConductor : Annealed Tinned copper üRated voltage : 600 V individual shielded pairs or triads with Conductor as per ASTM B33 üTemperature rating : 90 oC overall shield, thermoset, Class IE rated üInsulation : Cross-Linked polyethylene üSpecification : (1)Class IE Qualified in accordance with construction specifically designed (EBXL-XLPE 90 oC) for application in nuclear generating üShielding : Pairs or triads are 100% shielded IEEE 323-1974 and IEEE 383-1974 (3) ICEA S-82-552 (formerly ICEA stations and where flame retardancy is critical. with an aluminium/polyester tape S-66 -524 & S-19- 81) üDesigned for use on critical circuits in contact with a stranded tinned üFlame test : IEEE 383 (70,000 BTU/hr) as modified by NRC where total isolation is required between copper drain wire pairs/triads and from external interference. üOverall shield : Aluminium/polyester tape in IEEE 383 (70,000 BTU/hr) IEEE1202 (70,000 BTU/hr) contact with a stranded tinned ü Can be installed in trays, conduit, ICEA T-29-520 (210,000 BTU/hr) copper drain wire. ducts, or in direct burial applications. ü Outer sheath : Heavy duty chlorsulphonated UL VW-1 Features polyethylene (CSPE) ü Traceable ü Flame retardant ü Radiation stability ISO ISO IATF AS ISO ü Long term moisture 9001 14001 16949 14001 45001 ü Long term thermal enduarance ü Stripping for ease of termination ü Radiation resistant up to 200 megarads — Part Number",
         "No.of Pairs/ No.of Triads",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No.of Strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95781XX",
           "2P",
@@ -1499,14 +1562,24 @@
       "headers": [
         "Part Number",
         "No.of Cond.",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No. of Strand/ Stand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "95979XX",
           "2/C flat",
@@ -1847,15 +1920,26 @@
       "headers": [
         "Part Number",
         "No.of Cond.",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No.of Strands / Stand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Drain Wire Size — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Drain Wire Size",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "96276XX",
           "3/C",
@@ -2152,15 +2236,26 @@
       "headers": [
         "Part Number",
         "No.of Cond.",
-        "Cond. Size (AWG)",
+        "Cond. Size",
         "No.of Strands/ Strand dia",
-        "Insulation Thickness (Nom.) — mm",
-        "Drain Wire Size — mm",
-        "Outer Sheath Thickness — mm",
-        "Cable Diameter (Nom.) — mm",
-        "Cable Weight (approx.) — kg/km"
+        "Insulation Thickness (Nom.)",
+        "Drain Wire Size",
+        "Outer Sheath Thickness",
+        "Cable Diameter (Nom.)",
+        "Cable Weight (approx.)"
       ],
       "rows": [
+        [
+          "",
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
         [
           "96179XX",
           "2/C",

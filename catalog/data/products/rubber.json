@@ -7,13 +7,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheat h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheat h",
         "Outer Diameter (mm) approx.",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "50710XX",
           "1C X 1",
@@ -42,13 +51,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper Inde x (Kg/Km)",
+        "Copper Inde x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "50816XX",
           "1C X 2.5",
@@ -221,13 +239,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
         "Max. Conduct o r Resistance at 2 0 ° C",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5101002",
           "2C X 1",
@@ -256,13 +283,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
         "Max. Conduct o r Resistance at 20 ° C",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5121602",
           "2C X 2.5",
@@ -417,13 +453,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
         "Max. Conducto r Resistance at 20 ° C",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5101003",
           "3C X 1",
@@ -452,13 +497,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outershea t h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outershea t h",
         "Outer Diameter (mm) approx.",
         "Max. Conduct o r Resistance at 2 0 ° C",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5121603",
           "3C X 2.5",
@@ -613,13 +667,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheat h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheat h",
         "Outer Diameter (mm)approx.",
         "Max. Conduc t o r Resistance at 2 0 °",
         "Weight C (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5101004",
           "4C X 1",
@@ -648,13 +711,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
         "Max. Conduc t o r Resistance at 2 0 ° C (",
         "Weight Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "",
+          ""
+        ],
         [
           "5121604",
           "4C X 2.5",
@@ -906,13 +978,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheat h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheat h",
         "Outer Diameter (mm) approx.",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5161002",
           "2C X 1",
@@ -941,13 +1022,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper Inde x (Kg/Km)",
+        "Copper Inde x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5171602",
           "2C X 2.5",
@@ -1100,12 +1190,20 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
+        "Thickness of Insulation",
         "Outer Diameter (mm) approx.",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "51806XX",
           "1C X 0.5",
@@ -1212,12 +1310,20 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
+        "Thickness of Insulation",
         "Outer Diameter (mm) approx.",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5200602",
           "2C X 0.5",
@@ -1516,13 +1622,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper In d e x (Kg/Km )",
+        "Copper In d e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "52423XX",
           "1C X 6",
@@ -1677,13 +1792,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper In d e x (Kg/Km )",
+        "Copper In d e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5262302",
           "2C X 6",
@@ -1820,13 +1944,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm approx.)",
-        "Copper In d e x (Kg/Km )",
+        "Copper In d e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5262303",
           "3C X 6",
@@ -1963,13 +2096,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper Ind e x (Kg/Km )",
+        "Copper Ind e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5262304",
           "4C X 6",
@@ -2106,13 +2248,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter (mm) approx.",
-        "Copper In d e x (Kg/Km )",
+        "Copper In d e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5272305",
           "5C X 6",
@@ -2150,13 +2301,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
-        "Copper Index Kg/Km",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
+        "Copper Index",
         "Outer Diamete r i n mm approx .",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "52806XX",
           "1C X 0.5",
@@ -2221,13 +2381,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
-        "Copper Index (Kg/Km)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
+        "Copper Index",
         "Outer Diameter i n (mm) approx .",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "Kg/Km",
+          "",
+          ""
+        ],
         [
           "5300602",
           "2C X 0.5",
@@ -2292,13 +2461,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheath (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheath",
         "Outer Diameter in (mm) approx.",
-        "Copper Ind e x (Kg/Km)",
+        "Copper Ind e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5300603",
           "3C X 0.5",
@@ -2363,13 +2541,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outershea t h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outershea t h",
         "Outer Diameter (mm) approx.",
-        "Copper Ind e x (Kg/Km )",
+        "Copper Ind e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5300604",
           "4C X 0.5",
@@ -2434,13 +2621,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheat h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheat h",
         "Outer Diameter (mm) approx.",
-        "Copper Ind e x (Kg/Km)",
+        "Copper Ind e x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "54513XX",
           "1C X 1.5",
@@ -2460,13 +2656,22 @@
       "headers": [
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
-        "Thickness of Insulation (mm)",
-        "Thickness of Outersheat h (mm)",
+        "Thickness of Insulation",
+        "Thickness of Outersheat h",
         "Outer Diameter in (mm) approx.",
-        "Copper Inde x (Kg/Km)",
+        "Copper Inde x",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "5461302",
           "2C X 1.5",
@@ -2496,10 +2701,17 @@
         "Part Number",
         "No.of Cores X Conductor size (Nos X mm2 )",
         "Outer Diameter (mm) approx.",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "6321303G",
           "3G",
@@ -2854,10 +3066,17 @@
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km",
+        "Copper Index",
         "Weight Kg/Km approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "6411304",
           "1.5",
@@ -6837,10 +7056,18 @@
         "No.of Cores X Conductor size (Nos X mm2 )",
         "Outer Diameter (mm) — Min",
         "Max",
-        "Copper Index (Kg/Km)",
+        "Copper Index",
         "Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
         [
           "7040802",
           "2C X 0.75",
@@ -7011,14 +7238,24 @@
       "headers": [
         "Part Number",
         "Nominal conductor area (mm 2)",
-        "Maximum strand dia (mm)",
-        "Thickness of insulation (mm)",
-        "Approx. overall diameter (mm)",
-        "Approx Weight of Cable (kg/km)",
+        "Maximum strand dia",
+        "Thickness of insulation",
+        "Approx. overall diameter",
+        "Approx Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "53627XX",
           "10",
@@ -7129,14 +7366,24 @@
       "headers": [
         "Part Number",
         "Nominal conductor area (mm 2)",
-        "Maximum strand dia (mm)",
-        "Thickness of insulation (mm)",
-        "Approx. overall diameter (mm)",
-        "Approx. Weight of Cable (kg/km)",
+        "Maximum strand dia",
+        "Thickness of insulation",
+        "Approx. overall diameter",
+        "Approx. Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "53728XX",
           "16",
@@ -7206,15 +7453,25 @@
       "name": "EM-5 85 C Copper Welding Cable DIN VDE 0282",
       "headers": [
         "Part Number",
-        "Nominal Conductor Area (mm2 )",
-        "Maximum Strand dia (mm)",
-        "Thickness of Insulation (mm)",
-        "Approx. Overall diameter (mm)",
-        "Approx Weight of Cable (kg/km)",
+        "Nominal Conductor Area",
+        "Maximum Strand dia",
+        "Thickness of Insulation",
+        "Approx. Overall diameter",
+        "Approx Weight of Cable",
         "Maximum Conductor Resistance at 20 oC (Ω/Km) Plain Wires Tinned Wires",
         ""
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "",
+          ""
+        ],
         [
           "53827XX",
           "10",

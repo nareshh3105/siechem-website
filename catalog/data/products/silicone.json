@@ -84,14 +84,23 @@
       "name": "Single Core, ATC Conductor, Silicone Insulated Unsheathed H05S-K Type Cable",
       "headers": [
         "Part Number",
-        "Nominal Cross Section (mm2 )",
+        "Nominal Cross Section",
         "Conductor Construction No.of Strands x Strand dia Nos x mm (Nom.)",
-        "Max Conductor Resistance at 200 C Ω/km",
-        "Insulation thickness ( Nom.)(mm)",
-        "Overall diameter Nom.(mm)",
+        "Max Conductor Resistance at 200 C",
+        "Insulation thickness ( Nom.)",
+        "Overall diameter Nom.",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
+        [
+          "",
+          "mm2",
+          "",
+          "Ω/km",
+          "mm",
+          "mm",
+          ""
+        ],
         [
           "A06306XX*",
           "0.5",
@@ -4500,14 +4509,23 @@
       "name": "UL 3068 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A13387XX",
           "30",
@@ -4608,14 +4626,23 @@
       "name": "UL 3069 ATC Silicone Rubber Insulated and Fibre Glass Braided 105 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A13585XX",
           "26",
@@ -4680,14 +4707,23 @@
       "name": "UL 3070 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A13981XX",
           "18",
@@ -4753,14 +4789,23 @@
       "name": "UL 3071 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A16981XX",
           "18",
@@ -4816,14 +4861,23 @@
       "name": "UL 3074 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A17278XX",
           "12",
@@ -4871,14 +4925,23 @@
       "name": "UL 3075 ATC Silicone Rubber Insulated and Fibre Glass braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A17377XX",
           "10",
@@ -4925,14 +4988,23 @@
       "name": "UL 3099 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A17582XX",
           "20 AWG",
@@ -4986,14 +5058,23 @@
       "name": "UL 3100 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A17678XX",
           "12",
@@ -5040,14 +5121,23 @@
       "name": "UL 3101 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A17877XX",
           "10",
@@ -5094,14 +5184,23 @@
       "name": "UL 3113 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A18081XX",
           "18",
@@ -5138,14 +5237,23 @@
       "name": "UL 3122 ATC Silicone Rubber Insulated and Lacquered Braided 200 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A18285XX",
           "26",
@@ -5229,14 +5337,23 @@
       "name": "UL 3123 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A18487XX",
           "30",
@@ -5336,14 +5453,23 @@
       "name": "UL 3125 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A18576XX",
           "8",
@@ -5417,14 +5543,23 @@
       "name": "UL 3132 ATC Silicone Rubber Insulated 150 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A18687XX",
           "30",
@@ -5517,14 +5652,23 @@
       "name": "UL 3133 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A19087XX",
           "30",
@@ -5625,14 +5769,23 @@
       "name": "UL 3134 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A19381XX",
           "18",
@@ -5697,14 +5850,23 @@
       "name": "UL 3135 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A19485XX",
           "26",
@@ -5804,14 +5966,23 @@
       "name": "UL 3136 ATC Silicone Rubber Insulated 150 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A19685XX",
           "26",
@@ -5875,14 +6046,23 @@
       "name": "UL 3137 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A19885XX",
           "26",
@@ -5946,14 +6126,23 @@
       "name": "UL 3138 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A20181XX",
           "18",
@@ -6035,14 +6224,23 @@
       "name": "UL 3139 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A20285XX",
           "26",
@@ -6142,14 +6340,23 @@
       "name": "UL 3140 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A20485XX",
           "26",
@@ -6212,14 +6419,23 @@
       "name": "UL 3141 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A20685XX",
           "26",
@@ -6282,14 +6498,23 @@
       "name": "UL 3142 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A20981XX",
           "18",
@@ -6353,14 +6578,23 @@
       "name": "UL 3143 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A21181XX",
           "18",
@@ -6422,14 +6656,23 @@
       "name": "UL 3144 ATC Silicone Rubber Insulated Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A21285XX",
           "26",
@@ -6530,14 +6773,23 @@
       "name": "UL 3145 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A21478XX",
           "12",
@@ -6585,14 +6837,23 @@
       "name": "UL 3172 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A21685XX",
           "26",
@@ -6665,14 +6926,23 @@
       "name": "UL 3207 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A21881XX",
           "18",
@@ -6708,14 +6978,23 @@
       "name": "UL 3208 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22081XX",
           "18",
@@ -6779,14 +7058,23 @@
       "name": "UL 3212 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22185XX",
           "26",
@@ -6895,14 +7183,23 @@
       "name": "UL 3213 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22376XX",
           "8",
@@ -6993,14 +7290,23 @@
       "name": "UL 3214 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22472XX",
           "1",
@@ -7073,14 +7379,23 @@
       "name": "UL 3231 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22585XX",
           "26",
@@ -7171,14 +7486,23 @@
       "name": "UL 3262 ATC Silicone Rubber Insulated and 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A22785XX",
           "26",
@@ -7241,14 +7565,23 @@
       "name": "UL 3268 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A25881XX",
           "18",
@@ -7311,14 +7644,23 @@
       "name": "UL 3278 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A25976XX",
           "8",
@@ -7453,14 +7795,23 @@
       "name": "UL 3301 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A26182XX",
           "20",
@@ -7560,14 +7911,23 @@
       "name": "UL 3303 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 1000 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A26382XX",
           "20",
@@ -7622,14 +7982,23 @@
       "name": "UL 3318 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
-        "No. of Strands / Strand dia — Nos / mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Conductor Size",
+        "No. of Strands / Strand dia — Nos /",
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A26581XX",
           "18",
@@ -7694,14 +8063,23 @@
       "name": "UL 3322 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A26684XX",
           "24",
@@ -7773,14 +8151,23 @@
       "name": "UL 3367 ATC Silicone Rubber Insulated 200 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A26885XX",
           "26",
@@ -7888,14 +8275,23 @@
       "name": "UL 3508 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 300 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A27282XX",
           "20",
@@ -7967,14 +8363,23 @@
       "name": "UL 3512 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A27383XX",
           "22",
@@ -8145,14 +8550,23 @@
       "name": "UL 3513 ATC Silicone Rubber Insulated and Fibre Glass Braided 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A27582XX",
           "20",
@@ -8315,14 +8729,23 @@
       "name": "UL 3529 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A27785XX",
           "26",
@@ -8412,14 +8835,23 @@
       "name": "UL 3530 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A27985XX",
           "26",
@@ -8509,14 +8941,23 @@
       "name": "UL 3535 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A28282XX",
           "20",
@@ -8600,14 +9041,23 @@
       "name": "UL 3536 ATC Silicone Rubber Insulated 200 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A28382XX",
           "20",
@@ -8769,14 +9219,23 @@
       "name": "UL 3566 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A28681XX",
           "18",
@@ -8901,14 +9360,23 @@
       "name": "UL 3580 ATC Silicone Rubber Insulated 150 C 1000 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A28785XX",
           "26",
@@ -8989,14 +9457,23 @@
       "name": "UL 3604 ATC Silicone Rubber Insulated 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A28986XX",
           "28",
@@ -9068,14 +9545,23 @@
       "name": "UL 3605 ATC Silicone Rubber Insulated and Fibre Glass Braided 150 C 600 Vac Cable",
       "headers": [
         "ü Part Number ü",
-        "Conductor Size — AWG",
+        "Conductor Size",
         "No. of Strands / Strand dia — Nos/mm",
-        "Nominal Wall Thickness — mm",
-        "Nominal Overall Diameter — mm",
-        "Max. Conductor Resistance at 20 0C — Ω/km",
-        "Weight (Approx.) — Kg/Km"
+        "Nominal Wall Thickness",
+        "Nominal Overall Diameter",
+        "Max. Conductor Resistance at 20 0C",
+        "Weight (Approx.)"
       ],
       "rows": [
+        [
+          "",
+          "AWG",
+          "",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km"
+        ],
         [
           "A29187XX",
           "30",
