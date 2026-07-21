@@ -57,12 +57,19 @@
     }
 
     /* ── Product Cards ───────────────────────── */
-    .prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    @media (max-width: 980px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 560px) { .prod-grid { grid-template-columns: 1fr; } }
+    /* Portrait cards, matching the Aero 44/55 pages */
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+      justify-content: center;
+      gap: 24px;
+    }
+    @media (max-width: 700px) { .prod-grid { grid-template-columns: 1fr; } }
 
     .prod-card {
       display: flex; flex-direction: column; gap: 0;
+      width: 100%; max-width: 320px; min-height: 480px;
+      margin: 0 auto;
       background: var(--bg-card); border: 1.5px solid var(--border);
       border-radius: var(--radius-lg); overflow: hidden;
       transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
@@ -90,14 +97,12 @@
     .badge-airframe { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
     .badge-general { background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-border); }
     .badge-twin { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
-    .prod-card-name { font-size: 14.5px; font-weight: 700; color: var(--text); line-height: 1.35; }
+    .prod-card-name { font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.4; }
     .prod-card-body { padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-    .prod-card-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; }
-    /* Cards with a 2D product image: specs stack in one column on the left,
-       the cross-section render sits on the right where the second spec
-       column used to be. */
+    /* Specs stack vertically (portrait card, matching the Aero pages) */
+    .prod-card-specs { display: flex; flex-direction: column; gap: 12px; }
+    /* Cards with a 2D product image: specs left, render on the right */
     .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
-    .prod-card-bodyimg .prod-card-specs { grid-template-columns: 1fr; }
     .prod-card-media {
       width: 140px; height: 140px; background: #fff;
       border: 1px solid var(--border); border-radius: 10px;
