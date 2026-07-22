@@ -1,100 +1,120 @@
 {
   "series": [
     {
-      "id": "ebf145f06a",
+      "id": "new-mruogsi5",
       "family": "wind",
-      "name": "Single Core Flexible Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750V (UA) Power Cable(HO7BN4 - F)",
+      "name": "Single Core Flexible Tinned Copper Conductor, Polyester Tape, Silicone Insulated & PUR Vanished Synthetic Yarn Braided 3.3/4.2kV (UA) Power Cable ",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm\n    Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index",
+        "Copper Index \nKg/Km",
         "Weight Kg/Km approx."
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "Kg/Km",
-          ""
+          "35527XX ",
+          "1 x 10",
+          "9.7",
+          "84",
+          "179"
         ],
         [
-          "6483804",
+          "35528XX",
+          "1 x 16",
+          "11.5",
+          "135",
+          "325"
+        ],
+        [
+          " 35530XX ",
+          "1 x 25",
+          "12.9",
+          "211",
+          "482"
+        ],
+        [
+          "35532XX",
+          "1 x 35",
+          "14.3",
+          "296",
+          "657"
+        ],
+        [
+          "35534XX",
+          "1 x 50",
+          "16.0",
+          "422",
+          "897"
+        ],
+        [
+          "35537XX",
+          "1 x 70",
+          "17.9",
+          "591",
+          "1219"
+        ],
+        [
+          "35538XX",
           "1 x 95",
-          "20.6",
-          "861.4",
-          "1156"
+          "19.7",
+          "802",
+          "1573"
         ],
         [
-          "6484104",
+          "35541XX",
           "1 x 120",
-          "22.3",
-          "1102.6",
-          "1427"
+          "22.0",
+          "1013",
+          "2088"
         ],
         [
-          "6484204",
+          "35542XX",
           "1 x 150",
-          "24.8",
-          "1370.9",
-          "1768"
+          "24.0",
+          "1267",
+          "2590"
         ],
         [
-          "6484404",
+          "35544XX",
           "1 x 185",
-          "26.8",
-          "1676.9",
-          "2131"
+          "26.2",
+          "1562",
+          "3234"
         ],
         [
-          "6484604",
+          "35546XX",
           "1 x 240",
-          "30.2",
-          "2213.4",
-          "2772"
-        ],
-        [
-          "6484804",
-          "1 x 300",
-          "31.9",
-          "2814.2",
-          "3449"
+          "28.5",
+          "2027",
+          "3990"
         ]
       ],
-      "catalogueNo": "648",
       "info": {
         "features": [
-          "Formation of Toxic dioxins and furnaces in case of fire is considerably reduced.",
-          "Highly resistant to grease, oil and other emulsions.",
-          "Halogen free material is recyclable",
-          "Excellent Flame retardant.",
-          "Excellent UV protection.",
-          "Low Smoke Density.",
-          "Halogen free control cable"
+          "Halogen free",
+          "Corrosivity of fire effluent",
+          "Low Smoke",
+          "Flame Retardant",
+          "Cold Resistant @ -40°C",
+          "UV Resistant",
+          "Oil Resistant",
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range:",
-          "Flexible applications            - 15°C to +90°C",
-          "Fixed Installation                 - 35°C to +90°C",
-          "Test Voltage: 2.5 kV",
-          "Bending Radius (Minimum):",
-          "Flexing:  6 x Cable Diameter",
-          "Static:   4 x Cable Diameter",
-          "Rated Voltage: 450/750 (U₀/U)",
-          "In Protected & Fixed Installation:  600/1000 V"
+          "Temperature Range: -50°C to +180°C",
+          "Test Voltage: 24 kV",
+          "Bending Radius (Minimum): 12 x Cable Diameter for 3.3/4.2 kV cable",
+          "Rated Voltage (U₀/U): 3.3/4.2 kV"
         ],
         "application": [
-          "Used in dry or damp interiors.",
-          "Air conditioning systems.",
-          "Not Suitable for direct burial.",
-          "Used in machine tools.",
-          "Data processing systems."
+          "Used in linking generators to transformers"
         ],
         "construction": [
-          "Conductor: Finely Stranded Bare Copper Wires.",
-          "Insulation:  Rubber Compound.",
-          "Outer Sheath: Special Rubber Compound"
+          "Conductor: Flexible Tinned Annealed Copper, Class 5 according to IEC 60228",
+          "Separate Tape: Polyester firm (if necessary)",
+          "Insulation: Silicone",
+          "Braid:  PUR vanished synthetic yarn braid"
         ]
       }
     },
@@ -2030,9 +2050,9 @@
       }
     },
     {
-      "id": "50eab76b56",
+      "id": "ebf145f06a",
       "family": "wind",
-      "name": "EPR (UA) Power Cable",
+      "name": "Single Core Flexible Copper Conductor Rubber Insulated & Special Rubber Sheathed 450/750V (UA) Power Cable(HO7BN4 - F)",
       "headers": [
         "Part Number",
         "Number of Cores and mm2 Per Conductor",
@@ -2047,6 +2067,104 @@
           "",
           "Kg/Km",
           ""
+        ],
+        [
+          "6483804",
+          "1 x 95",
+          "20.6",
+          "861.4",
+          "1156"
+        ],
+        [
+          "6484104",
+          "1 x 120",
+          "22.3",
+          "1102.6",
+          "1427"
+        ],
+        [
+          "6484204",
+          "1 x 150",
+          "24.8",
+          "1370.9",
+          "1768"
+        ],
+        [
+          "6484404",
+          "1 x 185",
+          "26.8",
+          "1676.9",
+          "2131"
+        ],
+        [
+          "6484604",
+          "1 x 240",
+          "30.2",
+          "2213.4",
+          "2772"
+        ],
+        [
+          "6484804",
+          "1 x 300",
+          "31.9",
+          "2814.2",
+          "3449"
+        ]
+      ],
+      "catalogueNo": "648",
+      "info": {
+        "features": [
+          "Formation of Toxic dioxins and furnaces in case of fire is considerably reduced.",
+          "Highly resistant to grease, oil and other emulsions.",
+          "Halogen free material is recyclable",
+          "Excellent Flame retardant.",
+          "Excellent UV protection.",
+          "Low Smoke Density.",
+          "Halogen free control cable"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Flexible applications            - 15°C to +90°C",
+          "Fixed Installation                 - 35°C to +90°C",
+          "Test Voltage: 2.5 kV",
+          "Bending Radius (Minimum):",
+          "Flexing:  6 x Cable Diameter",
+          "Static:   4 x Cable Diameter",
+          "Rated Voltage: 450/750 (U₀/U)",
+          "In Protected & Fixed Installation:  600/1000 V"
+        ],
+        "application": [
+          "Used in dry or damp interiors.",
+          "Air conditioning systems.",
+          "Not Suitable for direct burial.",
+          "Used in machine tools.",
+          "Data processing systems."
+        ],
+        "construction": [
+          "Conductor: Finely Stranded Bare Copper Wires.",
+          "Insulation:  Rubber Compound.",
+          "Outer Sheath: Special Rubber Compound"
+        ]
+      }
+    },
+    {
+      "id": "50eab76b56",
+      "family": "wind",
+      "name": "Multi Core Flexible Tinned Copper Conductor EPR Insulated & HF XL EVA Sheathed 600/1000V (UA) Power Cable",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km"
         ],
         [
           "3523003",
@@ -2140,35 +2258,35 @@
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
-          "Ozone Resistant Number of"
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range: -400C to +900C",
-          "Test Voltage : 3.5 kV",
-          "Bending Radius(Minimum): 6 x Cable Dia",
-          "Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"
+          "Temperature Range: -40°C to +90°C",
+          "Test Voltage: 3.5 kV",
+          "Bending Radius (Minimum): 6 x Cable Dia",
+          "Rated Voltage (U₀/U): 0.6/1.0 kV"
         ],
         "application": [
           "Wind Turbines",
           "Transmission of energy from generator to transformer."
         ],
         "construction": [
-          "Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
-          "Insulation : E P R (Ethylene-Propylene-Rubber)",
-          "Outer Sheath : HF XL EVA"
+          "Conductor: Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
+          "Insulation: EPR (Ethylene-Propylene-Rubber)",
+          "Outer Sheath: HF XL EVA"
         ]
       }
     },
     {
       "id": "cda23e9765",
       "family": "wind",
-      "name": "EBXL-XLPO (UA) Power Cable",
+      "name": "Single Core Flexible Tinned Copper Conductor & EBXL - XLPO Insulated 600/1000V (UA) Power Cable ",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
         "Copper Index",
         "Weight Kg/Km approx."
@@ -2176,10 +2294,10 @@
       "rows": [
         [
           "",
-          "",
-          "",
+          "Nos x mm²",
+          "mm",
           "Kg/Km",
-          ""
+          "Kg/Km"
         ],
         [
           "35323XX",
@@ -2273,34 +2391,34 @@
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
           "Ozone Resistant Number of Cores"
         ],
         "technical": [
-          "Temperature Range: -550C to +1450C",
-          "Test Voltage : 3.5 kV",
-          "Bending Radius(Minimum): 6 x Cable Dia",
-          "Rated Voltage (U/U) : 0.6/1.0 kV 0"
+          "Temperature Range: -55°C to +145°C",
+          "Test Voltage: 3.5 kV",
+          "Bending Radius (Minimum): 6 x Cable Dia",
+          "Rated Voltage (U₀/U): 0.6/1.0 kV 0"
         ],
         "application": [
           "Wind Turbines",
           "Transmission of energy from generator to transformer."
         ],
         "construction": [
-          "Conductor : Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
-          "Insulation : X L P O Siechem EBXL-XLPO (UA) Power Cable Cores and mm2 Outer Diameter in"
+          "Conductor: Flexible Tinned Copper, Finely Stranded Class 5 or Class 6 according to IEC 60228",
+          "Insulation: XLPO"
         ]
       }
     },
     {
       "id": "ab2669f88e",
       "family": "wind",
-      "name": "Silicone (UA) Power Cable",
+      "name": "Single Core Flexible Tinned Copper Conductor Silicone Insulated & PUR Vanished Synthetic Yarn Braided 1100V (UA) Power Cable",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
         "Copper Index",
         "Weight Kg/Km approx."
@@ -2308,10 +2426,10 @@
       "rows": [
         [
           "",
-          "",
-          "",
+          "Nos x mm² ",
+          "mm",
           "Kg/Km",
-          ""
+          "Kg/Km"
         ],
         [
           "35413XX",
@@ -2328,7 +2446,7 @@
           "48"
         ],
         [
-          "35438XX",
+          "35419XX",
           "1 x 4",
           "7.2",
           "34",
@@ -2424,83 +2542,6 @@
           "27.9",
           "2534",
           "4094"
-        ],
-        [
-          "35527XX",
-          "1 x 10",
-          "9.7",
-          "84",
-          "179"
-        ],
-        [
-          "35528XX",
-          "1 x 16",
-          "11.5",
-          "135",
-          "325"
-        ],
-        [
-          "35530XX",
-          "1 x 25",
-          "12.9",
-          "211",
-          "482"
-        ],
-        [
-          "35532XX",
-          "1 x 35",
-          "14.3",
-          "296",
-          "657"
-        ],
-        [
-          "35534XX",
-          "1 x 50",
-          "16.0",
-          "422",
-          "897"
-        ],
-        [
-          "35537XX",
-          "1 x 70",
-          "17.9",
-          "591",
-          "1219"
-        ],
-        [
-          "35538XX",
-          "1 x 95",
-          "19.7",
-          "802",
-          "1573"
-        ],
-        [
-          "35541XX",
-          "1 x 120",
-          "22.0",
-          "1013",
-          "2088"
-        ],
-        [
-          "35542XX",
-          "1 x 150",
-          "24.0",
-          "1267",
-          "2590"
-        ],
-        [
-          "35544XX",
-          "1 x 185",
-          "26.2",
-          "1562",
-          "3234"
-        ],
-        [
-          "35546XX",
-          "1 x 240",
-          "28.5",
-          "2027",
-          "3990"
         ]
       ],
       "catalogueNo": "354",
@@ -2510,16 +2551,16 @@
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
-          "Ozone Resistant Number of"
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range: -500C to +1800C",
-          "Test Voltage : 3.5 kV for 1.1kV",
-          "Bending Radius(Minimum): 6 x Cable Dia for 1.1kV",
-          "Rated Voltage (U/U) : 0.6/1.0 kV 0 Copper Index Weight"
+          "Temperature Range: -50°C to +180°C",
+          "Test Voltage: 3.5 kV or 1.1kV",
+          "Bending Radius (Minimum): 6 x Cable Diameter for 1.1 kV cable",
+          "Rated Voltage (U₀/U): 0.6/1.0 kV"
         ],
         "application": [
           "Used in linking generators to transformers."
