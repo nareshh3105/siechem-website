@@ -517,7 +517,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;">
 
         <!-- AERO 44 -->
-        <a href="/products/product-aero44.html" style="text-decoration:none;">
+        <a href="#" onclick="revealVariants(); return false;" style="text-decoration:none;">
           <div style="background:var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
             <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.55);margin-bottom:14px;">XLPO · PVDF · E-BEAM XL</div>
             <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 44</div>
@@ -551,6 +551,8 @@
     </div>
   </section>
 
+  <!-- Variants (hidden until the user picks a product line above) -->
+  <div id="variantsWrap" style="display:none;">
   <!-- Filter Strip -->
   <section class="section section-tight">
     <div class="container">
@@ -606,6 +608,7 @@
       <div class="prod-grid" id="prodGrid"></div>
     </div>
   </section>
+  </div><!-- /variantsWrap -->
 
   <!-- Spec Sheet Modal -->
   <div class="spec-overlay" id="specOverlay" onclick="handleSpecOverlayClick(event)">
@@ -1077,6 +1080,12 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') { closeSpec(); closeQuote(); }
   });
+
+  function revealVariants() {
+    const wrap = document.getElementById('variantsWrap');
+    if (wrap.style.display === 'none') wrap.style.display = '';
+    wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 
   /* ── Init ─────────────────────────────────────── */
   loadTypes();
