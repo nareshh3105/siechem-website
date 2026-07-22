@@ -260,6 +260,188 @@
       }
     },
     {
+      "id": "a01ef9f74c",
+      "family": "automotive",
+      "name": "AESSX",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — Nominal Cross- Section mm²",
+        "No. of Strands Nos",
+        "Diameter of Single wire max. mm",
+        "Conductor Diameter Approx. mm",
+        "Insulation Wall Thickness Nom. mm",
+        "Overall Cable Diameter (Nom/Max) mm",
+        "Weight Approx. Kg/Km",
+        "Max. Conductor Resistance at 20°C Ω/km",
+        "Current Carrying Capacity Amps",
+        "Standard Length* mtrs"
+      ],
+      "rows": [
+        [
+          "81504XX",
+          "0.3",
+          "7",
+          "0.26",
+          "0.8",
+          "0.3",
+          "1.4/1.5",
+          "4",
+          "50.2",
+          "26",
+          "500"
+        ],
+        [
+          "81506XX",
+          "0.5",
+          "7",
+          "0.32",
+          "1.0",
+          "0.3",
+          "1.6/1.7",
+          "5",
+          "32.7",
+          "20",
+          "500"
+        ],
+        [
+          "81554XX",
+          "0.85",
+          "19",
+          "0.24",
+          "1.2",
+          "0.3",
+          "1.8/1.9",
+          "7",
+          "21.7",
+          "16",
+          "1000"
+        ],
+        [
+          "81512XX",
+          "1.25",
+          "19",
+          "0.29",
+          "1.5",
+          "0.3",
+          "2.1/2.2",
+          "10",
+          "14.9",
+          "12",
+          "500"
+        ]
+      ],
+      "catalogueNo": "815",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Highly resistant against acids, lyes, petrol and diesel.",
+          "Flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.",
+          "Heat resistant"
+        ],
+        "technical": [
+          "Temperature Range : -40°C to +120°C (3000 Hours)",
+          "Standard : JASO D 608 (Reference)",
+          "Test Voltage : 1 kV",
+          "A : Low tension cables for automobiles",
+          "E : Polyethylene insulated",
+          "SS : Very Thin wall type",
+          "X : Cross linked A c c r e d i t ations"
+        ],
+        "application": [
+          "Wire harness of low-tension electric circuits for automobiles.",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
+          "Especially used for circuits requiring heat resistance"
+        ],
+        "construction": [
+          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction According to JASO D 608 (Reference)",
+          "Insulation : Electron beam cross linked Polyethylene",
+          "Colour : As per customer order",
+          "Single Core"
+        ]
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/a01ef9f74c.png?v=1784743988442"
+    },
+    {
+      "id": "c9d69ea412",
+      "family": "automotive",
+      "name": "Automotive SieCar",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — Size",
+        "No. of Strands",
+        "Strand dia Nom.",
+        "Conductor Diameter Approx.",
+        "Diameter Over Insulation Thickness (Nom)",
+        "Braiding Wire Diameter (Nom)",
+        "Diameter Over Braiding (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall diameter (Nom)",
+        "Weight Approx",
+        "Conductor . Resistance at 30°C"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "B995710004",
+          "0.40",
+          "7",
+          "0.27",
+          "0.81",
+          "2.10(+0.05,-0.10)",
+          "0.10",
+          "2.7",
+          "0.35",
+          "3.3±0.20",
+          "18",
+          "48.5"
+        ]
+      ],
+      "info": {
+        "features": [
+          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
+          "Highly resistant to EMI.",
+          "Noise immunity due to a low error rate."
+        ],
+        "technical": [
+          "Temperature : -40°C to + 105°C (3000hrs)",
+          "Max. Operating Voltage : 60V (DC)",
+          "Max. Mutual Capacitance @ 1 kHz : 92 pF/m (Core-Core)",
+          "Characteristic Impedance : 50 ± 3Ω",
+          "Velocity Ratio : 78%",
+          "Min. Bending radius : 5 x Cable OD (Single) 15 x Cable OD (Multiple)",
+          "Stripping force : (i) Conductor to core :10 -30 N (ii) Shield to sheath : 8 -25 N"
+        ],
+        "application": [
+          "Wireless and antenna application",
+          "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera",
+          "and control unit and video signal transmission.",
+          "Automotive radio antennas",
+          "Used for high-frequency signal transmission"
+        ],
+        "construction": [
+          "Conductor : Annealed Bare Stranded Copper Conductor",
+          "Insulation : Foamed PP, Natural",
+          "Shielding : Aluminium mylar tape",
+          "Braiding : ATC",
+          "Sheath : Lead Free PVC, black",
+          "Automotive SieCar 105-302-3 Cables"
+        ]
+      }
+    },
+    {
       "id": "ecbcaa6c06",
       "family": "automotive",
       "name": "Single Core Screened EBXL",
@@ -546,6 +728,81 @@
           "Screening : Annealed Tinned Copper",
           "Outer Sheath :EBXL-XLPO",
           "Sheath Colour : Orange"
+        ]
+      }
+    },
+    {
+      "id": "6b94aac8bf",
+      "family": "automotive",
+      "name": "Coaxial SieCar ",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — No. of Core x Size — Nos x",
+        "No. of Strands",
+        "Strand dia (Nom)",
+        "Conductor Diameter (Max)",
+        "Insulation Thickness (Min/Nom)",
+        "Insulation Core Diameter (Nom)",
+        "Sheath Thickness (Min/Nom)",
+        "Overall Diameter (Nom)",
+        "Weight Approx.",
+        "Conductor Resistance at 20°C (Max)"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "C0890502",
+          "2 x 0.35",
+          "7",
+          "0.254",
+          "0.76",
+          "0.20/0.25",
+          "1.25 ± 0.05",
+          "0.5/0.70",
+          "4.0 ± 0.15",
+          "21",
+          "55.5"
+        ]
+      ],
+      "info": {
+        "features": [
+          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
+          "Highly resistant to EMI.",
+          "Noise immunity due to a low error rate."
+        ],
+        "technical": [
+          "Temperature : -40°C to + 125°C (3000hrs)",
+          "Test Voltage : 1 kV (AC) for 1 minute",
+          "Max. operating Voltage : 60V (DC)",
+          "Characteristic Impedance : 100 ± 10 Ω",
+          "Bending radius : 5 x Cable OD"
+        ],
+        "application": [
+          "Wireless and antenna application",
+          "Used for interior lines for monitoring system",
+          "CCTV feeder lines, wiring between the camera",
+          "and control unit and video signal transmission.",
+          "Automotive radio antennas",
+          "Used for high-frequency signal transmission"
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "Insulation : PP",
+          "Core identification : Green & White",
+          "Sheath : TPE-S Black",
+          "Automotive SieCar 125-546-V Cables"
         ]
       }
     },
@@ -1871,156 +2128,6 @@
       ]
     },
     {
-      "id": "3c7cc973bd",
-      "family": "automotive",
-      "name": "CPE - FR TW",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Nominal Cross- Section mm²",
-        "No. of Strands Nos",
-        "Diameter of Single wire max. mm",
-        "Conductor Diameter Max. mm",
-        "Insulation Wall Thickness Nom. mm",
-        "Overall Cable Diameter Max. mm",
-        "Weight Approx. Kg/Km",
-        "Max. Conductor Resistance at 20°C Ω/km",
-        "Current Carrying Capacity Amps",
-        "Standard Length* mtrs"
-      ],
-      "rows": [
-        [
-          "A82602XX",
-          "0.22",
-          "7",
-          "0.21",
-          "0.70",
-          "0.25",
-          "1.20",
-          "3",
-          "84.8",
-          "9",
-          "500"
-        ],
-        [
-          "A82605XX",
-          "0.35",
-          "7",
-          "0.27",
-          "0.90",
-          "0.25",
-          "1.30",
-          "5",
-          "54.4",
-          "12",
-          "500"
-        ],
-        [
-          "A82606XX",
-          "0.5",
-          "19",
-          "0.19",
-          "1.10",
-          "0.28",
-          "1.60",
-          "6",
-          "37.1",
-          "15",
-          "500"
-        ],
-        [
-          "A82608XX",
-          "0.75",
-          "19",
-          "0.24",
-          "1.30",
-          "0.30",
-          "1.90",
-          "9",
-          "24.7",
-          "20",
-          "500"
-        ],
-        [
-          "A82610XX",
-          "1",
-          "19",
-          "0.27",
-          "1.50",
-          "0.30",
-          "2.10",
-          "11",
-          "18.5",
-          "24",
-          "500"
-        ],
-        [
-          "A82613XX",
-          "1.5",
-          "19",
-          "0.33",
-          "1.80",
-          "0.30",
-          "2.40",
-          "16",
-          "12.7",
-          "30",
-          "500"
-        ],
-        [
-          "A82614XX",
-          "2",
-          "19",
-          "0.38",
-          "2.00",
-          "0.35",
-          "2.80",
-          "22",
-          "9.42",
-          "39",
-          "500"
-        ],
-        [
-          "A82616XX",
-          "2.5",
-          "37",
-          "0.28",
-          "2.20",
-          "0.35",
-          "3.00",
-          "24",
-          "7.60",
-          "45",
-          "500"
-        ]
-      ],
-      "catalogueNo": "A826",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Highly resistant against acids, alkaline, petrol and diesel.",
-          "Extra flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.",
-          "Excellent flexibility.",
-          "Heat resistant."
-        ],
-        "technical": [
-          "Temperature Range : -40°C to +125°C (3000 Hours)",
-          "Standards : ISO 6722-1: 2014",
-          "CPE : Chlorinated polyethylene"
-        ],
-        "application": [
-          "Low-tension electric wire for automobiles.",
-          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
-          "Especially used for circuits requiring heat resistance."
-        ],
-        "construction": [
-          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN EN 13602, bare conductor construction according to ISO 6722-1, Structure A",
-          "Insulation : EBXL- CPE- FR (Thin wall)",
-          "Colour : As per customer order.",
-          "Single Core"
-        ]
-      }
-    },
-    {
       "id": "48ee3e940c",
       "family": "automotive",
       "name": "AEX f",
@@ -2225,7 +2332,8 @@
           "Colour : As per customer order.",
           "SIngle Core"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/48ee3e940c.png?v=1784743966945"
     },
     {
       "id": "0e58c0cd6e",
@@ -2435,207 +2543,6 @@
           "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611: 2014",
           "Insulation : HR PVC",
           "Colour : As per customer order.",
-          "Single Core"
-        ]
-      }
-    },
-    {
-      "id": "6b94aac8bf",
-      "family": "automotive",
-      "name": "Coaxial SieCar ",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — No. of Core x Size — Nos x",
-        "No. of Strands",
-        "Strand dia (Nom)",
-        "Conductor Diameter (Max)",
-        "Insulation Thickness (Min/Nom)",
-        "Insulation Core Diameter (Nom)",
-        "Sheath Thickness (Min/Nom)",
-        "Overall Diameter (Nom)",
-        "Weight Approx.",
-        "Conductor Resistance at 20°C (Max)"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "C0890502",
-          "2 x 0.35",
-          "7",
-          "0.254",
-          "0.76",
-          "0.20/0.25",
-          "1.25 ± 0.05",
-          "0.5/0.70",
-          "4.0 ± 0.15",
-          "21",
-          "55.5"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
-          "Highly resistant to EMI.",
-          "Noise immunity due to a low error rate."
-        ],
-        "technical": [
-          "Temperature : -40°C to + 125°C (3000hrs)",
-          "Test Voltage : 1 kV (AC) for 1 minute",
-          "Max. operating Voltage : 60V (DC)",
-          "Characteristic Impedance : 100 ± 10 Ω",
-          "Bending radius : 5 x Cable OD"
-        ],
-        "application": [
-          "Wireless and antenna application",
-          "Used for interior lines for monitoring system",
-          "CCTV feeder lines, wiring between the camera",
-          "and control unit and video signal transmission.",
-          "Automotive radio antennas",
-          "Used for high-frequency signal transmission"
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Copper Conductor",
-          "Insulation : PP",
-          "Core identification : Green & White",
-          "Sheath : TPE-S Black",
-          "Automotive SieCar 125-546-V Cables"
-        ]
-      }
-    },
-    {
-      "id": "b0e520e781",
-      "family": "automotive",
-      "name": "AVSS f",
-      "headers": [
-        "Part Number",
-        "Nom. Cross Section",
-        "No. of Strands",
-        "Diameter of Single wire Max.",
-        "Conductor Diameter Approx",
-        "Insulation Wall Thickness Nom.",
-        "Cable Overall Diamter (Nom/Max)",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20°C",
-        "Current Carrying Capacity",
-        "Standard Length*"
-      ],
-      "rows": [
-        [
-          "",
-          "mm²",
-          "Nos",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Kg/km",
-          "Ω/km",
-          "Amps",
-          "mtrs"
-        ],
-        [
-          "80604XX",
-          "0.3",
-          "19",
-          "0.16",
-          "0.8",
-          "0.30",
-          "1.4/1.5",
-          "5",
-          "48.8",
-          "9",
-          "1000"
-        ],
-        [
-          "80606XX",
-          "0.5",
-          "19",
-          "0.19",
-          "1.0",
-          "0.30",
-          "1.6/1.7",
-          "7",
-          "34.6",
-          "11",
-          "1000"
-        ],
-        [
-          "80608XX",
-          "0.75",
-          "19",
-          "0.23",
-          "1.2",
-          "0.30",
-          "1.8/1.9",
-          "9",
-          "23.6",
-          "15",
-          "1000"
-        ],
-        [
-          "80612XX",
-          "1.25",
-          "37",
-          "0.21",
-          "1.5",
-          "0.30",
-          "2.1/2.2",
-          "14",
-          "14.6",
-          "20",
-          "1000"
-        ],
-        [
-          "80614XX",
-          "2",
-          "37",
-          "0.26",
-          "1.8",
-          "0.40",
-          "2.6/2.7",
-          "22",
-          "9.50",
-          "26",
-          "500"
-        ]
-      ],
-      "catalogueNo": "806",
-      "info": {
-        "features": [
-          "Flame Retardant",
-          "Highly resistant against acids, alkaline, petrol and diesel",
-          "Extra flexible conductor with pvc very thin wall insulation for smaller diameter and lesser weight",
-          "Excellent flexibility"
-        ],
-        "technical": [
-          "Temperature Range : -400C to +800C (3000 Hours)",
-          "Standard : JASO D 611: 2014",
-          "Test Voltage : 1 kV",
-          "A : Low tension cables for automobiles",
-          "V : Vinyl insulated",
-          "SS : Very Thin type",
-          "f : Extra flexible Conductor"
-        ],
-        "application": [
-          "Wire harness of low-tension electric circuits for automobiles",
-          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."
-        ],
-        "construction": [
-          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611",
-          "Insulation : PVC",
-          "Colour : As per customer order",
           "Single Core"
         ]
       }
@@ -3073,6 +2980,251 @@
       }
     },
     {
+      "id": "ef5729395e",
+      "family": "automotive",
+      "name": "AESSX f",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — Nominal Cross- Section mm mm²",
+        "No. of Strands Nos",
+        "Diameter of Single wire Max. mm",
+        "Conductor Diameter Approx. mm",
+        "Insulation Wall Thickness Nom. mm",
+        "Overall Cable Diameter (Nom/Max) mm",
+        "Weight Approx. Kg/Km",
+        "Max. Conductor Resistance at 20°C",
+        "Current Carrying Capacity",
+        "Standard Length*"
+      ],
+      "rows": [
+        [
+          "81604XX",
+          "0.3",
+          "19",
+          "0.16",
+          "0.8",
+          "0.30",
+          "1.4/1.5",
+          "5",
+          "48.8",
+          "12",
+          "1000"
+        ],
+        [
+          "81606XX",
+          "0.5",
+          "19",
+          "0.19",
+          "1.0",
+          "0.30",
+          "1.6/1.7",
+          "7",
+          "34.6",
+          "15",
+          "1000"
+        ],
+        [
+          "81608XX",
+          "0.75",
+          "19",
+          "0.23",
+          "1.2",
+          "0.30",
+          "1.8/1.9",
+          "9",
+          "23.6",
+          "20",
+          "1000"
+        ],
+        [
+          "81612XX",
+          "1.25",
+          "37",
+          "0.21",
+          "1.5",
+          "0.30",
+          "2.1/2.2",
+          "14",
+          "14.6",
+          "26",
+          "1000"
+        ],
+        [
+          "81614XX",
+          "2",
+          "37",
+          "0.26",
+          "1.8",
+          "0.40",
+          "2.6/2.7",
+          "22",
+          "9.50",
+          "35",
+          "500"
+        ]
+      ],
+      "catalogueNo": "816",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Highly resistant against acids, alkaline, petrol and diesel.",
+          "Extra flexible conductor with Electron beam cross",
+          "linked polyethylene super thin wall insulation for",
+          "smaller diameter and lesser weight.",
+          "Excellent flexibility.",
+          "Heat resistant."
+        ],
+        "technical": [
+          "Temperature Range : --40°C to +120°C (3000Hrs)",
+          "Standards : JASO D 611:2014",
+          "Test Voltage : 1kV",
+          "A : Low Tension Cable for Automobiles",
+          "E : Polyethylene Insulated",
+          "SS : Very Thin Wall Type",
+          "X : Electron Beam Cross Linked",
+          "f : Extra flexible conductor"
+        ],
+        "application": [
+          "Wire Harness of low-tension electric circuits for automobiles",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits",
+          "Especially used for circuits requring heat resistance"
+        ],
+        "construction": [
+          "Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according  to JIS 3102, Bare Conductor construction according to JASO D 611:2014",
+          "Insulation : electron Beam Cross Linked Polyethylene",
+          "Color : As per customer order",
+          "Single Core"
+        ]
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/ef5729395e.png?v=1784744002923"
+    },
+    {
+      "id": "b0e520e781",
+      "family": "automotive",
+      "name": "AVSS f",
+      "headers": [
+        "Part Number",
+        "Nom. Cross Section",
+        "No. of Strands",
+        "Diameter of Single wire Max.",
+        "Conductor Diameter Approx",
+        "Insulation Wall Thickness Nom.",
+        "Cable Overall Diamter (Nom/Max)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C",
+        "Current Carrying Capacity",
+        "Standard Length*"
+      ],
+      "rows": [
+        [
+          "",
+          "mm²",
+          "Nos",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Kg/km",
+          "Ω/km",
+          "Amps",
+          "mtrs"
+        ],
+        [
+          "80604XX",
+          "0.3",
+          "19",
+          "0.16",
+          "0.8",
+          "0.30",
+          "1.4/1.5",
+          "5",
+          "48.8",
+          "9",
+          "1000"
+        ],
+        [
+          "80606XX",
+          "0.5",
+          "19",
+          "0.19",
+          "1.0",
+          "0.30",
+          "1.6/1.7",
+          "7",
+          "34.6",
+          "11",
+          "1000"
+        ],
+        [
+          "80608XX",
+          "0.75",
+          "19",
+          "0.23",
+          "1.2",
+          "0.30",
+          "1.8/1.9",
+          "9",
+          "23.6",
+          "15",
+          "1000"
+        ],
+        [
+          "80612XX",
+          "1.25",
+          "37",
+          "0.21",
+          "1.5",
+          "0.30",
+          "2.1/2.2",
+          "14",
+          "14.6",
+          "20",
+          "1000"
+        ],
+        [
+          "80614XX",
+          "2",
+          "37",
+          "0.26",
+          "1.8",
+          "0.40",
+          "2.6/2.7",
+          "22",
+          "9.50",
+          "26",
+          "500"
+        ]
+      ],
+      "catalogueNo": "806",
+      "info": {
+        "features": [
+          "Flame Retardant",
+          "Highly resistant against acids, alkaline, petrol and diesel",
+          "Extra flexible conductor with pvc very thin wall insulation for smaller diameter and lesser weight",
+          "Excellent flexibility"
+        ],
+        "technical": [
+          "Temperature Range : -400C to +800C (3000 Hours)",
+          "Standard : JASO D 611: 2014",
+          "Test Voltage : 1 kV",
+          "A : Low tension cables for automobiles",
+          "V : Vinyl insulated",
+          "SS : Very Thin type",
+          "f : Extra flexible Conductor"
+        ],
+        "application": [
+          "Wire harness of low-tension electric circuits for automobiles",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits."
+        ],
+        "construction": [
+          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction according to JASO D 611",
+          "Insulation : PVC",
+          "Colour : As per customer order",
+          "Single Core"
+        ]
+      }
+    },
+    {
       "id": "1bd5030cba",
       "family": "automotive",
       "name": "R4 RoHS",
@@ -3231,124 +3383,6 @@
           "Conductor : Extra multi stranded bare copper conductor, construction according to volvo 1059032",
           "Insulation : Class 4, Equivalent to ISO 6722 Temperature Class D",
           "Colour : As per customer order"
-        ]
-      }
-    },
-    {
-      "id": "ef5729395e",
-      "family": "automotive",
-      "name": "AESSX f",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Nominal Cross- Section mm mm²",
-        "No. of Strands Nos",
-        "Diameter of Single wire Max. mm",
-        "Conductor Diameter Approx. mm",
-        "Insulation Wall Thickness Nom. mm",
-        "Overall Cable Diameter (Nom/Max) mm",
-        "Weight Approx. Kg/Km",
-        "Max. Conductor Resistance at 20°C",
-        "Current Carrying Capacity",
-        "Standard Length*"
-      ],
-      "rows": [
-        [
-          "81604XX",
-          "0.3",
-          "19",
-          "0.16",
-          "0.8",
-          "0.30",
-          "1.4/1.5",
-          "5",
-          "48.8",
-          "12",
-          "1000"
-        ],
-        [
-          "81606XX",
-          "0.5",
-          "19",
-          "0.19",
-          "1.0",
-          "0.30",
-          "1.6/1.7",
-          "7",
-          "34.6",
-          "15",
-          "1000"
-        ],
-        [
-          "81608XX",
-          "0.75",
-          "19",
-          "0.23",
-          "1.2",
-          "0.30",
-          "1.8/1.9",
-          "9",
-          "23.6",
-          "20",
-          "1000"
-        ],
-        [
-          "81612XX",
-          "1.25",
-          "37",
-          "0.21",
-          "1.5",
-          "0.30",
-          "2.1/2.2",
-          "14",
-          "14.6",
-          "26",
-          "1000"
-        ],
-        [
-          "81614XX",
-          "2",
-          "37",
-          "0.26",
-          "1.8",
-          "0.40",
-          "2.6/2.7",
-          "22",
-          "9.50",
-          "35",
-          "500"
-        ]
-      ],
-      "catalogueNo": "816",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Highly resistant against acids, alkaline, petrol and diesel.",
-          "Extra flexible conductor with Electron beam cross",
-          "linked polyethylene super thin wall insulation for",
-          "smaller diameter and lesser weight.",
-          "Excellent flexibility.",
-          "Heat resistant."
-        ],
-        "technical": [
-          "Temperature Range : --40°C to +120°C (3000Hrs)",
-          "Standards : JASO D 611:2014",
-          "Test Voltage : 1kV",
-          "A : Low Tension Cable for Automobiles",
-          "E : Polyethylene Insulated",
-          "SS : Very Thin Wall Type",
-          "X : Electron Beam Cross Linked",
-          "f : Extra flexible conductor"
-        ],
-        "application": [
-          "Wire Harness of low-tension electric circuits for automobiles",
-          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits",
-          "Especially used for circuits requring heat resistance"
-        ],
-        "construction": [
-          "Conductor : Soft-annealed electrolytic Copper E-Cu ETP1 according  to JIS 3102, Bare Conductor construction according to JASO D 611:2014",
-          "Insulation : electron Beam Cross Linked Polyethylene",
-          "Color : As per customer order",
-          "Single Core"
         ]
       }
     },
@@ -3645,82 +3679,268 @@
       }
     },
     {
-      "id": "c9d69ea412",
+      "id": "3c7cc973bd",
       "family": "automotive",
-      "name": "Automotive SieCar",
+      "name": "CPE - FR TW",
       "headers": [
         "Part Number",
-        "Conductor Construction — Size",
+        "Conductor Construction — Nominal Cross- Section mm²",
+        "No. of Strands Nos",
+        "Diameter of Single wire max. mm",
+        "Conductor Diameter Max. mm",
+        "Insulation Wall Thickness Nom. mm",
+        "Overall Cable Diameter Max. mm",
+        "Weight Approx. Kg/Km",
+        "Max. Conductor Resistance at 20°C Ω/km",
+        "Current Carrying Capacity Amps",
+        "Standard Length* mtrs"
+      ],
+      "rows": [
+        [
+          "A82602XX",
+          "0.22",
+          "7",
+          "0.21",
+          "0.70",
+          "0.25",
+          "1.20",
+          "3",
+          "84.8",
+          "9",
+          "500"
+        ],
+        [
+          "A82605XX",
+          "0.35",
+          "7",
+          "0.27",
+          "0.90",
+          "0.25",
+          "1.30",
+          "5",
+          "54.4",
+          "12",
+          "500"
+        ],
+        [
+          "A82606XX",
+          "0.5",
+          "19",
+          "0.19",
+          "1.10",
+          "0.28",
+          "1.60",
+          "6",
+          "37.1",
+          "15",
+          "500"
+        ],
+        [
+          "A82608XX",
+          "0.75",
+          "19",
+          "0.24",
+          "1.30",
+          "0.30",
+          "1.90",
+          "9",
+          "24.7",
+          "20",
+          "500"
+        ],
+        [
+          "A82610XX",
+          "1",
+          "19",
+          "0.27",
+          "1.50",
+          "0.30",
+          "2.10",
+          "11",
+          "18.5",
+          "24",
+          "500"
+        ],
+        [
+          "A82613XX",
+          "1.5",
+          "19",
+          "0.33",
+          "1.80",
+          "0.30",
+          "2.40",
+          "16",
+          "12.7",
+          "30",
+          "500"
+        ],
+        [
+          "A82614XX",
+          "2",
+          "19",
+          "0.38",
+          "2.00",
+          "0.35",
+          "2.80",
+          "22",
+          "9.42",
+          "39",
+          "500"
+        ],
+        [
+          "A82616XX",
+          "2.5",
+          "37",
+          "0.28",
+          "2.20",
+          "0.35",
+          "3.00",
+          "24",
+          "7.60",
+          "45",
+          "500"
+        ]
+      ],
+      "catalogueNo": "A826",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Highly resistant against acids, alkaline, petrol and diesel.",
+          "Extra flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.",
+          "Excellent flexibility.",
+          "Heat resistant."
+        ],
+        "technical": [
+          "Temperature Range : -40°C to +125°C (3000 Hours)",
+          "Standards : ISO 6722-1: 2014",
+          "CPE : Chlorinated polyethylene"
+        ],
+        "application": [
+          "Low-tension electric wire for automobiles.",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
+          "Especially used for circuits requiring heat resistance."
+        ],
+        "construction": [
+          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to DIN EN 13602, bare conductor construction according to ISO 6722-1, Structure A",
+          "Insulation : EBXL- CPE- FR (Thin wall)",
+          "Colour : As per customer order.",
+          "Single Core"
+        ]
+      }
+    },
+    {
+      "id": "37fc732466",
+      "family": "automotive",
+      "name": "AVSSX f",
+      "headers": [
+        "Part Number",
+        "Nominal Cross Section Area",
         "No. of Strands",
-        "Strand dia Nom.",
-        "Conductor Diameter Approx.",
-        "Diameter Over Insulation Thickness (Nom)",
-        "Braiding Wire Diameter (Nom)",
-        "Diameter Over Braiding (Nom)",
-        "Outer Sheath Thickness (Nom)",
-        "Overall diameter (Nom)",
-        "Weight Approx",
-        "Conductor . Resistance at 30°C"
+        "Diameter of Single wire Max.",
+        "Conductor Diameter Approx",
+        "Insulation Wall Thickness (Nom)",
+        "Overall Cable Diameter (Nom/Max)",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C",
+        "Current Carrying Capacity",
+        "Standard Length*"
       ],
       "rows": [
         [
           "",
-          "Sq.mm",
-          "Nos.",
+          "mm²",
+          "Nos",
           "mm",
           "mm",
           "mm",
           "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
+          "Kg/Km",
+          "Ω/km",
+          "Amps",
+          "mtrs"
         ],
         [
-          "B995710004",
-          "0.40",
+          "81006XX",
+          "0.5",
+          "19",
+          "0.19",
+          "1.0",
+          "0.30",
+          "1.6/1.7",
           "7",
-          "0.27",
-          "0.81",
-          "2.10(+0.05,-0.10)",
-          "0.10",
-          "2.7",
-          "0.35",
-          "3.3±0.20",
-          "18",
-          "48.5"
+          "34.6",
+          "13",
+          "1000"
+        ],
+        [
+          "81008XX",
+          "0.75",
+          "19",
+          "0.23",
+          "1.2",
+          "0.30",
+          "1.8/1.9",
+          "10",
+          "23.6",
+          "17",
+          "1000"
+        ],
+        [
+          "81012XX",
+          "1.25",
+          "37",
+          "0.21",
+          "1.5",
+          "0.30",
+          "2.1/2.2",
+          "15",
+          "14.6",
+          "22",
+          "1000"
+        ],
+        [
+          "81014XX",
+          "2",
+          "37",
+          "0.26",
+          "1.8",
+          "0.40",
+          "2.6/2.7",
+          "22",
+          "9.50",
+          "29",
+          "500"
         ]
       ],
+      "catalogueNo": "810",
       "info": {
         "features": [
-          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
-          "Highly resistant to EMI.",
-          "Noise immunity due to a low error rate."
+          "Flame retardant",
+          "Highly resistant against acids, lyes, petrol and diesel.",
+          "Extra flexible conductors with Electron beam cross linked PVC super thin wall insulation for smaller diameter and lesser weight.",
+          "Excellent flexibility.",
+          "Heat resistant."
         ],
         "technical": [
-          "Temperature : -40°C to + 105°C (3000hrs)",
-          "Max. Operating Voltage : 60V (DC)",
-          "Max. Mutual Capacitance @ 1 kHz : 92 pF/m (Core-Core)",
-          "Characteristic Impedance : 50 ± 3Ω",
-          "Velocity Ratio : 78%",
-          "Min. Bending radius : 5 x Cable OD (Single) 15 x Cable OD (Multiple)",
-          "Stripping force : (i) Conductor to core :10 -30 N (ii) Shield to sheath : 8 -25 N"
+          "Temperature Range : -40°C to +100°C (3000 Hours)",
+          "Standards : JASO D 611",
+          "Test Voltage : 1 kV",
+          "A : Low tension cables for automobiles",
+          "V : Vinyl insulated",
+          "SS : Very Thin wall type",
+          "X : Electron beam cross linked",
+          "f : Extra flexible"
         ],
         "application": [
-          "Wireless and antenna application",
-          "Used for interior lines for monitoring system, CCTV feeder lines, wiring between the camera",
-          "and control unit and video signal transmission.",
-          "Automotive radio antennas",
-          "Used for high-frequency signal transmission"
+          "Wire harness of low-tension electric circuits for automobiles.",
+          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
+          "Especially used for circuits requiring heat resistance."
         ],
         "construction": [
-          "Conductor : Annealed Bare Stranded Copper Conductor",
-          "Insulation : Foamed PP, Natural",
-          "Shielding : Aluminium mylar tape",
-          "Braiding : ATC",
-          "Sheath : Lead Free PVC, black",
-          "Automotive SieCar 105-302-3 Cables"
+          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102 bare conductor construction according to JASO D 611",
+          "Insulation : Electron beam cross linked PVC.",
+          "Colour : As per customer order.",
+          "Single core"
         ]
       }
     },
@@ -3933,209 +4153,6 @@
           "Conductor : Extra multi stranded bare copper Conductor construction according to volvo 1052521",
           "Insulation : Class 2",
           "Colour : As per customer order"
-        ]
-      }
-    },
-    {
-      "id": "f264eae11c",
-      "family": "automotive",
-      "name": "Automotive SieCar Cable ",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — No. of Wire x Size — Nos x",
-        "No. of Strands",
-        "Strand dia Nom.",
-        "Conductor Diameter (Nom)",
-        "Diameter Over Insulation Thickness",
-        "Laid Up Diameter (Nom)",
-        "Braiding wire dia (Nom)",
-        "Dia over Braiding (Nom)",
-        "Outer Sheath Thickness (Min/Nom)",
-        "Overall Diameter ( N o m )",
-        "Weight Approx.",
-        "Conductor Resistance a t 2 0 ° C (Max)"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "B9860604",
-          "4 x 0.5",
-          "19",
-          "0.182",
-          "0.92",
-          "1.70 ± 0.05",
-          "4.10 ± 0.2",
-          "0.10",
-          "4.6±0.2",
-          "0.50/0.70",
-          "6.0 ± 0.20",
-          "54",
-          "39"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
-          "Highly resistant to EMI.",
-          "Noise immunity due to a low error rate."
-        ],
-        "technical": [
-          "Temperature : -40°C to + 105°C (3000 hrs)",
-          "Test Voltage : 1 kV (AC) for 1 Minute",
-          "Max. Operating Voltage : 60V (DC)",
-          "Mutual Capacitance 1 kHz : ≤60 pF/m",
-          "Characteristic Impedance : 90 ± 15Ω (core-core)",
-          "Intra pair Skews & Inter pair skew : ≤ 250 ps/10m",
-          "Shielding effectiveness : ≥ 55 dB at 20MHz ≥ 40 dB at 1GHz",
-          "Min. Bending Radius : 5 x Cable OD 10 x Cable OD"
-        ],
-        "application": [
-          "Wireless and antenna application",
-          "Used for interior lines for monitoring system",
-          "CCTV feeder lines, wiring between the camera",
-          "and control unit and video signal transmission.",
-          "Automotive radio antennas",
-          "Used for high-frequency signal transmission"
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Copper Conductor",
-          "Insulation : Foamed PP",
-          "Core Identification : Green, Red, Blue & Black",
-          "Lay length (Nom) : 50mm",
-          "Shielding : Aluminium Mylar Tape",
-          "Braiding : ATC",
-          "Sheath : PVC, Black",
-          "Automotive SieCar 105-566 Cables"
-        ]
-      }
-    },
-    {
-      "id": "37fc732466",
-      "family": "automotive",
-      "name": "AVSSX f",
-      "headers": [
-        "Part Number",
-        "Nominal Cross Section Area",
-        "No. of Strands",
-        "Diameter of Single wire Max.",
-        "Conductor Diameter Approx",
-        "Insulation Wall Thickness (Nom)",
-        "Overall Cable Diameter (Nom/Max)",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20°C",
-        "Current Carrying Capacity",
-        "Standard Length*"
-      ],
-      "rows": [
-        [
-          "",
-          "mm²",
-          "Nos",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Kg/Km",
-          "Ω/km",
-          "Amps",
-          "mtrs"
-        ],
-        [
-          "81006XX",
-          "0.5",
-          "19",
-          "0.19",
-          "1.0",
-          "0.30",
-          "1.6/1.7",
-          "7",
-          "34.6",
-          "13",
-          "1000"
-        ],
-        [
-          "81008XX",
-          "0.75",
-          "19",
-          "0.23",
-          "1.2",
-          "0.30",
-          "1.8/1.9",
-          "10",
-          "23.6",
-          "17",
-          "1000"
-        ],
-        [
-          "81012XX",
-          "1.25",
-          "37",
-          "0.21",
-          "1.5",
-          "0.30",
-          "2.1/2.2",
-          "15",
-          "14.6",
-          "22",
-          "1000"
-        ],
-        [
-          "81014XX",
-          "2",
-          "37",
-          "0.26",
-          "1.8",
-          "0.40",
-          "2.6/2.7",
-          "22",
-          "9.50",
-          "29",
-          "500"
-        ]
-      ],
-      "catalogueNo": "810",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Highly resistant against acids, lyes, petrol and diesel.",
-          "Extra flexible conductors with Electron beam cross linked PVC super thin wall insulation for smaller diameter and lesser weight.",
-          "Excellent flexibility.",
-          "Heat resistant."
-        ],
-        "technical": [
-          "Temperature Range : -40°C to +100°C (3000 Hours)",
-          "Standards : JASO D 611",
-          "Test Voltage : 1 kV",
-          "A : Low tension cables for automobiles",
-          "V : Vinyl insulated",
-          "SS : Very Thin wall type",
-          "X : Electron beam cross linked",
-          "f : Extra flexible"
-        ],
-        "application": [
-          "Wire harness of low-tension electric circuits for automobiles.",
-          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
-          "Especially used for circuits requiring heat resistance."
-        ],
-        "construction": [
-          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102 bare conductor construction according to JASO D 611",
-          "Insulation : Electron beam cross linked PVC.",
-          "Colour : As per customer order.",
-          "Single core"
         ]
       }
     },
@@ -4675,103 +4692,89 @@
       }
     },
     {
-      "id": "a01ef9f74c",
+      "id": "f264eae11c",
       "family": "automotive",
-      "name": "AESSX",
+      "name": "Automotive SieCar Cable ",
       "headers": [
         "Part Number",
-        "Conductor Construction — Nominal Cross- Section mm²",
-        "No. of Strands Nos",
-        "Diameter of Single wire max. mm",
-        "Conductor Diameter Approx. mm",
-        "Insulation Wall Thickness Nom. mm",
-        "Overall Cable Diameter (Nom/Max) mm",
-        "Weight Approx. Kg/Km",
-        "Max. Conductor Resistance at 20°C Ω/km",
-        "Current Carrying Capacity Amps",
-        "Standard Length* mtrs"
+        "Conductor Construction — No. of Wire x Size — Nos x",
+        "No. of Strands",
+        "Strand dia Nom.",
+        "Conductor Diameter (Nom)",
+        "Diameter Over Insulation Thickness",
+        "Laid Up Diameter (Nom)",
+        "Braiding wire dia (Nom)",
+        "Dia over Braiding (Nom)",
+        "Outer Sheath Thickness (Min/Nom)",
+        "Overall Diameter ( N o m )",
+        "Weight Approx.",
+        "Conductor Resistance a t 2 0 ° C (Max)"
       ],
       "rows": [
         [
-          "81504XX",
-          "0.3",
-          "7",
-          "0.26",
-          "0.8",
-          "0.3",
-          "1.4/1.5",
-          "4",
-          "50.2",
-          "26",
-          "500"
+          "",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
         ],
         [
-          "81506XX",
-          "0.5",
-          "7",
-          "0.32",
-          "1.0",
-          "0.3",
-          "1.6/1.7",
-          "5",
-          "32.7",
-          "20",
-          "500"
-        ],
-        [
-          "81554XX",
-          "0.85",
+          "B9860604",
+          "4 x 0.5",
           "19",
-          "0.24",
-          "1.2",
-          "0.3",
-          "1.8/1.9",
-          "7",
-          "21.7",
-          "16",
-          "1000"
-        ],
-        [
-          "81512XX",
-          "1.25",
-          "19",
-          "0.29",
-          "1.5",
-          "0.3",
-          "2.1/2.2",
-          "10",
-          "14.9",
-          "12",
-          "500"
+          "0.182",
+          "0.92",
+          "1.70 ± 0.05",
+          "4.10 ± 0.2",
+          "0.10",
+          "4.6±0.2",
+          "0.50/0.70",
+          "6.0 ± 0.20",
+          "54",
+          "39"
         ]
       ],
-      "catalogueNo": "815",
       "info": {
         "features": [
-          "Flame retardant",
-          "Highly resistant against acids, lyes, petrol and diesel.",
-          "Flexible conductor with Electron beam cross linked polyethylene super thin wall insulation for smaller diameter and lesser weight.",
-          "Heat resistant"
+          "Supports High Bandwidth Levels, Easy to Install Resistant to physical damage, Less susceptible to noise interference compare to twisted pair.",
+          "Highly resistant to EMI.",
+          "Noise immunity due to a low error rate."
         ],
         "technical": [
-          "Temperature Range : -40°C to +120°C (3000 Hours)",
-          "Standard : JASO D 608 (Reference)",
-          "Test Voltage : 1 kV",
-          "A : Low tension cables for automobiles",
-          "E : Polyethylene insulated",
-          "SS : Very Thin wall type",
-          "X : Cross linked A c c r e d i t ations"
+          "Temperature : -40°C to + 105°C (3000 hrs)",
+          "Test Voltage : 1 kV (AC) for 1 Minute",
+          "Max. Operating Voltage : 60V (DC)",
+          "Mutual Capacitance 1 kHz : ≤60 pF/m",
+          "Characteristic Impedance : 90 ± 15Ω (core-core)",
+          "Intra pair Skews & Inter pair skew : ≤ 250 ps/10m",
+          "Shielding effectiveness : ≥ 55 dB at 20MHz ≥ 40 dB at 1GHz",
+          "Min. Bending Radius : 5 x Cable OD 10 x Cable OD"
         ],
         "application": [
-          "Wire harness of low-tension electric circuits for automobiles.",
-          "Used in motorcycles and other motor vehicles for starting, charging, lighting, signal and instrument panel circuits.",
-          "Especially used for circuits requiring heat resistance"
+          "Wireless and antenna application",
+          "Used for interior lines for monitoring system",
+          "CCTV feeder lines, wiring between the camera",
+          "and control unit and video signal transmission.",
+          "Automotive radio antennas",
+          "Used for high-frequency signal transmission"
         ],
         "construction": [
-          "Conductor : Soft-annealed electrolytic copper E-Cu ETP1 according to JIS C 3102, bare conductor construction According to JASO D 608 (Reference)",
-          "Insulation : Electron beam cross linked Polyethylene",
-          "Colour : As per customer order",
-          "Single Core"
+          "Conductor : Annealed Tinned Copper Conductor",
+          "Insulation : Foamed PP",
+          "Core Identification : Green, Red, Blue & Black",
+          "Lay length (Nom) : 50mm",
+          "Shielding : Aluminium Mylar Tape",
+          "Braiding : ATC",
+          "Sheath : PVC, Black",
+          "Automotive SieCar 105-566 Cables"
         ]
       }
     },
@@ -7072,7 +7075,8 @@
           "Sheath : PVC, Black or Customer request",
           "Automotive SieCar 105-462 Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/efed40d707.png?v=1784744005991"
     },
     {
       "id": "3692db4b93",
@@ -7223,7 +7227,8 @@
           "Colour : As per customer order",
           "Single Core"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/3692db4b93.png?v=1784743952162"
     },
     {
       "id": "2de3a6a9c0",
@@ -8678,16 +8683,16 @@
       "name": "HDEB",
       "headers": [
         "Part Number",
-        "Conductor Construction — Nominal Cross- Section mm",
-        "No. of Strands",
-        "Diameter of Single wire max.",
-        "Conductor Diameter Approx.",
-        "Insulation Wall Thickness Nom.",
-        "Overall Cable Diameter (Nom/Max)",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20°C",
-        "Current Carrying Capacity",
-        "Standard Length*"
+        "Conductor Construction — Nominal Cross- Section mm²",
+        "No. of Strands Nos",
+        "Diameter of Single wire max. mm",
+        "Conductor Diameter Approx. mm",
+        "Insulation Wall Thickness Nom. mm",
+        "Overall Cable Diameter (Nom/Max) mm",
+        "Weight Approx. Kg/Km",
+        "Max. Conductor Resistance at 20°C Ω/km",
+        "Current Carrying Capacity Amps",
+        "Standard Length* mtrs"
       ],
       "rows": [
         [
@@ -12489,7 +12494,8 @@
         "construction": [
           "Insulation Current Standard"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/b6d2052ec3.png?v=1784743995495"
     },
     {
       "id": "a5e3ab1829",
@@ -16950,7 +16956,8 @@
           "2 C oVloiuer w: As per customer order D",
           "Cable construction according to ISO 6722, Class A"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/4807a93188.png?v=1784743962785"
     },
     {
       "id": "f0b3fc81d1",
@@ -17179,7 +17186,8 @@
           "2000"
         ]
       ],
-      "catalogueNo": "A823"
+      "catalogueNo": "A823",
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/f0b3fc81d1.png?v=1784744009977"
     },
     {
       "id": "90279765ce",
@@ -17303,7 +17311,8 @@
           "500"
         ]
       ],
-      "catalogueNo": "A824"
+      "catalogueNo": "A824",
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/90279765ce.png?v=1784743978049"
     },
     {
       "id": "34dfa369be",
@@ -17606,7 +17615,8 @@
           "Colour : As per customer order",
           "Cable construction according to ISO 6722-1"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/34dfa369be.png?v=1784743948140"
     },
     {
       "id": "ff8901045c",
@@ -18094,7 +18104,8 @@
           "Brown-Violet-A40"
         ]
       ],
-      "catalogueNo": "A832"
+      "catalogueNo": "A832",
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/ff8901045c.png?v=1784744017237"
     },
     {
       "id": "bef124ac46",
@@ -18669,7 +18680,8 @@
           "500"
         ]
       ],
-      "catalogueNo": "A833"
+      "catalogueNo": "A833",
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/fd3685717a.png?v=1784744013703"
     },
     {
       "id": "c80c36a87b",
@@ -19268,7 +19280,8 @@
           "Colour : As per customer order",
           "Cable construction according to ISO 6722, Class C (Thin wall)"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/da06cc4d60.png?v=1784743999079"
     },
     {
       "id": "16d3a432af",
@@ -19419,7 +19432,8 @@
           "Colour : As per customer order",
           "Cable construction according to ISO 6722, Class C ( Ultra Thin wall)"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/16d3a432af.png?v=1784743940364"
     },
     {
       "id": "5b96d4b1fd",
@@ -21658,7 +21672,8 @@
           "Insulation : PE-X with properties according to ISO 6722, Class C",
           "Colour : As per customer order."
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/918aa7162a.png?v=1784743981566"
     },
     {
       "id": "d478d997b7",
@@ -29683,7 +29698,8 @@
           "Outer Sheath : Specially Formulated EBXL - Co-Polymer - AX 150",
           "Colour : As per customer order. Automotive ABS Sensor Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/103747bb44.jpg?v=1784743932390"
     },
     {
       "id": "ea7bf02379",
@@ -30692,7 +30708,8 @@
           "54.4"
         ]
       ],
-      "catalogueNo": "A638A"
+      "catalogueNo": "A638A",
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/3bf2f0e9cb.jpg?v=1784743955557"
     },
     {
       "id": "ab5465da08",
@@ -30775,7 +30792,8 @@
           "2 DO Vutieerswheath : PVC ST2 as per IS 5831",
           "Sheath Colour : As per customer order Automotive 5P3-30B Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/ab5465da08.png?v=1784743991881"
     },
     {
       "id": "2a86bdeee2",
@@ -30862,7 +30880,8 @@
           "Outer Sheath : Polyvinylchloride",
           "She2atDh C Voloier :w As per customer Request Automotive AR-3.0C/1.5C-2V Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/2a86bdeee2.png?v=1784743944246"
     },
     {
       "id": "d24688ab8c",
@@ -31025,7 +31044,8 @@
           "Outer Sheath : Polyvinylchloride - Black",
           "Sheath Color : As per customer request Automotive 1.5D - EXHV - AS Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/147633854d.png?v=1784743936347"
     },
     {
       "id": "74e7ada7e7",
@@ -31107,7 +31127,8 @@
           "Braiding : ATC (Coverage 95%)",
           "Outer Sheath : Heat Resistance Polyvinylchloride - Black. Automotive 1.5DS - QFB(TA) Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/74e7ada7e7.png?v=1784743974251"
     },
     {
       "id": "8125a66d29",
@@ -31459,7 +31480,8 @@
           "Outer Sheath : Polyvinylchloride (PVC)",
           "Sheath Color : Black Automotive 1.5CS-QEHV Cables"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/9a4cabd67f.png?v=1784743984566"
     },
     {
       "id": "b426cd68e3",
@@ -32851,7 +32873,8 @@
           "Insulation : Electron beam cross linked polyethylene.",
           "Colour : As per customer order."
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/4615ad403a.png?v=1784743959238"
     },
     {
       "id": "552ea5be10",
@@ -33023,7 +33046,8 @@
           "Insulation : Electron beam cross linked polyethylene.",
           "Screening : Tinned Copper"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/552ea5be10.png?v=1784743970937"
     },
     {
       "id": "562a9e6499",

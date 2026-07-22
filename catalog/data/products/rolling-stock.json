@@ -473,27 +473,16 @@
       "name": "BS EN 50306-2, Single Core, 300 V",
       "headers": [
         "Part Number",
-        "Cross Section (mm 2)",
+        "Cross Section (mm2)",
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
-        "Max. Conductor Diameter",
-        "Max. Conductor Resistance at 20 0C",
-        "Min. Insulatio Thickness",
-        "Outer Diameter n (mm) (Min) (Max)",
-        "",
+        "Max. Conductor Diameter mm",
+        "Max. Conductor Resistance at 20 0C (Ω/km)",
+        "Min. Insulatio Thickness mm",
+        "Outer Diameter n (mm) (Min)",
+        " (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
-        [
-          "",
-          "",
-          "",
-          "mm",
-          "Ω/km",
-          "mm",
-          "",
-          "",
-          ""
-        ],
         [
           "R55006XX*",
           "0.5",
@@ -550,7 +539,38 @@
           "25"
         ]
       ],
-      "catalogueNo": "R550"
+      "catalogueNo": "R550",
+      "info": {
+        "features": [
+          "Excellent resistance to high and low temperature",
+          "Outstanding Flame retardant",
+          "Halogen free",
+          "Thin walled with excellent flexibility",
+          "Resistance to oil, fuel, ozone and weathering.",
+          "Easy to strip",
+          "Low smoke density",
+          "Soldering iron resistant",
+          "Electron Beam Cross Linked.",
+          "Resistance to corona effect."
+        ],
+        "technical": [
+          "Temperature Range : -40°C to +105C.",
+          "Rated Voltage : 300 V AC",
+          "Specification : BS EN 50306-2 : 2020",
+          "Hazard Level Classification as per EN 45545-2, HL3",
+          "Conductor : BS EN 50306-2 : 2020",
+          "In addition to BS EN 50306 spec, cables also meet fire performance tests as per UNI CEI 11170-3, DIN 5510-2, NF F 16-101 NFPA -130, EN 45545"
+        ],
+        "application": [
+          "For mechanically protected installation in Rail / Bus and other transport vehicles.",
+          "Cables are used in Driver desks, Control panels, wiring harness in inside/outside the moving vehicles."
+        ],
+        "construction": [
+          "Conductor : Finely Stranded Annealed Electro Tinned Copper, (Unilay*)",
+          "Insulation : Cross Linked Ethylene Copolymer",
+          "Colour : White or as per customer order."
+        ]
+      }
     },
     {
       "id": "397d64273a",
