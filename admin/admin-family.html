@@ -85,8 +85,22 @@
     transition: background .15s;
   }
   .btn-danger-ghost:hover { background: #FEF2F2; }
+  .btn-danger-ghost.btn-sm { padding: 6px 12px; font-size: 12.5px; }
 
   .card-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+
+  .image-uploader { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .image-preview {
+    width: 96px; height: 96px; flex-shrink: 0; border-radius: 10px;
+    background: #fff; border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .image-preview img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .image-preview-empty { font-size: 11px; color: var(--text-dim); font-family: var(--mono); }
+  .image-uploader-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .image-upload-status { font-size: 12px; color: var(--text-dim); font-family: var(--mono); }
+  .image-upload-status.error { color: #B91C1C; }
+  .image-upload-status.success { color: #15803D; }
   @media (max-width: 480px) {
     .admin-topbar { padding: 12px 16px; }
     .admin-topbar .brand a span, .admin-topbar .brand a { font-size: 12.5px; }
@@ -346,6 +360,29 @@
 
         <div class="card-section">
           <div class="card-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.8"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.8"/></svg>
+            2D Product Image
+          </div>
+          <div class="image-uploader">
+            <div class="image-preview" id="imagePreview">
+              ${s.image_2d
+                ? `<img src="${escapeAttr(s.image_2d)}" alt="">`
+                : `<span class="image-preview-empty">No image</span>`}
+            </div>
+            <div class="image-uploader-actions">
+              <input type="file" id="imageFileInput" accept="image/png,image/jpeg,image/webp" style="display:none;">
+              <button class="btn btn-ghost btn-sm" id="imageUploadBtn" type="button">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 16V4M12 4l-5 5M12 4l5 5M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ${s.image_2d ? 'Replace Image' : 'Upload Image'}
+              </button>
+              <button class="btn btn-danger-ghost btn-sm" id="imageRemoveBtn" type="button" style="${s.image_2d ? '' : 'display:none;'}">Remove</button>
+              <span id="imageUploadStatus" class="image-upload-status"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" stroke="currentColor" stroke-width="1.8"/></svg>
             Application / Construction / Technical / Features
           </div>
@@ -446,6 +483,55 @@
         renderEditor();
       });
       document.getElementById('saveBtn').addEventListener('click', () => saveSeries(s));
+
+      // ── 2D product image ──────────────────────────────────────────
+      const imgStatus = document.getElementById('imageUploadStatus');
+      function setImageStatus(cls, text) {
+        imgStatus.className = 'image-upload-status' + (cls ? ' ' + cls : '');
+        imgStatus.textContent = text;
+      }
+      document.getElementById('imageUploadBtn').addEventListener('click', () => {
+        if (s._isNew) { alert('Save this type first (it needs to exist in the catalogue before you can attach an image), then upload.'); return; }
+        document.getElementById('imageFileInput').click();
+      });
+      document.getElementById('imageFileInput').addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        e.target.value = '';
+        if (!file) return;
+        const okTypes = ['image/png', 'image/jpeg', 'image/webp'];
+        if (!okTypes.includes(file.type)) { setImageStatus('error', 'Use PNG, JPG or WebP.'); return; }
+        if (file.size > 4 * 1024 * 1024) { setImageStatus('error', 'Image must be under 4MB.'); return; }
+        setImageStatus('', 'Uploading…');
+        try {
+          const base64 = await new Promise((resolve, reject) => {
+            const r = new FileReader();
+            r.onload = () => resolve(r.result.split(',')[1]);
+            r.onerror = reject;
+            r.readAsDataURL(file);
+          });
+          const res = await SiechemAdmin.api('/api/admin-image', {
+            method: 'POST',
+            body: JSON.stringify({ family: familyId, id: s.id, mime: file.type, base64 })
+          });
+          s.image_2d = res.url;
+          setImageStatus('success', 'Uploaded');
+          renderEditor();
+        } catch (err) {
+          setImageStatus('error', 'Upload failed: ' + err.message);
+        }
+      });
+      const removeBtn = document.getElementById('imageRemoveBtn');
+      if (removeBtn) removeBtn.addEventListener('click', async () => {
+        if (!confirm('Remove this image?')) return;
+        setImageStatus('', 'Removing…');
+        try {
+          await SiechemAdmin.api('/api/admin-image', { method: 'DELETE', body: JSON.stringify({ family: familyId, id: s.id }) });
+          s.image_2d = null;
+          renderEditor();
+        } catch (err) {
+          setImageStatus('error', 'Remove failed: ' + err.message);
+        }
+      });
     }
 
     // Splits "Wire Size (AWG)" -> { label: "Wire Size", unit: "(AWG)" } so the

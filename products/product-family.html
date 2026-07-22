@@ -609,12 +609,16 @@
     }
     FAM = fams.families.find(f => f.id === FAMILY_ID) || { name: FAMILY_ID, segment: '', summary: '' };
 
-    // Optional 2D product renders (assets/products-2d/manifest.json) — absent
-    // for most families; cards fall back to the text-only layout.
+    // 2D product renders: admin-uploaded, published as each series' own
+    // `image2d` field (same source of truth as everything else on this page).
+    // Falls back to the legacy static manifest for any series not yet
+    // migrated/republished, so nothing disappears mid-transition.
+    IMG2D = {};
     try {
       const m = await fetch('/assets/products-2d/manifest.json').then(r => r.ok ? r.json() : {});
-      IMG2D = m[FAMILY_ID] || {};
-    } catch (e) { IMG2D = {}; }
+      Object.assign(IMG2D, m[FAMILY_ID] || {});
+    } catch (e) { /* no legacy manifest for this family */ }
+    prod.series.forEach(s => { if (s.image2d) IMG2D[s.id] = s.image2d; });
 
     SERIES = prod.series.map((s, i) => {
       const display = cleanName(s.name, i);

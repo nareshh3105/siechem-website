@@ -796,10 +796,12 @@
 
   async function loadTypes() {
     const d = await (await fetch('/catalog/data/products/aero-44.json')).json();
+    IMG2D = {};
     try {
       const m = await fetch('/assets/products-2d/manifest.json').then(r => r.ok ? r.json() : {});
-      IMG2D = m['aero-44'] || {};
-    } catch (e) { IMG2D = {}; }
+      Object.assign(IMG2D, m['aero-44'] || {});
+    } catch (e) { /* no legacy manifest */ }
+    d.series.forEach(s => { if (s.image2d) IMG2D[s.id] = s.image2d; });
     TYPES = d.series.map(deriveType);
     applyFilters();
   }
