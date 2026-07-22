@@ -12,6 +12,7 @@ screenshots/
 !package.json
 !vercel.json
 !package-lock.json
+!assets/products-2d/manifest.json
 
 # Never commit the raw catalogue PDFs (1.9GB, exceeds GitHub's 100MB file limit)
 catalogue-pdfs/
