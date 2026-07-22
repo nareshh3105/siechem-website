@@ -1,6 +1,1032 @@
 {
   "series": [
     {
+      "id": "b9569afd5d",
+      "family": "aero-55",
+      "name": "AERO 55 600V Single Core Statistical Process Controlled Shielded Airframe Wires",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "55P41085XXYY",
+          "26",
+          "0.13",
+          "19",
+          "0.10",
+          "1.54",
+          "6.54"
+        ],
+        [
+          "55P41084XXYY",
+          "24",
+          "0.20",
+          "19",
+          "0.13",
+          "1.67",
+          "7.86"
+        ],
+        [
+          "55P41083XXYY",
+          "22",
+          "0.33",
+          "19",
+          "0.16",
+          "1.82",
+          "9.81"
+        ],
+        [
+          "55P41082XXYY",
+          "20",
+          "0.52",
+          "19",
+          "0.20",
+          "2.02",
+          "12.83"
+        ],
+        [
+          "55P41081XXYY",
+          "18",
+          "0.82",
+          "19",
+          "0.25",
+          "2.25",
+          "17.01"
+        ],
+        [
+          "55P41080XXYY",
+          "16",
+          "1.31",
+          "19",
+          "0.29",
+          "2.46",
+          "20.36"
+        ],
+        [
+          "55P41079XXYY",
+          "14",
+          "2.08",
+          "19",
+          "0.36",
+          "2.81",
+          "28.69"
+        ],
+        [
+          "55P41078XXYY",
+          "12",
+          "3.31",
+          "37",
+          "0.32",
+          "3.32",
+          "40.73"
+        ],
+        [
+          "55P41077XXYY",
+          "10",
+          "5.26",
+          "37",
+          "0.40",
+          "4.00",
+          "59.90"
+        ]
+      ],
+      "catalogueNo": "55P410",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Medium weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : Radiation Cross-Linked Specially Formulated ETFE",
+          "(Ethylene Tetrafluoroethylene)",
+          "Single Core",
+          "Colour : As Per Customer Order"
+        ]
+      }
+    },
+    {
+      "id": "222b835dc9",
+      "family": "aero-55",
+      "name": "AERO 55 600V Twisted Twin Core Statistical Process Controlled Shielded Airframe Cables",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "55P5108502",
+          "26",
+          "0.13",
+          "2",
+          "19",
+          "0.10",
+          "2.35",
+          "11.34"
+        ],
+        [
+          "55P5108402",
+          "24",
+          "0.20",
+          "2",
+          "19",
+          "0.13",
+          "2.90",
+          "13.90"
+        ],
+        [
+          "55P5108302",
+          "22",
+          "0.33",
+          "2",
+          "19",
+          "0.16",
+          "2.91",
+          "17.89"
+        ],
+        [
+          "55P5108202",
+          "20",
+          "0.52",
+          "2",
+          "19",
+          "0.20",
+          "3.32",
+          "23.84"
+        ],
+        [
+          "55P5108102",
+          "18",
+          "0.82",
+          "2",
+          "19",
+          "0.25",
+          "3.80",
+          "32.10"
+        ],
+        [
+          "55P5108002",
+          "16",
+          "1.31",
+          "2",
+          "19",
+          "0.29",
+          "4.18",
+          "39.00"
+        ],
+        [
+          "55P5107902",
+          "14",
+          "2.08",
+          "2",
+          "19",
+          "0.36",
+          "4.94",
+          "55.21"
+        ],
+        [
+          "55P5107802",
+          "12",
+          "3.31",
+          "2",
+          "37",
+          "0.32",
+          "5.94",
+          "80.23"
+        ],
+        [
+          "55P5107702",
+          "10",
+          "5.26",
+          "2",
+          "37",
+          "0.40",
+          "7.41",
+          "123.65"
+        ]
+      ],
+      "catalogueNo": "55P510",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Medium weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : Radiation Cross-Linked Specially Formulated ETFE",
+          "(Ethylene Tetrafluoroethylene)",
+          "No of Core  :  2",
+          "Colour : As Per Customer Order"
+        ]
+      }
+    },
+    {
+      "id": "38e41b42d4",
+      "family": "aero-55",
+      "name": "ATC Sie-Foam Skinned, Twin Radio Frequency Cable",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "2011118402",
+          "24",
+          "0.20",
+          "2",
+          "19",
+          "0.127",
+          "5.8",
+          "46"
+        ]
+      ],
+      "catalogueNo": "2011118402",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Electrical Characteristics :",
+          "Characteristic Impedance : 120 ± 15 Ω, Method C",
+          "at 1 - 100 MHZ",
+          "Mutual Capacitance         :   12.5 pF/ft. (nominal)",
+          "Velocity of Propagation    :  77 % (nominal)",
+          "Electrical:",
+          "Conductor Resistance     :   86.9 Ω/km",
+          "Insulation Resistance      :   10,000 megohms",
+          "(minimum) for 1000 ft.",
+          "Spark Test                       :   1.0 kV (rms) 60HZ",
+          "Impulse Test                    :   6.0 kV (peak)",
+          "Voltage withstand",
+          "(Dielectric)                       :   1000 volts (rms) (minimum)",
+          "Environmental:",
+          "Aging Stability                 :   135°C / -55°C / 4.50 inch",
+          "mandrel",
+          "Flammability                    :    Method B",
+          "Heat Shock                     :    225°C",
+          "Low Temperature",
+          "Cold Bend                       :    - 55°C/4.50 inch mandrel",
+          "Voltage Withstand",
+          "(Post Environmental)      :    1000 volts (rms),1 minute",
+          "Operating Temperature  :     -45°C to +150°C"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "Insulation : Sie Foam",
+          "Tape         : Al Mylar Tape",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : AX-150",
+          "No of Cores   :  2",
+          "Colour        : White/Light Blue",
+          "Jacket Colour  : White"
+        ]
+      }
+    },
+    {
+      "id": "b1b68ae7e5",
+      "family": "aero-55",
+      "name": "AERO 55 600 V Single Core Shielded Airframe Wires",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Max.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "55G44085XXYY",
+          "26",
+          "0.13",
+          "19",
+          "0.10",
+          "1.87",
+          "7.89"
+        ],
+        [
+          "55G44084XXYY",
+          "24",
+          "0.20",
+          "19",
+          "0.13",
+          "2.00",
+          "9.37"
+        ],
+        [
+          "55G44083XXYY",
+          "22",
+          "0.33",
+          "19",
+          "0.16",
+          "2.15",
+          "11.76"
+        ],
+        [
+          "55G44082XXYY",
+          "20",
+          "0.52",
+          "19",
+          "0.20",
+          "2.35",
+          "14.88"
+        ],
+        [
+          "55G44081XXYY",
+          "18",
+          "0.82",
+          "19",
+          "0.25",
+          "2.63",
+          "19.79"
+        ],
+        [
+          "55G44080XXYY",
+          "16",
+          "1.31",
+          "19",
+          "0.29",
+          "2.83",
+          "23.81"
+        ],
+        [
+          "55G44079XXYY",
+          "14",
+          "2.08",
+          "19",
+          "0.36",
+          "3.27",
+          "33.03"
+        ],
+        [
+          "55G44078XXYY",
+          "12",
+          "3.31",
+          "37",
+          "0.32",
+          "3.70",
+          "45.09"
+        ],
+        [
+          "55G44077XXYY",
+          "10",
+          "5.26",
+          "37",
+          "0.40",
+          "4.21",
+          "66.97"
+        ]
+      ],
+      "catalogueNo": "55G440",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Normal weight, Airframe",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : Radiation Cross-Linked Specially Formulated ETFE",
+          "(Ethylene Tetrafluoroethylene)",
+          "Single Core",
+          "Colour : As Per Customer Order."
+        ]
+      }
+    },
+    {
+      "id": "3a04e3fae0",
+      "family": "aero-55",
+      "name": "AERO 55 600V Single Core Unsheathed Wires",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "55G00087XX",
+          "30",
+          "0.051",
+          "7",
+          "0.10",
+          "0.63",
+          "0.98"
+        ],
+        [
+          "55G00086XX",
+          "28",
+          "0.08",
+          "7",
+          "0.13",
+          "0.70",
+          "1.35"
+        ],
+        [
+          "55G00085XX",
+          "26",
+          "0.13",
+          "19",
+          "0.10",
+          "0.83",
+          "2.08"
+        ],
+        [
+          "55G00084XX",
+          "24",
+          "0.20",
+          "19",
+          "0.13",
+          "0.96",
+          "2.98"
+        ],
+        [
+          "55G00083XX",
+          "22",
+          "0.33",
+          "19",
+          "0.16",
+          "1.11",
+          "4.17"
+        ],
+        [
+          "55G00082XX",
+          "20",
+          "0.52",
+          "19",
+          "0.20",
+          "1.29",
+          "6.40"
+        ],
+        [
+          "55G00081XX",
+          "18",
+          "0.82",
+          "19",
+          "0.25",
+          "1.54",
+          "9.67"
+        ],
+        [
+          "55G00080XX",
+          "16",
+          "1.31",
+          "19",
+          "0.29",
+          "1.75",
+          "12.35"
+        ],
+        [
+          "55G00079XX",
+          "14",
+          "2.08",
+          "19",
+          "0.36",
+          "2.22",
+          "19.34"
+        ],
+        [
+          "55G00078XX",
+          "12",
+          "3.31",
+          "37",
+          "0.32",
+          "2.64",
+          "29.32"
+        ],
+        [
+          "55G00077XX",
+          "10",
+          "5.26",
+          "37",
+          "0.40",
+          "3.27",
+          "47.32"
+        ],
+        [
+          "55G00076XX",
+          "8",
+          "8.37",
+          "133",
+          "0.29",
+          "4.79",
+          "87.50"
+        ]
+      ],
+      "catalogueNo": "55G000",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working",
+          "environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor       :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, light weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Single core",
+          "Colour : As Per Customer Order."
+        ]
+      }
+    },
+    {
+      "id": "6da85d0f0c",
+      "family": "aero-55",
+      "name": "AERO 55 600V Twisted Twin Core Cables",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "55G1008702",
+          "30",
+          "0.051",
+          "2",
+          "7",
+          "0.10",
+          "1.29",
+          "1.94"
+        ],
+        [
+          "55G1008602",
+          "28",
+          "0.08",
+          "2",
+          "7",
+          "0.13",
+          "1.44",
+          "2.68"
+        ],
+        [
+          "55G1008502",
+          "26",
+          "0.13",
+          "2",
+          "19",
+          "0.10",
+          "1.69",
+          "4.16"
+        ],
+        [
+          "55G1008402",
+          "24",
+          "0.20",
+          "2",
+          "19",
+          "0.13",
+          "1.95",
+          "5.96"
+        ],
+        [
+          "55G1008302",
+          "22",
+          "0.33",
+          "2",
+          "19",
+          "0.16",
+          "2.25",
+          "8.63"
+        ],
+        [
+          "55G1008202",
+          "20",
+          "0.52",
+          "2",
+          "19",
+          "0.20",
+          "2.68",
+          "13.24"
+        ],
+        [
+          "55G1008102",
+          "18",
+          "0.82",
+          "2",
+          "19",
+          "0.25",
+          "3.21",
+          "20.09"
+        ],
+        [
+          "55G1008002",
+          "16",
+          "1.31",
+          "2",
+          "19",
+          "0.29",
+          "3.60",
+          "25.75"
+        ],
+        [
+          "55G1007902",
+          "14",
+          "2.08",
+          "2",
+          "19",
+          "0.36",
+          "4.49",
+          "39.58"
+        ],
+        [
+          "55G1007802",
+          "12",
+          "3.31",
+          "2",
+          "37",
+          "0.32",
+          "5.40",
+          "59.97"
+        ],
+        [
+          "55G1007702",
+          "10",
+          "5.26",
+          "2",
+          "37",
+          "0.40",
+          "6.67",
+          "96.58"
+        ],
+        [
+          "55G1007602",
+          "8",
+          "8.37",
+          "2",
+          "133",
+          "0.29",
+          "9.82",
+          "178.58"
+        ]
+      ],
+      "catalogueNo": "55G100",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working",
+          "environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, light weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "No of Cores : 2",
+          "Colour : As Per Customer Order."
+        ]
+      }
+    },
+    {
+      "id": "6573ed1eb4",
+      "family": "aero-55",
+      "name": "ATC Sie-Foam Skinned, Twin Axial Cable",
+      "headers": [
+        "Part Number",
+        "Wire Size",
+        "Cross Section Area",
+        "No.of Cores",
+        "No.of Strands",
+        "Diameter of Single Wire (Nom.)",
+        "Overall Diameter (Nom.)",
+        "Cable Weight (Approx.)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Sq.mm",
+          "Nos.",
+          "Nos.",
+          "mm",
+          "mm",
+          "kg/km"
+        ],
+        [
+          "0011118402",
+          "24",
+          "0.20",
+          "2",
+          "7",
+          "0.202",
+          "5.7",
+          "45"
+        ]
+      ],
+      "catalogueNo": "0011118402",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Electrical Characteristics :",
+          "Characteristic Impedance : 100 ± 15 Ω, Method D",
+          "at 1 - 100 MHZ",
+          "Mutual Capacitance         :   13.6 pF/ft. (nominal)",
+          "Velocity of Propagation    :  76 % (nominal)",
+          "Electrical:",
+          "Conductor Resistance     :   86.0 Ω/km",
+          "Insulation Resistance      :   10,000 megohms",
+          "(minimum) for 1000 ft.",
+          "Spark Test                       :   1.0 kV (rms)",
+          "Impulse Test                    :   6.0 kV (peak)",
+          "Voltage withstand",
+          "(Dielectric)                       :   1000 volts (rms) (minimum)",
+          "Environmental:",
+          "Flammability                    :    Method C",
+          "Heat Shock                     :    225°C",
+          "Low Temperature",
+          "Cold Bend                       :    - 55°C/4.50 inch mandrel",
+          "Voltage Withstand",
+          "(Post Environmental)      :    1000 volts (rms),1 minute",
+          "Operating Temperature  :     -45°C to +150°C"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "Insulation : Sie Foam",
+          "Tape         : Al Mylar Tape",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : AX-150",
+          "No of Cores   :  2",
+          "Colour        : White/Tan",
+          "Jacket Colour  : White"
+        ]
+      }
+    },
+    {
       "id": "01317b9281",
       "family": "aero-55",
       "name": "AERO 55 600V Multicore Sheathed Cable",
@@ -296,376 +1322,6 @@
       }
     },
     {
-      "id": "6da85d0f0c",
-      "family": "aero-55",
-      "name": "AERO 55 600V Twisted Twin Core Cables",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Cores",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
-        ],
-        [
-          "55G1008702",
-          "30",
-          "0.051",
-          "2",
-          "7",
-          "0.10",
-          "1.29",
-          "1.94"
-        ],
-        [
-          "55G1008602",
-          "28",
-          "0.08",
-          "2",
-          "7",
-          "0.13",
-          "1.44",
-          "2.68"
-        ],
-        [
-          "55G1008502",
-          "26",
-          "0.13",
-          "2",
-          "19",
-          "0.10",
-          "1.69",
-          "4.16"
-        ],
-        [
-          "55G1008402",
-          "24",
-          "0.20",
-          "2",
-          "19",
-          "0.13",
-          "1.95",
-          "5.96"
-        ],
-        [
-          "55G1008302",
-          "22",
-          "0.33",
-          "2",
-          "19",
-          "0.16",
-          "2.25",
-          "8.63"
-        ],
-        [
-          "55G1008202",
-          "20",
-          "0.52",
-          "2",
-          "19",
-          "0.20",
-          "2.68",
-          "13.24"
-        ],
-        [
-          "55G1008102",
-          "18",
-          "0.82",
-          "2",
-          "19",
-          "0.25",
-          "3.21",
-          "20.09"
-        ],
-        [
-          "55G1008002",
-          "16",
-          "1.31",
-          "2",
-          "19",
-          "0.29",
-          "3.60",
-          "25.75"
-        ],
-        [
-          "55G1007902",
-          "14",
-          "2.08",
-          "2",
-          "19",
-          "0.36",
-          "4.49",
-          "39.58"
-        ],
-        [
-          "55G1007802",
-          "12",
-          "3.31",
-          "2",
-          "37",
-          "0.32",
-          "5.40",
-          "59.97"
-        ],
-        [
-          "55G1007702",
-          "10",
-          "5.26",
-          "2",
-          "37",
-          "0.40",
-          "6.67",
-          "96.58"
-        ],
-        [
-          "55G1007602",
-          "8",
-          "8.37",
-          "2",
-          "133",
-          "0.29",
-          "9.82",
-          "178.58"
-        ]
-      ],
-      "catalogueNo": "55G100",
-      "info": {
-        "features": [
-          "Insulation does not shrink in hostile working",
-          "environment .",
-          "Better cut though resistance characteristics",
-          "Single or dual wall constructions.",
-          "Small size and light weight.",
-          "No melting or dripping due to prolonging excess heat because of EBXL process.",
-          "Resistance to soldering iron & over load.",
-          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
-          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
-          "Outstanding electrical arc tracking resistance in wet",
-          "and dry conditions.",
-          "Very low toxic.",
-          "Mechanical ruggedness.",
-          "Good flexibility.",
-          "Excellent scrape abrasion.",
-          "RoHS Compliant."
-        ],
-        "technical": [
-          "Temperature Rating",
-          "i) Tin Plated Conductor        :  -65°C to + 150°C",
-          "ii) Silver or Nickel Plated",
-          "Conductor                            :  -65°C to + 200°C",
-          "Voltage Rating                     :  600V, light weight",
-          "Scrape Abrasion                  :  >100 cycles",
-          "Flexing Endurance              :  >1000 cycles",
-          "Shrinkage                            :  < 1 %",
-          "Thermal Endurance             :  200°C, 10000h",
-          "Permittivity at 1KHz             :  2.7",
-          "Dissipation Factor               :  0.001"
-        ],
-        "application": [
-          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Copper Conductor",
-          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
-          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
-          "Tetrafluoroethylene)",
-          "No of Cores : 2",
-          "Colour : As Per Customer Order."
-        ]
-      }
-    },
-    {
-      "id": "3a04e3fae0",
-      "family": "aero-55",
-      "name": "AERO 55 600V Single Core Unsheathed Wires",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
-        ],
-        [
-          "55G00087XX",
-          "30",
-          "0.051",
-          "7",
-          "0.10",
-          "0.63",
-          "0.98"
-        ],
-        [
-          "55G00086XX",
-          "28",
-          "0.08",
-          "7",
-          "0.13",
-          "0.70",
-          "1.35"
-        ],
-        [
-          "55G00085XX",
-          "26",
-          "0.13",
-          "19",
-          "0.10",
-          "0.83",
-          "2.08"
-        ],
-        [
-          "55G00084XX",
-          "24",
-          "0.20",
-          "19",
-          "0.13",
-          "0.96",
-          "2.98"
-        ],
-        [
-          "55G00083XX",
-          "22",
-          "0.33",
-          "19",
-          "0.16",
-          "1.11",
-          "4.17"
-        ],
-        [
-          "55G00082XX",
-          "20",
-          "0.52",
-          "19",
-          "0.20",
-          "1.29",
-          "6.40"
-        ],
-        [
-          "55G00081XX",
-          "18",
-          "0.82",
-          "19",
-          "0.25",
-          "1.54",
-          "9.67"
-        ],
-        [
-          "55G00080XX",
-          "16",
-          "1.31",
-          "19",
-          "0.29",
-          "1.75",
-          "12.35"
-        ],
-        [
-          "55G00079XX",
-          "14",
-          "2.08",
-          "19",
-          "0.36",
-          "2.22",
-          "19.34"
-        ],
-        [
-          "55G00078XX",
-          "12",
-          "3.31",
-          "37",
-          "0.32",
-          "2.64",
-          "29.32"
-        ],
-        [
-          "55G00077XX",
-          "10",
-          "5.26",
-          "37",
-          "0.40",
-          "3.27",
-          "47.32"
-        ],
-        [
-          "55G00076XX",
-          "8",
-          "8.37",
-          "133",
-          "0.29",
-          "4.79",
-          "87.50"
-        ]
-      ],
-      "catalogueNo": "55G000",
-      "info": {
-        "features": [
-          "Insulation does not shrink in hostile working",
-          "environment .",
-          "Better cut though resistance characteristics",
-          "Single or dual wall constructions.",
-          "Small size and light weight.",
-          "No melting or dripping due to prolonging excess heat because of EBXL process.",
-          "Resistance to soldering iron & over load.",
-          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
-          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
-          "Outstanding electrical arc tracking resistance in wet",
-          "and dry conditions.",
-          "Very low toxic.",
-          "Mechanical ruggedness.",
-          "Good flexibility.",
-          "Excellent scrape abrasion.",
-          "RoHS Compliant."
-        ],
-        "technical": [
-          "Temperature Rating",
-          "i) Tin Plated Conductor        :  -65°C to + 150°C",
-          "ii) Silver or Nickel Plated",
-          "Conductor       :  -65°C to + 200°C",
-          "Voltage Rating                     :  600V, light weight",
-          "Scrape Abrasion                  :  >100 cycles",
-          "Flexing Endurance              :  >1000 cycles",
-          "Shrinkage                            :  < 1 %",
-          "Thermal Endurance             :  200°C, 10000h",
-          "Permittivity at 1KHz             :  2.7",
-          "Dissipation Factor               :  0.001"
-        ],
-        "application": [
-          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Copper Conductor",
-          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
-          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
-          "Tetrafluoroethylene)",
-          "Single core",
-          "Colour : As Per Customer Order."
-        ]
-      }
-    },
-    {
       "id": "5e631863a7",
       "family": "aero-55",
       "name": "AERO 55 600V Twisted Twin Core Shielded Cables",
@@ -821,7 +1477,53 @@
           "226.15"
         ]
       ],
-      "catalogueNo": "55G500"
+      "catalogueNo": "55G500",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, light weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : Radiation Cross-Linked Specially Formulated ETFE",
+          "(Ethylene Tetrafluoroethylene)",
+          "No of Cores : 2 & 4",
+          "Colour : As Per Customer Order."
+        ]
+      }
     },
     {
       "id": "83c802333d",
@@ -928,7 +1630,50 @@
           "48.3"
         ]
       ],
-      "catalogueNo": "55G240"
+      "catalogueNo": "55G240",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Normal weight, Airframe",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Single Core",
+          "Colour : As Per Customer Order."
+        ]
+      }
     },
     {
       "id": "a22a6eb3f6",
@@ -1046,114 +1791,50 @@
           "98.96"
         ]
       ],
-      "catalogueNo": "55G140"
-    },
-    {
-      "id": "b1b68ae7e5",
-      "family": "aero-55",
-      "name": "AERO 55 600 V Single Core Shielded Airframe Wires",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Max.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
+      "catalogueNo": "55G140",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
         ],
-        [
-          "55G44085XXYY",
-          "26",
-          "0.13",
-          "19",
-          "0.10",
-          "1.87",
-          "7.89"
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Normal weight, Airframe",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
         ],
-        [
-          "55G44084XXYY",
-          "24",
-          "0.20",
-          "19",
-          "0.13",
-          "2.00",
-          "9.37"
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
         ],
-        [
-          "55G44083XXYY",
-          "22",
-          "0.33",
-          "19",
-          "0.16",
-          "2.15",
-          "11.76"
-        ],
-        [
-          "55G44082XXYY",
-          "20",
-          "0.52",
-          "19",
-          "0.20",
-          "2.35",
-          "14.88"
-        ],
-        [
-          "55G44081XXYY",
-          "18",
-          "0.82",
-          "19",
-          "0.25",
-          "2.63",
-          "19.79"
-        ],
-        [
-          "55G44080XXYY",
-          "16",
-          "1.31",
-          "19",
-          "0.29",
-          "2.83",
-          "23.81"
-        ],
-        [
-          "55G44079XXYY",
-          "14",
-          "2.08",
-          "19",
-          "0.36",
-          "3.27",
-          "33.03"
-        ],
-        [
-          "55G44078XXYY",
-          "12",
-          "3.31",
-          "37",
-          "0.32",
-          "3.70",
-          "45.09"
-        ],
-        [
-          "55G44077XXYY",
-          "10",
-          "5.26",
-          "37",
-          "0.40",
-          "4.21",
-          "66.97"
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "No of Cores : 2",
+          "Colour : As Per Customer Order."
         ]
-      ],
-      "catalogueNo": "55G440"
+      }
     },
     {
       "id": "460c473d9b",
@@ -1271,7 +1952,53 @@
           "127.54"
         ]
       ],
-      "catalogueNo": "55G540"
+      "catalogueNo": "55G540",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Normal weight, Airframe",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Shielding  : Annealed Tinned Copper.",
+          "Outer sheath : Radiation Cross-Linked Specially Formulated ETFE",
+          "(Ethylene Tetrafluoroethylene)",
+          "No.of cores : 2",
+          "Colour : As Per Customer Order."
+        ]
+      }
     },
     {
       "id": "ec3d1dc3b7",
@@ -1378,7 +2105,50 @@
           "46.31"
         ]
       ],
-      "catalogueNo": "55P210"
+      "catalogueNo": "55P210",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
+        ],
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Medium weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
+        ],
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "Single cores",
+          "Colour : As Per Customer Order"
+        ]
+      }
     },
     {
       "id": "4bbd64c22c",
@@ -1486,308 +2256,50 @@
           "93.92"
         ]
       ],
-      "catalogueNo": "55P110"
-    },
-    {
-      "id": "b9569afd5d",
-      "family": "aero-55",
-      "name": "AERO 55 600V Single Core Statistical Process Controlled Shielded Airframe Wires",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
+      "catalogueNo": "55P110",
+      "info": {
+        "features": [
+          "Insulation does not shrink in hostile working environment .",
+          "Better cut though resistance characteristics",
+          "Single or dual wall constructions.",
+          "Small size and light weight.",
+          "No melting or dripping due to prolonging excess heat because of EBXL process.",
+          "Resistance to soldering iron & over load.",
+          "Excellent chemical resistance to many acids, carbon solvents, fuels, lubricants, missile fuels, oxidizers etc.",
+          "Temperature rating -65°C to + 200°C [-85°F to +392°F], stable installed performance in very hot, extremely cold and high vacuum conditions",
+          "Outstanding electrical arc tracking resistance in wet",
+          "and dry conditions.",
+          "Very low toxic.",
+          "Mechanical ruggedness.",
+          "Good flexibility.",
+          "Excellent scrape abrasion.",
+          "RoHS Compliant."
         ],
-        [
-          "55P41085XXYY",
-          "26",
-          "0.13",
-          "19",
-          "0.10",
-          "1.54",
-          "6.54"
+        "technical": [
+          "Temperature Rating",
+          "i) Tin Plated Conductor        :  -65°C to + 150°C",
+          "ii) Silver or Nickel Plated",
+          "Conductor                            :  -65°C to + 200°C",
+          "Voltage Rating                     :  600V, Medium weight",
+          "Scrape Abrasion                  :  >100 cycles",
+          "Flexing Endurance              :  >1000 cycles",
+          "Shrinkage                            :  < 1 %",
+          "Thermal Endurance             :  200°C, 10000h",
+          "Permittivity at 1KHz             :  2.7",
+          "Dissipation Factor               :  0.001"
         ],
-        [
-          "55P41084XXYY",
-          "24",
-          "0.20",
-          "19",
-          "0.13",
-          "1.67",
-          "7.86"
+        "application": [
+          "Hook up signal wire & cables used in aircraft, avionics, military electronics, satellites, helicopters, missiles, automobiles and appliances."
         ],
-        [
-          "55P41083XXYY",
-          "22",
-          "0.33",
-          "19",
-          "0.16",
-          "1.82",
-          "9.81"
-        ],
-        [
-          "55P41082XXYY",
-          "20",
-          "0.52",
-          "19",
-          "0.20",
-          "2.02",
-          "12.83"
-        ],
-        [
-          "55P41081XXYY",
-          "18",
-          "0.82",
-          "19",
-          "0.25",
-          "2.25",
-          "17.01"
-        ],
-        [
-          "55P41080XXYY",
-          "16",
-          "1.31",
-          "19",
-          "0.29",
-          "2.46",
-          "20.36"
-        ],
-        [
-          "55P41079XXYY",
-          "14",
-          "2.08",
-          "19",
-          "0.36",
-          "2.81",
-          "28.69"
-        ],
-        [
-          "55P41078XXYY",
-          "12",
-          "3.31",
-          "37",
-          "0.32",
-          "3.32",
-          "40.73"
-        ],
-        [
-          "55P41077XXYY",
-          "10",
-          "5.26",
-          "37",
-          "0.40",
-          "4.00",
-          "59.90"
+        "construction": [
+          "Conductor : Annealed Tinned Copper Conductor",
+          "(Optional   : Silver Coated Copper Conductor / Nickel Coated Copper Conductor)",
+          "Insulation : Radiation Cross-Linked Specially Formulated ETFE (Ethylene",
+          "Tetrafluoroethylene)",
+          "No of Cores : 2",
+          "Colour : As Per Customer Order"
         ]
-      ],
-      "catalogueNo": "55P410"
-    },
-    {
-      "id": "222b835dc9",
-      "family": "aero-55",
-      "name": "AERO 55 600V Twisted Twin Core Statistical Process Controlled Shielded Airframe Cables",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Cores",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
-        ],
-        [
-          "55P5108502",
-          "26",
-          "0.13",
-          "2",
-          "19",
-          "0.10",
-          "2.35",
-          "11.34"
-        ],
-        [
-          "55P5108402",
-          "24",
-          "0.20",
-          "2",
-          "19",
-          "0.13",
-          "2.90",
-          "13.90"
-        ],
-        [
-          "55P5108302",
-          "22",
-          "0.33",
-          "2",
-          "19",
-          "0.16",
-          "2.91",
-          "17.89"
-        ],
-        [
-          "55P5108202",
-          "20",
-          "0.52",
-          "2",
-          "19",
-          "0.20",
-          "3.32",
-          "23.84"
-        ],
-        [
-          "55P5108102",
-          "18",
-          "0.82",
-          "2",
-          "19",
-          "0.25",
-          "3.80",
-          "32.10"
-        ],
-        [
-          "55P5108002",
-          "16",
-          "1.31",
-          "2",
-          "19",
-          "0.29",
-          "4.18",
-          "39.00"
-        ],
-        [
-          "55P5107902",
-          "14",
-          "2.08",
-          "2",
-          "19",
-          "0.36",
-          "4.94",
-          "55.21"
-        ],
-        [
-          "55P5107802",
-          "12",
-          "3.31",
-          "2",
-          "37",
-          "0.32",
-          "5.94",
-          "80.23"
-        ],
-        [
-          "55P5107702",
-          "10",
-          "5.26",
-          "2",
-          "37",
-          "0.40",
-          "7.41",
-          "123.65"
-        ]
-      ],
-      "catalogueNo": "55P510"
-    },
-    {
-      "id": "6573ed1eb4",
-      "family": "aero-55",
-      "name": "ATC Sie-Foam Skinned, Twin Axial Cable",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Cores",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
-        ],
-        [
-          "0011118402",
-          "24",
-          "0.20",
-          "2",
-          "7",
-          "0.202",
-          "5.7",
-          "45"
-        ]
-      ],
-      "catalogueNo": "0011118402"
-    },
-    {
-      "id": "38e41b42d4",
-      "family": "aero-55",
-      "name": "ATC Sie-Foam Skinned, Twin Radio Frequency Cable",
-      "headers": [
-        "Part Number",
-        "Wire Size",
-        "Cross Section Area",
-        "No.of Cores",
-        "No.of Strands",
-        "Diameter of Single Wire (Nom.)",
-        "Overall Diameter (Nom.)",
-        "Cable Weight (Approx.)"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Sq.mm",
-          "Nos.",
-          "Nos.",
-          "mm",
-          "mm",
-          "kg/km"
-        ],
-        [
-          "2011118402",
-          "24",
-          "0.20",
-          "2",
-          "19",
-          "0.127",
-          "5.8",
-          "46"
-        ]
-      ],
-      "catalogueNo": "2011118402"
+      }
     }
   ]
 }

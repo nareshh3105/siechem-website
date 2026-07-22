@@ -1,95 +1,98 @@
 {
   "series": [
     {
-      "id": "new-mruogsi5",
+      "id": "412dd6c9cb",
       "family": "wind",
-      "name": "Single Core Flexible Tinned Copper Conductor, Polyester Tape, Silicone Insulated & PUR Vanished Synthetic Yarn Braided 3.3/4.2kV (UA) Power Cable ",
+      "name": "Multi Core Stranded Copper Conductor Fluorine Polymer Insulated & Flame Retardant Halogen-Free TPU Sheathed 600/1000V (A) Power Cable ",
       "headers": [
         "Part Number",
-        "Number of Cores and mm\n    Per Conductor",
+        "Number of Cores and mm2 Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index \nKg/Km",
+        "Copper Index Kg/Km approx.",
         "Weight Kg/Km approx."
       ],
       "rows": [
         [
-          "35527XX ",
-          "1 x 10",
-          "9.7",
-          "84",
-          "179"
-        ],
-        [
-          "35528XX",
-          "1 x 16",
-          "11.5",
-          "135",
-          "325"
-        ],
-        [
-          " 35530XX ",
-          "1 x 25",
-          "12.9",
-          "211",
-          "482"
-        ],
-        [
-          "35532XX",
-          "1 x 35",
-          "14.3",
-          "296",
-          "657"
-        ],
-        [
-          "35534XX",
-          "1 x 50",
-          "16.0",
-          "422",
-          "897"
-        ],
-        [
-          "35537XX",
-          "1 x 70",
-          "17.9",
-          "591",
-          "1219"
-        ],
-        [
-          "35538XX",
-          "1 x 95",
-          "19.7",
-          "802",
-          "1573"
-        ],
-        [
-          "35541XX",
-          "1 x 120",
-          "22.0",
-          "1013",
-          "2088"
-        ],
-        [
-          "35542XX",
-          "1 x 150",
-          "24.0",
-          "1267",
-          "2590"
-        ],
-        [
-          "35544XX",
-          "1 x 185",
-          "26.2",
-          "1562",
-          "3234"
-        ],
-        [
-          "35546XX",
-          "1 x 240",
-          "28.5",
-          "2027",
-          "3990"
+          "3590804",
+          "4 x 0.75",
+          "6.6",
+          "25",
+          "82"
         ]
       ],
+      "catalogueNo": "359",
+      "info": {
+        "features": [
+          "Excellent Flame Retardant.",
+          "Halogen Free",
+          "Excellent Abrasion Resistant",
+          "UV Resistant"
+        ],
+        "technical": [
+          "Temperature Range: -50°C to +90°C",
+          "Rated Voltage: 24V",
+          "Min. Bending Radius: 7.5 X Cable Diameter"
+        ],
+        "application": [
+          "Torsion applications in the loop section of wind turbines"
+        ],
+        "construction": [
+          "Conductor : Finely copper wires, Class 6 according to IEC 60228",
+          "Insulation : Fluorine Polymer",
+          "Outersheath : Flame Retardant Halogen-Free TPU",
+          "Braiding : Tinsel braid or spiral shield."
+        ]
+      }
+    },
+    {
+      "id": "8c0d0881ff",
+      "family": "wind",
+      "name": "Single Core Stranded Aluminium Conductor EBXL - XLPE Insulated & HF-PO Sheathed 600/1000V (UA) Power Cable ",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "mm",
+          "Kg/Km",
+          "Kg/Km"
+        ],
+        [
+          "35644XX",
+          "1 x 185",
+          "22.0",
+          "1562",
+          "960"
+        ],
+        [
+          "35646XX",
+          "1 x 240",
+          "24.2",
+          "2027",
+          "1208"
+        ],
+        [
+          "35648XX",
+          "1 x 300",
+          "26.9",
+          "2534",
+          "1343"
+        ],
+        [
+          "35649XX",
+          "1 x 400",
+          "29.9",
+          "3378",
+          "1843"
+        ]
+      ],
+      "catalogueNo": "356",
       "info": {
         "features": [
           "Halogen free",
@@ -103,382 +106,17 @@
         ],
         "technical": [
           "Temperature Range: -50°C to +180°C",
-          "Test Voltage: 24 kV",
-          "Bending Radius (Minimum): 12 x Cable Diameter for 3.3/4.2 kV cable",
-          "Rated Voltage (U₀/U): 3.3/4.2 kV"
+          "Test Voltage: 3.5 kV",
+          "Bending Radius (Minimum): 6 x Cable Dia",
+          "Rated Voltage (U₀/U): 0.6/1.0 kV"
         ],
         "application": [
-          "Used in linking generators to transformers"
+          "Used in linking generators to transformers."
         ],
         "construction": [
-          "Conductor: Flexible Tinned Annealed Copper, Class 5 according to IEC 60228",
-          "Separate Tape: Polyester firm (if necessary)",
-          "Insulation: Silicone",
-          "Braid:  PUR vanished synthetic yarn braid"
-        ]
-      }
-    },
-    {
-      "id": "c0811a80eb",
-      "family": "wind",
-      "name": "Multi Core Flexible Copper Conductor Rubber Insulated & Polychloroprene Rubber Sheathed 450/750V (UA) Control Cable (HO7RN - F)",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm² Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "Kg/Km",
-          ""
-        ],
-        [
-          "6441003G",
-          "3G1",
-          "7.5",
-          "27.2",
-          "87"
-        ],
-        [
-          "6441302",
-          "2C1.5",
-          "8.0",
-          "26.5",
-          "95"
-        ],
-        [
-          "6441303G",
-          "3G1.5",
-          "8.5",
-          "39.8",
-          "116"
-        ],
-        [
-          "6441304G",
-          "4G1.5",
-          "9.4",
-          "53.0",
-          "145"
-        ],
-        [
-          "6441305G",
-          "5G1.5",
-          "10.4",
-          "66.3",
-          "177"
-        ],
-        [
-          "6441307G",
-          "7G1.5",
-          "11.4",
-          "95.6",
-          "226"
-        ],
-        [
-          "6441312G",
-          "12G1.5",
-          "14.8",
-          "163.8",
-          "330"
-        ],
-        [
-          "6441319G",
-          "19G1.5",
-          "17.7",
-          "259.4",
-          "507"
-        ],
-        [
-          "6441324G",
-          "24G1.5",
-          "21.0",
-          "327.6",
-          "637"
-        ],
-        [
-          "6441325G",
-          "25G1.5",
-          "21.0",
-          "341.3",
-          "661"
-        ],
-        [
-          "6441602",
-          "2C2.5",
-          "8.9",
-          "44.5",
-          "128"
-        ],
-        [
-          "6441603G",
-          "3G2.5",
-          "9.5",
-          "66.7",
-          "158"
-        ],
-        [
-          "6441604G",
-          "4G2.5",
-          "10.5",
-          "88.9",
-          "199"
-        ],
-        [
-          "6441605G",
-          "5G2.5",
-          "11.6",
-          "111.2",
-          "244"
-        ],
-        [
-          "6441607G",
-          "7G2.5",
-          "12.8",
-          "160.2",
-          "316"
-        ],
-        [
-          "6441615G",
-          "12G2.5",
-          "16.7",
-          "274.7",
-          "470"
-        ],
-        [
-          "6441619G",
-          "19G2.5",
-          "20.0",
-          "434.9",
-          "726"
-        ],
-        [
-          "6441624G",
-          "24G2.5",
-          "23.8",
-          "549.4",
-          "913"
-        ],
-        [
-          "6441625G",
-          "25G2.5",
-          "23.8",
-          "572.3",
-          "948"
-        ],
-        [
-          "6441902",
-          "2C4",
-          "10.6",
-          "71.6",
-          "188"
-        ],
-        [
-          "6441903G",
-          "3G4",
-          "11.3",
-          "107.4",
-          "234"
-        ],
-        [
-          "6441904G",
-          "4G4",
-          "12.5",
-          "143.2",
-          "295"
-        ],
-        [
-          "6441905G",
-          "5G4",
-          "13.8",
-          "179.0",
-          "363"
-        ],
-        [
-          "6441907G",
-          "7G4",
-          "15.2",
-          "258.0",
-          "473"
-        ],
-        [
-          "6442303G",
-          "3G6",
-          "13.4",
-          "161.3",
-          "337"
-        ],
-        [
-          "6442304G",
-          "4G6",
-          "14.8",
-          "215.0",
-          "425"
-        ],
-        [
-          "6442305G",
-          "5G6",
-          "16.4",
-          "268.8",
-          "522"
-        ],
-        [
-          "6442703G",
-          "3G10",
-          "15.9",
-          "274.2",
-          "509"
-        ],
-        [
-          "6442704G",
-          "4G10",
-          "17.5",
-          "365.6",
-          "645"
-        ],
-        [
-          "6442705G",
-          "5G10",
-          "19.3",
-          "457.0",
-          "792"
-        ],
-        [
-          "6442803G",
-          "3G16",
-          "18.2",
-          "439.1",
-          "732"
-        ],
-        [
-          "6442804G",
-          "4G16",
-          "20.1",
-          "585.5",
-          "933"
-        ],
-        [
-          "6442805G",
-          "5G16",
-          "22.2",
-          "731.9",
-          "1151"
-        ],
-        [
-          "6443004G",
-          "4G25",
-          "25.2",
-          "910.3",
-          "1458"
-        ],
-        [
-          "6443005G",
-          "5G25",
-          "27.8",
-          "1137.8",
-          "1794"
-        ],
-        [
-          "6443204G",
-          "4G35",
-          "28.2",
-          "1281.1",
-          "1932"
-        ],
-        [
-          "6443205G",
-          "5G35",
-          "31.0",
-          "1601.4",
-          "2383"
-        ],
-        [
-          "6443404G",
-          "4G50",
-          "33.8",
-          "1836.0",
-          "2776"
-        ],
-        [
-          "6443405G",
-          "5G50",
-          "37.2",
-          "2295.0",
-          "3420"
-        ],
-        [
-          "6443704G",
-          "4G70",
-          "38.1",
-          "2611.2",
-          "3745"
-        ],
-        [
-          "6443804G",
-          "4G95",
-          "43.4",
-          "3449.6",
-          "4912"
-        ],
-        [
-          "6444104G",
-          "4G120",
-          "47.4",
-          "4410.5",
-          "6091"
-        ],
-        [
-          "6444204G",
-          "4G150",
-          "52.8",
-          "5483.5",
-          "7560"
-        ],
-        [
-          "6444404G",
-          "4G185",
-          "57.9",
-          "6707.5",
-          "9174"
-        ],
-        [
-          "6444604G",
-          "4G240",
-          "65.4",
-          "8853.6",
-          "11960"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Heavy Duty Cable.",
-          "Excellent Flame retardant, Ozone resistant and oil-resistant Outer Sheath."
-        ],
-        "technical": [
-          "Temperature Range: - 25°C to +60°C",
-          "Voltage for Testing: 2.5 kV",
-          "Protective Conductor (PC): G-With green/yellow",
-          "X-Without PC",
-          "Bending Radius (Minimum): Flexing: 6 x Cable Diameter",
-          "Rated Voltage: (U₀/U):450/750 V",
-          "In Protected &Fixed Installations: 600/1000 V",
-          "Specific Insulation Resistance: 1G Ohm x cm.",
-          "As per VDE 0282"
-        ],
-        "application": [
-          "Used in dry and damp interiors",
-          "Also, in Outdoor Use.",
-          "Used in Agricultural Machinery"
-        ],
-        "construction": [
-          "Conductor: Fine Strands of Copper.",
-          "Insulation: Rubber Compound.",
-          "Outer Sheath: Polychloroprene Rubber Compound.",
-          "Colored Cores."
+          "Conductor: Aluminum Conductor, Class 2 according to IEC 60228.",
+          "Insulation: XLPE",
+          "Outer sheath: HF - PO"
         ]
       }
     },
@@ -2574,88 +2212,130 @@
       }
     },
     {
-      "id": "8c0d0881ff",
+      "id": "new-mruogsi5",
       "family": "wind",
-      "name": "Aluminium EBXL - XLPE (UA) Power Cable",
+      "name": "Single Core Flexible Tinned Copper Conductor, Polyester Tape, Silicone Insulated & PUR Vanished Synthetic Yarn Braided 3.3/4.2kV (UA) Power Cable ",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm\n    Per Conductor",
         "Outer Diameter in mm approx.",
-        "Copper Index",
+        "Copper Index \nKg/Km",
         "Weight Kg/Km approx."
       ],
       "rows": [
         [
-          "",
-          "",
-          "",
-          "Kg/Km",
-          ""
+          "35527XX ",
+          "1 x 10",
+          "9.7",
+          "84",
+          "179"
         ],
         [
-          "35644XX",
-          "1 x 185",
+          "35528XX",
+          "1 x 16",
+          "11.5",
+          "135",
+          "325"
+        ],
+        [
+          " 35530XX ",
+          "1 x 25",
+          "12.9",
+          "211",
+          "482"
+        ],
+        [
+          "35532XX",
+          "1 x 35",
+          "14.3",
+          "296",
+          "657"
+        ],
+        [
+          "35534XX",
+          "1 x 50",
+          "16.0",
+          "422",
+          "897"
+        ],
+        [
+          "35537XX",
+          "1 x 70",
+          "17.9",
+          "591",
+          "1219"
+        ],
+        [
+          "35538XX",
+          "1 x 95",
+          "19.7",
+          "802",
+          "1573"
+        ],
+        [
+          "35541XX",
+          "1 x 120",
           "22.0",
+          "1013",
+          "2088"
+        ],
+        [
+          "35542XX",
+          "1 x 150",
+          "24.0",
+          "1267",
+          "2590"
+        ],
+        [
+          "35544XX",
+          "1 x 185",
+          "26.2",
           "1562",
-          "960"
+          "3234"
         ],
         [
-          "35646XX",
+          "35546XX",
           "1 x 240",
-          "24.2",
+          "28.5",
           "2027",
-          "1208"
-        ],
-        [
-          "35648XX",
-          "1 x 300",
-          "26.9",
-          "2534",
-          "1343"
-        ],
-        [
-          "35649XX",
-          "1 x 400",
-          "29.9",
-          "3378",
-          "1843"
+          "3990"
         ]
       ],
-      "catalogueNo": "356",
       "info": {
         "features": [
           "Halogen free",
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
-          "Ozone Resistant Number of Cores"
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range: -500C to +1800C",
-          "Test Voltage : 3.5 kV",
-          "Bending Radius(Minimum): 6 x Cable Dia",
-          "Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"
+          "Temperature Range: -50°C to +180°C",
+          "Test Voltage: 24 kV",
+          "Bending Radius (Minimum): 12 x Cable Diameter for 3.3/4.2 kV cable",
+          "Rated Voltage (U₀/U): 3.3/4.2 kV"
         ],
         "application": [
-          "Used in linking generators to transformers."
+          "Used in linking generators to transformers"
         ],
         "construction": [
-          "Conductor : Aluminium Conductor, Class 2 according to IEC 60228.",
-          "Insulation : XLPE",
-          "Outersheath : HF - PO"
+          "Conductor: Flexible Tinned Annealed Copper, Class 5 according to IEC 60228",
+          "Separate Tape: Polyester firm (if necessary)",
+          "Insulation: Silicone",
+          "Braid:  PUR vanished synthetic yarn braid"
         ]
       }
     },
     {
       "id": "c5af93130e",
       "family": "wind",
-      "name": "EBXL - XLPE (UA) Aluminium Power Cable",
+      "name": "Multi Core Solid Aluminum Conductor EBXL - XLPE Insulated & HFFR, HF-PO Sheathed 600/1000V (UA) Power Cable",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
         "Outer Diameter in mm approx.",
         "Copper Index Kg/Km approx.",
         "Weight Kg/Km approx."
@@ -2697,15 +2377,15 @@
           "Corrosivity of fire effluent",
           "Low Smoke",
           "Flame Retardant",
-          "Cold Resistant @ -400C",
+          "Cold Resistant @ -40°C",
           "UV Resistant",
           "Oil Resistant",
-          "Ozone Resistant Number of Cores"
+          "Ozone Resistant"
         ],
         "technical": [
-          "Temperature Range : -300C to +1200C",
-          "Test Voltage : 3.5 kV",
-          "Rated Voltage (U/U) : 0.6/1.0 kV 0 Index Weight"
+          "Temperature Range: -30°C to +120°C",
+          "Test Voltage: 3.5 kV",
+          "Rated Voltage (U₀/U): 0.6/1.0 kV"
         ],
         "application": [
           "Wind Tower",
@@ -2720,12 +2400,445 @@
       }
     },
     {
-      "id": "cf70c9b1e0",
+      "id": "c0811a80eb",
       "family": "wind",
-      "name": "EPR or EBXL - XLPO (UA) Copper Power Cable",
+      "name": "Multi Core Flexible Copper Conductor Rubber Insulated & Polychloroprene Rubber Sheathed 450/750V (UA) Control Cable (HO7RN - F)",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "Kg/Km",
+          ""
+        ],
+        [
+          "6441003G",
+          "3G1",
+          "7.5",
+          "27.2",
+          "87"
+        ],
+        [
+          "6441302",
+          "2C1.5",
+          "8.0",
+          "26.5",
+          "95"
+        ],
+        [
+          "6441303G",
+          "3G1.5",
+          "8.5",
+          "39.8",
+          "116"
+        ],
+        [
+          "6441304G",
+          "4G1.5",
+          "9.4",
+          "53.0",
+          "145"
+        ],
+        [
+          "6441305G",
+          "5G1.5",
+          "10.4",
+          "66.3",
+          "177"
+        ],
+        [
+          "6441307G",
+          "7G1.5",
+          "11.4",
+          "95.6",
+          "226"
+        ],
+        [
+          "6441312G",
+          "12G1.5",
+          "14.8",
+          "163.8",
+          "330"
+        ],
+        [
+          "6441319G",
+          "19G1.5",
+          "17.7",
+          "259.4",
+          "507"
+        ],
+        [
+          "6441324G",
+          "24G1.5",
+          "21.0",
+          "327.6",
+          "637"
+        ],
+        [
+          "6441325G",
+          "25G1.5",
+          "21.0",
+          "341.3",
+          "661"
+        ],
+        [
+          "6441602",
+          "2C2.5",
+          "8.9",
+          "44.5",
+          "128"
+        ],
+        [
+          "6441603G",
+          "3G2.5",
+          "9.5",
+          "66.7",
+          "158"
+        ],
+        [
+          "6441604G",
+          "4G2.5",
+          "10.5",
+          "88.9",
+          "199"
+        ],
+        [
+          "6441605G",
+          "5G2.5",
+          "11.6",
+          "111.2",
+          "244"
+        ],
+        [
+          "6441607G",
+          "7G2.5",
+          "12.8",
+          "160.2",
+          "316"
+        ],
+        [
+          "6441615G",
+          "12G2.5",
+          "16.7",
+          "274.7",
+          "470"
+        ],
+        [
+          "6441619G",
+          "19G2.5",
+          "20.0",
+          "434.9",
+          "726"
+        ],
+        [
+          "6441624G",
+          "24G2.5",
+          "23.8",
+          "549.4",
+          "913"
+        ],
+        [
+          "6441625G",
+          "25G2.5",
+          "23.8",
+          "572.3",
+          "948"
+        ],
+        [
+          "6441902",
+          "2C4",
+          "10.6",
+          "71.6",
+          "188"
+        ],
+        [
+          "6441903G",
+          "3G4",
+          "11.3",
+          "107.4",
+          "234"
+        ],
+        [
+          "6441904G",
+          "4G4",
+          "12.5",
+          "143.2",
+          "295"
+        ],
+        [
+          "6441905G",
+          "5G4",
+          "13.8",
+          "179.0",
+          "363"
+        ],
+        [
+          "6441907G",
+          "7G4",
+          "15.2",
+          "258.0",
+          "473"
+        ],
+        [
+          "6442303G",
+          "3G6",
+          "13.4",
+          "161.3",
+          "337"
+        ],
+        [
+          "6442304G",
+          "4G6",
+          "14.8",
+          "215.0",
+          "425"
+        ],
+        [
+          "6442305G",
+          "5G6",
+          "16.4",
+          "268.8",
+          "522"
+        ],
+        [
+          "6442703G",
+          "3G10",
+          "15.9",
+          "274.2",
+          "509"
+        ],
+        [
+          "6442704G",
+          "4G10",
+          "17.5",
+          "365.6",
+          "645"
+        ],
+        [
+          "6442705G",
+          "5G10",
+          "19.3",
+          "457.0",
+          "792"
+        ],
+        [
+          "6442803G",
+          "3G16",
+          "18.2",
+          "439.1",
+          "732"
+        ],
+        [
+          "6442804G",
+          "4G16",
+          "20.1",
+          "585.5",
+          "933"
+        ],
+        [
+          "6442805G",
+          "5G16",
+          "22.2",
+          "731.9",
+          "1151"
+        ],
+        [
+          "6443004G",
+          "4G25",
+          "25.2",
+          "910.3",
+          "1458"
+        ],
+        [
+          "6443005G",
+          "5G25",
+          "27.8",
+          "1137.8",
+          "1794"
+        ],
+        [
+          "6443204G",
+          "4G35",
+          "28.2",
+          "1281.1",
+          "1932"
+        ],
+        [
+          "6443205G",
+          "5G35",
+          "31.0",
+          "1601.4",
+          "2383"
+        ],
+        [
+          "6443404G",
+          "4G50",
+          "33.8",
+          "1836.0",
+          "2776"
+        ],
+        [
+          "6443405G",
+          "5G50",
+          "37.2",
+          "2295.0",
+          "3420"
+        ],
+        [
+          "6443704G",
+          "4G70",
+          "38.1",
+          "2611.2",
+          "3745"
+        ],
+        [
+          "6443804G",
+          "4G95",
+          "43.4",
+          "3449.6",
+          "4912"
+        ],
+        [
+          "6444104G",
+          "4G120",
+          "47.4",
+          "4410.5",
+          "6091"
+        ],
+        [
+          "6444204G",
+          "4G150",
+          "52.8",
+          "5483.5",
+          "7560"
+        ],
+        [
+          "6444404G",
+          "4G185",
+          "57.9",
+          "6707.5",
+          "9174"
+        ],
+        [
+          "6444604G",
+          "4G240",
+          "65.4",
+          "8853.6",
+          "11960"
+        ]
+      ],
+      "info": {
+        "features": [
+          "Heavy Duty Cable.",
+          "Excellent Flame retardant, Ozone resistant and oil-resistant Outer Sheath."
+        ],
+        "technical": [
+          "Temperature Range: - 25°C to +60°C",
+          "Voltage for Testing: 2.5 kV",
+          "Protective Conductor (PC): G-With green/yellow",
+          "X-Without PC",
+          "Bending Radius (Minimum): Flexing: 6 x Cable Diameter",
+          "Rated Voltage: (U₀/U):450/750 V",
+          "In Protected &Fixed Installations: 600/1000 V",
+          "Specific Insulation Resistance: 1G Ohm x cm.",
+          "As per VDE 0282"
+        ],
+        "application": [
+          "Used in dry and damp interiors",
+          "Also, in Outdoor Use.",
+          "Used in Agricultural Machinery"
+        ],
+        "construction": [
+          "Conductor: Fine Strands of Copper.",
+          "Insulation: Rubber Compound.",
+          "Outer Sheath: Polychloroprene Rubber Compound.",
+          "Colored Cores."
+        ]
+      }
+    },
+    {
+      "id": "9b6ddf1a0e",
+      "family": "wind",
+      "name": "Single Core Stranded Copper Conductor PVC Insulated & Sheathed 600/1000V (UA) Power Cable ",
+      "headers": [
+        "Part Number",
+        "Number of Cores and mm² Per Conductor",
+        "Outer Diameter in mm approx.",
+        "Copper Index Kg/Km approx.",
+        "Weight Kg/Km approx."
+      ],
+      "rows": [
+        [
+          "36030XX",
+          "1 X 25",
+          "13",
+          "211",
+          "380"
+        ],
+        [
+          "36032XX",
+          "1 X 35 ",
+          "14",
+          "296",
+          "447"
+        ],
+        [
+          "36034XX",
+          "1 X 50 ",
+          "15",
+          "422",
+          "650"
+        ],
+        [
+          "36037XX",
+          "1 X 70",
+          "17",
+          "591",
+          "864"
+        ]
+      ],
+      "catalogueNo": "360",
+      "info": {
+        "features": [
+          "Electron Beam Cross Linked insulation.",
+          "Excellent Flame Retardant.",
+          "Highly Resistive to Oil and Ozone.",
+          "UV Resistant.",
+          "Highly short circuit rated and earth fault resistance cable"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Fixed: - 40°C to +70°C",
+          "Flexing: - 5°C to +50°C",
+          "Test Voltage: 4.0kV",
+          "Rated Voltage (U₀/U): 0.6/1.0kV",
+          "Min. Bending Radius:",
+          "Single core:15 x Cable diameter"
+        ],
+        "application": [
+          "Used in Power lines of fixed routing in wind tower installation"
+        ],
+        "construction": [
+          "Conductor: Finely stranded, according to IEC 60228",
+          "Insulation: PVC",
+          "Outer sheath: PVC"
+        ]
+      }
+    },
+    {
+      "id": "cf70c9b1e0",
+      "family": "wind",
+      "name": "Single Core Stranded Copper Conductor EPR or EBXL - XLPO Insulated & CPE or EBXL - XLPO Sheathed 2000V (UA) Power Cable",
+      "headers": [
+        "Part Number",
+        "Size \nAWG/MCM",
         "Outer Diameter in mm approx.",
         "Copper Index Kg/Km approx.",
         "Weight Kg/Km approx."
@@ -2885,13 +2998,15 @@
           "Excellent Flame Retardant.",
           "Good Compressive load",
           "Cold Resistant",
-          "Excellent Oil and UV Resistant. Number of Cores"
+          "Excellent Oil and UV Resistant."
         ],
         "technical": [
-          "Temperature Range: -400C to +1200C",
-          "Rated Voltage (U/U) : 2kV 0",
-          "Torsion Resistant : 10,000 Twist Cycles 900/m, ±1800/m",
-          "Specification : RHW -2/CPE RHW -2/XL EVA XHHW -2/XL EVA Index Weight"
+          "Temperature Range: -40°C to +120°C",
+          "Rated Voltage (U₀/U): 2kV",
+          "Torsion Resistant: 10,000 Twist Cycles 90°/m, ±180°/m",
+          "Specification: RHW -2/CPE",
+          "RHW -2/XL EVA",
+          "XHHW -2/XL EVA"
         ],
         "application": [
           "Used for main power layout from the nacelle to the base of the wind tower"
@@ -2904,644 +3019,102 @@
       }
     },
     {
-      "id": "412dd6c9cb",
+      "id": "new-mrvzoki8",
       "family": "wind",
-      "name": "Fluorine Polymer (A) Copper Power Cable",
+      "name": "Multicore Core Stranded Copper Conductor PVC Insulated & Sheathed 600/1000V (UA) Power Cable ",
       "headers": [
         "Part Number",
-        "Number of Cores and mm2 Per Conductor",
+        "Number of Cores and mm² Per Conducto",
         "Outer Diameter in mm approx.",
         "Copper Index Kg/Km approx.",
         "Weight Kg/Km approx."
       ],
       "rows": [
-        [
-          "3590804",
-          "4 x 0.75",
-          "6.6",
-          "25",
-          "82"
-        ]
-      ],
-      "catalogueNo": "359",
-      "info": {
-        "features": [
-          "Excellent Flame Retardant.",
-          "Halogen Free",
-          "Excellent Abrasion Resistant",
-          "UV Resistant. Number of Cores"
-        ],
-        "technical": [
-          "Temperature Range: -500C to +900C",
-          "Rated Voltage : 24V",
-          "Min. Bending Radius : 7.5 X Cable Dia Index Weight"
-        ],
-        "application": [
-          "Torsion applications in the loop section of wind turbines"
-        ],
-        "construction": [
-          "Conductor : Finely copper wires, Class 6 according to IEC 60228",
-          "Insulation : Fluorine Polymer",
-          "Outersheath : Flame Retardant Halogen-Free TPU",
-          "Braiding : Tinsel braid or spiral shield."
-        ]
-      }
-    },
-    {
-      "id": "9b6ddf1a0e",
-      "family": "wind",
-      "name": "PVC (UA) Copper Power Cable",
-      "headers": [
-        "Part Number",
-        "Number of Cores and mm2 Per Conductor",
-        "Outer Diameter in mm approx.",
-        "Copper Index Kg/Km approx.",
-        "Weight Kg/Km approx."
-      ],
-      "rows": [
-        [
-          "36030XX",
-          "1 X 25 rm",
-          "13",
-          "211",
-          "380"
-        ],
-        [
-          "36032XX",
-          "1 X 35 rm",
-          "14",
-          "296",
-          "447"
-        ],
-        [
-          "36034XX",
-          "1 X 50 rm",
-          "15",
-          "422",
-          "650"
-        ],
-        [
-          "36037XX",
-          "1 X 70 rm",
-          "17",
-          "591",
-          "864"
-        ],
         [
           "3621303",
-          "3 X 1.5 re",
+          "3 x 1.5",
           "12",
           "38",
           "223"
         ],
         [
           "3621304",
-          "4 X 1.5 re",
+          "4 x 1.5",
           "13",
           "51",
           "256"
         ],
         [
           "3621305",
-          "5 X 1.5 re",
+          "5 x 1.5",
           "14",
           "63",
           "293"
         ],
         [
           "3621307",
-          "7 X 1.5 re",
+          "7 x 1.5",
           "15",
           "89",
           "360"
         ],
         [
           "3621310",
-          "10 X 1.5 re",
+          "10 x 1.5",
           "18",
           "127",
           "520"
         ],
         [
           "3621312",
-          "12 X 1.5 re",
+          "12 x 1.5",
           "19",
           "152",
           "560"
         ],
         [
-          "3621314",
-          "14 X 1.5 re",
-          "20",
-          "177",
-          "620"
-        ],
-        [
-          "3621316",
-          "16 X 1.5 re",
-          "21",
-          "203",
-          "680"
-        ],
-        [
-          "3621319",
-          "19 X 1.5 re",
-          "22",
-          "241",
-          "760"
-        ],
-        [
-          "3621324",
-          "24 X 1.5 re",
-          "24",
-          "304",
-          "900"
-        ],
-        [
-          "3621330",
-          "30 X 1.5 re",
-          "26",
-          "380",
-          "1,100"
-        ],
-        [
-          "3621603",
-          "3 X 2.5 re",
-          "13",
-          "63",
-          "272"
-        ],
-        [
-          "3621604",
-          "4 X 2.5 re",
-          "14",
-          "84",
-          "316"
-        ],
-        [
-          "3621605",
-          "5 X 2.5 re",
-          "15",
-          "106",
-          "323"
-        ],
-        [
-          "3621607",
-          "7 X 2.5 re",
-          "16",
-          "148",
-          "450"
-        ],
-        [
-          "3621610",
-          "10 X 2.5 re",
-          "20",
-          "211",
-          "630"
-        ],
-        [
-          "3621612",
-          "12 X 2.5 re",
-          "20",
-          "253",
-          "680"
-        ],
-        [
-          "3621614",
-          "14 X 2.5 re",
-          "21",
-          "296",
-          "790"
-        ],
-        [
-          "3621619",
-          "19 X 2.5 re",
-          "23",
-          "401",
-          "990"
-        ],
-        [
-          "3621624",
-          "24 X 2.5 re",
-          "26",
-          "507",
-          "1,300"
-        ],
-        [
-          "3621630",
-          "30 X 2.5 re",
-          "28",
-          "633",
-          "1,400"
-        ],
-        [
-          "3623803",
-          "3 X 4 re",
-          "15",
-          "101",
-          "373"
-        ],
-        [
-          "3623804",
-          "4 X 4 re",
-          "16",
-          "135",
-          "439"
-        ],
-        [
-          "3623805",
-          "5 X 4 re",
-          "17",
-          "169",
-          "510"
-        ],
-        [
-          "3622303",
-          "3 X 6 re",
-          "16",
-          "152",
-          "466"
-        ],
-        [
-          "3622304",
-          "4 X 6 re",
-          "17",
-          "203",
-          "547"
-        ],
-        [
-          "3622305",
-          "5 X 6 re",
-          "19",
-          "253",
-          "640"
-        ],
-        [
-          "3622703",
-          "3 X 10 re",
-          "18",
-          "253",
-          "629"
-        ],
-        [
-          "3622704",
-          "4 X 10 re",
-          "19",
-          "338",
-          "743"
-        ],
-        [
-          "3622705",
-          "5 X 10 re",
-          "21",
-          "422",
-          "899"
-        ],
-        [
-          "3622803",
-          "3 X 16 re",
-          "20",
-          "405",
-          "850"
-        ],
-        [
-          "3622804",
-          "4 X 16 re",
-          "22",
-          "541",
-          "1,039"
-        ],
-        [
-          "3622805",
-          "5 X 16 re",
-          "23",
-          "676",
-          "1,240"
-        ],
-        [
-          "3633003",
-          "3 X 25 rm / 16 re",
-          "25",
-          "633",
-          "1595"
-        ],
-        [
-          "3633004",
-          "4 X 25.0 rm",
-          "27",
-          "845",
-          "1620"
-        ],
-        [
-          "3643203",
-          "3 X 35 sm / 16 re",
-          "27",
-          "887",
-          "1718"
-        ],
-        [
-          "3643204",
-          "4 X 35 sm",
-          "27",
-          "1,182",
-          "1916"
-        ],
-        [
-          "3643403",
-          "3 X 50 sm / 25 sm",
-          "31",
-          "1,267",
-          "2383"
-        ],
-        [
-          "3643404",
-          "4 X 50 sm",
-          "31",
-          "1,689",
-          "2639"
-        ],
-        [
-          "3643703",
-          "3 X 70 sm / 35 sm",
-          "33",
-          "1,774",
-          "3196"
-        ],
-        [
-          "3643704",
-          "4 X 70 sm",
-          "35",
-          "2,365",
-          "3576"
-        ],
-        [
-          "3643803",
-          "3 X 95 sm / 50 sm",
-          "38",
-          "2,407",
-          "4271"
-        ],
-        [
-          "3643804",
-          "4 X 95 sm",
-          "40",
-          "3,209",
-          "4746"
-        ],
-        [
-          "3644103",
-          "3 X 120 sm / 70 sm",
-          "41",
-          "3,040",
-          "5281"
-        ],
-        [
-          "3644104",
-          "4 X 120 sm",
-          "43",
-          "4,054",
-          "5813"
-        ],
-        [
-          "3644203",
-          "3 X 150 sm / 70 sm",
-          "46",
-          "3,800",
-          "6408"
-        ],
-        [
-          "3644204",
-          "4 X 150 sm",
-          "48",
-          "5,067",
-          "7263"
-        ],
-        [
-          "3644403",
-          "3 X 185 sm / 95 sm",
-          "50",
-          "4,687",
-          "7909"
-        ],
-        [
-          "3644404",
-          "4 X 185 sm",
-          "53",
-          "6,250",
-          "8905"
-        ],
-        [
-          "3644603",
-          "3 X 240 sm / 120sm",
-          "57",
-          "6,081",
-          "10162"
-        ],
-        [
-          "3644604",
-          "4 X 240 sm",
-          "60",
-          "8,108",
-          "11430"
-        ],
-        [
-          "36534XX",
-          "1 X 50 rm",
-          "15",
-          "422",
-          "650"
-        ],
-        [
-          "36537XX",
-          "1 X 70 rm",
-          "17",
-          "591",
-          "864"
-        ],
-        [
-          "36538XX",
-          "1 X 95 rm",
-          "19",
-          "802",
-          "1132"
-        ],
-        [
-          "36541XX",
-          "1 X 120 rm",
-          "21",
-          "1013",
-          "1405"
-        ],
-        [
-          "36542XX",
-          "1 X 150 rm",
-          "22",
-          "1267",
-          "1710"
-        ],
-        [
-          "36544XX",
-          "1 X 185 rm",
-          "24",
-          "1562",
-          "2086"
-        ],
-        [
-          "36546XX",
-          "1 X 240 rm",
-          "27",
-          "2027",
-          "2669"
-        ],
-        [
-          "36548XX",
-          "1 X 300 rm",
-          "30",
-          "2534",
-          "3305"
-        ],
-        [
-          "36550XX",
-          "1 X 500 rm",
-          "39",
-          "4223",
-          "5400"
-        ],
-        [
-          "36627XX",
-          "1 X 10 re",
-          "10",
-          "84",
-          "176"
-        ],
-        [
-          "36628XX",
-          "1 X 16 re",
-          "11",
-          "135",
-          "239"
-        ],
-        [
-          "36630XX",
-          "1 X 25 re",
-          "13",
-          "211",
-          "380"
-        ],
-        [
-          "36632XX",
-          "1 X 35 re",
-          "14",
-          "296",
-          "447"
-        ],
-        [
-          "3671302",
-          "2 X 1.5 re",
-          "11",
-          "25",
-          "210"
-        ],
-        [
-          "3671602",
-          "2 X 2.5 re",
-          "12",
-          "42",
-          "250"
-        ],
-        [
-          "3671604",
-          "4 X 2.5 re",
-          "14",
-          "84",
-          "316"
-        ],
-        [
-          "3673802",
-          "2 X 4 re",
-          "14",
-          "68",
-          "360"
-        ],
-        [
-          "3673804",
-          "4 X 4 re",
-          "16",
-          "135",
-          "439"
-        ],
-        [
-          "3672302",
-          "2 X 6 re",
-          "15",
-          "101",
-          "400"
-        ],
-        [
-          "3672304",
-          "4 X 6 re",
-          "17",
-          "203",
-          "547"
-        ],
-        [
-          "3672702",
-          "2 X 10 re",
-          "17",
-          "169",
-          "500"
-        ],
-        [
-          "3672704",
-          "4 X 10 re",
-          "19",
-          "338",
-          "743"
-        ],
-        [
-          "3672704",
-          "4 X 16 re",
-          "22",
-          "338",
-          "1039"
-        ],
-        [
-          "3683004",
-          "4 X 25 rm",
-          "27",
-          "845",
-          "1620"
-        ],
-        [
-          "3693204",
-          "4 X 35 sm",
-          "27",
-          "1,182",
-          "1916"
-        ],
-        [
-          "3693404",
-          "4 X 50 sm",
-          "31",
-          "1,689",
-          "2639"
-        ],
-        [
-          "3693704",
-          "4 X 70 sm",
-          "35",
-          "2,365",
-          "3576"
-        ],
-        [
-          "3693804",
-          "4 X 95 sm",
-          "40",
-          "3,209",
-          "4746"
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          ""
         ]
       ],
-      "catalogueNo": "360"
+      "info": {
+        "features": [
+          "Electron Beam Cross Linked insulation.",
+          "Excellent Flame Retardant.",
+          "Highly Resistive to Oil and Ozone.",
+          "UV Resistant.",
+          "Highly short circuit rated and earth fault resistance cable"
+        ],
+        "technical": [
+          "Temperature Range:",
+          "Fixed: - 40°C to +70°C",
+          "Flexing: - 5°C to +50°C",
+          "Test Voltage: 4.0kV",
+          "Rated Voltage (U₀/U): 0.6/1.0kV",
+          "Min. Bending Radius:  Multi core: 12 x Cable diameter",
+          "re: round conductor, single wire",
+          "rm: round conductor, multiwire",
+          "sm: sectional conductor."
+        ],
+        "application": [
+          "Used in Power lines of fixed routing in wind tower installation"
+        ],
+        "construction": [
+          "Conductor: Finely stranded, according to IEC 60228",
+          "Insulation: PVC",
+          "Outer sheath: PVC"
+        ]
+      }
     },
     {
       "id": "887ade9a4d",
