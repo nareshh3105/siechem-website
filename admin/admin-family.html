@@ -147,6 +147,15 @@
   table.spec-table tbody tr:hover td { background: rgba(184,115,51,0.035); }
   table.spec-table td input { width: 100%; border: none; padding: 10px 10px; font-size: 14.5px; background: none; text-align: center; }
   table.spec-table td input:focus, table.spec-table th input:focus, table.spec-table th textarea:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+  /* Lock the Part Number column in place during horizontal scroll. */
+  table.spec-table th:first-child, table.spec-table td:first-child {
+    position: sticky; left: 0; z-index: 2;
+    box-shadow: 1px 0 0 0 var(--border);
+  }
+  table.spec-table th:first-child { background: var(--bg-soft); z-index: 3; }
+  table.spec-table td:first-child { background: var(--bg-card); }
+  table.spec-table tbody tr:hover td:first-child { background: #FBF7F2; }
+
   table.spec-table td.row-actions, table.spec-table th.col-actions { width: 36px; text-align: center; border-right: none; }
   table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 17px; padding: 6px; border-radius: 4px; }
   table.spec-table td.row-actions button:hover { color: #B91C1C; background: #FEF2F2; }
