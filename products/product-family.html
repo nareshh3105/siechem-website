@@ -778,12 +778,17 @@
         .filter(k => s.attrs[k] && (k !== 'screen' || s.attrs[k] === 'Screened'))
         .slice(0, 4)
         .map(k => '<span class="badge ' + (BADGE_CLASS[k] || 'badge-general') + '">' + esc(s.attrs[k]) + '</span>').join('');
+      // Temperature and Size Range fall back to the family-level value (always
+      // present) when this specific series' name/table didn't yield one, so
+      // every card across every segment shows all three fields consistently.
+      const famSizeRange = FAM.sizeRange && FAM.sizeRange.length
+        ? (FAM.sizeRange[0] === FAM.sizeRange[1] ? FAM.sizeRange[0] + ' mm²' : FAM.sizeRange[0] + ' – ' + FAM.sizeRange[1] + ' mm²')
+        : null;
       const specs = [
-        s.spec ? ['Specification', s.spec] : null,
-        s.sizeRange ? ['Size Range', s.sizeRange] : null,
-        s.attrs.insulation ? ['Insulation', s.attrs.insulation] : null,
-        s.attrs.conductor ? ['Conductor', s.attrs.conductor] : null
-      ].filter(Boolean).slice(0, 4).map(([k, v]) =>
+        ['Temperature', s.attrs.temp || FAM.temp || '—'],
+        ['Size Range', s.sizeRange || famSizeRange || '—'],
+        ['Sizes', s.rows.length + ' variant' + (s.rows.length === 1 ? '' : 's')]
+      ].map(([k, v]) =>
         '<div class="prod-spec"><span class="prod-spec-label">' + esc(k) + '</span><span class="prod-spec-val">' + esc(v) + '</span></div>').join('');
       const footerLeft = s.catalogueNo
         ? 'Catalogue No: ' + esc(s.catalogueNo)
