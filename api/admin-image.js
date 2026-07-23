@@ -9,7 +9,10 @@ const { requireAdmin } = require('./_lib/adminAuth');
 const { supabaseAdmin } = require('./_lib/supabaseAdmin');
 
 const BUCKET = 'product-images';
-const MAX_BYTES = 4 * 1024 * 1024; // 4MB decoded
+// Vercel serverless functions cap the request body around ~4.5MB, and
+// base64 inflates a file by ~33% -- a "4MB" raw file becomes a ~5.3MB JSON
+// body and gets rejected before this handler ever runs. Cap well under that.
+const MAX_BYTES = 2.5 * 1024 * 1024; // 2.5MB decoded (~3.3MB base64 payload)
 const MIME_EXT = { 'image/png': 'png', 'image/jpeg': 'jpg', 'image/webp': 'webp' };
 
 async function logAudit(db, action, family_id, series_id, detail) {
@@ -35,7 +38,7 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid base64 data' });
     }
     if (!buf.length) return res.status(400).json({ error: 'Empty file' });
-    if (buf.length > MAX_BYTES) return res.status(400).json({ error: 'Image exceeds 4MB limit' });
+    if (buf.length > MAX_BYTES) return res.status(400).json({ error: 'Image exceeds 2.5MB limit — please compress or resize it first' });
 
     const path = `${family}/${id}.${ext}`;
     const { error: upErr } = await db.storage.from(BUCKET).upload(path, buf, {

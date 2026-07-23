@@ -499,25 +499,28 @@
         e.target.value = '';
         if (!file) return;
         const okTypes = ['image/png', 'image/jpeg', 'image/webp'];
-        if (!okTypes.includes(file.type)) { setImageStatus('error', 'Use PNG, JPG or WebP.'); return; }
-        if (file.size > 4 * 1024 * 1024) { setImageStatus('error', 'Image must be under 4MB.'); return; }
-        setImageStatus('', 'Uploading…');
+        if (!okTypes.includes(file.type)) {
+          setImageStatus('error', 'Unsupported file type.');
+          alert('Please choose a PNG, JPG or WebP image.');
+          return;
+        }
+        setImageStatus('', 'Preparing…');
         try {
-          const base64 = await new Promise((resolve, reject) => {
-            const r = new FileReader();
-            r.onload = () => resolve(r.result.split(',')[1]);
-            r.onerror = reject;
-            r.readAsDataURL(file);
-          });
+          // Downscale large photos/screenshots client-side (max 1400px on
+          // the longest side) so admins never have to pre-compress an image
+          // themselves -- also keeps every upload comfortably under the
+          // ~4.5MB request-body ceiling Vercel functions enforce.
+          const { mime, base64 } = await prepareImageForUpload(file);
+          setImageStatus('', 'Uploading…');
           const res = await SiechemAdmin.api('/api/admin-image', {
             method: 'POST',
-            body: JSON.stringify({ family: familyId, id: s.id, mime: file.type, base64 })
+            body: JSON.stringify({ family: familyId, id: s.id, mime, base64 })
           });
           s.image_2d = res.url;
-          setImageStatus('success', 'Uploaded');
           renderEditor();
         } catch (err) {
-          setImageStatus('error', 'Upload failed: ' + err.message);
+          setImageStatus('error', 'Upload failed');
+          alert('Image upload failed: ' + err.message);
         }
       });
       const removeBtn = document.getElementById('imageRemoveBtn');
@@ -563,6 +566,57 @@
 
     function escapeAttr(s) { return String(s ?? '').replace(/"/g, '&quot;'); }
     function escapeHtml(s) { return String(s ?? '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c])); }
+
+    // Downscales a large image client-side before upload so admins never
+    // have to pre-compress a phone photo or screenshot themselves, and so
+    // the base64 payload always stays well under Vercel's ~4.5MB request
+    // body ceiling. Small images pass through untouched (no quality loss).
+    const IMG_MAX_DIM = 1400;
+    const IMG_SMALL_ENOUGH_BYTES = 700 * 1024; // skip re-encoding if already small
+    async function prepareImageForUpload(file) {
+      const toBase64 = blobOrFile => new Promise((resolve, reject) => {
+        const r = new FileReader();
+        r.onload = () => resolve(r.result.split(',')[1]);
+        r.onerror = () => reject(new Error('Could not read file'));
+        r.readAsDataURL(blobOrFile);
+      });
+
+      if (file.size <= IMG_SMALL_ENOUGH_BYTES) {
+        return { mime: file.type, base64: await toBase64(file) };
+      }
+
+      const dataUrl = await new Promise((resolve, reject) => {
+        const r = new FileReader();
+        r.onload = () => resolve(r.result);
+        r.onerror = () => reject(new Error('Could not read file'));
+        r.readAsDataURL(file);
+      });
+      const img = await new Promise((resolve, reject) => {
+        const el = new Image();
+        el.onload = () => resolve(el);
+        el.onerror = () => reject(new Error('Could not decode image'));
+        el.src = dataUrl;
+      });
+
+      const scale = Math.min(1, IMG_MAX_DIM / Math.max(img.naturalWidth, img.naturalHeight));
+      const w = Math.max(1, Math.round(img.naturalWidth * scale));
+      const h = Math.max(1, Math.round(img.naturalHeight * scale));
+      if (scale === 1 && file.size <= 2.5 * 1024 * 1024) {
+        // Already small enough in both dimensions and bytes -- upload as-is.
+        return { mime: file.type, base64: await toBase64(file) };
+      }
+
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      // PNGs (renders with transparency) stay PNG; photos/screenshots
+      // (JPEG/WebP source) re-encode as JPEG, which compresses far better.
+      const outMime = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
+      const blob = await new Promise(resolve => canvas.toBlob(resolve, outMime, 0.85));
+      if (!blob) throw new Error('Could not compress image');
+      if (blob.size > 2.5 * 1024 * 1024) throw new Error('Image is still too large after compression — please use a smaller source image');
+      return { mime: outMime, base64: await toBase64(blob) };
+    }
 
     document.getElementById('addSeriesBtn').addEventListener('click', async () => {
       await flushAutosave();
