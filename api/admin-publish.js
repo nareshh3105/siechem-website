@@ -118,7 +118,8 @@ module.exports = async function handler(req, res) {
         id: f.id,
         name: f.name,
         segment: f.segment,
-        seriesCount: (seriesByFamily[f.id] || []).length
+        seriesCount: (seriesByFamily[f.id] || []).length,
+        ...(f.color_code && f.color_code.length ? { colorCode: f.color_code } : {})
       }))
     };
 
