@@ -69,6 +69,48 @@
         "Nickel Coated Copper",
         "Silver Coated Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        }
       ]
     },
     {
@@ -137,6 +179,48 @@
         "Nickel Coated Copper",
         "Silver Coated Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        }
       ]
     },
     {
@@ -323,6 +407,92 @@
         "Annealed Copper",
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -373,7 +543,93 @@
         "Battery interconnects",
         "DC power distribution"
       ],
-      "conductorMaterials": []
+      "conductorMaterials": [],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
+      ]
     },
     {
       "id": "bs5467-power",
@@ -444,6 +700,92 @@
       ],
       "conductorMaterials": [
         "Aluminium"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -644,6 +986,92 @@
       ],
       "conductorMaterials": [
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -725,6 +1153,92 @@
       ],
       "conductorMaterials": [
         "Annealed Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -847,6 +1361,92 @@
       ],
       "conductorMaterials": [
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -950,6 +1550,92 @@
       "conductorMaterials": [
         "Aluminium",
         "Bare Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -1207,6 +1893,92 @@
         "Annealed Copper",
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -1334,7 +2106,93 @@
         "Appliances",
         "Luminaires & transformers"
       ],
-      "conductorMaterials": []
+      "conductorMaterials": [],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
+      ]
     },
     {
       "id": "rolling-stock",
@@ -1454,6 +2312,92 @@
       ],
       "conductorMaterials": [
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -1569,6 +2513,92 @@
         "Annealed Copper",
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -1694,6 +2724,92 @@
         "Annealed Copper",
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -1834,7 +2950,93 @@
         "High-temp equipment wiring",
         "Panel wiring"
       ],
-      "conductorMaterials": []
+      "conductorMaterials": [],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
+      ]
     },
     {
       "id": "silicone",
@@ -1934,6 +3136,92 @@
       ],
       "conductorMaterials": [
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -2135,6 +3423,92 @@
       "conductorMaterials": [
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     },
     {
@@ -2207,7 +3581,93 @@
         "Earth return leads",
         "Workshop & site welding"
       ],
-      "conductorMaterials": []
+      "conductorMaterials": [],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
+      ]
     },
     {
       "id": "wind",
@@ -2304,7 +3764,7 @@
       "sourcePdfs": [
         "Wind Energy.pdf"
       ],
-      "seriesCount": 29,
+      "seriesCount": 24,
       "voltBuckets": [
         "1.1–3.3kV",
         "300–750V",
@@ -2321,6 +3781,92 @@
         "Annealed Copper",
         "Bare Copper",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "02",
+          "name": "Yellow"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "05",
+          "name": "Green"
+        },
+        {
+          "code": "06",
+          "name": "Yellow-Green"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "10",
+          "name": "Orange"
+        },
+        {
+          "code": "11",
+          "name": "Violet"
+        },
+        {
+          "code": "12",
+          "name": "Chocolate"
+        },
+        {
+          "code": "13",
+          "name": "Tan"
+        },
+        {
+          "code": "14",
+          "name": "Charcoal"
+        },
+        {
+          "code": "15",
+          "name": "LT Blue"
+        },
+        {
+          "code": "16",
+          "name": "DK Grey"
+        },
+        {
+          "code": "17",
+          "name": "LT Green"
+        },
+        {
+          "code": "18",
+          "name": "DK Green"
+        },
+        {
+          "code": "19",
+          "name": "DK Blue"
+        },
+        {
+          "code": "20",
+          "name": "Purple"
+        },
+        {
+          "code": "21",
+          "name": "Pink"
+        }
       ]
     }
   ]
