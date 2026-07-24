@@ -763,6 +763,14 @@
       ],
       "catalogueNo": "44G210",
       "info": {
+        "extra": [
+          {
+            "lines": [
+              "hello"
+            ],
+            "title": "hi"
+          }
+        ],
         "features": [
           "Insulation does not shrink in hostile working environment .",
           "AERO 44 wires have 40% greater cut through resistance than some of the thickly insulated wires.",
