@@ -176,6 +176,30 @@
       content: ''; position: absolute; left: 0; top: 6px;
       width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
     }
+    /* Admin-added extra sections: full page-width landscape boxes stacked
+       below the fixed 4-box grid, one per row, bullets flowing into columns
+       to make use of the extra horizontal space. */
+    .info-extra-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 20px; margin-top: 14px;
+    }
+    .info-extra-card h4 {
+      font-size: 11px; font-weight: 700; font-family: var(--mono);
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-2);
+      margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    }
+    .info-extra-card ul {
+      list-style: none; columns: 2; column-gap: 28px;
+    }
+    @media (max-width: 700px) { .info-extra-card ul { columns: 1; } }
+    .info-extra-card li {
+      font-size: 13px; line-height: 1.55; color: var(--text-muted);
+      padding-left: 17px; position: relative; break-inside: avoid; margin-bottom: 9px;
+    }
+    .info-extra-card li::before {
+      content: ''; position: absolute; left: 0; top: 6px;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    }
     .spec-block h4 { font-size: 12px; font-weight: 700; font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-faint); margin-bottom: 10px; }
     .spec-kv { display: flex; flex-direction: column; gap: 0; }
     .spec-kv-row { display: flex; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
@@ -467,6 +491,7 @@
   <section class="section section-tight" id="infoSection" style="display:none;padding-bottom:0;">
     <div class="container">
       <div class="info-grid" id="infoGrid"></div>
+      <div id="infoExtra"></div>
     </div>
   </section>
 
@@ -727,11 +752,21 @@
   function renderInfoGrid() {
     const section = document.getElementById('infoSection');
     const grid = document.getElementById('infoGrid');
+    const extraEl = document.getElementById('infoExtra');
     const keys = INFO_ORDER.filter(k => S.info && S.info[k] && S.info[k].length);
-    if (!keys.length) { section.style.display = 'none'; return; }
+    const extras = (S.info && Array.isArray(S.info.extra) ? S.info.extra : [])
+      .filter(ex => ex && Array.isArray(ex.lines) && ex.lines.length);
+    if (!keys.length && !extras.length) { section.style.display = 'none'; return; }
     grid.innerHTML = keys.map(k =>
       '<div class="info-card"><h4>' + INFO_LABELS[k] + '</h4><ul>' +
       S.info[k].map(b => '<li>' + esc(b) + '</li>').join('') +
+      '</ul></div>'
+    ).join('');
+    // Admin-added sections render as full page-width landscape boxes below
+    // the fixed 4-box grid -- one per row, not part of the grid columns.
+    extraEl.innerHTML = extras.map(ex =>
+      '<div class="info-extra-card"><h4>' + esc(ex.title || 'Additional Information') + '</h4><ul>' +
+      ex.lines.map(b => '<li>' + esc(b) + '</li>').join('') +
       '</ul></div>'
     ).join('');
     section.style.display = '';

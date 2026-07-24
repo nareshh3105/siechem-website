@@ -31,7 +31,8 @@ module.exports = async function handler(req, res) {
   }
 
   if (req.method === 'POST' || req.method === 'PUT') {
-    const { family, id, name, headers, rows, info, order_index } = req.body || {};
+    const body = req.body || {};
+    const { family, id, name, headers, rows, info, order_index } = body;
     if (!family || !id) return res.status(400).json({ error: 'family and id are required' });
 
     const row = {
@@ -44,6 +45,11 @@ module.exports = async function handler(req, res) {
       order_index: typeof order_index === 'number' ? order_index : 0,
       updated_at: new Date().toISOString()
     };
+    // Only touch image_2d when the client explicitly sent it (e.g. cloning a
+    // duplicated type's existing image reference) -- image uploads normally
+    // go through /api/admin-image, and omitting the key here means a plain
+    // field edit never accidentally wipes out an already-attached image.
+    if ('image_2d' in body) row.image_2d = body.image_2d || null;
     const { error } = await db.from('admin_series').upsert(row, { onConflict: 'family_id,id' });
     if (error) return res.status(500).json({ error: error.message });
 
