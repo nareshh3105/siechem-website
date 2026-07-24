@@ -1326,8 +1326,20 @@
       ],
       "catalogueNo": "R553",
       "info": {
+        "features": [
+          "Excellent resistance to high and low temperature",
+          "Outstanding Flame retardant",
+          "Halogen free",
+          "Thin walled with excellent flexibility",
+          "Resistance to oil, fuel, ozone and weathering.",
+          "Easy to strip",
+          "Low smoke density",
+          "Soldering iron resistant",
+          "Electron Beam Cross Linked.",
+          "Resistance to corona effect."
+        ],
         "technical": [
-          "Temperature Range : -40C to +900C.",
+          "Temperature Range : -40°C to +90°C.",
           "Rated Voltage : 300V AC 450V DC",
           "Specification :BS EN 50306-4 : 2020, Table 1 Class P",
           "Hazard Level Classification as per EN 45545-2, HL3",

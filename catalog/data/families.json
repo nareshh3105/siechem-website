@@ -492,6 +492,10 @@
         {
           "code": "21",
           "name": "Pink"
+        },
+        {
+          "code": "68",
+          "name": "Megenta"
         }
       ]
     },
@@ -3310,6 +3314,36 @@
       "conductorMaterials": [
         "Aluminium",
         "Tinned Copper"
+      ],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "Red"
+        },
+        {
+          "code": "04",
+          "name": "Black"
+        },
+        {
+          "code": "09",
+          "name": "White"
+        },
+        {
+          "code": "03",
+          "name": "Blue"
+        },
+        {
+          "code": "08",
+          "name": "Brown"
+        },
+        {
+          "code": "07",
+          "name": "Grey"
+        },
+        {
+          "code": "39",
+          "name": "Black/Red"
+        }
       ]
     },
     {
