@@ -2,7 +2,8 @@
   "buildCommand": "node scripts/minify.mjs",
   "outputDirectory": "dist",
   "functions": {
-    "api/admin-publish.js": { "maxDuration": 60 }
+    "api/admin-publish.js": { "maxDuration": 60 },
+    "api/catalogue-pdf.js": { "maxDuration": 60 }
   },
   "rewrites": [
     { "source": "/", "destination": "/siechem-redesign.html" },

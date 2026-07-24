@@ -458,34 +458,40 @@
   <script src="/nav-mobile.js" defer></script>
   <script>
     const GD = id => `/assets/cable-images/${id}.webp`;
+    // Catalogue cards open the full source PDF (/catalogues/catalogue-view.html)
+    // instead of the Products variant-browser -- "Catalogues" and "Products"
+    // are two different jobs (read the original document vs. browse/filter
+    // part numbers), so they no longer funnel into the same page.
+    const CV = id => `/catalogues/catalogue-view.html?f=${id}`;
     const ALL_SEGS = [
-      { name: "Aerospace Cables",                   std: "MIL-DTL-16878 · AS22759",           url: "/products/product-aero44.html",       img: GD("1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO") },
-      { name: "Appliance Wires &amp; Cables",        std: "UL 758 · IS 694", url: "/products/product-family.html#f=ul-appliance",                                                     img: GD("1xguTBAXPBU6N1ShHehZ3yHVY4mg7bK4Y") },
-      { name: "Automotive Cables",                   std: "JASO D611 · ISO 6722 · LV216",       url: "/products/product-family.html#f=automotive",   img: GD("1YcTrAW5QxLtbBdhjuwScwH7SX67Nw79n") },
-      { name: "Battery Cables",                      std: "UL 1283 · SAE J1127", url: "/products/product-family.html#f=battery",                                                 img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
-      { name: "Coaxial Cables",                      std: "RG Series · MIL-C-17 · IEC 61196", url: "/products/product-family.html#f=antenna",                                    img: GD("1ivlQPQ_uXknxhMy12Y152zVNCSxFvct-") },
-      { name: "Control &amp; Switchboard Cables",    std: "BS 6231 · IS 1554", url: "/products/product-family.html#f=is1554-control",                                                   img: GD("1dputTfg7BwkuujRqAUMFTQHw-35VV9Pi") },
-      { name: "Fire Resistant Cables",               std: "BS 6387 · IEC 60331", url: "/products/product-family.html#f=fire-resistant",                                                 img: GD("1Mm2yJQBJu0xCvbeiG3W3sFgYudtiGW89") },
-      { name: "Flexible Cables",                     std: "IEC 60245 · IS 9968", url: "/products/product-family.html#f=sflex",                                                 img: GD("1XGt-nXIuzpFLyQVo778yB3yw29D-lD2x") },
-      { name: "High Temperature Cables",             std: "PW 125 · Sietherm 155 · Fluoro 200", url: "/products/product-family.html#f=sietherm-155",                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
-      { name: "Irrigation Communication Cables",     std: "Custom · IEC 60332", url: "/products/product-family.html#f=irrigation-comm",                                                  img: GD("1A3HQwZZaOwzRmV7RjA1XdFrhEaWoVjt9") },
-      { name: "Marine, Shipboard &amp; Boat Cables", std: "IEC 60092 · NEK 606 · Lloyd's",       url: "/products/product-family.html#f=marine", img: GD("1kZJfoHzA5DU94B_biqFL_utRDQzHY401") },
-      { name: "Nuclear Cables",                      std: "IEEE 383 · IS 16504", url: "/products/product-family.html#f=nuclear",                                                 img: GD("1DnnJFWY7wmKIhRJ2Zg2V_Hm2-1rxHmnz") },
-      { name: "Power Cables",                        std: "IEC 60502 · IS 7098", url: "/products/product-family.html#f=is7098-power",                                                 img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
-      { name: "PW 125 Wires — High Rise",            std: "Sietherm 125", url: "/products/product-family.html#f=pw-125",                                                        img: GD("1BftiDl6-vMcBerUhkCrU4JA0QBLQcXvM") },
-      { name: "Railway Quad &amp; Signalling Cables",std: "IRS S-23 · RDSO", url: "/products/product-family.html#f=indian-railway",                                                     img: GD("1ae6Wq6uQFmKcNz2e5tG2uzrUVTNI-LZN") },
-      { name: "Rolling Stock Cables",                std: "EN 50264 · EN 50306", url: "/products/product-family.html#f=rolling-stock",                                                 img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
-      { name: "Rubber Cables",                       std: "IS 9968 · IEC 60245", url: "/products/product-family.html#f=rubber",                                                 img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
-      { name: "Silicone Cables",                     std: "VDE 0250 · BS 7919", url: "/products/product-family.html#f=silicone",                                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
-      { name: "Solar Cables",                        std: "TUV 2PfG 1169 · EN 50618", url: "/products/product-family.html#f=solar",                                            img: GD("1CUFs8DPlcldhRvYle78trTIu-HDoCgya") },
-      { name: "Welding Cables",                      std: "IEC 60245-6 · IS 9857", url: "/products/product-family.html#f=welding",                                               img: GD("1zApJUtj0n5HxxYUYTgoxVLdAzaI_uDJD") },
-      { name: "Wind Energy Cables",                  std: "DNV-GL · IEC 60228", url: "/products/product-family.html#f=wind",                                                  img: GD("15L1L1WkHXzl6ao4r6b5V-SEIjDfR6z0O") },
-      { name: "EV &amp; Charging Cables",           std: "LV 216 · EBXL 150°C · 1000V AC",     url: "/products/product-family.html#f=ev", img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
-      { name: "Diesel Locomotive Cables (EMD)",     std: "EMD/EL/PT/505 · ATC 125°C",          url: "/products/product-family.html#f=emd-locomotive", img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
-      { name: "BS 5467 Power Cables",               std: "BS 5467 · 600/1000V · XLPE",         url: "/products/product-family.html#f=bs5467-power", img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
-      { name: "Cable Conduits &amp; Fittings",      std: "RDSO/PE/SPEC/0138",                  url: "/products/product-family.html#f=conduits", img: GD("1qxUJf4R3uE-xO609AGXTdlx9qxNhpCE1") },
-      { name: "Sietherm 125 Wires",                 std: "EBXL 125°C · Single & Multicore",    url: "/products/product-family.html#f=sietherm-125", img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
-      { name: "Fluoroelastomer Cables",             std: "200°C · Diesel Locomotive",          url: "/products/product-family.html#f=fluoroelastomer", img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
+      { name: "AERO 44 Aerospace Cables",           std: "MIL-DTL-16878 · AS22759",           url: CV("aero-44"),       img: GD("1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO") },
+      { name: "AERO 55 Aerospace Cables",           std: "MIL-DTL-16878 · AS22759",           url: CV("aero-55"),       img: GD("1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO") },
+      { name: "Appliance Wires &amp; Cables",        std: "UL 758 · IS 694", url: CV("ul-appliance"),                                                     img: GD("1xguTBAXPBU6N1ShHehZ3yHVY4mg7bK4Y") },
+      { name: "Automotive Cables",                   std: "JASO D611 · ISO 6722 · LV216",       url: CV("automotive"),   img: GD("1YcTrAW5QxLtbBdhjuwScwH7SX67Nw79n") },
+      { name: "Battery Cables",                      std: "UL 1283 · SAE J1127", url: CV("battery"),                                                 img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
+      { name: "Coaxial Cables",                      std: "RG Series · MIL-C-17 · IEC 61196", url: CV("antenna"),                                    img: GD("1ivlQPQ_uXknxhMy12Y152zVNCSxFvct-") },
+      { name: "Control &amp; Switchboard Cables",    std: "BS 6231 · IS 1554", url: CV("is1554-control"),                                                   img: GD("1dputTfg7BwkuujRqAUMFTQHw-35VV9Pi") },
+      { name: "Fire Resistant Cables",               std: "BS 6387 · IEC 60331", url: CV("fire-resistant"),                                                 img: GD("1Mm2yJQBJu0xCvbeiG3W3sFgYudtiGW89") },
+      { name: "Flexible Cables",                     std: "IEC 60245 · IS 9968", url: CV("sflex"),                                                 img: GD("1XGt-nXIuzpFLyQVo778yB3yw29D-lD2x") },
+      { name: "High Temperature Cables",             std: "PW 125 · Sietherm 155 · Fluoro 200", url: CV("sietherm-155"),                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Irrigation Communication Cables",     std: "Custom · IEC 60332", url: CV("irrigation-comm"),                                                  img: GD("1A3HQwZZaOwzRmV7RjA1XdFrhEaWoVjt9") },
+      { name: "Marine, Shipboard &amp; Boat Cables", std: "IEC 60092 · NEK 606 · Lloyd's",       url: CV("marine"), img: GD("1kZJfoHzA5DU94B_biqFL_utRDQzHY401") },
+      { name: "Nuclear Cables",                      std: "IEEE 383 · IS 16504", url: CV("nuclear"),                                                 img: GD("1DnnJFWY7wmKIhRJ2Zg2V_Hm2-1rxHmnz") },
+      { name: "Power Cables",                        std: "IEC 60502 · IS 7098", url: CV("is7098-power"),                                                 img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
+      { name: "PW 125 Wires — High Rise",            std: "Sietherm 125", url: CV("pw-125"),                                                        img: GD("1BftiDl6-vMcBerUhkCrU4JA0QBLQcXvM") },
+      { name: "Railway Quad &amp; Signalling Cables",std: "IRS S-23 · RDSO", url: CV("indian-railway"),                                                     img: GD("1ae6Wq6uQFmKcNz2e5tG2uzrUVTNI-LZN") },
+      { name: "Rolling Stock Cables",                std: "EN 50264 · EN 50306", url: CV("rolling-stock"),                                                 img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
+      { name: "Rubber Cables",                       std: "IS 9968 · IEC 60245", url: CV("rubber"),                                                 img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
+      { name: "Silicone Cables",                     std: "VDE 0250 · BS 7919", url: CV("silicone"),                                                  img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Solar Cables",                        std: "TUV 2PfG 1169 · EN 50618", url: CV("solar"),                                            img: GD("1CUFs8DPlcldhRvYle78trTIu-HDoCgya") },
+      { name: "Welding Cables",                      std: "IEC 60245-6 · IS 9857", url: CV("welding"),                                               img: GD("1zApJUtj0n5HxxYUYTgoxVLdAzaI_uDJD") },
+      { name: "Wind Energy Cables",                  std: "DNV-GL · IEC 60228", url: CV("wind"),                                                  img: GD("15L1L1WkHXzl6ao4r6b5V-SEIjDfR6z0O") },
+      { name: "EV &amp; Charging Cables",           std: "LV 216 · EBXL 150°C · 1000V AC",     url: CV("ev"), img: GD("1GLkmZige7CATzMa-jiiphOtQu0SlhJDU") },
+      { name: "Diesel Locomotive Cables (EMD)",     std: "EMD/EL/PT/505 · ATC 125°C",          url: CV("emd-locomotive"), img: GD("1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm") },
+      { name: "BS 5467 Power Cables",               std: "BS 5467 · 600/1000V · XLPE",         url: CV("bs5467-power"), img: GD("1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0") },
+      { name: "Cable Conduits &amp; Fittings",      std: "RDSO/PE/SPEC/0138",                  url: CV("conduits"), img: GD("1qxUJf4R3uE-xO609AGXTdlx9qxNhpCE1") },
+      { name: "Sietherm 125 Wires",                 std: "EBXL 125°C · Single & Multicore",    url: CV("sietherm-125"), img: GD("17g0F4km0FmzAFO5ga0ArTWMoQSzdk1J5") },
+      { name: "Fluoroelastomer Cables",             std: "200°C · Diesel Locomotive",          url: CV("fluoroelastomer"), img: GD("1tgvYsgvugxZtyoYPdL4iYsVo0EhszND-") },
     ];
 
     const STANDARDS = [
@@ -545,7 +551,7 @@
             <div class="cat-title">${seg.name}</div>
             <div class="cat-sub">${seg.std}</div>
           </div>
-          <div class="pages-count">PDF · On Request</div>
+          <div class="pages-count">View PDF →</div>
         </div>
       </a>
     `).join('');
