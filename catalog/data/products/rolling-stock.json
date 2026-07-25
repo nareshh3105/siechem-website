@@ -1147,8 +1147,8 @@
         "Max. Conductor Resistance at 20 0C",
         "Max. Core Diameter",
         "Min. Sheath Thickness",
-        "Outer Diameter (mm) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -2074,8 +2074,8 @@
         "Max. Conductor Resistance at 20 0C",
         "Max. Core Diameter",
         "Min. Sheath Thickness",
-        "Outer Diameter ( m m ) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -2387,8 +2387,8 @@
         "Max. Conductor Resistance at 20 0C",
         "Max. Core Diameter",
         "Min. Sheath Thickness",
-        "Outer Diameter (m m ) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -2472,8 +2472,8 @@
         "Max. Conductor Resistance at 20 0C",
         "Max. Core Diameter",
         "Min. Sheath Thickness",
-        "Outer Diameter (m m ) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -2883,8 +2883,8 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Max. Conductor Resistance at 20 0C",
         "Nom. Thickness of Overall Sheath",
-        "Outer Diameter (mm ) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -3106,8 +3106,8 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Max. Conductor Resistance at 20 0C",
         "Nom. Thickness of Overall Sheath",
-        "Outer Diameter (mm ) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -3304,10 +3304,10 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
         "Max. Conductor Resistance at 20 0C",
-        "Insulation Thickne (mm) — (Min)",
-        "(Nom",
-        "ss Outer Diameter (mm) — ) (Min)",
-        "(Max)",
+        "Insulation Thickness (Min)",
+        "Insulation Thickness (Nom)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight approx",
         "Current Rating at 45ºC (A)"
       ],
@@ -3572,10 +3572,10 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Conductor Diameter (mm) (Nom)",
         "Max. Conductor Resistance at 20 0C",
-        "Insulation Thickness (mm) — (Min)",
-        "(Nom)",
-        "Outer Diameter (mm) — (Min)",
-        "(Max)",
+        "Insulation Thickness (Min)",
+        "Insulation Thickness (Nom)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight approx",
         "Current Rating at 45ºC (A)"
       ],
@@ -3633,8 +3633,8 @@
         "Conductor Diameter (mm) (Nom)",
         "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Outer Diameter (mm) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -5069,8 +5069,8 @@
         "Insulation Thickness (mm) (Nom)",
         "Max. Core Diameter",
         "Outer sheath Thickness (mm) (Nom)",
-        "Outer Diameter (mm) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -5518,8 +5518,8 @@
         "Max. Core Diameter",
         "Max. Wire Diameter of Screen",
         "Outer Sheath Thickness (mm) (Nom)",
-        "Outer Diameter (mm) — (Min)",
-        "(Max)",
+        "Outer Diameter (Min)",
+        "Outer Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -6454,8 +6454,8 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Overall Diameter (mm) — (Min)",
-        "(Max)",
+        "Overall Diameter (Min)",
+        "Overall Diameter (Max)",
         "Cable Weight (Kg/Km) approx."
       ],
       "rows": [
@@ -6542,8 +6542,8 @@
         "Conductor Construction No.of Strands x Strand dia. (Nos x mm)",
         "Max. Conductor Resistance at 20 0C",
         "Insulation Thickness (mm) (Nom)",
-        "Overall Diameter (mm) — (Min)",
-        "(Max)",
+        "Overall Diameter (Min)",
+        "Overall Diameter (Max)",
         "Cable Weight (kg/km) approx."
       ],
       "rows": [

@@ -6,19 +6,19 @@
       "name": "Single Core Screened EBXL",
       "headers": [
         "Part Number",
-        "Conductor Construction — Nominal Cross- Section",
-        "No. of Strands",
-        "Diameter of Single wire (Max)",
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Diameter of Single Wire (Max)",
         "Insulation Thickness (Nom)",
-        "Insulation Core diameter — (Min)",
-        "(Max)",
+        "Insulation Core Diameter (Min)",
+        "Insulation Core Diameter (Max)",
         "Screen Wire dia (Nom)",
         "Outer Sheath Thickness (Nom)",
         "Overall Diameter",
         "Weight Approx.",
         "Current Carrying Capacity",
-        "(Max) Conductor S Resistance at 200 C",
-        "tandard Length*"
+        "Conductor Resistance at 20°C (Max)",
+        "Standard Length*"
       ],
       "rows": [
         [
@@ -18782,7 +18782,7 @@
         "Diameter of Single wire Max.",
         "Conductor Diameter Max.",
         "Insulation Wall Thickness Nom.",
-        "Cable Cable — Overall Diameter Max.",
+        "Overall Diameter Max.",
         "Weight Approx.",
         "Max. Conductor Resistance at 200 C",
         "Current Carrying capacity",
@@ -35983,17 +35983,17 @@
       "name": "Siechem Single Core Screened EBXL 150 deg.C Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction Nominal Cross- Section",
-        "Conductor Construction No. of Strands",
-        "Conductor Construction Diameter of Single wire (max.)",
-        "Insulation Thickness (Nom) Diameter of Single wire (max.)",
-        "Screen Wire dia (Nom) Diameter of Single wire (max.)",
-        "Outer Sheath Thickness (Nom) Diameter of Single wire (max.)",
-        "Overall Diameter Diameter of Single wire (max.)",
-        "Weight Approx. Diameter of Single wire (max.)",
-        "Current Carrying Capacity Diameter of Single wire (max.)",
-        "Max. Conductor Resistance at 200C Diameter of Single wire (max.)",
-        "Standard Length* Diameter of Single wire (max.)"
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Diameter of Single wire) (Max)",
+        "Insulation Thickness (Nom)",
+        "Screen Wire dia (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter",
+        "Weight Approx.",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C",
+        "Standard Length*"
       ],
       "rows": [
         [
@@ -36201,16 +36201,16 @@
       "name": "Siechem Multicore Screened EBXL 150 deg.C ISO 6722 Class D Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction Nominal Cross Section",
-        "Conductor Construction No. of Strands",
-        "Conductor Construction Diameter of Single wire(max.)",
-        "Insulation Thickness (Nom) Diameter of Single wire(max.)",
-        "Screen Wire dia (Nom) Diameter of Single wire(max.)",
-        "Outer Sheath Thickness (Nom) Diameter of Single wire(max.)",
-        "Overall Diameter Diameter of Single wire(max.)",
-        "Weight Approx. Diameter of Single wire(max.)",
-        "Max. Conductor Resistance at 200C Diameter of Single wire(max.)",
-        "Current Carrying Capacity Diameter of Single wire(max.)"
+        "Conductor Construction (Nominal Cross Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Diameter of Single wire) (Max)",
+        "Insulation Thickness (Nom)",
+        "Screen Wire dia (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C",
+        "Current Carrying Capacity"
       ],
       "rows": [
         [
@@ -36534,16 +36534,16 @@
       "name": "Siechem Multicore Screened EBXL 150 deg.C ISO 6722 Class D Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction Nominal Cross Section",
-        "Conductor Construction No. of Strands",
-        "Conductor Construction Diameter of Single wire(max.)",
-        "Insulation Thickness (Nom) Diameter of Single wire(max.)",
-        "Screen Wire dia (Nom) Diameter of Single wire(max.)",
-        "Outer Sheath Thickness (Nom) Diameter of Single wire(max.)",
-        "Overall Diameter Diameter of Single wire(max.)",
-        "Weight Approx. Diameter of Single wire(max.)",
-        "Max. Conductor Resistance at 200C Diameter of Single wire(max.)",
-        "Current Carrying Capacity Diameter of Single wire(max.)"
+        "Conductor Construction (Nominal Cross Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Diameter of Single wire) (Max)",
+        "Insulation Thickness (Nom)",
+        "Screen Wire dia (Nom)",
+        "Outer Sheath Thickness (Nom)",
+        "Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C",
+        "Current Carrying Capacity"
       ],
       "rows": [
         [

@@ -31692,14 +31692,14 @@
       "name": "Annealed Plain Flexible Copper Conductor, XLPE Insulated, ATC Screening With Drain Wire & EBXL-XLPO Halogen",
       "headers": [
         "Part Number",
-        "Cable Size — Cross No. of Pairs Sectional Cable Size (Nos) Area",
-        "",
-        "",
-        "Construction — Nom. Nom. No.of Strands Strands dia",
-        "",
+        "No. of Pairs (Nos)",
+        "Cable Size (Cross Sectional Area) (Sq.mm)",
+        "Cable Size (AWG)",
+        "Construction (Nom. No.of Strands)",
+        "Construction (Nom. Strand dia)",
         "Nominal Outer Diameter",
         "Approx. Cable Weight",
-        "Max. Conductor DC. Resistance at 20ºC"
+        "Max. Conductor DC. Resistance at 20°C"
       ],
       "rows": [
         [

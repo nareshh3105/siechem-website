@@ -10298,12 +10298,12 @@
       "family": "silicone",
       "name": "300/300V Rated SIAFJ / DI Type Cable",
       "headers": [
-        "ü Part Number ü",
+        "Part Number",
         "Size",
-        "Thickness of Insulation (Nom) Inner Outer Layer Layer",
-        "",
+        "Thickness of Insulation (Inner Layer) (Nom)",
+        "Thickness of Insulation (Outer Layer) (Nom)",
         "Outer Diameter (Nom)",
-        "Max. Conductor Resistance at 20 0C",
+        "Max. Conductor Resistance at 20°C",
         "Weight (Approx.)"
       ],
       "rows": [

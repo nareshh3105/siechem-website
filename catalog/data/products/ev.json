@@ -9511,45 +9511,19 @@
       "family": "ev",
       "name": "Multi Core Unscreened, Flexible Class C (Thin) 1000V AC EV 125 Cable",
       "headers": [
-        "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore easy to handle at the charging station. ISO ISO IATF OHSAS AS ISO ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Part Number",
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Strand dia.) (Max)",
+        "Insulation Thickness (Min.)",
+        "Sheath Thickness (Nom.)",
+        "Overall Diameter (Min.)",
+        "Overall Diameter (Max.)",
+        "Weight Approx.",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
-        [
-          "Part Number",
-          "Conductor Construction",
-          "",
-          "",
-          "Insulation Thicknes s (M in.)",
-          "Sheath Thickness (N om.)",
-          "Over all Diameter Min. Max.",
-          "",
-          "Weight Approx.",
-          "Current Carrying Capacity",
-          "Max. Conductor Resistance at 200C"
-        ],
-        [
-          "",
-          "Nominal Cross- Section",
-          "No. of Strands",
-          "Stand dia. (Max)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
         [
           "",
           "mm2",
@@ -9772,52 +9746,60 @@
           "1.16"
         ]
       ],
-      "catalogueNo": "A944"
+      "catalogueNo": "A944",
+      "info": {
+        "features": [
+          "Abrasion-resistance.",
+          "Thermal stress-resistant.",
+          "Halogen-free.",
+          "Flame resistant.",
+          "Resistant to cold bend and low temperature shock.",
+          "High charging power up to 500 KW.",
+          "Highly flexible and lightweight therefore easy to handle at the charging station.",
+          "Active liquid cooling as protection against overheating.",
+          "Fast charging.",
+          "Ozone resistant.",
+          "Soldering iron resistant",
+          "Resistant to liquid chemicals"
+        ],
+        "technical": [
+          "Rated Temperature : -40°C to +125°C (3000 Hours)",
+          "Max. Rated Voltage : 1000V AC / 1500V DC",
+          "Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm)",
+          "Insulation Faults : 8kV AC",
+          "Specification : ISO 19642-9, ISO 6722, Generally as per QC/T 1037-2016**"
+        ],
+        "application": [
+          "Especially used in supporting all line charging equipment.",
+          "AC & DC Charging (Domestic Use & Public Charging Station)"
+        ],
+        "construction": [
+          "Conductor : Annealed Plain Copper Conductor according to ISO 19642 (Flexible)",
+          "Insulation : Electron Beam Cross linked Polyolefin Class C (Thin Wall)",
+          "Insulation Colour : As per ISO 19642-1",
+          "Sheath : Electron Beam Crossed Linked Polyolefin",
+          "Sheath Colour : Orange (or) As Per Customer Order"
+        ]
+      }
     },
     {
       "id": "1d4c53aae4",
       "family": "ev",
       "name": "Multi Core Unscreened, Stranded Class C (Thin) 1000V AC EV 125 Cable",
       "headers": [
-        "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1250C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class C (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) As Per ü Thermal stress-resistant. Customer Order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Part Number",
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Strand dia.) (Max)",
+        "Insulation Thickness (Min.)",
+        "Sheath Thickness (Nom.)",
+        "Overall Diameter (Min.)",
+        "Overall Diameter (Max.)",
+        "Weight Approx.",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
-        [
-          "Part Number",
-          "Conductor Construction",
-          "",
-          "",
-          "Insulation Thicknes s (M in.)",
-          "Sheath Thickness (N om.)",
-          "Over all Diameter Min. Max.",
-          "",
-          "Weight Approx.",
-          "Current Carrying Capacity",
-          "Max. Conductor Resistance at 200C"
-        ],
-        [
-          "",
-          "Nominal Cross- Section",
-          "No. of Strands",
-          "Stand dia. (Max)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
         [
           "",
           "mm2",
@@ -10040,7 +10022,41 @@
           "1.16"
         ]
       ],
-      "catalogueNo": "A945"
+      "catalogueNo": "A945",
+      "info": {
+        "features": [
+          "Abrasion-resistance.",
+          "Thermal stress-resistant.",
+          "Halogen-free.",
+          "Flame resistant.",
+          "Resistant to cold bend and low temperature shock.",
+          "High charging power up to 500 KW.",
+          "Highly flexible and lightweight therefore easy to handle at the charging station.",
+          "Active liquid cooling as protection against overheating.",
+          "Fast charging.",
+          "Ozone resistant.",
+          "Soldering iron resistant",
+          "Resistant to liquid chemicals"
+        ],
+        "technical": [
+          "Rated Temperature : -40°C to +125°C (3000 Hours)",
+          "Max. Rated Voltage : 1000V AC / 1500V DC",
+          "Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm)",
+          "Insulation Faults : 8kV AC",
+          "Specification : ISO 19642-9, ISO 6722, Generally as per QC/T 1037-2016**"
+        ],
+        "application": [
+          "Especially used in supporting all line charging equipment.",
+          "AC & DC Charging (Domestic Use & Public Charging Station)"
+        ],
+        "construction": [
+          "Conductor : Annealed Plain Copper Conductor according to ISO 19642 (Stranded)",
+          "Insulation : Electron Beam Cross linked Polyolefin Class C (Thin Wall)",
+          "Insulation Colour : As per ISO 19642-1",
+          "Sheath : Electron Beam Crossed Linked Polyolefin",
+          "Sheath Colour : Orange (or) As Per Customer Order"
+        ]
+      }
     },
     {
       "id": "42d554f35d",
@@ -10427,45 +10443,19 @@
       "family": "ev",
       "name": "Multi Core Unscreened, Flexible Class D (Thin) 1000V AC EV 150 Cable",
       "headers": [
-        "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Flexible) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Part Number",
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Strand dia.) (Max)",
+        "Insulation Thickness (Min.)",
+        "Sheath Thickness (Nom.)",
+        "Overall Diameter (Min.)",
+        "Overall Diameter (Max.)",
+        "Weight Approx.",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
-        [
-          "Part Number",
-          "Conductor Construction",
-          "",
-          "",
-          "Insulation Thicknes s (M in.)",
-          "Sheath Thickness (N om.)",
-          "Over all Diameter Min. Max.",
-          "",
-          "Weight Approx.",
-          "Current Carrying Capacity",
-          "Max. Conductor Resistance at 200C"
-        ],
-        [
-          "",
-          "Nominal Cross- Section",
-          "No. of Strands",
-          "Stand dia. (Max)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
         [
           "",
           "mm2",
@@ -10688,52 +10678,60 @@
           "1.16"
         ]
       ],
-      "catalogueNo": "A948"
+      "catalogueNo": "A948",
+      "info": {
+        "features": [
+          "Abrasion-resistance.",
+          "Thermal stress-resistant.",
+          "Halogen-free.",
+          "Flame resistant.",
+          "Resistant to cold bend and low temperature shock.",
+          "High charging power up to 500 KW.",
+          "Highly flexible and lightweight therefore easy to handle at the charging station.",
+          "Active liquid cooling as protection against overheating.",
+          "Fast charging.",
+          "Ozone resistant.",
+          "Soldering iron resistant",
+          "Resistant to liquid chemicals"
+        ],
+        "technical": [
+          "Rated Temperature : -40°C to +150°C (3000 Hours)",
+          "Max. Rated Voltage : 1000V AC / 1500V DC",
+          "Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm)",
+          "Insulation Faults : 8kV AC",
+          "Specification : ISO 19642-9, ISO 6722, Generally as per QC/T 1037-2016**"
+        ],
+        "application": [
+          "Especially used in supporting all line charging equipment.",
+          "AC & DC Charging (Domestic Use & Public Charging Station)"
+        ],
+        "construction": [
+          "Conductor : Annealed Plain Copper Conductor according to ISO 19642 (Flexible)",
+          "Insulation : Electron Beam Cross linked Polyolefin Class D (Thin Wall)",
+          "Insulation Colour : As per ISO 19642-1",
+          "Sheath : Electron Beam Crossed Linked Polyolefin",
+          "Sheath Colour : Orange (or) as per Customer order"
+        ]
+      }
     },
     {
       "id": "47925581e4",
       "family": "ev",
       "name": "Multi Core Unscreened, Stranded Class D (Thin) 1000V AC EV 150 Cable",
       "headers": [
-        "Application Product Construction Technical Data üEspecially used in supporting all line ü Conductor : Annealed Plain Copper üRated Temperature : - 400C to +1500C (3000 Hours) charging equipment. Conductor according to ISO 19642 (Stranded) üMax. Rated Voltage : 1000V AC / 1500V DC üAC & DC Charging (Domestic Use & üInsulation : Electron Beam Cross linked üTest Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm) Public Charging Station) Polyolefin Class D (Thin Wall) üInsulation Faults : 8kV AC üInsulation Colour : As per ISO 19642-1 üSpecification : ISO 19642-9, ISO 6722,Generally Features üSheath : Electron Beam Crossed Linked as per QC / T 1037-2016** Polyolefin ü Abrasion-resistance. ü Sheath Colour : Orange (or) as per ü Thermal stress-resistant. Customer order ü Halogen-free. ü Flame resistant. 2D View ü Resistant to cold bend and low temperature shock. ü High charging power up to 500 KW. ü Highly flexible and lightweight therefore ISO ISO IATF OHSAS AS ISO easy to handle at the charging station. ü Active liquid cooling as protection against 9001 14001 16949 18001 9100 45001 overheating. ü Fast charging. ü Ozone resistant. ü Soldering iron resistant ü Resistant to liquid chemicals",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Part Number",
+        "Conductor Construction (Nominal Cross-Section)",
+        "Conductor Construction (No. of Strands)",
+        "Conductor Construction (Strand dia.) (Max)",
+        "Insulation Thickness (Min.)",
+        "Sheath Thickness (Nom.)",
+        "Overall Diameter (Min.)",
+        "Overall Diameter (Max.)",
+        "Weight Approx.",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
-        [
-          "Part Number",
-          "Conductor Construction",
-          "",
-          "",
-          "Insulation Thicknes s (M in.)",
-          "Sheath Thickness (N om.)",
-          "Over all Diameter Min. Max.",
-          "",
-          "Weight Approx.",
-          "Current Carrying Capacity",
-          "Max. Conductor Resistance at 200C"
-        ],
-        [
-          "",
-          "Nominal Cross- Section",
-          "No. of Strands",
-          "Stand dia. (Max)",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
-        ],
         [
           "",
           "mm2",
@@ -10956,7 +10954,41 @@
           "1.16"
         ]
       ],
-      "catalogueNo": "A949"
+      "catalogueNo": "A949",
+      "info": {
+        "features": [
+          "Abrasion-resistance.",
+          "Thermal stress-resistant.",
+          "Halogen-free.",
+          "Flame resistant.",
+          "Resistant to cold bend and low temperature shock.",
+          "High charging power up to 500 KW.",
+          "Highly flexible and lightweight therefore easy to handle at the charging station.",
+          "Active liquid cooling as protection against overheating.",
+          "Fast charging.",
+          "Ozone resistant.",
+          "Soldering iron resistant",
+          "Resistant to liquid chemicals"
+        ],
+        "technical": [
+          "Rated Temperature : -40°C to +150°C (3000 Hours)",
+          "Max. Rated Voltage : 1000V AC / 1500V DC",
+          "Test Voltage : 10kV AC for 5 mins (≥ 0.5 Sqmm)",
+          "Insulation Faults : 8kV AC",
+          "Specification : ISO 19642-9, ISO 6722, Generally as per QC/T 1037-2016**"
+        ],
+        "application": [
+          "Especially used in supporting all line charging equipment.",
+          "AC & DC Charging (Domestic Use & Public Charging Station)"
+        ],
+        "construction": [
+          "Conductor : Annealed Plain Copper Conductor according to ISO 19642 (Stranded)",
+          "Insulation : Electron Beam Cross linked Polyolefin Class D (Thin Wall)",
+          "Insulation Colour : As per ISO 19642-1",
+          "Sheath : Electron Beam Crossed Linked Polyolefin",
+          "Sheath Colour : Orange (or) as per Customer order"
+        ]
+      }
     },
     {
       "id": "1f2780da44",

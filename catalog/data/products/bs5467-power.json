@@ -5496,28 +5496,24 @@
       "name": "2 Core APC Conductor EBXL - XLPE 120°C Insulated GI Strips Armoured PVC Sheathed 600/1000 V Power cable as per BS 5467",
       "headers": [
         "Part Number",
-        "Are",
-        "a",
-        "Cond.Min AreNao.of Wires",
-        ".CTohnidck.Mneins.s oNf Eo.BoXfL / WXiLrePsE Insulation (Nom.)",
-        "TThhiicckknneessss oof fE PBVXCL / IXnLnPeEr InSshuelaattihon (Nom.)",
-        "DDimimeennsisoionnT ooff AArmrm Wstirrieps",
-        "hTichkicnkensesssA ofof O OuOteurterdi ShSehaethath",
-        "ppArpopxroxA veOrvaellrall admiaemteerter",
-        "pAppropxro.Nxe.Ntet WtW.otf.of R CaCbaleble a",
-        "MMaxa.xD..DC.C eRseis tisatnacnece ta 2t 02 0d edge.gC.C — Ω/KM",
-        "CCuurrrreenntt RRaattiinngg FFoorr EEBBXXLL --XXLLPPEE CCaabblleess ((112255°°CC)) — DDirireecctt inin GGrroouunndd",
+        "Area",
+        "No.of Wires (Min.)",
+        "Thickness of EBXL / XLPE Insulation (Nom.)",
+        "Dimension of Arm strips",
+        "Thickness of Outer Sheath",
+        "Approx Overall diameter",
+        "Approx.Net Wt.of Cable",
+        "Max.D.C Resistance at 20 deg.C — Ω/KM",
+        "Current Rating For EBXL -XLPE Cables (125°C) — Direct in Ground",
         "In Duct — Cu",
         "In Air — Cu",
-        "CCuur rreennt tR Raatitningg FFoorr C Chheemmicicaall yly C Cuurree XXLLPPEE C Caabbleless ( (9900°°CC) — DDiirreecctt iinn GGrroouunndd",
+        "Current Rating For Chemically Cured XLPE Cables (90°C) — Direct in Ground",
         "In Duct — Cu",
-        "I A — C",
-        "Short dd Short Circuit ) Circuit Rating Rating n ff oo rr 11 s se ec c ir — u Cu"
+        "In Air — Cu",
+        "Short Circuit Rating for 1sec"
       ],
       "rows": [
         [
-          "",
-          "",
           "",
           "Sq.mm",
           "Nos",
@@ -5537,8 +5533,6 @@
         ],
         [
           "749E3002",
-          "",
-          "",
           "25",
           "7",
           "0.9",
@@ -5552,13 +5546,11 @@
           "173",
           "152",
           "137",
-          "13",
-          "3 3.6"
+          "133",
+          "3.6"
         ],
         [
           "749E3202",
-          "",
-          "",
           "35",
           "7",
           "0.9",
@@ -5572,13 +5564,11 @@
           "203",
           "180",
           "162",
-          "15",
-          "6 5.0"
+          "156",
+          "5.0"
         ],
         [
           "749E3402",
-          "",
-          "",
           "50",
           "19",
           "1.0",
@@ -5592,13 +5582,11 @@
           "281",
           "210",
           "196",
-          "21",
-          "6 7.1"
+          "216",
+          "7.1"
         ],
         [
           "749E3702",
-          "",
-          "",
           "70",
           "19",
           "1.1",
@@ -5612,18 +5600,16 @@
           "317",
           "264",
           "238",
-          "24",
-          "4 10.0"
+          "244",
+          "10.0"
         ],
         [
           "749E3802",
-          "",
-          "",
           "95",
           "19",
           "1.1",
           "0.8 X 4",
-          "2",
+          "2.0",
           "48.0",
           "3341",
           "0.193",
@@ -5632,13 +5618,11 @@
           "387",
           "314",
           "283",
-          "29",
-          "8 13.6"
+          "298",
+          "13.6"
         ],
         [
           "749E4102",
-          "",
-          "",
           "120",
           "37",
           "1.2",
@@ -5652,13 +5636,11 @@
           "432",
           "347",
           "321",
-          "33",
-          "2 17.1"
+          "332",
+          "17.1"
         ],
         [
           "749E4202",
-          "",
-          "",
           "150",
           "37",
           "1.4",
@@ -5672,13 +5654,11 @@
           "495",
           "393",
           "363",
-          "38",
-          "1 21.4"
+          "381",
+          "21.4"
         ],
         [
           "749E4402",
-          "",
-          "",
           "185",
           "37",
           "1.6",
@@ -5692,13 +5672,11 @@
           "576",
           "443",
           "408",
-          "44",
-          "3 26.4"
+          "443",
+          "26.4"
         ],
         [
           "749E4602",
-          "",
-          "",
           "240",
           "61",
           "1.7",
@@ -5712,13 +5690,11 @@
           "680",
           "508",
           "466",
-          "52",
-          "3 34.3"
+          "523",
+          "34.3"
         ],
         [
           "749E4802",
-          "",
-          "",
           "300",
           "61",
           "1.8",
@@ -5732,13 +5708,11 @@
           "770",
           "573",
           "525",
-          "59",
-          "2 42.9"
+          "592",
+          "42.9"
         ],
         [
           "749E4902",
-          "",
-          "",
           "400",
           "61",
           "2.0",
@@ -5752,8 +5726,8 @@
           "872",
           "618",
           "592",
-          "67",
-          "1 57.1"
+          "671",
+          "57.1"
         ]
       ],
       "catalogueNo": "749E"
@@ -5764,26 +5738,24 @@
       "name": "3 Round Core APC Conductor EBXL - XLPE 120°C Insulated GI wire Armoured PVC Sheathed 600/1000 V Power cable as per BS 5467",
       "headers": [
         "Part Number",
-        "",
-        "Cond. No. AreaArea Wir",
-        "MCionn.dT.Mhiicnk.n of No.ooff EB esWiresXLP Insula (No",
-        "eTsshicTkhniecksnse XLo /f EBoXf LP V/ E XLPIEnner tioInnsulaSthioenat m.) (Nom.)",
-        "sDsimDeimnseionnsio C of of ArmArm h WirWeire",
-        "nTThhicickknneesss ooff OOuuteterr SShheeaathth",
+        "Area",
+        "No.of Wires (Min.)",
+        "Thickness of EBXL / XLPE Insulation (Nom.)",
+        "Dimension of Arm Wire",
+        "Thickness of Outer Sheath",
         "Approx Overall diameter",
         "Approx.Net Wt.of Cable",
-        "MMaaxx.D.D.C.C RReessisistatannccee at 2a0t 2d0eg.C deg.C — Ω/KM",
-        "CCuurr reenntt RRaattiningg FFoorr EEBBXXLL --XXLLPPEE CCaabbleless ((112255°°CC)) — DirDeicrt inin GrGouron",
-        "ect In Duct udnd — Cu",
-        "In Air — Cu",
-        "CCuurrrreenntt RRaattiinngg FFoorr CChheemmiiccaall lyy CCuurreedd XXLLPPEE CCaabblleess ((9900°°CC)) — DDireircetct inin GGroruonudnd",
+        "Max.D.C Resistance at 20 deg.C — Ω/KM",
+        "Current Rating For EBXL -XLPE Cables (125°C) — Direct in Ground",
         "In Duct — Cu",
-        "In Ai — Cu",
-        "Short Short Circuit Circuit Rating Rating for 1sec for 1 sec r"
+        "In Air — Cu",
+        "Current Rating For Chemically Cured XLPE Cables (90°C) — Direct in Ground",
+        "In Duct — Cu",
+        "In Air — Cu",
+        "Short Circuit Rating for 1sec"
       ],
       "rows": [
         [
-          "",
           "",
           "Sq.mm",
           "Nos",
@@ -5803,7 +5775,6 @@
         ],
         [
           "750ER1303",
-          "",
           "1.5",
           "1",
           "0.6",
@@ -5822,7 +5793,6 @@
         ],
         [
           "750ER1603",
-          "",
           "2.5",
           "1",
           "0.7",
@@ -5841,7 +5811,6 @@
         ],
         [
           "750ER1903",
-          "",
           "4",
           "1",
           "0.7",
@@ -5860,7 +5829,6 @@
         ],
         [
           "750ER2303",
-          "",
           "6",
           "1",
           "0.7",
@@ -5879,7 +5847,6 @@
         ],
         [
           "750ER2703",
-          "",
           "10",
           "7",
           "0.7",
@@ -5898,7 +5865,6 @@
         ],
         [
           "750ER2803",
-          "",
           "16",
           "7",
           "0.7",
@@ -5917,7 +5883,6 @@
         ],
         [
           "750ER3003",
-          "",
           "25",
           "7",
           "0.9",
@@ -5931,12 +5896,11 @@
           "143",
           "122",
           "110",
-          "11",
-          "0 3.6"
+          "110",
+          "3.6"
         ],
         [
           "750ER3203",
-          "",
           "35",
           "19",
           "0.9",
@@ -5950,8 +5914,8 @@
           "182",
           "146",
           "131",
-          "14",
-          "0 5.0"
+          "140",
+          "5.0"
         ]
       ],
       "catalogueNo": "750E"
