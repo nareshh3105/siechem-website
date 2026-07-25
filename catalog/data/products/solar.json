@@ -1,6 +1,982 @@
 {
   "series": [
     {
+      "id": "3e6792aad4",
+      "family": "solar",
+      "name": "Single Core Anti-Rodent GI Wire Braided Flexible Copper Conductor Electron Beam Irradiated Solar DC Cable  Generally as per EN 50618",
+      "headers": [
+        "Part Number",
+        "Cross Section Area",
+        "Nominal Insulation Thickness",
+        "Nominal Inner Sheath Thickness",
+        "Braiding Wire Dia (Nom)",
+        "Nominal Outer Sheath Thickness",
+        "Cable Diameter (Nom)",
+        "Max. DC Conductor Resistance at 20°C",
+        "Cable Weight (Nom)",
+        "Current Rating for Two Loaded Cables Touching on Surfaces"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "Amps"
+        ],
+        [
+          "B56713XXYY",
+          "1.5",
+          "0.7",
+          "0.8",
+          "0.3",
+          "1.4",
+          "9.5 ± 0.9",
+          "13.7",
+          "145",
+          "24"
+        ],
+        [
+          "B56716XXYY",
+          "2.5",
+          "0.7",
+          "0.8",
+          "0.3",
+          "1.4",
+          "10.0 ± 1.0",
+          "8.21",
+          "160",
+          "33"
+        ],
+        [
+          "B56719XXYY",
+          "4",
+          "0.7",
+          "0.8",
+          "0.3",
+          "1.4",
+          "11.0 ± 1.1",
+          "5.09",
+          "195",
+          "44"
+        ],
+        [
+          "B56723XXYY",
+          "6",
+          "0.7",
+          "0.8",
+          "0.3",
+          "1.4",
+          "11.5 ± 1.2",
+          "3.39",
+          "225",
+          "57"
+        ],
+        [
+          "B56727XXYY",
+          "10",
+          "0.7",
+          "0.8",
+          "0.3",
+          "1.4",
+          "12.5 ± 1.3",
+          "1.95",
+          "280",
+          "79"
+        ],
+        [
+          "B56728XXYY",
+          "16",
+          "0.7",
+          "0.9",
+          "0.3",
+          "1.4",
+          "14.0 ± 1.4",
+          "1.24",
+          "360",
+          "107"
+        ],
+        [
+          "B56730XXYY",
+          "25",
+          "0.9",
+          "1.0",
+          "0.3",
+          "1.5",
+          "15.5 ± 1.6",
+          "0.795",
+          "485",
+          "142"
+        ],
+        [
+          "B56732XXYY",
+          "35",
+          "0.9",
+          "1.1",
+          "0.3",
+          "1.5",
+          "16.5 ± 1.7",
+          "0.565",
+          "600",
+          "176"
+        ],
+        [
+          "B56734XXYY",
+          "50",
+          "1.0",
+          "1.2",
+          "0.3",
+          "1.6",
+          "18.5 ± 1.9",
+          "0.393",
+          "785",
+          "221"
+        ],
+        [
+          "B56737XXYY",
+          "70",
+          "1.1",
+          "1.2",
+          "0.3",
+          "1.6",
+          "20.5 ± 2.1",
+          "0.277",
+          "995",
+          "278"
+        ],
+        [
+          "B56738XXYY",
+          "95",
+          "1.1",
+          "1.3",
+          "0.3",
+          "1.6",
+          "22.0 ± 2.2",
+          "0.210",
+          "1240",
+          "333"
+        ],
+        [
+          "B56741XXYY",
+          "120",
+          "1.2",
+          "1.3",
+          "0.3",
+          "1.7",
+          "24.0 ± 2.4",
+          "0.164",
+          "1500",
+          "390"
+        ],
+        [
+          "B56742XXYY",
+          "150",
+          "1.4",
+          "1.4",
+          "0.3",
+          "1.8",
+          "26.0 ± 2.6",
+          "0.132",
+          "1830",
+          "453"
+        ],
+        [
+          "B56744XXYY",
+          "185",
+          "1.6",
+          "1.6",
+          "0.3",
+          "1.8",
+          "29.0 ± 2.9",
+          "0.108",
+          "2235",
+          "515"
+        ],
+        [
+          "B56746XXYY",
+          "240",
+          "1.7",
+          "1.7",
+          "0.3",
+          "1.8",
+          "31.5 ± 3.2",
+          "0.0817",
+          "2770",
+          "620"
+        ]
+      ],
+      "catalogueNo": "B567",
+      "info": {
+        "features": [
+          "Anti-Termite and Anti-Rodent Properties",
+          "Resistance against UV, Water, Ozone, Fluids, Oil, Salt &",
+          "General Weathering.",
+          "Electron Beam Cross Linked",
+          "Halogen Free, Flame Retardant, Low Smoke Emission",
+          "Fire retardant to meet IEC 607541-1/EN 50268-2",
+          "RoHS compliant as per EU norms"
+        ],
+        "technical": [
+          "Temperature Range: -40°C to +120°C",
+          "Maximum Temperature at Conductor: 120°C (20,000h)",
+          "Test Voltage: 6500V AC for 5 minutes",
+          "Insulation Resistance Test & Voltage Test: EN 50395",
+          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
+          "Max. Voltage: 1.8 kV DC",
+          "Short Circuit Temperature: +280°C",
+          "Halogen Free: EN50525-1",
+          "Flame Retardant: EN 60332-1-2",
+          "Low Smoke Emission: EN 61034-2",
+          "UV and Weathering Resistance: EN 50618, EN 50289-4-17",
+          "Flame Retardant: EN60332-1-2",
+          "Resistance against Acid and Alkaline: EN 60811-404",
+          "Resistance to Fire: Eca approval (from BASEC & TUV)",
+          "Shrinkage Test on Sheath: EN  60811-503",
+          "Dynamic Penetration Test: EN 50618",
+          "Expected Life Period: 25 years (according EN 60216)",
+          "Cold Resistance: EN 50618, EN 60811-504, EN 60811-505",
+          "Min Bending Radius:",
+          "(i) Cable OD x 4 for OD ≤ 8.0 mm",
+          "(ii) Cable OD x 5 for 8.0 ≤ OD ≤ 12.0 mm",
+          "(iii) Cable OD x 6 for OD >12.0 mm"
+        ],
+        "application": [
+          "Connect one solar panel to another in series or parallel configurations.",
+          "Transfer DC power from solar panel strings to the combiner (string) box.",
+          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
+          "Suitable for outdoor solar installations due to their resistance to UV radiation, rain, ozone, heat, cold, and other harsh environmental conditions, ensuring reliable long-term performance."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
+          "Insulation: EBXL - XLPO 120°C (Color White, Red & Black) Other colors as per customer order",
+          "Inner Sheath: EBXL - XLPO 120ºC (UV Resistant)",
+          "Braiding: GI Wire",
+          "Outer Sheath: EBXL - XLPO 120º C Highly Weather & UV Resistant (Color Black, Blue, Red, Brown, Grey, Black with Red stripe)"
+        ]
+      }
+    },
+    {
+      "id": "7ebd3bf144",
+      "family": "solar",
+      "name": "Single Core Aluminum Conductor Electron Beam Cross Linked Solar Cable with Nylon Jacket Constructed as per EN 50618 & AS/NZS 5000.1 Specification",
+      "headers": [
+        "Part Number",
+        "Cross Section Area",
+        "Cond. Min. No. of Wires",
+        "Cable Diameter (nom.)",
+        "Max. DC Conductor Resistance at 20 0C",
+        "Cable Weight (nom.)",
+        "Current Rating In Air at 40 0C"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "Nos.",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "Amps"
+        ],
+        [
+          "A30228XXYY",
+          "16",
+          "6",
+          "13.1",
+          "1.91",
+          "209",
+          "90"
+        ],
+        [
+          "A30230XXYY",
+          "25",
+          "6",
+          "15.5",
+          "1.20",
+          "290",
+          "143"
+        ],
+        [
+          "A30232XXYY",
+          "35",
+          "6",
+          "16.5",
+          "0.868",
+          "338",
+          "178"
+        ],
+        [
+          "A30234XXYY",
+          "50",
+          "6",
+          "18.7",
+          "0.641",
+          "444",
+          "217"
+        ],
+        [
+          "A30237XXYY",
+          "70",
+          "12",
+          "20.3",
+          "0.443",
+          "533",
+          "281"
+        ],
+        [
+          "A30238XXYY",
+          "95",
+          "15",
+          "23.4",
+          "0.320",
+          "703",
+          "342"
+        ],
+        [
+          "A30241XXYY",
+          "120",
+          "15",
+          "24.9",
+          "0.253",
+          "810",
+          "399"
+        ],
+        [
+          "A30242XXYY",
+          "150",
+          "15",
+          "27.4",
+          "0.206",
+          "979",
+          "460"
+        ],
+        [
+          "A30244XXYY",
+          "185",
+          "30",
+          "30.0",
+          "0.164",
+          "1175",
+          "529"
+        ],
+        [
+          "A30246XXYY",
+          "240",
+          "30",
+          "33.4",
+          "0.125",
+          "1458",
+          "627"
+        ],
+        [
+          "A30248XXYY",
+          "300",
+          "30",
+          "36.4",
+          "0.100",
+          "1752",
+          "725"
+        ],
+        [
+          "A30249XXYY",
+          "400",
+          "53",
+          "40.6",
+          "0.0778",
+          "2211",
+          "875"
+        ]
+      ],
+      "catalogueNo": "A302",
+      "info": {
+        "features": [
+          "Water Resistant & Rodent Resistant",
+          "Resistance against UV, Water, Ozone, Fluids, Oil, Salt &",
+          "General Weathering.",
+          "Electron Beam Cross Linked",
+          "Used for direct burial",
+          "Halogen Free, Flame Retardant, Low Smoke Emission",
+          "Fire retardant to meet IEC 607541-1/EN 50268-2",
+          "RoHS compliant as per EU norms"
+        ],
+        "technical": [
+          "Maximum Temperature at Conductor: 120°C (20,000h)",
+          "Test Voltage: 6500V AC for 5 minutes",
+          "Insulation Resistance Test & Voltage Test: EN 50395",
+          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
+          "Max. Voltage: 1.8 kV DC",
+          "Short Circuit Temperature: +280°C"
+        ],
+        "application": [
+          "Connect one solar panel to another in series or parallel configurations.",
+          "Transfer DC power from solar panel strings to the combiner (string) box.",
+          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
+          "Suitable for outdoor solar installations due to their resistance to UV"
+        ],
+        "construction": [
+          "Conductor: Aluminum Stranded Conductor according to IEC 60228, Class 2",
+          "Insulation: Aluminium Stranded Conductor, according to IEC 60228, Class 2",
+          "Sheath: EBXL - XLPO (Colour Black, Black with Red strip)",
+          "*Jacket 1:  Nylon -12 (Black)",
+          "*Jacket 2:  Sacrificial PVC (UV Resistant) -Black (Optional)"
+        ]
+      }
+    },
+    {
+      "id": "f3bd997213",
+      "family": "solar",
+      "name": "Siechem Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated and Jacketed Solar Twin Parallel Cable",
+      "headers": [
+        "Part number",
+        "No. of Cores x Nominal Cross Sectional Area",
+        "Wire Dia (Max)",
+        "Thickness of Insulation (Nom)",
+        "Thickness of Outer Sheath (Nom)",
+        "Overall Diameter of Twin Parallel (Nom)",
+        "DC Conductor Resistance 20°C (Max)",
+        "Approx Cable Weight"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "kg/km"
+        ],
+        [
+          "A7881902",
+          "2 X 4",
+          "0.31",
+          "0.7",
+          "0.8",
+          "(5.8 X 12.0) ± 0.6",
+          "5.09",
+          "120"
+        ],
+        [
+          "A7882302",
+          "2 X 6",
+          "0.31",
+          "0.7",
+          "0.8",
+          "(6.2 X 12.8) ± 0.6",
+          "3.39",
+          "155"
+        ]
+      ],
+      "catalogueNo": "A788",
+      "info": {
+        "features": [
+          "Resistance against UV, Water. Ozone, Fluids, Oil, Salt & General Weathering",
+          "Electron Beam Cross Linked Halogen free, flame Retardant, Low Smoke Emission",
+          "Fire retardant to meet IEC 607541-1 / EN  50268-2",
+          "RoHS Compliant as per EU norms"
+        ],
+        "technical": [
+          "Rated Voltage: 1/1 kV AC (1.5/1.5 kV DC)",
+          "Max. Permitted Operating Voltage: 1.8kV DC",
+          "Temperature Range",
+          "(i) Ambient Temperature: -40 ºC to +90ºC",
+          "(ii) Max. Temperature at Conductor:120ºC",
+          "Current rating for two loaded Cables",
+          "touching on Surface upto 60ºC",
+          "(i) 4 sq.mm - 44 A",
+          "(ii) 6 sq.mm - 57 A",
+          "Max. Continuous working temp: 120º C",
+          "Max. Conductor temp at Termination of Short Circuit for 5 Sec: 250º C",
+          "Specification: As per EN 50618"
+        ],
+        "application": [
+          "Used in Photovoltaic Power Supply system's Indoor & Outdoors",
+          "Applicable for Installation in Cable trays, Conduits, on and in wall as well as for direct burial"
+        ]
+      }
+    },
+    {
+      "id": "00cb6aec21",
+      "family": "solar",
+      "name": "Multi Core Copper Conductor Electron Beam Cross Linked Solar Cable as per TUV, EN 50618 & UL Specification",
+      "headers": [
+        "Part Number",
+        "Cross Section Area",
+        "Max. Diameter of wires in Conductor Design",
+        "Max. DC Conductor Resistance at 20°C",
+        "",
+        "Cable Diameter (nom.)",
+        "",
+        "",
+        "Cable Weight (nom.)",
+        "",
+        "",
+        "Current Rating",
+        ""
+      ],
+      "rows": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "2",
+          "Core",
+          "3 Core",
+          "4 Core",
+          "2 Core",
+          "3 Core",
+          "4 Core",
+          "2 Core",
+          "3 & 4 Core"
+        ],
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "ohm/km",
+          "mm",
+          "",
+          "mm",
+          "mm",
+          "Kg/Km",
+          "Kg/Km",
+          "Kg/Km",
+          "Amps",
+          "Amps"
+        ],
+        [
+          "65013XX*",
+          "1.5",
+          "0.26",
+          "13.7",
+          "8.4",
+          "",
+          "9.1",
+          "9.9",
+          "93.0",
+          "116.0",
+          "141.0",
+          "24.0",
+          "21.0"
+        ],
+        [
+          "65016XX",
+          "2.5",
+          "0.26",
+          "8.21",
+          "9.3",
+          "",
+          "10.1",
+          "11.2",
+          "122.0",
+          "154.0.",
+          "194.0",
+          "33.0",
+          "29.0"
+        ],
+        [
+          "65019XX",
+          "4",
+          "0.31",
+          "5.09",
+          "10.8",
+          "",
+          "11.9",
+          "13.1",
+          "172.0",
+          "225.0",
+          "282.0",
+          "44.0",
+          "39.0"
+        ],
+        [
+          "65023XX",
+          "6",
+          "0.31",
+          "3.39",
+          "12.4",
+          "",
+          "14.0",
+          "15.4",
+          "237.0",
+          "323.0",
+          "396.0",
+          "57.0",
+          "50.0"
+        ],
+        [
+          "65027XX",
+          "10",
+          "0.41",
+          "1.95",
+          "15.4",
+          "",
+          "16.8",
+          "19.0",
+          "378.0",
+          "492.0",
+          "636.0",
+          "79.0",
+          "69.0"
+        ],
+        [
+          "65028XX",
+          "16",
+          "0.41",
+          "1.24",
+          "18.8",
+          "",
+          "20.0",
+          "22.3",
+          "584.0",
+          "745.0",
+          "951.0",
+          "107.0",
+          "94.0"
+        ],
+        [
+          "65030XX",
+          "25",
+          "0.41",
+          "0.795",
+          "23.0",
+          "",
+          "24.5",
+          "27.1",
+          "883.0",
+          "1131.0",
+          "1432.0",
+          "142.0",
+          "124.0"
+        ],
+        [
+          "65032XX",
+          "35",
+          "0.41",
+          "0.565",
+          "25.4",
+          "",
+          "27.1",
+          "30.0",
+          "1140.0",
+          "1479.0",
+          "1880.0",
+          "176.0",
+          "154.0"
+        ],
+        [
+          "65034XX",
+          "50",
+          "0.41",
+          "0.393",
+          "29.3",
+          "",
+          "31.2",
+          "34.6",
+          "1532.0",
+          "1996.0",
+          "2544.0",
+          "221.0",
+          "193.0"
+        ],
+        [
+          "65037XX",
+          "70",
+          "0.51",
+          "0.277",
+          "32.8",
+          "",
+          "35.5",
+          "39.3",
+          "2033.0",
+          "2707.0",
+          "3457.0",
+          "278.0",
+          "243.0"
+        ]
+      ],
+      "catalogueNo": "650",
+      "info": {
+        "extra": [
+          {
+            "lines": [
+              "TUV: Siechem Single & Multi Core and Screened Solar cables meet specn.2Pfg 1169/08.2007 & EN 50618",
+              "UL: Siechem Single & Multicore and Screened Solar cables meet UL 4703",
+              "Dual: Siechem Single & Multicore and Screened cables to meet both TUV & UL specn."
+            ],
+            "title": "Type of Solar cables:"
+          }
+        ],
+        "features": [
+          "Resistance against UV, Water, Ozone, Fluids, Oil, Salt &",
+          "General Weathering.",
+          "Electron Beam Cross Linked,",
+          "Halogen Free, Flame Retardant, Low Smoke emission,",
+          "Fire retardant to meet IEC 607541-1/EN 50268-2",
+          "RoHS compliant as per EU norms"
+        ],
+        "technical": [
+          "Maximum Temperature at Conductor: 120°C (20,000h)",
+          "Test Voltage: 6500V AC for 5 minutes",
+          "Insulation Resistance Test & Voltage Test: EN 50395",
+          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
+          "Max. Voltage: 1.8 kV DC",
+          "Short Circuit Temperature: +280°C"
+        ],
+        "application": [
+          "Connect one solar panel to another in series or parallel configurations.",
+          "Transfer DC power from solar panel strings to the combiner (string) box.",
+          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
+          "Suitable for outdoor solar installations due to their resistance to UV radiation, rain, ozone, heat, cold, and other harsh environmental conditions, ensuring reliable long-term performance."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
+          "Insulation: XLPO 120°C (Colour Red, Yellow, Blue, Black & Green)",
+          "Jacket: XLPO Highly weather & UV Resistant (Colour Black)",
+          ":",
+          ":",
+          ":"
+        ]
+      }
+    },
+    {
+      "id": "0985b7b880",
+      "family": "solar",
+      "name": "Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated, Nylon Inner Sheathed and EBXL XLPO Outer Sheathed Single Core Solar PV Cable (Anti- Rodent & Anti - Termite properties)",
+      "headers": [
+        "Part Number",
+        "No. of Core x Nominal Cross Sectional Area — No. X",
+        "Strand Dia. (Max.)",
+        "Thickness of Insulation (Nom)",
+        "Thickness of Outer Sheath (Nom)",
+        "Overall Diameter of Cable (Nom.)",
+        "DC Conductor Resistance at 20°C (Max)",
+        "Approx Cable Weight",
+        "Current Rating for Two Loaded Cables Touching on Surfaces"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "kg/km",
+          "Amps"
+        ],
+        [
+          "A518130139",
+          "1 X 1.5",
+          "0.26",
+          "0.7",
+          "0.8",
+          "5.5",
+          "13.7",
+          "46",
+          "24"
+        ],
+        [
+          "A518160139",
+          "1 X 2.5",
+          "0.26",
+          "0.7",
+          "0.8",
+          "5.9",
+          "8.21",
+          "58",
+          "33"
+        ],
+        [
+          "A518190139",
+          "1 X 4",
+          "0.31",
+          "0.7",
+          "0.8",
+          "6.5",
+          "5.09",
+          "74",
+          "44"
+        ],
+        [
+          "A518230139",
+          "1 X 6",
+          "0.31",
+          "0.7",
+          "0.8",
+          "7.0",
+          "3.39",
+          "94",
+          "57"
+        ],
+        [
+          "A518270139",
+          "1 X 10",
+          "0.41",
+          "0.7",
+          "0.8",
+          "8.0",
+          "1.95",
+          "135",
+          "79"
+        ],
+        [
+          "A518280139",
+          "1 X 16",
+          "0.41",
+          "0.7",
+          "0.9",
+          "9.3",
+          "1.24",
+          "200",
+          "107"
+        ],
+        [
+          "A518300139",
+          "1 X 25",
+          "0.41",
+          "0.9",
+          "1.0",
+          "11.3",
+          "0.795",
+          "305",
+          "142"
+        ],
+        [
+          "A518320139",
+          "1 X 35",
+          "0.41",
+          "0.9",
+          "1.1",
+          "12.6",
+          "0.565",
+          "405",
+          "176"
+        ],
+        [
+          "A518340139",
+          "1 X 50",
+          "0.41",
+          "1.0",
+          "1.2",
+          "14.8",
+          "0.393",
+          "555",
+          "221"
+        ],
+        [
+          "A518370139",
+          "1 X 70",
+          "0.51",
+          "1.1",
+          "1.2",
+          "16.8",
+          "0.277",
+          "740",
+          "278"
+        ],
+        [
+          "A518380139",
+          "1 X 95",
+          "0.51",
+          "1.1",
+          "1.3",
+          "18.8",
+          "0.210",
+          "965",
+          "333"
+        ],
+        [
+          "A518410139",
+          "1 X 120",
+          "0.51",
+          "1.2",
+          "1.3",
+          "20.3",
+          "0.164",
+          "1190",
+          "390"
+        ],
+        [
+          "A518420139",
+          "1 X 150",
+          "0.51",
+          "1.4",
+          "1.4",
+          "22.7",
+          "0.132",
+          "1480",
+          "453"
+        ],
+        [
+          "A518440139",
+          "1 X 185",
+          "0.51",
+          "1.6",
+          "1.6",
+          "25.2",
+          "0.108",
+          "1850",
+          "515"
+        ],
+        [
+          "A518460139",
+          "1 X 240",
+          "0.51",
+          "1.7",
+          "1.7",
+          "27.8",
+          "0.0817",
+          "2350",
+          "620"
+        ]
+      ],
+      "catalogueNo": "A518",
+      "info": {
+        "features": [
+          "Resistance against UV, Water, Ozone,",
+          "Fluids, Oil, Salt & General Weathering",
+          "Electron Beam Cross Linked Halogen free,",
+          "Flame Retardant, Low Smoke  Emission",
+          "Fire Retardant to meet IEC 607541-1/ EN 50268-2",
+          "RoHS Compliant as per EU norms.",
+          "Voltage Resistance Test complies as per EN 50395 ü",
+          "Resistant to Anti-Rodent and Anti-Termite attacks"
+        ],
+        "technical": [
+          "Rated Voltage: 1.0/1.0kV AC, 1.5kV DC",
+          "Max. Permitted Operating Voltage: 1.8kV DC",
+          "Temperature Range: - 40 ºC to +120 ºC",
+          "Max. Continuous Working Temp: 120º C (20,000h)",
+          "Max. Conductor Temperature at Rated Current: 90ºC",
+          "Permitted Short Circuit Temperature: 250º C for 5 Sec",
+          "AC Test Voltage: 6.5 kV, 50Hz for 5 minutes",
+          "Specification: Generally, as per EN 50618",
+          "Min. Bending Radius: 5 X Cable OD"
+        ],
+        "application": [
+          "Used in Photovoltaic Power Supply systems Indoor & Outdoors",
+          "Applicable for Installation in Cable trays, Conduits and in wall as well as for     direct burial"
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor (APC Optional)",
+          "Insulation: EBXL - XLPO (Low Smoke Halogen free)",
+          "Core Colour: Red",
+          "Inner Sheath: Nylon",
+          "Outer Sheath: EBXL - XLPO with Anti-Rodent & Anti-Termite Properties",
+          "Sheath Colour:  Black with Red stripe"
+        ]
+      }
+    },
+    {
       "id": "7e082f505f",
       "family": "solar",
       "name": "Single Core Copper Conductor Electron Beam Cross Linked Solar Cable Rated 2.3 kV Dc as per TUV, EN & UL Specification",
@@ -250,6 +1226,344 @@
           "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
           "Insulation: XLPO 120°C (Color White, Red & Black) Other colors as per customer order",
           "Jacket: XLPO Highly Weather & UV Resistant (Color Black, Black with Red stripe)"
+        ]
+      }
+    },
+    {
+      "id": "new-mrzydxw7",
+      "family": "solar",
+      "name": "Single Core Copper Conductor Electron Beam Cross Linked Solar Cable as per EN 50618 Specification",
+      "headers": [
+        "Part Number",
+        "Cross Section Area",
+        "Nominal Insulation Thickness",
+        "Nominal Sheath Thickness",
+        "Cable Diameter (Max.)",
+        "Max. DC Conductor Resistance at 20°C",
+        "Cable Weight (Nom.)",
+        "Current Rating for Two Loaded Cables Touching on Surfaces"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "Kg/Km",
+          "Amps"
+        ],
+        [
+          "A47613XXYY",
+          "1.5",
+          "0.7",
+          "0.8",
+          "5.4",
+          "13.7",
+          "37",
+          "24"
+        ],
+        [
+          "A47616XXYY",
+          "2.5",
+          "0.7",
+          "0.8",
+          "5.9",
+          "8.21",
+          "45",
+          "33"
+        ],
+        [
+          "A47619XXYY",
+          "4",
+          "0.7",
+          "0.8",
+          "6.6",
+          "5.09",
+          "58",
+          "44"
+        ],
+        [
+          "A47623XXYY",
+          "6",
+          "0.7",
+          "0.8",
+          "7.4",
+          "3.39",
+          "78",
+          "57"
+        ],
+        [
+          "A47627XXYY",
+          "10",
+          "0.7",
+          "0.8",
+          "8.8",
+          "1.95",
+          "125",
+          "79"
+        ],
+        [
+          "A47628XXYY",
+          "16",
+          "0.7",
+          "0.9",
+          "10.1",
+          "1.24",
+          "175",
+          "107"
+        ],
+        [
+          "A47630XXYY",
+          "25",
+          "0.9",
+          "1.0",
+          "12.5",
+          "0.795",
+          "274",
+          "142"
+        ],
+        [
+          "A47632XXYY",
+          "35",
+          "0.9",
+          "1.1",
+          "14.0",
+          "0.565",
+          "368",
+          "176"
+        ],
+        [
+          "A47634XXYY",
+          "50",
+          "1.0",
+          "1.2",
+          "16.3",
+          "0.393",
+          "511",
+          "221"
+        ],
+        [
+          "A47637XXYY",
+          "70",
+          "1.1",
+          "1.2",
+          "18.7",
+          "0.277",
+          "690",
+          "278"
+        ],
+        [
+          "A47638XXYY",
+          "95",
+          "1.1",
+          "1.3",
+          "20.8",
+          "0.210",
+          "908",
+          "333"
+        ],
+        [
+          "A47641XXYY",
+          "120",
+          "1.2",
+          "1.3",
+          "22.8",
+          "0.164",
+          "1127",
+          "390"
+        ],
+        [
+          "A47642XXYY",
+          "150",
+          "1.4",
+          "1.4",
+          "25.5",
+          "0.132",
+          "1406",
+          "453"
+        ],
+        [
+          "A47644XXYY",
+          "185",
+          "1.6",
+          "1.6",
+          "28.5",
+          "0.108",
+          "1741",
+          "515"
+        ],
+        [
+          "A47646XXYY",
+          "240",
+          "1.7",
+          "1.7",
+          "32.1",
+          "0.0817",
+          "2227",
+          "620"
+        ],
+        [
+          "A47648XXYY",
+          "300",
+          "2.4",
+          "2.4",
+          "32.6",
+          "0.0654",
+          "2925",
+          "714"
+        ],
+        [
+          "A47649XXYY",
+          "400",
+          "2.6",
+          "2.6",
+          "36.8",
+          "0.0495",
+          "3800",
+          "795"
+        ]
+      ],
+      "info": {
+        "features": [
+          "Resistance against UV, Water, Ozone, Fluids, Oil,",
+          "Salt & General Weathering.",
+          "Electron Beam Cross Linked",
+          "Halogen Free",
+          "Flame Retardant",
+          "Low Smoke Emission",
+          "RoHS compliant as per EU norms",
+          "CPR-Compliant up to ECa"
+        ],
+        "technical": [
+          "Temperature Range: -40°C to +120°C",
+          "Maximum Temperature at Conductor: 120°C (20,000h)",
+          "Test Voltage: 6500V AC for 5 minutes",
+          "Insulation Resistance Test & Voltage Test: EN 50395",
+          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
+          "Max. Voltage: 1.8 kV DC",
+          "Short Circuit Temperature: +280°C",
+          "Halogen Free: EN50525-1",
+          "Flame Retardant: EN 60332-1-2",
+          "Low Smoke Emission: EN 61034-2",
+          "UV and Weathering Resistance: EN 50618, EN 50289-4-17",
+          "Flame Retardant: EN60332-1-2",
+          "Resistance against Acid and Alkaline: EN 60811-404",
+          "Resistance to Fire: Eca approval (from BASEC & TUV)",
+          "Shrinkage Test on Sheath: EN  60811-503",
+          "Dynamic Penetration Test: EN 50618",
+          "Expected Life Period: 25 years (according EN 60216)",
+          "Cold Resistance: EN 50618, EN 60811-504, EN 60811-505",
+          "Min Bending Radius:",
+          "(i) Cable OD x 4 for OD ≤ 8.0 mm",
+          "(ii) Cable OD x 5 for 8.0 ≤ OD ≤ 12.0 mm",
+          "(iii) Cable OD x 6 for OD >12.0 mm"
+        ],
+        "application": [
+          "Connect one solar panel to another in series or parallel configurations.",
+          "Transfer DC power from solar panel strings to the combiner (string) box.",
+          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
+          "Suitable for outdoor solar installations due to their resistance to UV radiation, rain, ozone, heat, cold, and other harsh environmental conditions, ensuring reliable long-term performance."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
+          "Insulation: EBXL - XLPO 120°C (Color White, Red & Black) Other colors as per customer order",
+          "Jacket: EBXL- XLPO Highly Weather & UV Resistant (Colour Black, Blue, Red, Brown, Grey, Black with Red stripe)"
+        ]
+      }
+    },
+    {
+      "id": "6b496adc25",
+      "family": "solar",
+      "name": "Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated, Nylon Inner Sheathed & EBXL XLPO Outer Sheathed",
+      "headers": [
+        "Part number",
+        "No. of Cores x Nominal Cross Sectional Area",
+        "No. of Strands / Strand Dia. (Max.) — Nos/mm",
+        "Conductor Diameter (Nom)",
+        "Thickness of Insulation — Nom",
+        "Min",
+        "Thickness of Outer Sheath — Nom",
+        "Min",
+        "Overall Diameter of Cable (Nom.)",
+        "DC Conductor Resistance 20°C (Max)",
+        "Approx Cable Weight"
+      ],
+      "rows": [
+        [
+          "",
+          "Sq.mm",
+          "",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "Ω/km",
+          "kg/km"
+        ],
+        [
+          "A7891902",
+          "2 X 4",
+          "56/0.31",
+          "2.5",
+          "0.7",
+          "0.53",
+          "0.8",
+          "0.58",
+          "(6.6 x 13.6) ± 0.6",
+          "5.09",
+          "140"
+        ]
+      ],
+      "catalogueNo": "A789",
+      "info": {
+        "features": [
+          "Resistance against UV, Water. Ozone,Fluids, Oil, Salt & General Weathering",
+          "Electron Beam Cross Linked Halogen free,",
+          "Flame Retardant, Low Smoke Emission",
+          "Fire retardant  to meet IEC 607541-1/ EN  50268-2",
+          "RoHS Compliant as per EU norms",
+          "ü",
+          "Resistant to Anti-Rodent and Anti-Termite attacks"
+        ],
+        "technical": [
+          "Rated Voltage: 1/1 kV AC (1.5/1.5 kV DC Nom)",
+          "Max. Permitted Operating Voltage: 1.8kV DC",
+          "Temperature Range: -40 ºC to +120 ºC",
+          "Current Carrying Capacity:",
+          "(i) In Ground at 30ºC: 47 A",
+          "(ii) In Duct at 30ºC: 41A",
+          "(iii) In air at 60ºC: 44A",
+          "(iv) Two cables adjacent on surface: 44A",
+          "Short Circuit Capacity for 1 sec: 0.552 kA",
+          "Current Carrying Capacity:",
+          "(i) Max. Conductor temperature at rated current: 90ºC",
+          "(ii) Ambient Air Temperature: 45ºC",
+          "(iii) Ambient Soil temperature: 30ºC",
+          "(iv) Overload capacity: 130ºC",
+          "Max. Continuous working temp: 120º C",
+          "Max. Conductor temperature at rated current: 90ºC",
+          "Max. Conductor temp at of Terminator short circuit for 5 Sec: 250º C",
+          "AC Test Voltage: 6.5 kV,50Hz,5min",
+          "DC Test Voltage: 15 kV for 5min",
+          "Approx Dielectric Strength: 20 kV/ mm",
+          "Specification: Generally As per EN 50618",
+          "Min. Binding Radius: 5 X Cable OD"
+        ],
+        "application": [
+          "Used in Photovoltaic Power Supply systems Indoor & Outdoors",
+          "Applicable for Installation in Cable trays, Conduits, on and in wall as well as for direct burial"
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: EBXL - XLPO -Low Smoke Halogen free",
+          "Core Color: Black",
+          "Inner sheath: Nylon",
+          "Outer Sheath: EBXL - XLPO -120ºC",
+          "Sheath Colour: Black with Red Strip"
         ]
       }
     },
@@ -968,1176 +2282,6 @@
           "Optional: Nylon jacket instead of Anti-Termite & Rodent Chemicals"
         ]
       }
-    },
-    {
-      "id": "7ebd3bf144",
-      "family": "solar",
-      "name": "Single Core Aluminum Conductor Electron Beam Cross Linked Solar Cable with Nylon Jacket Constructed as per EN 50618 & AS/NZS 5000.1 Specification",
-      "headers": [
-        "Part Number",
-        "Cross Section Area",
-        "Cond. Min. No. of Wires",
-        "Cable Diameter (nom.)",
-        "Max. DC Conductor Resistance at 20 0C",
-        "Cable Weight (nom.)",
-        "Current Rating In Air at 40 0C"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "Nos.",
-          "mm",
-          "Ω/km",
-          "Kg/Km",
-          "Amps"
-        ],
-        [
-          "A30228XXYY",
-          "16",
-          "6",
-          "13.1",
-          "1.91",
-          "209",
-          "90"
-        ],
-        [
-          "A30230XXYY",
-          "25",
-          "6",
-          "15.5",
-          "1.20",
-          "290",
-          "143"
-        ],
-        [
-          "A30232XXYY",
-          "35",
-          "6",
-          "16.5",
-          "0.868",
-          "338",
-          "178"
-        ],
-        [
-          "A30234XXYY",
-          "50",
-          "6",
-          "18.7",
-          "0.641",
-          "444",
-          "217"
-        ],
-        [
-          "A30237XXYY",
-          "70",
-          "12",
-          "20.3",
-          "0.443",
-          "533",
-          "281"
-        ],
-        [
-          "A30238XXYY",
-          "95",
-          "15",
-          "23.4",
-          "0.320",
-          "703",
-          "342"
-        ],
-        [
-          "A30241XXYY",
-          "120",
-          "15",
-          "24.9",
-          "0.253",
-          "810",
-          "399"
-        ],
-        [
-          "A30242XXYY",
-          "150",
-          "15",
-          "27.4",
-          "0.206",
-          "979",
-          "460"
-        ],
-        [
-          "A30244XXYY",
-          "185",
-          "30",
-          "30.0",
-          "0.164",
-          "1175",
-          "529"
-        ],
-        [
-          "A30246XXYY",
-          "240",
-          "30",
-          "33.4",
-          "0.125",
-          "1458",
-          "627"
-        ],
-        [
-          "A30248XXYY",
-          "300",
-          "30",
-          "36.4",
-          "0.100",
-          "1752",
-          "725"
-        ],
-        [
-          "A30249XXYY",
-          "400",
-          "53",
-          "40.6",
-          "0.0778",
-          "2211",
-          "875"
-        ]
-      ],
-      "catalogueNo": "A302",
-      "info": {
-        "features": [
-          "Water Resistant & Rodent Resistant",
-          "Resistance against UV, Water, Ozone, Fluids, Oil, Salt &",
-          "General Weathering.",
-          "Electron Beam Cross Linked",
-          "Used for direct burial",
-          "Halogen Free, Flame Retardant, Low Smoke Emission",
-          "Fire retardant to meet IEC 607541-1/EN 50268-2",
-          "RoHS compliant as per EU norms"
-        ],
-        "technical": [
-          "Maximum Temperature at Conductor: 120°C (20,000h)",
-          "Test Voltage: 6500V AC for 5 minutes",
-          "Insulation Resistance Test & Voltage Test: EN 50395",
-          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
-          "Max. Voltage: 1.8 kV DC",
-          "Short Circuit Temperature: +280°C"
-        ],
-        "application": [
-          "Connect one solar panel to another in series or parallel configurations.",
-          "Transfer DC power from solar panel strings to the combiner (string) box.",
-          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
-          "Suitable for outdoor solar installations due to their resistance to UV"
-        ],
-        "construction": [
-          "Conductor: Aluminum Stranded Conductor according to IEC 60228, Class 2",
-          "Insulation: Aluminium Stranded Conductor, according to IEC 60228, Class 2",
-          "Sheath: EBXL - XLPO (Colour Black, Black with Red strip)",
-          "*Jacket 1:  Nylon -12 (Black)",
-          "*Jacket 2:  Sacrificial PVC (UV Resistant) -Black (Optional)"
-        ]
-      }
-    },
-    {
-      "id": "0985b7b880",
-      "family": "solar",
-      "name": "Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated, Nylon Inner Sheathed and EBXL XLPO Outer Sheathed Single Core Solar PV Cable (Anti- Rodent & Anti - Termite properties)",
-      "headers": [
-        "Part Number",
-        "No. of Core x Nominal Cross Sectional Area — No. X",
-        "Strand Dia. (Max.)",
-        "Thickness of Insulation (Nom)",
-        "Thickness of Outer Sheath (Nom)",
-        "Overall Diameter of Cable (Nom.)",
-        "DC Conductor Resistance at 20°C (Max)",
-        "Approx Cable Weight",
-        "Current Rating for Two Loaded Cables Touching on Surfaces"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Ω/km",
-          "kg/km",
-          "Amps"
-        ],
-        [
-          "A518130139",
-          "1 X 1.5",
-          "0.26",
-          "0.7",
-          "0.8",
-          "5.5",
-          "13.7",
-          "46",
-          "24"
-        ],
-        [
-          "A518160139",
-          "1 X 2.5",
-          "0.26",
-          "0.7",
-          "0.8",
-          "5.9",
-          "8.21",
-          "58",
-          "33"
-        ],
-        [
-          "A518190139",
-          "1 X 4",
-          "0.31",
-          "0.7",
-          "0.8",
-          "6.5",
-          "5.09",
-          "74",
-          "44"
-        ],
-        [
-          "A518230139",
-          "1 X 6",
-          "0.31",
-          "0.7",
-          "0.8",
-          "7.0",
-          "3.39",
-          "94",
-          "57"
-        ],
-        [
-          "A518270139",
-          "1 X 10",
-          "0.41",
-          "0.7",
-          "0.8",
-          "8.0",
-          "1.95",
-          "135",
-          "79"
-        ],
-        [
-          "A518280139",
-          "1 X 16",
-          "0.41",
-          "0.7",
-          "0.9",
-          "9.3",
-          "1.24",
-          "200",
-          "107"
-        ],
-        [
-          "A518300139",
-          "1 X 25",
-          "0.41",
-          "0.9",
-          "1.0",
-          "11.3",
-          "0.795",
-          "305",
-          "142"
-        ],
-        [
-          "A518320139",
-          "1 X 35",
-          "0.41",
-          "0.9",
-          "1.1",
-          "12.6",
-          "0.565",
-          "405",
-          "176"
-        ],
-        [
-          "A518340139",
-          "1 X 50",
-          "0.41",
-          "1.0",
-          "1.2",
-          "14.8",
-          "0.393",
-          "555",
-          "221"
-        ],
-        [
-          "A518370139",
-          "1 X 70",
-          "0.51",
-          "1.1",
-          "1.2",
-          "16.8",
-          "0.277",
-          "740",
-          "278"
-        ],
-        [
-          "A518380139",
-          "1 X 95",
-          "0.51",
-          "1.1",
-          "1.3",
-          "18.8",
-          "0.210",
-          "965",
-          "333"
-        ],
-        [
-          "A518410139",
-          "1 X 120",
-          "0.51",
-          "1.2",
-          "1.3",
-          "20.3",
-          "0.164",
-          "1190",
-          "390"
-        ],
-        [
-          "A518420139",
-          "1 X 150",
-          "0.51",
-          "1.4",
-          "1.4",
-          "22.7",
-          "0.132",
-          "1480",
-          "453"
-        ],
-        [
-          "A518440139",
-          "1 X 185",
-          "0.51",
-          "1.6",
-          "1.6",
-          "25.2",
-          "0.108",
-          "1850",
-          "515"
-        ],
-        [
-          "A518460139",
-          "1 X 240",
-          "0.51",
-          "1.7",
-          "1.7",
-          "27.8",
-          "0.0817",
-          "2350",
-          "620"
-        ]
-      ],
-      "catalogueNo": "A518",
-      "info": {
-        "application": [
-          "Used in Photovoltaic Power Supply systems Indoor & Outdoors",
-          "Applicable for Installation in Cable trays, Conduits and in wall as well as for     direct burial"
-        ]
-      }
-    },
-    {
-      "id": "3e6792aad4",
-      "family": "solar",
-      "name": "Single Core Anti-Rodent GI Wire Braided Flexible Copper Conductor Electron Beam Irradiated Solar DC Cable  Generally as per EN 50618",
-      "headers": [
-        "Part Number",
-        "Cross Section Area",
-        "Nominal Insulation Thickness",
-        "Nominal Inner Sheath Thickness",
-        "Braiding Wire Dia (Nom)",
-        "Nominal Outer Sheath Thickness",
-        "Cable Diameter (Nom)",
-        "Max. DC Conductor Resistance at 20°C",
-        "Cable Weight (Nom)",
-        "Current Rating for Two Loaded Cables Touching on Surfaces"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Ω/km",
-          "Kg/Km",
-          "Amps"
-        ],
-        [
-          "B56713XXYY",
-          "1.5",
-          "0.7",
-          "0.8",
-          "0.3",
-          "1.4",
-          "9.5 ± 0.9",
-          "13.7",
-          "145",
-          "24"
-        ],
-        [
-          "B56716XXYY",
-          "2.5",
-          "0.7",
-          "0.8",
-          "0.3",
-          "1.4",
-          "10.0 ± 1.0",
-          "8.21",
-          "160",
-          "33"
-        ],
-        [
-          "B56719XXYY",
-          "4",
-          "0.7",
-          "0.8",
-          "0.3",
-          "1.4",
-          "11.0 ± 1.1",
-          "5.09",
-          "195",
-          "44"
-        ],
-        [
-          "B56723XXYY",
-          "6",
-          "0.7",
-          "0.8",
-          "0.3",
-          "1.4",
-          "11.5 ± 1.2",
-          "3.39",
-          "225",
-          "57"
-        ],
-        [
-          "B56727XXYY",
-          "10",
-          "0.7",
-          "0.8",
-          "0.3",
-          "1.4",
-          "12.5 ± 1.3",
-          "1.95",
-          "280",
-          "79"
-        ],
-        [
-          "B56728XXYY",
-          "16",
-          "0.7",
-          "0.9",
-          "0.3",
-          "1.4",
-          "14.0 ± 1.4",
-          "1.24",
-          "360",
-          "107"
-        ],
-        [
-          "B56730XXYY",
-          "25",
-          "0.9",
-          "1.0",
-          "0.3",
-          "1.5",
-          "15.5 ± 1.6",
-          "0.795",
-          "485",
-          "142"
-        ],
-        [
-          "B56732XXYY",
-          "35",
-          "0.9",
-          "1.1",
-          "0.3",
-          "1.5",
-          "16.5 ± 1.7",
-          "0.565",
-          "600",
-          "176"
-        ],
-        [
-          "B56734XXYY",
-          "50",
-          "1.0",
-          "1.2",
-          "0.3",
-          "1.6",
-          "18.5 ± 1.9",
-          "0.393",
-          "785",
-          "221"
-        ],
-        [
-          "B56737XXYY",
-          "70",
-          "1.1",
-          "1.2",
-          "0.3",
-          "1.6",
-          "20.5 ± 2.1",
-          "0.277",
-          "995",
-          "278"
-        ],
-        [
-          "B56738XXYY",
-          "95",
-          "1.1",
-          "1.3",
-          "0.3",
-          "1.6",
-          "22.0 ± 2.2",
-          "0.210",
-          "1240",
-          "333"
-        ],
-        [
-          "B56741XXYY",
-          "120",
-          "1.2",
-          "1.3",
-          "0.3",
-          "1.7",
-          "24.0 ± 2.4",
-          "0.164",
-          "1500",
-          "390"
-        ],
-        [
-          "B56742XXYY",
-          "150",
-          "1.4",
-          "1.4",
-          "0.3",
-          "1.8",
-          "26.0 ± 2.6",
-          "0.132",
-          "1830",
-          "453"
-        ],
-        [
-          "B56744XXYY",
-          "185",
-          "1.6",
-          "1.6",
-          "0.3",
-          "1.8",
-          "29.0 ± 2.9",
-          "0.108",
-          "2235",
-          "515"
-        ],
-        [
-          "B56746XXYY",
-          "240",
-          "1.7",
-          "1.7",
-          "0.3",
-          "1.8",
-          "31.5 ± 3.2",
-          "0.0817",
-          "2770",
-          "620"
-        ]
-      ],
-      "catalogueNo": "B567",
-      "info": {
-        "features": [
-          "Anti-Termite and Anti-Rodent Properties",
-          "Resistance against UV, Water, Ozone, Fluids, Oil, Salt &",
-          "General Weathering.",
-          "Electron Beam Cross Linked",
-          "Halogen Free, Flame Retardant, Low Smoke Emission",
-          "Fire retardant to meet IEC 607541-1/EN 50268-2",
-          "RoHS compliant as per EU norms"
-        ],
-        "technical": [
-          "Temperature Range: -40°C to +120°C",
-          "Maximum Temperature at Conductor: 120°C (20,000h)",
-          "Test Voltage: 6500V AC for 5 minutes",
-          "Insulation Resistance Test & Voltage Test: EN 50395",
-          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
-          "Max. Voltage: 1.8 kV DC",
-          "Short Circuit Temperature: +280°C",
-          "Halogen Free: EN50525-1",
-          "Flame Retardant: EN 60332-1-2",
-          "Low Smoke Emission: EN 61034-2",
-          "UV and Weathering Resistance: EN 50618, EN 50289-4-17",
-          "Flame Retardant: EN60332-1-2",
-          "Resistance against Acid and Alkaline: EN 60811-404",
-          "Resistance to Fire: Eca approval (from BASEC & TUV)",
-          "Shrinkage Test on Sheath: EN  60811-503",
-          "Dynamic Penetration Test: EN 50618",
-          "Expected Life Period: 25 years (according EN 60216)",
-          "Cold Resistance: EN 50618, EN 60811-504, EN 60811-505",
-          "Min Bending Radius:",
-          "(i) Cable OD x 4 for OD ≤ 8.0 mm",
-          "(ii) Cable OD x 5 for 8.0 ≤ OD ≤ 12.0 mm",
-          "(iii) Cable OD x 6 for OD >12.0 mm"
-        ],
-        "application": [
-          "Connect one solar panel to another in series or parallel configurations.",
-          "Transfer DC power from solar panel strings to the combiner (string) box.",
-          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
-          "Suitable for outdoor solar installations due to their resistance to UV radiation, rain, ozone, heat, cold, and other harsh environmental conditions, ensuring reliable long-term performance."
-        ],
-        "construction": [
-          "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
-          "Insulation: EBXL - XLPO 120°C (Color White, Red & Black) Other colors as per customer order",
-          "Inner Sheath: EBXL - XLPO 120ºC (UV Resistant)",
-          "Braiding: GI Wire",
-          "Outer Sheath: EBXL - XLPO 120º C Highly Weather & UV Resistant (Color Black, Blue, Red, Brown, Grey, Black with Red stripe)"
-        ]
-      }
-    },
-    {
-      "id": "new-mrzydxw7",
-      "family": "solar",
-      "name": "Single Core Copper Conductor Electron Beam Cross Linked Solar Cable as per EN 50618 Specification",
-      "headers": [
-        "Part Number",
-        "Cross Section Area",
-        "Nominal Insulation Thickness",
-        "Nominal Sheath Thickness",
-        "Cable Diameter (Max.)",
-        "Max. DC Conductor Resistance at 20°C",
-        "Cable Weight (Nom.)",
-        "Current Rating for Two Loaded Cables Touching on Surfaces"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "mm",
-          "mm",
-          "mm",
-          "Ω/km",
-          "Kg/Km",
-          "Amps"
-        ],
-        [
-          "A47613XXYY",
-          "1.5",
-          "0.7",
-          "0.8",
-          "5.4",
-          "13.7",
-          "37",
-          "24"
-        ],
-        [
-          "A47616XXYY",
-          "2.5",
-          "0.7",
-          "0.8",
-          "5.9",
-          "8.21",
-          "45",
-          "33"
-        ],
-        [
-          "A47619XXYY",
-          "4",
-          "0.7",
-          "0.8",
-          "6.6",
-          "5.09",
-          "58",
-          "44"
-        ],
-        [
-          "A47623XXYY",
-          "6",
-          "0.7",
-          "0.8",
-          "7.4",
-          "3.39",
-          "78",
-          "57"
-        ],
-        [
-          "A47627XXYY",
-          "10",
-          "0.7",
-          "0.8",
-          "8.8",
-          "1.95",
-          "125",
-          "79"
-        ],
-        [
-          "A47628XXYY",
-          "16",
-          "0.7",
-          "0.9",
-          "10.1",
-          "1.24",
-          "175",
-          "107"
-        ],
-        [
-          "A47630XXYY",
-          "25",
-          "0.9",
-          "1.0",
-          "12.5",
-          "0.795",
-          "274",
-          "142"
-        ],
-        [
-          "A47632XXYY",
-          "35",
-          "0.9",
-          "1.1",
-          "14.0",
-          "0.565",
-          "368",
-          "176"
-        ],
-        [
-          "A47634XXYY",
-          "50",
-          "1.0",
-          "1.2",
-          "16.3",
-          "0.393",
-          "511",
-          "221"
-        ],
-        [
-          "A47637XXYY",
-          "70",
-          "1.1",
-          "1.2",
-          "18.7",
-          "0.277",
-          "690",
-          "278"
-        ],
-        [
-          "A47638XXYY",
-          "95",
-          "1.1",
-          "1.3",
-          "20.8",
-          "0.210",
-          "908",
-          "333"
-        ],
-        [
-          "A47641XXYY",
-          "120",
-          "1.2",
-          "1.3",
-          "22.8",
-          "0.164",
-          "1127",
-          "390"
-        ],
-        [
-          "A47642XXYY",
-          "150",
-          "1.4",
-          "1.4",
-          "25.5",
-          "0.132",
-          "1406",
-          "453"
-        ],
-        [
-          "A47644XXYY",
-          "185",
-          "1.6",
-          "1.6",
-          "28.5",
-          "0.108",
-          "1741",
-          "515"
-        ],
-        [
-          "A47646XXYY",
-          "240",
-          "1.7",
-          "1.7",
-          "32.1",
-          "0.0817",
-          "2227",
-          "620"
-        ],
-        [
-          "A47648XXYY",
-          "300",
-          "2.4",
-          "2.4",
-          "32.6",
-          "0.0654",
-          "2925",
-          "714"
-        ],
-        [
-          "A47649XXYY",
-          "400",
-          "2.6",
-          "2.6",
-          "36.8",
-          "0.0495",
-          "3800",
-          "795"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Resistance against UV, Water, Ozone, Fluids, Oil,",
-          "Salt & General Weathering.",
-          "Electron Beam Cross Linked",
-          "Halogen Free",
-          "Flame Retardant",
-          "Low Smoke Emission",
-          "RoHS compliant as per EU norms",
-          "CPR-Compliant up to ECa"
-        ],
-        "technical": [
-          "Temperature Range: -40°C to +120°C",
-          "Maximum Temperature at Conductor: 120°C (20,000h)",
-          "Test Voltage: 6500V AC for 5 minutes",
-          "Insulation Resistance Test & Voltage Test: EN 50395",
-          "Rated Voltage: 1.0/1.0kV AC,1.5/1.5 kV DC",
-          "Max. Voltage: 1.8 kV DC",
-          "Short Circuit Temperature: +280°C",
-          "Halogen Free: EN50525-1",
-          "Flame Retardant: EN 60332-1-2",
-          "Low Smoke Emission: EN 61034-2",
-          "UV and Weathering Resistance: EN 50618, EN 50289-4-17",
-          "Flame Retardant: EN60332-1-2",
-          "Resistance against Acid and Alkaline: EN 60811-404",
-          "Resistance to Fire: Eca approval (from BASEC & TUV)",
-          "Shrinkage Test on Sheath: EN  60811-503",
-          "Dynamic Penetration Test: EN 50618",
-          "Expected Life Period: 25 years (according EN 60216)",
-          "Cold Resistance: EN 50618, EN 60811-504, EN 60811-505",
-          "Min Bending Radius:",
-          "(i) Cable OD x 4 for OD ≤ 8.0 mm",
-          "(ii) Cable OD x 5 for 8.0 ≤ OD ≤ 12.0 mm",
-          "(iii) Cable OD x 6 for OD >12.0 mm"
-        ],
-        "application": [
-          "Connect one solar panel to another in series or parallel configurations.",
-          "Transfer DC power from solar panel strings to the combiner (string) box.",
-          "Carry DC electricity from the combiner box to the solar inverter, where it is converted into AC power.",
-          "Suitable for outdoor solar installations due to their resistance to UV radiation, rain, ozone, heat, cold, and other harsh environmental conditions, ensuring reliable long-term performance."
-        ],
-        "construction": [
-          "Conductor: Annealed Tinned Copper (APC Optional) according to IEC 60228, Class 5 or as per customer order",
-          "Insulation: EBXL - XLPO 120°C (Color White, Red & Black) Other colors as per customer order",
-          "Jacket: EBXL- XLPO Highly Weather & UV Resistant (Colour Black, Blue, Red, Brown, Grey, Black with Red stripe)"
-        ]
-      }
-    },
-    {
-      "id": "00cb6aec21",
-      "family": "solar",
-      "name": "Single & Multicore and Screened cables to meet both",
-      "headers": [
-        "Part Number",
-        "Cross Section Area",
-        "Max. Diameter of wires in Conductor Design",
-        "Max. DC Conductor Resistance at 20°C",
-        "",
-        "Cable Diameter (nom.)",
-        "",
-        "",
-        "Cable Weight (nom.)",
-        "",
-        "",
-        "Current Rating",
-        ""
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "",
-          "2",
-          "Core",
-          "3 Core",
-          "4 Core",
-          "2 Core",
-          "3 Core",
-          "4 Core",
-          "2 Core",
-          "3 & 4 Core"
-        ],
-        [
-          "",
-          "Sq.mm",
-          "mm",
-          "ohm/km",
-          "mm",
-          "",
-          "mm",
-          "mm",
-          "Kg/Km",
-          "Kg/Km",
-          "Kg/Km",
-          "Amps",
-          "Amps"
-        ],
-        [
-          "65013XX*",
-          "1.5",
-          "0.26",
-          "13.7",
-          "8.4",
-          "",
-          "9.1",
-          "9.9",
-          "93.0",
-          "116.0",
-          "141.0",
-          "24.0",
-          "21.0"
-        ],
-        [
-          "65016XX",
-          "2.5",
-          "0.26",
-          "8.21",
-          "9.3",
-          "",
-          "10.1",
-          "11.2",
-          "122.0",
-          "154.0.",
-          "194.0",
-          "33.0",
-          "29.0"
-        ],
-        [
-          "65019XX",
-          "4",
-          "0.31",
-          "5.09",
-          "10.8",
-          "",
-          "11.9",
-          "13.1",
-          "172.0",
-          "225.0",
-          "282.0",
-          "44.0",
-          "39.0"
-        ],
-        [
-          "65023XX",
-          "6",
-          "0.31",
-          "3.39",
-          "12.4",
-          "",
-          "14.0",
-          "15.4",
-          "237.0",
-          "323.0",
-          "396.0",
-          "57.0",
-          "50.0"
-        ],
-        [
-          "65027XX",
-          "10",
-          "0.41",
-          "1.95",
-          "15.4",
-          "",
-          "16.8",
-          "19.0",
-          "378.0",
-          "492.0",
-          "636.0",
-          "79.0",
-          "69.0"
-        ],
-        [
-          "65028XX",
-          "16",
-          "0.41",
-          "1.24",
-          "18.8",
-          "",
-          "20.0",
-          "22.3",
-          "584.0",
-          "745.0",
-          "951.0",
-          "107.0",
-          "94.0"
-        ],
-        [
-          "65030XX",
-          "25",
-          "0.41",
-          "0.795",
-          "23.0",
-          "",
-          "24.5",
-          "27.1",
-          "883.0",
-          "1131.0",
-          "1432.0",
-          "142.0",
-          "124.0"
-        ],
-        [
-          "65032XX",
-          "35",
-          "0.41",
-          "0.565",
-          "25.4",
-          "",
-          "27.1",
-          "30.0",
-          "1140.0",
-          "1479.0",
-          "1880.0",
-          "176.0",
-          "154.0"
-        ],
-        [
-          "65034XX",
-          "50",
-          "0.41",
-          "0.393",
-          "29.3",
-          "",
-          "31.2",
-          "34.6",
-          "1532.0",
-          "1996.0",
-          "2544.0",
-          "221.0",
-          "193.0"
-        ],
-        [
-          "65037XX",
-          "70",
-          "0.51",
-          "0.277",
-          "32.8",
-          "",
-          "35.5",
-          "39.3",
-          "2033.0",
-          "2707.0",
-          "3457.0",
-          "278.0",
-          "243.0"
-        ]
-      ],
-      "catalogueNo": "650"
-    },
-    {
-      "id": "f3bd997213",
-      "family": "solar",
-      "name": "Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated and Jacketed Solar Twin Parallel Cable",
-      "headers": [
-        "Part number",
-        "No. of Cores x Nominal Cross Sectional Area",
-        "Wire Dia (Max)",
-        "Thickness of Insulation (Nom)",
-        "Thickness of Outer Sheath (Nom)",
-        "Overall Diameter of Twin Parallel (Nom)",
-        "DC Conductor Resistance 20°C (Max)",
-        "Approx Cable Weight"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Ω/km",
-          "kg/km"
-        ],
-        [
-          "A7881902",
-          "2 X 4",
-          "0.31",
-          "0.7",
-          "0.8",
-          "(5.8 X 12.0) ± 0.6",
-          "5.09",
-          "120"
-        ],
-        [
-          "A7882302",
-          "2 X 6",
-          "0.31",
-          "0.7",
-          "0.8",
-          "(6.2 X 12.8) ± 0.6",
-          "3.39",
-          "155"
-        ]
-      ],
-      "catalogueNo": "A788"
-    },
-    {
-      "id": "6b496adc25",
-      "family": "solar",
-      "name": "Annealed Tinned Flexible Copper Conductor, EBXL XLPO Insulated, Nylon Inner Sheathed & EBXL XLPO Outer Sheathed",
-      "headers": [
-        "Part number",
-        "No. of Cores x Nominal Cross Sectional Area",
-        "No. of Strands / Strand Dia. (Max.) — Nos/mm",
-        "Conductor Diameter (Nom)",
-        "Thickness of Insulation — Nom",
-        "Min",
-        "Thickness of Outer Sheath — Nom",
-        "Min",
-        "Overall Diameter of Cable (Nom.)",
-        "DC Conductor Resistance 20°C (Max)",
-        "Approx Cable Weight"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "Ω/km",
-          "kg/km"
-        ],
-        [
-          "A7891902",
-          "2 X 4",
-          "56/0.31",
-          "2.5",
-          "0.7",
-          "0.53",
-          "0.8",
-          "0.58",
-          "(6.6 x 13.6) ± 0.6",
-          "5.09",
-          "140"
-        ]
-      ],
-      "catalogueNo": "A789"
     },
     {
       "id": "eefbbc477b",
