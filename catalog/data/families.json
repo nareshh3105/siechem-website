@@ -389,7 +389,7 @@
       "sourcePdfs": [
         "Automotive cable Updated (1).pdf"
       ],
-      "seriesCount": 183,
+      "seriesCount": 185,
       "voltBuckets": [
         "300–750V",
         "751–1100V",
@@ -1282,7 +1282,7 @@
       "sourcePdfs": [
         "Fluoroelastomer.pdf"
       ],
-      "seriesCount": 3,
+      "seriesCount": 1,
       "voltBuckets": [
         "1.1–3.3kV"
       ],
@@ -2298,7 +2298,7 @@
       "sourcePdfs": [
         "Rolling Stock cable updated.pdf"
       ],
-      "seriesCount": 61,
+      "seriesCount": 46,
       "voltBuckets": [
         "1.1–3.3kV",
         "300–750V",
@@ -3296,7 +3296,7 @@
       "sourcePdfs": [
         "Solar Booklets.pdf"
       ],
-      "seriesCount": 32,
+      "seriesCount": 34,
       "voltBuckets": [
         "751–1100V",
         "Above 3.3kV"
@@ -3310,36 +3310,6 @@
       "conductorMaterials": [
         "Aluminium",
         "Tinned Copper"
-      ],
-      "colorCode": [
-        {
-          "code": "01",
-          "name": "Red"
-        },
-        {
-          "code": "04",
-          "name": "Black"
-        },
-        {
-          "code": "09",
-          "name": "White"
-        },
-        {
-          "code": "03",
-          "name": "Blue"
-        },
-        {
-          "code": "08",
-          "name": "Brown"
-        },
-        {
-          "code": "07",
-          "name": "Grey"
-        },
-        {
-          "code": "39",
-          "name": "Black/Red"
-        }
       ]
     },
     {

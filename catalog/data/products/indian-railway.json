@@ -645,7 +645,7 @@
       "headers": [
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
-        "(max) (Nos. x mm)",
+        "Conductor Construction (No. of Wires x Dia. of Wire)",
         "Conductor Dia. Nominal",
         "Minimum wall Thickness of Insulation",
         "Overall Cable Dia (D)",
