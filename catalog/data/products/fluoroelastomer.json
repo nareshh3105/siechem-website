@@ -3,27 +3,35 @@
     {
       "id": "8b90c6700c",
       "family": "fluoroelastomer",
-      "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
+      "name": "Fluoro Elastomer 200°C Cables",
       "headers": [
         "Part Number",
         "Nom. Cross Sectional Area",
-        "No.of Wires / Max.Strand Dia. of Conductor (Nos/mm)",
+        "No.of Wires / Max.Strand Dia. of Conductor",
         "Nom. Conductor Diameter",
         "Nom. Insulation Thickness",
         "Nom.Overall Cable Diameter",
         "Cable Weight (Approx.)",
-        "Max.DC Resistance at 200C"
+        "Max.DC Resistance at 200C",
+        "AC test Voltage",
+        "DC test Voltage",
+        "Min.Insulation Resistance at 20°C",
+        "Min.Surface Leakage Resistance"
       ],
       "rows": [
         [
           "",
           "Sq.mm",
-          "",
+          "Nos/mm",
           "mm",
           "mm",
           "mm",
           "Kg/Km",
-          "Ω/Km"
+          "Ω/Km",
+          "kV",
+          "kV",
+          "MΩ/Km",
+          "MΩ"
         ],
         [
           "6993404",
@@ -33,7 +41,11 @@
           "2.5",
           "15.4 ± 0.8",
           "625",
-          "0.394"
+          "0.394",
+          "-",
+          "-",
+          "1000",
+          "100"
         ],
         [
           "699A1204",
@@ -43,7 +55,11 @@
           "2.5",
           "17.9 ± 0.9",
           "925",
-          "0.249"
+          "0.249",
+          "-",
+          "-",
+          "1000",
+          "90"
         ],
         [
           "6993904",
@@ -53,7 +69,11 @@
           "2.5",
           "19.6 ± 0.9",
           "1120",
-          "0.198"
+          "0.198",
+          "5.4",
+          "24.0",
+          "1000",
+          "80"
         ],
         [
           "6994204",
@@ -63,7 +83,11 @@
           "2.5",
           "22.7 ± 1.0",
           "1600",
-          "0.133"
+          "0.133",
+          "5.4",
+          "28.5",
+          "900",
+          "70"
         ],
         [
           "699A0704",
@@ -73,7 +97,11 @@
           "3.0",
           "26.4 ± 1.1",
           "2150",
-          "0.0991"
+          "0.0991",
+          "5.4",
+          "28.5",
+          "1000",
+          "60"
         ],
         [
           "699A0804",
@@ -83,107 +111,87 @@
           "3.0",
           "28.8 ± 1.2",
           "2630",
-          "0.0804"
-        ]
-      ]
-    },
-    {
-      "id": "4fee927166",
-      "family": "fluoroelastomer",
-      "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
-      "headers": [
-        "S.No.",
-        "Conductor Size",
-        "AC test Voltage",
-        "DC test Voltage"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "kV",
-          "kV"
-        ],
-        [
-          "1",
-          "100",
+          "0.0804",
           "5.4",
-          "24.0"
-        ],
-        [
-          "2",
-          "150",
-          "5.4",
-          "28.5"
-        ],
-        [
-          "3",
-          "200",
-          "5.4",
-          "28.5"
-        ],
-        [
-          "4",
-          "250",
-          "5.4",
-          "31.5"
-        ]
-      ]
-    },
-    {
-      "id": "1652f70f5b",
-      "family": "fluoroelastomer",
-      "name": "Fluoro Elastomer 200OC Wires & Cables — Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55OC to +200OC and the volta",
-      "headers": [
-        "S.No.",
-        "Conductor Size",
-        "Min.Insulation Resistance at 200C (MΩ/Km)",
-        "Min.Surface Leakage Resistance (MΩ)"
-      ],
-      "rows": [
-        [
-          "",
-          "Sq.mm",
-          "",
-          ""
-        ],
-        [
-          "1",
-          "50",
-          "1000",
-          "100"
-        ],
-        [
-          "2",
-          "80",
-          "1000",
-          "90"
-        ],
-        [
-          "3",
-          "100",
-          "1000",
-          "80"
-        ],
-        [
-          "4",
-          "150",
-          "900",
-          "70"
-        ],
-        [
-          "5",
-          "200",
-          "1000",
-          "60"
-        ],
-        [
-          "6",
-          "250",
+          "31.5",
           "900",
           "50"
         ]
-      ]
+      ],
+      "info": {
+        "extra": [
+          {
+            "lines": [
+              "Tensile strength:  > 10 MPa",
+              "Elongation at break: > 250%",
+              "Conductor Construction: Class 6",
+              "Short term ageing at high temperature: 240C for 48 hrs, No dripping & No cracks",
+              "Slippage test: The relevant displacement of the conductor with Insulation shall not be more than 5 mm for cables up to 25mm dia and 10mm for cables more than 25mm dia.",
+              "Abrasion Resistance: Min. 2500 cycles (5000 strokes)",
+              "Cross linking degree test by gel fraction method: Gel fraction min 85%",
+              "Crush Resistance: 4000 Ibs.Min"
+            ],
+            "title": "MECHANICAL PROPERTIES"
+          },
+          {
+            "lines": [
+              "Elongation test: (-40± 2) °C, Elongation: 30%",
+              "Impact (IEC-811-1-4): (-40± 2) °C (For Power Cable) No cracks & No breakdown",
+              "Windability - bending (IEC-811-1-4): (-40± 2) °C No cracks & No breakdown"
+            ],
+            "title": "RESISTANCE TO LOW TEMPERATURE TEST"
+          },
+          {
+            "lines": [
+              "Oil resistance at 120°Cfor 18 hrs: Tensile strength variation: 60%, Elongation at break variation: 60%",
+              "Fuel resistance at 25 ± 5°C for 100 hrs: Increase in diameter 20%",
+              "Acid and alkali resistance: Superior acid & alkali resistant",
+              "Ozone resistance at 275 ± 25 ppm for 96 hrs at room temperature: No break down",
+              "UV resistant: yes"
+            ],
+            "title": "RESISTANCE TO FLUIDS & ENVIRONMENT "
+          }
+        ],
+        "features": [
+          "Operating temperature -55°C to +200°C",
+          "Used in traction motor lead cables & windmill applications Enhanced thermal properties",
+          "No risk of deformation above short circuit temperatures",
+          "Flame retardant",
+          "Enhanced abrasion / scrape & cut-through resistance",
+          "Outstanding fluid resistance - Resistant to variety of reactive chemicals, oil and solvents",
+          "Excellent fire resistance, low smoke, low toxic, zero halogen emission",
+          "No environmental hazard",
+          "High current ratings",
+          "Enhanced electrical properties",
+          "EBXL cables are much reliable and cheaper than silicone cables Enhanced mechanical properties",
+          "Oil, grease & moisture resistant"
+        ],
+        "technical": [
+          "Operating temperature: - 55°C to 200°C",
+          "Insulation resistance at room temperature: As per JIS C 3005",
+          "Dielectric strength: > 20 kV",
+          "Test voltage: 20 kV",
+          "Surface leakage resistance: JIS C 3005",
+          "DC stability: Not mentioned",
+          "RESISTANCE TO FIRE",
+          "Assessment of halogen (IEC 60754): pH ≥ 4.3 Conductivity ≤ 10µS/mm",
+          "Amount of halogen: HCl & HBr ≤ 0.5% HF ≤ 0.1%",
+          "Toxicity: <3",
+          "Smoke density (IEC 61034): Light transmission 70% Min.",
+          "Flame retardance for single cable: IEC 60332-1",
+          "Flame Propagation on bunched cable: IEC 60332-3"
+        ],
+        "application": [
+          "Fluor Elastomer 200°C flexible single core Electron Beam Cross linked cables are designed for Diesel Locomotive applications like Traction motor lead cables & brush gear connector cables. Enhanced Electrical, Mechanical & Thermal properties. This material is flame-retardant, Oil, grease & moisture resistant.",
+          "Fluro Elastomer cables are globally used in Diesel Locomotives for a continuous operating temperature range of -55°C to +200°C and the voltage grade of 1500V. The cable is expected to have a minimum useful life of 25 years when applied at an appropriate duty cycle and environment. The cables have withstood at continuous operating temperature of 200°C for 20,000 hours without deterioration of the insulation layer."
+        ],
+        "construction": [
+          "Conductor: Tinned Flexible Copper Conductor-Class 6 of JIS C 3152",
+          "Separator: Polyester Tape",
+          "Insulation: Fluoro Elastomer 200OC",
+          "Colour: Black or As per Customer Order"
+        ]
+      }
     }
   ]
 }
