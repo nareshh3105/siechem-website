@@ -389,7 +389,7 @@
       "sourcePdfs": [
         "Automotive cable Updated (1).pdf"
       ],
-      "seriesCount": 184,
+      "seriesCount": 185,
       "voltBuckets": [
         "300–750V",
         "751–1100V",
@@ -2298,7 +2298,7 @@
       "sourcePdfs": [
         "Rolling Stock cable updated.pdf"
       ],
-      "seriesCount": 54,
+      "seriesCount": 49,
       "voltBuckets": [
         "1.1–3.3kV",
         "300–750V",
@@ -3296,7 +3296,7 @@
       "sourcePdfs": [
         "Solar Booklets.pdf"
       ],
-      "seriesCount": 35,
+      "seriesCount": 34,
       "voltBuckets": [
         "751–1100V",
         "Above 3.3kV"

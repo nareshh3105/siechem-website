@@ -5926,48 +5926,45 @@
       "name": "3 Core APC Conductor EBXL - XLPE 120°C Insulated GI Strips Armoured PVC Sheathed 600/1000 V Power cable as per BS 5467",
       "headers": [
         "Part Number",
-        "AArereaa",
-        "",
-        "CConodn.dM.Mini.n. NNo.oo.fof WWireirses I",
-        "ThiTckhniceksnsesTsh of EoBf EXBL X/L /o XLPXELPE nsIunlasutiolantionS (No(mNo.)m.)",
-        "ickDniemsesnsDioimne f PVCof InnerArm A heatshtrips W",
-        "nTsihoinckTnheicsksn of of of rm OuteOrute ireSheaSthheat",
-        "essApAppropxrox OvOevraelrlall rdiadmiaemteerter h",
-        "AApppprrooxx..NNeett WWtt..ooff CCaabbllee",
-        "Max.D.C Resistance at 20 deg.C — Ω/KM",
-        "Current Rating For EBXL -XLPE Cables (125°C) — DDirierecctt inin GGrorouunndd",
+        "Area",
+        "Cond.Min. No.of Wires",
+        "Thickness of EBXL / XLPE Insulation (Nom.)",
+        "Dimension of Arm strips",
+        "Thickness of Outer Sheath",
+        "Approx Overall diameter",
+        "Approx.Net Wt.of Cable",
+        "Max.D.C Resistance at 20 deg.C — Ω/KM",
+        "Current Rating For EBXL -XLPE Cables (125°C) — Direct in Ground",
         "In Duct — Cu",
         "In Air — Cu",
-        "CCuur rreennt tR Raatitningg FFoorr C Chheemmicicaall yly C Cuurreed XXLLPPEE C Caabbleless ( (9900°°CC) — Direct in Ground",
-        "In Duc — Cu",
-        "In t Ai — C",
-        "Short d Short Circuit ) Circuit Rating Rating for 1sec for 1 sec r — u Cu"
+        "Current Rating For Chemically Cured XLPE Cables (90°C) — Direct in Ground",
+        "In Duct — Cu",
+        "In Air — Cu",
+        "Short Circuit Rating for 1sec"
       ],
       "rows": [
         [
           "",
           "Sq.mm",
-          "",
           "Nos",
           "mm",
           "mm",
           "mm",
           "mm",
           "Kg/Km",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Ω/KM",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu"
         ],
         [
           "751E2803",
           "16",
           "",
-          "1.7",
           "0.7",
           "0.8 X 4",
           "1.4",
@@ -5978,15 +5975,14 @@
           "113",
           "117",
           "97",
-          "8",
-          "7 9",
-          "0 2.3"
+          "87",
+          "90",
+          "2.3"
         ],
         [
           "751E3003",
           "25",
           "",
-          "2.2",
           "0.9",
           "0.8 X 4",
           "1.4",
@@ -5997,15 +5993,14 @@
           "143",
           "143",
           "122",
-          "11",
-          "0 1",
-          "10 3.6"
+          "110",
+          "110",
+          "3.6"
         ],
         [
           "751E3203",
           "35",
           "",
-          "2.52",
           "0.9",
           "0.8 X 4",
           "1.4",
@@ -6016,15 +6011,14 @@
           "170",
           "182",
           "146",
-          "13",
-          "1 1",
-          "40 5.0"
+          "131",
+          "140",
+          "5.0"
         ],
         [
           "751E3403",
           "50",
           "",
-          "2.95",
           "1.0",
           "0.8 X 4",
           "1.4",
@@ -6035,15 +6029,14 @@
           "202",
           "211",
           "172",
-          "15",
-          "5 1",
-          "62 7.1"
+          "155",
+          "162",
+          "7.1"
         ],
         [
           "751E3703",
           "70",
           "",
-          "2.2",
           "1.1",
           "0.8 X 4",
           "1.56",
@@ -6054,15 +6047,14 @@
           "247",
           "257",
           "211",
-          "19",
-          "0 1",
-          "98 10.0"
+          "190",
+          "198",
+          "10.0"
         ],
         [
           "751E3803",
           "95",
           "",
-          "2.52",
           "1.1",
           "0.8 X 4",
           "1.56",
@@ -6073,15 +6065,14 @@
           "296",
           "312",
           "253",
-          "22",
-          "8 2",
-          "40 13.6"
+          "228",
+          "240",
+          "13.6"
         ],
         [
           "751E4103",
           "120",
           "",
-          "2.95",
           "1.2",
           "0.8 X 4",
           "1.56",
@@ -6092,15 +6083,14 @@
           "335",
           "359",
           "287",
-          "25",
-          "8 2",
-          "76 17.1"
+          "258",
+          "276",
+          "17.1"
         ],
         [
           "751E4203",
           "150",
           "",
-          "3.26",
           "1.4",
           "0.8 X 4",
           "1.72",
@@ -6111,15 +6101,14 @@
           "376",
           "413",
           "321",
-          "28",
-          "9 3",
-          "18 21.4"
+          "289",
+          "318",
+          "21.4"
         ],
         [
           "751E4403",
           "185",
           "",
-          "2.52",
           "1.6",
           "0.8 X 4",
           "1.88",
@@ -6130,15 +6119,14 @@
           "423",
           "476",
           "361",
-          "32",
-          "5 3",
-          "66 26.4"
+          "325",
+          "366",
+          "26.4"
         ],
         [
           "751E4603",
           "240",
           "",
-          "2.95",
           "1.7",
           "0.8 X 4",
           "2.04",
@@ -6149,15 +6137,14 @@
           "486",
           "554",
           "416",
-          "37",
-          "4 4",
-          "26 34.3"
+          "374",
+          "426",
+          "34.3"
         ],
         [
           "751E4803",
           "300",
           "",
-          "3.26",
           "1.8",
           "0.8 X 4",
           "2.2",
@@ -6168,15 +6155,14 @@
           "543",
           "624",
           "464",
-          "41",
-          "8 4",
-          "80 42.9"
+          "418",
+          "480",
+          "42.9"
         ],
         [
           "751E4903",
           "400",
           "",
-          "2.95",
           "2.0",
           "0.8 X 4",
           "2.36",
@@ -6187,9 +6173,9 @@
           "610",
           "710",
           "521",
-          "46",
-          "9 5",
-          "46 57.1"
+          "469",
+          "546",
+          "57.1"
         ]
       ],
       "catalogueNo": "751E"
@@ -6615,47 +6601,44 @@
       "name": "4 Core APC Conductor EBXL - XLPE 120 C Insulated GI Strips Armoured PVC Sheathed 600/1000 V Power cable as per BS 5467",
       "headers": [
         "Part Number",
-        "ArAeraea — Sq.m",
-        "C — m",
-        "ond.Min. Thic Cond.Min. No.of of E No.of Wires XL Wires Insu (N",
-        "knTehssickTnheiscskne BXoLf /EBXoLf P/V PEXLPEInner latIinosnulatSiohneat om.)(Nom.)",
-        "sDsimDeimnseionnsi C of of ArmArm h stripWsire",
-        "onThTihcikcnkensesss ofof OOutuetrer SShehaetahth",
+        "Area",
+        "Cond.Min. No.of Wires",
+        "Thickness of EBXL / XLPE Insulation (Nom.)",
+        "Dimension of Arm strips",
+        "Thickness of Outer Sheath",
         "Approx Overall diameter",
-        "AAp pproroxx.N.Neett WWt.to.off CCaabblele",
-        "MMaxa.xD.D.C.C RReseissitsatnacnece ata 2t 02 0d edge.gC.C — Ω/KM",
-        "CCuurrrreenntt RRaattiningg FFoorr EEBBXXLL --XXLLPPEE CCaabbleless ((112255°°CC)) — DDiirreecctt iinn GGrroouunndd",
+        "Approx.Net Wt.of Cable",
+        "Max.D.C Resistance at 20 deg.C — Ω/KM",
+        "Current Rating For EBXL -XLPE Cables (125°C) — Direct in Ground",
         "In Duct — Cu",
         "In Air — Cu",
-        "CCuurrrreenntt RRaattiinngg FFoorr CChheemmiiccaal llyy CCuurree XXLLPPEE CCaabblleess ((9900°°CC — DDiirreecctt iinn GGrroouunndd",
+        "Current Rating For Chemically Cured XLPE Cables (90°C) — Direct in Ground",
         "In Duct — Cu",
-        "I A — C",
-        "Short dd Short Circuit )) Circuit Rating Rating n ff oo rr 11 s se ec c ir — u Cu"
+        "In Air — Cu",
+        "Short Circuit Rating for 1sec"
       ],
       "rows": [
         [
           "",
-          "",
-          "",
+          "Sq.mm",
           "Nos",
           "mm",
           "mm",
           "mm",
           "mm",
           "Kg/Km",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Ω/KM",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu",
+          "Cu"
         ],
         [
           "744EF2804",
           "16",
-          "",
           "7",
           "0.7",
           "0.8 X 4",
@@ -6668,13 +6651,12 @@
           "117",
           "97",
           "87",
-          "9",
-          "0 2.3"
+          "90",
+          "2.3"
         ],
         [
           "744EF3004",
           "25",
-          "",
           "7",
           "0.9",
           "0.8 X 4",
@@ -6687,13 +6669,12 @@
           "143",
           "122",
           "110",
-          "1",
-          "10 3.6"
+          "110",
+          "3.6"
         ],
         [
           "744EF3204",
           "35",
-          "",
           "7",
           "0.9",
           "0.8 X 4",
@@ -6706,15 +6687,14 @@
           "182",
           "146",
           "131",
-          "1",
-          "40 5.0"
+          "140",
+          "5.0"
         ],
         [
           "744EF3404",
           "50",
-          "",
           "7",
-          "1",
+          "1.0",
           "0.8 X 4",
           "1.56",
           "29.3",
@@ -6725,13 +6705,12 @@
           "211",
           "172",
           "155",
-          "1",
-          "62 7.1"
+          "162",
+          "7.1"
         ],
         [
           "744EF3704",
           "70",
-          "",
           "19",
           "1.1",
           "0.8 X 4",
@@ -6744,13 +6723,12 @@
           "257",
           "211",
           "190",
-          "1",
-          "98 10.0"
+          "198",
+          "10.0"
         ],
         [
           "744EF3804",
           "95",
-          "",
           "19",
           "1.1",
           "0.8 X 4",
@@ -6763,13 +6741,12 @@
           "312",
           "253",
           "228",
-          "2",
-          "40 13.6"
+          "240",
+          "13.6"
         ],
         [
           "744EF4104",
           "120",
-          "",
           "19",
           "1.2",
           "0.8 X 4",
@@ -6782,13 +6759,12 @@
           "359",
           "287",
           "258",
-          "2",
-          "76 17.1"
+          "276",
+          "17.1"
         ],
         [
           "744EF4204",
           "150",
-          "",
           "19",
           "1.4",
           "0.8 X 4",
@@ -6801,13 +6777,12 @@
           "413",
           "321",
           "289",
-          "3",
-          "18 21.4"
+          "318",
+          "21.4"
         ],
         [
           "744EF4404",
           "185",
-          "",
           "37",
           "1.6",
           "0.8 X 4",
@@ -6820,13 +6795,12 @@
           "476",
           "361",
           "325",
-          "3",
-          "66 26.4"
+          "366",
+          "26.4"
         ],
         [
           "744EF4604",
           "240",
-          "",
           "37",
           "1.7",
           "0.8 X 4",
@@ -6839,13 +6813,12 @@
           "552",
           "416",
           "374",
-          "4",
-          "26 34.3"
+          "426",
+          "34.3"
         ],
         [
           "744EF4804",
           "300",
-          "",
           "37",
           "1.8",
           "0.8 X 4",
@@ -6858,15 +6831,14 @@
           "624",
           "464",
           "418",
-          "4",
-          "80 42.9"
+          "480",
+          "42.9"
         ],
         [
           "744EF4904",
           "400",
-          "",
           "61",
-          "2",
+          "2.0",
           "0.8 X 4",
           "2.52",
           "70.6",
@@ -6877,8 +6849,8 @@
           "710",
           "521",
           "469",
-          "5",
-          "46 57.1"
+          "546",
+          "57.1"
         ]
       ],
       "catalogueNo": "744EF"
