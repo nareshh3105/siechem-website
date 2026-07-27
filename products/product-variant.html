@@ -247,7 +247,11 @@
       border-bottom: 1px solid var(--border);
     }
     .part-table th .th-label { display: block; }
-    .part-table th .th-unit { display: block; font-weight: 500; opacity: 0.75; margin-top: 1px; letter-spacing: 0.01em; }
+    .part-table tr.unit-header-row th {
+      padding-top: 0; padding-bottom: 6px; font-weight: 500; opacity: 0.75;
+      letter-spacing: 0.01em; text-transform: none; border-bottom: 1px solid var(--border);
+    }
+    .part-table tr.header-label-row th { border-bottom: none; padding-bottom: 2px; }
     .part-table td { padding: 9px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
     .part-table tbody tr:last-child td { border-bottom: none; }
     .part-table tbody tr:hover { background: rgba(184,115,51,0.03); }
@@ -261,6 +265,7 @@
     .part-table th:last-child, .part-table td:last-child { width: 68px; white-space: nowrap; text-align: center; }
     .part-table .quote-row-btn {
       padding: 5px 12px; border-radius: 5px; white-space: nowrap;
+      min-height: 32px;
       background: var(--accent-soft); border: 1px solid var(--accent-border);
       color: var(--accent-2); font-size: 11.5px; font-weight: 700;
       cursor: pointer; transition: background 0.15s, color 0.15s;
@@ -784,10 +789,17 @@
     document.getElementById('ssTitle').textContent = S.display;
 
     const headers = (S.headers && S.headers.length ? S.headers : ['Part Number']).map(h => h && h.trim() ? h : '—');
-    document.getElementById('ssThead').innerHTML = '<tr>' + headers.map((h) => {
-      const { label, unit } = splitHeaderLabelUnit(h);
-      return '<th><span class="th-label">' + esc(label) + '</span>' + (unit ? '<span class="th-unit">' + esc(unit) + '</span>' : '') + '</th>';
-    }).join('') + '<th></th></tr>';
+    const splitHeaders = headers.map(splitHeaderLabelUnit);
+    const hasUnitRow = splitHeaders.some(h => h.unit);
+    const labelRow = '<tr class="header-label-row">' + splitHeaders.map(({ label }) =>
+      '<th>' + esc(label) + '</th>'
+    ).join('') + '<th></th></tr>';
+    const unitRow = hasUnitRow
+      ? '<tr class="unit-header-row">' + splitHeaders.map(({ unit }) =>
+          '<th>' + esc(unit) + '</th>'
+        ).join('') + '<th></th></tr>'
+      : '';
+    document.getElementById('ssThead').innerHTML = labelRow + unitRow;
     document.getElementById('ssTbody').innerHTML = S.rows.map(r => {
       const pn = (r[0] || '').toString().trim();
       // A blank Part Number marks the units row -- style it as such and

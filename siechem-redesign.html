@@ -694,7 +694,7 @@
     .testimonial-indicators {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 16px;
       margin-top: 32px;
     }
     .testimonial-dot {
@@ -705,6 +705,14 @@
       cursor: pointer;
       padding: 0;
       transition: all 0.2s;
+      position: relative;
+    }
+    /* Invisible expanded hit area -- the dot stays 10px visually but becomes
+       a ~34px touch target, without shifting the indicator row's layout. */
+    .testimonial-dot::after {
+      content: '';
+      position: absolute;
+      inset: -12px;
     }
     .testimonial-dot.active {
       background: var(--accent);
@@ -1959,7 +1967,7 @@
       <div class="ind-grid">
 
         <!-- Aerospace & Defence -->
-        <a class="ind-card reveal">
+        <a href="/products/product-aero44.html" class="ind-card reveal">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO.webp');"></div>
           <div class="ind-name">Aerospace &amp; Defence</div>
           <div class="ind-cert">AS 9100 · MIL-Spec · DGAQA</div>
@@ -1968,7 +1976,7 @@
         </a>
 
         <!-- Automotive -->
-        <a class="ind-card reveal reveal-d1">
+        <a href="/products/product-family.html#f=automotive" class="ind-card reveal reveal-d1">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1YcTrAW5QxLtbBdhjuwScwH7SX67Nw79n.webp');"></div>
           <div class="ind-name">Automotive</div>
           <div class="ind-cert">SAE J1128 · JASO D611 · IS 14465</div>
@@ -1977,7 +1985,7 @@
         </a>
 
         <!-- Marine -->
-        <a class="ind-card reveal reveal-d2">
+        <a href="/products/product-family.html#f=marine" class="ind-card reveal reveal-d2">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1kZJfoHzA5DU94B_biqFL_utRDQzHY401.webp');"></div>
           <div class="ind-name">Marine</div>
           <div class="ind-cert">IEC 60092 · ABS · IR Class</div>
@@ -1986,7 +1994,7 @@
         </a>
 
         <!-- Railway & Metro -->
-        <a class="ind-card reveal">
+        <a href="/products/product-family.html#f=rolling-stock" class="ind-card reveal">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm.webp');"></div>
           <div class="ind-name">Railway &amp; Metro</div>
           <div class="ind-cert">EN 50264 · RDSO · CRRC</div>
@@ -1995,7 +2003,7 @@
         </a>
 
         <!-- Solar & Renewable -->
-        <a class="ind-card reveal reveal-d1">
+        <a href="/products/product-family.html#f=solar" class="ind-card reveal reveal-d1">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1CUFs8DPlcldhRvYle78trTIu-HDoCgya.webp');"></div>
           <div class="ind-name">Solar &amp; Renewable Energy</div>
           <div class="ind-cert">TÜV · IEC 62930 · UL</div>
@@ -2004,7 +2012,7 @@
         </a>
 
         <!-- Industrial & Infrastructure -->
-        <a class="ind-card reveal reveal-d2">
+        <a href="/products/product-family.html#f=is7098-power" class="ind-card reveal reveal-d2">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0.webp');"></div>
           <div class="ind-name">Industrial &amp; Infrastructure</div>
           <div class="ind-cert">IEC 60228 · IS 694 · LSZH</div>

@@ -265,9 +265,15 @@ img { display: block; max-width: 100%; height: auto; }
 .nav-hamburger {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 16px;
+  /* 44x44 hit area (WCAG 2.5.5 / iOS HIG minimum) with the three 24px bars
+     centred inside it. gap:5px keeps the bars 7px apart, so the .active
+     translateY(±7px) X-animation below still lands exactly on centre. */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -275,7 +281,7 @@ img { display: block; max-width: 100%; height: auto; }
   z-index: 110;
 }
 .nav-hamburger span {
-  width: 100%;
+  width: 24px;
   height: 2px;
   background-color: var(--text);
   border-radius: 2px;
@@ -773,6 +779,13 @@ html.nav-open, html.nav-open body {
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-col a { font-size: 15px; color: rgba(255,255,255,0.8); transition: color 0.15s; }
+/* Footer nav links are only 18px tall with a 10px gap, which is too tight to
+   tap reliably. Pad them into ~36px targets on touch devices and on narrow
+   viewports (the width clause also covers touch UAs that report pointer:fine). */
+@media (pointer: coarse), (max-width: 768px) {
+  .footer-col ul { gap: 2px; }
+  .footer-col a { display: inline-block; padding: 9px 0; }
+}
 .footer-col a:hover { color: #FFFFFF; }
 .footer-brand p {
   font-size: 15px; color: rgba(255,255,255,0.7);
