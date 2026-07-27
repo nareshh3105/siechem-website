@@ -226,6 +226,17 @@
   .colorcode-body { display: none; padding: 4px 18px 18px; }
   .colorcode-card.open .colorcode-body { display: block; }
   .colorcode-note { font-size: 12.5px; color: var(--text-dim); margin-bottom: 14px; line-height: 1.6; }
+  .cc-note-label {
+    display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;
+  }
+  .cc-note-input {
+    width: 100%; font: inherit; font-size: 13px; line-height: 1.6;
+    padding: 9px 11px; border: 1px solid var(--border); border-radius: 7px;
+    background: #fff; color: var(--text); resize: vertical; min-height: 54px;
+  }
+  .cc-note-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .cc-note-hint { font-size: 11.5px; color: var(--text-dim); margin: 6px 0 16px; line-height: 1.55; }
   .colorcode-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
   .colorcode-chip {
     display: flex; align-items: center; gap: 6px;
@@ -270,6 +281,10 @@
       </div>
       <div class="colorcode-body" id="colorCodeBody">
         <div class="colorcode-note">Shared across every type in this segment — shown below the part table on the public site (e.g. "add last two digits as per the colour code, replacing XX").</div>
+        <label class="cc-note-label" for="colorNoteInput">Note shown above the colour chips</label>
+        <textarea id="colorNoteInput" class="cc-note-input" rows="2"
+          placeholder="Note: XX* — please add the last two digits in the part number as per the colour code below, replacing XX while ordering."></textarea>
+        <div class="cc-note-hint">Applies to every type in this segment. Leave blank to use the default wording. An individual type can override this in its own editor below.</div>
         <div class="colorcode-grid" id="colorCodeGrid"></div>
         <button class="btn btn-ghost btn-sm" id="colorCodeAddBtn" type="button">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -361,7 +376,7 @@
       try {
         await SiechemAdmin.api('/api/admin-series', {
           method: s._isNew ? 'POST' : 'PUT',
-          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null })
+          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null, color_note: s.color_note || '' })
         });
         s._isNew = false;
         setSaveStatus('saved', 'Saved automatically · Publish on the dashboard to go live');
@@ -511,6 +526,16 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             Add Section
           </button>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 8h.01M11 12h1v4h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Colour Note Override
+          </div>
+          <textarea id="seriesColorNote" class="cc-note-input" rows="2"
+            placeholder="Leave blank to use this segment's shared note">${escapeHtml(s.color_note || '')}</textarea>
+          <div class="cc-note-hint">Overrides the segment-wide colour note for this type only. Blank = inherit the shared note from the Colour Code Table above.</div>
         </div>
 
         <div class="card-section">
@@ -688,6 +713,11 @@
         renderEditor();
         saveSeries(s);
       }));
+      const colorNoteEl = document.getElementById('seriesColorNote');
+      if (colorNoteEl) colorNoteEl.addEventListener('input', e => {
+        s.color_note = e.target.value;
+        scheduleAutosave(s);
+      });
       document.getElementById('addExtraSectionBtn').addEventListener('click', () => {
         if (!s.info) s.info = {};
         if (!Array.isArray(s.info.extra)) s.info.extra = [];
@@ -901,6 +931,7 @@
 
     // ── Colour Code table (one per family, shared by every type) ──────
     let familyColors = [];
+    let familyColorNote = '';
     let colorSaveTimer = null;
 
     function setColorStatus(cls, text) {
@@ -922,7 +953,7 @@
       try {
         await SiechemAdmin.api('/api/admin-family-colors', {
           method: 'PUT',
-          body: JSON.stringify({ family: familyId, colors: familyColors })
+          body: JSON.stringify({ family: familyId, colors: familyColors, note: familyColorNote })
         });
         setColorStatus('success', 'Saved · Publish on the dashboard to go live');
       } catch (e) {
@@ -969,6 +1000,10 @@
     document.getElementById('colorCodeToggle').addEventListener('click', () => {
       document.getElementById('colorCodeCard').classList.toggle('open');
     });
+    document.getElementById('colorNoteInput').addEventListener('input', e => {
+      familyColorNote = e.target.value;
+      scheduleColorSave();
+    });
     document.getElementById('colorCodeAddBtn').addEventListener('click', () => {
       familyColors.push({ name: '', code: String(familyColors.length + 1).padStart(2, '0') });
       renderColorCode();
@@ -984,6 +1019,8 @@
         seriesData = series.map(s => ({ ...s, family: familyId }));
         renderSeriesList();
         familyColors = Array.isArray(family.color_code) ? family.color_code.map(c => ({ ...c })) : [];
+        familyColorNote = family.color_note || '';
+        document.getElementById('colorNoteInput').value = familyColorNote;
         renderColorCode();
         if (familyColors.length) document.getElementById('colorCodeCard').classList.add('open');
       } catch (e) {

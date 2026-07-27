@@ -106,7 +106,8 @@ module.exports = async function handler(req, res) {
         rows: s.rows,
         ...(s.catalogue_no ? { catalogueNo: s.catalogue_no } : {}),
         ...(s.info ? { info: s.info } : {}),
-        ...(s.image_2d ? { image2d: s.image_2d } : {})
+        ...(s.image_2d ? { image2d: s.image_2d } : {}),
+        ...(s.color_note ? { colorNote: s.color_note } : {})
       });
     }
 
@@ -119,7 +120,8 @@ module.exports = async function handler(req, res) {
         name: f.name,
         segment: f.segment,
         seriesCount: (seriesByFamily[f.id] || []).length,
-        ...(f.color_code && f.color_code.length ? { colorCode: f.color_code } : {})
+        ...(f.color_code && f.color_code.length ? { colorCode: f.color_code } : {}),
+        ...(f.color_note ? { colorNote: f.color_note } : {})
       }))
     };
 

@@ -833,12 +833,18 @@
     return COLOR_HEX[String(name || '').trim().toLowerCase()] || '#CBD5E0';
   }
 
+  // Wording used when neither the series nor the family defines a note, so a
+  // family that has never been edited still reads exactly as it always has.
+  const DEFAULT_COLOR_NOTE =
+    'Note: XX* — please add the last two digits in the part number as per the colour code below, replacing XX while ordering.';
+
   function renderColorCode() {
     const note = document.getElementById('colorNote');
     const colors = FAM && Array.isArray(FAM.colorCode) ? FAM.colorCode.filter(c => c && (c.name || c.code)) : [];
     if (!colors.length) { note.style.display = 'none'; return; }
-    document.getElementById('colorNoteText').textContent =
-      'Note: XX* — please add the last two digits in the part number as per the colour code below, replacing XX while ordering.';
+    // Most specific note wins: this product type, else the family, else default.
+    const noteText = (S && S.colorNote) || (FAM && FAM.colorNote) || DEFAULT_COLOR_NOTE;
+    document.getElementById('colorNoteText').textContent = noteText;
     document.getElementById('colorChips').innerHTML = colors.map(c =>
       '<span class="color-chip"><span class="color-chip-dot" style="background:' + colorHex(c.name) + ';"></span>' +
       esc(c.name) + (c.code ? ' – ' + esc(c.code) : '') + '</span>'

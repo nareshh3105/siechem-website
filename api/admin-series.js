@@ -50,6 +50,12 @@ module.exports = async function handler(req, res) {
     // go through /api/admin-image, and omitting the key here means a plain
     // field edit never accidentally wipes out an already-attached image.
     if ('image_2d' in body) row.image_2d = body.image_2d || null;
+    // Optional per-series override of the family's colour-code note. Blank
+    // means "inherit the family note", so only persist when explicitly sent.
+    if ('color_note' in body) {
+      const n = String(body.color_note == null ? '' : body.color_note).trim();
+      row.color_note = n || null;
+    }
     const { error } = await db.from('admin_series').upsert(row, { onConflict: 'family_id,id' });
     if (error) return res.status(500).json({ error: error.message });
 
