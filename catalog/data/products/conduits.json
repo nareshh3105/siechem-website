@@ -15,15 +15,6 @@
       ],
       "rows": [
         [
-          "SIECHEM PART NUMBER",
-          "NW NOMINAL SIZE",
-          "DIM ID",
-          "DIM OD 2D V",
-          "TABLE NO. iew",
-          "BENDING RADIUS (MM)",
-          "S. NO."
-        ],
-        [
           "PALD0407",
           "NW07",
           "6.4 ± 0.3",
@@ -140,17 +131,6 @@
         ""
       ],
       "rows": [
-        [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A 2",
-          "DIM.B D VIEW",
-          "DIM.C",
-          "DIM.D",
-          "DIM.E",
-          "TABLE NO",
-          "S. NO."
-        ],
         [
           "PASTPG09M0410",
           "PG9",
@@ -452,17 +432,6 @@
       ],
       "rows": [
         [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A",
-          "DIM.B 2D View",
-          "DIM.C",
-          "DIM.D",
-          "DIM.E",
-          "TABLE NO",
-          "S. NO."
-        ],
-        [
           "PASTM12M0407",
           "M12 X 1.5",
           "37 ± 0.2",
@@ -626,17 +595,6 @@
           "51 ± 0.2",
           "A-5",
           "15"
-        ],
-        [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A",
-          "DIM.B 2D VIE",
-          "DIM.C W",
-          "DIM.D",
-          "DIM.E",
-          "TABLE NO",
-          "S. NO."
         ],
         [
           "PA45M12M0407",
@@ -986,16 +944,6 @@
       ],
       "rows": [
         [
-          "SIECHEM PART NUMBER",
-          "NW NOMINAL SIZE",
-          "FIXING SCREW",
-          "DIM.A 2D VIEW",
-          "DIM.B",
-          "DIM.C",
-          "TABLE NO",
-          "S. NO."
-        ],
-        [
           "GSETC0407",
           "NW 07",
           "-",
@@ -1262,15 +1210,6 @@
       ],
       "rows": [
         [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A 2D VIEW",
-          "DIM.B",
-          "DIM.C",
-          "TABLE NO",
-          "S. NO."
-        ],
-        [
           "PSPG09",
           "PG9",
           "19 ± 0.5",
@@ -1343,15 +1282,6 @@
           "8"
         ],
         [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A 2D View",
-          "DIM.B",
-          "DIM.C",
-          "TABLE NO",
-          "S. NO."
-        ],
-        [
           "PSM12",
           "M12 X 1.5",
           "15 ± 0.5",
@@ -1422,15 +1352,6 @@
           "17.5 ± 0.5",
           "A-19",
           "8"
-        ],
-        [
-          "Siechem Part Number",
-          "Thread Size",
-          "DIM.A 2D View",
-          "DIM.B",
-          "DIM.C",
-          "S. No.",
-          ""
         ],
         [
           "ORG07",
@@ -1546,14 +1467,6 @@
         ""
       ],
       "rows": [
-        [
-          "SIECHEM PART NUMBER",
-          "THREAD SIZE",
-          "DIM.A 2D VIEW",
-          "DIM.B",
-          "DIM.C",
-          "S. NO."
-        ],
         [
           "GKM1203",
           "M12",
@@ -1792,24 +1705,6 @@
         ""
       ],
       "rows": [
-        [
-          "I 9",
-          "SO IS 001 140",
-          "OISO 9 01",
-          "001I-A20T08F 1694",
-          "OH 9",
-          "SAS 1I80S01O - 20 07 45001",
-          "AS 9100",
-          "",
-          "",
-          "DG",
-          "QA",
-          "",
-          "",
-          "I",
-          "IH QTNUaVvy n d i a n",
-          "RDSO"
-        ],
         [
           "",
           "ESM",

@@ -1,416 +1,96 @@
 {
   "series": [
     {
-      "id": "9a99b436c1",
+      "id": "29937eaa66",
       "family": "indian-railway",
-      "name": "Single Core above 750V and up to 1.8/3kV Thin-Walled Flexible EBXL Cables for Electric Locomotives",
+      "name": "Multicore above 750V Grade Thin-Walled Flexible EBXL Jumper Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core",
-        "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Overall Cable Dia (D)",
-        "Max. Resistance of Conductor at 20",
+        "No. of Cores x Nominal Cross Sectional Area",
+        "No. of Wires x Wire Dia (max)",
+        "Conductor Dia. Nominal",
+        "Minimum Wall Thickness of Core — Core Insulation",
+        "Core Sheath",
+        "Thickness of Outer Sheath",
+        "Overall Cable M Dia (D)",
+        "ax. Resis t a n c e of Conduc t o r at 20 deg . C",
         "Approx. Cable Weight"
       ],
       "rows": [
         [
           "",
-          "mm2",
-          "",
+          "Nos. x Sq.mm",
+          " Nos. x mm",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
           "mm",
           "ohm/km",
           "Kg/Km"
         ],
         [
-          "25813XXYY",
-          "1.5",
-          "30 x 0.26",
-          "3.20 ± 0.10",
-          "13.7",
-          "22.5"
-        ],
-        [
-          "25816XXYY",
-          "2.5",
-          "50 x 0.26",
-          "3.70 ± 0.15",
-          "8.21",
-          "33.5"
-        ],
-        [
-          "25819XXYY",
-          "4.0",
-          "56 x 0.31",
-          "4.50 ± 0.15",
-          "5.09",
-          "51.0"
-        ],
-        [
-          "25823XXYY",
-          "6.0",
-          "84 x 0.31",
-          "5.10 ± 0.15",
-          "3.39",
-          "71.5"
-        ],
-        [
-          "25827XXYY",
-          "10",
-          "80 x 0.41",
-          "6.30 ± 0.20",
-          "1.95",
-          "114.0"
-        ],
-        [
-          "25828XXYY",
-          "16",
-          "126 x 0.41",
-          "8.30 ± 0.20",
-          "1.24",
-          "186.0"
-        ],
-        [
-          "25830XXYY",
-          "25",
-          "198 x 0.41",
-          "10.2 ± 0.30",
-          "0.795",
-          "294.0"
-        ],
-        [
-          "25832XXYY",
-          "35",
-          "266 x 0.41",
-          "11.7 ± 0.30",
-          "0.565",
-          "399.0"
-        ],
-        [
-          "25834XXYY",
-          "50",
-          "385 x 0.41",
-          "13.6 ± 0.30",
-          "0.393",
-          "545.5"
-        ],
-        [
-          "25837XXYY",
-          "70",
-          "348 x 0.51",
-          "15.6 ± 0.30",
-          "0.277",
-          "755.0"
-        ],
-        [
-          "25838XXYY",
-          "95",
-          "468 x 0.51",
-          "17.3 ± 0.30",
-          "0.210",
-          "1003.0"
-        ],
-        [
-          "25841XXYY",
-          "120",
-          "589 x 0.51",
-          "19.6 ± 0.30",
-          "0.164",
-          "1268.0"
-        ],
-        [
-          "25842XXYY",
-          "150",
-          "741 x 0.51",
-          "21.9 ± 0.30",
-          "0.132",
-          "1565.0"
-        ],
-        [
-          "25844XXYY",
-          "185",
-          "912 x 0.51",
-          "23.8 ± 0.30",
-          "0.108",
-          "1907.0"
-        ],
-        [
-          "25846XXYY",
-          "240",
-          "1184 x 0.51",
-          "26.9 ± 0.30",
-          "0.0817",
-          "2449.0"
-        ],
-        [
-          "25848XXYY",
-          "300",
-          "1480 x 0.51",
-          "29.7 ± 0.30",
-          "0.0654",
-          "3026.0"
-        ]
-      ],
-      "catalogueNo": "258",
-      "info": {
-        "features": [
-          "Limited fire hazard type",
-          "Minimum flame spread",
-          "Low smoke emission",
-          "Limited toxic fume emission",
-          "Resistant to mineral oil, diesel, etc."
-        ],
-        "technical": [
-          "Temperature range: Operating temperature: -40ºC to +120ºC. High insulation resistance at elevated temp.",
-          "Rated voltage: Above 750V up to 1.8/3kV",
-          "Short circuit temperature: +280ºC.",
-          "Test voltage: 6kV for 15 mins.",
-          "Min. bending radius: 3 x D for cable diameter <10mm",
-          "5 x D for cable diameter >10mm",
-          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
-          "Specification: ELRS / SPEC / ELC / 0019 Rev 2."
-        ],
-        "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
-        ],
-        "construction": [
-          "Conductor: Annealed Tinned Flexible Copper Conductor",
-          "Insulation: EBXL - EPDM 120ºC (Dual layer)",
-          "Outer sheath: Electron Beam Cross Linked Polyolefin."
-        ]
-      },
-      "colorNote": "We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog"
-    },
-    {
-      "id": "33d65edf50",
-      "family": "indian-railway",
-      "name": "750V 19C x 2.5 Sq.mm EBXL - HR 120ºC Cable",
-      "headers": [
-        "Part Number",
-        "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
-        "No. of Wires x Wire Dia (max) (Nos. x mm)",
-        "Overall Cable Dia (D)",
-        "Max. Resistance of Conductor at 20 deg. C",
-        "Approx.Cable Weight"
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "mm",
-          "ohm/km",
-          "Kg/Km"
-        ],
-        [
-          "2591619",
+          "R2591619",
           "19C x 2.5",
           "50 x 0.26",
+          "2.1",
+          "0.30",
+          "0.40",
+          "1.4",
           "23.0 ± 0.5",
           "8.21",
-          "840.0"
+          "863"
         ],
         [
-          "2591919",
+          "R2591919",
           "19C x 4.0",
           "7 x 8 / 0.31 Rope Construction (1 x 8 + 6 x 8)",
+          "2.7",
+          "0.35",
+          "0.45",
+          "2.0",
           "30.5 ± 0.1",
           "5.09",
-          "1415.0"
+          "1528"
         ]
       ],
-      "catalogueNo": "259",
+      "catalogueNo": "R259",
       "info": {
         "features": [
           "Limited fire hazard type",
           "Minimum flame spread",
           "Low smoke emission",
           "Limited toxic fume emission",
-          "Resistant to mineral oil, diesel, etc. No."
+          "Resistant to mineral oil, diesel, etc"
         ],
         "technical": [
-          "Temperature range : operating remp :-40°C to +120°C.",
-          "Rated voltage : Above 750V",
-          "Short circuit temperature : 280°C.",
-          "Test voltage : 8kV for 15 mins",
-          "Min. bending radius : 4 x Cable OD",
-          "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 2 Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV ** Max. Resistance Dia (D)"
+          "Temperature range: operating temperature :-40°C to +150°C.",
+          "Rated voltage: Above 750V",
+          "Short circuit temperature: 280°C.",
+          "Test voltage: 8kV for 15 mins",
+          "Min. bending radius: 4 x Cable OD",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 3."
         ],
         "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor.",
-          "Insulation : EBXL- EPDM (Dual layer)",
-          "Core Identification : By number printing.",
-          "Outersheath : Electron Beam Cross Linked",
-          "Polyolefin. Black Colour."
-        ]
-      }
-    },
-    {
-      "id": "2a6abbda46",
-      "family": "indian-railway",
-      "name": "750V 150 Sq.mm EBXL - HR 120ºC Cable",
-      "headers": [
-        "Part Number",
-        "Nominal Cross Sectional Area of Core (mm 2)",
-        "No. of Wires x Wire Dia. (max) (Nos. x mm)",
-        "Overall Cable Dia (D)",
-        "Max. Resistance of Conductor at 20",
-        "Appro x Cable Weight"
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "mm",
-          "ohm/km",
-          "Kg/Km"
-        ],
-        [
-          "30013XX",
-          "1.5",
-          "30 x 0.26",
-          "2.70 ± 0.10",
-          "13.7",
-          "19.0"
-        ],
-        [
-          "30016XX",
-          "2.5",
-          "50 x 0.26",
-          "3.30 ± 0.15",
-          "8.21",
-          "30.0"
-        ],
-        [
-          "30019XX",
-          "4.0",
-          "56 x 0.31",
-          "3.95 ± 0.15",
-          "5.09",
-          "46.0"
-        ],
-        [
-          "30023XX",
-          "6.0",
-          "84 x 0.31",
-          "4.50 ± 0.20",
-          "3.39",
-          "67.0"
-        ],
-        [
-          "30027XX",
-          "10",
-          "80 x 0.41",
-          "5.60 ± 0.30",
-          "1.95",
-          "108.5"
-        ],
-        [
-          "30028XX",
-          "16",
-          "126 x 0.41",
-          "7.20 ± 0.30",
-          "1.24",
-          "170.5"
-        ],
-        [
-          "30030XX",
-          "25",
-          "198 x 0.41",
-          "8.60 ± 0.30",
-          "0.795",
-          "260.5"
-        ],
-        [
-          "30032XX",
-          "35",
-          "266 x 0.41",
-          "10.00 ± 0.30",
-          "0.565",
-          "361.0"
-        ],
-        [
-          "30034XX",
-          "50",
-          "385 x 0.41",
-          "11.90 ± 0.30",
-          "0.393",
-          "500.5"
-        ],
-        [
-          "30037XX",
-          "70",
-          "348 x 0.51",
-          "14.20 ± 0.30",
-          "0.277",
-          "706.5"
-        ],
-        [
-          "30038XX",
-          "95",
-          "468 x 0.51",
-          "15.70 ± 0.30",
-          "0.210",
-          "941.0"
-        ],
-        [
-          "30041XX",
-          "120",
-          "589 x 0.51",
-          "17.70 ± 0.30",
-          "0.164",
-          "1189.0"
-        ],
-        [
-          "30042XX",
-          "150",
-          "741 x 0.51",
-          "20.30 ± 0.30",
-          "0.132",
-          "1481.0"
-        ]
-      ],
-      "catalogueNo": "300",
-      "info": {
-        "features": [
-          "Limited fire hazard type",
-          "Minimum flame spread",
-          "Low smoke emission",
-          "Limited toxic fume emission",
-          "Resistant to mineral oil, diesel, etc."
-        ],
-        "technical": [
-          "Temperature range : Operating temp :-40ºC to +120ºC. High insulation resistance at elevated temp.",
-          "Rated voltage : 750V",
-          "Short circuit temperature :+280ºC.",
-          "Test voltage : 6kV for 15 mins",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm < 20 mm",
-          "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 2."
-        ],
-        "application": [
-          "Thin walled flexible EBXL control cables for Tap changer of electric locomotives, for AC/DC EMU, BG, AC EMU & MEMU coaching stock."
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor class 5, unilay constrition upto 6 sq.mm",
-          "Insulation :EBXL - EVA (Single layer)"
+          "Conductor: Annealed Tinned Flexible Copper Conductor.",
+          "Insulation: Electron Beam Cross Linked Polyolefin rated 120°C, Dual layer.",
+          "Core Identification: By number printing.",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin. Black Color."
         ]
       }
     },
     {
       "id": "8bcaa1e2ea",
       "family": "indian-railway",
-      "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core above 750V and Up to 1.8/3kV Thin-Walled Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
-        "No. of Wires x Wire Dia. (max) (Nos. x mm)",
+        "No. of Wires x Wire Dia. (max)",
         "Conductor Dia. Nominal",
         "Minimum wall Thickness of Insulation",
         "Minimum wall Thickness of Sheath",
@@ -421,8 +101,8 @@
       "rows": [
         [
           "",
-          "",
-          "",
+          "mm²",
+          "Nos. x mm",
           "mm",
           "mm",
           "mm",
@@ -617,35 +297,253 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp. :-40°C to 150°C",
-          "Rated voltage : Above 750V upto 1.8/3kV",
-          "Short circuit temperature : +280°C.",
-          "Test voltage : 8kV for 15 mins.",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm",
-          "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 3."
+          "Temperature range: Operating temp.:-40°C to 150°C",
+          "Rated voltage: Above 750V upto 1.8/3kV",
+          "Short circuit temperature: +280°C.",
+          "Test voltage: 8kV for 15 mins.",
+          "Min. bending radius: 3 x D for cable diameter <10mm 5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 3."
         ],
         "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin.",
-          "Outersheath : Electron Beam Cross Linked",
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: Electron Beam Cross Linked Polyolefin.",
+          "Outer sheath: Electron Beam Cross Linked",
           "Polyolefin."
+        ]
+      }
+    },
+    {
+      "id": "33d65edf50",
+      "family": "indian-railway",
+      "name": "Multicore above 750V Grade Thin-Walled Flexible EBXL Jumper Cables for Electric Locomotives",
+      "headers": [
+        "Part Number",
+        "No. of Cores x Nominal Cross Sectional Area",
+        "No. of Wires x Wire Dia (max)",
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20 deg. C",
+        "Approx.Cable Weight"
+      ],
+      "rows": [
+        [
+          "",
+          "Nos. x Sq.mm",
+          " Nos. x mm",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
+        [
+          "2591619",
+          "19C x 2.5",
+          "50 x 0.26",
+          "23.0 ± 0.5",
+          "8.21",
+          "840.0"
+        ],
+        [
+          "2591919",
+          "19C x 4.0",
+          "7 x 8 / 0.31 Rope Construction (1 x 8 + 6 x 8)",
+          "30.5 ± 0.1",
+          "5.09",
+          "1415.0"
+        ]
+      ],
+      "catalogueNo": "259",
+      "info": {
+        "features": [
+          "Limited fire hazard type",
+          "Minimum flame spread",
+          "Low smoke emission",
+          "Limited toxic fume emission",
+          "Resistant to mineral oil, diesel, etc. No."
+        ],
+        "technical": [
+          "Temperature range: operating remp :-40°C to +120°C.",
+          "Rated voltage: Above 750V",
+          "Short circuit temperature: 280°C.",
+          "Test voltage: 8kV for 15 mins",
+          "Min. bending radius: 4 x Cable OD",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 2"
+        ],
+        "application": [
+          "Thin-walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor.",
+          "Insulation: EBXL- EPDM (Dual layer)",
+          "Core Identification: By number printing.",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin. Black Colour."
+        ]
+      }
+    },
+    {
+      "id": "2a6abbda46",
+      "family": "indian-railway",
+      "name": "Single Core 750V Grade Thin-Walled Flexible EBXL Control Cables for Electric Locomotives",
+      "headers": [
+        "Part Number",
+        "Nominal Cross Sectional Area of Core (mm 2)",
+        "No. of Wires x Wire Dia. (max)",
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20",
+        "Appro x Cable Weight"
+      ],
+      "rows": [
+        [
+          "",
+          "mm²",
+          "Nos. x mm",
+          "mm",
+          "ohm/km",
+          "Kg/Km"
+        ],
+        [
+          "30013XX",
+          "1.5",
+          "30 x 0.26",
+          "2.70 ± 0.10",
+          "13.7",
+          "19.0"
+        ],
+        [
+          "30016XX",
+          "2.5",
+          "50 x 0.26",
+          "3.30 ± 0.15",
+          "8.21",
+          "30.0"
+        ],
+        [
+          "30019XX",
+          "4.0",
+          "56 x 0.31",
+          "3.95 ± 0.15",
+          "5.09",
+          "46.0"
+        ],
+        [
+          "30023XX",
+          "6.0",
+          "84 x 0.31",
+          "4.50 ± 0.20",
+          "3.39",
+          "67.0"
+        ],
+        [
+          "30027XX",
+          "10",
+          "80 x 0.41",
+          "5.60 ± 0.30",
+          "1.95",
+          "108.5"
+        ],
+        [
+          "30028XX",
+          "16",
+          "126 x 0.41",
+          "7.20 ± 0.30",
+          "1.24",
+          "170.5"
+        ],
+        [
+          "30030XX",
+          "25",
+          "198 x 0.41",
+          "8.60 ± 0.30",
+          "0.795",
+          "260.5"
+        ],
+        [
+          "30032XX",
+          "35",
+          "266 x 0.41",
+          "10.00 ± 0.30",
+          "0.565",
+          "361.0"
+        ],
+        [
+          "30034XX",
+          "50",
+          "385 x 0.41",
+          "11.90 ± 0.30",
+          "0.393",
+          "500.5"
+        ],
+        [
+          "30037XX",
+          "70",
+          "348 x 0.51",
+          "14.20 ± 0.30",
+          "0.277",
+          "706.5"
+        ],
+        [
+          "30038XX",
+          "95",
+          "468 x 0.51",
+          "15.70 ± 0.30",
+          "0.210",
+          "941.0"
+        ],
+        [
+          "30041XX",
+          "120",
+          "589 x 0.51",
+          "17.70 ± 0.30",
+          "0.164",
+          "1189.0"
+        ],
+        [
+          "30042XX",
+          "150",
+          "741 x 0.51",
+          "20.30 ± 0.30",
+          "0.132",
+          "1481.0"
+        ]
+      ],
+      "catalogueNo": "300",
+      "info": {
+        "features": [
+          "Limited fire hazard type",
+          "Minimum flame spread",
+          "Low smoke emission",
+          "Limited toxic fume emission",
+          "Resistant to mineral oil, diesel, etc."
+        ],
+        "technical": [
+          "Temperature range: Operating temp:-40ºC to +120ºC. High insulation resistance at elevated temp.",
+          "Rated voltage: 750V",
+          "Short circuit temperature:+280ºC.",
+          "Test voltage: 6kV for 15 mins",
+          "Min. bending radius: 3 x D for cable diameter <10mm 5 x D for cable diameter >10mm < 20 mm",
+          "Insulation resistance constant (at room temp): K ≥ 2000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 2."
+        ],
+        "application": [
+          "Thin-walled flexible EBXL control cables for Tap changer of electric locomotives, for AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor class 5, unilay construction up to 6 sq.mm",
+          "Insulation: EBXL - EVA (Single layer)"
         ]
       }
     },
     {
       "id": "12f7fc20e1",
       "family": "indian-railway",
-      "name": "1.8/3.0kV 150 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core 750V Grade Thin-Walled Flexible EBXL Control Cables for Electric Locomotives",
       "headers": [
         "Part Number",
         "Nominal Cross Sectional Area of Core (mm 2)",
-        "Conductor Construction (No. of Wires x Dia. of Wire)",
+        "Conductor Construction\n(No. of Wires x Dia. of Wire)",
         "Conductor Dia. Nominal",
         "Minimum wall Thickness of Insulation",
         "Overall Cable Dia (D)",
@@ -655,8 +553,8 @@
       "rows": [
         [
           "",
-          "",
-          "",
+          "mm²",
+          "Nos x mm",
           "mm",
           "mm",
           "mm",
@@ -804,139 +702,51 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp :-40°C to +150°C.",
-          "Rated voltage : 750V",
-          "Short circuit temperature :+280°C",
-          "Test voltage : 6kV for 5 mins",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm",
-          "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 3."
+          "Temperature range: Operating temp: -40°C to +150°C.",
+          "Rated voltage: 750V",
+          "Short circuit temperature: +280°C",
+          "Test voltage: 6kV for 5 mins",
+          "Min. bending radius: 3 x D for cable diameter <10mm 5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 2000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 3."
         ],
         "application": [
-          "Thin walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin rated 120°C, Single layer."
-        ]
-      }
-    },
-    {
-      "id": "29937eaa66",
-      "family": "indian-railway",
-      "name": "750V 19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
-      "headers": [
-        "Part Number",
-        "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
-        "No. of Wires x Wire Dia (max) (Nos. x mm)",
-        "Conductor Dia. Nominal",
-        "Minimum Wall Thickness of Core — Core Insulation",
-        "Core Sheath",
-        "Thickness of Outer Sheath",
-        "Overall Cable M Dia (D)",
-        "ax. Resis t a n c e of Conduc t o r at 20 deg . C",
-        "Approx. Cable Weight"
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "ohm/km",
-          "Kg/Km"
-        ],
-        [
-          "R2591619",
-          "19C x 2.5",
-          "50 x 0.26",
-          "2.1",
-          "0.30",
-          "0.40",
-          "1.4",
-          "23.0 ± 0.5",
-          "8.21",
-          "863"
-        ],
-        [
-          "R2591919",
-          "19C x 4.0",
-          "7 x 8 / 0.31 Rope Construction (1 x 8 + 6 x 8)",
-          "2.7",
-          "0.35",
-          "0.45",
-          "2.0",
-          "30.5 ± 0.1",
-          "5.09",
-          "1528"
-        ]
-      ],
-      "catalogueNo": "R259",
-      "info": {
-        "features": [
-          "Limited fire hazard type",
-          "Minimum flame spread",
-          "Low smoke emission",
-          "Limited toxic fume emission",
-          "Resistant to mineral oil, diesel, etc. No. of Cores x No. of Wires x Wire Dia"
-        ],
-        "technical": [
-          "Temperature range : operating remp :-40°C to +150°C.",
-          "Rated voltage : Above 750V",
-          "Short circuit temperature : 280°C.",
-          "Test voltage : 8kV for 15 mins",
-          "Min. bending radius : 4 x Cable OD",
-          "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 3. Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV **"
-        ],
-        "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
-        ],
-        "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor.",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin rated 120°C, Dual layer.",
-          "Core Identification : By number printing.",
-          "Outersheath : Electron Beam Cross Linked",
-          "Polyolefin. Black Colour."
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: Electron Beam Cross Linked Polyolefin rated 120°C, Single layer."
         ]
       }
     },
     {
       "id": "194190a466",
       "family": "indian-railway",
-      "name": "750V 19C x 2.5 Sq.mm EBXL - HR 150ºC Cable",
+      "name": "Multicore above 750V and Up to 1.8/3kV Grade Thin-Walled Flexible EBXL Jumper Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "No. of Cores x Nominal Cross Sectional Area (Nos. x Sq.mm)",
-        "No. of Wires x Wire Dia (max) (Nos. x mm)",
+        "No. of Cores x Nominal Cross Sectional Area",
+        "No. of Wires x Wire Dia (max)",
         "Conductor Dia. Nominal",
-        "Minimum Wall Thickness of Core — Core Insulation",
-        "Core Sheath",
+        "Minimum Wall Thickness \nof Core Insulation",
+        "Minimum Wall Thickness \nof Core Sheath",
         "Thickness of Outer Sheath",
-        "Overall Cable Dia (D)",
-        "Max. Resis t a n c e of Conduc t o r at 20 deg . C (ohm/km ) (",
-        "Approx. Cable Weight Kg/Km)"
+        "Overall, Cable Dia (D)",
+        "Max. Resistance of Conductor at 20 deg.C",
+        "Approx. Cable Weight"
       ],
       "rows": [
         [
           "",
-          "",
-          "",
+          "Nos. x Sq.mm",
+          "(Nos. x mm",
           "mm",
           "mm",
           "mm",
           "mm",
           "mm",
-          "",
-          ""
+          "ohm/km ",
+          "Kg/Km"
         ],
         [
           "A5331619",
@@ -970,39 +780,36 @@
           "Minimum flame spread",
           "Low smoke emission",
           "Limited toxic fume emission",
-          "Resistant to mineral oil, diesel, etc. No. of Cores x No. of Wires x Wire Dia"
+          "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : operating remp :-40°C to +120°C.",
-          "Rated voltage : Above 750V upto 1.8/3kV",
-          "Short circuit temperature : 280°C.",
-          "Test voltage : 8kV for 15 mins",
-          "Min. bending radius : 4 x Cable OD",
-          "Insulation resistance constant (at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 4. Approvals Accreditations Certifications ISANECTRCEVRRIENCDAEIT RTIAOTNIOALN ResearchR Progress through TUV ** Thickness of Overall Cable Max. Resis t a n c e Approx."
+          "Temperature range: operating Temp: -40°C to +120°C.",
+          "Rated voltage: Above 750V up to 1.8/3kV",
+          "Short circuit temperature: 280°C.",
+          "Test voltage: 8kV for 15 mins",
+          "Min. bending radius: 4 x Cable OD",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 4."
         ],
         "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor.",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin rated 120°C, Dual layer.",
-          "Core Identification : By number printing.",
-          "Outersheath : Electron Beam Cross Linked",
-          "Polyolefin. Black Colour."
+          "Conductor: Annealed Tinned Flexible Copper Conductor.",
+          "Insulation: Electron Beam Cross Linked Polyolefin rated 120°C, Dual layer.",
+          "Core Identification: By number printing.",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin. Black Colour."
         ]
       }
     },
     {
       "id": "d9ca19233b",
       "family": "indian-railway",
-      "name": "750V 16 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core 750V Grade Thin-Walled Flexible EBXL Control Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm 2)",
-        "No. of Wires x Wire Dia. (max) (Nos. x mm)",
+        "Nominal Cross Sectional Area of Core",
+        "No. of Wires x Wire Dia. (max)",
         "Conductor Dia. Nominal",
         "Minimum wall Thickness of Insulation",
         "Overall Cable Dia (D)",
@@ -1013,13 +820,13 @@
       "rows": [
         [
           "",
-          "",
-          "",
+          "mm²",
+          " Nos. x mm",
           "mm",
           "mm",
           "mm",
           "ohm/km",
-          "",
+          "Amps",
           "Kg/Km"
         ],
         [
@@ -1176,52 +983,381 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp :-40°C to +120°C.",
-          "Rated voltage : 750V",
-          "Short circuit temperature :+280°C",
-          "Test voltage : 6kV for 5 mins",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm",
-          "Insulation resistance constant (at room temp) : K ≥ 2000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 4."
+          "Temperature range: Operating temp:-40°C to +120°C.",
+          "Rated voltage: 750V",
+          "Short circuit temperature: +280°C",
+          "Test voltage: 6kV for 5 mins",
+          "Min. bending radius: 3 x D for cable diameter <10mm 5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 2000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 4."
         ],
         "application": [
-          "Thin walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL control cables for Tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin, Single layer."
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: Electron Beam Cross Linked Polyolefin, Single layer."
+        ]
+      }
+    },
+    {
+      "id": "bfd53f32f9",
+      "family": "indian-railway",
+      "name": "Single Core 1.8/3kV Grade Thin-Walled Flexible EBXL Cables for Coaching Stock Application",
+      "headers": [
+        "Part Number",
+        "No. of core x Nominal Cross Sectional Area",
+        "No. of Wires x Single Wire dia (max)",
+        "Cable Overall Diameter (Nom)",
+        "Max. Conductor Resistance at 20°C",
+        "Cable Weight Approx."
+      ],
+      "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "Nos x mm",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
+        [
+          "2651309YY",
+          "1C x 1.5",
+          "30 x 0.26",
+          "3.20 ± 0.10",
+          "13.7",
+          "20"
+        ],
+        [
+          "2651609YY",
+          "1C x 2.5",
+          "50 x 0.26",
+          "3.70 ± 0.15",
+          "8.21",
+          "30"
+        ],
+        [
+          "2651909YY",
+          "1C x 4",
+          "56 x 0.31",
+          "4.50 ± 0.15",
+          "5.09",
+          "50"
+        ],
+        [
+          "2652309YY",
+          "1C x 6",
+          "84 x 0.31",
+          "5.10 ± 0.15",
+          "3.39",
+          "70"
+        ],
+        [
+          "2652709YY",
+          "1C x 10",
+          "80 x 0.41",
+          "6.30 ± 0.20",
+          "1.95",
+          "120"
+        ],
+        [
+          "2652809YY",
+          "1C x 16",
+          "126 x 0.41",
+          "8.30 ± 0.20",
+          "1.24",
+          "190"
+        ],
+        [
+          "2653009YY",
+          "1C x 25",
+          "196 x 0.41",
+          "10.2 ± 0.30",
+          "0.795",
+          "280"
+        ],
+        [
+          "2653209YY",
+          "1C x 35",
+          "266 x 0.41",
+          "11.7 ± 0.30",
+          "0.565",
+          "390"
+        ],
+        [
+          "2653409YY",
+          "1C x 50",
+          "385 x 0.41",
+          "13.6 ± 0.30",
+          "0.393",
+          "550"
+        ],
+        [
+          "2653709YY",
+          "1C x 70",
+          "348 x 0.51",
+          "15.6 ± 0.30",
+          "0.277",
+          "740"
+        ],
+        [
+          "2653809YY",
+          "1C x 95",
+          "468 x 0.51",
+          "17.3 ± 0.30",
+          "0.210",
+          "960"
+        ],
+        [
+          "2654109YY",
+          "1C x 120",
+          "589 x 0.51",
+          "19.6 ± 0.30",
+          "0.164",
+          "1200"
+        ],
+        [
+          "2654209YY",
+          "1C x 150",
+          "741 x 0.51",
+          "21.9 ± 0.30",
+          "0.132",
+          "1550"
+        ],
+        [
+          "2654409YY",
+          "1C x 185",
+          "912 x 0.51",
+          "23.8 ± 0.30",
+          "0.108",
+          "1907"
+        ],
+        [
+          "2654609YY",
+          "1C x 240",
+          "1184 x 0.51",
+          "26.9 ± 0.30",
+          "0.0817",
+          "2449"
+        ],
+        [
+          "2654809YY",
+          "1C x 300",
+          "1480 x 0.51",
+          "29.7 ± 0.30",
+          "0.0654",
+          "3026"
+        ]
+      ],
+      "catalogueNo": "265",
+      "info": {
+        "features": [
+          "Limited fire hazard type",
+          "Minimum flame spread",
+          "Low smoke emission",
+          "Limited toxic fume emission",
+          "Resistant to mineral oil, diesel, etc"
+        ],
+        "technical": [
+          "Temperature range: Operating temp: -40°C to +120°C.",
+          "Rated voltage :1.8/3kV",
+          "Short circuit temperature: +280°C.",
+          "Test Voltage: 6kV for 15 mins",
+          "Bending radius:  3D for cable diameter <10mm",
+          "5D for cable diameter >10 mm",
+          "Specification: EDTS 132 Rev-C (DS-1)"
+        ],
+        "application": [
+          "Thin-walled Flexible EBXL Cables for Passenger coaches, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor, Class 5.",
+          "Insulation: EBXL - EPDM (Dual layer)",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin. Black Colour"
+        ]
+      }
+    },
+    {
+      "id": "16db17074f",
+      "family": "indian-railway",
+      "name": "Single Core 600/1000V Grade Thin-Walled Flexible EBXL Cables for Coaching Stock Application ",
+      "headers": [
+        "Part Number",
+        "No.of core x Nominal Cross Sectional Area",
+        "No. of Wires x Single Wire dia (max)",
+        "Cable Outer Diameter",
+        "Max. Resistance of Conductor at 20°C",
+        "Cable Weight Approx."
+      ],
+      "rows": [
+        [
+          "",
+          "Nos x mm²",
+          "Nos / mm",
+          "mm",
+          "Ohm/km",
+          "Kg/Km"
+        ],
+        [
+          "26613XX",
+          "1C x 1.5",
+          "30 x 0.26",
+          "2.70 ± 0.10",
+          "13.7",
+          "19.5"
+        ],
+        [
+          "26616XX",
+          "1C x 2.5",
+          "50 x 0.26",
+          "3.30 ± 0.10",
+          "8.21",
+          "30.5"
+        ],
+        [
+          "26619XX",
+          "1C x 4.0",
+          "56 x 0.31",
+          "3.95 ± 0.10",
+          "5.09",
+          "46.5"
+        ],
+        [
+          "26623XX",
+          "1C x 6.0",
+          "84 x 0.31",
+          "4.70 ± 0.15",
+          "3.39",
+          "69"
+        ],
+        [
+          "26627XX",
+          "1C x 10",
+          "80 x 0.41",
+          "5.85 ± 0.15",
+          "1.95",
+          "113"
+        ],
+        [
+          "26628XX",
+          "1C x 16",
+          "119 x 0.41",
+          "7.30 ± 0.15",
+          "1.24",
+          "166"
+        ],
+        [
+          "26630XX",
+          "1C x 25",
+          "182 x 0.41",
+          "8.90 ± 0.20",
+          "0.795",
+          "250"
+        ],
+        [
+          "26632XX",
+          "1C x 35",
+          "259 x 0.41",
+          "10.2 ± 0.20",
+          "0.565",
+          "350"
+        ],
+        [
+          "26634XX",
+          "1C x 50",
+          "378 x 0.41",
+          "11.9 ± 0.20",
+          "0.393",
+          "500"
+        ],
+        [
+          "26637XX",
+          "1C x 70",
+          "336 x 0.51",
+          "14.3 ± 0.25",
+          "0.277",
+          "690"
+        ],
+        [
+          "26638XX",
+          "1C x 95",
+          "444 x 0.51",
+          "15.9 ± 0.25",
+          "0.210",
+          "900"
+        ],
+        [
+          "26641XX",
+          "1C x 120",
+          "551 x 0.51",
+          "17.9 ± 0.30",
+          "0.164",
+          "1180"
+        ],
+        [
+          "26642XX",
+          "1C x 150",
+          "722 x 0.51",
+          "20.3 ± 0.30",
+          "0.132",
+          "1460"
+        ]
+      ],
+      "catalogueNo": "266",
+      "info": {
+        "features": [
+          "Limited fire hazard type",
+          "Minimum flame spread",
+          "Low smoke emission",
+          "Limited toxic fume emission",
+          "Resistant to mineral oil, diesel, etc."
+        ],
+        "technical": [
+          "Temperature range : Operating temp :-400C to +1200C.",
+          "Rated voltage : 600/1000V",
+          "Short circuit temperature : +2800C.",
+          "Test voltage : 3kV for 5 mins",
+          "Bending radius : 3D for cable dia <10mm 5D for cable dia >10 mm",
+          "Specification : EDTS 132 Rev-C (DS-2)"
+        ],
+        "application": [
+          "Thin-walled Flexible EBXL Cables for Passenger coaches, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+        ],
+        "construction": [
+          "Conductor: Annealed Tinned Flexible Copper Conductor, Class 5. Unilay Construction up to 6 sq.mm",
+          "Insulation: Electron Beam Cross Linked Polyolefin rated 1200C, Single layer.",
+          "Grey Colour."
         ]
       }
     },
     {
       "id": "f79dc9bc94",
       "family": "indian-railway",
-      "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core above 750V and Up to 1.8/3kV Thin-Walled Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "Nominal Cross Sectional Area of Core (mm 2)",
-        "No. of Wires x Wire Dia. (max) (Nos. x mm)",
+        "Nominal Cross Sectional Area of Core",
+        "No. of Wires x Wire Dia. (max)",
         "Conductor Dia. Nominal",
         "Minimum wall Thickness of Insulation",
         "Minimum wall Thickness of Sheath",
-        "Overall Cable Dia (D)",
-        "Max. Resistanc of Conductor at 20 deg. C",
-        "e Curr e n t Rati n g in air 3 0 ° C",
+        "Overall, Cable Diameter",
+        "Max. Resistance of Conductor at 20 deg. C",
+        "Current Rating \nin air 30°C",
         "Approx. Cable Weight"
       ],
       "rows": [
         [
           "",
-          "",
-          "",
+          "mm²",
+          "Nos. x mm",
           "mm",
           "mm",
           "mm",
           "mm",
           "ohm/km",
-          "",
+          "Amps",
           "Kg/Km"
         ],
         [
@@ -1427,306 +1563,175 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp. :-40°C to +120°C",
-          "Rated voltage : Above 750V upto 1.8/3kV",
-          "Short circuit temperature : +280°C.",
-          "Test voltage : 8kV for 15 mins.",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm",
-          "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 4."
+          "Temperature range: Operating temp.: -40°C to +120°C",
+          "Rated voltage: Above 750V up to 1.8/3kV",
+          "Short circuit temperature: +280°C.",
+          "Test voltage: 8kV for 15 mins.",
+          "Min. bending radius: 3 x D for cable diameter <10mm 5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 4."
         ],
         "application": [
-          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
+          "Thin-walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin.",
-          "Outersheath : Electron Beam Cross Linked",
-          "Polyolefin."
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: Electron Beam Cross Linked Polyolefin.",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin."
         ]
       }
     },
     {
-      "id": "bfd53f32f9",
+      "id": "9a99b436c1",
       "family": "indian-railway",
-      "name": "1.8/3.0kV 1C x 1.5 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core above 750V and up to 1.8/3kV Thin-Walled Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
-        "No. of core x Nominal Cross Sectional Area (Nos x sq. mm)",
-        "No. of Wires x Single Wire dia (max) (Nos / mm)",
-        "Cable Overall Diameter (Nom)",
-        "Max. Conductor Resistance at 20 0C",
-        "Cable Weight Approx."
+        "Nominal Cross Sectional Area of Core",
+        "No. of Wires x Wire Dia. (max)",
+        "Overall Cable Dia (D)",
+        "Max. Resistance of Conductor at 20",
+        "Approx. Cable Weight"
       ],
       "rows": [
         [
           "",
-          "",
-          "",
+          "mm²",
+          "Nos. x mm",
           "mm",
-          "Ohm/km",
+          "ohm/km",
           "Kg/Km"
         ],
         [
-          "2651309YY",
-          "1C x 1.5",
+          "25813XXYY",
+          "1.5",
           "30 x 0.26",
           "3.20 ± 0.10",
           "13.7",
-          "20"
+          "22.5"
         ],
         [
-          "2651609YY",
-          "1C x 2.5",
+          "25816XXYY",
+          "2.5",
           "50 x 0.26",
           "3.70 ± 0.15",
           "8.21",
-          "30"
+          "33.5"
         ],
         [
-          "2651909YY",
-          "1C x 4",
+          "25819XXYY",
+          "4.0",
           "56 x 0.31",
           "4.50 ± 0.15",
           "5.09",
-          "50"
+          "51.0"
         ],
         [
-          "2652309YY",
-          "1C x 6",
+          "25823XXYY",
+          "6.0",
           "84 x 0.31",
           "5.10 ± 0.15",
           "3.39",
-          "70"
+          "71.5"
         ],
         [
-          "2652709YY",
-          "1C x 10",
+          "25827XXYY",
+          "10",
           "80 x 0.41",
           "6.30 ± 0.20",
           "1.95",
-          "120"
+          "114.0"
         ],
         [
-          "2652809YY",
-          "1C x 16",
+          "25828XXYY",
+          "16",
           "126 x 0.41",
           "8.30 ± 0.20",
           "1.24",
-          "190"
+          "186.0"
         ],
         [
-          "2653009YY",
-          "1C x 25",
-          "196 x 0.41",
+          "25830XXYY",
+          "25",
+          "198 x 0.41",
           "10.2 ± 0.30",
           "0.795",
-          "280"
+          "294.0"
         ],
         [
-          "2653209YY",
-          "1C x 35",
+          "25832XXYY",
+          "35",
           "266 x 0.41",
           "11.7 ± 0.30",
           "0.565",
-          "390"
+          "399.0"
         ],
         [
-          "2653409YY",
-          "1C x 50",
+          "25834XXYY",
+          "50",
           "385 x 0.41",
           "13.6 ± 0.30",
           "0.393",
-          "550"
+          "545.5"
         ],
         [
-          "2653709YY",
-          "1C x 70",
+          "25837XXYY",
+          "70",
           "348 x 0.51",
           "15.6 ± 0.30",
           "0.277",
-          "740"
+          "755.0"
         ],
         [
-          "2653809YY",
-          "1C x 95",
+          "25838XXYY",
+          "95",
           "468 x 0.51",
           "17.3 ± 0.30",
           "0.210",
-          "960"
+          "1003.0"
         ],
         [
-          "2654109YY",
-          "1C x 120",
+          "25841XXYY",
+          "120",
           "589 x 0.51",
           "19.6 ± 0.30",
           "0.164",
-          "1200"
+          "1268.0"
         ],
         [
-          "2654209YY",
-          "1C x 150",
+          "25842XXYY",
+          "150",
           "741 x 0.51",
           "21.9 ± 0.30",
           "0.132",
-          "1550"
+          "1565.0"
         ],
         [
-          "2654409YY",
-          "1C x 185",
+          "25844XXYY",
+          "185",
           "912 x 0.51",
           "23.8 ± 0.30",
           "0.108",
-          "1907"
+          "1907.0"
         ],
         [
-          "2654609YY",
-          "1C x 240",
+          "25846XXYY",
+          "240",
           "1184 x 0.51",
           "26.9 ± 0.30",
           "0.0817",
-          "2449"
+          "2449.0"
         ],
         [
-          "2654809YY",
-          "1C x 300",
+          "25848XXYY",
+          "300",
           "1480 x 0.51",
           "29.7 ± 0.30",
           "0.0654",
-          "3026"
+          "3026.0"
         ]
       ],
-      "catalogueNo": "265"
-    },
-    {
-      "id": "16db17074f",
-      "family": "indian-railway",
-      "name": "600/1000V 1C x 2.5 Sq.mm 150 mm EBXL - HR 120ºC Cable",
-      "headers": [
-        "Part Number",
-        "No.of core x Nominal Cross Sectional Area (Nos x sqmm)",
-        "No. of Wires x Single Wire dia (max) (Nos / mm)",
-        "Cable Outer Diameter",
-        "Max. Resistance of Conductor at 20 0C",
-        "Cable Weight Approx."
-      ],
-      "rows": [
-        [
-          "",
-          "",
-          "",
-          "mm",
-          "Ohm/km",
-          "Kg/Km"
-        ],
-        [
-          "26613XX",
-          "1C x 1.5",
-          "30 x 0.26",
-          "2.70 ± 0.10",
-          "13.7",
-          "19.5"
-        ],
-        [
-          "26616XX",
-          "1C x 2.5",
-          "50 x 0.26",
-          "3.30 ± 0.10",
-          "8.21",
-          "30.5"
-        ],
-        [
-          "26619XX",
-          "1C x 4.0",
-          "56 x 0.31",
-          "3.95 ± 0.10",
-          "5.09",
-          "46.5"
-        ],
-        [
-          "26623XX",
-          "1C x 6.0",
-          "84 x 0.31",
-          "4.70 ± 0.15",
-          "3.39",
-          "69"
-        ],
-        [
-          "26627XX",
-          "1C x 10",
-          "80 x 0.41",
-          "5.85 ± 0.15",
-          "1.95",
-          "113"
-        ],
-        [
-          "26628XX",
-          "1C x 16",
-          "119 x 0.41",
-          "7.30 ± 0.15",
-          "1.24",
-          "166"
-        ],
-        [
-          "26630XX",
-          "1C x 25",
-          "182 x 0.41",
-          "8.90 ± 0.20",
-          "0.795",
-          "250"
-        ],
-        [
-          "26632XX",
-          "1C x 35",
-          "259 x 0.41",
-          "10.2 ± 0.20",
-          "0.565",
-          "350"
-        ],
-        [
-          "26634XX",
-          "1C x 50",
-          "378 x 0.41",
-          "11.9 ± 0.20",
-          "0.393",
-          "500"
-        ],
-        [
-          "26637XX",
-          "1C x 70",
-          "336 x 0.51",
-          "14.3 ± 0.25",
-          "0.277",
-          "690"
-        ],
-        [
-          "26638XX",
-          "1C x 95",
-          "444 x 0.51",
-          "15.9 ± 0.25",
-          "0.210",
-          "900"
-        ],
-        [
-          "26641XX",
-          "1C x 120",
-          "551 x 0.51",
-          "17.9 ± 0.30",
-          "0.164",
-          "1180"
-        ],
-        [
-          "26642XX",
-          "1C x 150",
-          "722 x 0.51",
-          "20.3 ± 0.30",
-          "0.132",
-          "1460"
-        ]
-      ],
-      "catalogueNo": "266",
+      "catalogueNo": "258",
       "info": {
         "features": [
           "Limited fire hazard type",
@@ -1736,24 +1741,25 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp :-400C to +1200C.",
-          "Rated voltage : 600/1000V",
-          "Short circuit temperature : +2800C.",
-          "Test voltage : 3kV for 5 mins",
-          "Bending radius : 3D for cable dia <10mm 5D for cable dia >10 mm",
-          "Specification : EDTS 132 Rev-C (DS-2)"
+          "Temperature range: Operating temperature: -40ºC to +120ºC. High insulation resistance at elevated temp.",
+          "Rated voltage: Above 750V up to 1.8/3kV",
+          "Short circuit temperature: +280ºC.",
+          "Test voltage: 6kV for 15 mins.",
+          "Min. bending radius: 3 x D for cable diameter <10mm",
+          "5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 2."
         ],
         "application": [
-          "Data : :-400C to +1200C. 600/1000V temperature : +2800C. for 5 mins 3D for cable dia <10mm 5D for cable dia >10 mm EDTS 132 Rev-C (DS-2)"
+          "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor, Class 5. Unilay Construction upto 6 sq.mm",
-          "Insulation : Electron Beam Cross Linked",
-          "Polyolefin rated 1200C, Single layer.",
-          "Grey Colour."
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: EBXL - EPDM 120ºC (Dual layer)",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin."
         ]
-      }
+      },
+      "colorNote": "We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog"
     },
     {
       "id": "afdd32e95a",
