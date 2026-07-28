@@ -50,6 +50,14 @@ module.exports = async function handler(req, res) {
     // go through /api/admin-image, and omitting the key here means a plain
     // field edit never accidentally wipes out an already-attached image.
     if ('image_2d' in body) row.image_2d = body.image_2d || null;
+    // Parent-column labels, one per leaf column. Normalised to the same length
+    // as headers so a stale/short array can never misalign the merge runs.
+    if ('header_groups' in body) {
+      const hs = Array.isArray(headers) ? headers : [];
+      const g = Array.isArray(body.header_groups) ? body.header_groups : [];
+      const norm = hs.map((_, i) => String(g[i] == null ? '' : g[i]).trim());
+      row.header_groups = norm.some(Boolean) ? norm : null;
+    }
     // Optional per-series override of the family's colour-code note. Blank
     // means "inherit the family note", so only persist when explicitly sent.
     if ('color_note' in body) {

@@ -160,10 +160,62 @@
     white-space: normal; word-break: break-word; line-height: 1.25;
   }
   table.spec-table th input.h-unit { font-weight: 500; font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+
+  /* ── Parent-header row ─────────────────────────────────────────────
+     Typing the same label into neighbouring columns merges them into one
+     spanning header on the site; the .hg-cont style shows that visually
+     by dropping the divider between continued cells. */
+  table.spec-table tr.hgroup-row th {
+    background: var(--bg); padding: 4px 6px; border-bottom: none;
+    vertical-align: middle;
+  }
+  table.spec-table tr.hgroup-row th.has-group { background: var(--accent-soft); }
+  table.spec-table tr.hgroup-row th.hg-cont { border-left: none; }
+  table.spec-table tr.hgroup-row th.has-group + th.hg-cont { border-left: none; }
+  table.spec-table input.h-group {
+    width: 100%; border: none; background: none; padding: 2px 0;
+    font-family: inherit; font-size: 11px; font-weight: 700; text-align: center;
+    color: var(--accent-2); text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  table.spec-table input.h-group::placeholder {
+    color: var(--text-faint); font-weight: 500; text-transform: none;
+    letter-spacing: 0; opacity: 0.55;
+  }
+  table.spec-table input.h-group:focus {
+    outline: none; background: #fff; border-radius: 4px;
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+
+  /* Column tool cluster (move / insert / delete) */
+  .col-tools { display: flex; justify-content: center; gap: 1px; margin-bottom: 3px; }
+  .col-tools button {
+    border: none; background: none; cursor: pointer; line-height: 1;
+    font-size: 12px; padding: 2px 3px; border-radius: 3px;
+    color: var(--text-faint);
+  }
+  .col-tools button:hover { background: var(--bg-soft); color: var(--accent-2); }
+  .col-tools button.col-del:hover { background: #FEF2F2; color: #B91C1C; }
+  .row-actions button {
+    border: none; background: none; cursor: pointer; line-height: 1;
+    font-size: 12px; padding: 2px 3px; border-radius: 3px; color: var(--text-faint);
+  }
+  .row-actions button:hover { background: var(--bg-soft); color: var(--accent-2); }
+  .row-actions button[data-del-row]:hover { background: #FEF2F2; color: #B91C1C; }
   table.spec-table td { border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); padding: 0; }
   table.spec-table tr:last-child td { border-bottom: none; }
   table.spec-table tbody tr:hover td { background: rgba(184,115,51,0.035); }
+  table.spec-table td { position: relative; }
   table.spec-table td input { width: 100%; border: none; padding: 10px 10px; font-size: 14.5px; background: none; text-align: center; }
+  /* Long values are unreadable inside a narrow column. Focusing a cell pops it
+     out over its neighbours so the whole value is visible and editable, without
+     changing the column widths (which would reflow the whole table). */
+  table.spec-table td input:focus {
+    position: absolute; inset: 0; z-index: 20;
+    width: auto; min-width: 100%; height: auto; min-height: 100%;
+    background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.16);
+    border-radius: 5px; text-align: center;
+  }
+  table.spec-table td.cell-wide input:focus { min-width: 320px; }
   table.spec-table td input:focus, table.spec-table th input:focus, table.spec-table th textarea:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
   /* Lock the Part Number column in place during horizontal scroll. */
   table.spec-table th:first-child, table.spec-table td:first-child {
@@ -376,7 +428,7 @@
       try {
         await SiechemAdmin.api('/api/admin-series', {
           method: s._isNew ? 'POST' : 'PUT',
-          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null, color_note: s.color_note || '' })
+          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null, color_note: s.color_note || '', header_groups: Array.isArray(s.header_groups) ? s.header_groups : [] })
         });
         s._isNew = false;
         setSaveStatus('saved', 'Saved automatically · Publish on the dashboard to go live');
@@ -443,10 +495,28 @@
       // 2-digit strand count) collapse to nothing next to wide ones instead
       // of each column getting room for its own content.
       const colMinWidths = computeColumnWidths(s.headers, s.rows);
+      // Parent-header row. Type the same label into adjacent columns and they
+      // merge into one spanning header on the public site.
+      const groups = Array.isArray(s.header_groups) ? s.header_groups : [];
+      const groupCells = s.headers.map((_, i) => {
+        const g = groups[i] == null ? '' : groups[i];
+        const same = g && groups[i - 1] === g;
+        return `<th class="hg-cell${g ? ' has-group' : ''}${same ? ' hg-cont' : ''}">
+          <input type="text" class="h-group" data-hg="${i}" value="${escapeAttr(g)}"
+                 placeholder="+ parent" title="Parent column label — repeat the same text on neighbouring columns to merge them">
+        </th>`;
+      }).join('');
+      const groupRow = `<tr class="hgroup-row">${groupCells}<th></th></tr>`;
+
       const headerCells = s.headers.map((h, i) => {
         const { label, unit } = splitHeaderLabelUnit(h);
         return `<th style="min-width:${colMinWidths[i]}ch">
-          <button class="col-del" data-del-col="${i}" title="Delete column">&times;</button>
+          <div class="col-tools">
+            <button class="col-move" data-mv-col="${i}" data-dir="-1" title="Move column left">&#8249;</button>
+            <button class="col-ins" data-ins-col="${i}" title="Insert column here">+</button>
+            <button class="col-move" data-mv-col="${i}" data-dir="1" title="Move column right">&#8250;</button>
+            <button class="col-del" data-del-col="${i}" title="Delete column">&times;</button>
+          </div>
           <textarea class="h-label" data-h="${i}" rows="2" placeholder="Name">${escapeHtml(label)}</textarea>
           <input type="text" class="h-unit" data-hu="${i}" value="${escapeAttr(unit)}" placeholder="Unit">
         </th>`;
@@ -455,7 +525,12 @@
       const rowCells = s.rows.map((row, ri) => `
         <tr data-row="${ri}">
           ${s.headers.map((_, ci) => `<td><input type="text" data-r="${ri}" data-c="${ci}" value="${escapeAttr(row[ci] || '')}"></td>`).join('')}
-          <td class="row-actions"><button data-del-row="${ri}" title="Delete row">&times;</button></td>
+          <td class="row-actions">
+            <button data-mv-row="${ri}" data-dir="-1" title="Move row up">&#8593;</button>
+            <button data-ins-row="${ri}" title="Insert row below">+</button>
+            <button data-mv-row="${ri}" data-dir="1" title="Move row down">&#8595;</button>
+            <button data-del-row="${ri}" title="Delete row">&times;</button>
+          </td>
         </tr>
       `).join('');
 
@@ -546,7 +621,7 @@
           </div>
           <div class="table-scroll">
             <table class="spec-table">
-              <thead><tr>${headerCells}<th class="col-actions"></th></tr></thead>
+              <thead>${groupRow}<tr>${headerCells}<th class="col-actions"></th></tr></thead>
               <tbody id="specRows">${rowCells}</tbody>
             </table>
           </div>
@@ -608,8 +683,58 @@
         if (!confirm(`Delete column "${colName}" and all its values? You can undo this with the Undo button.`)) return;
         const [removedHeader] = s.headers.splice(ci, 1);
         const removedValues = s.rows.map(r => r.splice(ci, 1)[0]);
-        undoStack.push({ type: 'col', index: ci, header: removedHeader, values: removedValues });
+        const removedGroup = groupsOf(s).splice(ci, 1)[0];
+        undoStack.push({ type: 'col', index: ci, header: removedHeader, values: removedValues, group: removedGroup });
         redoStack = [];
+        renderEditor();
+        saveSeries(s);
+      }));
+
+      // ── Parent header labels ──────────────────────────────────────
+      panel.querySelectorAll('[data-hg]').forEach(inp => inp.addEventListener('input', e => {
+        groupsOf(s)[+e.target.dataset.hg] = e.target.value;
+        scheduleAutosave(s);
+      }));
+      // Re-render on blur so merged/unmerged cells restyle without stealing
+      // focus mid-typing.
+      panel.querySelectorAll('[data-hg]').forEach(inp => inp.addEventListener('blur', () => renderEditor()));
+
+      // ── Insert / move rows ────────────────────────────────────────
+      panel.querySelectorAll('[data-ins-row]').forEach(btn => btn.addEventListener('click', e => {
+        const ri = +e.currentTarget.dataset.insRow;
+        s.rows.splice(ri + 1, 0, new Array(s.headers.length).fill(''));
+        renderEditor();
+        saveSeries(s);
+      }));
+      panel.querySelectorAll('[data-mv-row]').forEach(btn => btn.addEventListener('click', e => {
+        const ri = +e.currentTarget.dataset.mvRow;
+        const to = ri + (+e.currentTarget.dataset.dir);
+        if (to < 0 || to >= s.rows.length) return;
+        const [moved] = s.rows.splice(ri, 1);
+        s.rows.splice(to, 0, moved);
+        renderEditor();
+        saveSeries(s);
+      }));
+
+      // ── Insert / move columns ─────────────────────────────────────
+      panel.querySelectorAll('[data-ins-col]').forEach(btn => btn.addEventListener('click', e => {
+        const ci = +e.currentTarget.dataset.insCol;
+        const name = prompt('New column name?');
+        if (name === null) return;
+        s.headers.splice(ci + 1, 0, name || '');
+        s.rows.forEach(r => r.splice(ci + 1, 0, ''));
+        groupsOf(s).splice(ci + 1, 0, '');
+        renderEditor();
+        saveSeries(s);
+      }));
+      panel.querySelectorAll('[data-mv-col]').forEach(btn => btn.addEventListener('click', e => {
+        const ci = +e.currentTarget.dataset.mvCol;
+        const to = ci + (+e.currentTarget.dataset.dir);
+        if (to < 0 || to >= s.headers.length) return;
+        const move = (arr) => { const [x] = arr.splice(ci, 1); arr.splice(to, 0, x); };
+        move(s.headers);
+        move(groupsOf(s));
+        s.rows.forEach(move);
         renderEditor();
         saveSeries(s);
       }));
@@ -635,6 +760,7 @@
         if (!name) return;
         s.headers.push(name);
         s.rows.forEach(r => r.push(''));
+        groupsOf(s);
         renderEditor();
         saveSeries(s);
       });
@@ -653,6 +779,7 @@
         } else if (action.type === 'col') {
           s.headers.splice(action.index, 0, action.header);
           action.values.forEach((v, ri) => { if (s.rows[ri]) s.rows[ri].splice(action.index, 0, v); });
+          groupsOf(s).splice(action.index, 0, action.group || '');
         }
         redoStack.push(action);
         renderEditor();
@@ -666,6 +793,7 @@
         } else if (action.type === 'col') {
           s.headers.splice(action.index, 1);
           s.rows.forEach(r => r.splice(action.index, 1));
+          groupsOf(s).splice(action.index, 1);
         }
         undoStack.push(action);
         renderEditor();
@@ -819,6 +947,16 @@
         const need = Math.max(labelFootprint, unit.length, maxValLen);
         return Math.max(8, Math.min(28, need + 3));
       });
+    }
+
+    // Parent-header labels, lazily created and always kept the same length as
+    // headers. Returning the live array lets callers splice it in step with
+    // s.headers / s.rows so the three never drift apart.
+    function groupsOf(s) {
+      if (!Array.isArray(s.header_groups)) s.header_groups = [];
+      while (s.header_groups.length < s.headers.length) s.header_groups.push('');
+      s.header_groups.length = s.headers.length;
+      return s.header_groups;
     }
 
     function escapeAttr(s) { return String(s ?? '').replace(/"/g, '&quot;'); }

@@ -107,7 +107,8 @@ module.exports = async function handler(req, res) {
         ...(s.catalogue_no ? { catalogueNo: s.catalogue_no } : {}),
         ...(s.info ? { info: s.info } : {}),
         ...(s.image_2d ? { image2d: s.image_2d } : {}),
-        ...(s.color_note ? { colorNote: s.color_note } : {})
+        ...(s.color_note ? { colorNote: s.color_note } : {}),
+        ...(s.header_groups && s.header_groups.some(Boolean) ? { headerGroups: s.header_groups } : {})
       });
     }
 
