@@ -240,6 +240,32 @@
   .table-actions .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .table-actions .sep { width: 1px; align-self: stretch; background: var(--border); margin: 0 2px; }
 
+  /* ── Character palette ─────────────────────────────────────────── */
+  .table-actions { position: relative; }
+  .char-palette {
+    display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
+    width: min(430px, 92vw); max-height: 60vh; overflow-y: auto;
+    background: var(--bg-card); border: 1px solid var(--border-strong);
+    border-radius: 10px; padding: 12px 13px;
+    box-shadow: 0 12px 34px rgba(0,0,0,0.16);
+  }
+  .char-palette.open { display: block; }
+  .cp-group + .cp-group { margin-top: 11px; }
+  .cp-title {
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .05em; color: var(--text-dim); margin-bottom: 6px;
+  }
+  .cp-chars { display: flex; flex-wrap: wrap; gap: 4px; }
+  .cp-ch {
+    min-width: 30px; height: 30px; padding: 0 7px;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: var(--bg-soft); cursor: pointer;
+    font-size: 14px; font-family: var(--mono); color: var(--text);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .cp-ch:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-2); }
+  #supBtn, #subBtn { font-family: var(--mono); font-size: 13px; }
+
   .save-bar {
     position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px; flex-wrap: wrap;
     background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
@@ -643,6 +669,11 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M15 14l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 9H9a5 5 0 0 0 0 10h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Redo
             </button>
+            <span class="sep"></span>
+            <button class="btn btn-ghost btn-sm" id="supBtn" type="button" title="Turn the selected characters into superscript (2 → ²)">x²</button>
+            <button class="btn btn-ghost btn-sm" id="subBtn" type="button" title="Turn the selected characters into subscript (2 → ₂)">x₂</button>
+            <button class="btn btn-ghost btn-sm" id="charBtn" type="button" title="Insert an SI unit or special character">Ω Symbols</button>
+            <div class="char-palette" id="charPalette"></div>
           </div>
         </div>
 
@@ -1168,6 +1199,95 @@
     window.addEventListener('beforeunload', (e) => {
       if (colorSaveTimer) { e.preventDefault(); e.returnValue = ''; }
     });
+
+
+    // ── SI units, symbols, super/subscript ──────────────────────────────
+    // Everything is inserted as real Unicode rather than markup: the stored
+    // value stays a plain string, so it publishes, searches, sorts and copies
+    // correctly, and renders the same in the table, the PDF-facing data and
+    // anywhere else the value is reused.
+    const SUP_MAP = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹',
+                      '+':'⁺','-':'⁻','=':'⁼','(':'⁽',')':'⁾','n':'ⁿ','i':'ⁱ' };
+    const SUB_MAP = { '0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉',
+                      '+':'₊','-':'₋','=':'₌','(':'₍',')':'₎' };
+    // Reverse maps let the buttons toggle: pressing x² on an already-superscript
+    // selection returns it to normal instead of doing nothing.
+    const UNSUP = Object.fromEntries(Object.entries(SUP_MAP).map(([k, v]) => [v, k]));
+    const UNSUB = Object.fromEntries(Object.entries(SUB_MAP).map(([k, v]) => [v, k]));
+
+    const CHAR_GROUPS = [
+      ['Units',      ['Ω','µ','°','℃','Å','·','×','÷','′','″','Ø','⌀','λ','ρ','Φ','α','β','γ','Δ','π']],
+      ['Maths',      ['±','≤','≥','≈','≠','∞','√','∑','‰','%','⁻¹','½','¼','¾','⅓','≅','∅','→','←','↔']],
+      ['Superscript',['⁰','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁺','⁻','ⁿ']],
+      ['Subscript',  ['₀','₁','₂','₃','₄','₅','₆','₇','₈','₉','₊','₋']],
+      ['Common',     ['mm²','mm³','m²','Ω/km','µF/km','kg/km','°C','A/mm²','N/mm²','kV','MΩ','–','—','•','✓']],
+    ];
+
+    // The palette must act on whatever field the user last had focus in, since
+    // clicking a palette button necessarily moves focus off that field.
+    let lastField = null;
+    document.addEventListener('focusin', e => {
+      const t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA') && t.type !== 'file' && !t.closest('.series-search')) {
+        lastField = t;
+      }
+    });
+
+    // Write through the native value setter so frameworks/listeners that watch
+    // the property still see the change, then fire `input` so autosave runs.
+    function setFieldValue(el, value, selStart, selEnd) {
+      const proto = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+      const setter = Object.getOwnPropertyDescriptor(proto, 'value').set;
+      setter.call(el, value);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.focus();
+      if (selStart != null) el.setSelectionRange(selStart, selEnd == null ? selStart : selEnd);
+    }
+
+    function insertAtCaret(text) {
+      const el = lastField;
+      if (!el) { alert('Click into a cell or text box first, then insert the character.'); return; }
+      const s = el.selectionStart ?? el.value.length;
+      const e = el.selectionEnd ?? s;
+      setFieldValue(el, el.value.slice(0, s) + text + el.value.slice(e), s + text.length);
+    }
+
+    function transformSelection(map, unmap) {
+      const el = lastField;
+      if (!el) { alert('Select the characters you want to convert first.'); return; }
+      const s = el.selectionStart, e = el.selectionEnd;
+      if (s == null || s === e) { alert('Select the characters to convert (e.g. the 2 in "mm2").'); return; }
+      const chunk = el.value.slice(s, e);
+      // Already converted? Toggle back rather than no-op.
+      const isConverted = [...chunk].every(c => unmap[c]);
+      const out = [...chunk].map(c => (isConverted ? unmap[c] : (map[c] || c))).join('');
+      setFieldValue(el, el.value.slice(0, s) + out + el.value.slice(e), s, s + out.length);
+    }
+
+    document.getElementById('supBtn').addEventListener('click', () => transformSelection(SUP_MAP, UNSUP));
+    document.getElementById('subBtn').addEventListener('click', () => transformSelection(SUB_MAP, UNSUB));
+
+    const charPop = document.getElementById('charPalette');
+    charPop.innerHTML = CHAR_GROUPS.map(([title, chars]) => `
+      <div class="cp-group">
+        <div class="cp-title">${title}</div>
+        <div class="cp-chars">${chars.map(c => `<button type="button" class="cp-ch" data-ch="${escapeAttr(c)}">${escapeHtml(c)}</button>`).join('')}</div>
+      </div>`).join('');
+    charPop.addEventListener('click', e => {
+      const b = e.target.closest('[data-ch]');
+      if (b) insertAtCaret(b.dataset.ch);
+    });
+    // mousedown default would blur the field before we can read its selection
+    charPop.addEventListener('mousedown', e => e.preventDefault());
+    document.getElementById('charBtn').addEventListener('mousedown', e => e.preventDefault());
+    document.getElementById('charBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      charPop.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if (!charPop.contains(e.target)) charPop.classList.remove('open');
+    });
+
     if (familyId) load();
   </script>
 </body>
