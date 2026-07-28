@@ -786,6 +786,7 @@
         renderEditor();
         saveSeries(s);
       });
+      bindCharPalette();
       document.getElementById('addColBtn').addEventListener('click', () => {
         const name = prompt('Column name?');
         if (!name) return;
@@ -1264,28 +1265,44 @@
       setFieldValue(el, el.value.slice(0, s) + out + el.value.slice(e), s, s + out.length);
     }
 
-    document.getElementById('supBtn').addEventListener('click', () => transformSelection(SUP_MAP, UNSUP));
-    document.getElementById('subBtn').addEventListener('click', () => transformSelection(SUB_MAP, UNSUB));
-
-    const charPop = document.getElementById('charPalette');
-    charPop.innerHTML = CHAR_GROUPS.map(([title, chars]) => `
+    // Palette markup is static (doesn't depend on series data), so it's built
+    // once here and re-attached by bindCharPalette() on every renderEditor()
+    // call -- the toolbar itself is part of the per-series template and gets
+    // torn down and recreated each time a type is selected.
+    const charPaletteHTML = CHAR_GROUPS.map(([title, chars]) => `
       <div class="cp-group">
         <div class="cp-title">${title}</div>
         <div class="cp-chars">${chars.map(c => `<button type="button" class="cp-ch" data-ch="${escapeAttr(c)}">${escapeHtml(c)}</button>`).join('')}</div>
       </div>`).join('');
-    charPop.addEventListener('click', e => {
-      const b = e.target.closest('[data-ch]');
-      if (b) insertAtCaret(b.dataset.ch);
-    });
-    // mousedown default would blur the field before we can read its selection
-    charPop.addEventListener('mousedown', e => e.preventDefault());
-    document.getElementById('charBtn').addEventListener('mousedown', e => e.preventDefault());
-    document.getElementById('charBtn').addEventListener('click', e => {
-      e.stopPropagation();
-      charPop.classList.toggle('open');
-    });
+
+    function bindCharPalette() {
+      const supBtn = document.getElementById('supBtn');
+      const subBtn = document.getElementById('subBtn');
+      const charBtn = document.getElementById('charBtn');
+      const charPop = document.getElementById('charPalette');
+      if (!supBtn || !subBtn || !charBtn || !charPop) return; // no series selected yet
+
+      supBtn.addEventListener('click', () => transformSelection(SUP_MAP, UNSUP));
+      subBtn.addEventListener('click', () => transformSelection(SUB_MAP, UNSUB));
+
+      charPop.innerHTML = charPaletteHTML;
+      charPop.addEventListener('click', e => {
+        const b = e.target.closest('[data-ch]');
+        if (b) insertAtCaret(b.dataset.ch);
+      });
+      // mousedown default would blur the field before we can read its selection
+      charPop.addEventListener('mousedown', e => e.preventDefault());
+      charBtn.addEventListener('mousedown', e => e.preventDefault());
+      charBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        charPop.classList.toggle('open');
+      });
+    }
+    // Closing the popover on an outside click is page-level and only needs
+    // binding once, unlike the buttons above which are recreated per render.
     document.addEventListener('click', e => {
-      if (!charPop.contains(e.target)) charPop.classList.remove('open');
+      const charPop = document.getElementById('charPalette');
+      if (charPop && !charPop.contains(e.target) && e.target.id !== 'charBtn') charPop.classList.remove('open');
     });
 
     if (familyId) load();
