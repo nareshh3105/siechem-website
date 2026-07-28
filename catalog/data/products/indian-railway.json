@@ -3,7 +3,7 @@
     {
       "id": "9a99b436c1",
       "family": "indian-railway",
-      "name": "1.8/3.0kV 300 Sq.mm EBXL - HR 120ºC Cable",
+      "name": "Single Core above 750V and up to 1.8/3kV Thin-Walled Flexible EBXL Cables for Electric Locomotives",
       "headers": [
         "Part Number",
         "Nominal Cross Sectional Area of Core",
@@ -160,25 +160,25 @@
           "Resistant to mineral oil, diesel, etc."
         ],
         "technical": [
-          "Temperature range : Operating temp. :-40ºC to +120ºC. High insualtion resistance at elevated temp.",
-          "Rated voltage : Above 750V upto 1.8/3kV",
-          "Short circuit temperature : +280ºC.",
-          "Test voltage : 6kV for 15 mins.",
-          "Min. bending radius : 3 x D for cable dia <10mm 5 x D for cable dia >10mm",
-          "Insulation resistance constant ( at room temp) : K ≥ 12000 MΩ.Km",
-          "Specification : ELRS / SPEC / ELC / 0019 Rev 2."
+          "Temperature range: Operating temperature: -40ºC to +120ºC. High insulation resistance at elevated temp.",
+          "Rated voltage: Above 750V up to 1.8/3kV",
+          "Short circuit temperature: +280ºC.",
+          "Test voltage: 6kV for 15 mins.",
+          "Min. bending radius: 3 x D for cable diameter <10mm",
+          "5 x D for cable diameter >10mm",
+          "Insulation resistance constant (at room temp): K ≥ 12000 MΩ.Km",
+          "Specification: ELRS / SPEC / ELC / 0019 Rev 2."
         ],
         "application": [
           "Thin walled flexible EBXL cables for tap changer of electric locomotives, AC/DC EMU, BG, AC EMU & MEMU coaching stock."
         ],
         "construction": [
-          "Conductor : Annealed Tinned Flexible",
-          "Copper Conductor",
-          "Insulation : EBXL - EPDM 120ºC (Dual layer)",
-          "Outersheath : Electron Beam Cross Linked",
-          "Polyolefin."
+          "Conductor: Annealed Tinned Flexible Copper Conductor",
+          "Insulation: EBXL - EPDM 120ºC (Dual layer)",
+          "Outer sheath: Electron Beam Cross Linked Polyolefin."
         ]
-      }
+      },
+      "colorNote": "We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog"
     },
     {
       "id": "33d65edf50",
