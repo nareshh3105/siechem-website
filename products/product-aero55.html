@@ -470,6 +470,7 @@
       if (filters.spc    !== 'all' && !t.spc) return false;
       return true;
     });
+    visible.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
     renderCards(visible);
     document.getElementById('resultCount').textContent =
       `${visible.length} of ${TYPES.length} product famil${visible.length === 1 ? 'y' : 'ies'} shown`;

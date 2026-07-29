@@ -286,16 +286,12 @@
     /* 3D product render under the page title. Spans the full content width so
        it lines up with the title above and the info cards below; height simply
        follows the image's own aspect ratio. Hidden when there's no 3D image. */
-    .hero-3d { margin: 22px 0 0; width: 100%; }
-    .hero-3d img {
-      display: block; width: 100%; height: auto;
-      /* Cable renders are wide and short, so full-width costs them nothing.
-         The cap only bites if someone uploads a portrait/square image, which
-         at full width would otherwise be ~1600px tall and push the whole page
-         down; object-fit keeps that case letterboxed rather than stretched. */
-      max-height: 420px; object-fit: contain; object-position: left center;
-    }
-    @media (max-width: 700px) { .hero-3d { margin-top: 16px; } }
+.hero-3d { margin: 20px 0 0; width: 100%; text-align: left center; }
+.hero-3d img {
+  display: inline-block; width: auto; max-width: 500px; height: auto;
+  max-height: 400px; object-fit: contain;
+}
+    @media (max-width: 500px) { .hero-3d { margin-top: 16px; } }
     .color-note {
       padding: 12px 16px; background: var(--bg-soft); border: 1px solid var(--border);
       border-radius: 8px; font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
@@ -307,7 +303,6 @@
       font-family: var(--mono); font-weight: 600; color: var(--text-muted);
       border: 1px solid var(--border); background: #fff;
     }
-    .color-chip-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); flex-shrink: 0; }
 
     /* ── Quote Modal ─────────────────────────── */
     .quote-overlay {
@@ -874,21 +869,6 @@
     renderColorCode();
   }
 
-  // Approximate swatch colours for the standard Siechem colour-code names.
-  // Anything admin-added that isn't in this list falls back to a neutral
-  // grey dot -- the name/code text is still shown correctly either way.
-  const COLOR_HEX = {
-    'red': '#E53E3E', 'yellow': '#ECC94B', 'blue': '#3182CE', 'black': '#1A202C',
-    'green': '#38A169', 'yellow-green': '#9ACD32', 'grey': '#718096', 'gray': '#718096',
-    'brown': '#744210', 'white': '#F7FAFC', 'orange': '#DD6B20', 'violet': '#553C9A',
-    'chocolate': '#5A3825', 'tan': '#D2B48C', 'charcoal': '#36454F',
-    'lt blue': '#7EC8E3', 'light blue': '#7EC8E3', 'dk grey': '#4A5568', 'dark grey': '#4A5568',
-    'lt green': '#90D48A', 'light green': '#90D48A', 'dk green': '#1F5C33', 'dark green': '#1F5C33',
-    'dk blue': '#1A365D', 'dark blue': '#1A365D', 'purple': '#6B21A8', 'pink': '#ED64A6'
-  };
-  function colorHex(name) {
-    return COLOR_HEX[String(name || '').trim().toLowerCase()] || '#CBD5E0';
-  }
 
   // Wording used when neither the series nor the family defines a note, so a
   // family that has never been edited still reads exactly as it always has.
@@ -903,8 +883,7 @@
     const noteText = (S && S.colorNote) || (FAM && FAM.colorNote) || DEFAULT_COLOR_NOTE;
     document.getElementById('colorNoteText').textContent = noteText;
     document.getElementById('colorChips').innerHTML = colors.map(c =>
-      '<span class="color-chip"><span class="color-chip-dot" style="background:' + colorHex(c.name) + ';"></span>' +
-      esc(c.name) + (c.code ? ' – ' + esc(c.code) : '') + '</span>'
+      '<span class="color-chip">' + esc(c.name) + (c.code ? ' – ' + esc(c.code) : '') + '</span>'
     ).join('');
     note.style.display = '';
   }

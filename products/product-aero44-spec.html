@@ -166,7 +166,6 @@
       font-family: var(--mono); font-weight: 600; color: var(--text-muted);
       border: 1px solid var(--border); background: #fff;
     }
-    .color-chip-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); flex-shrink: 0; }
 
     /* ── Badges ──────────────────────────────────── */
     .badge {
@@ -851,7 +850,7 @@
 
     /* ── Colour chips ─────────────────────────────── */
     const colorChips = COLOURS.map(c =>
-      `<span class="color-chip"><span class="color-chip-dot" style="background:${c.hex};"></span>${c.name} (${c.code})</span>`
+      `<span class="color-chip">${c.name} (${c.code})</span>`
     ).join('');
 
     /* ── Render spec content ──────────────────────── */

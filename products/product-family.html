@@ -243,7 +243,6 @@
       font-family: var(--mono); font-weight: 600; color: var(--text-muted);
       border: 1px solid var(--border); background: #fff;
     }
-    .color-chip-dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.12); flex-shrink: 0; }
 
     /* ── Quote Modal ─────────────────────────── */
     .quote-overlay {
@@ -767,6 +766,10 @@
       if (searchTerm && !(s.display + ' ' + (s.name || '')).toLowerCase().includes(searchTerm)) return false;
       return true;
     });
+    // Alphabetical by the same title shown on the card, so ordering matches
+    // what the customer reads rather than PDF/catalogue order. Numeric-aware
+    // so "AERO 44 2500V" sorts before "AERO 44 10000V", not after it.
+    visible.sort((a, b) => a.display.localeCompare(b.display, undefined, { numeric: true, sensitivity: 'base' }));
     renderCards(visible);
     document.getElementById('resultCount').textContent =
       visible.length + ' of ' + SERIES.length + ' variant' + (SERIES.length === 1 ? '' : 's') + ' shown';
