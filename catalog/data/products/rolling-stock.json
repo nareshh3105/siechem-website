@@ -530,12 +530,31 @@
       ],
       "catalogueNo": "A547",
       "info": {
+        "features": [
+          "Maintains circuit integrity for 3 hours under fire condition.",
+          "High temperature resistance for use -40°C up to +120°C",
+          "Advance performance halogen free",
+          "Oil and fuel resistance",
+          "Electron beam cross-linked",
+          "Halogen free",
+          "Fire resistance"
+        ],
         "application": [
           "For protected installation inside & outside of rail vehicles and buses.",
-          "These cables also maintain their function over a limited period in the event of a fire and are suitable",
-          "for connecting fixed and moving parts such as",
+          "These cables also maintain their function over a limited period in the event of a fire and are suitable for connecting fixed and moving parts such as",
           "emergency lamps, flue gas outlets and switchgear.",
-          "ü Fire Survival applications."
+          "Fire Survival applications."
+        ],
+        "construction": [
+          "Conductor : Annealed Tinned Flexible Copper Conductor",
+          "Flame Barrier : Phlogopite Tape",
+          "Insulation : Electron Beam Cross Linked Polyolefin Copolymer (EI 109 acc. to EN 50264-1& EN 50306-1)",
+          "Insulation Colour : Grey Core with Number Printing",
+          "ü Flame Barrier : Phlogopite Tape",
+          "Shielding : Annealed Tinned Copper",
+          "Flame Barrier : Phlogopite Tape",
+          "Outer Sheath : Electron Beam Cross Linked Elastomer Compound (EM 104 acc. to EN 50264-1& EN 50306-1)",
+          "Sheath Colour : Black"
         ]
       }
     },
