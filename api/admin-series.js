@@ -50,6 +50,7 @@ module.exports = async function handler(req, res) {
     // go through /api/admin-image, and omitting the key here means a plain
     // field edit never accidentally wipes out an already-attached image.
     if ('image_2d' in body) row.image_2d = body.image_2d || null;
+    if ('image_3d' in body) row.image_3d = body.image_3d || null;
     // Parent-column labels, one per leaf column. Normalised to the same length
     // as headers so a stale/short array can never misalign the merge runs.
     if ('header_groups' in body) {

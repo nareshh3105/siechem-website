@@ -1,14 +1,26 @@
-// /api/admin-image — upload or remove a series' 2D product image.
-//   POST   { family, id, mime, base64 }  -> uploads to Supabase Storage,
-//                                           stores the public URL on admin_series.image_2d
-//   DELETE { family, id }                -> removes the stored file and clears image_2d
+// /api/admin-image — upload or remove a series' product image.
+//   POST   { family, id, mime, base64, kind? }  -> uploads to Supabase Storage,
+//                                                  stores the public URL on
+//                                                  admin_series.image_2d/image_3d
+//   DELETE { family, id, kind? }                -> removes the file and clears the column
 //
-// Storage path is always <family>/<id>.<ext> (upsert) so the public URL for a
-// given series never changes across re-uploads -- only its content does.
+// `kind` is '2d' (default) or '3d'. It defaults to '2d' so the original
+// callers keep working unchanged.
+//
+// Storage path is <family>/<id>.<ext> for 2D and <family>/<id>-3d.<ext> for 3D
+// (upsert), so the public URL for a given series+kind never changes across
+// re-uploads -- only its content does.
 const { requireAdmin } = require('./_lib/adminAuth');
 const { supabaseAdmin } = require('./_lib/supabaseAdmin');
 
 const BUCKET = 'product-images';
+// Maps the requested kind onto its DB column and storage-path suffix. Anything
+// not in here is rejected rather than silently treated as 2D, so a typo can't
+// overwrite the wrong image.
+const KINDS = {
+  '2d': { column: 'image_2d', suffix: '' },
+  '3d': { column: 'image_3d', suffix: '-3d' },
+};
 // Vercel serverless functions cap the request body around ~4.5MB, and
 // base64 inflates a file by ~33% -- a "4MB" raw file becomes a ~5.3MB JSON
 // body and gets rejected before this handler ever runs. Cap well under that.
@@ -25,6 +37,9 @@ module.exports = async function handler(req, res) {
 
   if (req.method === 'POST') {
     const { family, id, mime, base64 } = req.body || {};
+    const kind = String((req.body || {}).kind || '2d').toLowerCase();
+    const spec = KINDS[kind];
+    if (!spec) return res.status(400).json({ error: 'kind must be "2d" or "3d"' });
     if (!family || !id || !mime || !base64) {
       return res.status(400).json({ error: 'family, id, mime and base64 are required' });
     }
@@ -40,7 +55,7 @@ module.exports = async function handler(req, res) {
     if (!buf.length) return res.status(400).json({ error: 'Empty file' });
     if (buf.length > MAX_BYTES) return res.status(400).json({ error: 'Image exceeds 2.5MB limit — please compress or resize it first' });
 
-    const path = `${family}/${id}.${ext}`;
+    const path = `${family}/${id}${spec.suffix}.${ext}`;
     const { error: upErr } = await db.storage.from(BUCKET).upload(path, buf, {
       contentType: mime, upsert: true
     });
@@ -49,35 +64,38 @@ module.exports = async function handler(req, res) {
     // Clean up a stale file from a previous upload under a different extension
     // (e.g. re-uploading a JPG over an existing PNG) so orphans don't accumulate.
     const otherExts = Object.values(MIME_EXT).filter(e => e !== ext);
-    const stalePaths = otherExts.map(e => `${family}/${id}.${e}`);
+    const stalePaths = otherExts.map(e => `${family}/${id}${spec.suffix}.${e}`);
     await db.storage.from(BUCKET).remove(stalePaths).catch(() => {});
 
     const { data: pub } = db.storage.from(BUCKET).getPublicUrl(path);
     const url = pub.publicUrl + '?v=' + Date.now();
 
     const { error: dbErr } = await db.from('admin_series')
-      .update({ image_2d: url, updated_at: new Date().toISOString() })
+      .update({ [spec.column]: url, updated_at: new Date().toISOString() })
       .eq('family_id', family).eq('id', id);
     if (dbErr) return res.status(500).json({ error: dbErr.message });
 
-    await logAudit(db, 'upload_image', family, id, { path });
-    return res.status(200).json({ success: true, url });
+    await logAudit(db, 'upload_image', family, id, { path, kind });
+    return res.status(200).json({ success: true, url, kind });
   }
 
   if (req.method === 'DELETE') {
     const { family, id } = req.body || {};
+    const kind = String((req.body || {}).kind || '2d').toLowerCase();
+    const spec = KINDS[kind];
+    if (!spec) return res.status(400).json({ error: 'kind must be "2d" or "3d"' });
     if (!family || !id) return res.status(400).json({ error: 'family and id are required' });
 
-    const paths = Object.values(MIME_EXT).map(e => `${family}/${id}.${e}`);
+    const paths = Object.values(MIME_EXT).map(e => `${family}/${id}${spec.suffix}.${e}`);
     await db.storage.from(BUCKET).remove(paths).catch(() => {});
 
     const { error: dbErr } = await db.from('admin_series')
-      .update({ image_2d: null, updated_at: new Date().toISOString() })
+      .update({ [spec.column]: null, updated_at: new Date().toISOString() })
       .eq('family_id', family).eq('id', id);
     if (dbErr) return res.status(500).json({ error: dbErr.message });
 
-    await logAudit(db, 'remove_image', family, id, null);
-    return res.status(200).json({ success: true });
+    await logAudit(db, 'remove_image', family, id, { kind });
+    return res.status(200).json({ success: true, kind });
   }
 
   return res.status(405).json({ error: 'Method not allowed' });

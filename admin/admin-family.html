@@ -454,7 +454,7 @@
       try {
         await SiechemAdmin.api('/api/admin-series', {
           method: s._isNew ? 'POST' : 'PUT',
-          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null, color_note: s.color_note || '', header_groups: Array.isArray(s.header_groups) ? s.header_groups : [] })
+          body: JSON.stringify({ family: familyId, id: s.id, name: s.name, headers: s.headers, rows: s.rows, info: s.info, image_2d: s.image_2d || null, image_3d: s.image_3d || null, color_note: s.color_note || '', header_groups: Array.isArray(s.header_groups) ? s.header_groups : [] })
         });
         s._isNew = false;
         setSaveStatus('saved', 'Saved automatically · Publish on the dashboard to go live');
@@ -614,6 +614,30 @@
               <span id="imageUploadStatus" class="image-upload-status"></span>
             </div>
           </div>
+        </div>
+
+        <div class="card-section">
+          <div class="card-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 7l9 5 9-5M12 12v10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            3D Product Image
+          </div>
+          <div class="image-uploader">
+            <div class="image-preview" id="image3dPreview">
+              ${s.image_3d
+                ? `<img src="${escapeAttr(s.image_3d)}" alt="">`
+                : `<span class="image-preview-empty">No image</span>`}
+            </div>
+            <div class="image-uploader-actions">
+              <input type="file" id="image3dFileInput" accept="image/png,image/jpeg,image/webp" style="display:none;">
+              <button class="btn btn-ghost btn-sm" id="image3dUploadBtn" type="button">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 16V4M12 4l-5 5M12 4l5 5M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                ${s.image_3d ? 'Replace Image' : 'Upload Image'}
+              </button>
+              <button class="btn btn-danger-ghost btn-sm" id="image3dRemoveBtn" type="button" style="${s.image_3d ? '' : 'display:none;'}">Remove</button>
+              <span id="image3dUploadStatus" class="image-upload-status"></span>
+            </div>
+          </div>
+          <div class="cc-note-hint">Shown on the public product page, directly under the product name.</div>
         </div>
 
         <div class="card-section">
@@ -950,6 +974,57 @@
           renderEditor();
         } catch (err) {
           setImageStatus('error', 'Remove failed: ' + err.message);
+        }
+      });
+
+      // ── 3D product image ──────────────────────────────────────────
+      // Same flow as the 2D uploader above, but tagged kind:'3d' so it lands
+      // in its own storage path and column and can't overwrite the 2D render.
+      const set3dStatus = (cls, text) => {
+        const el = document.getElementById('image3dUploadStatus');
+        if (!el) return;
+        el.className = 'image-upload-status' + (cls ? ' ' + cls : '');
+        el.textContent = text;
+      };
+      document.getElementById('image3dUploadBtn').addEventListener('click', () => {
+        if (s._isNew) { alert('Save this type first (it needs to exist in the catalogue before you can attach an image), then upload.'); return; }
+        document.getElementById('image3dFileInput').click();
+      });
+      document.getElementById('image3dFileInput').addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        e.target.value = '';
+        if (!file) return;
+        const okTypes = ['image/png', 'image/jpeg', 'image/webp'];
+        if (!okTypes.includes(file.type)) {
+          set3dStatus('error', 'Unsupported file type.');
+          alert('Please choose a PNG, JPG or WebP image.');
+          return;
+        }
+        set3dStatus('', 'Preparing…');
+        try {
+          const { mime, base64 } = await prepareImageForUpload(file);
+          set3dStatus('', 'Uploading…');
+          const res = await SiechemAdmin.api('/api/admin-image', {
+            method: 'POST',
+            body: JSON.stringify({ family: familyId, id: s.id, mime, base64, kind: '3d' })
+          });
+          s.image_3d = res.url;
+          renderEditor();
+        } catch (err) {
+          set3dStatus('error', 'Upload failed');
+          alert('3D image upload failed: ' + err.message);
+        }
+      });
+      const remove3dBtn = document.getElementById('image3dRemoveBtn');
+      if (remove3dBtn) remove3dBtn.addEventListener('click', async () => {
+        if (!confirm('Remove this 3D image?')) return;
+        set3dStatus('', 'Removing…');
+        try {
+          await SiechemAdmin.api('/api/admin-image', { method: 'DELETE', body: JSON.stringify({ family: familyId, id: s.id, kind: '3d' }) });
+          s.image_3d = null;
+          renderEditor();
+        } catch (err) {
+          set3dStatus('error', 'Remove failed: ' + err.message);
         }
       });
     }
