@@ -7000,7 +7000,9 @@
           "Colour : As per customer order.",
           "Single core"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/4d15d0157f.png?v=1785321312564",
+      "image3d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/4d15d0157f-3d.png?v=1785321325807"
     },
     {
       "id": "a7dbd7f7ff",
