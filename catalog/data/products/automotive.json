@@ -8936,24 +8936,11 @@
         "Insulation Wall Thickness Nom.",
         "Cable — Overall Diameter Max.",
         "Weigh Appro",
-        "Current t Carrying x. Capacity",
-        "Max. Conductor Resistance at 200 C",
+        "Current Carrying Capacity",
+        "Max. Conductor Resistance at 20°C",
         "Standard Length*"
       ],
       "rows": [
-        [
-          "",
-          "mm2",
-          "nos.",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Amps",
-          "Ω/km",
-          "mtrs"
-        ],
         [
           "A87005XX",
           "0.35",
@@ -13606,7 +13593,8 @@
           "Colour : As per customer order",
           "Single core"
         ]
-      }
+      },
+      "image2d": "https://fihlhaqxpiobwfotxsxs.supabase.co/storage/v1/object/public/product-images/automotive/6571957cd1.png?v=1785305991434"
     },
     {
       "id": "4aaca78539",
