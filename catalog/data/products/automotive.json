@@ -9806,12 +9806,12 @@
         "Part Number",
         "Conductor Construction — Nominal Cross- Section mm2",
         "No. of Strands Nos.",
-        "Diameter of Single wire Max. mm",
-        "Conductor Diameter Max. mm",
+        "Diameter of Single wire Max mm",
+        "Conductor Diameter Max mm",
         "Insulation Wall Thickness Nom. mm",
-        "Overall Diameter — Min. mm",
-        "Overall  DiameterMax. mm",
-        "Weight Approx. kg/km",
+        "Overall Diameter — Min mm",
+        "Overall  DiameterMax. mm mm",
+        "Weight Approx. kg/km kg/km",
         "Max. Conductor Resistance at 20°C Ω/km",
         "Current Rating at 40°C Amps"
       ],
@@ -10062,19 +10062,6 @@
           "360",
           "0.527",
           "200"
-        ],
-        [
-          "C24802XX*",
-          "0.22",
-          "7",
-          "0.21",
-          "0.7",
-          "0.20",
-          "1.1",
-          "1.2",
-          "4",
-          "84.8",
-          "9"
         ]
       ],
       "catalogueNo": "C",
