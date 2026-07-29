@@ -62,13 +62,20 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
       justify-content: center;
+      /* Default grid behaviour stretches every card in a row to match the
+         tallest one, so a card with fewer badges/specs still shows a big
+         empty gap above its footer. align-items:start lets each card size to
+         its own content -- a card only gets taller than its neighbours when
+         its own content actually needs the room (e.g. badges wrapping to a
+         second line), not because something else in the row is taller. */
+      align-items: start;
       gap: 24px;
     }
     @media (max-width: 700px) { .prod-grid { grid-template-columns: 1fr; } }
 
     .prod-card {
       display: flex; flex-direction: column; gap: 0;
-      width: 100%; max-width: 320px; min-height: 480px;
+      width: 100%; max-width: 320px;
       margin: 0 auto;
       background: var(--bg-card); border: 1.5px solid var(--border);
       border-radius: var(--radius-lg); overflow: hidden;
