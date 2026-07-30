@@ -235,7 +235,7 @@
   }
   table.spec-table th button.col-del:hover { color: #B91C1C; background: #FEF2F2; }
 
-  .table-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; }
+  .table-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; row-gap: 8px; }
   .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
   .table-actions .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .table-actions .sep { width: 1px; align-self: stretch; background: var(--border); margin: 0 2px; }
@@ -334,6 +334,19 @@
   }
   .colorcode-chip button:hover { color: #B91C1C; background: #FEF2F2; }
   .colorcode-empty { font-size: 13px; color: var(--text-dim); margin-bottom: 14px; }
+  /* ── Mobile tap targets ────────────────────────────────────────────
+     Column/row tool clusters (‹ + › ×, ↑ + ↓ ×) and the colour chip's
+     remove button are normally kept tiny so they don't force headers/chips
+     wider than their content, but at that size they're very hard to hit
+     with a finger. Placed last so it wins ties against the equal-specificity
+     base rules declared earlier regardless of future edits above. */
+  @media (max-width: 700px) {
+    .col-tools { gap: 3px; margin-bottom: 4px; }
+    .col-tools button { padding: 6px 6px; font-size: 13px; }
+    table.spec-table td.row-actions button { padding: 9px; font-size: 18px; }
+    table.spec-table td.row-actions, table.spec-table th.col-actions { width: 42px; }
+    .colorcode-chip button { padding: 5px 6px; font-size: 16px; }
+  }
 </style>
 </head>
 <body>
