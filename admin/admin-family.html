@@ -883,8 +883,11 @@
           name: (s.name || 'Untitled') + ' (Copy)',
           headers: s.headers.slice(),
           rows: s.rows.map(r => r.slice()),
+          header_groups: Array.isArray(s.header_groups) ? s.header_groups.slice() : [],
           info: s.info ? JSON.parse(JSON.stringify(s.info)) : null,
           image_2d: s.image_2d || null,
+          image_3d: s.image_3d || null,
+          color_note: s.color_note || '',
           _isNew: true
         };
         seriesData.push(dup);
