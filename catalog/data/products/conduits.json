@@ -1,124 +1,9 @@
 {
   "series": [
     {
-      "id": "2a074c47f6",
-      "family": "conduits",
-      "name": "Auto 150 Class D Rohs",
-      "headers": [
-        "RDSO/PE/SPEC/ 0138 - 2009 (REV-1)",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
-      "rows": [
-        [
-          "PALD0407",
-          "NW07",
-          "6.4 ± 0.3",
-          "10.0 ± 0.2",
-          "-",
-          "25",
-          "-"
-        ],
-        [
-          "PALD0410",
-          "NW10",
-          "9.4 ± 0.3",
-          "13.0 ± 0.2",
-          "A -1",
-          "30",
-          "1"
-        ],
-        [
-          "PALD0412",
-          "NW12",
-          "11.8 ± 0.3",
-          "15.8 ± 0.2",
-          "A -1",
-          "40",
-          "2"
-        ],
-        [
-          "PAMD0417",
-          "NW17",
-          "16.5 ± 0.3",
-          "21.2 ± 0.2",
-          "A -1",
-          "60",
-          "3"
-        ],
-        [
-          "PAMD0423",
-          "NW23",
-          "22.5 ± 0.4",
-          "28.5 ± 0.2",
-          "A -1",
-          "75",
-          "4"
-        ],
-        [
-          "PAMD0429",
-          "NW29",
-          "28.5 ± 0.4",
-          "34.4 ± 0.2",
-          "A -1",
-          "96",
-          "5"
-        ],
-        [
-          "PAMD0436",
-          "NW36",
-          "35.4 ± 0.4",
-          "42.4 ± 0.2",
-          "A -1",
-          "160",
-          "6"
-        ],
-        [
-          "PAMD0448",
-          "NW48",
-          "48.0 ± 0.4",
-          "54.4 ± 0.2",
-          "A -1",
-          "200",
-          "7"
-        ],
-        [
-          "PAMD0456",
-          "NW56",
-          "56.0 ± 0.5",
-          "67.2 ± 0.2",
-          "A -1",
-          "252",
-          "8"
-        ],
-        [
-          "PAMD0470",
-          "NW70",
-          "70.0 ± 0.5",
-          "80.0 ± 0.2",
-          "A -1",
-          "300",
-          "9"
-        ],
-        [
-          "PAMD0495",
-          "NW95",
-          "95.0 ± 0.5",
-          "106.0 ± 0.2",
-          "A -1",
-          "400",
-          "10"
-        ]
-      ]
-    },
-    {
       "id": "6eaadd4038",
       "family": "conduits",
-      "name": "Wires & Cables",
+      "name": "STRAIGHT PG METAL THREAD END FITTINGS ",
       "headers": [
         "RDSO/PE/SPEC/0138 - 2009 (REV-1)",
         "",
@@ -308,6 +193,116 @@
           "8"
         ]
       ]
+    },
+    {
+      "id": "2a074c47f6",
+      "family": "conduits",
+      "name": " FLEXIBLE POLYAMIDE CORRUGATED CONDUITS",
+      "headers": [
+        "SIECHEM Part Number",
+        "NW NOMINAL\nSIZE",
+        "DIM ID (mm)",
+        "SIM OD (mm)",
+        "Table No.",
+        "Bending Radius (mm)"
+      ],
+      "rows": [
+        [
+          "PALD0407",
+          "NW07",
+          "6.4 ± 0.3",
+          "10.0 ± 0.2",
+          "-",
+          "25"
+        ],
+        [
+          "PALD0410",
+          "NW10",
+          "9.4 ± 0.3",
+          "13.0 ± 0.2",
+          "A -1",
+          "30"
+        ],
+        [
+          "PALD0412",
+          "NW12",
+          "11.8 ± 0.3",
+          "15.8 ± 0.2",
+          "A -1",
+          "40"
+        ],
+        [
+          "PAMD0417",
+          "NW17",
+          "16.5 ± 0.3",
+          "21.2 ± 0.2",
+          "A -1",
+          "60"
+        ],
+        [
+          "PAMD0423",
+          "NW23",
+          "22.5 ± 0.4",
+          "28.5 ± 0.2",
+          "A -1",
+          "75"
+        ],
+        [
+          "PAMD0429",
+          "NW29",
+          "28.5 ± 0.4",
+          "34.4 ± 0.2",
+          "A -1",
+          "96"
+        ],
+        [
+          "PAMD0436",
+          "NW36",
+          "35.4 ± 0.4",
+          "42.4 ± 0.2",
+          "A -1",
+          "160"
+        ],
+        [
+          "PAMD0448",
+          "NW48",
+          "48.0 ± 0.4",
+          "54.4 ± 0.2",
+          "A -1",
+          "200"
+        ],
+        [
+          "PAMD0456",
+          "NW56",
+          "56.0 ± 0.5",
+          "67.2 ± 0.2",
+          "A -1",
+          "252"
+        ],
+        [
+          "PAMD0470",
+          "NW70",
+          "70.0 ± 0.5",
+          "80.0 ± 0.2",
+          "A -1",
+          "300"
+        ],
+        [
+          "PAMD0495",
+          "NW95",
+          "95.0 ± 0.5",
+          "106.0 ± 0.2",
+          "A -1",
+          "400"
+        ]
+      ],
+      "info": {
+        "features": [],
+        "technical": [],
+        "application": [],
+        "construction": []
+      },
+      "colorNote": "PALD - Polyamide 6 light Duty\nPAMD - Polyamide 6 Medium Duty \n04 - color (Black)\n07 - NW Conduit Size\nMaterial Color Black or Customer requirement  \nThe minimum inside diameter of the conduit system shall be as declared by the manufacturer as specified in Cl. of IEC 61386-23.\nFlame retardant HL3 complies as per EN 45545-2"
     },
     {
       "id": "2462fb65d4",
