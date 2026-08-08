@@ -1,410 +1,23 @@
 {
   "series": [
     {
-      "id": "7fa6913523",
-      "family": "ul-appliance",
-      "name": "UL 1015 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "41485XX",
-          "26",
-          "7/0.16",
-          "0.762",
-          "2.17",
-          "6.5",
-          "140"
-        ],
-        [
-          "41484XX",
-          "24",
-          "7/0.193",
-          "0.762",
-          "2.22",
-          "7.21",
-          "87.6"
-        ],
-        [
-          "41483XX",
-          "22",
-          "7/0.254",
-          "0.762",
-          "2.38",
-          "9.01",
-          "55.4"
-        ],
-        [
-          "41482XX",
-          "20",
-          "10/0.254",
-          "0.762",
-          "2.54",
-          "10.96",
-          "34.8"
-        ],
-        [
-          "41481XX",
-          "18",
-          "16/0.254",
-          "0.762",
-          "2.78",
-          "14.64",
-          "21.8"
-        ],
-        [
-          "41480XX",
-          "16",
-          "26/0.254",
-          "0.762",
-          "3.11",
-          "20.45",
-          "13.7"
-        ],
-        [
-          "41479XX",
-          "14",
-          "41/0.254",
-          "0.762",
-          "3.49",
-          "28.80",
-          "8.59"
-        ],
-        [
-          "41478XX",
-          "12",
-          "65/0.254",
-          "0.762",
-          "3.98",
-          "41.70",
-          "5.41"
-        ],
-        [
-          "41477XX",
-          "10",
-          "105/0.254",
-          "0.762",
-          "5.82",
-          "106.05",
-          "3.41"
-        ],
-        [
-          "414A01XX",
-          "9",
-          "133/0254",
-          "0.762",
-          "4.69",
-          "62.79",
-          "2.75"
-        ],
-        [
-          "41476XX",
-          "8",
-          "168/0.254",
-          "1.143",
-          "6.19",
-          "104.01",
-          "2.18"
-        ],
-        [
-          "414A50XX",
-          "7",
-          "210/0.254",
-          "1.143",
-          "6.82",
-          "130.02",
-          "1.73"
-        ],
-        [
-          "41475XX",
-          "6",
-          "266/0.254",
-          "1.524",
-          "7.96",
-          "170.17",
-          "1.38"
-        ],
-        [
-          "414A18XX",
-          "3",
-          "532/0.254",
-          "1.524",
-          "10.24",
-          "313.49",
-          "0.693"
-        ],
-        [
-          "S41487XX",
-          "30",
-          "1/0.255",
-          "0.762",
-          "2.07",
-          "5.96",
-          "347"
-        ],
-        [
-          "S41486XX",
-          "28",
-          "1/0.321",
-          "0.762",
-          "2.13",
-          "6.52",
-          "218"
-        ],
-        [
-          "S41485XX",
-          "26",
-          "1/0.405",
-          "0.762",
-          "2.21",
-          "7.32",
-          "138"
-        ],
-        [
-          "S41481XX",
-          "18",
-          "1/1.024",
-          "0.762",
-          "2.64",
-          "14.09",
-          "21.4"
-        ],
-        [
-          "S41480XX",
-          "16",
-          "1/1.291",
-          "0.762",
-          "2.91",
-          "19.39",
-          "13.5"
-        ]
-      ],
-      "catalogueNo": "414/S414",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC For Electronic use : 2500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
-      "id": "c0afe98c98",
-      "family": "ul-appliance",
-      "name": "UL 1015 ATC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness (Nom)",
-        "Cable — Overall Diameter (Nom)",
-        "Weight Approx. (Nom)",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "A41485XX",
-          "26",
-          "7/0.16",
-          "0.762",
-          "2.1",
-          "6",
-          "150"
-        ],
-        [
-          "A41484XX",
-          "24",
-          "7/0.193",
-          "0.762",
-          "2.2",
-          "7",
-          "94.2"
-        ],
-        [
-          "A41483XX",
-          "22",
-          "7/0.254",
-          "0.762",
-          "2.4",
-          "9",
-          "59.4"
-        ],
-        [
-          "A41482XX",
-          "20",
-          "10/0.254",
-          "0.762",
-          "2.5",
-          "11",
-          "37.1"
-        ],
-        [
-          "A41481XX",
-          "18",
-          "16/0.254",
-          "0.762",
-          "2.8",
-          "15",
-          "23.5"
-        ],
-        [
-          "A41480XX",
-          "16",
-          "26/0.254",
-          "0.762",
-          "3.1",
-          "20",
-          "14.7"
-        ],
-        [
-          "A41479XX",
-          "14",
-          "41/0.254",
-          "0.762",
-          "3.5",
-          "29",
-          "9.24"
-        ],
-        [
-          "A41478XX",
-          "12",
-          "65/0.254",
-          "0.762",
-          "4.0",
-          "42",
-          "5.82"
-        ],
-        [
-          "A41477XX",
-          "10",
-          "105/0.254",
-          "0.762",
-          "4.7",
-          "63",
-          "3.65"
-        ],
-        [
-          "A41476XX",
-          "8",
-          "168/0.254",
-          "1.143",
-          "6.2",
-          "104",
-          "2.35"
-        ],
-        [
-          "A41475XX",
-          "6",
-          "266/0.254",
-          "1.524",
-          "8.0",
-          "170",
-          "1.48"
-        ],
-        [
-          "HA41476XX",
-          "8",
-          "133/0.28",
-          "1.14",
-          "6.4",
-          "105",
-          "2.33"
-        ],
-        [
-          "HA41475XX",
-          "6",
-          "133/0.36",
-          "1.52",
-          "8.2",
-          "175",
-          "1.46"
-        ],
-        [
-          "HA41474XX",
-          "4",
-          "133/0.45",
-          "1.52",
-          "9.3",
-          "255",
-          "0.918"
-        ]
-      ],
-      "catalogueNo": "A414/HA414",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC For Electronic use : 2500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Stranded Tinned Copper",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001 Cable"
-        ]
-      }
-    },
-    {
       "id": "5795b07db2",
       "family": "ul-appliance",
-      "name": "UL 1015 ATC, PVC Insulated 105 C, 600 V AC Cable",
+      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
         "Insulation Wall Thickness Nom.",
         "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
+        "Max. Conductor Resistance at 20C"
       ],
       "rows": [
         [
           "",
           "AWG",
-          "mm",
+          "Nos./mm",
           "mm",
           "mm",
           "kg/km",
@@ -481,20 +94,454 @@
           "Resistant to water, oil, acids, solvents and fungus."
         ],
         "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC For Electronic use : 2500 V",
-          "Flame Test : VW-1 as per UL 1581"
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC For Electronic use: 2500 V",
+          "Flame Test: VW-1 as per UL 1581"
         ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor : Annealed Stranded Tinned Copper",
-          "Insulation : PVC",
+          "Conductor: Annealed Stranded Tinned Copper",
+          "Insulation: PVC",
+          "Colour: As per customer order. ISO 9001"
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "c0afe98c98",
+      "family": "ul-appliance",
+      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx. (Nom)",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "A41485XX",
+          "26",
+          "7/0.16",
+          "0.762",
+          "2.17",
+          "6.5",
+          "150"
+        ],
+        [
+          "A41484XX",
+          "24",
+          "7/0.193",
+          "0.762",
+          "2.3",
+          "7",
+          "94.2"
+        ],
+        [
+          "A41483XX",
+          "22",
+          "7/0.254",
+          "0.762",
+          "2.4",
+          "9",
+          "59.4"
+        ],
+        [
+          "A41482XX",
+          "20",
+          "10/0.254",
+          "0.762",
+          "2.6",
+          "12",
+          "37.1"
+        ],
+        [
+          "A41481XX",
+          "18",
+          "16/0.254",
+          "0.762",
+          "2.9",
+          "15",
+          "23.5"
+        ],
+        [
+          "A41480XX",
+          "16",
+          "26/0.254",
+          "0.762",
+          "3.1",
+          "21",
+          "14.7"
+        ],
+        [
+          "A41479XX",
+          "14",
+          "41/0.254",
+          "0.762",
+          "3.6",
+          "30",
+          "9.24"
+        ],
+        [
+          "A41478XX",
+          "12",
+          "65/0.254",
+          "0.762",
+          "4.15",
+          "48",
+          "5.82"
+        ],
+        [
+          "A41477XX",
+          "10",
+          "105/0.254",
+          "0.762",
+          "4.6",
+          "60",
+          "3.65"
+        ],
+        [
+          "A41476XX",
+          "8",
+          "168/0.254",
+          "1.143",
+          "6.2",
+          "105",
+          "2.35"
+        ],
+        [
+          "A41475XX",
+          "6",
+          "266/0.254",
+          "1.524",
+          "8.2",
+          "170",
+          "1.48"
+        ],
+        [
+          "HA41476XX",
+          "8",
+          "133/0.28",
+          "1.14",
+          "6.4",
+          "105",
+          "2.33"
+        ],
+        [
+          "HA41475XX",
+          "6",
+          "133/0.36",
+          "1.52",
+          "8.2",
+          "175",
+          "1.46"
+        ],
+        [
+          "HA41474XX",
+          "4",
+          "133/0.45",
+          "1.52",
+          "9.3",
+          "255",
+          "0.918"
+        ]
+      ],
+      "catalogueNo": "A414/HA414",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range : +105°C",
+          "Voltage Rating : 600 V AC",
+          "For Electronic use : 2500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Stranded Tinned Copper",
+          "Insulation: PVC",
+          "Colour : As per customer order. ISO 9001 Cable"
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "7fa6913523",
+      "family": "ul-appliance",
+      "name": "UL 1015 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos/mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "41485XX",
+          "26",
+          "7/0.16",
+          "0.762",
+          "2.17",
+          "6.5",
+          "140"
+        ],
+        [
+          "41484XX",
+          "24",
+          "7/0.193",
+          "0.762",
+          "2.30",
+          "7.0",
+          "87.6"
+        ],
+        [
+          "41483XX",
+          "22",
+          "7/0.254",
+          "0.762",
+          "2.40",
+          "9.0",
+          "55.4"
+        ],
+        [
+          "41482XX",
+          "20",
+          "10/0.254",
+          "0.762",
+          "2.60",
+          "12.0",
+          "34.8"
+        ],
+        [
+          "41481XX",
+          "18",
+          "16/0.254",
+          "0.762",
+          "2.9",
+          "15.0",
+          "21.8"
+        ],
+        [
+          "41480XX",
+          "16",
+          "26/0.254",
+          "0.762",
+          "3.1",
+          "21.0",
+          "13.7"
+        ],
+        [
+          "41479XX",
+          "14",
+          "41/0.254",
+          "0.762",
+          "3.6",
+          "30.0",
+          "8.59"
+        ],
+        [
+          "41478XX",
+          "12",
+          "65/0.254",
+          "0.762",
+          "4.15",
+          "48.0",
+          "5.41"
+        ],
+        [
+          "41477XX",
+          "10",
+          "105/0.254",
+          "0.762",
+          "4.6",
+          "60.0",
+          "3.41"
+        ],
+        [
+          "414A01XX",
+          "9",
+          "133/0254",
+          "0.762",
+          "5.3",
+          "81",
+          "2.75"
+        ],
+        [
+          "41476XX",
+          "8",
+          "168/0.254",
+          "1.143",
+          "6.2",
+          "105",
+          "2.18"
+        ],
+        [
+          "414A50XX",
+          "7",
+          "210/0.254",
+          "1.143",
+          "7.0",
+          "130",
+          "1.73"
+        ],
+        [
+          "41475XX",
+          "6",
+          "266/0.254",
+          "1.524",
+          "8.2",
+          "170",
+          "1.38"
+        ],
+        [
+          "PA41474XX",
+          "4",
+          "420/0.254",
+          "1.524",
+          "9.5",
+          "250",
+          "0.928"
+        ],
+        [
+          "414A18XX",
+          "3",
+          "532/0.254",
+          "1.524",
+          "10.24",
+          "315",
+          "0.693"
+        ],
+        [
+          "PA41473XX",
+          "2",
+          "665/0.254",
+          "1.524",
+          "11.0",
+          "370",
+          "0.590"
+        ],
+        [
+          "S41487XX",
+          "30",
+          "1/0.255",
+          "0.762",
+          "1.92",
+          "4.7",
+          "347"
+        ],
+        [
+          "S41486XX",
+          "28",
+          "1/0.321",
+          "0.762",
+          "2.0",
+          "5.2",
+          "218"
+        ],
+        [
+          "S41485XX",
+          "26",
+          "1/0.405",
+          "0.762",
+          "2.17",
+          "6.5",
+          "138"
+        ],
+        [
+          "S41481XX",
+          "18",
+          "1/1.024",
+          "0.762",
+          "2.9",
+          "15.0",
+          "21.4"
+        ],
+        [
+          "S41480XX",
+          "16",
+          "1/1.291",
+          "0.762",
+          "3.1",
+          "21.0",
+          "13.5"
+        ]
+      ],
+      "catalogueNo": "414/S414",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC",
+          "For Electronic use: 2500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
           "Colour : As per customer order. ISO 9001"
         ]
-      }
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "c41bab5f78",
