@@ -848,6 +848,12 @@
         "Industrial machine wiring"
       ],
       "conductorMaterials": [],
+      "colorCode": [
+        {
+          "code": "01",
+          "name": "yfgu8y"
+        }
+      ],
       "colorNote": "PALD - Polyamide 6 light Duty\nPAMD - Polyamide 6 Medium Duty \n04 - color (Black)\n07 - NW Conduit Size\nMaterial Color Black or Customer requirement  \nThe minimum inside diameter of the conduit system shall be as declared by the manufacturer as specified in Cl. of IEC 61386-23.\nFlame retardant HL3 complies as per EN 45545-2"
     },
     {
