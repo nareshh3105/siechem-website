@@ -1,6 +1,21 @@
 {
   "series": [
     {
+      "id": "new-msoj818b",
+      "family": "fire-resistant",
+      "name": "New Type",
+      "headers": [
+        "S.No",
+        "Type",
+        "Conductor",
+        "Insulation",
+        "Spec",
+        "Temp. Range"
+      ],
+      "rows": [],
+      "colorNote": "df"
+    },
+    {
       "id": "a9095451bc",
       "family": "fire-resistant",
       "name": "EBXL FRX 100+ Unarmourd Fire Resistant Cables",

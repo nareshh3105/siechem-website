@@ -12392,11 +12392,11 @@
           "It is high cover, low loss type."
         ],
         "technical": [
-          "Standard: ES 96220-01",
-          "Characteristic Impedance: 50 ± 2 Ω",
-          "Electrostatic Capacity: 105 nF/km",
-          "Min. Insulation Resistance: 1000 MΩ.km",
-          "Max Attenuation: 150 MHz - 0.146 dB/m",
+          "Standard : ES 96220-01",
+          "Characteristic Impedance : 50 ± 2 Ω",
+          "Electrostatic Capacity : 105 nF/km",
+          "Min. Insulation Resistance : 1000 MΩ.km",
+          "Max Attenuation : 150 MHz - 0.146 dB/m",
           "220MHz - 0.177 dB/m",
           "450MHz- 0.255 dB/m",
           "900MHz -0.365 dB/m",
@@ -12414,11 +12414,11 @@
           "Ringing circuit connection between high frequency apparatus."
         ],
         "construction": [
-          "Conductor: Annealed Plain Solid Copper Conductor",
-          "Insulation: Foam PE",
-          "Color: Natural",
-          "Taping: Al - Mylar tape",
-          "Braiding: ATC",
+          "Conductor : Annealed Plain Solid Copper Conductor",
+          "Insulation : Foam PE",
+          "Color : Natural",
+          "Taping : Al - Mylar tape",
+          "Braiding : ATC",
           "Outer Sheath: Polyvinylchloride",
           "Sheath Color: As per customer request Automotive RG 58LL Cables"
         ]
