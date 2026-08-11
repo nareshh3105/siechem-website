@@ -76,8 +76,10 @@
       object-fit: cover;
       opacity: 1;
       transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
-      filter: brightness(1.08) contrast(1.12) saturate(1.25);
-      will-change: transform;
+      /* No CSS filter here on purpose: a filter on a *playing* video forces a
+         full-viewport GPU pass every frame, and contrast/saturate boosts
+         amplify the source's compression artefacts. Grading is baked into the
+         encode instead. The overlay below handles darkening for text contrast. */
     }
     .hero-video-overlay {
       position: absolute;
@@ -1654,41 +1656,6 @@
     </div>
   </section>
 
-  <!-- Certifications ticker -->
-  <div class="cert-ticker-outer" aria-hidden="true">
-    <div class="cert-ticker-inner">
-      <span class="cert-ticker-item">TÜV SÜD</span>
-      <span class="cert-ticker-item">UL Listed</span>
-      <span class="cert-ticker-item">AS 9100</span>
-      <span class="cert-ticker-item">MIL-SPEC</span>
-      <span class="cert-ticker-item">RDSO</span>
-      <span class="cert-ticker-item">NABL</span>
-      <span class="cert-ticker-item">CE</span>
-      <span class="cert-ticker-item">RoHS</span>
-      <span class="cert-ticker-item">IEC</span>
-      <span class="cert-ticker-item">BIS / IS</span>
-      <span class="cert-ticker-item">JASO</span>
-      <span class="cert-ticker-item">SAE</span>
-      <span class="cert-ticker-item">DGAQA</span>
-      <span class="cert-ticker-item">IECEE CB</span>
-      <!-- duplicate for seamless loop -->
-      <span class="cert-ticker-item">TÜV SÜD</span>
-      <span class="cert-ticker-item">UL Listed</span>
-      <span class="cert-ticker-item">AS 9100</span>
-      <span class="cert-ticker-item">MIL-SPEC</span>
-      <span class="cert-ticker-item">RDSO</span>
-      <span class="cert-ticker-item">NABL</span>
-      <span class="cert-ticker-item">CE</span>
-      <span class="cert-ticker-item">RoHS</span>
-      <span class="cert-ticker-item">IEC</span>
-      <span class="cert-ticker-item">BIS / IS</span>
-      <span class="cert-ticker-item">JASO</span>
-      <span class="cert-ticker-item">SAE</span>
-      <span class="cert-ticker-item">DGAQA</span>
-      <span class="cert-ticker-item">IECEE CB</span>
-    </div>
-  </div>
-
   <!-- At a Glance Section -->
   <section class="section-padding bg-light-grey glance-section">
     <div class="container">
@@ -2417,7 +2384,7 @@
     });
   </script>
   <script src="/nav-mobile.js" defer></script>
-  <script src="/animations.js" defer></script>
+  <script src="/assets/lenis.min.js" defer></script><script src="/assets/smooth-scroll.js" defer></script><script src="/animations.js" defer></script>
 
   <!-- Back-to-top button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">

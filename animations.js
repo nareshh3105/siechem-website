@@ -48,11 +48,39 @@
   'use strict';
 
   /* ── Scroll-reveal ───────────────────────────── */
+
+  /* Drop the GPU-layer promotion once an element has finished revealing.
+     Fires on whichever comes first: the transition ending, or a hard timeout. */
+  function releaseLayer(el) {
+    var done = false;
+    function release() {
+      if (done) return;
+      done = true;
+      el.style.willChange = 'auto';
+      el.removeEventListener('transitionend', release);
+    }
+    el.addEventListener('transitionend', release);
+    setTimeout(release, 1300);
+  }
+
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
         revealObs.unobserve(e.target);
+        /* Release the compositor layer once the transition has finished.
+           `will-change` in CSS is a *permanent* promotion — left in place it
+           keeps every revealed element on its own GPU layer for the life of
+           the page, which costs memory and makes scrolling stutter as the
+           layer count grows. Dropping it here returns the element to normal
+           painting now that nothing is animating it.
+
+           transitionend alone is not enough: it never fires for an element
+           that is hidden, is removed mid-transition, or whose transition the
+           browser skips — and a missed event means the layer leaks, which is
+           the exact bug we are fixing. The timer guarantees release.
+           Longest possible reveal = 0.65s transition + 0.48s (.reveal-d6). */
+        releaseLayer(e.target);
       }
     });
   }, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
