@@ -11,7 +11,7 @@
         "Insulation Wall Thickness Nom.",
         "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20C"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -105,7 +105,7 @@
         "construction": [
           "Conductor: Annealed Stranded Tinned Copper",
           "Insulation: PVC",
-          "Colour: As per customer order. ISO 9001"
+          "Colour: As per customer order."
         ]
       },
       "headerGroups": [
@@ -286,7 +286,852 @@
         "construction": [
           "Conductor: Annealed Stranded Tinned Copper",
           "Insulation: PVC",
-          "Colour : As per customer order. ISO 9001 Cable"
+          "Colour : As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "7d5d8a3c37",
+      "family": "ul-appliance",
+      "name": "UL 1283 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Construction — Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20° C (Bare)",
+        "Max. Conductor Resistance at 20° C (Tinned)"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km",
+          "Ω/km"
+        ],
+        [
+          "P41876XX",
+          "8",
+          "168/0.254",
+          "1.524",
+          "7.15",
+          "118",
+          "2.18",
+          "2.35"
+        ],
+        [
+          "P41875XX",
+          "6",
+          "266/0.254",
+          "1.524",
+          "8.16",
+          "171",
+          "1.38",
+          "1.48"
+        ],
+        [
+          "P41874XX",
+          "4",
+          "420/0.254",
+          "1.524",
+          "9.43",
+          "250",
+          "0.865",
+          "0.928"
+        ],
+        [
+          "P41873XX",
+          "2",
+          "665/0.254",
+          "1.524",
+          "11.02",
+          "377",
+          "0.549",
+          "0.590"
+        ]
+      ],
+      "catalogueNo": "418",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: -40°C to +105°C",
+          "Rated Voltage: 600 V AC",
+          "For Electronic use: 2500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Multi Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Colour: As per customer order."
+        ]
+      }
+    },
+    {
+      "id": "40d9225c82",
+      "family": "ul-appliance",
+      "name": "UL 1284 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P41976XX",
+          "8",
+          "168/0.254",
+          "2.032",
+          "8.17",
+          "136.41",
+          "2.18"
+        ],
+        [
+          "P41975XX",
+          "6",
+          "266/ 0.254",
+          "2.032",
+          "9.18",
+          "191.58",
+          "1.38"
+        ],
+        [
+          "P41974XX",
+          "4",
+          "133/ 0.455",
+          "2.032",
+          "10.47",
+          "276.96",
+          "0.865"
+        ],
+        [
+          "P41973XX",
+          "2",
+          "259/ 0.405",
+          "2.032",
+          "11.98",
+          "397.97",
+          "0.547"
+        ],
+        [
+          "P41972XX",
+          "1",
+          "259/0.455",
+          "2.032",
+          "12.93",
+          "486.49",
+          "0.434"
+        ],
+        [
+          "P41990XX",
+          "1/0",
+          "259/ 0.511",
+          "2.032",
+          "14.10",
+          "597.63",
+          "0.344"
+        ],
+        [
+          "P41991XX",
+          "2/0",
+          "259/0.573",
+          "2.032",
+          "15.30",
+          "733.13",
+          "0.272"
+        ],
+        [
+          "P41992XX",
+          "3/0",
+          "259/0.644",
+          "2.032",
+          "16.67",
+          "905.70",
+          "0.216"
+        ],
+        [
+          "P41994XX",
+          "4/0",
+          "259/0.723",
+          "2.032",
+          "18.19",
+          "1119.57",
+          "0.171"
+        ]
+      ],
+      "catalogueNo": "419",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Rated Voltage: 600 V AC",
+          "Flame Test: UL 758, VW-1"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Colour: As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "29d3ad8b58",
+      "family": "ul-appliance",
+      "name": "UL 10269 APC, PVC Insulated 105°C, 1000 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable Overall Diameter Max",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20° C for Plain Copper",
+        "Resistance at 20° C for Tinned Copper"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "ohm/km",
+          "ohm/km"
+        ],
+        [
+          "P42581XX",
+          "18",
+          "16 / 0.254",
+          "0.76",
+          "3.00",
+          "17.00",
+          "21.8",
+          "23.50"
+        ],
+        [
+          "P42580XX",
+          "16",
+          "26 / 0.254",
+          "0.76",
+          "3.20",
+          "22.50",
+          "13.7",
+          "14.70"
+        ],
+        [
+          "P42579XX",
+          "14",
+          "41/0.254",
+          "0.76",
+          "3.80",
+          "30.00",
+          "8.6",
+          "9.24"
+        ],
+        [
+          "P42578XX",
+          "12",
+          "65 / 0254",
+          "0.76",
+          "4.50",
+          "43.00",
+          "5.41",
+          "5.82"
+        ],
+        [
+          "P42577XX",
+          "10",
+          "104 / 0.254",
+          "0.76",
+          "5.30",
+          "64.00",
+          "3.41",
+          "3.65"
+        ],
+        [
+          "P42576XX",
+          "8",
+          "168 / 0.254",
+          "1.14",
+          "6.48",
+          "107.97",
+          "2.18",
+          "2.35"
+        ],
+        [
+          "P42575XX",
+          "6",
+          "266 /0.254",
+          "1.52",
+          "8.27",
+          "173.59",
+          "1.38",
+          "1.48"
+        ],
+        [
+          "P42574XX",
+          "4",
+          "420 / 0.254",
+          "1.52",
+          "9.60",
+          "254.74",
+          "0.865",
+          "0.928"
+        ],
+        [
+          "P425A18XX",
+          "3",
+          "133 / 0.51",
+          "1.52",
+          "10.50",
+          "325.00",
+          "0.686",
+          "0.728"
+        ],
+        [
+          "P42573XX",
+          "2",
+          "665 / 0.254",
+          "1.52",
+          "11.50",
+          "386.30",
+          "0.549",
+          "0.590"
+        ],
+        [
+          "P42572XX",
+          "1",
+          "836 / 0.254",
+          "2.03",
+          "13.49",
+          "503.40",
+          "0.436",
+          "0.467"
+        ],
+        [
+          "P42590XX",
+          "1/0",
+          "1064 / 0.254",
+          "2.03",
+          "14.64",
+          "614.41",
+          "0.345",
+          "0.370"
+        ],
+        [
+          "P42591XX",
+          "2/0",
+          "1323 / 0.254",
+          "2.03",
+          "15.96",
+          "760.30",
+          "0.276",
+          "0.297"
+        ],
+        [
+          "P42592XX",
+          "3/0",
+          "1666 / 0.254",
+          "2.03",
+          "17.33",
+          "933.14",
+          "0.219",
+          "0.236"
+        ],
+        [
+          "P42594XX",
+          "4/0",
+          "2107 / 0.254",
+          "2.03",
+          "18.99",
+          "1151.96",
+          "0.173",
+          "0.187"
+        ],
+        [
+          "PS42581XX",
+          "18",
+          "1 / 1.024",
+          "0.80",
+          "2.72",
+          "14.58",
+          "21.4",
+          "22.2"
+        ],
+        [
+          "PS42580XX",
+          "16",
+          "1 / 1.201",
+          "0.80",
+          "2.99",
+          "19.92",
+          "13.5",
+          "14.0"
+        ]
+      ],
+      "catalogueNo": "425",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 1000 V AC",
+          "For Electronic use: 3500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Colour: As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "deaeeb489f",
+      "family": "ul-appliance",
+      "name": "UL 2128 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P4278403",
+          "24",
+          "7 / 0.193",
+          "0.8",
+          "0.8",
+          "7.04",
+          "67.73",
+          "87.6"
+        ],
+        [
+          "P4278303",
+          "22",
+          "7 / 0.254",
+          "0.8",
+          "0.8",
+          "7.39",
+          "78.89",
+          "55.4"
+        ],
+        [
+          "P4278203",
+          "20",
+          "10 / 0.254",
+          "0.8",
+          "0.8",
+          "7.72",
+          "88.35",
+          "34.8"
+        ],
+        [
+          "P4278103",
+          "18",
+          "16 / 0.254",
+          "0.8",
+          "0.8",
+          "8.25",
+          "105.46",
+          "21.8"
+        ],
+        [
+          "P4278003",
+          "16",
+          "26 / 0.254",
+          "0.8",
+          "0.8",
+          "8.96",
+          "131.21",
+          "13.7"
+        ],
+        [
+          "P4277803",
+          "12",
+          "19 / 0.47",
+          "0.8",
+          "0.61",
+          "9.23",
+          "312.33",
+          "5.43"
+        ],
+        [
+          "P4277803",
+          "12",
+          "19 / 0.47",
+          "0.8",
+          "0.61",
+          "10.91",
+          "357.10",
+          "5.43"
+        ]
+      ],
+      "catalogueNo": "427",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Optional Shield",
+          "Jacket: PVC",
+          "Colour : As per customer order. ISO 9001"
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "fa5649f673",
+      "family": "ul-appliance",
+      "name": "UL 2127 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20° C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P4268402",
+          "24",
+          "7/0.193",
+          "0.8",
+          "0.8",
+          "6.68",
+          "60.09",
+          "87.6"
+        ],
+        [
+          "P4268302",
+          "22",
+          "7/0.254",
+          "0.8",
+          "0.8",
+          "7.01",
+          "69.41",
+          "55.4"
+        ],
+        [
+          "P4268202",
+          "20",
+          "10/0.254",
+          "0.8",
+          "0.8",
+          "7.31",
+          "77.04",
+          "34.8"
+        ],
+        [
+          "P4268102",
+          "18",
+          "16/0.254",
+          "0.8",
+          "0.8",
+          "7.91",
+          "92.53",
+          "21.8"
+        ],
+        [
+          "P4268002",
+          "16",
+          "26/0.254",
+          "0.8",
+          "0.8",
+          "8.56",
+          "112.96",
+          "13.7"
+        ],
+        [
+          "P4267802",
+          "12",
+          "19/0.47",
+          "0.8",
+          "0.61",
+          "9.23",
+          "312.33",
+          "5.43"
+        ]
+      ],
+      "catalogueNo": "426",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Optional Shield",
+          "Jacket: PVC",
+          "Colour: As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "c41bab5f78",
+      "family": "ul-appliance",
+      "name": "UL 1028 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P41583XX",
+          "22",
+          "7/0.254",
+          "1.143",
+          "3.06",
+          "13.23",
+          "55.4"
+        ],
+        [
+          "P41582XX",
+          "20",
+          "10/0.254",
+          "1.143",
+          "3.22",
+          "15.41",
+          "34.8"
+        ],
+        [
+          "P41581XX",
+          "18",
+          "16/0.254",
+          "1.143",
+          "3.46",
+          "19.47",
+          "21.8"
+        ],
+        [
+          "P41580XX",
+          "16",
+          "26/0.254",
+          "1.143",
+          "3.79",
+          "25.79",
+          "13.7"
+        ],
+        [
+          "P41579XX",
+          "14",
+          "41/0.254",
+          "1.143",
+          "4.17",
+          "34.74",
+          "8.59"
+        ],
+        [
+          "P41578XX",
+          "12",
+          "65/0.254",
+          "1.143",
+          "4.66",
+          "48.40",
+          "5.41"
+        ],
+        [
+          "P41577XX",
+          "10",
+          "105/0.254",
+          "1.143",
+          "5.37",
+          "70.59",
+          "3.41"
+        ],
+        [
+          "P41576XX",
+          "8",
+          "168/0.254",
+          "1.143",
+          "6.19",
+          "104.01",
+          "2.18"
+        ],
+        [
+          "PS41581XX",
+          "18",
+          "1/1.024",
+          "1.143",
+          "3.30",
+          "18.56",
+          "21.4"
+        ],
+        [
+          "PS41580XX",
+          "16",
+          "1/1.291",
+          "1.143",
+          "3.57",
+          "24.26",
+          "13.5"
+        ]
+      ],
+      "catalogueNo": "415",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC",
+          "For Electronic use: 2500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Colour: As per customer order"
         ]
       },
       "headerGroups": [
@@ -530,7 +1375,7 @@
         "construction": [
           "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
           "Insulation: PVC",
-          "Colour : As per customer order. ISO 9001"
+          "Colour : As per customer order."
         ]
       },
       "headerGroups": [
@@ -544,1054 +1389,24 @@
       ]
     },
     {
-      "id": "c41bab5f78",
-      "family": "ul-appliance",
-      "name": "UL 1028 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "41583XX",
-          "22",
-          "7/0.254",
-          "1.143",
-          "3.06",
-          "13.23",
-          "55.4"
-        ],
-        [
-          "41582XX",
-          "20",
-          "10/0.254",
-          "1.143",
-          "3.22",
-          "15.41",
-          "34.8"
-        ],
-        [
-          "41581XX",
-          "18",
-          "16/0.254",
-          "1.143",
-          "3.46",
-          "19.47",
-          "21.8"
-        ],
-        [
-          "41580XX",
-          "16",
-          "26/0.254",
-          "1.143",
-          "3.79",
-          "25.79",
-          "13.7"
-        ],
-        [
-          "41579XX",
-          "14",
-          "41/0.254",
-          "1.143",
-          "4.17",
-          "34.74",
-          "8.59"
-        ],
-        [
-          "41578XX",
-          "12",
-          "65/0.254",
-          "1.143",
-          "4.66",
-          "48.40",
-          "5.41"
-        ],
-        [
-          "41577XX",
-          "10",
-          "105/0.254",
-          "1.143",
-          "5.37",
-          "70.59",
-          "3.41"
-        ],
-        [
-          "41576XX",
-          "8",
-          "168/0.254",
-          "1.143",
-          "6.19",
-          "104.01",
-          "2.18"
-        ],
-        [
-          "S41581XX",
-          "18",
-          "1/1.024",
-          "1.143",
-          "3.30",
-          "18.56",
-          "21.4"
-        ],
-        [
-          "S41580XX",
-          "16",
-          "1/1.291",
-          "1.143",
-          "3.57",
-          "24.26",
-          "13.5"
-        ]
-      ],
-      "catalogueNo": "415",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC For Electronic use : 2500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
-      "id": "b1bc0fd0f1",
-      "family": "ul-appliance",
-      "name": "UL 1032 APC, PVC Insulated 90 C, 1000 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "41684XX",
-          "24",
-          "7/0.193",
-          "0.80",
-          "2.22",
-          "7.21",
-          "87.6"
-        ],
-        [
-          "41683XX",
-          "22",
-          "7/0.254",
-          "0.80",
-          "2.38",
-          "9.01",
-          "55.4"
-        ],
-        [
-          "41682XX",
-          "20",
-          "10/0.254",
-          "0.80",
-          "2.62",
-          "12.16",
-          "34.8"
-        ],
-        [
-          "41681XX",
-          "18",
-          "16/0.254",
-          "0.80",
-          "2.89",
-          "16.41",
-          "21.8"
-        ],
-        [
-          "41680XX",
-          "16",
-          "26/0.254",
-          "0.80",
-          "3.11",
-          "20.45",
-          "13.7"
-        ],
-        [
-          "41679XX",
-          "14",
-          "41/0.254",
-          "0.80",
-          "3.49",
-          "28.80",
-          "8.60"
-        ],
-        [
-          "41678XX",
-          "12",
-          "65/0.254",
-          "0.80",
-          "3.98",
-          "41.70",
-          "5.41"
-        ],
-        [
-          "41677XX",
-          "10",
-          "104/0.254",
-          "0.80",
-          "4.69",
-          "62.79",
-          "3.41"
-        ],
-        [
-          "416A01XX",
-          "9",
-          "133/0.254",
-          "0.80",
-          "5.08",
-          "77.17",
-          "2.75"
-        ],
-        [
-          "S41681XX",
-          "18",
-          "1/1.024",
-          "0.80",
-          "2.62",
-          "13.97",
-          "21.4"
-        ],
-        [
-          "S41680XX",
-          "16",
-          "1/1.291",
-          "0.80",
-          "2.89",
-          "19.25",
-          "13.5"
-        ]
-      ],
-      "catalogueNo": "416",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +900C",
-          "Voltage Rating : 1000 V AC For Electronic use : 3500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Optional PVC Covering, braid and Jacket",
-          "Colour : As per customer order. ISO 9001 Cable"
-        ]
-      }
-    },
-    {
-      "id": "fecd3decff",
-      "family": "ul-appliance",
-      "name": "UL 1275 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "41781XX",
-          "18",
-          "16/0.254",
-          "1.52",
-          "4.24",
-          "26.32",
-          "21.8"
-        ],
-        [
-          "41780XX",
-          "16",
-          "26/0.254",
-          "1.52",
-          "4.57",
-          "33.22",
-          "13.7"
-        ],
-        [
-          "41779XX",
-          "14",
-          "41/0.254",
-          "1.52",
-          "4.95",
-          "42.85",
-          "8.59"
-        ],
-        [
-          "41778XX",
-          "12",
-          "65/0.254",
-          "1.52",
-          "5.44",
-          "57.38",
-          "5.41"
-        ],
-        [
-          "41777XX",
-          "10",
-          "105/0.254",
-          "1.52",
-          "6.15",
-          "80.83",
-          "3.41"
-        ]
-      ],
-      "catalogueNo": "417",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Rated Voltage : 600 V AC"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
-      "id": "7d5d8a3c37",
-      "family": "ul-appliance",
-      "name": "UL 1283 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C — Bare",
-        "Tinned"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km",
-          "Ω/km"
-        ],
-        [
-          "41876XX",
-          "8",
-          "168/0.254",
-          "1.524",
-          "7.15",
-          "118.61",
-          "2.18",
-          "2.35"
-        ],
-        [
-          "41875XX",
-          "6",
-          "266/0.254",
-          "1.524",
-          "8.16",
-          "171.43",
-          "1.38",
-          "1.48"
-        ],
-        [
-          "41874XX",
-          "4",
-          "420/0.254",
-          "1.524",
-          "9.43",
-          "252.03",
-          "0.865",
-          "0.928"
-        ],
-        [
-          "41873XX",
-          "2",
-          "665/0.254",
-          "1.524",
-          "11.02",
-          "377.23",
-          "0.549",
-          "0.590"
-        ]
-      ],
-      "catalogueNo": "418",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : -400C to +1050C",
-          "Rated Voltage : 600 V AC For Electronic use : 2500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Multi Stranded Bare Copper (Tinning on request)",
-          "Rated",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001 Cable"
-        ]
-      }
-    },
-    {
-      "id": "40d9225c82",
-      "family": "ul-appliance",
-      "name": "UL 1284 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "41976XX",
-          "8",
-          "168/0.254",
-          "2.032",
-          "8.17",
-          "136.41",
-          "2.18"
-        ],
-        [
-          "41975XX",
-          "6",
-          "266/ 0.254",
-          "2.032",
-          "9.18",
-          "191.58",
-          "1.38"
-        ],
-        [
-          "41974XX",
-          "4",
-          "133/ 0.455",
-          "2.032",
-          "10.47",
-          "276.96",
-          "0.865"
-        ],
-        [
-          "41973XX",
-          "2",
-          "259/ 0.405",
-          "2.032",
-          "11.98",
-          "397.97",
-          "0.547"
-        ],
-        [
-          "41972XX",
-          "1",
-          "259/0.455",
-          "2.032",
-          "12.93",
-          "486.49",
-          "0.434"
-        ],
-        [
-          "41990XX",
-          "1/0",
-          "259/ 0.511",
-          "2.032",
-          "14.10",
-          "597.63",
-          "0.344"
-        ],
-        [
-          "41991XX",
-          "2/0",
-          "259/0.573",
-          "2.032",
-          "15.30",
-          "733.13",
-          "0.272"
-        ],
-        [
-          "41992XX",
-          "3/0",
-          "259/0.644",
-          "2.032",
-          "16.67",
-          "905.70",
-          "0.216"
-        ],
-        [
-          "41994XX",
-          "4/0",
-          "259/0.723",
-          "2.032",
-          "18.19",
-          "1119.57",
-          "0.171"
-        ]
-      ],
-      "catalogueNo": "419",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Rated Voltage : 600 V AC",
-          "Flame Test : UL 758, VW-1"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
-      "id": "29d3ad8b58",
-      "family": "ul-appliance",
-      "name": "UL 10269 APC, PVC Insulated 105 C, 1000 V AC Cable",
-      "headers": [
-        "Part",
-        "Conductor Construction",
-        "",
-        "Insulation",
-        "Cable",
-        "",
-        "Max."
-      ],
-      "rows": [
-        [
-          "Number",
-          "Conductor Size",
-          "No. of Strands / Wire dia",
-          "Wall Thickness Nom.",
-          "Overall Diameter Max.",
-          "Weight Approx.",
-          "Conductor Resistance at 200 C"
-        ],
-        [
-          "",
-          "AWG",
-          "nos. / mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "42581XX",
-          "18",
-          "16 / 0.254",
-          "0.76",
-          "3.00",
-          "17.00",
-          "21.8"
-        ],
-        [
-          "42580XX",
-          "16",
-          "26 / 0.254",
-          "0.76",
-          "3.20",
-          "22.50",
-          "13.7"
-        ],
-        [
-          "42579XX",
-          "14",
-          "41/0.254",
-          "0.76",
-          "3.80",
-          "30.00",
-          "8.6"
-        ],
-        [
-          "42578XX",
-          "12",
-          "65 / 0254",
-          "0.76",
-          "4.50",
-          "43.00",
-          "5.41"
-        ],
-        [
-          "42577XX",
-          "10",
-          "104 / 0.254",
-          "0.76",
-          "5.30",
-          "64.00",
-          "3.41"
-        ],
-        [
-          "42576XX",
-          "8",
-          "168 / 0.254",
-          "1.14",
-          "6.48",
-          "107.97",
-          "2.18"
-        ],
-        [
-          "42575XX",
-          "6",
-          "266 /0.254",
-          "1.52",
-          "8.27",
-          "173.59",
-          "1.38"
-        ],
-        [
-          "42574XX",
-          "4",
-          "420 / 0.254",
-          "1.52",
-          "9.60",
-          "254.74",
-          "0.865"
-        ],
-        [
-          "425A18XX",
-          "3",
-          "133 / 0.51",
-          "1.52",
-          "10.5",
-          "325.00",
-          "0.686"
-        ],
-        [
-          "42573XX",
-          "2",
-          "665 / 0.254",
-          "1.52",
-          "11.50",
-          "386.30",
-          "0.549"
-        ],
-        [
-          "42572XX",
-          "1",
-          "836 / 0.254",
-          "2.03",
-          "13.49",
-          "503.40",
-          "0.436"
-        ],
-        [
-          "42590XX",
-          "1/0",
-          "1064 / 0.254",
-          "2.03",
-          "14.64",
-          "614.41",
-          "0.345"
-        ],
-        [
-          "42591XX",
-          "2/0",
-          "1323 / 0.254",
-          "2.03",
-          "15.96",
-          "760.30",
-          "0.276"
-        ],
-        [
-          "42592XX",
-          "3/0",
-          "1666 / 0.254",
-          "2.03",
-          "17.33",
-          "933.14",
-          "0.219"
-        ],
-        [
-          "42594XX",
-          "4/0",
-          "2107 / 0.254",
-          "2.03",
-          "18.99",
-          "1151.96",
-          "0.173"
-        ],
-        [
-          "S42581XX",
-          "18",
-          "1 / 1.024",
-          "0.80",
-          "2.72",
-          "14.58",
-          "21.4"
-        ],
-        [
-          "S42580XX",
-          "16",
-          "1 / 1.201",
-          "0.80",
-          "2.99",
-          "19.92",
-          "13.5"
-        ]
-      ],
-      "catalogueNo": "425",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 1000 V AC For Electronic use : 3500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
-      "id": "fa5649f673",
-      "family": "ul-appliance",
-      "name": "UL 2127 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Outer Sheath Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "4268402",
-          "24",
-          "7/0.193",
-          "0.8",
-          "0.8",
-          "6.68",
-          "60.09",
-          "87.6"
-        ],
-        [
-          "4268302",
-          "22",
-          "7/0.254",
-          "0.8",
-          "0.8",
-          "7.01",
-          "69.41",
-          "55.4"
-        ],
-        [
-          "4268202",
-          "20",
-          "10/0.254",
-          "0.8",
-          "0.8",
-          "7.31",
-          "77.04",
-          "34.8"
-        ],
-        [
-          "4268102",
-          "18",
-          "16/0.254",
-          "0.8",
-          "0.8",
-          "7.91",
-          "92.53",
-          "21.8"
-        ],
-        [
-          "4268002",
-          "16",
-          "26/0.254",
-          "0.8",
-          "0.8",
-          "8.56",
-          "112.96",
-          "13.7"
-        ],
-        [
-          "4267802",
-          "12",
-          "19/0.47",
-          "0.8",
-          "0.61",
-          "9.23",
-          "312.33",
-          "5.43"
-        ],
-        [
-          "4267802",
-          "12",
-          "19/0.47",
-          "0.8",
-          "0.61",
-          "10.91",
-          "357.10",
-          "5.43"
-        ]
-      ],
-      "catalogueNo": "426",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Optional Shield",
-          "Jacket : PVC",
-          "Colour : As per customer order."
-        ]
-      }
-    },
-    {
-      "id": "deaeeb489f",
-      "family": "ul-appliance",
-      "name": "UL 2128 APC, PVC Insulated 105 C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
-        "Insulation Wall Thickness Nom.",
-        "Outer Sheath Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "4278403",
-          "24",
-          "7 / 0.193",
-          "0.8",
-          "0.8",
-          "7.04",
-          "67.73",
-          "87.6"
-        ],
-        [
-          "4278303",
-          "22",
-          "7 / 0.254",
-          "0.8",
-          "0.8",
-          "7.39",
-          "78.89",
-          "55.4"
-        ],
-        [
-          "4278203",
-          "20",
-          "10 / 0.254",
-          "0.8",
-          "0.8",
-          "7.72",
-          "88.35",
-          "34.8"
-        ],
-        [
-          "4278103",
-          "18",
-          "16 / 0.254",
-          "0.8",
-          "0.8",
-          "8.25",
-          "105.46",
-          "21.8"
-        ],
-        [
-          "4278003",
-          "16",
-          "26 / 0.254",
-          "0.8",
-          "0.8",
-          "8.96",
-          "131.21",
-          "13.7"
-        ],
-        [
-          "4277803",
-          "12",
-          "19 / 0.47",
-          "0.8",
-          "0.61",
-          "9.23",
-          "312.33",
-          "5.43"
-        ],
-        [
-          "4277803",
-          "12",
-          "19 / 0.47",
-          "0.8",
-          "0.61",
-          "10.91",
-          "357.10",
-          "5.43"
-        ]
-      ],
-      "catalogueNo": "427",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 600 V AC ISO AS ISO 14001 9100 45001"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
-          "Optional Shield",
-          "Jacket : PVC",
-          "Colour : As per customer order. ISO 9001"
-        ]
-      }
-    },
-    {
       "id": "5c7759201a",
       "family": "ul-appliance",
-      "name": "UL 2129 APC, PVC Insulated 105 C, 1000 V AC Cable",
+      "name": "UL 2129 APC, PVC Insulated 105°C, 1000 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
         "Insulation Wall Thickness Nom.",
         "Outer Sheath Thickness Nom.",
         "Cable — Overall Diameter Max.",
         "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
           "",
           "AWG",
-          "mm",
+          "Nos/mm",
           "mm",
           "mm",
           "mm",
@@ -1599,7 +1414,7 @@
           "Ω/km"
         ],
         [
-          "4288402",
+          "P4288402",
           "24",
           "7/0.193",
           "0.8",
@@ -1609,7 +1424,7 @@
           "87.6"
         ],
         [
-          "4288302",
+          "P4288302",
           "22",
           "7/0.254",
           "0.8",
@@ -1619,7 +1434,7 @@
           "55.4"
         ],
         [
-          "4288202",
+          "P4288202",
           "20",
           "10/0.254",
           "0.8",
@@ -1629,7 +1444,7 @@
           "34.8"
         ],
         [
-          "4288102",
+          "P4288102",
           "18",
           "16/0.254",
           "0.8",
@@ -1639,7 +1454,7 @@
           "21.8"
         ],
         [
-          "4288002",
+          "P4288002",
           "16",
           "26/0.254",
           "0.8",
@@ -1649,7 +1464,7 @@
           "13.7"
         ],
         [
-          "S4288102",
+          "PS4288102",
           "18",
           "1/1.024",
           "0.8",
@@ -1659,7 +1474,7 @@
           "21.4"
         ],
         [
-          "S4288002",
+          "PS4288002",
           "16",
           "1/1.291",
           "0.8",
@@ -1669,7 +1484,7 @@
           "13.5"
         ],
         [
-          "4287802",
+          "P4287802",
           "12",
           "19/0.47",
           "0.8",
@@ -1679,7 +1494,7 @@
           "5.43"
         ],
         [
-          "4287802",
+          "P4287802",
           "12",
           "19/0.47",
           "0.8",
@@ -1696,21 +1511,285 @@
           "Resistant to water, oil, acids, solvents and fungus."
         ],
         "technical": [
-          "Temperature Range : +1050C",
-          "Voltage Rating : 1000 V AC ISO AS ISO 14001 9100 45001"
+          "Temperature Range: +105°C",
+          "Voltage Rating: 1000 V AC"
         ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
           "Optional Shield",
-          "Jacket : PVC",
+          "Jacket: PVC",
           "Colour : As per customer order. ISO 9001"
         ]
-      }
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "b1bc0fd0f1",
+      "family": "ul-appliance",
+      "name": "UL 1032 APC, PVC Insulated 90°C, 1000 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P41684XX",
+          "24",
+          "7/0.193",
+          "0.80",
+          "2.22",
+          "7.21",
+          "87.6"
+        ],
+        [
+          "P41683XX",
+          "22",
+          "7/0.254",
+          "0.80",
+          "2.38",
+          "9.01",
+          "55.4"
+        ],
+        [
+          "P41682XX",
+          "20",
+          "10/0.254",
+          "0.80",
+          "2.62",
+          "12.16",
+          "34.8"
+        ],
+        [
+          "P41681XX",
+          "18",
+          "16/0.254",
+          "0.80",
+          "2.89",
+          "16.41",
+          "21.8"
+        ],
+        [
+          "P41680XX",
+          "16",
+          "26/0.254",
+          "0.80",
+          "3.11",
+          "20.45",
+          "13.7"
+        ],
+        [
+          "P41679XX",
+          "14",
+          "41/0.254",
+          "0.80",
+          "3.49",
+          "28.80",
+          "8.60"
+        ],
+        [
+          "P41678XX",
+          "12",
+          "65/0.254",
+          "0.80",
+          "3.98",
+          "41.70",
+          "5.41"
+        ],
+        [
+          "P41677XX",
+          "10",
+          "104/0.254",
+          "0.80",
+          "4.69",
+          "62.79",
+          "3.41"
+        ],
+        [
+          "P416A01XX",
+          "9",
+          "133/0.254",
+          "0.80",
+          "5.08",
+          "77.17",
+          "2.75"
+        ],
+        [
+          "PS41681XX",
+          "18",
+          "1/1.024",
+          "0.80",
+          "2.62",
+          "13.97",
+          "21.4"
+        ],
+        [
+          "PS41680XX",
+          "16",
+          "1/1.291",
+          "0.80",
+          "2.89",
+          "19.25",
+          "13.5"
+        ]
+      ],
+      "catalogueNo": "416",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +90°C",
+          "Voltage Rating: 1000 V AC",
+          "For Electronic use: 3500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Optional PVC Covering, braid and Jacket",
+          "Colour: As per customer order"
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction —",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "fecd3decff",
+      "family": "ul-appliance",
+      "name": "UL 1275 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20° C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P41781XX",
+          "18",
+          "16/0.254",
+          "1.52",
+          "4.24",
+          "26.32",
+          "21.8"
+        ],
+        [
+          "P41780XX",
+          "16",
+          "26/0.254",
+          "1.52",
+          "4.57",
+          "33.22",
+          "13.7"
+        ],
+        [
+          "P41779XX",
+          "14",
+          "41/0.254",
+          "1.52",
+          "4.95",
+          "42.85",
+          "8.59"
+        ],
+        [
+          "P41778XX",
+          "12",
+          "65/0.254",
+          "1.52",
+          "5.44",
+          "57.38",
+          "5.41"
+        ],
+        [
+          "P41777XX",
+          "10",
+          "105/0.254",
+          "1.52",
+          "6.15",
+          "80.83",
+          "3.41"
+        ]
+      ],
+      "catalogueNo": "417",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range : +105°C",
+          "Rated Voltage : 600 V AC"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Colour: As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "3dd464965e",
