@@ -243,14 +243,14 @@
 
     /* ───────── Section Layouts ───────── */
     .section-padding {
-      padding: 60px 0;
+      padding: 40px 0;
     }
     .bg-light-grey {
       background: #F8FAFC;
     }
     .section-header {
       max-width: 720px;
-      margin: 0 auto 56px auto;
+      margin: 0 auto 30px auto;
       text-align: center;
     }
     .section-eyebrow {
@@ -264,10 +264,10 @@
       display: inline-block;
     }
     .section-title {
-      font-size: 32px;
+      font-size: clamp(27px, 3.2vw, 36px);
       font-weight: 800;
-      line-height: 1.25;
-      letter-spacing: -0.5px;
+      line-height: 1.2;
+      letter-spacing: -0.6px;
       color: var(--text);
     }
     
@@ -665,10 +665,10 @@
       background: #FFFFFF;
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 48px;
+      padding: 36px 44px 30px;
       position: relative;
       box-shadow: 0 8px 30px rgba(0,0,0,0.02);
-      max-width: 800px;
+      max-width: 860px;
       margin: 0 auto;
     }
     .testimonial-quotes {
@@ -927,13 +927,9 @@
       width: 112px;
       height: 72px;
       object-fit: contain;
-      /* The source logos are a mix of colour treatments; desaturating unifies
-         them into one calm strip, and colour returns on hover. */
-      filter: grayscale(1);
-      opacity: 0.62;
-      transition: filter 0.25s, opacity 0.25s;
+      transition: transform 0.25s;
     }
-    .trusted-item:hover .trusted-logo { filter: grayscale(0); opacity: 1; }
+    .trusted-item:hover .trusted-logo { transform: scale(1.06); }
     /* The marquee is decorative motion — hold it still for anyone who has
        asked the OS to reduce animation. */
     @media (prefers-reduced-motion: reduce) {
@@ -1334,7 +1330,7 @@
 
     /* ─── About Siechem Split Section ─── */
     .about-siechem-section {
-      padding: 80px 0;
+      padding: 48px 0;
       background: var(--bg);
       border-top: 1px solid var(--border);
     }
