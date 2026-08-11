@@ -887,19 +887,13 @@
     .trusted-marquee-row {
       display: flex;
       overflow: hidden;
-      margin-bottom: 8px;
     }
-    .trusted-marquee-row:last-child { margin-bottom: 0; }
     .trusted-marquee-track {
       display: flex;
       align-items: center;
       flex-shrink: 0;
-      animation: marqueeSlide 36s linear infinite;
+      animation: marqueeSlide 48s linear infinite;
       will-change: transform;
-    }
-    .trusted-marquee-row.rev .trusted-marquee-track {
-      animation-direction: reverse;
-      animation-duration: 42s;
     }
     .trusted-band:hover .trusted-marquee-track {
       animation-play-state: paused;
@@ -911,16 +905,34 @@
     .trusted-item {
       display: inline-flex;
       align-items: center;
-      padding: 9px 32px;
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--text-faint);
-      letter-spacing: 0.01em;
-      white-space: nowrap;
+      justify-content: center;
+      padding: 4px 26px;
       border-right: 1px solid var(--border);
-      transition: color 0.2s, background 0.2s;
     }
-    .trusted-item:hover { color: var(--text); background: var(--accent-soft); }
+    /* Every logo file in assets/partners is a uniform 155x99 white-background
+       JPEG, so a fixed box keeps the strip optically even without per-logo
+       tuning. object-fit:contain guards against any future odd-sized file. */
+    .trusted-logo {
+      width: 112px;
+      height: 72px;
+      object-fit: contain;
+      /* The source logos are a mix of colour treatments; desaturating unifies
+         them into one calm strip, and colour returns on hover. */
+      filter: grayscale(1);
+      opacity: 0.62;
+      transition: filter 0.25s, opacity 0.25s;
+    }
+    .trusted-item:hover .trusted-logo { filter: grayscale(0); opacity: 1; }
+    /* The marquee is decorative motion — hold it still for anyone who has
+       asked the OS to reduce animation. */
+    @media (prefers-reduced-motion: reduce) {
+      .trusted-marquee-track { animation: none; }
+      .trusted-marquee-row { overflow-x: auto; }
+    }
+    @media (max-width: 640px) {
+      .trusted-logo { width: 88px; height: 56px; }
+      .trusted-item { padding: 4px 18px; }
+    }
 
     /* ─── Industries We Serve ─── */
     .ind-section { background: var(--bg); }
@@ -1748,67 +1760,48 @@
   <section class="trusted-band" aria-label="Trusted by leading companies">
     <p class="trusted-band-label">Trusted by industry leaders — aerospace · defence · automotive · energy · rail</p>
 
-    <!-- Row 1 — scrolls left -->
+    <!-- Single row — scrolls left. The track is rendered twice and the
+         keyframe travels exactly -50%, so the second copy lands where the
+         first began and the loop has no visible seam. The duplicate is
+         aria-hidden so screen readers announce each customer only once. -->
     <div class="trusted-marquee-row">
       <div class="trusted-marquee-track">
-        <span class="trusted-item">HAL</span>
-        <span class="trusted-item">ISRO</span>
-        <span class="trusted-item">Indian Railways</span>
-        <span class="trusted-item">Tata Motors</span>
-        <span class="trusted-item">Siemens</span>
-        <span class="trusted-item">Honeywell</span>
-        <span class="trusted-item">Schneider Electric</span>
-        <span class="trusted-item">ABB</span>
-        <span class="trusted-item">Maruti Suzuki</span>
-        <span class="trusted-item">Alstom</span>
-        <span class="trusted-item">GE Energy</span>
-        <span class="trusted-item">Mitsubishi Electric</span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/HAL.jpg" alt="HAL" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/TATA.jpg" alt="Tata Motors" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/siemens.jpg" alt="Siemens" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/7.ABB-1.jpg" alt="ABB" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Maruti_Suzuki-.jpg" alt="Maruti Suzuki" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Alstom.jpg" alt="Alstom" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Ashok-leyland.jpg" alt="Ashok Leyland" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/BOMBARDIER.jpg" alt="Bombardier" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Hyundai.jpg" alt="Hyundai India" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/CRRC.jpg" alt="CRRC" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Aptiv.jpg" alt="Aptiv" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/6.yazaki.jpg" alt="Yazaki" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/2.ford-2.jpg" alt="Ford India" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/NTPC.jpg" alt="NTPC" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/TVS.jpg" alt="TVS Motors" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Renault-Nissian.jpg" alt="Renault-Nissan" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Daimalar.jpg" alt="Daimler India" width="112" height="72" loading="lazy"></span>
       </div>
       <div class="trusted-marquee-track" aria-hidden="true">
-        <span class="trusted-item">HAL</span>
-        <span class="trusted-item">ISRO</span>
-        <span class="trusted-item">Indian Railways</span>
-        <span class="trusted-item">Tata Motors</span>
-        <span class="trusted-item">Siemens</span>
-        <span class="trusted-item">Honeywell</span>
-        <span class="trusted-item">Schneider Electric</span>
-        <span class="trusted-item">ABB</span>
-        <span class="trusted-item">Maruti Suzuki</span>
-        <span class="trusted-item">Alstom</span>
-        <span class="trusted-item">GE Energy</span>
-        <span class="trusted-item">Mitsubishi Electric</span>
-      </div>
-    </div>
-
-    <!-- Row 2 — scrolls right (reverse) -->
-    <div class="trusted-marquee-row rev">
-      <div class="trusted-marquee-track">
-        <span class="trusted-item">Ashok Leyland</span>
-        <span class="trusted-item">DRDO</span>
-        <span class="trusted-item">Bombardier</span>
-        <span class="trusted-item">Hyundai India</span>
-        <span class="trusted-item">CRRC</span>
-        <span class="trusted-item">Aptiv</span>
-        <span class="trusted-item">Yazaki</span>
-        <span class="trusted-item">Ford India</span>
-        <span class="trusted-item">NTPC</span>
-        <span class="trusted-item">TVS Motors</span>
-        <span class="trusted-item">Renault–Nissan</span>
-        <span class="trusted-item">Daimler India</span>
-      </div>
-      <div class="trusted-marquee-track" aria-hidden="true">
-        <span class="trusted-item">Ashok Leyland</span>
-        <span class="trusted-item">DRDO</span>
-        <span class="trusted-item">Bombardier</span>
-        <span class="trusted-item">Hyundai India</span>
-        <span class="trusted-item">CRRC</span>
-        <span class="trusted-item">Aptiv</span>
-        <span class="trusted-item">Yazaki</span>
-        <span class="trusted-item">Ford India</span>
-        <span class="trusted-item">NTPC</span>
-        <span class="trusted-item">TVS Motors</span>
-        <span class="trusted-item">Renault–Nissan</span>
-        <span class="trusted-item">Daimler India</span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/HAL.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/TATA.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/siemens.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/7.ABB-1.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Maruti_Suzuki-.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Alstom.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Ashok-leyland.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/BOMBARDIER.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Hyundai.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/CRRC.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Aptiv.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/6.yazaki.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/2.ford-2.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/NTPC.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/TVS.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Renault-Nissian.jpg" alt="" width="112" height="72" loading="lazy"></span>
+        <span class="trusted-item"><img class="trusted-logo" src="/assets/partners/Daimalar.jpg" alt="" width="112" height="72" loading="lazy"></span>
       </div>
     </div>
   </section>
