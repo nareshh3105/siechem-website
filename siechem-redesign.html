@@ -2165,7 +2165,7 @@
         // video's src is assigned lazily on window load, and assigning a new
         // src resets the rate back to 1. Setting it once up front silently
         // did nothing. Re-apply on every load and play.
-        const applyRate = () => { try { heroVideo.playbackRate = 2.5; } catch (e) {} };
+        const applyRate = () => { try { heroVideo.playbackRate = 2.3; } catch (e) {} };
         applyRate();
         heroVideo.addEventListener('loadedmetadata', applyRate);
         heroVideo.addEventListener('play', applyRate);
