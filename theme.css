@@ -172,7 +172,9 @@ img { display: block; max-width: 100%; height: auto; }
   white-space: nowrap;
 }
 .nav-link:hover { color: var(--accent); }
-.nav-link.active { color: var(--accent); font-weight: 700; background: var(--accent-soft); }
+/* Active page is marked by the red label + the underline rule below;
+   the tinted block behind it was redundant and read as a coloured pill. */
+.nav-link.active { color: var(--accent); font-weight: 700; }
 
 /* ─── Company Dropdown Mega-Menu ─── */
 .nav-company-dropdown { position: relative; }
