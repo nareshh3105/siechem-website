@@ -2157,16 +2157,15 @@
       // Hero Video Load & Autoplay Controller
       const heroVideo = document.getElementById('hero-video');
       if (heroVideo) {
-        // Seek only once metadata is available; seeking before that throws
-        // on some mobile browsers and can stall loading.
-        const seekToStart = () => { try { heroVideo.currentTime = 2; } catch (e) {} };
-        if (heroVideo.readyState >= 1) seekToStart();
-        else heroVideo.addEventListener('loadedmetadata', seekToStart, { once: true });
+        // The hero plays the full 115s clip from the beginning. It used to
+        // seek to t=2 to skip a dark intro, but only the single frame at t=0
+        // is black (brightness is already ~111/255 by t=0.5s), so the seek
+        // only cost the opening shot.
         // playbackRate must be (re)applied AFTER the source loads: the hero
         // video's src is assigned lazily on window load, and assigning a new
         // src resets the rate back to 1. Setting it once up front silently
         // did nothing. Re-apply on every load and play.
-        const applyRate = () => { try { heroVideo.playbackRate = 2.0; } catch (e) {} };
+        const applyRate = () => { try { heroVideo.playbackRate = 2.5; } catch (e) {} };
         applyRate();
         heroVideo.addEventListener('loadedmetadata', applyRate);
         heroVideo.addEventListener('play', applyRate);
