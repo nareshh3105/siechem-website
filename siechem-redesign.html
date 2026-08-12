@@ -142,7 +142,7 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
+      border-radius:0;
       overflow: hidden;
       transition: all 0.25s ease;
       box-shadow: 0 8px 32px rgba(0,0,0,0.15);
@@ -187,7 +187,6 @@
       cursor: pointer;
     }
     .hero-search-btn:hover {
-      background: var(--accent-2);
     }
 
     /* ───────── Product Ribbon ───────── */
@@ -221,16 +220,13 @@
       padding: 10px 22px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius:0;
       font-size: 13.5px;
       font-weight: 700;
       color: var(--text);
       transition: all 0.2s ease;
     }
     .ribbon-link:hover {
-      background: var(--accent-soft);
-      border-color: var(--accent);
-      color: var(--accent);
       transform: translateY(-1px);
     }
     .ribbon-link svg {
@@ -296,9 +292,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     .carousel-nav-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
       transform: scale(1.06);
       box-shadow: 0 4px 12px rgba(224,0,0, 0.12);
     }
@@ -325,7 +318,7 @@
       aspect-ratio: 16 / 10.5;
       min-width: 320px;
       position: relative;
-      border-radius: var(--radius-lg);
+      border-radius:0;
       overflow: hidden;
       background: #FFFFFF;
       cursor: pointer;
@@ -338,7 +331,6 @@
     .video-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 40px rgba(224,0,0, 0.14);
-      border-color: rgba(224,0,0, 0.35);
     }
     .video-card-inner {
       width: 100%;
@@ -376,7 +368,6 @@
       transition: background 0.4s ease;
     }
     .video-card:hover .video-card-overlay {
-      background: rgba(0,0,0,0.42);
     }
     .video-card-badge {
       position: absolute;
@@ -384,7 +375,7 @@
       left: 18px;
       z-index: 2;
       padding: 6px 12px;
-      border-radius: 6px;
+      border-radius:0;
       font-family: var(--mono);
       font-size: 11px;
       font-weight: 700;
@@ -398,8 +389,6 @@
       transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .video-card:hover .video-card-badge {
-      background: var(--accent);
-      border-color: var(--accent-light);
       box-shadow: 0 4px 12px rgba(224,0,0, 0.4);
     }
     .video-card-play-btn {
@@ -424,9 +413,6 @@
     }
     .video-card:hover .video-card-play-btn {
       transform: translate(-50%, -50%) scale(1.1);
-      background: var(--accent);
-      border-color: var(--accent-light);
-      color: #FFFFFF;
       opacity: 1;
       box-shadow: 0 0 24px rgba(224,0,0, 0.65);
     }
@@ -460,7 +446,6 @@
       transition: color 0.3s ease;
     }
     .video-card:hover .video-card-desc {
-      color: #FFFFFF;
     }
 
     /* ───────── Video Lightbox Modal ───────── */
@@ -492,7 +477,7 @@
       max-width: 960px;
       aspect-ratio: 16 / 9;
       background: #000000;
-      border-radius: var(--radius-lg);
+      border-radius:0;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.15);
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
@@ -523,8 +508,6 @@
       -webkit-backdrop-filter: blur(6px);
     }
     .video-modal-close:hover {
-      background: var(--accent);
-      border-color: var(--accent-light);
       transform: scale(1.08);
     }
     .video-modal-body {
@@ -605,7 +588,7 @@
     .caps-stats-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius:0;
       padding: 40px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.01);
       display: grid;
@@ -674,7 +657,7 @@
       flex-direction: column;
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius:0;
       padding: 24px 24px 22px;
       box-shadow: 0 6px 22px rgba(0,0,0,0.03);
       transition: box-shadow 0.22s var(--ease-out), transform 0.22s var(--ease-out);
@@ -698,7 +681,7 @@
     .tst-logo-tile {
       width: 76px; height: 54px;
       flex-shrink: 0;
-      border-radius: 10px;
+      border-radius:0;
       border: 1px solid var(--border);
       background: #FFFFFF;
       display: flex;
@@ -975,7 +958,7 @@
       position: relative;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius:0;
       padding: 26px 22px 22px;
       transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       overflow: hidden;
@@ -997,7 +980,6 @@
     }
     .ind-card:hover {
       transform: translateY(-5px);
-      border-color: var(--accent-border);
       box-shadow: 0 16px 36px rgba(224,0,0,0.10);
     }
     .ind-card:hover::after { transform: scaleX(1); }
@@ -1007,7 +989,7 @@
       margin: -26px -22px 14px;
       background-size: cover;
       background-position: center;
-      border-radius: 14px 14px 0 0;
+      border-radius:0;
       flex-shrink: 0;
     }
     .ind-name {
@@ -1099,7 +1081,7 @@
       position: relative;
       z-index: 2;
       border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 16px;
+      border-radius:0;
       overflow: hidden;
     }
     .stats-band-item {
@@ -1108,7 +1090,7 @@
       border-right: 1px solid rgba(255,255,255,0.07);
       transition: background 0.3s;
     }
-    .stats-band-item:hover { background: rgba(224,0,0,0.06); }
+    .stats-band-item:hover { background: transparent; }
     .stats-band-item:last-child { border-right: none; }
     .stats-num {
       font-size: clamp(38px, 4.5vw, 56px);
@@ -1169,7 +1151,7 @@
       height: 2px;
       background: var(--border);
       z-index: 0;
-      border-radius: 2px;
+      border-radius:0;
     }
     .process-connector-fill {
       position: absolute;
@@ -1177,7 +1159,7 @@
       height: 100%;
       width: 0%;
       background: var(--accent);
-      border-radius: 2px;
+      border-radius:0;
       transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
     }
     .process-step {
@@ -1263,7 +1245,7 @@
     .precision-img {
       width: 100%;
       height: auto;
-      border-radius: 16px;
+      border-radius:0;
       display: block;
       object-fit: cover;
       box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(224,0,0,0.18);
@@ -1315,12 +1297,11 @@
       padding: 14px 14px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 10px;
+      border-radius:0;
       transition: background 0.2s, border-color 0.2s;
     }
     .wire-layer-item:hover {
-      background: rgba(224,0,0,0.08);
-      border-color: rgba(224,0,0,0.22);
+      /* no colour change -- flat surfaces stay flat */
     }
     .wire-layer-dot {
       width: 10px; height: 10px;
@@ -1366,7 +1347,7 @@
     .about-siechem-visual { position: relative; }
     .about-siechem-img {
       width: 100%;
-      border-radius: 20px;
+      border-radius:0;
       display: block;
       box-shadow: 0 24px 64px rgba(0,0,0,0.16);
       transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
@@ -1377,7 +1358,7 @@
       bottom: -18px; right: -18px;
       background: #111111;
       padding: 16px 20px;
-      border-radius: 14px;
+      border-radius:0;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -1417,7 +1398,7 @@
       padding: 16px 12px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius:0;
       border-top: 3px solid var(--accent);
       transition: transform 0.2s, box-shadow 0.2s;
     }

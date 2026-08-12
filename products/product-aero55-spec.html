@@ -43,7 +43,7 @@
   .search-top input {
     width: 100%; padding: 15px 20px 15px 50px;
     background: var(--bg-card); border: 2px solid var(--border);
-    border-radius: 12px; font-size: 14px; color: var(--text);
+    border-radius:0; font-size: 14px; color: var(--text);
     font-family: var(--sans); transition: border-color .15s;
   }
   .search-top input:focus { outline: none; border-color: var(--accent); }
@@ -55,7 +55,7 @@
   .search-drop {
     position: absolute; top: calc(100% + 6px); left: 0; right: 0;
     background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; z-index: 200; display: none;
+    border-radius:0; z-index: 200; display: none;
     box-shadow: 0 12px 36px rgba(0,0,0,.18);
   }
   .search-drop.open { display: block; }
@@ -70,7 +70,7 @@
 
   .step {
     display: flex; gap: 0;
-    border: 1px solid var(--border); border-radius: 14px;
+    border: 1px solid var(--border); border-radius:0;
     overflow: hidden; margin-bottom: 12px;
     background: var(--bg-card);
   }
@@ -104,7 +104,7 @@
   .opt {
     display: flex; align-items: center; gap: 10px;
     padding: 11px 18px; border: 2px solid var(--border);
-    border-radius: 10px; cursor: pointer;
+    border-radius:0; cursor: pointer;
     transition: all .14s; background: var(--bg-soft);
     min-width: 160px;
   }
@@ -125,7 +125,7 @@
   .awg-tile {
     display: flex; flex-direction: column; align-items: center;
     padding: 10px 14px; border: 2px solid var(--border);
-    border-radius: 9px; cursor: pointer; transition: all .14s;
+    border-radius:0; cursor: pointer; transition: all .14s;
     background: var(--bg-soft); min-width: 68px; text-align: center;
   }
   .awg-main { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--text); }
@@ -139,11 +139,11 @@
   .summary-bar {
     display: flex; flex-wrap: wrap; gap: 7px; align-items: center;
     padding: 11px 16px; background: var(--bg-card);
-    border: 1px solid var(--border); border-radius: 10px; margin-bottom: 28px;
+    border: 1px solid var(--border); border-radius:0; margin-bottom: 28px;
   }
   .s-chip {
     display: flex; align-items: center; gap: 5px;
-    padding: 4px 10px; border-radius: 20px; font-size: 11.5px;
+    padding: 4px 10px; border-radius:0; font-size: 11.5px;
     font-weight: 600; font-family: var(--mono);
     background: rgba(224,0,0,.1); color: var(--accent);
     border: 1px solid rgba(224,0,0,.2);
@@ -158,13 +158,13 @@
   .result-box {
     margin-top: 32px; padding: 32px;
     background: #141926;
-    border-radius: 20px; border: 1px solid rgba(255,255,255,.08);
+    border-radius:0; border: 1px solid rgba(255,255,255,.08);
   }
   .r-empty { text-align: center; padding: 48px 0; color: rgba(255,255,255,.3); }
   .r-empty-icon { font-size: 36px; margin-bottom: 12px; }
   .r-progress { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
   .r-step {
-    padding: 4px 12px; border-radius: 20px; font-size: 11px;
+    padding: 4px 12px; border-radius:0; font-size: 11px;
     font-weight: 600; font-family: var(--mono);
     border: 1px dashed rgba(255,255,255,.2); color: rgba(255,255,255,.25);
   }
@@ -174,22 +174,22 @@
   .r-pn span { color: var(--accent); }
   .r-desc { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 4px; margin-bottom: 16px; }
   .r-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
-  .rb { padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; font-family: var(--mono); }
+  .rb { padding: 3px 9px; border-radius:0; font-size: 11px; font-weight: 600; font-family: var(--mono); }
   .rb-g { background:rgba(34,197,94,.12); color:#4ade80; border:1px solid rgba(34,197,94,.2); }
   .rb-b { background:rgba(59,130,246,.12); color:#93c5fd; border:1px solid rgba(59,130,246,.2); }
   .rb-r { background:rgba(224,0,0,.15); color:#fca5a5; border:1px solid rgba(224,0,0,.25); }
   .rb-a { background:rgba(251,191,36,.12); color:#fcd34d; border:1px solid rgba(251,191,36,.2); }
 
   .specs-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 20px; }
-  .sg { background: rgba(255,255,255,.05); border-radius: 10px; padding: 14px 16px; }
+  .sg { background: rgba(255,255,255,.05); border-radius:0; padding: 14px 16px; }
   .sg-l { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,.38); text-transform: uppercase; margin-bottom: 5px; }
   .sg-v { font-size: 18px; font-weight: 700; color: #fff; }
   .sg-u { font-size: 11px; color: rgba(255,255,255,.45); margin-left: 2px; }
 
-  .std-box { padding: 14px 16px; background: rgba(255,255,255,.04); border-radius: 10px; margin-bottom: 20px; }
+  .std-box { padding: 14px 16px; background: rgba(255,255,255,.04); border-radius:0; margin-bottom: 20px; }
   .std-l { font-size: 10px; font-family: var(--mono); color: rgba(255,255,255,.38); text-transform: uppercase; margin-bottom: 8px; }
   .std-list { display: flex; flex-wrap: wrap; gap: 6px; }
-  .std-pill { padding: 3px 9px; border-radius: 5px; font-size: 11px; font-weight: 600; font-family: var(--mono); background: rgba(255,255,255,.07); color: rgba(255,255,255,.55); }
+  .std-pill { padding: 3px 9px; border-radius:0; font-size: 11px; font-weight: 600; font-family: var(--mono); background: rgba(255,255,255,.07); color: rgba(255,255,255,.55); }
 
   .r-cta { display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,.07); padding-top: 20px; margin-top: 4px; }
   .btn-q { padding: 12px 28px; background: var(--accent); color: #fff; border: none; border-radius:0; font-size: 14px; font-weight: 700; cursor: pointer; transition: background .15s; }
@@ -200,13 +200,13 @@
   /* Quote modal */
   .modal-bd { position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:999;display:none;align-items:center;justify-content:center; }
   .modal-bd.open { display: flex; }
-  .modal { background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:36px;width:100%;max-width:480px;margin:20px; }
+  .modal { background:var(--bg);border:1px solid var(--border);border-radius:0;padding:36px;width:100%;max-width:480px;margin:20px; }
   .modal h3 { font-size:22px;font-weight:800;margin-bottom:6px; }
   .modal-sub { color:var(--text-muted);font-size:14px;margin-bottom:18px; }
-  .modal-pn { font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:10px 16px;border-radius:8px;margin-bottom:16px; }
+  .modal-pn { font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:10px 16px;border-radius:0;margin-bottom:16px; }
   .fr { margin-bottom:12px; }
   .fr label { display:block;font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:4px; }
-  .fr input,.fr textarea { width:100%;padding:10px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;font-size:14px;color:var(--text);font-family:var(--sans); }
+  .fr input,.fr textarea { width:100%;padding:10px 14px;background:var(--bg-soft);border:1px solid var(--border);border-radius:0;font-size:14px;color:var(--text);font-family:var(--sans); }
   .fr textarea { resize:vertical;min-height:65px; }
   .modal-acts { display:flex;gap:10px;margin-top:16px; }
   .btn-cancel { padding:10px 20px;background:none;border:1px solid var(--border);border-radius:0;cursor:pointer;font-size:13px;color:var(--text-muted); }
@@ -373,7 +373,7 @@
           <h1 class="page-title">AERO 55<br/><em>Configurator</em></h1>
           <p class="page-lede">6 steps — each one narrows the options. Select your requirements to land on an exact part number with full dimensional data.</p>
         </div>
-        <div class="fade-up fade-up-2" style="display:flex;flex-direction:column;gap:10px;padding:22px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;">
+        <div class="fade-up fade-up-2" style="display:flex;flex-direction:column;gap:10px;padding:22px;background:var(--bg-soft);border:1px solid var(--border);border-radius:0;">
           <div class="spec"><span class="spec-label">Voltage</span><span class="spec-value">600 V</span></div>
           <div class="spec"><span class="spec-label">AWG Range</span><span class="spec-value">10 – 30 AWG</span></div>
           <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−65°C to +200°C</span></div>

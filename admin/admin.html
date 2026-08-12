@@ -15,7 +15,7 @@
     position: sticky; top: 0; z-index: 10;
   }
   .admin-topbar .brand { display: flex; align-items: center; gap: 10px; }
-  .admin-topbar .brand img { height: 28px; border-radius: 4px; }
+  .admin-topbar .brand img { height: 28px; border-radius:0; }
   .admin-topbar .brand span { font-weight: 700; font-size: 15.5px; color: var(--text); }
   .admin-topbar .actions { display: flex; gap: 10px; align-items: center; }
 
@@ -35,7 +35,7 @@
   .stat-row { display: flex; gap: 14px; padding: 22px 24px 4px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; }
   .stat-tile {
     flex: 1; min-width: 140px; background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 12px; padding: 16px 18px;
+    border-radius:0; padding: 16px 18px;
   }
   .stat-tile .num { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.5px; }
   .stat-tile .lbl { font-size: 11.5px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2px; }
@@ -46,7 +46,7 @@
   .search-row { margin: 8px 0 26px; position: relative; max-width: 420px; }
   .search-row svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--text-dim); }
   .search-row input {
-    width: 100%; padding: 10px 14px 10px 38px; border: 1.5px solid var(--border); border-radius: 9px;
+    width: 100%; padding: 10px 14px 10px 38px; border: 1.5px solid var(--border); border-radius:0;
     font-size: 13.5px; background: var(--bg-card); color: var(--text); outline: none; transition: border-color .15s;
   }
   .search-row input:focus { border-color: var(--accent); }
@@ -60,7 +60,7 @@
   .segment-block h2 .seg-count { font-family: var(--mono); font-weight: 500; color: var(--text-dim); font-size: 11.5px; }
   .family-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
   .family-card {
-    position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    position: relative; background: var(--bg-card); border: 1px solid var(--border); border-radius:0;
     padding: 18px 20px 16px; cursor: pointer; transition: border-color .15s, transform .15s, box-shadow .15s;
     text-decoration: none; display: block; overflow: hidden;
   }
@@ -75,11 +75,11 @@
   .family-card .card-foot { display: flex; align-items: center; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
   .family-card .count {
     display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600;
-    color: var(--accent-2); background: var(--accent-soft); padding: 3px 10px; border-radius: 20px;
+    color: var(--accent-2); background: var(--accent-soft); padding: 3px 10px; border-radius:0;
   }
   .family-card .draft-badge {
     display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 600;
-    color: #92400E; background: #FEF3E2; border: 1px solid #FDE3B0; padding: 3px 10px; border-radius: 20px;
+    color: #92400E; background: #FEF3E2; border: 1px solid #FDE3B0; padding: 3px 10px; border-radius:0;
   }
   .family-card .draft-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #D97706; }
   .family-card .go-arrow {

@@ -57,7 +57,7 @@
       padding: 20px 24px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       align-items: flex-start;
     }
     .filter-group { display: flex; flex-direction: column; gap: 8px; }
@@ -67,7 +67,7 @@
     }
     .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
     .fpill {
-      padding: 7px 14px; border-radius: 6px;
+      padding: 7px 14px; border-radius:0;
       border: 1.5px solid var(--border); background: var(--bg-soft);
       font-size: 12.5px; font-weight: 600; color: var(--text-muted);
       cursor: pointer; transition: all 0.15s; white-space: nowrap;
@@ -103,13 +103,12 @@
     width: 320px;
     background: var(--bg-card);
     border: 1.5px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius:0;
     overflow: hidden;
     transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s;
     cursor: pointer;
   }
     .prod-card:hover {
-      border-color: var(--accent-border);
       box-shadow: 0 8px 32px rgba(224,0,0,0.10);
       transform: translateY(-2px);
     }
@@ -120,7 +119,7 @@
     }
     .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
     .badge {
-      padding: 3px 9px; border-radius: 4px; font-family: var(--mono);
+      padding: 3px 9px; border-radius:0; font-family: var(--mono);
       font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
     }
     .badge-voltage { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
@@ -144,7 +143,7 @@
     .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
     .prod-card-media {
       width: 140px; height: 140px; background: #fff;
-      border: 1px solid var(--border); border-radius: 10px;
+      border: 1px solid var(--border); border-radius:0;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden; padding: 8px;
     }
@@ -166,7 +165,7 @@
       border-radius:0; padding: 6px 12px;
       transition: background 0.15s, color 0.15s;
     }
-    .prod-card-btn:hover { background: var(--accent); color: #fff; }
+    .prod-card-btn:hover { }
 
     /* ── Spec Sheet Modal ────────────────────── */
     .spec-overlay {
@@ -179,7 +178,7 @@
     }
     .spec-overlay.open { opacity: 1; visibility: visible; }
     .spec-sheet {
-      background: var(--bg-card); border-radius: var(--radius-lg);
+      background: var(--bg-card); border-radius:0;
       width: 100%; max-width: 920px;
       border: 1px solid var(--border);
       box-shadow: 0 24px 64px rgba(0,0,0,0.18);
@@ -197,7 +196,7 @@
     .spec-sheet-cat { font-family: var(--mono); font-size: 11px; color: var(--accent-2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
     .spec-sheet-title { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; color: var(--text); }
     .spec-close {
-      width: 32px; height: 32px; border-radius: 8px;
+      width: 32px; height: 32px; border-radius:0;
       background: var(--bg-soft); border: 1.5px solid var(--border);
       display: flex; align-items: center; justify-content: center;
       font-size: 18px; color: var(--text-muted); cursor: pointer;
@@ -215,7 +214,7 @@
     .spec-kv-row .v { font-weight: 500; color: var(--text); }
     .standards-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
     .std-chip {
-      padding: 4px 10px; border-radius: 5px;
+      padding: 4px 10px; border-radius:0;
       background: var(--bg-soft); border: 1px solid var(--border);
       font-family: var(--mono); font-size: 11px; font-weight: 600;
       color: var(--text-muted); white-space: nowrap;
@@ -224,7 +223,7 @@
     .spec-search-wrap {
       display: flex; align-items: center; gap: 10px;
       background: var(--bg-soft); border: 1.5px solid var(--border);
-      border-radius: 8px; padding: 9px 14px; margin-bottom: 10px;
+      border-radius:0; padding: 9px 14px; margin-bottom: 10px;
       transition: border-color 0.15s;
     }
     .spec-search-wrap:focus-within { border-color: var(--accent); }
@@ -243,7 +242,7 @@
       text-align: center; padding: 20px; font-size: 13px; color: var(--text-faint);
       font-family: var(--mono); display: none;
     }
-    .part-table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 20px; }
+    .part-table-wrap { overflow-x: auto; border-radius:0; border: 1px solid var(--border); margin-bottom: 20px; }
     .part-table { width: 100%; border-collapse: collapse; font-size: 13px; }
     .part-table thead tr { background: var(--bg-soft); }
     .part-table th {
@@ -263,15 +262,15 @@
       cursor: pointer; transition: background 0.15s, color 0.15s;
       font-family: inherit;
     }
-    .part-table .quote-row-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .part-table .quote-row-btn:hover { }
     .color-note {
       padding: 12px 16px; background: var(--bg-soft); border: 1px solid var(--border);
-      border-radius: 8px; font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
+      border-radius:0; font-size: 12.5px; color: var(--text-muted); line-height: 1.6;
     }
     .color-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
     .color-chip {
       display: inline-flex; align-items: center; gap: 5px;
-      padding: 3px 8px; border-radius: 4px; font-size: 11px;
+      padding: 3px 8px; border-radius:0; font-size: 11px;
       font-family: var(--mono); font-weight: 600; color: var(--text-muted);
       border: 1px solid var(--border); background: #fff;
     }
@@ -285,7 +284,7 @@
     }
     .quote-overlay.open { opacity: 1; visibility: visible; }
     .quote-box {
-      background: var(--bg-card); border-radius: var(--radius-lg);
+      background: var(--bg-card); border-radius:0;
       width: 100%; max-width: 560px; max-height: 92vh; overflow-y: auto;
       padding: 32px; border: 1px solid var(--border);
       box-shadow: 0 24px 64px rgba(0,0,0,0.22);
@@ -300,7 +299,7 @@
     .field { display: flex; flex-direction: column; gap: 5px; }
     .field label { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-faint); }
     .field input, .field textarea, .field select {
-      background: #fff; border: 1.5px solid var(--border); border-radius: 8px;
+      background: #fff; border: 1.5px solid var(--border); border-radius:0;
       padding: 11px 13px; color: var(--text); font-family: inherit;
       font-size: 14px; outline: none; transition: border-color 0.15s, box-shadow 0.15s;
     }
@@ -309,7 +308,7 @@
     }
     .field textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
     .quote-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-    .q-success, .q-error { display: none; padding: 14px 16px; border-radius: 8px; font-size: 14px; }
+    .q-success, .q-error { display: none; padding: 14px 16px; border-radius:0; font-size: 14px; }
     .q-success { background: #F0FDF4; border: 1px solid #BBF7D0; color: #15803D; }
     .q-error { background: #FFF1F2; border: 1px solid #FFB3B8; color: #BE123C; }
 
@@ -487,7 +486,7 @@
             <span class="tag">NEMA WC 27500</span>
           </div>
         </div>
-        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;gap:14px;">
+        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:0;display:flex;flex-direction:column;gap:14px;">
           <div style="display:flex;justify-content:space-between;gap:16px;">
             <div class="spec"><span class="spec-label">Voltage Range</span><span class="spec-value">600V – 2500V</span></div>
             <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−65°C <span class="unit">to</span> +200°C</span></div>
@@ -518,14 +517,14 @@
 
         <!-- AERO 44 -->
         <a href="#" onclick="revealVariants(); return false;" style="text-decoration:none;">
-          <div style="background:var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+          <div style="background:var(--accent);border-radius:0;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
             <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.55);margin-bottom:14px;">XLPO · PVDF · E-BEAM XL</div>
             <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 44</div>
             <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;">MIL-W-81044 · DGAQA · AS9100</div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">600V / 1000V / 2500V</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">9 Families</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">AWG 30–8</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">600V / 1000V / 2500V</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">9 Families</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">AWG 30–8</span>
             </div>
             <div style="margin-top:16px;font-size:13px;font-weight:700;color:#fff;">Browse variants →</div>
           </div>
@@ -533,14 +532,14 @@
 
         <!-- AERO 55 -->
         <a href="/products/product-aero55.html" style="text-decoration:none;">
-          <div style="background:#141926;border:2px solid var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(224,0,0,0.25)'" onmouseout="this.style.boxShadow='none'">
+          <div style="background:#141926;border:2px solid var(--accent);border-radius:0;padding:24px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(224,0,0,0.25)'" onmouseout="this.style.boxShadow='none'">
             <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:14px;">EBXL ETFE · SAE AS22759</div>
             <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 55</div>
             <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;">DEF-STAN · Boeing BMS · Airbus ABS</div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">600V</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">15 Families</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">AWG 30–8</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">600V</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">15 Families</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">AWG 30–8</span>
             </div>
             <div style="margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);">Browse variants →</div>
           </div>

@@ -11,7 +11,7 @@
     .ts-doc-layout { display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start; }
     .ts-doc-sidebar {
       position: sticky; top: 90px;
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius:0;
       padding: 10px; max-height: calc(100vh - 120px); overflow-y: auto;
     }
     .ts-doc-sidebar h3 {
@@ -20,7 +20,7 @@
       padding: 8px 12px 6px;
     }
     .ts-doc-sidebar a {
-      display: block; padding: 8px 12px; border-radius: 8px;
+      display: block; padding: 8px 12px; border-radius:0;
       font-size: 13px; line-height: 1.4; color: var(--text-muted); text-decoration: none;
       transition: background 0.12s, color 0.12s;
     }
@@ -34,7 +34,7 @@
       width: auto; max-width: 100%;
       max-height: calc(100vh - 220px);
       height: auto;
-      border: 1px solid var(--border); border-radius: 10px;
+      border: 1px solid var(--border); border-radius:0;
       box-shadow: 0 6px 24px rgba(0,0,0,0.07);
       background: #fff;
       margin: 0 auto;
@@ -44,7 +44,7 @@
       .ts-doc-page { width: 100%; max-height: none; }
     }
     .ts-doc-pdf {
-      width: 100%; height: 84vh; border: 1px solid var(--border); border-radius: 10px;
+      width: 100%; height: 84vh; border: 1px solid var(--border); border-radius:0;
       box-shadow: 0 6px 24px rgba(0,0,0,0.07); background: #fff;
     }
     .ts-doc-pager { display: flex; justify-content: center; gap: 8px; margin: 18px 0; flex-wrap: wrap; }

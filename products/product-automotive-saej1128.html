@@ -79,7 +79,7 @@
       transition: color 0.15s, border-color 0.15s;
       white-space: nowrap;
     }
-    .tab:hover { color: var(--text); }
+    .tab:hover { }
     .tab.active { color: var(--text); border-bottom-color: var(--accent); }
     .tab-panel { display: none; animation: fadeUp 0.4s ease; }
     .tab-panel.active { display: block; }
@@ -94,7 +94,7 @@
     .interactive-controls {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       padding: 24px;
       margin-bottom: 32px;
       box-shadow: var(--shadow-card);
@@ -121,7 +121,7 @@
       padding: 11px 14px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-radius:0;
       color: var(--text);
       font-family: inherit;
       font-size: 14px;
@@ -144,7 +144,7 @@
 
     .variant-table-container {
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       overflow: hidden;
       box-shadow: var(--shadow-card);
       margin-bottom: 32px;
@@ -169,7 +169,7 @@
     .type-badge {
       display: inline-block;
       padding: 2px 8px;
-      border-radius: 4px;
+      border-radius:0;
       font-size: 10.5px;
       font-weight: 700;
       font-family: var(--mono);
@@ -212,7 +212,7 @@
     .builder-form {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       padding: 28px;
       box-shadow: var(--shadow-card);
     }
@@ -221,7 +221,7 @@
       top: 96px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       padding: 28px;
       box-shadow: var(--shadow-card);
     }
@@ -232,7 +232,7 @@
       color: var(--accent);
       background: var(--bg-soft);
       padding: 16px 20px;
-      border-radius: 10px;
+      border-radius:0;
       border: 1px solid var(--border);
       text-align: center;
       letter-spacing: 0.04em;
@@ -299,7 +299,7 @@
     .modal-content {
       background: var(--bg);
       border: 1px solid var(--border-strong);
-      border-radius: var(--radius-lg);
+      border-radius:0;
       padding: 36px;
       width: 100%;
       max-width: 500px;
@@ -604,7 +604,7 @@
         <div class="section-head" style="margin-bottom: 24px;">
           <p class="section-eyebrow">Filter &amp; Search</p>
           <h2 class="section-title">SAE J1128 Cable Variants</h2>
-          <p class="section-sub">Filter by spec standard, cable type, size, and insulation colour. Part numbers end in <code style="font-family:var(--mono); background:var(--bg-soft); padding:1px 5px; border-radius:4px;">-XX</code> — replace XX with your colour code when ordering.</p>
+          <p class="section-sub">Filter by spec standard, cable type, size, and insulation colour. Part numbers end in <code style="font-family:var(--mono); background:var(--bg-soft); padding:1px 5px; border-radius:0;">-XX</code> — replace XX with your colour code when ordering.</p>
         </div>
 
         <div class="interactive-controls">
@@ -691,8 +691,8 @@
           </div>
         </div>
 
-        <div style="background:var(--bg-soft); border:1px solid var(--border); border-radius:10px; padding:18px 22px; font-size:13px; color:var(--text-muted); line-height:1.7;">
-          <strong style="color:var(--text);">Colour Code Note:</strong> Replace <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">XX</code> in the part number with your required colour code (e.g. <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">04</code> for Black, <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:3px;">09</code> for White). 90+ single and dual-colour options available — use the Part Number Builder tab to configure your exact specification.
+        <div style="background:var(--bg-soft); border:1px solid var(--border); border-radius:0; padding:18px 22px; font-size:13px; color:var(--text-muted); line-height:1.7;">
+          <strong style="color:var(--text);">Colour Code Note:</strong> Replace <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:0;">XX</code> in the part number with your required colour code (e.g. <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:0;">04</code> for Black, <code style="font-family:var(--mono); background:var(--bg); padding:1px 5px; border-radius:0;">09</code> for White). 90+ single and dual-colour options available — use the Part Number Builder tab to configure your exact specification.
         </div>
       </div>
 
@@ -753,22 +753,22 @@
             <p style="color:var(--text-muted); margin-bottom:24px;">Siechem GXL/SXL cables are manufactured in an AS9100D, ISO 9001 and ISO 14001 certified facility. All wires are 100% spark-tested and meet RoHS EU Directive.</p>
 
             <div style="display:flex; flex-direction:column; gap:16px;">
-              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+              <div style="padding:18px; border:1px solid var(--border); border-radius:0; background:var(--bg-card);">
                 <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">GXL — General Purpose Cross-linked</h4>
                 <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Thin-wall XLPO insulation for general vehicle wiring applications. Smaller outer diameter and lower weight than standard PVC alternatives. Available in bare and tinned conductor variants.</p>
               </div>
-              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+              <div style="padding:18px; border:1px solid var(--border); border-radius:0; background:var(--bg-card);">
                 <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">SXL — Special Purpose Cross-linked</h4>
                 <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Thicker-wall XLPO for demanding underhood and special purpose applications. Provides greater mechanical protection for environments with higher abrasion or vibration exposure.</p>
               </div>
-              <div style="padding:18px; border:1px solid var(--border); border-radius:10px; background:var(--bg-card);">
+              <div style="padding:18px; border:1px solid var(--border); border-radius:0; background:var(--bg-card);">
                 <h4 style="font-weight:700; font-size:15px; color:var(--accent-2); margin-bottom:6px;">EBXL Technology</h4>
                 <p style="font-size:13px; color:var(--text-muted); line-height:1.6;">Electron beam crosslinking creates a three-dimensional polymer network that prevents melting at elevated temperatures, improves cut-through resistance, and maintains flexibility in cold environments down to −40°C.</p>
               </div>
             </div>
           </div>
 
-          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:28px; box-shadow:var(--shadow-card);">
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:0; padding:28px; box-shadow:var(--shadow-card);">
             <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">Technical Characteristics</h3>
             <table class="spec-table">
               <tr><td>Standard</td><td>SAE J1128 : 2015</td></tr>
@@ -792,67 +792,67 @@
         <div style="margin-top:48px;">
           <h3 style="font-size:18px; font-weight:700; margin-bottom:16px;">Standard Colour Code Reference</h3>
           <div style="display:flex; flex-wrap:wrap; gap:10px;">
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#E00000;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Red — 01
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#EAB308;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Yellow — 02
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#2563EB;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Blue — 03
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#1a1a1a;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Black — 04
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#16A34A;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Green — 05
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#84cc16;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Yellow-Green — 06
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#6B7280;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Grey — 07
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#78350F;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Brown — 08
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#fff;border:1px solid rgba(0,0,0,0.25);display:inline-block;"></span> White — 09
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#EA580C;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Orange — 10
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#7C3AED;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Violet — 11
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#6d3a1f;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Chocolate — 12
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#d2b48c;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Tan — 13
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#36454F;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Charcoal — 14
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#93c5fd;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> LT Blue — 15
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#4b5563;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Grey — 16
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#86efac;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> LT Green — 17
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#14532d;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Green — 18
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#1d4ed8;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> DK Blue — 19
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#6b21a8;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Purple — 20
             </div>
-            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; font-size:13px; font-family:var(--mono);">
+            <div style="display:flex; align-items:center; gap:8px; padding:8px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:0; font-size:13px; font-family:var(--mono);">
               <span style="width:16px;height:16px;border-radius:50%;background:#f9a8d4;border:1px solid rgba(0,0,0,0.1);display:inline-block;"></span> Pink — 21
             </div>
           </div>
@@ -869,7 +869,7 @@
         </div>
 
         <div class="grid grid-3" style="gap:24px;">
-          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:0;overflow:hidden;box-shadow:var(--shadow-card);">
             <div style="aspect-ratio:16/10;background:#172033;display:flex;align-items:center;justify-content:center;position:relative;">
               <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><path d="M2 20h20M17 17l1-5h3v5M4 17l1-9h3v9M9 17h6M11 6V3h2v3"/></svg>
               <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">1.5 / 3.0 MeV accelerator</span>
@@ -880,7 +880,7 @@
             </div>
           </div>
 
-          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:0;overflow:hidden;box-shadow:var(--shadow-card);">
             <div style="aspect-ratio:16/10;background:#172033;display:flex;align-items:center;justify-content:center;position:relative;">
               <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 16v-4M12 8h.01"/></svg>
               <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">100% Spark Tested</span>
@@ -891,7 +891,7 @@
             </div>
           </div>
 
-          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);">
+          <div class="facility-card" style="background:var(--bg-card);border:1px solid var(--border);border-radius:0;overflow:hidden;box-shadow:var(--shadow-card);">
             <div style="aspect-ratio:16/10;background:#172033;display:flex;align-items:center;justify-content:center;position:relative;">
               <svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"><path d="M4 4h16v16H4z M12 4v16 M4 12h16"/></svg>
               <span style="position:absolute;bottom:12px;left:16px;font-family:var(--mono);font-size:10px;color:#fff;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">400,000 sq.ft facility</span>

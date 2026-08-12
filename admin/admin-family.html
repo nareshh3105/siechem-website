@@ -15,7 +15,7 @@
     position: sticky; top: 0; z-index: 10;
   }
   .admin-topbar .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
-  .admin-topbar .brand img { height: 26px; border-radius: 4px; flex-shrink: 0; }
+  .admin-topbar .brand img { height: 26px; border-radius:0; flex-shrink: 0; }
   .admin-topbar .brand a {
     display: inline-flex; align-items: center; gap: 4px; color: var(--text-muted); font-weight: 500;
     font-size: 13px; text-decoration: none; flex-shrink: 0;
@@ -31,7 +31,7 @@
   .admin-wrap > * { min-width: 0; }
   @media (max-width: 900px) { .admin-wrap { grid-template-columns: 1fr; } }
 
-  .series-list { border: 1px solid var(--border); border-radius: 12px; background: var(--bg-card); overflow: hidden; align-self: start; position: sticky; top: 80px; }
+  .series-list { border: 1px solid var(--border); border-radius:0; background: var(--bg-card); overflow: hidden; align-self: start; position: sticky; top: 80px; }
   @media (max-width: 900px) {
     /* A sticky sidebar-with-its-own-scroll-region is awkward once it's
        stacked above the editor instead of beside it — let it scroll inline. */
@@ -42,7 +42,7 @@
   .series-search { position: relative; }
   .series-search svg { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); color: var(--text-dim); }
   .series-search input {
-    width: 100%; padding: 7px 10px 7px 28px; border: 1.5px solid var(--border); border-radius: 7px;
+    width: 100%; padding: 7px 10px 7px 28px; border: 1.5px solid var(--border); border-radius:0;
     font-size: 12.5px; outline: none; transition: border-color .15s;
   }
   .series-search input:focus { border-color: var(--accent); }
@@ -68,14 +68,14 @@
   .editor-panel { min-height: 300px; }
   .editor-empty {
     color: var(--text-muted); padding: 90px 20px; text-align: center; background: var(--bg-card);
-    border: 1px dashed var(--border-strong); border-radius: 12px; font-size: 13.5px;
+    border: 1px dashed var(--border-strong); border-radius:0; font-size: 13.5px;
   }
   .editor-head {
     display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius:0; padding: 14px 16px;
   }
   .editor-head input.name-input {
-    font-size: 17px; font-weight: 700; border: 1px solid transparent; padding: 7px 9px; border-radius: 7px;
+    font-size: 17px; font-weight: 700; border: 1px solid transparent; padding: 7px 9px; border-radius:0;
     background: none; flex: 1; min-width: 200px; color: var(--text);
   }
   .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-soft); }
@@ -87,11 +87,11 @@
   .btn-danger-ghost:hover { background: #FEF2F2; }
   .btn-danger-ghost.btn-sm { padding: 6px 12px; font-size: 12.5px; }
 
-  .card-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+  .card-section { background: var(--bg-card); border: 1px solid var(--border); border-radius:0; padding: 18px 20px; margin-bottom: 18px; }
 
   .image-uploader { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
   .image-preview {
-    width: 96px; height: 96px; flex-shrink: 0; border-radius: 10px;
+    width: 96px; height: 96px; flex-shrink: 0; border-radius:0;
     background: #fff; border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center; overflow: hidden;
   }
@@ -120,11 +120,11 @@
 
   .info-editor { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 700px) { .info-editor { grid-template-columns: 1fr; } }
-  .info-editor .block { border: 1px solid var(--border); border-radius: 9px; padding: 11px 13px; background: var(--bg-soft); }
+  .info-editor .block { border: 1px solid var(--border); border-radius:0; padding: 11px 13px; background: var(--bg-soft); }
   .info-editor .block h4 { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; }
   .info-editor .block h4 .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
   .info-editor textarea {
-    width: 100%; min-height: 84px; border: 1px solid var(--border); border-radius: 7px; padding: 8px;
+    width: 100%; min-height: 84px; border: 1px solid var(--border); border-radius:0; padding: 8px;
     font-size: 12.5px; font-family: inherit; resize: vertical; background: var(--bg-card); outline: none; transition: border-color .15s;
   }
   .info-editor textarea:focus { border-color: var(--accent); }
@@ -132,22 +132,22 @@
   /* Extra info sections: full page-width landscape boxes stacked below the
      fixed Application/Construction/Technical/Features 2x2 grid. */
   .info-extra-block {
-    border: 1px solid var(--border); border-radius: 9px; padding: 11px 13px;
+    border: 1px solid var(--border); border-radius:0; padding: 11px 13px;
     background: var(--bg-soft); margin-top: 14px;
   }
   .info-extra-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
   .info-extra-title {
-    flex: 1; border: 1px solid var(--border); border-radius: 7px; padding: 7px 9px;
+    flex: 1; border: 1px solid var(--border); border-radius:0; padding: 7px 9px;
     font-size: 12.5px; font-weight: 700; color: var(--text-muted); background: var(--bg-card); outline: none;
   }
   .info-extra-title:focus { border-color: var(--accent); }
   .info-extra-block textarea {
-    width: 100%; min-height: 70px; border: 1px solid var(--border); border-radius: 7px; padding: 8px;
+    width: 100%; min-height: 70px; border: 1px solid var(--border); border-radius:0; padding: 8px;
     font-size: 12.5px; font-family: inherit; resize: vertical; background: var(--bg-card); outline: none; transition: border-color .15s;
   }
   .info-extra-block textarea:focus { border-color: var(--accent); }
 
-  .table-scroll { overflow-x: auto; border-radius: 9px; border: 1px solid var(--border); }
+  .table-scroll { overflow-x: auto; border-radius:0; border: 1px solid var(--border); }
   /* table-layout:auto (not fixed) lets each column grow to fit its content
      instead of being squeezed into an equal/percentage split — if the sum
      exceeds the card width, .table-scroll's overflow-x:auto kicks in rather
@@ -182,7 +182,7 @@
     letter-spacing: 0; opacity: 0.55;
   }
   table.spec-table input.h-group:focus {
-    outline: none; background: #fff; border-radius: 4px;
+    outline: none; background: #fff; border-radius:0;
     box-shadow: 0 0 0 2px var(--accent-soft);
   }
 
@@ -213,7 +213,7 @@
     position: absolute; inset: 0; z-index: 20;
     width: auto; min-width: 100%; height: auto; min-height: 100%;
     background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,0.16);
-    border-radius: 5px; text-align: center;
+    border-radius:0; text-align: center;
   }
   table.spec-table td.cell-wide input:focus { min-width: 320px; }
   table.spec-table td input:focus, table.spec-table th input:focus, table.spec-table th textarea:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -246,7 +246,7 @@
     display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
     width: min(430px, 92vw); max-height: 60vh; overflow-y: auto;
     background: var(--bg-card); border: 1px solid var(--border-strong);
-    border-radius: 10px; padding: 12px 13px;
+    border-radius:0; padding: 12px 13px;
     box-shadow: 0 12px 34px rgba(0,0,0,0.16);
   }
   .char-palette.open { display: block; }
@@ -258,7 +258,7 @@
   .cp-chars { display: flex; flex-wrap: wrap; gap: 4px; }
   .cp-ch {
     min-width: 30px; height: 30px; padding: 0 7px;
-    border: 1px solid var(--border); border-radius: 6px;
+    border: 1px solid var(--border); border-radius:0;
     background: var(--bg-soft); cursor: pointer;
     font-size: 14px; font-family: var(--mono); color: var(--text);
     display: inline-flex; align-items: center; justify-content: center;
@@ -268,7 +268,7 @@
 
   .save-bar {
     position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px; flex-wrap: wrap;
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 18px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius:0; padding: 14px 18px;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
   }
   #saveMsg { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 500; color: var(--text-muted); }
@@ -287,7 +287,7 @@
     max-width: 1320px; margin: 0 auto; padding: 0 24px;
   }
   .colorcode-card {
-    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius:0;
     margin-top: 16px; overflow: hidden;
   }
   .colorcode-head {
@@ -310,7 +310,7 @@
   }
   .cc-note-input {
     width: 100%; font: inherit; font-size: 13px; line-height: 1.6;
-    padding: 9px 11px; border: 1px solid var(--border); border-radius: 7px;
+    padding: 9px 11px; border: 1px solid var(--border); border-radius:0;
     background: #fff; color: var(--text); resize: vertical; min-height: 54px;
   }
   .cc-note-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
@@ -318,7 +318,7 @@
   .colorcode-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
   .colorcode-chip {
     display: flex; align-items: center; gap: 6px;
-    background: var(--bg-soft); border: 1px solid var(--border); border-radius: 8px;
+    background: var(--bg-soft); border: 1px solid var(--border); border-radius:0;
     padding: 6px 6px 6px 10px;
   }
   .colorcode-chip input {
@@ -327,7 +327,7 @@
   }
   .colorcode-chip input.cc-name { width: 90px; font-weight: 600; }
   .colorcode-chip input.cc-code { width: 34px; text-align: center; font-family: var(--mono); color: var(--text-muted); }
-  .colorcode-chip input:focus { background: #fff; border-radius: 5px; box-shadow: 0 0 0 2px var(--accent-soft); }
+  .colorcode-chip input:focus { background: #fff; border-radius:0; box-shadow: 0 0 0 2px var(--accent-soft); }
   .colorcode-chip button {
     border: none; background: none; color: var(--text-dim); cursor: pointer;
     font-size: 15px; line-height: 1; padding: 2px 4px; border-radius:0; flex-shrink: 0;

@@ -34,7 +34,7 @@
     .filter-strip {
       display: flex; flex-wrap: wrap; gap: 20px 32px; padding: 20px 24px;
       background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); align-items: flex-start;
+      border-radius:0; align-items: flex-start;
     }
     .filter-group { display: flex; flex-direction: column; gap: 8px; }
     .filter-label {
@@ -43,7 +43,7 @@
     }
     .filter-pills { display: flex; gap: 6px; flex-wrap: wrap; }
     .fpill {
-      padding: 7px 14px; border-radius: 6px; border: 1.5px solid var(--border);
+      padding: 7px 14px; border-radius:0; border: 1.5px solid var(--border);
       background: var(--bg-soft); font-size: 12.5px; font-weight: 600;
       color: var(--text-muted); cursor: pointer; transition: all 0.15s; white-space: nowrap;
     }
@@ -57,17 +57,17 @@
 
     .prod-card {
       display: flex; flex-direction: column; background: var(--bg-card);
-      border: 1.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;
+      border: 1.5px solid var(--border); border-radius:0; overflow: hidden;
       transition: border-color 0.18s, box-shadow 0.18s, transform 0.18s; cursor: pointer;
       text-decoration: none;
     }
-    .prod-card:hover { border-color: var(--accent-border); box-shadow: 0 8px 32px rgba(224,0,0,0.10); transform: translateY(-2px); }
+    .prod-card:hover { box-shadow: 0 8px 32px rgba(224,0,0,0.10); transform: translateY(-2px); }
     .prod-card-head {
       padding: 18px 20px 14px; border-bottom: 1px solid var(--border);
       background: var(--bg-soft);
     }
     .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
-    .badge { padding: 3px 9px; border-radius: 4px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .badge { padding: 3px 9px; border-radius:0; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
     .badge-voltage { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
     .badge-shielded { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
     .badge-unshielded { background: var(--bg-soft); color: var(--text-faint); border: 1px solid var(--border); }
@@ -83,7 +83,7 @@
     .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
     .prod-card-media {
       width: 140px; height: 140px; background: #fff;
-      border: 1px solid var(--border); border-radius: 10px;
+      border: 1px solid var(--border); border-radius:0;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden; padding: 8px;
     }
@@ -98,7 +98,7 @@
       color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-border);
       border-radius:0; padding: 6px 12px; transition: background 0.15s, color 0.15s;
     }
-    .prod-card-btn:hover { background: var(--accent); color: #fff; }
+    .prod-card-btn:hover { }
 
     @media (max-width: 640px) { .filter-strip { gap: 14px 20px; padding: 16px; } }
   </style>
@@ -266,7 +266,7 @@
             <span class="tag">Airbus ABS</span>
           </div>
         </div>
-        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:14px;display:flex;flex-direction:column;gap:14px;">
+        <div class="fade-up fade-up-3" style="padding:24px;background:var(--bg-soft);border:1px solid var(--border);border-radius:0;display:flex;flex-direction:column;gap:14px;">
           <div style="display:flex;justify-content:space-between;gap:16px;">
             <div class="spec"><span class="spec-label">Voltage Rating</span><span class="spec-value">600V</span></div>
             <div class="spec"><span class="spec-label">Temp Rating</span><span class="spec-value">−65°C <span class="unit">to</span> +200°C</span></div>
@@ -295,27 +295,27 @@
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px;">
         <a href="/products/product-aero44.html" style="text-decoration:none;">
-          <div style="background:#141926;border:2px solid var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(224,0,0,0.25)'" onmouseout="this.style.boxShadow='none'">
+          <div style="background:#141926;border:2px solid var(--accent);border-radius:0;padding:24px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(224,0,0,0.25)'" onmouseout="this.style.boxShadow='none'">
             <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.45);margin-bottom:14px;">XLPO · PVDF · E-BEAM XL</div>
             <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 44</div>
             <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;">MIL-W-81044 · DGAQA · AS9100</div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">600V / 1000V / 2500V</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">9 Families</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">600V / 1000V / 2500V</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(224,0,0,.15);color:#fca5a5;border:1px solid rgba(224,0,0,.3);">9 Families</span>
             </div>
             <div style="margin-top:16px;font-size:13px;font-weight:700;color:var(--accent);">Browse variants →</div>
           </div>
         </a>
 
         <a href="#" onclick="revealVariants(); return false;" style="text-decoration:none;">
-          <div style="background:var(--accent);border-radius:14px;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+          <div style="background:var(--accent);border-radius:0;padding:24px;cursor:pointer;transition:opacity 0.15s;" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
             <div style="font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.55);margin-bottom:14px;">EBXL · ETFE · SAE AS22759</div>
             <div style="font-size:28px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.1;">Aero 55</div>
             <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:6px;">DEF-STAN · Boeing BMS · Airbus ABS</div>
             <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;">
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">600V</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">15 Families</span>
-              <span style="padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">AWG 30–8</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">600V</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">15 Families</span>
+              <span style="padding:3px 9px;border-radius:0;font-size:10.5px;font-weight:600;background:rgba(255,255,255,.15);color:#fff;">AWG 30–8</span>
             </div>
             <div style="margin-top:16px;font-size:13px;font-weight:700;color:#fff;">Browse variants →</div>
           </div>

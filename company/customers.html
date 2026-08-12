@@ -53,7 +53,7 @@
       grid-template-columns: 260px 1fr;
       gap: 0;
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius:0;
       overflow: hidden;
       background: var(--bg-card);
     }
@@ -103,7 +103,7 @@
     }
     .ind-tab-icon {
       width: 32px; height: 32px;
-      border-radius: 8px;
+      border-radius:0;
       background: var(--bg-soft);
       border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
@@ -145,7 +145,7 @@
       padding: 5px 14px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 99px;
+      border-radius:0;
       font-size: 12.5px;
       font-weight: 600;
       color: var(--text-muted);
@@ -156,7 +156,7 @@
       padding: 4px 14px;
       background: var(--bg-soft);
       border: 1px solid var(--border);
-      border-radius: 99px;
+      border-radius:0;
       font-size: 12px;
       font-weight: 600;
       font-family: var(--mono);
@@ -171,7 +171,7 @@
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius:0;
       overflow: hidden;
     }
     @media (max-width: 980px) { .logo-wall { grid-template-columns: repeat(4, 1fr); } }
@@ -203,16 +203,16 @@
       padding: 32px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius:0;
       transition: all 0.18s;
     }
-    .case-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .case-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
     .case-card .industry-tag {
       display: inline-block;
       padding: 4px 12px;
       background: var(--accent-soft);
       border: 1px solid var(--accent-border);
-      border-radius: 6px;
+      border-radius:0;
       font-family: var(--mono);
       font-size: 11px;
       font-weight: 700;
@@ -225,7 +225,7 @@
     .case-card .client { font-size: 13.5px; color: var(--text-muted); margin-bottom: 18px; font-style: italic; }
     .case-card .case-stats { display:flex; gap:24px; flex-wrap:wrap; padding-top:18px; border-top:1px solid var(--border); }
     @media (max-width: 640px) {
-      .case-card { padding: 20px; border-radius: 12px; }
+      .case-card { padding: 20px; border-radius:0; }
       .case-card h3 { font-size: 17px; }
       .case-card .case-stats { gap: 16px; }
       .ind-panel { padding: 18px; gap: 16px; }
@@ -239,7 +239,7 @@
       position: relative;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius:0;
       padding: 40px;
       overflow: hidden;
     }

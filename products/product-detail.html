@@ -79,7 +79,7 @@
       transition: color 0.15s, border-color 0.15s;
       white-space: nowrap;
     }
-    .tab:hover { color: var(--text); }
+    .tab:hover { }
     .tab.active { color: var(--text); border-bottom-color: var(--accent); }
 
     .tab-panel { display: none; animation: fadeUp 0.4s ease; }
@@ -119,11 +119,11 @@
       padding: 24px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius:0;
       transition: background 0.15s, border-color 0.15s;
     }
-    .application-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
-    .application-card .icon { width: 40px; height: 40px; border-radius: 8px; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent-2); margin-bottom: 14px; }
+    .application-card:hover { }
+    .application-card .icon { width: 40px; height: 40px; border-radius:0; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent-2); margin-bottom: 14px; }
     .application-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .application-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
@@ -133,11 +133,11 @@
       padding: 18px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius:0;
       transition: background 0.15s, border-color 0.15s;
     }
-    .related-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
-    .related-card .icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(224,0,0,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-2); flex-shrink: 0; }
+    .related-card:hover { }
+    .related-card .icon { width: 40px; height: 40px; border-radius:0; background: rgba(224,0,0,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-2); flex-shrink: 0; }
     .related-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
     .related-card p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
 
@@ -146,11 +146,11 @@
       padding: 18px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius:0;
       transition: all 0.15s;
     }
-    .download-card:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
-    .download-card .doc-icon { width: 44px; height: 56px; border-radius: 6px; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .download-card:hover { }
+    .download-card .doc-icon { width: 44px; height: 56px; border-radius:0; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .download-card .doc-meta { flex: 1; }
     .download-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
     .download-card p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
@@ -490,21 +490,21 @@
             <h3 class="section-title" style="font-size:24px; margin-bottom:14px;">Layered for the Long Haul</h3>
             <p style="color:var(--text-muted); margin-bottom:24px;">Three engineered layers: Class 5 stranded tinned copper conductor, electron-beam crosslinked polyolefin insulation, and UV-stabilised XLPE outer sheath. Each layer optimised for its job.</p>
             <ol style="list-style:none; counter-reset:layer; display:flex; flex-direction:column; gap:14px;">
-              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:0;">
                 <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">01</span>
                 <div><h4 style="font-size:15px; font-weight:700;">Tinned Copper Conductor</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">Class 5 flexible stranded, tinned to IEC 60228. Optimised for low DC resistance and corrosion resistance.</p></div>
               </li>
-              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:0;">
                 <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">02</span>
                 <div><h4 style="font-size:15px; font-weight:700;">E-Beam XLPO Insulation</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">Electron-beam crosslinked polyolefin. Thermal, chemical, mechanical resistance well beyond standard PVC.</p></div>
               </li>
-              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px;">
+              <li style="counter-increment:layer; display:flex; gap:14px; padding:16px; background:var(--bg-card); border:1px solid var(--border); border-radius:0;">
                 <span style="width:32px; height:32px; border-radius:50%; background:var(--accent-soft); border:1px solid var(--accent-border); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; color:var(--accent-2); flex-shrink:0;">03</span>
                 <div><h4 style="font-size:15px; font-weight:700;">XLPE Outer Sheath</h4><p style="font-size:13.5px; color:var(--text-muted); margin-top:4px;">UV-stabilised, halogen-free, fire-retardant. Cyclical thermal endurance to +120 °C continuous, +200 °C short-circuit.</p></div>
               </li>
             </ol>
           </div>
-          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:14px; padding:24px;">
+          <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:0; padding:24px;">
             <h3 style="font-size:14px; font-weight:700; color:var(--text-faint); font-family:var(--mono); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">Test Battery</h3>
             <table class="spec-table">
               <tr><td>Tensile Strength</td><td>≥ 10 N/mm²</td></tr>
