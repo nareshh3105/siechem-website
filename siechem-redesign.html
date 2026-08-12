@@ -357,6 +357,23 @@
       transform: scale(1.05);
       filter: grayscale(0%) brightness(100%);
     }
+    /* YouTube-backed cards: a static thumbnail image standing in for the
+       <video> element above, same treatment so the two card types are
+       visually identical at rest and on hover. */
+    .video-card-thumb-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.72;
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: grayscale(15%) brightness(95%);
+    }
+    .video-card:hover .video-card-thumb-img {
+      opacity: 0.9;
+      transform: scale(1.05);
+      filter: grayscale(0%) brightness(100%);
+    }
     .video-card-overlay {
       position: absolute;
       inset: 0;
@@ -516,14 +533,18 @@
       height: 100%;
       object-fit: contain;
     }
-    .video-modal-body {
+    /* YouTube-embedded cards get an iframe injected here on open and removed
+       on close, so nothing YouTube-related loads until a visitor actually
+       clicks to watch. */
+    .video-modal-yt {
       width: 100%;
       height: 100%;
     }
-    .video-modal-player {
+    .video-modal-yt-frame {
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      border: 0;
+      display: block;
     }
 
 
@@ -1707,13 +1728,15 @@
       </div>
       
       <div class="carousel-scroll-wrap" id="carousel-scroll-wrap">
-        <!-- Video Card 1 -->
-        <div class="video-card" data-video-src="/video/at-a-glance/she-powers-siechem.mp4">
+        <!-- Video Card 1 -- YouTube (was the self-hosted she-powers-siechem.mp4,
+             mislabeled under this "Inside Our Factory" title). Thumbnail is
+             YouTube's own CDN image, so it costs the page ~18KB instead of the
+             video-preload fetch this card used to trigger on load. The iframe
+             itself is only created if the card is clicked. -->
+        <div class="video-card" data-youtube-id="tWUvi_J4hjE">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/inside-our-factory.webp">
-                <source src="/video/at-a-glance/she-powers-siechem.mp4" type="video/mp4">
-              </video>
+              <img class="video-card-thumb-img" src="https://i.ytimg.com/vi/tWUvi_J4hjE/hqdefault.jpg" alt="Inside Our Factory — video thumbnail" loading="lazy" width="480" height="360">
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Factory Tour</div>
               <div class="video-card-play-btn">
@@ -1751,13 +1774,11 @@
           </div>
         </div>
 
-        <!-- Video Card 3 -->
-        <div class="video-card" data-video-src="/video/at-a-glance/happy-labours-day.mp4">
+        <!-- Video Card 3 -- YouTube, replacing the self-hosted happy-labours-day.mp4. -->
+        <div class="video-card" data-youtube-id="80PDBGqzy-4">
           <div class="video-card-inner">
             <div class="video-card-thumb-wrap">
-              <video class="video-card-video" loop muted playsinline preload="metadata" poster="/assets/video-posters/happy-labours-day.webp">
-                <source src="/video/at-a-glance/happy-labours-day.mp4" type="video/mp4">
-              </video>
+              <img class="video-card-thumb-img" src="https://i.ytimg.com/vi/80PDBGqzy-4/hqdefault.jpg" alt="Happy Labour's Day — video thumbnail" loading="lazy" width="480" height="360">
               <div class="video-card-overlay"></div>
               <div class="video-card-badge">Workforce</div>
               <div class="video-card-play-btn">
@@ -2146,6 +2167,11 @@
           <source src="" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <!-- Empty until a YouTube card is opened; the iframe is created and
+             destroyed on open/close (see script below) rather than left
+             pointed at an about:blank src, so no YouTube script runs while
+             the modal is closed. -->
+        <div class="video-modal-yt" id="video-modal-yt" style="display:none;"></div>
       </div>
     </div>
   </div>
@@ -2255,18 +2281,41 @@
       const modalClose = document.getElementById('video-modal-close');
       const modalBackdrop = modal ? modal.querySelector('.video-modal-backdrop') : null;
 
+      const modalYt = document.getElementById('video-modal-yt');
+
       if (modal && modalPlayer && modalClose) {
         videoCards.forEach(card => {
           card.addEventListener('click', () => {
+            const ytId = card.getAttribute('data-youtube-id');
             const src = card.getAttribute('data-video-src');
-            if (src) {
+
+            if (ytId && modalYt) {
+              // Build the iframe fresh on every open so nothing from
+              // YouTube loads or runs while the modal is closed.
+              modalYt.innerHTML = '';
+              const iframe = document.createElement('iframe');
+              iframe.className = 'video-modal-yt-frame';
+              iframe.src = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0';
+              iframe.title = 'YouTube video player';
+              iframe.setAttribute('frameborder', '0');
+              iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+              iframe.setAttribute('allowfullscreen', '');
+              modalYt.appendChild(iframe);
+
+              modalPlayer.style.display = 'none';
+              modalYt.style.display = 'block';
+              modal.classList.add('open');
+              document.documentElement.classList.add('nav-open'); // lock body scroll
+            } else if (src) {
               const sourceEl = modalPlayer.querySelector('source');
               if (sourceEl) {
+                modalPlayer.style.display = '';
+                if (modalYt) modalYt.style.display = 'none';
                 sourceEl.src = src;
                 modalPlayer.load();
                 modal.classList.add('open');
                 document.documentElement.classList.add('nav-open'); // lock body scroll
-                
+
                 // Play inside the modal
                 modalPlayer.play().catch(err => {
                   console.log('Modal video play failed:', err);
@@ -2285,6 +2334,10 @@
             sourceEl.src = '';
           }
           modalPlayer.load();
+          // Destroying the iframe (not just hiding it) actually stops
+          // playback -- YouTube keeps audio running in a hidden iframe
+          // otherwise.
+          if (modalYt) modalYt.innerHTML = '';
         };
 
         modalClose.addEventListener('click', closeModal);
