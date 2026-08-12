@@ -61,7 +61,7 @@
     .cat-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius:0;
       overflow: hidden;
       transition: all 0.18s;
       cursor: pointer;
@@ -72,7 +72,7 @@
 
     .cat-cover {
       aspect-ratio: 3 / 4;
-      background: linear-gradient(135deg, #1a2030, #0f1422);
+      background: #141926;
       position: relative;
       padding: 24px;
       display: flex;
@@ -97,7 +97,7 @@
     .cat-cover .siechem-mark .logo-square {
       width: 22px; height: 22px;
       border-radius: 5px;
-      background: linear-gradient(135deg, #E00000, #B00000);
+      background: #E00000;
     }
     .cat-cover .cat-title {
       font-size: 26px;
@@ -543,7 +543,7 @@
 
     document.getElementById('allSegGrid').innerHTML = ALL_SEGS.map(seg => `
       <a href="${seg.url || '/company/contact.html'}" class="cat-card">
-        <div class="cat-cover" ${seg.img ? `style="background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.68)),url('${seg.img}');background-size:cover;background-position:center;"` : ''}>
+        <div class="cat-cover" ${seg.img ? `style="background-image:linear-gradient(rgba(0,0,0,0.56),rgba(0,0,0,0.56)),url('${seg.img}');background-size:cover;background-position:center;"` : ''}>
           <div>
             <div class="cat-title">${seg.name}</div>
             <div class="cat-sub">${seg.std}</div>

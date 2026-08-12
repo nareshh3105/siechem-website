@@ -99,7 +99,7 @@
     .variant-table .part-no { font-family: var(--mono); color: var(--accent-2); font-weight: 600; font-size: 13px; }
     .variant-table .num { font-family: var(--mono); font-size: 13px; }
 
-    .btn-table-cta { padding: 6px 12px; min-height: 32px; font-size: 12px; font-weight: 700; border-radius: 5px; background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-border); transition: all 0.15s; cursor: pointer; white-space: nowrap; }
+    .btn-table-cta { padding: 6px 12px; min-height: 32px; font-size: 12px; font-weight: 700; border-radius:0; background: var(--accent-soft); color: var(--accent-2); border: 1px solid var(--accent-border); transition: all 0.15s; cursor: pointer; white-space: nowrap; }
     .btn-table-cta:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 
     .type-info-bar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
@@ -148,7 +148,7 @@
     .modal.open { opacity: 1; visibility: visible; }
     .modal-content { background: var(--bg); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); padding: 36px; width: 100%; max-width: 500px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); position: relative; animation: modalSlide 0.3s ease; }
     @keyframes modalSlide { from { transform: translateY(15px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-faint); cursor: pointer; width: 40px; height: 40px; border-radius: 50%; transition: background 0.15s; display: flex; align-items: center; justify-content: center; }
+    .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: var(--text-faint); cursor: pointer; width: 40px; height: 40px; border-radius: 0; transition: background 0.15s; display: flex; align-items: center; justify-content: center; }
     .modal-close:hover { background: var(--bg-soft); color: var(--text); }
 
     .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-faint); margin-bottom: 0; padding: 20px 0 0; }
@@ -164,7 +164,7 @@
 
     /* ── Hero band ── */
     .auto-hero-band {
-      background: linear-gradient(135deg, #0f0f14 0%, #1a0a0b 50%, #1e1014 100%);
+      background: #150C10;
       margin: 0 -9999px;
       padding: 64px 9999px 72px;
       position: relative;
@@ -174,7 +174,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(224,0,0,0.18) 0%, transparent 70%);
+      background: transparent;
       pointer-events: none;
     }
     .auto-hero-band::after {
@@ -182,7 +182,7 @@
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(224,0,0,0.4) 40%, rgba(224,0,0,0.4) 60%, transparent 100%);
+      background: rgba(224,0,0,0.4);
     }
     .auto-hero-inner {
       display: grid;
@@ -222,7 +222,7 @@
     .hero-btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 13px 26px; background: #E00000; color: #fff;
-      font-weight: 700; font-size: 14.5px; border-radius: 8px; border: none; cursor: pointer;
+      font-weight: 700; font-size: 14.5px; border-radius:0; border: none; cursor: pointer;
       box-shadow: 0 4px 16px rgba(224,0,0,0.45);
       transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
     }
@@ -230,7 +230,7 @@
     .hero-btn-secondary {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 13px 26px; background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.85);
-      font-weight: 600; font-size: 14.5px; border-radius: 8px;
+      font-weight: 600; font-size: 14.5px; border-radius:0;
       border: 1px solid rgba(255,255,255,0.15); text-decoration: none;
       transition: background 0.15s, color 0.15s;
     }

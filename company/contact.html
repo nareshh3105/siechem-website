@@ -143,7 +143,7 @@
     .social-row { display: flex; gap: 8px; margin-top: 20px; }
     .social-btn {
       width: 38px; height: 38px;
-      border-radius: 8px;
+      border-radius:0;
       background: var(--bg-card);
       border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
@@ -156,7 +156,7 @@
     .map-illustration {
       aspect-ratio: 16 / 9;
       max-height: 280px;
-      background: linear-gradient(135deg, #0a1020, #050810);
+      background: #080D1A;
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
@@ -167,7 +167,10 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      /* Graph-paper texture: these draw 1px grid lines, not a colour blend —
+         each stop is hard, so nothing fades. Recoloured from the old indigo
+         to a neutral grey, which was the last off-brand blue on the site. */
+      background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
       background-size: 28px 28px;
     }
     .map-pin {

@@ -86,7 +86,7 @@
     .prod-card-head {
       padding: 18px 20px 14px;
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(135deg, var(--bg-soft) 0%, rgba(224,0,0,0.025) 100%);
+      background: var(--bg-soft);
     }
     .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
     .badge {
@@ -126,7 +126,7 @@
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 12.5px; font-weight: 700; color: var(--accent);
       background: var(--accent-soft); border: 1px solid var(--accent-border);
-      border-radius: 6px; padding: 6px 12px;
+      border-radius:0; padding: 6px 12px;
       transition: background 0.15s, color 0.15s;
     }
     .prod-card-btn:hover { background: var(--accent); color: #fff; }
@@ -154,7 +154,7 @@
     .spec-sheet-header {
       padding: 22px 28px 18px;
       border-bottom: 1px solid var(--border);
-      background: linear-gradient(135deg, #FDFCFC 0%, #F7F7F8 100%);
+      background: #FAFAFA;
       display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
     }
     .spec-sheet-cat { font-family: var(--mono); font-size: 11px; color: var(--accent-2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
@@ -220,7 +220,7 @@
     .part-table tbody tr:hover { background: rgba(224,0,0,0.03); }
     .part-table td:first-child { font-family: var(--mono); font-size: 12px; color: var(--text); font-weight: 600; }
     .part-table .quote-row-btn {
-      padding: 5px 12px; border-radius: 5px;
+      padding: 5px 12px; border-radius:0;
       background: var(--accent-soft); border: 1px solid var(--accent-border);
       color: var(--accent-2); font-size: 11.5px; font-weight: 700;
       cursor: pointer; transition: background 0.15s, color 0.15s;

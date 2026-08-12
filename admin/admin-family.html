@@ -81,7 +81,7 @@
   .editor-head input.name-input:hover, .editor-head input.name-input:focus { border-color: var(--border); background: var(--bg-soft); }
   .btn-danger-ghost {
     display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
-    color: #B91C1C; background: none; border: 1px solid #FCA5A5; border-radius: 8px; padding: 8px 14px; cursor: pointer;
+    color: #B91C1C; background: none; border: 1px solid #FCA5A5; border-radius:0; padding: 8px 14px; cursor: pointer;
     transition: background .15s;
   }
   .btn-danger-ghost:hover { background: #FEF2F2; }
@@ -190,14 +190,14 @@
   .col-tools { display: flex; justify-content: center; gap: 1px; margin-bottom: 3px; }
   .col-tools button {
     border: none; background: none; cursor: pointer; line-height: 1;
-    font-size: 12px; padding: 2px 3px; border-radius: 3px;
+    font-size: 12px; padding: 2px 3px; border-radius:0;
     color: var(--text-faint);
   }
   .col-tools button:hover { background: var(--bg-soft); color: var(--accent-2); }
   .col-tools button.col-del:hover { background: #FEF2F2; color: #B91C1C; }
   .row-actions button {
     border: none; background: none; cursor: pointer; line-height: 1;
-    font-size: 12px; padding: 2px 3px; border-radius: 3px; color: var(--text-faint);
+    font-size: 12px; padding: 2px 3px; border-radius:0; color: var(--text-faint);
   }
   .row-actions button:hover { background: var(--bg-soft); color: var(--accent-2); }
   .row-actions button[data-del-row]:hover { background: #FEF2F2; color: #B91C1C; }
@@ -227,11 +227,11 @@
   table.spec-table tbody tr:hover td:first-child { background: #FBF7F2; }
 
   table.spec-table td.row-actions, table.spec-table th.col-actions { width: 36px; text-align: center; border-right: none; }
-  table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 17px; padding: 6px; border-radius: 4px; }
+  table.spec-table td.row-actions button { border: none; background: none; color: var(--text-dim); cursor: pointer; font-size: 17px; padding: 6px; border-radius:0; }
   table.spec-table td.row-actions button:hover { color: #B91C1C; background: #FEF2F2; }
   table.spec-table th button.col-del {
     border: none; background: none; color: var(--text-dim); cursor: pointer;
-    font-size: 15px; padding: 2px 6px; border-radius: 4px; display: block; margin: 0 auto 4px;
+    font-size: 15px; padding: 2px 6px; border-radius:0; display: block; margin: 0 auto 4px;
   }
   table.spec-table th button.col-del:hover { color: #B91C1C; background: #FEF2F2; }
 
@@ -330,7 +330,7 @@
   .colorcode-chip input:focus { background: #fff; border-radius: 5px; box-shadow: 0 0 0 2px var(--accent-soft); }
   .colorcode-chip button {
     border: none; background: none; color: var(--text-dim); cursor: pointer;
-    font-size: 15px; line-height: 1; padding: 2px 4px; border-radius: 4px; flex-shrink: 0;
+    font-size: 15px; line-height: 1; padding: 2px 4px; border-radius:0; flex-shrink: 0;
   }
   .colorcode-chip button:hover { color: #B91C1C; background: #FEF2F2; }
   .colorcode-empty { font-size: 13px; color: var(--text-dim); margin-bottom: 14px; }

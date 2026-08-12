@@ -253,7 +253,7 @@ img { display: block; max-width: 100%; height: auto; }
 .nav-cta {
   padding: 9px 20px;
   background: var(--accent);
-  border-radius: 7px;
+  border-radius: 0;
   color: #FFFFFF;
   font-size: 13.5px;
   font-weight: 700;
@@ -455,7 +455,7 @@ html.nav-open, html.nav-open body {
 /* ─────────── Page hero ─────────── */
 .page-hero {
   padding: 22px 0 36px;
-  background: linear-gradient(135deg, #FDFCFC 0%, #F7F7F8 100%);
+  background: #FAFAFA;
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
@@ -592,7 +592,9 @@ html.nav-open, html.nav-open body {
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 13px 24px;
-  border-radius: 8px;
+  /* Square corners: buttons read as solid blocks, matching the flat
+     industrial style of the reference site. */
+  border-radius: 0;
   font-size: 14px; font-weight: 700;
   border: none;
   transition: transform 0.14s var(--ease-out), box-shadow 0.18s var(--ease-out), background 0.15s;
@@ -618,7 +620,7 @@ html.nav-open, html.nav-open body {
 }
 .btn-white:hover { background: #FEF2F2; transform: translateY(-1px); }
 .btn-sm { padding: 9px 16px; font-size: 13px; }
-.btn-lg { padding: 16px 32px; font-size: 15.5px; border-radius: 10px; }
+.btn-lg { padding: 16px 32px; font-size: 15.5px; border-radius: 0; }
 
 /* ─────────── Cards ─────────── */
 .card {
@@ -724,7 +726,7 @@ html.nav-open, html.nav-open body {
 .input, .textarea, .select {
   background: #FFFFFF;
   border: 1.5px solid var(--border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 12px 14px;
   color: var(--text);
   font-family: inherit;
@@ -934,13 +936,13 @@ html { scroll-behavior: smooth; }
   padding: 5px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius:0;
   width: fit-content;
   margin-bottom: 18px;
 }
 .filter-bar button {
   padding: 10px 22px;
-  border-radius: 8px;
+  border-radius:0;
   border: none;
   background: transparent;
   color: var(--text-muted);
@@ -1022,7 +1024,7 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   position: fixed;
   bottom: 28px; right: 28px;
   width: 44px; height: 44px;
-  border-radius: 12px;
+  border-radius:0;
   background: var(--accent);
   color: #FFFFFF;
   border: none;
@@ -1037,7 +1039,7 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
 .back-to-top.btt-visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--accent-2); transform: translateY(-3px) !important; }
 @media (max-width: 640px) {
-  .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 10px; }
+  .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 0; }
 }
 
 /* ─────────── Improved image/media containers ─────────── */
@@ -1128,7 +1130,7 @@ button:focus-visible, a:focus-visible { border-radius: 6px; }
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 4px;
-  background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+  background: var(--accent);
   pointer-events: none;
 }
 
