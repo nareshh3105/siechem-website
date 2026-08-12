@@ -79,7 +79,7 @@
       transition: color 0.15s, border-color 0.15s;
       white-space: nowrap;
     }
-    .tab:hover { }
+    .tab:hover {color: var(--text);}
     .tab.active { color: var(--text); border-bottom-color: var(--accent); }
 
     .tab-panel { display: none; animation: fadeUp 0.4s ease; }
@@ -122,7 +122,7 @@
       border-radius:0;
       transition: background 0.15s, border-color 0.15s;
     }
-    .application-card:hover { }
+    .application-card:hover {background: var(--bg-card-hover); border-color: var(--border-strong);}
     .application-card .icon { width: 40px; height: 40px; border-radius:0; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; color: var(--accent-2); margin-bottom: 14px; }
     .application-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .application-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
@@ -136,7 +136,7 @@
       border-radius:0;
       transition: background 0.15s, border-color 0.15s;
     }
-    .related-card:hover { }
+    .related-card:hover {background: var(--bg-card-hover); border-color: var(--border-strong);}
     .related-card .icon { width: 40px; height: 40px; border-radius:0; background: rgba(224,0,0,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-2); flex-shrink: 0; }
     .related-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
     .related-card p { font-size: 12px; color: var(--text-faint); font-family: var(--mono); }
@@ -149,7 +149,7 @@
       border-radius:0;
       transition: all 0.15s;
     }
-    .download-card:hover { }
+    .download-card:hover {background: var(--bg-card-hover); border-color: var(--border-strong);}
     .download-card .doc-icon { width: 44px; height: 56px; border-radius:0; background: var(--accent-soft); border: 1px solid var(--accent-border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .download-card .doc-meta { flex: 1; }
     .download-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }

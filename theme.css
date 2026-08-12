@@ -171,7 +171,9 @@ img { display: block; max-width: 100%; height: auto; }
   transition: color 0.15s, background 0.15s;
   white-space: nowrap;
 }
-.nav-link:hover { color: var(--accent); }
+/* Nav links (page navigation, not buttons) get no colour change on
+   hover -- the underline-on-active/hover below is the only cue. */
+.nav-link:hover {}
 /* Active page is marked by the red label + the underline rule below;
    the tinted block behind it was redundant and read as a coloured pill. */
 .nav-link.active { color: var(--accent); font-weight: 700; }
@@ -239,10 +241,7 @@ img { display: block; max-width: 100%; height: auto; }
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
 }
-.nav-company-item:hover {
-  background: var(--accent-soft);
-  color: var(--accent);
-}
+.nav-company-item:hover {}
 
 /* Wide dropdown variant (Tech Support — 3 cols) */
 .nav-company-menu-wide {
@@ -268,7 +267,7 @@ img { display: block; max-width: 100%; height: auto; }
   transition: none;
   flex-shrink: 0;
 }
-.nav-cta:hover {}
+.nav-cta:hover {background: var(--accent-2);}
 
 .nav-actions {
   display: flex;
@@ -370,7 +369,7 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: -0.2px;
 }
 .mobile-menu-links > a:hover,
-.mobile-menu-links > a:active { color: var(--accent); background: var(--accent-soft); }
+.mobile-menu-links > a:active {}
 
 /* Accordion toggle buttons (Company / Tech Support / Resources) */
 .mobile-company-toggle {
@@ -392,7 +391,7 @@ img { display: block; max-width: 100%; height: auto; }
   min-height: 54px;
 }
 .mobile-company-toggle:hover,
-.mobile-company-toggle:active { color: var(--accent); background: var(--accent-soft); }
+.mobile-company-toggle:active {}
 .mobile-company-toggle-arrow { transition: transform 0.25s; flex-shrink: 0; }
 
 /* Sub-link panels */
@@ -432,8 +431,8 @@ img { display: block; max-width: 100%; height: auto; }
 .mobile-techsup-links a:active,
 .mobile-resources-links a:hover,
 .mobile-resources-links a:active {
-  color: var(--accent) !important;
-  background: var(--accent-soft) !important;
+  color: inherit !important;
+  background: transparent !important;
   padding-left: 36px !important;
 }
 
@@ -615,17 +614,17 @@ html.nav-open, html.nav-open body {
   background: var(--accent); color: #FFF;
   box-shadow: none;
 }
-.btn-primary:hover { box-shadow: none; transform: none; }
+.btn-primary:hover { box-shadow: none; transform: none; background: var(--accent);}
 .btn-ghost {
   background: #FFFFFF; color: var(--text);
   border: 1.5px solid var(--border-strong);
 }
-.btn-ghost:hover {}
+.btn-ghost:hover {border-color: var(--accent); color: var(--accent); background: var(--accent-soft);}
 .btn-white {
   background: #FFFFFF; color: var(--accent);
   font-weight: 800;
 }
-.btn-white:hover { transform: none; }
+.btn-white:hover { transform: none; background: #FEF2F2;}
 .btn-sm { padding: 9px 16px; font-size: 13px; }
 .btn-lg { padding: 16px 32px; font-size: 15.5px; border-radius: 0; }
 
@@ -644,8 +643,7 @@ html.nav-open, html.nav-open body {
 }
 .card-hover:hover {
   box-shadow: 0 12px 36px rgba(0,0,0,0.11), 0 0 0 1px rgba(224,0,0,0.09);
-  transform: translateY(-4px);
-}
+  transform: translateY(-4px); border-color: rgba(224,0,0,0.22);}
 .card-soft {
   background: var(--bg-soft);
   border: 1px solid var(--border);
@@ -964,7 +962,7 @@ html { scroll-behavior: smooth; }
   color: #fff;
   box-shadow: 0 2px 8px rgba(224,0,0,0.3);
 }
-.filter-bar button:hover:not(.active) {}
+.filter-bar button:hover:not(.active) {background: var(--bg-soft); color: var(--text);}
 @media (max-width: 768px) {
   .filter-bar {
     width: 100%;
@@ -1036,7 +1034,7 @@ button:focus-visible, a:focus-visible { border-radius:0; }
   z-index: 89;
 }
 .back-to-top.btt-visible { opacity: 1; visibility: visible; transform: translateY(0); }
-.back-to-top:hover {}
+.back-to-top:hover {background: var(--accent-2);}
 @media (max-width: 640px) {
   .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; border-radius: 0; }
 }
