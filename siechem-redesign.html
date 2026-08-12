@@ -57,8 +57,8 @@
     /* ───────── Hero Section ───────── */
     .hero-video-section {
       position: relative;
-      height: 62vh;
-      min-height: 440px;
+      height: 78vh;
+      min-height: 560px;
       width: 100%;
       overflow: hidden;
       background: #120505;
@@ -785,7 +785,7 @@
     @media (max-width: 768px) {
       /* Video is decorative only now that the headline sits below it, so it
          can be shorter on phones without costing any copy. */
-      .hero-video-section { height: 46vh; min-height: 320px; }
+      .hero-video-section { height: 58vh; min-height: 400px; }
       .hero-statement { padding: 30px 0 28px; }
       .hero-subtitle { font-size: 15px; }
       .tst-card { padding: 20px; }
@@ -1654,7 +1654,10 @@
       window.addEventListener('load', () => {
         setTimeout(() => {
           const v = document.getElementById('hero-video');
-          if (v && !v.src) { v.src = v.dataset.src; v.play().catch(() => {}); }
+          if (v && !v.src) {
+            v.src = v.dataset.src;
+            v.play().catch(() => {});
+          }
         }, 200);
       });
     </script>
@@ -1673,7 +1676,7 @@
     <div class="container">
       <div class="hero-statement-inner">
         <div class="hero-eyebrow">Engineered in India &middot; Trusted Worldwide</div>
-        <h1 class="hero-title">Specialty Cables Built to <em>Outlast</em> the Extreme.</h1>
+        <h1 class="hero-title">Speciality Cables Built to <em>Outlast</em> the Extreme.</h1>
         <div class="ctas hero-statement-ctas">
           <a href="/products/products.html" class="btn btn-primary">Explore Products</a>
           <a href="/company/contact.html" class="btn btn-ghost">Request Quote</a>
@@ -2183,7 +2186,14 @@
         const seekToStart = () => { try { heroVideo.currentTime = 2; } catch (e) {} };
         if (heroVideo.readyState >= 1) seekToStart();
         else heroVideo.addEventListener('loadedmetadata', seekToStart, { once: true });
-        heroVideo.playbackRate = 1.5; // slightly faster playback
+        // playbackRate must be (re)applied AFTER the source loads: the hero
+        // video's src is assigned lazily on window load, and assigning a new
+        // src resets the rate back to 1. Setting it once up front silently
+        // did nothing. Re-apply on every load and play.
+        const applyRate = () => { try { heroVideo.playbackRate = 2.0; } catch (e) {} };
+        applyRate();
+        heroVideo.addEventListener('loadedmetadata', applyRate);
+        heroVideo.addEventListener('play', applyRate);
         const startVideo = () => {
           heroVideo.style.opacity = '1';
         };

@@ -163,16 +163,7 @@
       position: relative;
       overflow: hidden;
     }
-    .map-illustration::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      /* Graph-paper texture: these draw 1px grid lines, not a colour blend —
-         each stop is hard, so nothing fades. Recoloured from the old indigo
-         to a neutral grey, which was the last off-brand blue on the site. */
-      background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
-      background-size: 28px 28px;
-    }
+    /* The graph-paper grid texture was removed — the panel is a flat fill. */
     .map-pin {
       position: absolute;
       width: 14px; height: 14px;
