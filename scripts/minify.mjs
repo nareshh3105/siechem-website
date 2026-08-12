@@ -11,6 +11,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { minify as minifyHtml } from 'html-minifier-terser';
 import { minify as minifyJs } from 'terser';
 import { minify as minifyCss } from 'csso';
@@ -81,6 +82,45 @@ async function walk(dir) {
 }
 
 await walk(DIST);
+
+/* 3. Cache-bust the shared assets.
+ *
+ * vercel.json serves /theme.css, /animations.js and /nav-mobile.js with
+ * max-age=604800 (7 days). Those URLs never change, so a returning visitor
+ * kept using the CSS/JS they cached a week ago and simply did not see new
+ * deploys — a design change could sit live and invisible for days.
+ *
+ * Appending a short content hash gives each build a distinct URL, so the
+ * long cache lifetime becomes safe: unchanged files keep their hash and stay
+ * cached, changed files get a new one and are fetched immediately. The
+ * vercel.json header rules match on path and ignore the query string, so the
+ * caching config needs no change.
+ */
+const SHARED = ['theme.css', 'animations.js', 'nav-mobile.js'];
+const versions = {};
+for (const name of SHARED) {
+  const f = path.join(DIST, name);
+  if (!fs.existsSync(f)) continue;
+  versions[name] = crypto.createHash('sha256')
+    .update(fs.readFileSync(f)).digest('hex').slice(0, 8);
+}
+
+let stamped = 0;
+(function stamp(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) { stamp(p); continue; }
+    if (path.extname(e.name).toLowerCase() !== '.html') continue;
+    let s = fs.readFileSync(p, 'utf8');
+    const before = s;
+    for (const [name, hash] of Object.entries(versions)) {
+      // Only rewrite root-absolute refs that have no query string yet.
+      s = s.replaceAll(`"/${name}"`, `"/${name}?v=${hash}"`);
+    }
+    if (s !== before) { fs.writeFileSync(p, s); stamped++; }
+  }
+})(DIST);
+console.log(`cache-bust: ${Object.entries(versions).map(([n, h]) => n + '?v=' + h).join('  ')}  (${stamped} pages stamped)`);
 
 for (const [k, [before, after]] of Object.entries(stats)) {
   if (!before) continue;
