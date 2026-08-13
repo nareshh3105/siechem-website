@@ -81,13 +81,19 @@
   --radius-xl:   0;
   --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* Unified site font: body, headings, labels and eyebrows are all Arial.
-     Arial ships with Windows, macOS and iOS, so nothing is downloaded —
-     Helvetica covers older Apple systems and Liberation Sans is the
-     metric-identical Linux substitute. */
-  --sans:        Arial, Helvetica, 'Liberation Sans', sans-serif;
-  --mono:        Arial, Helvetica, 'Liberation Sans', sans-serif;
-  --heading:     Arial, Helvetica, 'Liberation Sans', sans-serif;
+  /* Unified site font: body, headings, labels and eyebrows all lead with
+     Aptos. Unlike the previous Arial-first stack, Aptos is NOT a system
+     font on any platform by default — it ships only inside Microsoft
+     365/Office 2024 and must be installed separately for OS-wide use. No
+     web-font file is bundled here (Microsoft's redistribution terms for
+     embedding it via @font-face on a public site are not clearly settled),
+     so this is a CSS-only preference: visitors who have it installed
+     locally (mostly Windows 11 24H2+/recent Office users) see Aptos, and
+     everyone else transparently gets the Arial stack this site used
+     before, which stays as the fallback for that reason. */
+  --sans:        Aptos, Arial, Helvetica, 'Liberation Sans', sans-serif;
+  --mono:        Aptos, Arial, Helvetica, 'Liberation Sans', sans-serif;
+  --heading:     Aptos, Arial, Helvetica, 'Liberation Sans', sans-serif;
 }
 
 html, body {
