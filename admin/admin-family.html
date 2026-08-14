@@ -235,32 +235,22 @@
   }
   table.spec-table th button.col-del:hover { color: #B91C1C; background: #FEF2F2; }
 
-  .table-actions {
-    display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; row-gap: 8px;
-    /* Locked in place the same way .save-bar is (sticky bottom:0) and
-       .series-list is (sticky top:80px) -- otherwise this toolbar, including
-       the x²/x₂/Ω Symbols buttons, scrolls out of view on a long spec table
-       while Save Now stays pinned, which is the inconsistency being fixed. */
-    position: sticky; top: 80px; z-index: 5;
-    background: var(--bg-card); padding: 10px 0; border-bottom: 1px solid var(--border);
-  }
+  .table-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; row-gap: 8px; }
   .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
   .table-actions .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .table-actions .sep { width: 1px; align-self: stretch; background: var(--border); margin: 0 2px; }
-  @media (max-width: 900px) {
-    /* Matches .series-list's own mobile override just above -- a sticky
-       toolbar stacked above a sticky sidebar gets cramped and unreadable
-       on narrow layouts, so let it scroll inline there instead. */
-    .table-actions { position: static; }
-  }
 
   /* ── Character palette ─────────────────────────────────────────── */
   .char-palette {
-    display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
+    /* Opens UPWARD: its trigger now lives in .save-bar, which is pinned to
+       the bottom of the viewport, so a downward panel would render off
+       screen. .save-bar's position:sticky is what makes it the containing
+       block for this absolute positioning. */
+    display: none; position: absolute; bottom: calc(100% + 6px); left: 0; z-index: 60;
     width: min(430px, 92vw); max-height: 60vh; overflow-y: auto;
     background: var(--bg-card); border: 1px solid var(--border-strong);
     border-radius:0; padding: 12px 13px;
-    box-shadow: 0 12px 34px rgba(0,0,0,0.16);
+    box-shadow: 0 -12px 34px rgba(0,0,0,0.16);
   }
   .char-palette.open { display: block; }
   .cp-group + .cp-group { margin-top: 11px; }
@@ -280,11 +270,15 @@
   #supBtn, #subBtn { font-family: var(--mono); font-size: 13px; }
 
   .save-bar {
-    position: sticky; bottom: 0; display: flex; align-items: center; gap: 14px; margin-top: 18px; flex-wrap: wrap;
+    position: sticky; bottom: 0; display: flex; align-items: center; gap: 10px; margin-top: 18px; flex-wrap: wrap;
     background: var(--bg-card); border: 1px solid var(--border); border-radius:0; padding: 14px 18px;
     box-shadow: 0 -8px 24px rgba(0,0,0,0.06);
   }
-  #saveMsg { display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 500; color: var(--text-muted); }
+  .save-bar .sep { width: 1px; align-self: stretch; background: var(--border); margin: 0 4px; }
+  .save-bar .btn { flex-shrink: 0; }
+  /* Status text sits at the far right, so the buttons stay grouped together
+     on the left next to Save Now. Drops below on narrow widths via wrap. */
+  #saveMsg { margin-left: auto; display: flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 500; color: var(--text-muted); }
   #saveMsg .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; background: var(--text-dim); }
   #saveMsg.pending .dot { background: #D97706; }
   #saveMsg.saving .dot { background: #2563EB; animation: pulse 1s ease-in-out infinite; }
@@ -719,16 +713,20 @@
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M15 14l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 9H9a5 5 0 0 0 0 10h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Redo
             </button>
-            <span class="sep"></span>
-            <button class="btn btn-ghost btn-sm" id="supBtn" type="button" title="Turn the selected characters into superscript (2 → ²)">x²</button>
-            <button class="btn btn-ghost btn-sm" id="subBtn" type="button" title="Turn the selected characters into subscript (2 → ₂)">x₂</button>
-            <button class="btn btn-ghost btn-sm" id="charBtn" type="button" title="Insert an SI unit or special character">Ω Symbols</button>
-            <div class="char-palette" id="charPalette"></div>
           </div>
         </div>
 
         <div class="save-bar">
           <button class="btn btn-ghost" id="saveBtn">Save Now</button>
+          <span class="sep"></span>
+          <!-- Text-formatting controls live in the save bar (not up with
+               Add Row / Undo) so they stay on screen with Save Now while
+               scrolling a long spec table -- the bar is sticky, that toolbar
+               is not. -->
+          <button class="btn btn-ghost btn-sm" id="supBtn" type="button" title="Turn the selected characters into superscript (2 → ²)">x²</button>
+          <button class="btn btn-ghost btn-sm" id="subBtn" type="button" title="Turn the selected characters into subscript (2 → ₂)">x₂</button>
+          <button class="btn btn-ghost btn-sm" id="charBtn" type="button" title="Insert an SI unit or special character">Ω Symbols</button>
+          <div class="char-palette" id="charPalette"></div>
           <span id="saveMsg"><span class="dot"></span>No changes yet</span>
         </div>
       `;
