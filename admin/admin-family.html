@@ -235,13 +235,26 @@
   }
   table.spec-table th button.col-del:hover { color: #B91C1C; background: #FEF2F2; }
 
-  .table-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; row-gap: 8px; }
+  .table-actions {
+    display: flex; gap: 10px; margin-top: 14px; align-items: center; flex-wrap: wrap; row-gap: 8px;
+    /* Locked in place the same way .save-bar is (sticky bottom:0) and
+       .series-list is (sticky top:80px) -- otherwise this toolbar, including
+       the x²/x₂/Ω Symbols buttons, scrolls out of view on a long spec table
+       while Save Now stays pinned, which is the inconsistency being fixed. */
+    position: sticky; top: 80px; z-index: 5;
+    background: var(--bg-card); padding: 10px 0; border-bottom: 1px solid var(--border);
+  }
   .table-actions .btn { display: inline-flex; align-items: center; gap: 6px; }
   .table-actions .btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .table-actions .sep { width: 1px; align-self: stretch; background: var(--border); margin: 0 2px; }
+  @media (max-width: 900px) {
+    /* Matches .series-list's own mobile override just above -- a sticky
+       toolbar stacked above a sticky sidebar gets cramped and unreadable
+       on narrow layouts, so let it scroll inline there instead. */
+    .table-actions { position: static; }
+  }
 
   /* ── Character palette ─────────────────────────────────────────── */
-  .table-actions { position: relative; }
   .char-palette {
     display: none; position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
     width: min(430px, 92vw); max-height: 60vh; overflow-y: auto;
