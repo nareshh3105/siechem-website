@@ -289,11 +289,15 @@
     const pageNoEl   = document.getElementById('ccPageNo');
     const progressEl = document.getElementById('ccProgress');
 
+    let fellBack = false;
     function fallbackToIframe(reason) {
+      if (fellBack) return;          // watchdog and catch() can both fire
+      fellBack = true;
       console.warn('[catalogue] flipbook unavailable, using PDF viewer:', reason);
       progressEl.textContent = '';
       controlsEl.style.display = 'none';
       stageEl.style.display = 'none';
+      loadingEl.style.display = 'flex';
       const f = document.createElement('iframe');
       f.className = 'ts-doc-pdf';
       f.title = 'Catalogue PDF';
@@ -301,6 +305,16 @@
       f.src = proxyUrl;
       loadingEl.parentNode.insertBefore(f, loadingEl.nextSibling);
     }
+
+    // Watchdog: if the flipbook has not appeared in time -- slow device, huge
+    // catalogue, throttled/background tab, or any silent stall in canvas
+    // rasterisation -- give up and show the plain PDF viewer instead. Without
+    // this a visitor could sit on "Rendering page 1 of N" indefinitely and
+    // never reach the catalogue at all, which is worse than the old iframe.
+    let flipReady = false;
+    const watchdog = setTimeout(() => {
+      if (!flipReady) fallbackToIframe('render watchdog timeout');
+    }, 20000);
 
     try {
       const pdfjsLib = await import('/assets/vendor/pdf.min.mjs');
@@ -316,6 +330,7 @@
       let pageW = 0, pageH = 0;
 
       for (let n = 1; n <= total; n++) {
+        if (fellBack) return;        // watchdog already gave up; stop working
         progressEl.textContent = 'Rendering page ' + n + ' of ' + total + '…';
         const page = await pdf.getPage(n);
         const vp = page.getViewport({ scale: SCALE });
@@ -369,11 +384,15 @@
         if (e.key === 'ArrowRight') flip.flipNext();
       });
 
+      if (fellBack) return;
+      flipReady = true;
+      clearTimeout(watchdog);
       loadingEl.style.display = 'none';
       stageEl.style.display = 'flex';
       controlsEl.style.display = 'flex';
       progressEl.textContent = 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
     } catch (err) {
+      clearTimeout(watchdog);
       fallbackToIframe(err && err.message ? err.message : err);
     }
   })();
