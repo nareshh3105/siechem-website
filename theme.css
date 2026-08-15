@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
-p { line-height: 1.65; }
+p { line-height: 1.65; text-align: justify; text-justify: inter-word; }
 
 ::selection { background: rgba(224,0,0,0.18); }
 a { color: inherit; text-decoration: none; }
