@@ -104,17 +104,17 @@
       font-weight: 800;
     }
     .hero-title {
-      font-size: clamp(26px, 3.2vw, 40px);
-      font-weight: 800;
+      font-size: clamp(26px, 3.2vw, 26px);
+      font-weight: 600;
       line-height: 1.12;
       letter-spacing: -1px;
-      margin-bottom: 0;
+      margin-bottom: 8px;
       color: var(--text);
     }
     .hero-title em {
-      font-style: normal;
+      font-style: italic;
       color: #E00000;
-      font-weight: 800;
+      font-weight: 900;
     }
     .hero-subtitle {
       font-size: 17px;
@@ -262,6 +262,19 @@
       margin-bottom: 8px;
       font-weight: 800;
     }
+    /* The line between the title and the closing tagline used to reuse
+       .hero-eyebrow too, so three identical loud red banner lines stacked
+       up with no visual hierarchy between them. Styled as a quieter inline
+       stat instead, so it reads as supporting detail rather than a third
+       shout at the same volume as the other two. */
+    .hero-stat-line {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--mono); font-size: 13px; font-weight: 600;
+      color: var(--text-muted); letter-spacing: 0.02em;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      padding: 6px 16px; margin-bottom: 14px;
+    }
+    .hero-stat-line strong { color: var(--accent-2); font-weight: 800; }
     .section-title {
       font-size: clamp(27px, 3.2vw, 30px);
       font-weight: 800;
@@ -1677,7 +1690,10 @@
     <div class="container">
       <div class="hero-statement-inner">
         <div class="hero-eyebrow">Engineered in India &middot; Trusted Worldwide</div>
-        <h1 class="hero-title">Speciality cables built to <em>outlast</em> the Extreme.</h1>
+        <h1 class="hero-title"> <em>Siechem:  </em>  India’s No.1 specialty wire & cable manufacturer.</h1>
+        <div class="hero-stat-line">Exported to <strong>60+ countries</strong></div>
+        <div class="hero-eyebrow">Reliable 24 x 7 On-line portal automated customer's support.</div>
+
         <div class="ctas hero-statement-ctas">
           <a href="/products/products.html" class="btn btn-primary">Explore Products</a>
           <a href="/company/contact.html" class="btn btn-ghost">Request Quote</a>
