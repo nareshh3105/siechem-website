@@ -38,12 +38,33 @@
        handles the turn animation. Both are MIT-licensed and self-hosted
        from /assets/vendor (no CDN, no third-party runtime dependency). */
     .flip-stage {
+      position: relative;
       background: var(--bg-soft);
       border: 1px solid var(--border);
       padding: 18px 10px;
       display: flex; align-items: center; justify-content: center;
       min-height: 60vh;
       overflow: hidden;
+    }
+    /* Translucent arrow overlays on the page edges themselves, matching the
+       old siechem.com flipbook -- kept in addition to the Prev/Next buttons
+       below the book, which stay for keyboard/accessibility-friendly users. */
+    .flip-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(0,0,0,0.28); border: none; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 5; transition: background 0.15s, opacity 0.15s;
+      opacity: 0.55;
+    }
+    .flip-arrow:hover { background: rgba(0,0,0,0.5); opacity: 1; }
+    .flip-arrow svg { width: 18px; height: 18px; }
+    .flip-arrow-prev { left: 14px; }
+    .flip-arrow-next { right: 14px; }
+    @media (max-width: 640px) {
+      .flip-arrow { width: 36px; height: 36px; }
+      .flip-arrow-prev { left: 6px; }
+      .flip-arrow-next { right: 6px; }
     }
     /* PageFlip runs in Canvas mode (loadFromImages/updateFromImages) here,
        so it draws into its own <canvas class="stf__canvas"> inside
@@ -207,7 +228,9 @@
           <div class="ts-doc-loading" id="ccLoading"><div class="spin"></div>Loading catalogue…</div>
 
           <div class="flip-stage" id="ccStage" style="display:none;">
+            <button type="button" class="flip-arrow flip-arrow-prev" id="ccArrowPrev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <div id="ccBook" class="flip-book"></div>
+            <button type="button" class="flip-arrow flip-arrow-next" id="ccArrowNext" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           </div>
           <div class="flip-controls" id="ccControls" style="display:none;">
             <button type="button" id="ccPrev" aria-label="Previous page">&lsaquo; Prev</button>
@@ -387,6 +410,8 @@
 
       document.getElementById('ccPrev').addEventListener('click', () => flip.flipPrev());
       document.getElementById('ccNext').addEventListener('click', () => flip.flipNext());
+      document.getElementById('ccArrowPrev').addEventListener('click', () => flip.flipPrev());
+      document.getElementById('ccArrowNext').addEventListener('click', () => flip.flipNext());
       document.addEventListener('keydown', e => {
         if (e.key === 'ArrowLeft') flip.flipPrev();
         if (e.key === 'ArrowRight') flip.flipNext();
