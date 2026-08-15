@@ -121,26 +121,21 @@
       position: absolute; left: 50%; width: 3px; background: var(--accent);
       transform: translateX(-1.5px); z-index: 1;
     }
-    /* Fixed card height + line-clamped text -- guarantees every card is the
-       same size (so the node always lands on the line, at any width) and
-       keeps the section compact instead of growing to fit the longest
-       milestone's full paragraph. */
+    /* Card height is intrinsic (auto) so the full milestone text always
+       shows -- no clamping, no truncation. .story-track's height is set by
+       JS (measuring the tallest rendered card) rather than a guessed CSS
+       constant, since a fixed budget either clips long cards or wastes
+       space around short ones. The value below is only a safe fallback
+       for the instant before that JS runs. */
     .story-card {
       position: absolute; left: 50%; transform: translateX(-50%);
-      width: 300px; height: 176px; background: #fff; border: 1px solid var(--border);
+      width: 300px; background: #fff; border: 1px solid var(--border);
       border-radius: 14px; padding: 20px 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.09);
-      display: flex; flex-direction: column; overflow: hidden;
     }
-    .story-card h4 {
-      font-size: 15.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.3;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .story-year { font-size: 22px; font-weight: 800; color: var(--accent); margin-bottom: 6px; flex-shrink: 0; }
-    .story-card p {
-      font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0;
-      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-    }
+    .story-card h4 { font-size: 15.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.3; }
+    .story-year { font-size: 22px; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .story-card p { font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0; }
     .story-up .story-stem { bottom: calc(50% + 58px); height: 20px; }
     .story-up .story-card { bottom: calc(50% + 58px + 20px); }
     .story-down .story-stem { top: calc(50% + 58px); height: 20px; }
@@ -150,11 +145,9 @@
       .story-card { width: 220px; }
     }
     @media (max-width: 640px) {
-      .story-track { height: 480px; }
       .story-timeline-wrap { padding: 0 8px; }
       .story-arrow { width: 36px; height: 36px; }
       .story-node { width: 92px; height: 92px; }
-      .story-card { height: 156px; }
       .story-up .story-stem { bottom: calc(50% + 46px); }
       .story-up .story-card { bottom: calc(50% + 46px + 20px); }
       .story-down .story-stem { top: calc(50% + 46px); }
@@ -678,6 +671,26 @@
       const prev = document.getElementById('storyPrev');
       const next = document.getElementById('storyNext');
       if (!track || !prev || !next) return;
+
+      // Cards are auto-height (full text, no truncation), so the track's
+      // own height is measured from the tallest rendered card rather than
+      // a guessed CSS constant -- otherwise it either clips long milestones
+      // or leaves excess empty space around short ones. NODE_REACH mirrors
+      // the "50% + Npx" offset in the .story-up/.story-down CSS above; keep
+      // the two in sync if that offset ever changes.
+      const sizeTrack = () => {
+        const reach = window.innerWidth <= 640 ? 46 : 58; // node radius + gap to stem
+        const stem = 20;
+        let maxCard = 0;
+        track.querySelectorAll('.story-card').forEach(c => {
+          maxCard = Math.max(maxCard, c.getBoundingClientRect().height);
+        });
+        track.style.height = Math.ceil((maxCard + reach + stem + 24) * 2) + 'px';
+      };
+      sizeTrack();
+      let resizeT;
+      window.addEventListener('resize', () => { clearTimeout(resizeT); resizeT = setTimeout(sizeTrack, 150); });
+
       const CARDS_PER_PAGE = 3;
       const scrollByPage = dir => {
         const item = track.querySelector('.story-item');
