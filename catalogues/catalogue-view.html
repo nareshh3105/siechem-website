@@ -350,9 +350,11 @@
       const pdf = await pdfjsLib.getDocument({ url: proxyUrl }).promise;
       const total = pdf.numPages;
 
-      // Render at ~1.6x for a crisp result on high-DPI screens without
-      // ballooning memory on long catalogues.
-      const SCALE = 1.6;
+      // Render at ~2.5x so text stays sharp when a visitor pinch-zooms into
+      // a page (certificates, spec tables) -- 1.6x looked fine at rest but
+      // went visibly blurry under zoom since the canvas was never rasterised
+      // at a higher resolution to begin with.
+      const SCALE = 2.5;
 
       async function renderPage(n) {
         const page = await pdf.getPage(n);
@@ -361,7 +363,7 @@
         canvas.width = Math.floor(vp.width);
         canvas.height = Math.floor(vp.height);
         await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
         page.cleanup();
         return { dataUrl, w: canvas.width, h: canvas.height };
       }
