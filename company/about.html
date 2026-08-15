@@ -297,6 +297,11 @@
        matches the layout the client set on the Careers hero. */
     .container { margin-left: 84px; margin-right: auto; }
     @media (max-width: 980px) { .container { margin-left: auto; } }
+    /* Hero lede paragraphs default to max-width:640px sitewide for
+       readability, but this page's hero now spans full width (no image
+       column any more) -- let them fill it instead of leaving the right
+       half of the page empty. */
+    .page-hero-content.single .page-lede { max-width: 100%; }
   </style>
 </head>
 <body>
