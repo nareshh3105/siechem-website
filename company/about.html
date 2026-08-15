@@ -90,15 +90,22 @@
       padding: 0 20px;
     }
     .story-track::-webkit-scrollbar { display: none; }
-    .story-track::before {
-      content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 3px;
-      background: var(--accent); transform: translateY(-1.5px); z-index: 0;
-    }
     .story-item {
       flex: 0 0 340px;
       position: relative;
       height: 100%;
       scroll-snap-align: start;
+    }
+    /* The line is drawn per-item (not once across .story-track with
+       width:100%) because an absolutely positioned element's percentage
+       width resolves against the *scroll container's own box*, not its
+       scrollable content -- so a single full-width line only covered the
+       first screenful and vanished once the track was scrolled or paged.
+       Items sit flush against each other (no gap), so per-item segments
+       join into one continuous line automatically. */
+    .story-item::before {
+      content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 3px;
+      background: var(--accent); transform: translateY(-1.5px); z-index: 0;
     }
     .story-node {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
