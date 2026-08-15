@@ -31,6 +31,44 @@
       width: 100%; height: 84vh; border: 1px solid var(--border); border-radius:0;
       box-shadow: 0 6px 24px rgba(0,0,0,0.07); background: #fff;
     }
+    /* ── Flipbook ──────────────────────────────────────────────────────
+       Replaces the old <iframe> browser PDF viewer with a page-turning
+       book, matching the presentation used on the previous siechem.com
+       catalogue. PDF.js rasterises each page to a canvas; StPageFlip
+       handles the turn animation. Both are MIT-licensed and self-hosted
+       from /assets/vendor (no CDN, no third-party runtime dependency). */
+    .flip-stage {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 18px 10px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 60vh;
+      overflow: hidden;
+    }
+    .flip-book { box-shadow: 0 10px 34px rgba(0,0,0,0.18); }
+    .flip-book .flip-page {
+      background: #fff;
+      overflow: hidden;
+    }
+    .flip-book .flip-page img { width: 100%; height: 100%; display: block; }
+    .flip-controls {
+      display: flex; align-items: center; justify-content: center;
+      gap: 14px; margin-top: 12px; flex-wrap: wrap;
+    }
+    .flip-controls button {
+      border: 1px solid var(--border-strong); background: #fff; color: var(--text);
+      padding: 8px 16px; font-size: 13px; font-weight: 700; cursor: pointer;
+      font-family: inherit;
+    }
+    .flip-controls button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .flip-pageno {
+      font-family: var(--mono); font-size: 12.5px; color: var(--text-muted);
+      min-width: 92px; text-align: center;
+    }
+    .flip-progress {
+      font-family: var(--mono); font-size: 11.5px; color: var(--text-faint);
+      margin-top: 6px; text-align: center;
+    }
     .ts-doc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
     .ts-doc-loading {
       display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
@@ -169,7 +207,17 @@
         </aside>
         <div class="ts-doc-main">
           <div class="ts-doc-loading" id="ccLoading"><div class="spin"></div>Loading catalogue…</div>
-          <iframe class="ts-doc-pdf" id="ccFrame" style="display:none;" title="Catalogue PDF"></iframe>
+
+          <div class="flip-stage" id="ccStage" style="display:none;">
+            <div id="ccBook" class="flip-book"></div>
+          </div>
+          <div class="flip-controls" id="ccControls" style="display:none;">
+            <button type="button" id="ccPrev" aria-label="Previous page">&lsaquo; Prev</button>
+            <span class="flip-pageno" id="ccPageNo">&ndash; / &ndash;</span>
+            <button type="button" id="ccNext" aria-label="Next page">Next &rsaquo;</button>
+          </div>
+          <div class="flip-progress" id="ccProgress"></div>
+
           <div class="ts-doc-actions">
             <a class="btn btn-ghost" id="ccOpenTab" target="_blank" rel="noopener">Open in New Tab ↗</a>
             <a class="btn btn-ghost" id="ccDownload" target="_blank" rel="noopener">Download PDF</a>
@@ -190,7 +238,11 @@
       <div class="footer-meta"><span>© 2026 Siechem Technologies Pvt. Ltd.</span><span>Established 2002 · 100,000 sq.ft</span></div>
     </div>
   </footer>
-  <script>
+  <!-- StPageFlip (MIT, self-hosted). Must load before the module script
+       below, which reads it off window. PDF.js is imported dynamically
+       inside that script instead, since it ships as an ES module. -->
+  <script src="/assets/vendor/page-flip.browser.js"></script>
+  <script type="module">
   (async () => {
     const FAMILY_ID = new URLSearchParams(location.search).get('f')
       || (location.hash.match(/f=([\w-]+)/) || [])[1];
@@ -226,12 +278,104 @@
     document.getElementById('ccOpenTab').href = proxyUrl;
     document.getElementById('ccDownload').href = directUrl;
 
-    const frame = document.getElementById('ccFrame');
-    frame.addEventListener('load', () => {
-      document.getElementById('ccLoading').style.display = 'none';
-      frame.style.display = 'block';
-    });
-    frame.src = proxyUrl;
+    // ── Flipbook rendering ────────────────────────────────────────────
+    // Rasterise every PDF page with PDF.js, then hand the resulting images
+    // to StPageFlip. Falls back to the plain browser PDF viewer if anything
+    // here fails, so the catalogue is never unreachable.
+    const loadingEl  = document.getElementById('ccLoading');
+    const stageEl    = document.getElementById('ccStage');
+    const bookEl     = document.getElementById('ccBook');
+    const controlsEl = document.getElementById('ccControls');
+    const pageNoEl   = document.getElementById('ccPageNo');
+    const progressEl = document.getElementById('ccProgress');
+
+    function fallbackToIframe(reason) {
+      console.warn('[catalogue] flipbook unavailable, using PDF viewer:', reason);
+      progressEl.textContent = '';
+      controlsEl.style.display = 'none';
+      stageEl.style.display = 'none';
+      const f = document.createElement('iframe');
+      f.className = 'ts-doc-pdf';
+      f.title = 'Catalogue PDF';
+      f.addEventListener('load', () => { loadingEl.style.display = 'none'; });
+      f.src = proxyUrl;
+      loadingEl.parentNode.insertBefore(f, loadingEl.nextSibling);
+    }
+
+    try {
+      const pdfjsLib = await import('/assets/vendor/pdf.min.mjs');
+      pdfjsLib.GlobalWorkerOptions.workerSrc = '/assets/vendor/pdf.worker.min.mjs';
+
+      const pdf = await pdfjsLib.getDocument({ url: proxyUrl }).promise;
+      const total = pdf.numPages;
+
+      // Render at ~1.6x for a crisp result on high-DPI screens without
+      // ballooning memory on long catalogues.
+      const SCALE = 1.6;
+      const images = [];
+      let pageW = 0, pageH = 0;
+
+      for (let n = 1; n <= total; n++) {
+        progressEl.textContent = 'Rendering page ' + n + ' of ' + total + '…';
+        const page = await pdf.getPage(n);
+        const vp = page.getViewport({ scale: SCALE });
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.floor(vp.width);
+        canvas.height = Math.floor(vp.height);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+        images.push(canvas.toDataURL('image/jpeg', 0.82));
+        if (!pageW) { pageW = canvas.width; pageH = canvas.height; }
+        page.cleanup();
+      }
+
+      // Size the book to fit the column while keeping the PDF's aspect ratio.
+      const maxW = Math.min(bookEl.parentElement.clientWidth - 24, 900);
+      const singleW = Math.floor(maxW / 2);
+      const singleH = Math.floor(singleW * (pageH / pageW));
+
+      bookEl.innerHTML = images.map(src =>
+        '<div class="flip-page"><img src="' + src + '" alt=""></div>'
+      ).join('');
+
+      const PageFlip = window.St && window.St.PageFlip ? window.St.PageFlip : window.PageFlip;
+      if (!PageFlip) throw new Error('PageFlip library not found on window');
+
+      const flip = new PageFlip(bookEl, {
+        width: singleW,
+        height: singleH,
+        size: 'stretch',
+        minWidth: 200,
+        maxWidth: 1000,
+        minHeight: 280,
+        maxHeight: 1400,
+        showCover: true,
+        maxShadowOpacity: 0.5,
+        mobileScrollSupport: true,
+        useMouseEvents: true
+      });
+      flip.loadFromHTML(bookEl.querySelectorAll('.flip-page'));
+
+      function syncLabel() {
+        const cur = flip.getCurrentPageIndex() + 1;
+        pageNoEl.textContent = cur + ' / ' + total;
+      }
+      flip.on('flip', syncLabel);
+      syncLabel();
+
+      document.getElementById('ccPrev').addEventListener('click', () => flip.flipPrev());
+      document.getElementById('ccNext').addEventListener('click', () => flip.flipNext());
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') flip.flipPrev();
+        if (e.key === 'ArrowRight') flip.flipNext();
+      });
+
+      loadingEl.style.display = 'none';
+      stageEl.style.display = 'flex';
+      controlsEl.style.display = 'flex';
+      progressEl.textContent = 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
+    } catch (err) {
+      fallbackToIframe(err && err.message ? err.message : err);
+    }
   })();
   </script>
   <script src="/assets/lenis.min.js" defer></script><script src="/assets/smooth-scroll.js" defer></script><script src="/animations.js"></script>
