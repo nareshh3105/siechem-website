@@ -103,7 +103,12 @@
       margin-bottom: 8px;
       font-weight: 500;
     }
-    .hero-eyebrow-muted { color: var(--text-muted); }
+    /* Higher-specificity selector (not just .hero-eyebrow-muted alone) --
+       this file has duplicate .hero-eyebrow rules further down (leftover
+       from earlier edits) that reset color:var(--accent) at equal
+       specificity, and being later in source order they were winning over
+       a same-specificity override. */
+    .hero-eyebrow.hero-eyebrow-muted { color: var(--text-muted); }
     .hero-title {
       font-size: clamp(26px, 3.2vw, 26px);
       font-weight: 600;
