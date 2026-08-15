@@ -349,7 +349,14 @@
 
       const images = [first.dataUrl];
 
-      const maxW = Math.min(bookEl.parentElement.clientWidth - 24, 900);
+      // Measure against .ts-doc-main, not .flip-stage -- the stage is still
+      // display:none at this point (it's only shown once the book is ready
+      // below), and a display:none element reports clientWidth 0. That was
+      // producing a negative singleW/singleH here, which StPageFlip's
+      // constructor rejects with "Invalid width or height". .ts-doc-main is
+      // never hidden, so it always has a real width to measure.
+      const measureEl = document.querySelector('.ts-doc-main') || bookEl.parentElement;
+      const maxW = Math.min(measureEl.clientWidth - 24, 900);
       const singleW = Math.floor(maxW / 2);
       const singleH = Math.floor(singleW * (first.h / first.w));
 
