@@ -292,7 +292,6 @@
       if (fellBack) return;          // watchdog and catch() can both fire
       fellBack = true;
       console.warn('[catalogue] flipbook unavailable, using PDF viewer:', reason);
-      progressEl.textContent = '';
       controlsEl.style.display = 'none';
       stageEl.style.display = 'none';
       loadingEl.style.display = 'flex';
@@ -302,6 +301,11 @@
       f.addEventListener('load', () => { loadingEl.style.display = 'none'; });
       f.src = proxyUrl;
       loadingEl.parentNode.insertBefore(f, loadingEl.nextSibling);
+      // Show the real reason on-page, in small text, rather than only in
+      // devtools -- the previous version went silent here, which made this
+      // fallback impossible for anyone but a developer to diagnose.
+      progressEl.textContent = 'Showing standard PDF viewer (flipbook: ' + reason + ')';
+      progressEl.style.marginTop = '10px';
     }
 
     // Watchdog covers only "does page 1 appear" -- the book now shows as
