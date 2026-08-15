@@ -207,6 +207,13 @@
     .container { margin-left: 84px; margin-right: auto; }
     @media (max-width: 980px) { .container { margin-left: auto; } }
   </style>
+  <style>
+    /* .page-hero's border-bottom is a global theme.css rule (used sitewide),
+       so it's overridden per-page here rather than removed globally --
+       this page's hero divider looked stray once the hero content and the
+       page content below it no longer share the same left edge. */
+    .page-hero { border-bottom: none; }
+  </style>
 </head>
 <body>
 

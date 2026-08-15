@@ -12,7 +12,6 @@
       display: flex;
       align-items: center;
       background: var(--bg);
-      border-bottom: 1px solid var(--border);
       padding: 80px 0 60px;
     }
     .stub-coming {
@@ -40,6 +39,36 @@
        matches the layout the client set on the Careers hero. */
     .container { margin-left: 84px; margin-right: auto; }
     @media (max-width: 980px) { .container { margin-left: auto; } }
+    /* MD photo + message -- photo enlarged to fill the free space the old
+       72px thumbnail left on the left, message column right-aligned to
+       balance it. */
+    .mds-wrap {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .mds-photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: top;
+      border: 3px solid var(--border);
+      border-radius: 4px;
+    }
+    .mds-body { text-align: right; }
+    .mds-quote {
+      border-right: 3px solid var(--accent);
+      padding-right: 24px;
+      margin-bottom: 28px;
+    }
+    .mds-quote p { text-align: right; }
+    @media (max-width: 720px) {
+      .mds-wrap { grid-template-columns: 1fr; }
+      .mds-photo { max-width: 220px; margin: 0 auto; }
+      .mds-body, .mds-quote p { text-align: left; }
+      .mds-quote { border-right: none; padding-right: 0; border-left: 3px solid var(--accent); padding-left: 24px; }
+    }
   </style>
 </head>
 <body>
@@ -136,22 +165,21 @@
 
   <section class="section-padding">
     <div class="container">
-        <div style="display:flex;align-items:center;gap:16px;">
-          <img loading="lazy" src="/assets/company/damodaren.jpg" alt="P. Damodaren — Managing Director" style="width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--border);" />
-          <div style="display:flex;flex-direction:column;gap:2px;">
-            <span style="font-size:17px;font-weight:800;color:var(--text);">P. Damodaren</span>
+      <div class="mds-wrap">
+        <img loading="lazy" class="mds-photo" src="/assets/company/damodaren.jpg" alt="P. Damodaren — Managing Director" />
+        <div class="mds-body">
+          <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:22px;">
+            <span style="font-size:19px;font-weight:800;color:var(--text);">P. Damodaren</span>
             <span style="font-family:var(--mono);font-size:12px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;">Managing Director</span>
           </div>
-        </div>
-      <div style="max-width: 800px;">
 
-        <div style="border-left:3px solid var(--accent);padding-left:24px;margin-bottom:28px;">
-        <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Welcome to the Siechem's website. We did grow steadily since inception and have become India's No.1 Speciality Wire &amp; Cable manufacturer. Our objective is to be the first preferred partner for all your wires &amp; cables requirements, delivering the best value the industry can offer in terms of pricing, quality, timely delivery and best after-sales support.</p>
-        <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Proudly we can say that we never lost any customer since 2002 when we started our manufacturing activity in Pondicherry, India. Our products serve 32 different market segments which include leading corporates, Govt. companies, builders, contractors and dealers as our esteemed customers.</p>
-        <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We would be pleased to design, manufacture and supply most complex wires &amp; cables against your specific requirements. Our in-house capabilities are such that we can design, manufacture and supply wires &amp; cables to any international standards in our automated plant. We strictly practice and follow ethical values and green environment norms, optimizing production processes, avoiding hazardous substances at every stage of manufacturing.</p>
-        <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We hope you will find this website helpful and easy to navigate. In case you have any difficulty in getting the exact information that you may need, please do not hesitate to contact us. We will respond as quickly as possible. Thanks for your visit to our site and we look forward to working with you as our esteemed customer.</p>
+          <div class="mds-quote">
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Welcome to the Siechem's website. We did grow steadily since inception and have become India's No.1 Speciality Wire &amp; Cable manufacturer. Our objective is to be the first preferred partner for all your wires &amp; cables requirements, delivering the best value the industry can offer in terms of pricing, quality, timely delivery and best after-sales support.</p>
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Proudly we can say that we never lost any customer since 2002 when we started our manufacturing activity in Pondicherry, India. Our products serve 32 different market segments which include leading corporates, Govt. companies, builders, contractors and dealers as our esteemed customers.</p>
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We would be pleased to design, manufacture and supply most complex wires &amp; cables against your specific requirements. Our in-house capabilities are such that we can design, manufacture and supply wires &amp; cables to any international standards in our automated plant. We strictly practice and follow ethical values and green environment norms, optimizing production processes, avoiding hazardous substances at every stage of manufacturing.</p>
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We hope you will find this website helpful and easy to navigate. In case you have any difficulty in getting the exact information that you may need, please do not hesitate to contact us. We will respond as quickly as possible. Thanks for your visit to our site and we look forward to working with you as our esteemed customer.</p>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
