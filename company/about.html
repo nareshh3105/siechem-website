@@ -83,10 +83,11 @@
       position: relative;
       display: flex;
       overflow-x: auto;
+      overflow-y: visible;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
-      height: 520px;
-      padding: 0 40px;
+      height: 800px;
+      padding: 0 20px;
     }
     .story-track::-webkit-scrollbar { display: none; }
     .story-track::before {
@@ -94,19 +95,20 @@
       background: var(--accent); transform: translateY(-1.5px); z-index: 0;
     }
     .story-item {
-      flex: 0 0 300px;
+      flex: 0 0 380px;
       position: relative;
       height: 100%;
-      scroll-snap-align: center;
+      scroll-snap-align: start;
     }
     .story-node {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 116px; height: 116px; border-radius: 50%;
+      width: 128px; height: 128px; border-radius: 50%;
       background: var(--bg-soft); border: 4px solid var(--accent);
       display: flex; align-items: center; justify-content: center;
-      color: var(--accent); overflow: hidden; z-index: 2;
+      color: var(--accent-2); overflow: hidden; z-index: 2;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
-    .story-node svg { width: 34px; height: 34px; opacity: 0.55; }
+    .story-node svg { width: 36px; height: 36px; opacity: 0.7; }
     .story-node img { width: 100%; height: 100%; object-fit: cover; }
     .story-stem {
       position: absolute; left: 50%; width: 3px; background: var(--accent);
@@ -114,21 +116,30 @@
     }
     .story-card {
       position: absolute; left: 50%; transform: translateX(-50%);
-      width: 280px; background: #fff; border: 1px solid var(--border);
-      border-radius: 4px; padding: 20px 22px;
-      box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+      width: 320px; background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; padding: 22px 26px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.09);
     }
-    .story-year { font-size: 24px; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .story-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
+    .story-year { font-size: 26px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
     .story-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
-    .story-up .story-stem { bottom: calc(50% + 58px); height: 36px; }
-    .story-up .story-card { bottom: calc(50% + 58px + 36px); }
-    .story-down .story-stem { top: calc(50% + 58px); height: 36px; }
-    .story-down .story-card { top: calc(50% + 58px + 36px); }
+    .story-up .story-stem { bottom: calc(50% + 60px); height: 22px; }
+    .story-up .story-card { bottom: calc(50% + 60px + 22px); }
+    .story-down .story-stem { top: calc(50% + 60px); height: 22px; }
+    .story-down .story-card { top: calc(50% + 60px + 22px); }
+    @media (max-width: 900px) {
+      .story-track { height: 860px; }
+      .story-item { flex-basis: 260px; }
+      .story-card { width: 230px; padding: 18px 20px; }
+    }
     @media (max-width: 640px) {
       .story-timeline-wrap { padding: 0 8px; }
       .story-arrow { width: 36px; height: 36px; }
-      .story-item { flex-basis: 220px; }
-      .story-card { width: 200px; padding: 16px; }
+      .story-node { width: 96px; height: 96px; }
+      .story-up .story-stem { bottom: calc(50% + 50px); }
+      .story-up .story-card { bottom: calc(50% + 50px + 26px); }
+      .story-down .story-stem { top: calc(50% + 50px); }
+      .story-down .story-card { top: calc(50% + 50px + 26px); }
     }
 
     .stat-bigcard {
@@ -648,7 +659,12 @@
       const prev = document.getElementById('storyPrev');
       const next = document.getElementById('storyNext');
       if (!track || !prev || !next) return;
-      const scrollByPage = dir => track.scrollBy({ left: dir * (track.clientWidth * 0.8), behavior: 'smooth' });
+      const CARDS_PER_PAGE = 3;
+      const scrollByPage = dir => {
+        const item = track.querySelector('.story-item');
+        const itemWidth = item ? item.getBoundingClientRect().width : track.clientWidth / CARDS_PER_PAGE;
+        track.scrollBy({ left: dir * itemWidth * CARDS_PER_PAGE, behavior: 'smooth' });
+      };
       prev.addEventListener('click', () => scrollByPage(-1));
       next.addEventListener('click', () => scrollByPage(1));
       const syncArrows = () => {
