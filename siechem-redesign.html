@@ -245,18 +245,27 @@
     }
     .section-eyebrow {
       font-family: var(--mono);
-      font-size: 11px;
+      font-size: 16px;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-weight: 800;
+      margin-bottom: 8px;
       display: inline-block;
     }
-    .section-title {
-      font-size: clamp(27px, 3.2vw, 36px);
+        .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 8px;
       font-weight: 800;
-      line-height: 1.2;
+    }
+    .section-title {
+      font-size: clamp(27px, 3.2vw, 30px);
+      font-weight: 800;
+      line-height: 1;
       letter-spacing: -0.6px;
       color: var(--text);
     }
@@ -902,10 +911,12 @@
       border-bottom: 1px solid var(--border);
       overflow: hidden;
     }
+    
     .trusted-band-label {
       text-align: center;
       font-family: var(--mono);
-      font-size: 10.5px;
+      font-size: 15px;
+      font-weight: 800px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--text-faint);
@@ -1212,7 +1223,7 @@
       line-height: 1.3;
     }
     .process-step-desc {
-      font-size: 11.5px;
+      font-size: 14px;
       color: var(--text-faint);
       line-height: 1.5;
       max-width: 120px;
@@ -1666,7 +1677,7 @@
     <div class="container">
       <div class="hero-statement-inner">
         <div class="hero-eyebrow">Engineered in India &middot; Trusted Worldwide</div>
-        <h1 class="hero-title">Speciality Cables Built to <em>Outlast</em> the Extreme.</h1>
+        <h1 class="hero-title">Speciality cables built to <em>outlast</em> the Extreme.</h1>
         <div class="ctas hero-statement-ctas">
           <a href="/products/products.html" class="btn btn-primary">Explore Products</a>
           <a href="/company/contact.html" class="btn btn-ghost">Request Quote</a>
@@ -1846,7 +1857,7 @@
       <div class="caps-split">
         <div class="caps-content reveal">
           <span class="section-eyebrow">Why Choose Siechem</span>
-          <h2>Specialty Engineering. Full Customization.</h2>
+          <h2>Specialty Engineering - Full Customization</h2>
           <p>Since 2002, Siechem has been at the forefront of the wire and cable industry, designing and manufacturing over 22 million configurations. We combine technical design consultancy, E-Beam polymer modification, and vertically integrated compounding to build the exact wires your systems require.</p>
           <p>Our team of applications engineers collaborates directly with clients to optimize weight, flexibility, electrical shield coverage, and environmental survivability for critical systems.</p>
           
@@ -1905,7 +1916,7 @@
         <!-- Right: Company story + facts -->
         <div class="reveal reveal-d1">
           <span class="section-eyebrow">Our Story</span>
-          <h2 class="section-title" style="margin-bottom:16px;">Built on 4 Decades of<br/><em style="font-style:normal;color:var(--accent)">Wire Expertise.</em></h2>
+          <h2 class="section-title" style="margin-bottom:19px;">Built on 4 decades of <em style="font-style:normal;color:var(--accent)">wire expertise</em><br/></h2>
           <p style="color:var(--text-muted);line-height:1.75;font-size:16px;">Established in 2002 by Mr. P. Damodaren — a cable industry veteran with over 40 years of experience — Siechem has grown from a specialty trading company into India's most trusted specialty cable manufacturer. Our 100,000 sq.ft facility in Pondicherry runs four Electron Beam lines 24×7, zero-debt, A1-rated by ICRA.</p>
 
           <div class="about-siechem-facts">
@@ -1950,11 +1961,10 @@
       <div class="ind-grid">
 
         <!-- Aerospace & Defence -->
-        <a href="/products/product-aero44.html" class="ind-card reveal">
+        <a  class="ind-card reveal">
           <div class="ind-img" style="background-image:url('/assets/cable-images/1dfMnS6PZVCBaHWZ-8AV5Ugx6lKDPvWAO.webp');"></div>
           <div class="ind-name">Aerospace &amp; Defence</div>
           <div class="ind-cert">AS 9100 · MIL-Spec · DGAQA</div>
-          <p class="ind-desc">High-reliability wiring for avionics, airframes, UAVs, missiles and satellite systems — built to survive extreme altitude and vibration.</p>
           <div class="ind-cta">View Aerospace Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -1963,7 +1973,6 @@
           <div class="ind-img" style="background-image:url('/assets/cable-images/1YcTrAW5QxLtbBdhjuwScwH7SX67Nw79n.webp');"></div>
           <div class="ind-name">Automotive</div>
           <div class="ind-cert">SAE J1128 · JASO D611 · IS 14465</div>
-          <p class="ind-desc">OEM-approved harness wires for engine bays, EV battery packs, and chassis — meeting ARAI, NABL, and global OEM specifications.</p>
           <div class="ind-cta">View Automotive Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -1972,7 +1981,6 @@
           <div class="ind-img" style="background-image:url('/assets/cable-images/1kZJfoHzA5DU94B_biqFL_utRDQzHY401.webp');"></div>
           <div class="ind-name">Marine</div>
           <div class="ind-cert">IEC 60092 · ABS · IR Class</div>
-          <p class="ind-desc">Flame-retardant, oil-resistant and salt-spray proof cables for naval vessels, offshore platforms and commercial shipping fleets.</p>
           <div class="ind-cta">View Marine Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -2012,7 +2020,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-eyebrow">Client Testimonials</span>
-        <h2 class="section-title">What Our Customers Say</h2>
+        <h2 class="section-title">What our customers say</h2>
       </div>
 
       <!-- Logo tiles: Siemens is the only one of these three with a logo file
@@ -2029,7 +2037,6 @@
               <div class="tst-unit">Transportation Systems</div>
             </div>
           </div>
-          <div class="tst-quote-mark" aria-hidden="true">“</div>
           <p class="tst-text">We are highly pleased with the technical consistency and compliance documentation from Siechem. Their ability to deliver customized E-beam crosslinked cables for our high-stress environments makes them an invaluable aerospace partner.</p>
         </article>
 
@@ -2043,7 +2050,6 @@
               <div class="tst-unit">Aerospace Division</div>
             </div>
           </div>
-          <div class="tst-quote-mark" aria-hidden="true">“</div>
           <p class="tst-text">Honeywell has benefitted directly from Siechem's flexible engineering approach. The high level of quality control in their Chennai laboratories and compliance with military wire standards makes our global sourcing seamless.</p>
         </article>
 
@@ -2057,7 +2063,6 @@
               <div class="tst-unit">Power &amp; Water</div>
             </div>
           </div>
-          <div class="tst-quote-mark" aria-hidden="true">“</div>
           <p class="tst-text">Consistent quality, certified custom cable designs, and precise logistics timelines. The team at Siechem makes specifying wires for our offshore energy projects straightforward and efficient.</p>
         </article>
       </div>
