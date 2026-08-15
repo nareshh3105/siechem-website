@@ -43,24 +43,93 @@
   <link rel="canonical" href="https://siechem.vercel.app/company/about.html">
   <link rel="stylesheet" href="/theme.css">
   <style>
-    .timeline-row {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 24px;
-      padding: 24px 0;
-      border-top: 1px solid var(--border);
+    /* ── "Our Story" zigzag timeline ──────────────────────────────────
+       A horizontally-scrolling, alternating-card timeline (matching the
+       layout used on Eland Cables' anniversary page), reskinned to
+       Siechem's red theme. Each milestone sits on a shared centre line,
+       with its card alternating above/below via .story-up / .story-down. */
+    .story-badge-row {
+      display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .story-badge { display: flex; align-items: center; gap: 18px; }
+    .story-badge-box {
+      background: var(--accent); color: #fff;
+      font-family: var(--mono); font-weight: 800; font-size: 13px;
+      letter-spacing: 0.04em; line-height: 1.35;
+      padding: 18px 20px; text-align: center;
+    }
+    .story-badge-years { display: flex; flex-direction: column; line-height: 1; }
+    .story-badge-num-row { display: flex; align-items: baseline; gap: 2px; }
+    .story-badge-num { font-size: 56px; font-weight: 800; color: var(--accent); letter-spacing: -2px; }
+    .story-badge-word { font-size: 26px; font-weight: 600; color: var(--text); font-style: italic; }
+    .story-badge-est { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; color: var(--text-muted); margin-top: 4px; }
+    .story-badge-tag { font-size: 16px; font-style: italic; color: var(--text-muted); }
+
+    .story-timeline-wrap { position: relative; padding: 0 56px; }
+    .story-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; border: none; background: var(--accent);
+      color: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      z-index: 4; transition: background 0.15s;
+    }
+    .story-arrow:hover { background: var(--accent-2); }
+    .story-arrow:disabled { opacity: 0.35; cursor: not-allowed; }
+    .story-arrow-prev { left: 0; }
+    .story-arrow-next { right: 0; }
+    .story-arrow svg { width: 18px; height: 18px; }
+
+    .story-track {
       position: relative;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      height: 520px;
+      padding: 0 40px;
     }
-    .timeline-row:hover { background: rgba(255,255,255,0.02); }
-    .timeline-year {
-      font-family: var(--mono);
-      font-weight: 700;
-      font-size: 22px;
-      letter-spacing: -0.5px;
-      color: var(--accent-2);
+    .story-track::-webkit-scrollbar { display: none; }
+    .story-track::before {
+      content: ''; position: absolute; left: 0; top: 50%; width: 100%; height: 3px;
+      background: var(--accent); transform: translateY(-1.5px); z-index: 0;
     }
-    .timeline-content h4 { font-size:16px; font-weight:700; margin-bottom:6px; }
-    .timeline-content p { font-size:14px; color:var(--text-muted); line-height:1.65; }
+    .story-item {
+      flex: 0 0 300px;
+      position: relative;
+      height: 100%;
+      scroll-snap-align: center;
+    }
+    .story-node {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 116px; height: 116px; border-radius: 50%;
+      background: var(--bg-soft); border: 4px solid var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); overflow: hidden; z-index: 2;
+    }
+    .story-node svg { width: 34px; height: 34px; opacity: 0.55; }
+    .story-node img { width: 100%; height: 100%; object-fit: cover; }
+    .story-stem {
+      position: absolute; left: 50%; width: 3px; background: var(--accent);
+      transform: translateX(-1.5px); z-index: 1;
+    }
+    .story-card {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 280px; background: #fff; border: 1px solid var(--border);
+      border-radius: 4px; padding: 20px 22px;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+    }
+    .story-year { font-size: 24px; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+    .story-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+    .story-up .story-stem { bottom: calc(50% + 58px); height: 36px; }
+    .story-up .story-card { bottom: calc(50% + 58px + 36px); }
+    .story-down .story-stem { top: calc(50% + 58px); height: 36px; }
+    .story-down .story-card { top: calc(50% + 58px + 36px); }
+    @media (max-width: 640px) {
+      .story-timeline-wrap { padding: 0 8px; }
+      .story-arrow { width: 36px; height: 36px; }
+      .story-item { flex-basis: 220px; }
+      .story-card { width: 200px; padding: 16px; }
+    }
 
     .stat-bigcard {
       padding: 32px 28px;
@@ -500,26 +569,96 @@
   </section>
 
 
-  <!-- Timeline -->
+  <!-- Our Story timeline -->
   <section class="section section-soft">
     <div class="container">
+      <div class="story-badge-row reveal">
+        <div class="story-badge">
+          <div class="story-badge-box">SIECHEM<br>WIRES &amp; CABLES</div>
+          <div class="story-badge-years">
+            <div class="story-badge-num-row"><span class="story-badge-num">25</span><span class="story-badge-word">Years</span></div>
+            <div class="story-badge-est">Est. 2002</div>
+          </div>
+        </div>
+        <div class="story-badge-tag">Engineered for Excellence</div>
+      </div>
       <div class="section-head reveal">
         <p class="section-eyebrow">Journey</p>
-        <h2 class="section-title">Over Two Decades of Building Wire</h2>
+        <h2 class="section-title">Our Story</h2>
       </div>
-      <div>
-        <div class="timeline-row reveal"><div class="timeline-year">2002</div><div class="timeline-content"><h4>Founded in Chennai</h4><p>Siechem Technologies Pvt. Ltd. established with a focus on specialty wires and cables for defence, aerospace and industrial applications — a segment largely dominated by imports at the time.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2005</div><div class="timeline-content"><h4>Pondicherry Manufacturing Facility</h4><p>State-of-the-art automated production facility commissioned at 104/8 &amp; 105/7, Sedarapet Main Road, Pondicherry — spanning the complete production chain from wire drawing to jacketing.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2008</div><div class="timeline-content"><h4>Defence &amp; MIL-Spec Approvals</h4><p>Cables certified for Indian armed forces applications. Siechem begins supplying to defence, aerospace and railway sectors under DGAQA and RDSO approvals.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2011</div><div class="timeline-content"><h4>Electron-Beam Crosslinking Facility</h4><p>In-house E-beam irradiation plant commissioned — enabling proprietary high-temperature product lines including PW 125 and Sietherm 155. One of very few such facilities in India.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2014</div><div class="timeline-content"><h4>In-House Compound Manufacturing</h4><p>Proprietary compound formulation facility operational — providing full control over PVC, XLPE, LSZH and specialty polymer compounds across the product range.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2017</div><div class="timeline-content"><h4>Facility Expansion to 100,000 sq.ft</h4><p>Pondicherry plant doubles to 100,000 sq.ft of automated production floor. Addition of fluoropolymer (PTFE/FEP/PFA/ETFE) extrusion lines and electro-tinning capacity.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2020</div><div class="timeline-content"><h4>R&amp;D Recognition by Govt. of India</h4><p>Siechem's in-house R&amp;D department recognised by the Ministry of Science &amp; Technology, Govt. of India. Team expands with PhDs, engineers and technocrats focused on next-generation compounds.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2024</div><div class="timeline-content"><h4>23 Million Part Numbers Across 34 Segments</h4><p>Product catalogue surpasses 23 million part-number configurations across 34 market segments. Production reaches ~10,000 km of wires and cables per day. Zero-debt financial position maintained.</p></div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2026</div><div class="timeline-content"><h4>New 300,000 sq.ft Facility — Bhiwadi</h4><p>Under construction — 300,000 sq.ft facility in Bhiwadi, Rajasthan (65 km from Delhi Airport), with projected capacity of 5 million metres per day (~1.5 million conductor km/year). Operations scheduled to commence December 2026.</p></div></div>
+
+      <div class="story-timeline-wrap reveal">
+        <button type="button" class="story-arrow story-arrow-prev" id="storyPrev" aria-label="Earlier milestones"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="story-track" id="storyTrack">
+          <!-- Photos to come later -- each .story-node is a placeholder circle;
+               swap its <svg> for an <img src="..." alt="..."> when images are ready. -->
+          <div class="story-item story-up">
+            <div class="story-card"><div class="story-year">2002</div><h4>Founded in Chennai</h4><p>Siechem Technologies Pvt. Ltd. established with a focus on specialty wires and cables for defence, aerospace and industrial applications — a segment largely dominated by imports at the time.</p></div>
+            <div class="story-stem"></div>
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="story-item story-down">
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div class="story-stem"></div>
+            <div class="story-card"><div class="story-year">2005</div><h4>Pondicherry Manufacturing Facility</h4><p>State-of-the-art automated production facility commissioned at 104/8 &amp; 105/7, Sedarapet Main Road, Pondicherry — spanning the complete production chain from wire drawing to jacketing.</p></div>
+          </div>
+          <div class="story-item story-up">
+            <div class="story-card"><div class="story-year">2008</div><h4>Defence &amp; MIL-Spec Approvals</h4><p>Cables certified for Indian armed forces applications. Siechem begins supplying to defence, aerospace and railway sectors under DGAQA and RDSO approvals.</p></div>
+            <div class="story-stem"></div>
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="story-item story-down">
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div class="story-stem"></div>
+            <div class="story-card"><div class="story-year">2011</div><h4>Electron-Beam Crosslinking Facility</h4><p>In-house E-beam irradiation plant commissioned — enabling proprietary high-temperature product lines including PW 125 and Sietherm 155. One of very few such facilities in India.</p></div>
+          </div>
+          <div class="story-item story-up">
+            <div class="story-card"><div class="story-year">2014</div><h4>In-House Compound Manufacturing</h4><p>Proprietary compound formulation facility operational — providing full control over PVC, XLPE, LSZH and specialty polymer compounds across the product range.</p></div>
+            <div class="story-stem"></div>
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="story-item story-down">
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div class="story-stem"></div>
+            <div class="story-card"><div class="story-year">2017</div><h4>Facility Expansion to 100,000 sq.ft</h4><p>Pondicherry plant doubles to 100,000 sq.ft of automated production floor. Addition of fluoropolymer (PTFE/FEP/PFA/ETFE) extrusion lines and electro-tinning capacity.</p></div>
+          </div>
+          <div class="story-item story-up">
+            <div class="story-card"><div class="story-year">2020</div><h4>R&amp;D Recognition by Govt. of India</h4><p>Siechem's in-house R&amp;D department recognised by the Ministry of Science &amp; Technology, Govt. of India. Team expands with PhDs, engineers and technocrats focused on next-generation compounds.</p></div>
+            <div class="story-stem"></div>
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+          <div class="story-item story-down">
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <div class="story-stem"></div>
+            <div class="story-card"><div class="story-year">2024</div><h4>23 Million Part Numbers Across 34 Segments</h4><p>Product catalogue surpasses 23 million part-number configurations across 34 market segments. Production reaches ~10,000 km of wires and cables per day. Zero-debt financial position maintained.</p></div>
+          </div>
+          <div class="story-item story-up">
+            <div class="story-card"><div class="story-year">2026</div><h4>New 300,000 sq.ft Facility — Bhiwadi</h4><p>Under construction — 300,000 sq.ft facility in Bhiwadi, Rajasthan (65 km from Delhi Airport), with projected capacity of 5 million metres per day (~1.5 million conductor km/year). Operations scheduled to commence December 2026.</p></div>
+            <div class="story-stem"></div>
+            <div class="story-node"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" stroke="currentColor" stroke-width="1.6"/><path d="M5 17l5-5 3 3 3-4 3 4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          </div>
+        </div>
+        <button type="button" class="story-arrow story-arrow-next" id="storyNext" aria-label="Later milestones"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </div>
     </div>
   </section>
+  <script>
+    (() => {
+      const track = document.getElementById('storyTrack');
+      const prev = document.getElementById('storyPrev');
+      const next = document.getElementById('storyNext');
+      if (!track || !prev || !next) return;
+      const scrollByPage = dir => track.scrollBy({ left: dir * (track.clientWidth * 0.8), behavior: 'smooth' });
+      prev.addEventListener('click', () => scrollByPage(-1));
+      next.addEventListener('click', () => scrollByPage(1));
+      const syncArrows = () => {
+        prev.disabled = track.scrollLeft <= 4;
+        next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 4;
+      };
+      track.addEventListener('scroll', syncArrows);
+      syncArrows();
+    })();
+  </script>
 
 
 
