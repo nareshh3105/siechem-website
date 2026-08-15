@@ -42,32 +42,31 @@
     /* MD photo + message -- photo enlarged to fill the free space the old
        72px thumbnail left on the left, message column right-aligned to
        balance it. */
-    .mds-wrap {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 48px;
-      align-items: start;
+    /* Photo on top, name/title directly beneath it, then the quote in a
+       single column below -- the earlier side-by-side layout (photo left,
+       name+quote right) left the name column floating awkwardly far from
+       the photo it identifies. Quote paragraphs use the sitewide
+       justified body-text style (no text-align override), so the left
+       edge lines up line to line like every other page. */
+    .mds-photo-block {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; margin-bottom: 32px;
     }
     .mds-photo {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      object-position: top;
-      border: 3px solid var(--border);
-      border-radius: 4px;
+      width: 220px; height: 220px;
+      object-fit: cover; object-position: top;
+      border: 3px solid var(--border); border-radius: 50%;
+      margin-bottom: 16px;
     }
-    .mds-body { text-align: right; }
+    .mds-name { font-size: 19px; font-weight: 800; color: var(--text); }
+    .mds-role {
+      font-family: var(--mono); font-size: 12px; color: var(--accent-2);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px;
+    }
     .mds-quote {
-      border-right: 3px solid var(--accent);
-      padding-right: 24px;
-      margin-bottom: 28px;
-    }
-    .mds-quote p { text-align: right; }
-    @media (max-width: 720px) {
-      .mds-wrap { grid-template-columns: 1fr; }
-      .mds-photo { max-width: 220px; margin: 0 auto; }
-      .mds-body, .mds-quote p { text-align: left; }
-      .mds-quote { border-right: none; padding-right: 0; border-left: 3px solid var(--accent); padding-left: 24px; }
+      max-width: 760px; margin: 0 auto;
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
     }
   </style>
 </head>
@@ -166,19 +165,18 @@
   <section class="section-padding">
     <div class="container">
       <div class="mds-wrap">
-        <img loading="lazy" class="mds-photo" src="/assets/company/damodaren.jpg" alt="P. Damodaren — Managing Director" />
-        <div class="mds-body">
-          <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:22px;">
-            <span style="font-size:19px;font-weight:800;color:var(--text);">P. Damodaren</span>
-            <span style="font-family:var(--mono);font-size:12px;color:var(--accent-2);letter-spacing:0.08em;text-transform:uppercase;">Managing Director</span>
-          </div>
+        <div class="mds-photo-block">
+          <img loading="lazy" class="mds-photo" src="/assets/company/damodaren.jpg" alt="P. Damodaren — Managing Director" />
+          <div class="mds-name">P. Damodaren</div>
+          <div class="mds-role">Managing Director</div>
+        </div>
 
-          <div class="mds-quote">
-          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Welcome to the Siechem's website. We did grow steadily since inception and have become India's No.1 Speciality Wire &amp; Cable manufacturer. Our objective is to be the first preferred partner for all your wires &amp; cables requirements, delivering the best value the industry can offer in terms of pricing, quality, timely delivery and best after-sales support.</p>
-          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Proudly we can say that we never lost any customer since 2002 when we started our manufacturing activity in Pondicherry, India. Our products serve 32 different market segments which include leading corporates, Govt. companies, builders, contractors and dealers as our esteemed customers.</p>
+        <div class="mds-quote">
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Dear Partners,
+At Siechem, we are committed to sustainable growth, continuous innovation, and responsible business practices as the foundation for building a better future as India’s No. 1 specialty wire and cable manufacturer for around 28 segments, exporting to over 60 countries with 23 million part numbers with digitally controlled automated manufacturing plants.</p>
+          <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">Our focus remains on being closer to our customers through a global network of warehouses, strengthening our supply chain, and continuously enhancing the sustainability of our operations. We are dedicated to reducing our environmental footprint while developing products and technologies that address the evolving needs of the industry.</p>
           <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We would be pleased to design, manufacture and supply most complex wires &amp; cables against your specific requirements. Our in-house capabilities are such that we can design, manufacture and supply wires &amp; cables to any international standards in our automated plant. We strictly practice and follow ethical values and green environment norms, optimizing production processes, avoiding hazardous substances at every stage of manufacturing.</p>
           <p style="font-size:15.5px;line-height:1.75;color:var(--text-muted);margin-bottom:18px;">We hope you will find this website helpful and easy to navigate. In case you have any difficulty in getting the exact information that you may need, please do not hesitate to contact us. We will respond as quickly as possible. Thanks for your visit to our site and we look forward to working with you as our esteemed customer.</p>
-          </div>
         </div>
       </div>
     </div>
