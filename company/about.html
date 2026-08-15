@@ -86,7 +86,7 @@
       overflow-y: visible;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
-      height: 800px;
+      height: 580px;
       padding: 0 20px;
     }
     .story-track::-webkit-scrollbar { display: none; }
@@ -95,51 +95,63 @@
       background: var(--accent); transform: translateY(-1.5px); z-index: 0;
     }
     .story-item {
-      flex: 0 0 380px;
+      flex: 0 0 340px;
       position: relative;
       height: 100%;
       scroll-snap-align: start;
     }
     .story-node {
       position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 128px; height: 128px; border-radius: 50%;
+      width: 116px; height: 116px; border-radius: 50%;
       background: var(--bg-soft); border: 4px solid var(--accent);
       display: flex; align-items: center; justify-content: center;
       color: var(--accent-2); overflow: hidden; z-index: 2;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
-    .story-node svg { width: 36px; height: 36px; opacity: 0.7; }
+    .story-node svg { width: 34px; height: 34px; opacity: 0.7; }
     .story-node img { width: 100%; height: 100%; object-fit: cover; }
     .story-stem {
       position: absolute; left: 50%; width: 3px; background: var(--accent);
       transform: translateX(-1.5px); z-index: 1;
     }
+    /* Fixed card height + line-clamped text -- guarantees every card is the
+       same size (so the node always lands on the line, at any width) and
+       keeps the section compact instead of growing to fit the longest
+       milestone's full paragraph. */
     .story-card {
       position: absolute; left: 50%; transform: translateX(-50%);
-      width: 320px; background: #fff; border: 1px solid var(--border);
-      border-radius: 14px; padding: 22px 26px;
+      width: 300px; height: 176px; background: #fff; border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+      display: flex; flex-direction: column; overflow: hidden;
     }
-    .story-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
-    .story-year { font-size: 26px; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
-    .story-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
-    .story-up .story-stem { bottom: calc(50% + 60px); height: 22px; }
-    .story-up .story-card { bottom: calc(50% + 60px + 22px); }
-    .story-down .story-stem { top: calc(50% + 60px); height: 22px; }
-    .story-down .story-card { top: calc(50% + 60px + 22px); }
+    .story-card h4 {
+      font-size: 15.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.3;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .story-year { font-size: 22px; font-weight: 800; color: var(--accent); margin-bottom: 6px; flex-shrink: 0; }
+    .story-card p {
+      font-size: 13px; line-height: 1.55; color: var(--text-muted); margin: 0;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .story-up .story-stem { bottom: calc(50% + 58px); height: 20px; }
+    .story-up .story-card { bottom: calc(50% + 58px + 20px); }
+    .story-down .story-stem { top: calc(50% + 58px); height: 20px; }
+    .story-down .story-card { top: calc(50% + 58px + 20px); }
     @media (max-width: 900px) {
-      .story-track { height: 860px; }
-      .story-item { flex-basis: 260px; }
-      .story-card { width: 230px; padding: 18px 20px; }
+      .story-item { flex-basis: 240px; }
+      .story-card { width: 220px; }
     }
     @media (max-width: 640px) {
+      .story-track { height: 480px; }
       .story-timeline-wrap { padding: 0 8px; }
       .story-arrow { width: 36px; height: 36px; }
-      .story-node { width: 96px; height: 96px; }
-      .story-up .story-stem { bottom: calc(50% + 50px); }
-      .story-up .story-card { bottom: calc(50% + 50px + 26px); }
-      .story-down .story-stem { top: calc(50% + 50px); }
-      .story-down .story-card { top: calc(50% + 50px + 26px); }
+      .story-node { width: 92px; height: 92px; }
+      .story-card { height: 156px; }
+      .story-up .story-stem { bottom: calc(50% + 46px); }
+      .story-up .story-card { bottom: calc(50% + 46px + 20px); }
+      .story-down .story-stem { top: calc(50% + 46px); }
+      .story-down .story-card { top: calc(50% + 46px + 20px); }
     }
 
     .stat-bigcard {
