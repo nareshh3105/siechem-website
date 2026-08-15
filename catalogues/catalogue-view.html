@@ -45,12 +45,10 @@
       min-height: 60vh;
       overflow: hidden;
     }
+    /* PageFlip runs in Canvas mode (loadFromImages/updateFromImages) here,
+       so it draws into its own <canvas class="stf__canvas"> inside
+       .flip-book -- there's no .flip-page markup for it to style. */
     .flip-book { box-shadow: 0 10px 34px rgba(0,0,0,0.18); }
-    .flip-book .flip-page {
-      background: #fff;
-      overflow: hidden;
-    }
-    .flip-book .flip-page img { width: 100%; height: 100%; display: block; }
     .flip-controls {
       display: flex; align-items: center; justify-content: center;
       gap: 14px; margin-top: 12px; flex-wrap: wrap;
@@ -306,15 +304,17 @@
       loadingEl.parentNode.insertBefore(f, loadingEl.nextSibling);
     }
 
-    // Watchdog: if the flipbook has not appeared in time -- slow device, huge
-    // catalogue, throttled/background tab, or any silent stall in canvas
-    // rasterisation -- give up and show the plain PDF viewer instead. Without
-    // this a visitor could sit on "Rendering page 1 of N" indefinitely and
-    // never reach the catalogue at all, which is worse than the old iframe.
+    // Watchdog covers only "does page 1 appear" -- the book now shows as
+    // soon as the first page is ready and streams the rest in behind it, so
+    // this no longer has to wait out an entire catalogue's render time. The
+    // old version rendered every page before showing anything, which on a
+    // real device (not just a throttled tab) could take well past the
+    // original 20s watchdog for a 20+ page catalogue and silently fall back
+    // to the PDF viewer -- which is what was actually happening.
     let flipReady = false;
     const watchdog = setTimeout(() => {
-      if (!flipReady) fallbackToIframe('render watchdog timeout');
-    }, 20000);
+      if (!flipReady) fallbackToIframe('page 1 did not render in time');
+    }, 15000);
 
     try {
       const pdfjsLib = await import('/assets/vendor/pdf.min.mjs');
@@ -326,31 +326,28 @@
       // Render at ~1.6x for a crisp result on high-DPI screens without
       // ballooning memory on long catalogues.
       const SCALE = 1.6;
-      const images = [];
-      let pageW = 0, pageH = 0;
 
-      for (let n = 1; n <= total; n++) {
-        if (fellBack) return;        // watchdog already gave up; stop working
-        progressEl.textContent = 'Rendering page ' + n + ' of ' + total + '…';
+      async function renderPage(n) {
         const page = await pdf.getPage(n);
         const vp = page.getViewport({ scale: SCALE });
         const canvas = document.createElement('canvas');
         canvas.width = Math.floor(vp.width);
         canvas.height = Math.floor(vp.height);
         await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
-        images.push(canvas.toDataURL('image/jpeg', 0.82));
-        if (!pageW) { pageW = canvas.width; pageH = canvas.height; }
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
         page.cleanup();
+        return { dataUrl, w: canvas.width, h: canvas.height };
       }
 
-      // Size the book to fit the column while keeping the PDF's aspect ratio.
+      // ── Page 1: render, then show the book immediately ──────────────
+      const first = await renderPage(1);
+      if (fellBack) return;          // watchdog already gave up
+
+      const images = [first.dataUrl];
+
       const maxW = Math.min(bookEl.parentElement.clientWidth - 24, 900);
       const singleW = Math.floor(maxW / 2);
-      const singleH = Math.floor(singleW * (pageH / pageW));
-
-      bookEl.innerHTML = images.map(src =>
-        '<div class="flip-page"><img src="' + src + '" alt=""></div>'
-      ).join('');
+      const singleH = Math.floor(singleW * (first.h / first.w));
 
       const PageFlip = window.St && window.St.PageFlip ? window.St.PageFlip : window.PageFlip;
       if (!PageFlip) throw new Error('PageFlip library not found on window');
@@ -368,7 +365,7 @@
         mobileScrollSupport: true,
         useMouseEvents: true
       });
-      flip.loadFromHTML(bookEl.querySelectorAll('.flip-page'));
+      flip.loadFromImages(images);
 
       function syncLabel() {
         const cur = flip.getCurrentPageIndex() + 1;
@@ -384,13 +381,27 @@
         if (e.key === 'ArrowRight') flip.flipNext();
       });
 
-      if (fellBack) return;
       flipReady = true;
       clearTimeout(watchdog);
       loadingEl.style.display = 'none';
       stageEl.style.display = 'flex';
       controlsEl.style.display = 'flex';
-      progressEl.textContent = 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
+      progressEl.textContent = total > 1
+        ? 'Loading remaining pages (1 of ' + total + ' ready)…'
+        : 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
+
+      // ── Remaining pages: render in the background, add as they land ──
+      // updateFromImages() preserves whatever page the visitor is currently
+      // on, so a page appearing mid-catalogue doesn't yank them back to p1.
+      for (let n = 2; n <= total; n++) {
+        if (fellBack) return;
+        const p = await renderPage(n);
+        images.push(p.dataUrl);
+        flip.updateFromImages(images);
+        progressEl.textContent = n < total
+          ? 'Loading remaining pages (' + n + ' of ' + total + ' ready)…'
+          : 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
+      }
     } catch (err) {
       clearTimeout(watchdog);
       fallbackToIframe(err && err.message ? err.message : err);
