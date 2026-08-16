@@ -784,6 +784,11 @@ html.nav-open, html.nav-open body {
   background: #000000;
   color: #FFFFFF;
   padding: 44px 0 24px;
+  /* Sitewide gap between whatever section a page ends on and the black
+     footer band -- without this, the footer sits flush against the last
+     section's own bottom edge/border, reading as merged into it rather
+     than as a clearly separate block, on every page that uses .footer. */
+  margin-top: 60px;
 }
 .footer-grid {
   display: grid;
