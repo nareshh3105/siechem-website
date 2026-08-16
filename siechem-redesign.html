@@ -107,7 +107,12 @@
        from earlier edits) that reset color:var(--accent) at equal
        specificity, and being later in source order they were winning over
        a same-specificity override. */
-    .hero-eyebrow.hero-eyebrow-muted { color: var(--text-muted); margin-bottom: 2px; }
+    /* line-height (not just margin) is what actually drives most of the
+       visible gap between these two lines -- the sitewide default is 1.6,
+       so even with margin-bottom near zero there was still ~26px of
+       line-box space per line. Tightened to 1.05, close to the text's own
+       cap-height, so the reduction is actually visible. */
+    .hero-eyebrow.hero-eyebrow-muted { color: var(--text-muted); margin-bottom: 0.1px; line-height: 1.05; }
     .hero-title {
       font-size: clamp(23px, 3.2vw, 23px);
       font-weight: 600;
