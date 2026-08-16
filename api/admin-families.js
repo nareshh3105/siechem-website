@@ -53,13 +53,28 @@ module.exports = async function handler(req, res) {
   const lastPublishedAt = lastPublish ? (lastPublish.snapshot_at || lastPublish.created_at) : null;
   const lastPublishedMs = lastPublishedAt ? new Date(lastPublishedAt).getTime() : 0;
 
+  // A deleted series has no updated_at left to compare (the row is simply
+  // gone), so a family whose only pending change is a deletion would
+  // otherwise show hasDraftChanges:false even though publishing would
+  // still remove that item from the live site. The audit log still has
+  // the delete_series/remove_image entry, so pull anything logged since
+  // the last publish and treat those families as having draft changes too.
+  const deletedSinceQuery = db
+    .from('admin_audit_log')
+    .select('family_id')
+    .in('action', ['delete_series', 'remove_image']);
+  const { data: deletedSince } = lastPublishedAt
+    ? await deletedSinceQuery.gt('created_at', lastPublishedAt)
+    : await deletedSinceQuery;
+  const familiesWithDeletions = new Set((deletedSince || []).map(r => r.family_id));
+
   const out = families.map(f => ({
     id: f.id,
     name: f.name,
     segment: f.segment,
     summary: f.data && f.data.summary,
     seriesCount: countByFamily[f.id] || 0,
-    hasDraftChanges: (lastEditByFamily[f.id] || 0) > lastPublishedMs
+    hasDraftChanges: (lastEditByFamily[f.id] || 0) > lastPublishedMs || familiesWithDeletions.has(f.id)
   }));
 
   return res.status(200).json({ families: out, lastPublishedAt });

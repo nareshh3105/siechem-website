@@ -1233,12 +1233,22 @@
       color: var(--text-faint);
       line-height: 1.5;
       max-width: 120px;
+      text-align: justify;
+      text-justify: inter-word;
     }
     @media (max-width: 640px) {
       .process-track { flex-direction: column; gap: 18px; align-items: stretch; }
       .process-connector { display: none; }
+      /* .process-num, .process-step-title and .process-step-desc are three
+         flat siblings in the markup -- at desktop's flex-direction:column
+         that's harmless (they just stack top to bottom regardless), but
+         this row layout previously laid all three out as separate columns
+         side by side instead of the title stacking above its description
+         next to the icon. .process-step-body wraps title+desc together so
+         the row is just [icon, stacked text]. */
       .process-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 14px; padding: 0; }
       .process-num { flex-shrink: 0; margin-bottom: 0; }
+      .process-step-body { flex: 1; min-width: 0; }
       .process-step-desc { max-width: 100%; }
     }
 
@@ -1438,10 +1448,9 @@
       line-height: 1.1;
     }
     .about-fact-l {
-      font-size: 10.5px;
+      font-size: 13px;
       color: var(--text-faint);
       font-family: var(--mono);
-      text-transform: uppercase;
       letter-spacing: 0.06em;
       margin-top: 5px;
       line-height: 1.4;
@@ -1726,7 +1735,6 @@
       <div class="section-header-carousel">
         <div class="section-header-text reveal">
           <span class="section-eyebrow">Advanced Engineering</span>
-          <h2 class="section-title">Operations &amp; capabilities at a glance</h2>
         </div>
         <div class="carousel-nav-buttons">
           <button class="carousel-nav-btn" id="carousel-prev" aria-label="Previous slide">
@@ -1779,7 +1787,7 @@
               </div>
             </div>
             <div class="video-card-content">
-              <h3 class="video-card-title">She Powers Siechem</h3>
+              <h3 class="video-card-title">Women Empowerment</h3>
               <p class="video-card-desc">Dedicated to diversity, engineering excellence, and empowering women in our manufacturing operations.</p>
             </div>
           </div>
@@ -1998,7 +2006,6 @@
           <div class="ind-img" style="background-image:url('/assets/cable-images/1n337Fh4mQvz939KNYsR1HvrjOjo5pKAm.webp');"></div>
           <div class="ind-name">Railway &amp; Metro</div>
           <div class="ind-cert">EN 50264 · RDSO · CRRC</div>
-          <p class="ind-desc">Rolling-stock approved cables for high-speed trains, metro coaches and traction systems — meeting RDSO and European EN standards.</p>
           <div class="ind-cta">View Railway Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -2007,7 +2014,6 @@
           <div class="ind-img" style="background-image:url('/assets/cable-images/1CUFs8DPlcldhRvYle78trTIu-HDoCgya.webp');"></div>
           <div class="ind-name">Solar &amp; Renewable Energy</div>
           <div class="ind-cert">TÜV · IEC 62930 · UL</div>
-          <p class="ind-desc">UV-stabilised, moisture-resistant PV cables for utility-scale solar farms, wind turbines and battery energy storage systems.</p>
           <div class="ind-cta">View Solar Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -2016,7 +2022,6 @@
           <div class="ind-img" style="background-image:url('/assets/cable-images/1gLp94H5x5fW1x4FzFUzHVjQbVjvXgPm0.webp');"></div>
           <div class="ind-name">Industrial &amp; Infrastructure</div>
           <div class="ind-cert">IEC 60228 · IS 694 · LSZH</div>
-          <p class="ind-desc">Heavy-duty cables for power plants, process industries, data centres and smart-grid infrastructure — LSZH compliant for safety.</p>
           <div class="ind-cta">View Industrial Range <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -2093,28 +2098,38 @@
         </div>
         <div class="process-step" id="pstep-1">
           <div class="process-num">01</div>
-          <div class="process-step-title">Design Consultation</div>
-          <div class="process-step-desc">Application engineers define your exact spec — gauge, insulation, shielding, temperature range.</div>
+          <div class="process-step-body">
+            <div class="process-step-title">Design Consultation</div>
+            <div class="process-step-desc">Application engineers define your exact spec — gauge, insulation, shielding, temperature range.</div>
+          </div>
         </div>
         <div class="process-step" id="pstep-2">
           <div class="process-num">02</div>
-          <div class="process-step-title">Material Compounding</div>
-          <div class="process-step-desc">In-house polymer compounding lab blends custom insulation to meet your chemical and thermal requirements.</div>
+          <div class="process-step-body">
+            <div class="process-step-title">Material Compounding</div>
+            <div class="process-step-desc">In-house polymer compounding lab blends custom insulation to meet your chemical and thermal requirements.</div>
+          </div>
         </div>
         <div class="process-step" id="pstep-3">
           <div class="process-num">03</div>
-          <div class="process-step-title">E-Beam Processing</div>
-          <div class="process-step-desc">Electron-beam cross-linking upgrades temperature ratings without any additive — a unique Siechem advantage.</div>
+          <div class="process-step-body">
+            <div class="process-step-title">E-Beam Processing</div>
+            <div class="process-step-desc">Electron-beam cross-linking upgrades temperature ratings without any additive — a unique Siechem advantage.</div>
+          </div>
         </div>
         <div class="process-step" id="pstep-4">
           <div class="process-num">04</div>
-          <div class="process-step-title">In-House Testing</div>
-          <div class="process-step-desc">NABL-accredited lab runs 38+ tests: hi-pot, flame, oil immersion, flexing, and salt-spray.</div>
+          <div class="process-step-body">
+            <div class="process-step-title">In-House Testing</div>
+            <div class="process-step-desc">NABL-accredited lab runs 38+ tests: hi-pot, flame, oil immersion, flexing, and salt-spray.</div>
+          </div>
         </div>
         <div class="process-step" id="pstep-5">
           <div class="process-num">05</div>
-          <div class="process-step-title">Global Delivery</div>
-          <div class="process-step-desc">Full traceability documentation and CoC shipped with every order to any destination worldwide.</div>
+          <div class="process-step-body">
+            <div class="process-step-title">Global Delivery</div>
+            <div class="process-step-desc">Full traceability documentation and CoC shipped with every order to any destination worldwide.</div>
+          </div>
         </div>
       </div>
     </div>
