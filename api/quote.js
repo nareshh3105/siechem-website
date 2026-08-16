@@ -57,20 +57,33 @@ const nodemailer = require('nodemailer');
 
 const COMPANY_EMAIL = process.env.GMAIL_USER;
 
+// Every field below comes straight from the public POST body with no
+// server-side validation, and gets interpolated into HTML emails sent to
+// Siechem's real sales inbox (and back to the submitter). Unescaped, an
+// attacker could inject arbitrary HTML/links into a notification that looks
+// like a legitimate internal email -- escape before every interpolation.
+function esc(t) {
+  return String(t == null ? '' : t)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 // ─── Company notification email (plain summary) ─────────────────────────────
 function companyEmailHtml({ name, phone, company, email, part_number, cable_type, quantity, delivery, message }) {
   return `<!DOCTYPE html><html><body style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
   <h2 style="color:#e31e24;margin:0 0 16px;">New Quote Request — Siechem Automotive Cables</h2>
   <table style="width:100%;border-collapse:collapse;font-size:14px;">
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;width:160px;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${name || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Phone</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${phone || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Company</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${company || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;"><a href="mailto:${email}">${email || '—'}</a></td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Part Number</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${part_number || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Cable Type</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${cable_type || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Quantity</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${quantity || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Delivery</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${delivery || '—'}</td></tr>
-    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;vertical-align:top;">Notes</td><td style="padding:8px 12px;">${message || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;width:160px;">Name</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(name) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Phone</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(phone) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Company</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(company) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Email</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;"><a href="mailto:${esc(email)}">${esc(email) || '—'}</a></td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Part Number</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(part_number) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Cable Type</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(cable_type) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Quantity</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(quantity) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;">Delivery</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">${esc(delivery) || '—'}</td></tr>
+    <tr><td style="padding:8px 12px;background:#f3f4f6;font-weight:600;vertical-align:top;">Notes</td><td style="padding:8px 12px;">${esc(message) || '—'}</td></tr>
   </table>
   <p style="margin-top:20px;font-size:12px;color:#9ca3af;">Submitted via siechem.vercel.app</p>
 </body></html>`;
@@ -87,12 +100,12 @@ function buildSpecEmail({ name, part_number, quantity, delivery, message, cable_
 
   const sizesRows = (spec.allSizes || []).map(s => `
     <tr>
-      <td style="padding:8px 14px;font-family:monospace;font-size:13px;border-bottom:1px solid #e5e7eb;">${s.size} ${spec.unit || 'mm²'}</td>
-      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${s.amps} A</td>
-      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${s.ohm} mΩ/m</td>
-      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${s.od_mm} mm</td>
-      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${s.weight} kg/km</td>
-      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${s.stdLen} m</td>
+      <td style="padding:8px 14px;font-family:monospace;font-size:13px;border-bottom:1px solid #e5e7eb;">${esc(s.size)} ${esc(spec.unit) || 'mm²'}</td>
+      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${esc(s.amps)} A</td>
+      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${esc(s.ohm)} mΩ/m</td>
+      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${esc(s.od_mm)} mm</td>
+      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${esc(s.weight)} kg/km</td>
+      <td style="padding:8px 14px;text-align:center;border-bottom:1px solid #e5e7eb;">${esc(s.stdLen)} m</td>
     </tr>`).join('');
 
   const sizesTable = sizesRows ? `
@@ -134,27 +147,27 @@ function buildSpecEmail({ name, part_number, quantity, delivery, message, cable_
     <p style="margin:0 0 24px;font-size:24px;font-weight:700;color:#111827;letter-spacing:-0.5px;">${ref}</p>
 
     <p style="margin:0 0 22px;font-size:15px;color:#374151;line-height:1.7;">
-      Dear ${name},<br><br>
+      Dear ${esc(name)},<br><br>
       Thank you for your quote request. Our sales team has received your enquiry and will respond within <strong>4 business hours</strong>. Please quote reference <strong>${ref}</strong> in any follow-up.
     </p>
 
     <div style="background:#f8f9fa;border-radius:8px;padding:20px 24px;margin-bottom:28px;border:1px solid #e5e7eb;">
       <p style="margin:0 0 12px;font-size:12px;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;">Your Request</p>
       <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;color:#374151;">
-        <tr><td style="padding:4px 0;width:140px;color:#6b7280;">Part Number</td><td style="padding:4px 0;font-weight:600;">${part_number || '—'}</td></tr>
-        <tr><td style="padding:4px 0;color:#6b7280;">Quantity</td><td style="padding:4px 0;">${quantity || '—'}</td></tr>
-        <tr><td style="padding:4px 0;color:#6b7280;">Delivery</td><td style="padding:4px 0;">${delivery || '—'}</td></tr>
-        ${message ? `<tr><td style="padding:4px 0;color:#6b7280;vertical-align:top;">Notes</td><td style="padding:4px 0;">${message}</td></tr>` : ''}
+        <tr><td style="padding:4px 0;width:140px;color:#6b7280;">Part Number</td><td style="padding:4px 0;font-weight:600;">${esc(part_number) || '—'}</td></tr>
+        <tr><td style="padding:4px 0;color:#6b7280;">Quantity</td><td style="padding:4px 0;">${esc(quantity) || '—'}</td></tr>
+        <tr><td style="padding:4px 0;color:#6b7280;">Delivery</td><td style="padding:4px 0;">${esc(delivery) || '—'}</td></tr>
+        ${message ? `<tr><td style="padding:4px 0;color:#6b7280;vertical-align:top;">Notes</td><td style="padding:4px 0;">${esc(message)}</td></tr>` : ''}
       </table>
     </div>
 
     ${spec.label ? `
-    <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">Product Specification — ${spec.label}</p>
+    <p style="margin:0 0 12px;font-size:15px;font-weight:600;color:#111827;">Product Specification — ${esc(spec.label)}</p>
     <table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;color:#374151;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin-bottom:4px;">
-      <tr style="background:#f3f4f6;"><td style="padding:10px 16px;font-weight:600;width:50%;">Standard</td><td style="padding:10px 16px;">${spec.spec || '—'}</td></tr>
-      <tr><td style="padding:10px 16px;font-weight:600;border-top:1px solid #e5e7eb;">Insulation</td><td style="padding:10px 16px;border-top:1px solid #e5e7eb;">${spec.insulation || '—'}</td></tr>
-      <tr style="background:#f3f4f6;"><td style="padding:10px 16px;font-weight:600;">Temp. Rating</td><td style="padding:10px 16px;">${spec.temp || '—'}</td></tr>
-      <tr><td style="padding:10px 16px;font-weight:600;border-top:1px solid #e5e7eb;">Test Voltage</td><td style="padding:10px 16px;border-top:1px solid #e5e7eb;">${spec.testVoltage || '—'}</td></tr>
+      <tr style="background:#f3f4f6;"><td style="padding:10px 16px;font-weight:600;width:50%;">Standard</td><td style="padding:10px 16px;">${esc(spec.spec) || '—'}</td></tr>
+      <tr><td style="padding:10px 16px;font-weight:600;border-top:1px solid #e5e7eb;">Insulation</td><td style="padding:10px 16px;border-top:1px solid #e5e7eb;">${esc(spec.insulation) || '—'}</td></tr>
+      <tr style="background:#f3f4f6;"><td style="padding:10px 16px;font-weight:600;">Temp. Rating</td><td style="padding:10px 16px;">${esc(spec.temp) || '—'}</td></tr>
+      <tr><td style="padding:10px 16px;font-weight:600;border-top:1px solid #e5e7eb;">Test Voltage</td><td style="padding:10px 16px;border-top:1px solid #e5e7eb;">${esc(spec.testVoltage) || '—'}</td></tr>
     </table>
     ${sizesTable}
     ` : ''}
