@@ -88,6 +88,68 @@
       font-family: var(--mono); font-size: 11.5px; color: var(--text-faint);
       margin-top: 6px; text-align: center;
     }
+    .flip-zoom-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    /* Zoom overlay — the flipbook's own page images are rasterised once at
+       2.5x for the turn animation, which looks fine at rest but is a fixed
+       resolution: browser pinch/scroll zoom just stretches that same
+       raster, so it goes soft past a certain zoom level (unlike a native
+       PDF viewer, which re-renders vector text sharp at any zoom). This
+       re-renders whichever page is open via PDF.js at a much higher
+       resolution on demand, so zooming into a spec table actually shows
+       more real detail instead of a blown-up JPEG. */
+    .flip-zoom-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(10, 10, 10, 0.92);
+      display: none; flex-direction: column;
+    }
+    .flip-zoom-overlay.open { display: flex; }
+    .flip-zoom-topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 18px; flex-shrink: 0;
+    }
+    .flip-zoom-pageno {
+      font-family: var(--mono); font-size: 12.5px; color: rgba(255,255,255,0.75);
+    }
+    .flip-zoom-close {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.12); border: none; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background 0.15s;
+    }
+    .flip-zoom-close:hover { background: rgba(255,255,255,0.24); }
+    .flip-zoom-viewport {
+      flex: 1; overflow: auto; display: flex;
+      align-items: flex-start; justify-content: center;
+      padding: 8px 8px 24px;
+      touch-action: pinch-zoom pan-x pan-y;
+    }
+    .flip-zoom-img {
+      max-width: none; height: auto;
+      /* Rendered at high-DPI on purpose -- this width just fits it to the
+         viewport at rest; pinch/scroll zoom then has real pixel detail to
+         reveal instead of upscaling the same low-res source. */
+      width: min(94vw, 1100px);
+      background: #fff;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+    .flip-zoom-loading {
+      margin: auto; color: rgba(255,255,255,0.6);
+      font-family: var(--mono); font-size: 13px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .flip-zoom-nav {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; padding: 10px 18px 16px; flex-shrink: 0;
+    }
+    .flip-zoom-nav button {
+      border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08);
+      color: #fff; padding: 8px 18px; font-size: 13px; font-weight: 700;
+      cursor: pointer; font-family: inherit; transition: background 0.15s;
+    }
+    .flip-zoom-nav button:hover:not(:disabled) { background: rgba(255,255,255,0.18); }
+    .flip-zoom-nav button:disabled { opacity: 0.35; cursor: not-allowed; }
     .ts-doc-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
     .ts-doc-loading {
       display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px;
@@ -236,6 +298,10 @@
             <button type="button" id="ccPrev" aria-label="Previous page">&lsaquo; Prev</button>
             <span class="flip-pageno" id="ccPageNo">&ndash; / &ndash;</span>
             <button type="button" id="ccNext" aria-label="Next page">Next &rsaquo;</button>
+            <button type="button" class="flip-zoom-btn" id="ccZoomBtn" aria-label="Zoom into this page">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3M9 8v6M6 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Zoom
+            </button>
           </div>
           <div class="flip-progress" id="ccProgress"></div>
 
@@ -244,6 +310,26 @@
             <a class="btn btn-ghost" id="ccDownload" target="_blank" rel="noopener">Download PDF</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- High-resolution zoom overlay -- see the CSS comment above
+         .flip-zoom-overlay for why this exists as a separate on-demand
+         render rather than just relying on browser zoom over the
+         flipbook's own (fixed-resolution) page images. -->
+    <div class="flip-zoom-overlay" id="ccZoomOverlay">
+      <div class="flip-zoom-topbar">
+        <span class="flip-zoom-pageno" id="ccZoomPageNo">&ndash; / &ndash;</span>
+        <button type="button" class="flip-zoom-close" id="ccZoomClose" aria-label="Close zoom">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="flip-zoom-viewport" id="ccZoomViewport">
+        <div class="flip-zoom-loading" id="ccZoomLoading"><div class="spin" style="width:16px;height:16px;border:2px solid rgba(255,255,255,0.25);border-top-color:#fff;border-radius:50%;animation:ts-spin 0.8s linear infinite;"></div>Rendering full resolution…</div>
+      </div>
+      <div class="flip-zoom-nav">
+        <button type="button" id="ccZoomPrev">&lsaquo; Prev</button>
+        <button type="button" id="ccZoomNext">Next &rsaquo;</button>
       </div>
     </div>
   </section>
@@ -353,12 +439,18 @@
       // Render at ~2.5x so text stays sharp when a visitor pinch-zooms into
       // a page (certificates, spec tables) -- 1.6x looked fine at rest but
       // went visibly blurry under zoom since the canvas was never rasterised
-      // at a higher resolution to begin with.
+      // at a higher resolution to begin with. This is still a fixed-
+      // resolution raster, though: it holds up to a point, but browser zoom
+      // just stretches the same pixels past that, unlike a native PDF
+      // viewer that re-renders vector text sharp at any zoom level. The
+      // Zoom button (below) covers that gap by re-rendering the current
+      // page on demand at ZOOM_SCALE instead of relying on this one.
       const SCALE = 2.5;
+      const ZOOM_SCALE = 6;
 
-      async function renderPage(n) {
+      async function renderPage(n, scale = SCALE) {
         const page = await pdf.getPage(n);
-        const vp = page.getViewport({ scale: SCALE });
+        const vp = page.getViewport({ scale });
         const canvas = document.createElement('canvas');
         canvas.width = Math.floor(vp.width);
         canvas.height = Math.floor(vp.height);
@@ -418,6 +510,76 @@
       document.addEventListener('keydown', e => {
         if (e.key === 'ArrowLeft') flip.flipPrev();
         if (e.key === 'ArrowRight') flip.flipNext();
+      });
+
+      // ── High-resolution zoom overlay ──────────────────────────────────
+      // Re-renders whichever page is currently open via PDF.js at
+      // ZOOM_SCALE (6x vs the flipbook's 2.5x) so pinch/scroll zoom has
+      // real detail to reveal instead of stretching the same low-res
+      // raster the page-turn animation uses. Cached per page so flipping
+      // back and forth inside the overlay doesn't re-render from scratch
+      // every time.
+      const zoomCache = new Map();
+      const zoomOverlayEl  = document.getElementById('ccZoomOverlay');
+      const zoomViewportEl = document.getElementById('ccZoomViewport');
+      const zoomLoadingEl  = document.getElementById('ccZoomLoading');
+      const zoomPageNoEl   = document.getElementById('ccZoomPageNo');
+      const zoomPrevBtn    = document.getElementById('ccZoomPrev');
+      const zoomNextBtn    = document.getElementById('ccZoomNext');
+      let zoomPage = 1;
+
+      async function showZoomPage(n) {
+        zoomPage = n;
+        zoomPageNoEl.textContent = n + ' / ' + total;
+        zoomPrevBtn.disabled = n <= 1;
+        zoomNextBtn.disabled = n >= total;
+
+        let dataUrl = zoomCache.get(n);
+        if (!dataUrl) {
+          zoomViewportEl.innerHTML = '';
+          zoomViewportEl.appendChild(zoomLoadingEl);
+          zoomLoadingEl.style.display = 'flex';
+          try {
+            const rendered = await renderPage(n, ZOOM_SCALE);
+            dataUrl = rendered.dataUrl;
+            zoomCache.set(n, dataUrl);
+          } catch (e) {
+            zoomLoadingEl.textContent = 'Could not render this page at full resolution.';
+            return;
+          }
+        }
+        // Bail if the visitor already navigated elsewhere while this was
+        // rendering (e.g. clicked Next twice, or closed the overlay).
+        if (zoomPage !== n || !zoomOverlayEl.classList.contains('open')) return;
+
+        zoomViewportEl.innerHTML = '';
+        const img = document.createElement('img');
+        img.className = 'flip-zoom-img';
+        img.src = dataUrl;
+        img.alt = 'Page ' + n + ' of ' + total;
+        zoomViewportEl.appendChild(img);
+      }
+
+      function openZoom() {
+        const startPage = flip.getCurrentPageIndex() + 1;
+        zoomOverlayEl.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        showZoomPage(startPage);
+      }
+      function closeZoom() {
+        zoomOverlayEl.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('ccZoomBtn').addEventListener('click', openZoom);
+      document.getElementById('ccZoomClose').addEventListener('click', closeZoom);
+      zoomPrevBtn.addEventListener('click', () => { if (zoomPage > 1) showZoomPage(zoomPage - 1); });
+      zoomNextBtn.addEventListener('click', () => { if (zoomPage < total) showZoomPage(zoomPage + 1); });
+      document.addEventListener('keydown', e => {
+        if (!zoomOverlayEl.classList.contains('open')) return;
+        if (e.key === 'Escape') closeZoom();
+        if (e.key === 'ArrowLeft' && zoomPage > 1) showZoomPage(zoomPage - 1);
+        if (e.key === 'ArrowRight' && zoomPage < total) showZoomPage(zoomPage + 1);
       });
 
       flipReady = true;
