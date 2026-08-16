@@ -830,6 +830,10 @@
 
       <!-- Form -->
       <form id="quote-form" onsubmit="submitModal(event)">
+        <!-- Honeypot: real visitors never see or fill this (off-screen, skipped by
+             tab order); a bot's autofill lands here and api/quote.js silently
+             no-ops the request without sending any email. -->
+        <input type="text" name="hp_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;">
         <!-- Web3Forms hidden fields -->
         <input type="hidden" name="access_key" value="adac1a08-b909-4780-913f-ded062c472a5">
         <input type="hidden" name="subject" id="modal-email-subject" value="Quote Request – Siechem Automotive Cables">

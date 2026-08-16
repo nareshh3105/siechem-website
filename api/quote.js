@@ -207,7 +207,23 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, phone, company, email, part_number, quantity, delivery, message, cable_type, cable_spec, subject } = req.body || {};
+  const { name, phone, company, email, part_number, quantity, delivery, message, cable_type, cable_spec, subject, hp_website } = req.body || {};
+
+  // Honeypot: hp_website is a hidden field no real visitor can see or reach
+  // by tab order, so anything filling it is a bot. Return success without
+  // sending mail -- a 4xx here would tell the bot which field to drop.
+  if (hp_website) {
+    return res.status(200).json({ success: true });
+  }
+  // Basic shape check on the two fields every legitimate submission has --
+  // rejects obviously-scripted junk before it ever reaches Gmail, without
+  // being strict enough to bounce a real customer's odd-but-valid input.
+  if (!name || typeof name !== 'string' || !name.trim()) {
+    return res.status(400).json({ error: 'Name is required' });
+  }
+  if (!email || typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+    return res.status(400).json({ error: 'A valid email address is required' });
+  }
 
   const gmailUser = (process.env.GMAIL_USER || '').trim();
   const gmailPass = (process.env.GMAIL_PASS || '').trim();
