@@ -115,6 +115,13 @@
       padding: 18px 20px 14px;
       border-bottom: 1px solid var(--border);
       background: var(--bg-soft);
+      /* Sized for the worst case (2 rows of badges + a 3-line title) so
+         every card's header is the same height regardless of how many
+         badges or how long that particular title is -- otherwise cards
+         with a short 1-line title/1-row-of-badges header look visibly
+         shorter than ones with a long title, even with align-items:stretch
+         equalizing total card height within a row. */
+      min-height: 168px;
     }
     .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
     .badge {
@@ -138,8 +145,12 @@
         flex-direction: column;
         gap: 12px;
     }
-    /* Cards with a 2D product render: specs left, image right */
-    .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
+    /* Cards with a 2D product render: specs left, image right. Aligned to
+       the top (not center) -- centering against the specs column meant the
+       image's vertical position shifted card to card depending on how many
+       lines that card's spec text happened to wrap to, instead of sitting
+       at a consistent height next to the "Specification" label. */
+    .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: start; }
     .prod-card-media {
       width: 140px; height: 140px; background: #fff;
       border: 1px solid var(--border); border-radius:0;

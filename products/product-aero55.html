@@ -65,6 +65,10 @@
     .prod-card-head {
       padding: 18px 20px 14px; border-bottom: 1px solid var(--border);
       background: var(--bg-soft);
+      /* Sized for the worst case (2 rows of badges + a 3-line title) so
+         every card's header is the same height regardless of title/badge
+         count -- see product-aero44.html for the full rationale. */
+      min-height: 168px;
     }
     .prod-card-badges { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
     .badge { padding: 3px 9px; border-radius:0; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -80,7 +84,8 @@
     .prod-card-body { padding: 14px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
     .prod-card-specs { display: flex; flex-direction: column; gap: 12px; }
     /* Cards with a 2D product render: specs left, image right */
-    .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: center; }
+    /* Top-aligned, not centered -- see product-aero44.html for why. */
+    .prod-card-bodyimg { display: grid; grid-template-columns: 1fr 140px; gap: 14px; align-items: start; }
     .prod-card-media {
       width: 140px; height: 140px; background: #fff;
       border: 1px solid var(--border); border-radius:0;
