@@ -1,18 +1,18 @@
 {
   "series": [
     {
-      "id": "66af82b1ba",
+      "id": "new-msis7qeh",
       "family": "welding",
-      "name": "Single Core Normal Flexibility Copper Conductor EM-5 Rubber Compound 85°C Sheathed Welding Cable as per EN 50525-2-81 & BS 638 Specification",
+      "name": "Single Core Extra High Flexibility Copper Conductor EM-5 Rubber Compound 85°C Sheathed Welding Cable as per EN 50525-2-81 & BS 638 Specification",
       "headers": [
         "Part Number",
         "Nominal conductor area",
         "Maximum strand dia",
         "Thickness of insulation",
-        "overall diameter (mm) — MIN",
-        "Max.",
+        "Min. Overall diameter",
+        "Max. \nOverall diameter",
         "Approx Weight of Cable",
-        "Maximum Conductor Resistance at  20°C Plain Wires",
+        "Maximum Conductor Resistance at 20°C Plain Wires",
         "Maximum Conductor Resistance at 20°C Tinned Wires"
       ],
       "rows": [
@@ -24,132 +24,131 @@
           "mm",
           "mm",
           "kg/km",
-          "Ω/Km",
-          "Ω/Km"
+          "(Ω/Km) ",
+          "(Ω/Km) "
         ],
         [
-          "A05427XX",
+          "A05527XX",
           "10",
-          "0.21",
-          "2.0",
-          "7.7",
-          "9.7",
-          "149",
+          "0.19",
+          "1.2",
+          "6.2",
+          "7.8",
+          "119",
           "1.91",
           "1.95"
         ],
         [
-          "A05428XX",
+          "A05528XX",
           "16",
-          "0.21",
-          "2.0",
-          "8.8",
-          "11.0",
-          "207",
+          "0.19",
+          "1.2",
+          "7.3",
+          "9.1",
+          "173",
           "1.21",
           "1.24"
         ],
         [
-          "A05430XX",
+          "A05530XX",
           "25",
-          "0.21",
-          "2.0",
-          "10.1",
-          "12.7",
-          "291",
+          "0.19",
+          "1.2",
+          "8.6",
+          "10.8",
+          "252",
           "0.780",
           "0.795"
         ],
         [
-          "A05432XX",
+          "A05532XX",
           "35",
-          "0.21",
-          "2.0",
-          "11.4",
-          "14.2",
-          "381",
+          "0.19",
+          "1.2",
+          "9.8",
+          "12.3",
+          "338",
           "0.554",
           "0.565"
         ],
         [
-          "A05434XX",
+          "A05534XX",
           "50",
-          "0.21",
-          "2.2",
-          "13.2",
-          "16.5",
-          "526",
+          "0.19",
+          "1.5",
+          "11.9",
+          "14.8",
+          "482",
           "0.386",
           "0.393"
         ],
         [
-          "A05437XX",
+          "A05537XX",
           "70",
-          "0.21",
-          "2.4",
-          "15.3",
-          "19.2",
-          "723",
+          "0.19",
+          "1.5",
+          "13.6",
+          "17.0",
+          "658",
           "0.272",
           "0.277"
         ],
         [
-          "A05438XX",
+          "A05538XX",
           "95",
-          "0.21",
-          "2.6",
-          "17.1",
-          "21.4",
-          "956",
+          "0.19",
+          "1.8",
+          "15.6",
+          "19.5",
+          "890",
           "0.206",
           "0.210"
         ],
         [
-          "A05441XX",
+          "A05541XX",
           "120",
-          "0.51",
-          "2.8",
-          "19.2",
-          "24.0",
-          "1190",
+          "0.21",
+          "1.8",
+          "17.2",
+          "21.6",
+          "1099",
           "0.161",
           "0.164"
         ],
         [
-          "A05442XX",
+          "A05542XX",
           "150",
-          "0.51",
-          "3.0",
-          "21.1",
-          "26.4",
-          "1467",
+          "0.21",
+          "1.8",
+          "18.8",
+          "23.5",
+          "1347",
           "0.129",
           "0.132"
         ],
         [
-          "A05444XX",
+          "A05544XX",
           "185",
-          "0.51",
-          "3.2",
-          "23.1",
-          "28.9",
-          "1788",
+          "0.21",
+          "1.8",
+          "20.4",
+          "25.5",
+          "1635",
           "0.106",
           "0.108"
         ],
         [
-          "A05441XX",
+          "A05546XX",
           "240",
-          "0.51",
-          "3.4",
-          "25.8",
-          "32.1",
-          "2277",
+          "0.21",
+          "2.0",
+          "23.0",
+          "28.0",
+          "2107",
           "0.0801",
           "0.0817"
         ]
       ],
-      "catalogueNo": "536",
       "info": {
         "features": [
           "Flexibility under rough conditions.",
@@ -158,25 +157,21 @@
         ],
         "technical": [
           "Temperature Range: 85°C",
-          "Rated Voltage: 100 / 100 V",
-          "Bending Radius (Minimum): 10 Overall dia.",
-          "Type: H01N2 -D",
-          "Specification: BS EN 50525-2-81& BS 638",
-          "Outer layer EMS Conforms to EN 50363-2 -2",
-          "Inner layer EM 5 or E17 Conforms to EN 50363-1"
+          "Rated Voltage: 100/100 V",
+          "Bending Radius (Minimum): 12 x Overall dia.",
+          "Type: H01N2-E",
+          "Specification: BS EN 50525-2-81 & BS 638-4"
         ],
         "application": [
           "Transmission of high currents from the electric welding machine to the welding tool.",
-          "Assembly lines and conveyor systems, in machine tool and motor car manufacturing,",
-          "ship building.",
+          "Assembly lines and conveyor systems, in machine tool and motor car manufacturing, ship building.",
           "Manually and automatically operated line and spot-welding machines."
         ],
         "construction": [
-          "Conductor: Plain or Tinned Annealed high conductivity class 6",
-          "copper wires complying with BS 6360",
+          "Conductor: Plain or Tinned Annealed high conductivity class 6 copper wires complying with BS 6360",
           "Separator: Dry Paper, Polyester Tape",
-          "Sheath: Covering in two layers",
-          "Colour: Orange or Black"
+          "Sheath: Covering in two layers – Outer Layer EM5 Conforms to EN 50363-2-2 & Inner layer EM5 or EI7 Conforms to EN 50363-1",
+          "Color : Orange or Black"
         ]
       }
     },
@@ -482,181 +477,6 @@
       }
     },
     {
-      "id": "new-msis7qeh",
-      "family": "welding",
-      "name": "Single Core Extra High Flexibility Copper Conductor EM-5 Rubber Compound 85°C Sheathed Welding Cable as per EN 50525-2-81 & BS 638 Specification",
-      "headers": [
-        "Part Number",
-        "Nominal conductor area",
-        "Maximum strand dia",
-        "Thickness of insulation",
-        "Min. Overall diameter",
-        "Max. \nOverall diameter",
-        "Approx Weight of Cable",
-        "Maximum Conductor Resistance at 20°C Plain Wires",
-        "Maximum Conductor Resistance at 20°C Tinned Wires"
-      ],
-      "rows": [
-        [
-          "",
-          "mm²",
-          "mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "(Ω/Km) ",
-          "(Ω/Km) "
-        ],
-        [
-          "A05527XX",
-          "10",
-          "0.19",
-          "1.2",
-          "6.2",
-          "7.8",
-          "119",
-          "1.91",
-          "1.95"
-        ],
-        [
-          "A05528XX",
-          "16",
-          "0.19",
-          "1.2",
-          "7.3",
-          "9.1",
-          "173",
-          "1.21",
-          "1.24"
-        ],
-        [
-          "A05530XX",
-          "25",
-          "0.19",
-          "1.2",
-          "8.6",
-          "10.8",
-          "252",
-          "0.780",
-          "0.795"
-        ],
-        [
-          "A05532XX",
-          "35",
-          "0.19",
-          "1.2",
-          "9.8",
-          "12.3",
-          "338",
-          "0.554",
-          "0.565"
-        ],
-        [
-          "A05534XX",
-          "50",
-          "0.19",
-          "1.5",
-          "11.9",
-          "14.8",
-          "482",
-          "0.386",
-          "0.393"
-        ],
-        [
-          "A05537XX",
-          "70",
-          "0.19",
-          "1.5",
-          "13.6",
-          "17.0",
-          "658",
-          "0.272",
-          "0.277"
-        ],
-        [
-          "A05538XX",
-          "95",
-          "0.19",
-          "1.8",
-          "15.6",
-          "19.5",
-          "890",
-          "0.206",
-          "0.210"
-        ],
-        [
-          "A05541XX",
-          "120",
-          "0.21",
-          "1.8",
-          "17.2",
-          "21.6",
-          "1099",
-          "0.161",
-          "0.164"
-        ],
-        [
-          "A05542XX",
-          "150",
-          "0.21",
-          "1.8",
-          "18.8",
-          "23.5",
-          "1347",
-          "0.129",
-          "0.132"
-        ],
-        [
-          "A05544XX",
-          "185",
-          "0.21",
-          "1.8",
-          "20.4",
-          "25.5",
-          "1635",
-          "0.106",
-          "0.108"
-        ],
-        [
-          "A05546XX",
-          "240",
-          "0.21",
-          "2.0",
-          "23.0",
-          "28.0",
-          "2107",
-          "0.0801",
-          "0.0817"
-        ]
-      ],
-      "info": {
-        "features": [
-          "Flexibility under rough conditions.",
-          "Excellent Flame Retardant.",
-          "Highly Resistant to effects of cold, heat and fire"
-        ],
-        "technical": [
-          "Temperature Range: 85°C",
-          "Rated Voltage: 100/100 V",
-          "Bending Radius (Minimum): 12 x Overall dia.",
-          "Type: H01N2-E",
-          "Specification: BS EN 50525-2-81 & BS 638-4"
-        ],
-        "application": [
-          "Transmission of high currents from the electric welding machine to the welding tool.",
-          "Assembly lines and conveyor systems, in machine tool and motor car manufacturing, ship building.",
-          "Manually and automatically operated line and spot-welding machines."
-        ],
-        "construction": [
-          "Conductor: Plain or Tinned Annealed high conductivity class 6 copper wires complying with BS 6360",
-          "Separator: Dry Paper, Polyester Tape",
-          "Sheath: Covering in two layers – Outer Layer EM5 Conforms to EN 50363-2-2 & Inner layer EM5 or EI7 Conforms to EN 50363-1",
-          "Color : Orange or Black"
-        ]
-      }
-    },
-    {
       "id": "c128731be7",
       "family": "welding",
       "name": "Single Core High Conductivity Copper Conductor EM-5 Chlorinated Rubber Compound 85°C Sheathed Welding Cable as per DIN VDE 0282 Specification.",
@@ -799,6 +619,186 @@
         ]
       },
       "colorNote": "Current Carrying capacity given is for the maximum conductor operating temperature of 80°C and ambient air temperature of 40°C."
+    },
+    {
+      "id": "66af82b1ba",
+      "family": "welding",
+      "name": "Single Core Normal Flexibility Copper Conductor EM-5 Rubber Compound 85°C Sheathed Welding Cable as per EN 50525-2-81 & BS 638 Specification",
+      "headers": [
+        "Part Number",
+        "Nominal conductor area",
+        "Maximum strand dia",
+        "Thickness of insulation",
+        "overall diameter (mm) — MIN",
+        "Max.",
+        "Approx Weight of Cable",
+        "Maximum Conductor Resistance at  20°C Plain Wires",
+        "Maximum Conductor Resistance at 20°C Tinned Wires"
+      ],
+      "rows": [
+        [
+          "",
+          "mm²",
+          "mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/Km",
+          "Ω/Km"
+        ],
+        [
+          "A05427XX",
+          "10",
+          "0.21",
+          "2.0",
+          "7.7",
+          "9.7",
+          "149",
+          "1.91",
+          "1.95"
+        ],
+        [
+          "A05428XX",
+          "16",
+          "0.21",
+          "2.0",
+          "8.8",
+          "11.0",
+          "207",
+          "1.21",
+          "1.24"
+        ],
+        [
+          "A05430XX",
+          "25",
+          "0.21",
+          "2.0",
+          "10.1",
+          "12.7",
+          "291",
+          "0.780",
+          "0.795"
+        ],
+        [
+          "A05432XX",
+          "35",
+          "0.21",
+          "2.0",
+          "11.4",
+          "14.2",
+          "381",
+          "0.554",
+          "0.565"
+        ],
+        [
+          "A05434XX",
+          "50",
+          "0.21",
+          "2.2",
+          "13.2",
+          "16.5",
+          "526",
+          "0.386",
+          "0.393"
+        ],
+        [
+          "A05437XX",
+          "70",
+          "0.21",
+          "2.4",
+          "15.3",
+          "19.2",
+          "723",
+          "0.272",
+          "0.277"
+        ],
+        [
+          "A05438XX",
+          "95",
+          "0.21",
+          "2.6",
+          "17.1",
+          "21.4",
+          "956",
+          "0.206",
+          "0.210"
+        ],
+        [
+          "A05441XX",
+          "120",
+          "0.51",
+          "2.8",
+          "19.2",
+          "24.0",
+          "1190",
+          "0.161",
+          "0.164"
+        ],
+        [
+          "A05442XX",
+          "150",
+          "0.51",
+          "3.0",
+          "21.1",
+          "26.4",
+          "1467",
+          "0.129",
+          "0.132"
+        ],
+        [
+          "A05444XX",
+          "185",
+          "0.51",
+          "3.2",
+          "23.1",
+          "28.9",
+          "1788",
+          "0.106",
+          "0.108"
+        ],
+        [
+          "A05441XX",
+          "240",
+          "0.51",
+          "3.4",
+          "25.8",
+          "32.1",
+          "2277",
+          "0.0801",
+          "0.0817"
+        ]
+      ],
+      "catalogueNo": "536",
+      "info": {
+        "features": [
+          "Flexibility under rough conditions.",
+          "Excellent Flame Retardant.",
+          "Highly Resistant to effects of cold, heat and fire"
+        ],
+        "technical": [
+          "Temperature Range: 85°C",
+          "Rated Voltage: 100 / 100 V",
+          "Bending Radius (Minimum): 10 Overall dia.",
+          "Type: H01N2 -D",
+          "Specification: BS EN 50525-2-81& BS 638",
+          "Outer layer EMS Conforms to EN 50363-2 -2",
+          "Inner layer EM 5 or E17 Conforms to EN 50363-1"
+        ],
+        "application": [
+          "Transmission of high currents from the electric welding machine to the welding tool.",
+          "Assembly lines and conveyor systems, in machine tool and motor car manufacturing,",
+          "ship building.",
+          "Manually and automatically operated line and spot-welding machines."
+        ],
+        "construction": [
+          "Conductor: Plain or Tinned Annealed high conductivity class 6",
+          "copper wires complying with BS 6360",
+          "Separator: Dry Paper, Polyester Tape",
+          "Sheath: Covering in two layers",
+          "Colour: Orange or Black"
+        ]
+      }
     }
   ]
 }

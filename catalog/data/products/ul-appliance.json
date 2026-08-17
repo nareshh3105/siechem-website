@@ -1,17 +1,18 @@
 {
   "series": [
     {
-      "id": "5795b07db2",
+      "id": "fa5649f673",
       "family": "ul-appliance",
-      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
+      "name": "UL 2127 ATC, PVC Insulated 105°C, 600 V AC Cable",
       "headers": [
         "Part Number",
         "Conductor Size",
         "No. of Strands / Wire diameter",
         "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter (Nom)",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20°C"
+        "Max. Conductor Resistance at 20° C"
       ],
       "rows": [
         [
@@ -20,74 +21,72 @@
           "Nos./mm",
           "mm",
           "mm",
+          "mm",
           "kg/km",
           "Ω/km"
         ],
         [
-          "A77083XX",
+          "P4268402",
+          "24",
+          "7/0.193",
+          "0.8",
+          "0.8",
+          "6.68",
+          "60.09",
+          "87.6"
+        ],
+        [
+          "P4268302",
           "22",
           "7/0.254",
-          "0.80",
-          "2.6",
-          "11.2",
-          "59.2"
+          "0.8",
+          "0.8",
+          "7.01",
+          "69.41",
+          "55.4"
         ],
         [
-          "A77082XX",
+          "P4268202",
           "20",
           "10/0.254",
-          "0.80",
-          "2.8",
-          "13.2",
-          "37.1"
+          "0.8",
+          "0.8",
+          "7.31",
+          "77.04",
+          "34.8"
         ],
         [
-          "A77081XX",
+          "P4268102",
           "18",
           "16/0.254",
-          "0.80",
-          "3.0",
-          "17",
-          "23.5"
+          "0.8",
+          "0.8",
+          "7.91",
+          "92.53",
+          "21.8"
         ],
         [
-          "A77080XX",
+          "P4268002",
           "16",
           "26/0.254",
-          "0.80",
-          "3.3",
-          "23",
-          "14.7"
+          "0.8",
+          "0.8",
+          "8.56",
+          "112.96",
+          "13.7"
         ],
         [
-          "A77078XX",
+          "P4267802",
           "12",
-          "65/0.254",
-          "0.80",
-          "4.15",
-          "44",
-          "5.82"
-        ],
-        [
-          "A77079XX",
-          "14",
-          "41/0.254",
-          "0.80",
-          "3.7",
-          "31",
-          "9.24"
-        ],
-        [
-          "A77077XX",
-          "10",
-          "105/0.254",
-          "0.80",
-          "4.75",
-          "64",
-          "3.65"
+          "19/0.47",
+          "0.8",
+          "0.61",
+          "9.23",
+          "312.33",
+          "5.43"
         ]
       ],
-      "catalogueNo": "A770",
+      "catalogueNo": "426",
       "info": {
         "features": [
           "Flame retardant",
@@ -95,16 +94,17 @@
         ],
         "technical": [
           "Temperature Range: +105°C",
-          "Voltage Rating: 600 V AC For Electronic use: 2500 V",
-          "Flame Test: VW-1 as per UL 1581"
+          "Voltage Rating: 600 V AC"
         ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor: Annealed Stranded Tinned Copper",
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
           "Insulation: PVC",
+          "Optional Shield",
+          "Jacket: PVC",
           "Colour: As per customer order."
         ]
       },
@@ -115,21 +115,171 @@
         "",
         "",
         "",
+        "",
         ""
       ]
     },
     {
-      "id": "c0afe98c98",
+      "id": "5c7759201a",
       "family": "ul-appliance",
-      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
+      "name": "UL 2129 APC, PVC Insulated 105°C, 1000 V AC Cable",
       "headers": [
         "Part Number",
         "Conductor Size",
         "No. of Strands / Wire diameter",
-        "Insulation Wall Thickness (Nom)",
-        "Cable — Overall Diameter (Nom)",
-        "Weight Approx. (Nom)",
+        "Insulation Wall Thickness Nom.",
+        "Outer Sheath Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
         "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos/mm",
+          "mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P4288402",
+          "24",
+          "7/0.193",
+          "0.8",
+          "0.8",
+          "7.62",
+          "76.62",
+          "87.6"
+        ],
+        [
+          "P4288302",
+          "22",
+          "7/0.254",
+          "0.8",
+          "0.8",
+          "8.01",
+          "89.80",
+          "55.4"
+        ],
+        [
+          "P4288202",
+          "20",
+          "10/0.254",
+          "0.8",
+          "0.8",
+          "8.38",
+          "101.17",
+          "34.8"
+        ],
+        [
+          "P4288102",
+          "18",
+          "16/0.254",
+          "0.8",
+          "0.8",
+          "8.98",
+          "121.86",
+          "21.8"
+        ],
+        [
+          "P4288002",
+          "16",
+          "26/0.254",
+          "0.8",
+          "0.8",
+          "9.77",
+          "153.23",
+          "13.7"
+        ],
+        [
+          "PS4288102",
+          "18",
+          "1/1.024",
+          "0.8",
+          "0.8",
+          "8.60",
+          "116.06",
+          "21.4"
+        ],
+        [
+          "PS4288002",
+          "16",
+          "1/1.291",
+          "0.8",
+          "0.8",
+          "9.24",
+          "144.16",
+          "13.5"
+        ],
+        [
+          "P4287802",
+          "12",
+          "19/0.47",
+          "0.8",
+          "0.61",
+          "9.23",
+          "312.33",
+          "5.43"
+        ],
+        [
+          "P4287802",
+          "12",
+          "19/0.47",
+          "0.8",
+          "0.61",
+          "10.91",
+          "357.10",
+          "5.43"
+        ]
+      ],
+      "catalogueNo": "428",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 1000 V AC"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
+          "Optional Shield",
+          "Jacket: PVC",
+          "Colour : As per customer order. ISO 9001"
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "fecd3decff",
+      "family": "ul-appliance",
+      "name": "UL 1275 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter Max.",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20° C"
       ],
       "rows": [
         [
@@ -142,133 +292,52 @@
           "Ω/km"
         ],
         [
-          "A41485XX",
-          "26",
-          "7/0.16",
-          "0.762",
-          "2.17",
-          "6.5",
-          "150"
-        ],
-        [
-          "A41484XX",
-          "24",
-          "7/0.193",
-          "0.762",
-          "2.3",
-          "7",
-          "94.2"
-        ],
-        [
-          "A41483XX",
-          "22",
-          "7/0.254",
-          "0.762",
-          "2.4",
-          "9",
-          "59.4"
-        ],
-        [
-          "A41482XX",
-          "20",
-          "10/0.254",
-          "0.762",
-          "2.6",
-          "12",
-          "37.1"
-        ],
-        [
-          "A41481XX",
+          "P41781XX",
           "18",
           "16/0.254",
-          "0.762",
-          "2.9",
-          "15",
-          "23.5"
+          "1.52",
+          "4.24",
+          "26.32",
+          "21.8"
         ],
         [
-          "A41480XX",
+          "P41780XX",
           "16",
           "26/0.254",
-          "0.762",
-          "3.1",
-          "21",
-          "14.7"
+          "1.52",
+          "4.57",
+          "33.22",
+          "13.7"
         ],
         [
-          "A41479XX",
+          "P41779XX",
           "14",
           "41/0.254",
-          "0.762",
-          "3.6",
-          "30",
-          "9.24"
+          "1.52",
+          "4.95",
+          "42.85",
+          "8.59"
         ],
         [
-          "A41478XX",
+          "P41778XX",
           "12",
           "65/0.254",
-          "0.762",
-          "4.15",
-          "48",
-          "5.82"
+          "1.52",
+          "5.44",
+          "57.38",
+          "5.41"
         ],
         [
-          "A41477XX",
+          "P41777XX",
           "10",
           "105/0.254",
-          "0.762",
-          "4.6",
-          "60",
-          "3.65"
-        ],
-        [
-          "A41476XX",
-          "8",
-          "168/0.254",
-          "1.143",
-          "6.2",
-          "105",
-          "2.35"
-        ],
-        [
-          "A41475XX",
-          "6",
-          "266/0.254",
-          "1.524",
-          "8.2",
-          "170",
-          "1.48"
-        ],
-        [
-          "HA41476XX",
-          "8",
-          "133/0.28",
-          "1.14",
-          "6.4",
-          "105",
-          "2.33"
-        ],
-        [
-          "HA41475XX",
-          "6",
-          "133/0.36",
           "1.52",
-          "8.2",
-          "175",
-          "1.46"
-        ],
-        [
-          "HA41474XX",
-          "4",
-          "133/0.45",
-          "1.52",
-          "9.3",
-          "255",
-          "0.918"
+          "6.15",
+          "80.83",
+          "3.41"
         ]
       ],
-      "catalogueNo": "A414/HA414",
+      "catalogueNo": "417",
       "info": {
         "features": [
           "Flame retardant",
@@ -276,17 +345,16 @@
         ],
         "technical": [
           "Temperature Range : +105°C",
-          "Voltage Rating : 600 V AC",
-          "For Electronic use : 2500 V"
+          "Rated Voltage : 600 V AC"
         ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor: Annealed Stranded Tinned Copper",
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
           "Insulation: PVC",
-          "Colour : As per customer order."
+          "Colour: As per customer order."
         ]
       },
       "headerGroups": [
@@ -881,270 +949,6 @@
       ]
     },
     {
-      "id": "fa5649f673",
-      "family": "ul-appliance",
-      "name": "UL 2127 ATC, PVC Insulated 105°C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Size",
-        "No. of Strands / Wire diameter",
-        "Insulation Wall Thickness Nom.",
-        "Outer Sheath Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20° C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Nos./mm",
-          "mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "P4268402",
-          "24",
-          "7/0.193",
-          "0.8",
-          "0.8",
-          "6.68",
-          "60.09",
-          "87.6"
-        ],
-        [
-          "P4268302",
-          "22",
-          "7/0.254",
-          "0.8",
-          "0.8",
-          "7.01",
-          "69.41",
-          "55.4"
-        ],
-        [
-          "P4268202",
-          "20",
-          "10/0.254",
-          "0.8",
-          "0.8",
-          "7.31",
-          "77.04",
-          "34.8"
-        ],
-        [
-          "P4268102",
-          "18",
-          "16/0.254",
-          "0.8",
-          "0.8",
-          "7.91",
-          "92.53",
-          "21.8"
-        ],
-        [
-          "P4268002",
-          "16",
-          "26/0.254",
-          "0.8",
-          "0.8",
-          "8.56",
-          "112.96",
-          "13.7"
-        ],
-        [
-          "P4267802",
-          "12",
-          "19/0.47",
-          "0.8",
-          "0.61",
-          "9.23",
-          "312.33",
-          "5.43"
-        ]
-      ],
-      "catalogueNo": "426",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range: +105°C",
-          "Voltage Rating: 600 V AC"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation: PVC",
-          "Optional Shield",
-          "Jacket: PVC",
-          "Colour: As per customer order."
-        ]
-      },
-      "headerGroups": [
-        "",
-        "Conductor Construction",
-        "Conductor Construction",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    {
-      "id": "c41bab5f78",
-      "family": "ul-appliance",
-      "name": "UL 1028 APC, PVC Insulated 105°C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Size",
-        "No. of Strands / Wire diameter",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20°C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Nos./mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "P41583XX",
-          "22",
-          "7/0.254",
-          "1.143",
-          "3.06",
-          "13.23",
-          "55.4"
-        ],
-        [
-          "P41582XX",
-          "20",
-          "10/0.254",
-          "1.143",
-          "3.22",
-          "15.41",
-          "34.8"
-        ],
-        [
-          "P41581XX",
-          "18",
-          "16/0.254",
-          "1.143",
-          "3.46",
-          "19.47",
-          "21.8"
-        ],
-        [
-          "P41580XX",
-          "16",
-          "26/0.254",
-          "1.143",
-          "3.79",
-          "25.79",
-          "13.7"
-        ],
-        [
-          "P41579XX",
-          "14",
-          "41/0.254",
-          "1.143",
-          "4.17",
-          "34.74",
-          "8.59"
-        ],
-        [
-          "P41578XX",
-          "12",
-          "65/0.254",
-          "1.143",
-          "4.66",
-          "48.40",
-          "5.41"
-        ],
-        [
-          "P41577XX",
-          "10",
-          "105/0.254",
-          "1.143",
-          "5.37",
-          "70.59",
-          "3.41"
-        ],
-        [
-          "P41576XX",
-          "8",
-          "168/0.254",
-          "1.143",
-          "6.19",
-          "104.01",
-          "2.18"
-        ],
-        [
-          "PS41581XX",
-          "18",
-          "1/1.024",
-          "1.143",
-          "3.30",
-          "18.56",
-          "21.4"
-        ],
-        [
-          "PS41580XX",
-          "16",
-          "1/1.291",
-          "1.143",
-          "3.57",
-          "24.26",
-          "13.5"
-        ]
-      ],
-      "catalogueNo": "415",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range: +105°C",
-          "Voltage Rating: 600 V AC",
-          "For Electronic use: 2500 V"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation: PVC",
-          "Colour: As per customer order"
-        ]
-      },
-      "headerGroups": [
-        "",
-        "Conductor Construction",
-        "Conductor Construction",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    {
       "id": "7fa6913523",
       "family": "ul-appliance",
       "name": "UL 1015 APC, PVC Insulated 105°C, 600 V AC Cable",
@@ -1389,16 +1193,15 @@
       ]
     },
     {
-      "id": "5c7759201a",
+      "id": "5795b07db2",
       "family": "ul-appliance",
-      "name": "UL 2129 APC, PVC Insulated 105°C, 1000 V AC Cable",
+      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
       "headers": [
         "Part Number",
         "Conductor Size",
         "No. of Strands / Wire diameter",
         "Insulation Wall Thickness Nom.",
-        "Outer Sheath Thickness Nom.",
-        "Cable — Overall Diameter Max.",
+        "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
         "Max. Conductor Resistance at 20°C"
       ],
@@ -1406,105 +1209,77 @@
         [
           "",
           "AWG",
-          "Nos/mm",
-          "mm",
+          "Nos./mm",
           "mm",
           "mm",
           "kg/km",
           "Ω/km"
         ],
         [
-          "P4288402",
-          "24",
-          "7/0.193",
-          "0.8",
-          "0.8",
-          "7.62",
-          "76.62",
-          "87.6"
-        ],
-        [
-          "P4288302",
+          "A77083XX",
           "22",
           "7/0.254",
-          "0.8",
-          "0.8",
-          "8.01",
-          "89.80",
-          "55.4"
+          "0.80",
+          "2.6",
+          "11.2",
+          "59.2"
         ],
         [
-          "P4288202",
+          "A77082XX",
           "20",
           "10/0.254",
-          "0.8",
-          "0.8",
-          "8.38",
-          "101.17",
-          "34.8"
+          "0.80",
+          "2.8",
+          "13.2",
+          "37.1"
         ],
         [
-          "P4288102",
+          "A77081XX",
           "18",
           "16/0.254",
-          "0.8",
-          "0.8",
-          "8.98",
-          "121.86",
-          "21.8"
+          "0.80",
+          "3.0",
+          "17",
+          "23.5"
         ],
         [
-          "P4288002",
+          "A77080XX",
           "16",
           "26/0.254",
-          "0.8",
-          "0.8",
-          "9.77",
-          "153.23",
-          "13.7"
+          "0.80",
+          "3.3",
+          "23",
+          "14.7"
         ],
         [
-          "PS4288102",
-          "18",
-          "1/1.024",
-          "0.8",
-          "0.8",
-          "8.60",
-          "116.06",
-          "21.4"
-        ],
-        [
-          "PS4288002",
-          "16",
-          "1/1.291",
-          "0.8",
-          "0.8",
-          "9.24",
-          "144.16",
-          "13.5"
-        ],
-        [
-          "P4287802",
+          "A77078XX",
           "12",
-          "19/0.47",
-          "0.8",
-          "0.61",
-          "9.23",
-          "312.33",
-          "5.43"
+          "65/0.254",
+          "0.80",
+          "4.15",
+          "44",
+          "5.82"
         ],
         [
-          "P4287802",
-          "12",
-          "19/0.47",
-          "0.8",
-          "0.61",
-          "10.91",
-          "357.10",
-          "5.43"
+          "A77079XX",
+          "14",
+          "41/0.254",
+          "0.80",
+          "3.7",
+          "31",
+          "9.24"
+        ],
+        [
+          "A77077XX",
+          "10",
+          "105/0.254",
+          "0.80",
+          "4.75",
+          "64",
+          "3.65"
         ]
       ],
-      "catalogueNo": "428",
+      "catalogueNo": "A770",
       "info": {
         "features": [
           "Flame retardant",
@@ -1512,7 +1287,153 @@
         ],
         "technical": [
           "Temperature Range: +105°C",
-          "Voltage Rating: 1000 V AC"
+          "Voltage Rating: 600 V AC For Electronic use: 2500 V",
+          "Flame Test: VW-1 as per UL 1581"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Stranded Tinned Copper",
+          "Insulation: PVC",
+          "Colour: As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "c41bab5f78",
+      "family": "ul-appliance",
+      "name": "UL 1028 APC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness Nom.",
+        "Cable — Overall Diameter",
+        "Weight Approx.",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "P41583XX",
+          "22",
+          "7/0.254",
+          "1.143",
+          "3.06",
+          "13.23",
+          "55.4"
+        ],
+        [
+          "P41582XX",
+          "20",
+          "10/0.254",
+          "1.143",
+          "3.22",
+          "15.41",
+          "34.8"
+        ],
+        [
+          "P41581XX",
+          "18",
+          "16/0.254",
+          "1.143",
+          "3.46",
+          "19.47",
+          "21.8"
+        ],
+        [
+          "P41580XX",
+          "16",
+          "26/0.254",
+          "1.143",
+          "3.79",
+          "25.79",
+          "13.7"
+        ],
+        [
+          "P41579XX",
+          "14",
+          "41/0.254",
+          "1.143",
+          "4.17",
+          "34.74",
+          "8.59"
+        ],
+        [
+          "P41578XX",
+          "12",
+          "65/0.254",
+          "1.143",
+          "4.66",
+          "48.40",
+          "5.41"
+        ],
+        [
+          "P41577XX",
+          "10",
+          "105/0.254",
+          "1.143",
+          "5.37",
+          "70.59",
+          "3.41"
+        ],
+        [
+          "P41576XX",
+          "8",
+          "168/0.254",
+          "1.143",
+          "6.19",
+          "104.01",
+          "2.18"
+        ],
+        [
+          "PS41581XX",
+          "18",
+          "1/1.024",
+          "1.143",
+          "3.30",
+          "18.56",
+          "21.4"
+        ],
+        [
+          "PS41580XX",
+          "16",
+          "1/1.291",
+          "1.143",
+          "3.57",
+          "24.26",
+          "13.5"
+        ]
+      ],
+      "catalogueNo": "415",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range: +105°C",
+          "Voltage Rating: 600 V AC",
+          "For Electronic use: 2500 V"
         ],
         "application": [
           "Appliance wiring",
@@ -1521,16 +1442,13 @@
         "construction": [
           "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
           "Insulation: PVC",
-          "Optional Shield",
-          "Jacket: PVC",
-          "Colour : As per customer order. ISO 9001"
+          "Colour: As per customer order"
         ]
       },
       "headerGroups": [
         "",
         "Conductor Construction",
         "Conductor Construction",
-        "",
         "",
         "",
         "",
@@ -1693,111 +1611,12 @@
       ]
     },
     {
-      "id": "fecd3decff",
-      "family": "ul-appliance",
-      "name": "UL 1275 APC, PVC Insulated 105°C, 600 V AC Cable",
-      "headers": [
-        "Part Number",
-        "Conductor Size",
-        "No. of Strands / Wire diameter",
-        "Insulation Wall Thickness Nom.",
-        "Cable — Overall Diameter Max.",
-        "Weight Approx.",
-        "Max. Conductor Resistance at 20° C"
-      ],
-      "rows": [
-        [
-          "",
-          "AWG",
-          "Nos./mm",
-          "mm",
-          "mm",
-          "kg/km",
-          "Ω/km"
-        ],
-        [
-          "P41781XX",
-          "18",
-          "16/0.254",
-          "1.52",
-          "4.24",
-          "26.32",
-          "21.8"
-        ],
-        [
-          "P41780XX",
-          "16",
-          "26/0.254",
-          "1.52",
-          "4.57",
-          "33.22",
-          "13.7"
-        ],
-        [
-          "P41779XX",
-          "14",
-          "41/0.254",
-          "1.52",
-          "4.95",
-          "42.85",
-          "8.59"
-        ],
-        [
-          "P41778XX",
-          "12",
-          "65/0.254",
-          "1.52",
-          "5.44",
-          "57.38",
-          "5.41"
-        ],
-        [
-          "P41777XX",
-          "10",
-          "105/0.254",
-          "1.52",
-          "6.15",
-          "80.83",
-          "3.41"
-        ]
-      ],
-      "catalogueNo": "417",
-      "info": {
-        "features": [
-          "Flame retardant",
-          "Resistant to water, oil, acids, solvents and fungus."
-        ],
-        "technical": [
-          "Temperature Range : +105°C",
-          "Rated Voltage : 600 V AC"
-        ],
-        "application": [
-          "Appliance wiring",
-          "Internal wiring of meters, panels, electrical and electronic equipment."
-        ],
-        "construction": [
-          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation: PVC",
-          "Colour: As per customer order."
-        ]
-      },
-      "headerGroups": [
-        "",
-        "Conductor Construction",
-        "Conductor Construction",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    {
       "id": "3dd464965e",
       "family": "ul-appliance",
-      "name": "UL 2464 APC, PVC Insulated and Sheathed 80 C, 300 V AC Cable",
+      "name": "UL 2464 APC, PVC Insulated and Sheathed 80°C, 300 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores",
+        "No.of cores",
         "Conductor Size",
         "No. of Strands (Nom)",
         "Stands dia (Nom)",
@@ -1805,7 +1624,7 @@
         "Outer Sheath Thickness (Nom)",
         "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20 0C"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
@@ -1821,7 +1640,7 @@
           "Ω/km"
         ],
         [
-          "4298002*",
+          "P4298002*",
           "2",
           "16",
           "26",
@@ -1833,7 +1652,7 @@
           "14.7"
         ],
         [
-          "B4298202",
+          "PB4298202",
           "2",
           "20",
           "7",
@@ -1845,7 +1664,7 @@
           "34.6"
         ],
         [
-          "4298302",
+          "P4298302",
           "2",
           "22",
           "7",
@@ -1857,7 +1676,7 @@
           "55.4"
         ],
         [
-          "B4298402",
+          "PB4298402",
           "2",
           "24",
           "7",
@@ -1869,7 +1688,7 @@
           "87.6"
         ],
         [
-          "M4298502",
+          "PM4298502",
           "2",
           "26",
           "7",
@@ -1881,7 +1700,7 @@
           "150.0"
         ],
         [
-          "4297803",
+          "P4297803",
           "3",
           "12",
           "65",
@@ -1893,7 +1712,7 @@
           "5.82"
         ],
         [
-          "4298303",
+          "P4298303",
           "3",
           "22",
           "7",
@@ -1905,7 +1724,7 @@
           "55.4"
         ],
         [
-          "4298004",
+          "P4298004",
           "4",
           "16",
           "26",
@@ -1917,7 +1736,7 @@
           "14.7"
         ],
         [
-          "4298304",
+          "P4298304",
           "4",
           "22",
           "7",
@@ -1929,7 +1748,7 @@
           "55.4"
         ],
         [
-          "B4298605",
+          "PB4298605",
           "5",
           "28",
           "7",
@@ -1941,7 +1760,7 @@
           "228.9"
         ],
         [
-          "C4298208",
+          "PC4298208",
           "8",
           "20",
           "19",
@@ -1953,7 +1772,7 @@
           "34.6"
         ],
         [
-          "4298312",
+          "P4298312",
           "12",
           "22",
           "7",
@@ -1965,7 +1784,7 @@
           "55.4"
         ],
         [
-          "4298201P",
+          "P4298201P",
           "1P",
           "20",
           "10",
@@ -1977,7 +1796,7 @@
           "34.8"
         ],
         [
-          "B4298402P",
+          "PB4298402P",
           "2P",
           "24",
           "7",
@@ -1989,7 +1808,7 @@
           "87.6"
         ],
         [
-          "M4298502P",
+          "PM4298502P",
           "2P",
           "26",
           "7",
@@ -2001,7 +1820,7 @@
           "150.0"
         ],
         [
-          "M4298503P",
+          "PM4298503P",
           "3P",
           "26",
           "7",
@@ -2013,7 +1832,7 @@
           "150.0"
         ],
         [
-          "M4298504P",
+          "PM4298504P",
           "4P",
           "26",
           "7",
@@ -2031,41 +1850,61 @@
           "Flame retardant",
           "Resistant to water, oil, acids, solvents and fungus. ISO 9001 14001"
         ],
+        "technical": [
+          "Temperature Range: -10°C to + 80°C",
+          "Voltage Rating: 300 V AC",
+          "Standard: UL Std. 758, UL Style 1015,2464",
+          "Test Voltage:  1500 V",
+          "Breakdown voltage: min 3000V",
+          "Min Binding Radius: 15 X Cable OD"
+        ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
           "Optional Shield, covering, braid",
-          "Jacket : PVC",
-          "Colour : As per customer order. ISO OHSAS AS ISO 14001 18001 9100 45001"
+          "Jacket: PVC",
+          "Colour: As per customer order."
         ]
-      }
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "723446b7cf",
       "family": "ul-appliance",
-      "name": "UL 2464 APC, PVC Insulated ATC Braiding, with Al Mylar Tape, PVC Outersheathed 300V AC Cable",
+      "name": "UL 2464 APC, PVC Insulated, ATC Braiding, with Al Mylar Tape, PVC Outersheathed 300V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores",
+        "No.of cores",
         "Conductor Size",
-        "No. of Strands/ Wire dia (Nom) — Nos/mm",
+        "No. of Strands/ Wire diameter (Nom)",
         "Insulation Wall Thickness (Nom)",
         "Thickness of Braiding wire (Nom)",
         "Outer Sheath Thickness (Nom)",
         "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20 0C"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
           "",
           "Nos",
           "AWG",
-          "",
+          "Nos /mm",
           "mm",
           "mm",
           "mm",
@@ -2074,7 +1913,7 @@
           "Ω/km"
         ],
         [
-          "A0807902*",
+          "PA0807902*",
           "2",
           "14",
           "41/0.254",
@@ -2086,7 +1925,7 @@
           "8.6"
         ],
         [
-          "BA0808002",
+          "PBA0808002",
           "2",
           "16",
           "7/0.488",
@@ -2098,7 +1937,7 @@
           "13.7"
         ],
         [
-          "A0808202",
+          "PA0808202",
           "2",
           "20",
           "10/0.254",
@@ -2110,7 +1949,7 @@
           "34.8"
         ],
         [
-          "A0808302",
+          "PA0808302",
           "2",
           "22",
           "7/0.254",
@@ -2122,7 +1961,7 @@
           "55.4"
         ],
         [
-          "MA808502",
+          "PMA808502",
           "2",
           "26",
           "7/0.16",
@@ -2134,7 +1973,7 @@
           "150.0"
         ],
         [
-          "A0807903",
+          "PA0807903",
           "3",
           "14",
           "41/0.254",
@@ -2146,7 +1985,7 @@
           "8.6"
         ],
         [
-          "A0808303",
+          "PA0808303",
           "3",
           "22",
           "7/0.254",
@@ -2158,7 +1997,7 @@
           "55.4"
         ],
         [
-          "A0808304",
+          "PA0808304",
           "4",
           "22",
           "7/0.254",
@@ -2170,7 +2009,7 @@
           "55.4"
         ],
         [
-          "A0808404",
+          "PA0808404",
           "4",
           "24",
           "10/0.254",
@@ -2182,7 +2021,7 @@
           "87.6"
         ],
         [
-          "A0808408",
+          "PA0808408",
           "8",
           "24",
           "7/0.193",
@@ -2194,7 +2033,7 @@
           "87.6"
         ],
         [
-          "A0808510",
+          "PA0808510",
           "10",
           "26",
           "7/0.160",
@@ -2206,7 +2045,7 @@
           "150.0"
         ],
         [
-          "A0808511",
+          "PA0808511",
           "11",
           "26",
           "7/0.160",
@@ -2218,7 +2057,7 @@
           "150.0"
         ],
         [
-          "B5358001P",
+          "PB5358001P",
           "1P",
           "16",
           "26/0.254",
@@ -2230,7 +2069,7 @@
           "13.7"
         ],
         [
-          "B5358605P",
+          "PB5358605P",
           "5P",
           "28",
           "7/0.127",
@@ -2242,7 +2081,7 @@
           "228.9"
         ],
         [
-          "B5358615P",
+          "PB5358615P",
           "15P",
           "28",
           "7/0.127",
@@ -2254,7 +2093,7 @@
           "228.9"
         ],
         [
-          "B5358617P",
+          "PB5358617P",
           "17P",
           "28",
           "7/0.127",
@@ -2266,7 +2105,7 @@
           "228.9"
         ],
         [
-          "B5358620P",
+          "PB5358620P",
           "20P",
           "28",
           "7/0.127",
@@ -2278,7 +2117,46 @@
           "228.9"
         ]
       ],
-      "catalogueNo": "429"
+      "catalogueNo": "429",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus.",
+          "PVC Self- extinguishing and flame retardant, test method VW-1 FT1"
+        ],
+        "technical": [
+          "Temperature Range: -10°C to +80°C",
+          "Voltage Rating: 300 V AC",
+          "Standard:  UL Std. 758, UL Style 2464,1015",
+          "Test Voltage: 1500 V",
+          "Breakdown voltage: min 3000V",
+          "Min Binding Radius: 15 X Cable OD"
+        ],
+        "application": [
+          "Suitable for use as a command, measuring and control cable in tool making machinery Conveyor System and production lines, in industrial plants and in air conditioning as well as in the steel producing industries"
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request).",
+          "Insulation: PVC",
+          "Braiding: ATC with Al Mylar tape",
+          "Core Identification: As per Customer request (or) Black core with number printing",
+          "Jacket: PVC",
+          "Colour: Black or as per customer request"
+        ]
+      },
+      "colorNote": "*For Tinned Copper Conductor, the part code is AA080 and AB535 \n**Conductor Construction can be changed as per customer request, to increase the flexibility\n*** We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog",
+      "headerGroups": [
+        "",
+        "Conductor Construction**",
+        "Conductor Construction**",
+        "Conductor Construction**",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "65f1e895d9",
@@ -2286,22 +2164,22 @@
       "name": "UL 2464 APC, PVC Insulated, Al Mylar tape with Drain wire, PVC Outersheathed 300 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction** — No.of cores",
+        "No.of cores",
         "Conductor Size",
-        "No. of Strands/ Wire dia (Nom) — Nos/mm",
+        "No. of Strands/ Wire dia (Nom)",
         "Insulation Wall Thickness (Nom)",
         "Shielding tape Thickness (Nom)",
         "Outer Sheath Thickness (Nom)",
         "Cable — Overall Diameter (Nom)",
         "Weight Approx.",
-        "Max. Conductor Resistance at 20 0C"
+        "Max. Conductor Resistance at 20°C"
       ],
       "rows": [
         [
           "",
           "Nos",
           "AWG",
-          "",
+          "Nos/mm",
           "mm",
           "mm",
           "mm",
@@ -2310,7 +2188,7 @@
           "Ω/km"
         ],
         [
-          "A34080202*",
+          "PA34080202*",
           "2",
           "20",
           "10/0.254",
@@ -2322,7 +2200,7 @@
           "34.8"
         ],
         [
-          "A3401303",
+          "PA3401303",
           "3",
           "15",
           "7/0.530",
@@ -2334,7 +2212,7 @@
           "12.1"
         ],
         [
-          "LA3408404",
+          "PLA3408404",
           "4",
           "24",
           "7/0.20",
@@ -2346,7 +2224,7 @@
           "87.6"
         ],
         [
-          "LA3408410",
+          "PLA3408410",
           "10",
           "24",
           "7/0.20",
@@ -2358,7 +2236,7 @@
           "87.6"
         ],
         [
-          "A341301P",
+          "PA341301P",
           "1P",
           "15",
           "7/0.53",
@@ -2370,29 +2248,69 @@
           "12.1"
         ]
       ],
-      "catalogueNo": "429"
+      "catalogueNo": "429",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus.",
+          "PVC Self- extinguishing and flame retardant, test method VW-1 FT1"
+        ],
+        "technical": [
+          "Temperature Range: -10°C to +80°C",
+          "Voltage Rating: 300 V AC",
+          "Standard:  UL Std. 758, UL Style 2464,1015",
+          "Test Voltage: 1500 V",
+          "Breakdown voltage: min 3000V",
+          "Min Binding Radius: 15 X Cable OD"
+        ],
+        "application": [
+          "Suitable for use as a command, measuring and control cable in tool making machinery Conveyor System and production lines, in industrial plants and in air conditioning as well as in the steel",
+          "producing industries"
+        ],
+        "construction": [
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request).",
+          "Insulation: PVC",
+          "Shielding: Al Mylar tape with Drain wire",
+          "Core Identification: As per Customer request (or) Black with number printing",
+          "Jacket: PVC",
+          "Colour: Black or as per customer request"
+        ]
+      },
+      "colorNote": "Note:  *For Tinned Copper Conductor, the part code is A340 and A341 \n**Conductor Construction can be changed as per customer request, to increase the flexibility \n*** We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog",
+      "headerGroups": [
+        "",
+        "Conductor Construction**",
+        "Conductor Construction**",
+        "Conductor Construction**",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "e3cdb0dbc7",
       "family": "ul-appliance",
-      "name": "UL 2576 APC, PVC Insulated 80 C, 150 V AC Cable",
+      "name": "UL 2576 APC, PVC Insulated 80°C, 150 V AC Cable",
       "headers": [
         "Part Number",
-        "Conductor Construction — Conductor Size",
-        "No. of Strands / Wire dia — nos. /",
         "Number of Cores",
+        "Conductor Size",
+        "No. of Strands / Wire dia — nos. /",
         "Insulation Wall Thickness Nom.",
         "Outer Sheath Thickness Nom.",
         "Cable — Overall Diameter Max.",
         "Weight Approx.",
-        "Max. Conductor Resistance at 200 C"
+        "Max. Conductor Resistance at 20° C"
       ],
       "rows": [
         [
           "",
+          "Nos.",
           "AWG",
           "mm",
-          "Nos.",
           "mm",
           "mm",
           "mm",
@@ -2400,10 +2318,10 @@
           "Ω/km"
         ],
         [
-          "4308302",
+          "P4308302",
+          "2",
           "22",
           "7/0.254",
-          "2",
           "0.25",
           "0.80",
           "4.52",
@@ -2411,10 +2329,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "3",
           "22",
           "7/0.254",
-          "3",
           "0.25",
           "0.80",
           "4.74",
@@ -2422,10 +2340,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "4",
           "22",
           "7/0.254",
-          "4",
           "0.25",
           "0.80",
           "5.09",
@@ -2433,10 +2351,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "5",
           "22",
           "7/0.254",
-          "5",
           "0.25",
           "0.80",
           "5.47",
@@ -2444,10 +2362,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "6",
           "22",
           "7/0.254",
-          "6",
           "0.25",
           "0.80",
           "5.88",
@@ -2455,10 +2373,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "7",
           "22",
           "7/0.254",
-          "7",
           "0.25",
           "0.80",
           "5.88",
@@ -2466,10 +2384,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "8",
           "22",
           "7/0.254",
-          "8",
           "0.25",
           "0.80",
           "6.49",
@@ -2477,10 +2395,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "9",
           "22",
           "7/0.254",
-          "9",
           "0.25",
           "0.80",
           "6.97",
@@ -2488,10 +2406,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "10",
           "22",
           "7/0.254",
-          "10",
           "0.25",
           "0.80",
           "7.24",
@@ -2499,10 +2417,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "12",
           "22",
           "7/0.254",
-          "12",
           "0.25",
           "0.80",
           "7.46",
@@ -2510,10 +2428,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "15",
           "22",
           "7/0.254",
-          "15",
           "0.25",
           "1.00",
           "8.79",
@@ -2521,10 +2439,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "18",
           "22",
           "7/0.254",
-          "18",
           "0.25",
           "1.00",
           "9.20",
@@ -2532,10 +2450,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "20",
           "22",
           "7/0.254",
-          "20",
           "0.25",
           "1.00",
           "9.65",
@@ -2543,10 +2461,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "24",
           "22",
           "7/0.254",
-          "24",
           "0.25",
           "1.00",
           "10.56",
@@ -2554,10 +2472,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "25",
           "22",
           "7/0.254",
-          "25",
           "0.25",
           "1.00",
           "10.56",
@@ -2565,10 +2483,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "30",
           "22",
           "7/0.254",
-          "30",
           "0.25",
           "1.00",
           "11.12",
@@ -2576,10 +2494,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "40",
           "22",
           "7/0.254",
-          "40",
           "0.25",
           "1.00",
           "12.37",
@@ -2587,10 +2505,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "50",
           "22",
           "7/0.254",
-          "50",
           "0.25",
           "1.15",
           "14.14",
@@ -2598,10 +2516,10 @@
           "55.4"
         ],
         [
-          "4308302",
+          "P4308302",
+          "60",
           "22",
           "7/0.254",
-          "60",
           "0.25",
           "1.15",
           "14.94",
@@ -2609,10 +2527,10 @@
           "55.4"
         ],
         [
-          "4308202",
+          "P4308202",
+          "2",
           "20",
           "10/0.254",
-          "2",
           "0.40",
           "0.80",
           "5.47",
@@ -2620,10 +2538,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "3",
           "20",
           "10/0.254",
-          "3",
           "0.40",
           "0.80",
           "5.76",
@@ -2631,10 +2549,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "4",
           "20",
           "10/0.254",
-          "4",
           "0.40",
           "0.80",
           "6.24",
@@ -2642,10 +2560,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "5",
           "20",
           "10/0.254",
-          "5",
           "0.40",
           "0.80",
           "6.76",
@@ -2653,10 +2571,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "6",
           "20",
           "10/0.254",
-          "6",
           "0.40",
           "0.80",
           "7.31",
@@ -2664,10 +2582,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "7",
           "20",
           "10/0.254",
-          "7",
           "0.40",
           "0.80",
           "7.31",
@@ -2675,10 +2593,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "8",
           "20",
           "10/0.254",
-          "8",
           "0.40",
           "0.80",
           "8.13",
@@ -2686,10 +2604,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "9",
           "20",
           "10/0.254",
-          "9",
           "0.40",
           "0.90",
           "8.97",
@@ -2697,10 +2615,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "10",
           "20",
           "10/0.254",
-          "10",
           "0.40",
           "0.90",
           "9.34",
@@ -2708,10 +2626,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "12",
           "20",
           "10/0.254",
-          "12",
           "0.40",
           "0.90",
           "9.84",
@@ -2719,10 +2637,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "15",
           "20",
           "10/0.254",
-          "15",
           "0.40",
           "1.00",
           "11.03",
@@ -2730,10 +2648,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "20",
           "20",
           "10/0.254",
-          "20",
           "0.40",
           "1.00",
           "12.18",
@@ -2741,10 +2659,10 @@
           "34.8"
         ],
         [
-          "4308202",
+          "P4308202",
+          "25",
           "20",
           "10/0.254",
-          "25",
           "0.40",
           "1.00",
           "13.41",
@@ -2752,10 +2670,10 @@
           "34.8"
         ],
         [
-          "4308102",
+          "P4308102",
+          "2",
           "18",
           "16/0.254",
-          "2",
           "0.40",
           "0.80",
           "5.97",
@@ -2763,10 +2681,10 @@
           "21.8"
         ],
         [
-          "4308103",
+          "P4308103",
+          "3",
           "18",
           "16/0.254",
-          "3",
           "0.40",
           "0.80",
           "6.30",
@@ -2774,10 +2692,10 @@
           "21.8"
         ],
         [
-          "4308104",
+          "P4308104",
+          "4",
           "18",
           "16/0.254",
-          "4",
           "0.40",
           "0.80",
           "6.84",
@@ -2785,10 +2703,10 @@
           "21.8"
         ],
         [
-          "4308105",
+          "P4308105",
+          "5",
           "18",
           "16/0.254",
-          "5",
           "0.40",
           "0.94",
           "7.70",
@@ -2796,10 +2714,10 @@
           "21.8"
         ],
         [
-          "4308106",
+          "P4308106",
+          "6",
           "18",
           "16/0.254",
-          "6",
           "0.40",
           "0.94",
           "8.33",
@@ -2807,10 +2725,10 @@
           "21.8"
         ],
         [
-          "4308107",
+          "P4308107",
+          "7",
           "18",
           "16/0.254",
-          "7",
           "0.40",
           "0.94",
           "8.33",
@@ -2818,10 +2736,10 @@
           "21.8"
         ],
         [
-          "4308108",
+          "P4308108",
+          "8",
           "18",
           "16/0.254",
-          "8",
           "0.40",
           "0.94",
           "9.27",
@@ -2829,10 +2747,10 @@
           "21.8"
         ],
         [
-          "4308109",
+          "P4308109",
+          "9",
           "18",
           "16/0.254",
-          "9",
           "0.40",
           "0.94",
           "10.00",
@@ -2840,10 +2758,10 @@
           "21.8"
         ],
         [
-          "4308110",
+          "P4308110",
+          "10",
           "18",
           "16/0.254",
-          "10",
           "0.40",
           "0.94",
           "10.41",
@@ -2851,10 +2769,10 @@
           "21.8"
         ],
         [
-          "4308112",
+          "P4308112",
+          "12",
           "18",
           "16/0.254",
-          "12",
           "0.40",
           "1.00",
           "11.07",
@@ -2862,10 +2780,10 @@
           "21.8"
         ],
         [
-          "4308115",
+          "P4308115",
+          "15",
           "18",
           "16/0.254",
-          "15",
           "0.40",
           "1.14",
           "12.47",
@@ -2873,10 +2791,10 @@
           "21.8"
         ],
         [
-          "4308119",
+          "P4308119",
+          "18",
           "18",
           "16/0.254",
-          "18",
           "0.40",
           "1.14",
           "13.10",
@@ -2884,10 +2802,10 @@
           "21.8"
         ],
         [
-          "4308120",
+          "P4308120",
+          "20",
           "18",
           "16/0.254",
-          "20",
           "0.40",
           "1.14",
           "13.78",
@@ -2895,10 +2813,10 @@
           "21.8"
         ],
         [
-          "4308125",
+          "P4308125",
+          "25",
           "18",
           "16/0.254",
-          "25",
           "0.40",
           "1.52",
           "15.94",
@@ -2906,10 +2824,10 @@
           "21.8"
         ],
         [
-          "4308002",
+          "P4308002",
+          "2",
           "16",
           "26/0.254",
-          "2",
           "0.78",
           "0.80",
           "8.14",
@@ -2917,10 +2835,10 @@
           "13.7"
         ],
         [
-          "4308003",
+          "P4308003",
+          "3",
           "16",
           "26/0.254",
-          "3",
           "0.78",
           "0.80",
           "8.64",
@@ -2928,10 +2846,10 @@
           "13.7"
         ],
         [
-          "4308004",
+          "P4308004",
+          "4",
           "16",
           "26/0.254",
-          "4",
           "0.78",
           "1.14",
           "10.15",
@@ -2939,10 +2857,10 @@
           "13.7"
         ],
         [
-          "4308005",
+          "P4308005",
+          "5",
           "16",
           "26/0.254",
-          "5",
           "0.78",
           "1.14",
           "11.03",
@@ -2950,10 +2868,10 @@
           "13.7"
         ],
         [
-          "4308006",
+          "P4308006",
+          "6",
           "16",
           "26/0.254",
-          "6",
           "0.78",
           "1.14",
           "11.98",
@@ -2961,10 +2879,10 @@
           "13.7"
         ],
         [
-          "4308007",
+          "P4308007",
+          "7",
           "16",
           "26/0.254",
-          "7",
           "0.78",
           "1.14",
           "11.98",
@@ -2972,10 +2890,10 @@
           "13.7"
         ],
         [
-          "4308008",
+          "P4308008",
+          "8",
           "16",
           "26/0.254",
-          "8",
           "0.78",
           "1.14",
           "13.41",
@@ -2983,10 +2901,10 @@
           "13.7"
         ],
         [
-          "4308009",
+          "P4308009",
+          "9",
           "16",
           "26/0.254",
-          "9",
           "0.78",
           "1.14",
           "14.52",
@@ -2994,10 +2912,10 @@
           "13.7"
         ],
         [
-          "4308010",
+          "P4308010",
+          "10",
           "16",
           "26/0.254",
-          "10",
           "0.78",
           "1.14",
           "15.15",
@@ -3005,10 +2923,10 @@
           "13.7"
         ],
         [
-          "4308012",
+          "P4308012",
+          "11",
           "16",
           "26/0.254",
-          "11",
           "0.78",
           "1.52",
           "16.42",
@@ -3016,10 +2934,10 @@
           "13.7"
         ],
         [
-          "4308015",
+          "P4308015",
+          "12",
           "16",
           "26/0.254",
-          "12",
           "0.78",
           "1.52",
           "18.13",
@@ -3027,10 +2945,10 @@
           "13.7"
         ],
         [
-          "4308019",
+          "P4308019",
+          "15",
           "16",
           "26/0.254",
-          "15",
           "0.78",
           "1.65",
           "19.34",
@@ -3038,10 +2956,10 @@
           "13.7"
         ],
         [
-          "4308020",
+          "P4308020",
+          "20",
           "16",
           "26/0.254",
-          "20",
           "0.78",
           "1.65",
           "20.59",
@@ -3049,10 +2967,10 @@
           "13.7"
         ],
         [
-          "4308025",
+          "P4308025",
+          "25",
           "16",
           "26/0.254",
-          "25",
           "0.78",
           "1.65",
           "22.71",
@@ -3060,10 +2978,10 @@
           "13.7"
         ],
         [
-          "4307902",
+          "P4307902",
+          "2",
           "14",
           "41/0.254",
-          "2",
           "0.78",
           "0.89",
           "9.09",
@@ -3071,10 +2989,10 @@
           "8.59"
         ],
         [
-          "4307903",
+          "P4307903",
+          "3",
           "14",
           "41/0.254",
-          "3",
           "0.78",
           "0.89",
           "9.66",
@@ -3082,10 +3000,10 @@
           "8.59"
         ],
         [
-          "4307904",
+          "P4307904",
+          "4",
           "14",
           "41/0.254",
-          "4",
           "0.78",
           "1.14",
           "11.08",
@@ -3093,10 +3011,10 @@
           "8.59"
         ],
         [
-          "4307905",
+          "P4307905",
+          "5",
           "14",
           "41/0.254",
-          "5",
           "0.78",
           "1.52",
           "12.84",
@@ -3104,10 +3022,10 @@
           "8.59"
         ],
         [
-          "4307907",
+          "P4307907",
+          "7",
           "14",
           "41/0.254",
-          "7",
           "0.78",
           "1.52",
           "13.90",
@@ -3115,10 +3033,10 @@
           "8.59"
         ],
         [
-          "4307909",
+          "P4307909",
+          "9",
           "14",
           "41/0.254",
-          "9",
           "0.78",
           "1.65",
           "17.01",
@@ -3126,10 +3044,10 @@
           "8.59"
         ],
         [
-          "4307912",
+          "P4307912",
+          "12",
           "14",
           "41/0.254",
-          "12",
           "0.78",
           "1.65",
           "18.28",
@@ -3137,10 +3055,10 @@
           "8.59"
         ],
         [
-          "4307915",
+          "P4307915",
+          "15",
           "14",
           "41/0.254",
-          "15",
           "0.78",
           "2.00",
           "20.90",
@@ -3148,10 +3066,10 @@
           "8.59"
         ],
         [
-          "4307802",
+          "P4307802",
+          "2",
           "12",
           "65/0.254",
-          "2",
           "0.78",
           "1.00",
           "10.29",
@@ -3159,10 +3077,10 @@
           "5.41"
         ],
         [
-          "4307803",
+          "P4307803",
+          "3",
           "12",
           "65/0.254",
-          "3",
           "0.78",
           "1.00",
           "10.94",
@@ -3170,10 +3088,10 @@
           "5.41"
         ],
         [
-          "4307804",
+          "P4307804",
+          "4",
           "12",
           "65/0.254",
-          "4",
           "0.78",
           "1.14",
           "12.27",
@@ -3181,10 +3099,10 @@
           "5.41"
         ],
         [
-          "4307807",
+          "P4307807",
+          "7",
           "12",
           "65/0.254",
-          "7",
           "0.78",
           "1.52",
           "15.37",
@@ -3199,21 +3117,214 @@
           "Resistant to water, oil, acids, solvents and fungus."
         ],
         "technical": [
-          "Temperature Range : +800C",
-          "Voltage Rating : 150 V AC ISO AS ISO 14001 9100 45001"
+          "Temperature Range: +80°C",
+          "Voltage Rating: 150 V AC"
         ],
         "application": [
           "Appliance wiring",
           "Internal wiring of meters, panels, electrical and electronic equipment."
         ],
         "construction": [
-          "Conductor : Annealed Solid / Stranded Bare Copper (Tinning on request)",
-          "Insulation : PVC",
+          "Conductor: Annealed Solid / Stranded Bare Copper (Tinning on request)",
+          "Insulation: PVC",
           "Optional Shield, covering",
-          "Jacket : PVC",
-          "Colour : As per customer order. ISO 9001"
+          "Jacket: PVC",
+          "Colour: As per customer order. ISO 9001"
         ]
-      }
+      },
+      "colorNote": "** We have obtained various approvals, accreditations, and certifications — some of which may not be relevant to this catalog",
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "c0afe98c98",
+      "family": "ul-appliance",
+      "name": "UL 1015 ATC, PVC Insulated 105°C, 600 V AC Cable",
+      "headers": [
+        "Part Number",
+        "Conductor Size",
+        "No. of Strands / Wire diameter",
+        "Insulation Wall Thickness (Nom)",
+        "Cable — Overall Diameter (Nom)",
+        "Weight Approx. (Nom)",
+        "Max. Conductor Resistance at 20°C"
+      ],
+      "rows": [
+        [
+          "",
+          "AWG",
+          "Nos./mm",
+          "mm",
+          "mm",
+          "kg/km",
+          "Ω/km"
+        ],
+        [
+          "A41485XX",
+          "26",
+          "7/0.16",
+          "0.762",
+          "2.17",
+          "6.5",
+          "150"
+        ],
+        [
+          "A41484XX",
+          "24",
+          "7/0.193",
+          "0.762",
+          "2.3",
+          "7",
+          "94.2"
+        ],
+        [
+          "A41483XX",
+          "22",
+          "7/0.254",
+          "0.762",
+          "2.4",
+          "9",
+          "59.4"
+        ],
+        [
+          "A41482XX",
+          "20",
+          "10/0.254",
+          "0.762",
+          "2.6",
+          "12",
+          "37.1"
+        ],
+        [
+          "A41481XX",
+          "18",
+          "16/0.254",
+          "0.762",
+          "2.9",
+          "15",
+          "23.5"
+        ],
+        [
+          "A41480XX",
+          "16",
+          "26/0.254",
+          "0.762",
+          "3.1",
+          "21",
+          "14.7"
+        ],
+        [
+          "A41479XX",
+          "14",
+          "41/0.254",
+          "0.762",
+          "3.6",
+          "30",
+          "9.24"
+        ],
+        [
+          "A41478XX",
+          "12",
+          "65/0.254",
+          "0.762",
+          "4.15",
+          "48",
+          "5.82"
+        ],
+        [
+          "A41477XX",
+          "10",
+          "105/0.254",
+          "0.762",
+          "4.6",
+          "60",
+          "3.65"
+        ],
+        [
+          "A41476XX",
+          "8",
+          "168/0.254",
+          "1.143",
+          "6.2",
+          "105",
+          "2.35"
+        ],
+        [
+          "A41475XX",
+          "6",
+          "266/0.254",
+          "1.524",
+          "8.2",
+          "170",
+          "1.48"
+        ],
+        [
+          "HA41476XX",
+          "8",
+          "133/0.28",
+          "1.14",
+          "6.4",
+          "105",
+          "2.33"
+        ],
+        [
+          "HA41475XX",
+          "6",
+          "133/0.36",
+          "1.52",
+          "8.2",
+          "175",
+          "1.46"
+        ],
+        [
+          "HA41474XX",
+          "4",
+          "133/0.45",
+          "1.52",
+          "9.3",
+          "255",
+          "0.918"
+        ]
+      ],
+      "catalogueNo": "A414/HA414",
+      "info": {
+        "features": [
+          "Flame retardant",
+          "Resistant to water, oil, acids, solvents and fungus."
+        ],
+        "technical": [
+          "Temperature Range : +105°C",
+          "Voltage Rating : 600 V AC",
+          "For Electronic use : 2500 V"
+        ],
+        "application": [
+          "Appliance wiring",
+          "Internal wiring of meters, panels, electrical and electronic equipment."
+        ],
+        "construction": [
+          "Conductor: Annealed Stranded Tinned Copper",
+          "Insulation: PVC",
+          "Colour : As per customer order."
+        ]
+      },
+      "headerGroups": [
+        "",
+        "Conductor Construction",
+        "Conductor Construction",
+        "",
+        "",
+        "",
+        ""
+      ]
     },
     {
       "id": "360b317501",
