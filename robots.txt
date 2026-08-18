@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Admin CMS and API endpoints are not public content
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://siechem.vercel.app/sitemap.xml
