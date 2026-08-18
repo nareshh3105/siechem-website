@@ -43,12 +43,19 @@ const HTML_OPTS = {
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.mkdirSync(DIST, { recursive: true });
 
-/* 1. Copy everything deployable */
+/* 1. Copy everything deployable.
+ *
+ * Markdown files are internal documentation (EDITING-GUIDE, HANDOVER) and must
+ * never reach the public output — they describe the infrastructure, so serving
+ * them would hand an attacker a map of the system. */
 for (const entry of fs.readdirSync(ROOT)) {
   if (EXCLUDE.has(entry)) continue;
+  if (entry.toLowerCase().endsWith('.md')) continue;
   fs.cpSync(path.join(ROOT, entry), path.join(DIST, entry), {
     recursive: true,
-    filter: src => !src.includes(`${path.sep}catalog${path.sep}tools`)
+    filter: src =>
+      !src.includes(`${path.sep}catalog${path.sep}tools`) &&
+      !src.toLowerCase().endsWith('.md')
   });
 }
 
