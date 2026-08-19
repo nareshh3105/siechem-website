@@ -868,7 +868,13 @@
         sharpenTimer = setTimeout(sharpenVisible, 250);
       }
       // Browser zoom fires resize; flipping changes which pages are on screen.
-      window.addEventListener('resize', scheduleSharpen);
+      // update() re-runs the library's resizeCanvas, which rebuilds the canvas
+      // backing store at the new devicePixelRatio -- without it the book keeps
+      // the pixel count it had at the old zoom level and simply gets stretched.
+      window.addEventListener('resize', () => {
+        try { flip.update(); } catch (e) { /* book not ready; nothing to resize */ }
+        scheduleSharpen();
+      });
       flip.on('flip', scheduleSharpen);
       scheduleSharpen();
     } catch (err) {

@@ -383,6 +383,18 @@ templates driven by `?id=`. They are deliberately excluded from `sitemap.xml`.
   ownership change needs a code edit (§7a).
 - **Catalogue PDFs depend on GitHub Releases.** Workable, but a dedicated file host
   or Supabase Storage would be less fragile than release assets (§7b).
+- **`assets/vendor/page-flip.browser.js` is patched by hand.** The upstream
+  library sizes its canvas in CSS pixels with no regard for
+  `devicePixelRatio`, so every catalogue page was downsampled to CSS resolution
+  before being drawn — the book looked soft on high-DPI screens and blurred
+  badly under browser zoom, no matter what resolution the pages were rendered
+  at. `resizeCanvas()` now multiplies the backing store by the pixel ratio
+  (capped at 4) and scales the drawing context to match.
+
+  This file is **not** the copy in `node_modules`. Re-copying it from the
+  package, or reinstalling over it, silently reverts the fix and the blur
+  returns. If the library is ever upgraded, re-apply the same change.
+
 - **No automated tests.** Verification is manual — the Phase 5 checklist is the
   practical substitute.
 - **`catalogue-pdfs/` is gitignored** (~1.9 GB, exceeds GitHub's file size limit).
