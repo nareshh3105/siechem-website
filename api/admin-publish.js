@@ -10,7 +10,7 @@
 const { requireAdmin } = require('./_lib/adminAuth');
 const { supabaseAdmin } = require('./_lib/supabaseAdmin');
 
-const REPO = 'nareshh3105/siechem-website';
+const REPO = 'RohitDamodaran/siechem-website';
 const BRANCH = 'main';
 
 async function gh(path, opts = {}) {
