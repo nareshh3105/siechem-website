@@ -66,8 +66,11 @@ re-entered on the new Vercel account.
 | `SUPABASE_SERVICE_ROLE_KEY` | Server-side DB key; **bypasses row-level security** | Supabase → Project Settings → API |
 | `GITHUB_TOKEN` | Lets Publish commit catalogue JSON | GitHub → Settings → Developer settings → Fine-grained PAT |
 | `VERCEL_DEPLOY_HOOK_URL` | Triggers a rebuild after Publish commits | Vercel → Settings → Git → Deploy Hooks |
-| `GMAIL_USER` | Sender **and recipient** of quote emails | The Siechem sales mailbox |
-| `GMAIL_PASS` | Gmail **App Password** (not the login password) | Google Account → Security → App Passwords |
+| `SMTP_HOST` | Outgoing mail server for quote emails | Siechem's mail server, e.g. `mail.siechem.com` |
+| `SMTP_PORT` | `465` for SSL (default) or `587` for STARTTLS | Hosting provider |
+| `SMTP_USER` | Sending mailbox address | e.g. `sales@siechem.com` |
+| `SMTP_PASS` | That mailbox's password | Whoever administers the cPanel mail |
+| `SALES_EMAIL` | *Optional.* Where enquiries are delivered; defaults to `SMTP_USER` | — |
 | `ADMIN_PASSWORD` | Password for the admin panel login | Choose one; store in the company password manager |
 | `ADMIN_SESSION_SECRET` | Signs admin session tokens | Any long random string (`openssl rand -hex 32`) |
 
@@ -129,17 +132,28 @@ Product images go to the Supabase Storage bucket **`product-images`**.
 
 ## 5. How quote-request emails work
 
-A customer submits the quote form → `api/quote.js` sends **two** emails via Gmail SMTP:
+A customer submits the quote form → `api/quote.js` sends **two** emails over SMTP:
 
-1. **To the company** — the enquiry details, sent to `GMAIL_USER`
+1. **To the company** — the enquiry details, sent to `SALES_EMAIL` (or `SMTP_USER`)
 2. **To the customer** — an acknowledgement
 
-`GMAIL_PASS` must be a Google **App Password**, which requires 2-Step Verification
-on the account. A normal account password will not authenticate.
+### Which mail server it uses
 
-> The company notification is sent **to `GMAIL_USER` itself** — the same address that
-> sends it. Whatever address is in that variable receives every sales enquiry from the
-> website.
+Siechem's own email runs on their cPanel server — `siechem.com`'s MX records point at
+SpamExperts, and `mail.siechem.com` is the mail host. So quote emails should be sent
+through **that** mailbox, not through Gmail.
+
+Set `SMTP_HOST`, `SMTP_USER` and `SMTP_PASS` to the Siechem mailbox and it will be
+used. If `SMTP_HOST` is unset, the code falls back to Gmail via the legacy
+`GMAIL_USER` / `GMAIL_PASS` variables, so an existing Gmail setup keeps working until
+the switch is made.
+
+> **App Passwords are a Gmail-only concept.** A cPanel mailbox authenticates with its
+> own ordinary password — there is no 2-Step Verification to enable and nothing to
+> generate. Only the Gmail fallback path needs an App Password.
+
+Port `465` connects with implicit TLS; port `587` upgrades via STARTTLS. If mail fails
+to send after a change, the port/TLS pairing is the first thing to check.
 
 ---
 
@@ -252,7 +266,8 @@ Work top to bottom. Steps in Phase 2 must happen before Phase 3.
 ### Phase 3 — Re-issue every credential
 
 - [ ] `GITHUB_TOKEN` — new fine-grained PAT, no expiration, Contents read/write
-- [ ] `GMAIL_USER` / `GMAIL_PASS` — company mailbox and its App Password
+- [ ] `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` — the Siechem mailbox
+      (see §5). Remove the legacy `GMAIL_USER` / `GMAIL_PASS` once this works.
 - [ ] `ADMIN_PASSWORD` — new password, stored in the company password manager
 - [ ] `ADMIN_SESSION_SECRET` — new random string
 - [ ] `VERCEL_DEPLOY_HOOK_URL` — new hook from the new Vercel project

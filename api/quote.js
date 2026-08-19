@@ -28,9 +28,21 @@
  *   - No external form service subscription needed; cost is zero on Vercel's free tier.
  *
  * ENVIRONMENT VARIABLES (set in Vercel project dashboard):
- *   GMAIL_USER  — sender Gmail address (e.g. nareshkumargs3105@gmail.com)
- *   GMAIL_PASS  — 16-character Gmail App Password (not the account password)
- *                 Generate at: myaccount.google.com → Security → App Passwords
+ *
+ *   Preferred — any SMTP mailbox (e.g. Siechem's own cPanel mail server):
+ *     SMTP_HOST   — outgoing mail server, e.g. mail.siechem.com
+ *     SMTP_PORT   — 465 for SSL (default), or 587 for STARTTLS
+ *     SMTP_USER   — full mailbox address, e.g. sales@siechem.com
+ *     SMTP_PASS   — that mailbox's password
+ *     SALES_EMAIL — optional; where enquiries are delivered. Defaults to SMTP_USER.
+ *
+ *   Legacy fallback — Gmail. Used only when SMTP_HOST is not set:
+ *     GMAIL_USER  — sender Gmail address
+ *     GMAIL_PASS  — 16-character Gmail App Password (not the account password)
+ *                   Generate at: myaccount.google.com → Security → App Passwords
+ *
+ *   Note: App Passwords are a Gmail-specific concept. A normal cPanel or
+ *   Exchange mailbox just uses its own password — there is nothing to generate.
  *
  * ERROR HANDLING:
  *   - Each email send is wrapped in try/catch independently.
@@ -45,17 +57,30 @@
  *   the phone but still unique within the same millisecond window.
  */
 // Vercel serverless function — POST /api/quote
-// Sends two emails via Gmail SMTP (nodemailer):
-//   1. Company notification  → GMAIL_USER (nareshkumargs3105@gmail.com)
+// Sends two emails via SMTP (nodemailer):
+//   1. Company notification  → the sales inbox
 //   2. Customer spec sheet   → customer's email
-//
-// Env vars (set in Vercel dashboard):
-//   GMAIL_USER  — nareshkumargs3105@gmail.com
-//   GMAIL_PASS  — 16-char Gmail App Password (no spaces)
+// See the ENVIRONMENT VARIABLES block above for configuration.
 
 const nodemailer = require('nodemailer');
 
-const COMPANY_EMAIL = process.env.GMAIL_USER;
+/**
+ * Resolves the outgoing mail settings.
+ *
+ * Defaults to Gmail so the existing GMAIL_USER / GMAIL_PASS setup keeps working
+ * untouched. Setting SMTP_HOST switches to any other mail server — Siechem's own
+ * cPanel mailbox, for instance — with no code change.
+ */
+function mailConfig() {
+  const host = (process.env.SMTP_HOST || 'smtp.gmail.com').trim();
+  const port = Number(process.env.SMTP_PORT) || 465;
+  const user = (process.env.SMTP_USER || process.env.GMAIL_USER || '').trim();
+  const pass = (process.env.SMTP_PASS || process.env.GMAIL_PASS || '').trim();
+  // Where enquiries land. Defaults to the sending mailbox, which is the common case.
+  const salesInbox = (process.env.SALES_EMAIL || user).trim();
+  // Port 465 is implicit TLS; 587 upgrades via STARTTLS after connecting.
+  return { host, port, secure: port === 465, user, pass, salesInbox };
+}
 
 // Every field below comes straight from the public POST body with no
 // server-side validation, and gets interpolated into HTML emails sent to
@@ -225,21 +250,20 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: 'A valid email address is required' });
   }
 
-  const gmailUser = (process.env.GMAIL_USER || '').trim();
-  const gmailPass = (process.env.GMAIL_PASS || '').trim();
+  const { host, port, secure, user, pass, salesInbox } = mailConfig();
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: { user: gmailUser, pass: gmailPass }
+    host,
+    port,
+    secure,
+    auth: { user, pass }
   });
   const errors = [];
 
   // ── 1. Company notification ───────────────────────────────────────────────
   try {
     await transporter.sendMail({
-      from: `"Siechem Website" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
+      from: `"Siechem Website" <${user}>`,
+      to: salesInbox,
       replyTo: email || '',
       subject: `New Quote Request – ${part_number || 'Automotive Cable'} – ${company || name || 'Unknown'}`,
       html: companyEmailHtml({ name, phone, company, email, part_number, cable_type, quantity, delivery, message })
@@ -255,7 +279,7 @@ module.exports = async function handler(req, res) {
     try {
       const { ref, html } = buildSpecEmail({ name, part_number, quantity, delivery, message, cable_spec });
       await transporter.sendMail({
-        from: `"Siechem Cables" <${process.env.GMAIL_USER}>`,
+        from: `"Siechem Cables" <${user}>`,
         to: email,
         subject: `Quote Received [${ref}] – ${part_number || 'Your Enquiry'} – Siechem`,
         html
