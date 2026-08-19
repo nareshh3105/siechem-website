@@ -155,6 +155,17 @@ the switch is made.
 Port `465` connects with implicit TLS; port `587` upgrades via STARTTLS. If mail fails
 to send after a change, the port/TLS pairing is the first thing to check.
 
+### Submissions are not stored anywhere
+
+`api/quote.js` only sends the two emails above — it does not write to Supabase, a
+file, or any other store. The `sales@siechem.com` inbox and the customer's own inbox
+are the only two places a submission exists. If a notification email is lost (deleted,
+misfiled, bounced), there is no way to recover it from the site.
+
+This is a deliberate scope decision, not an oversight: a `quote_submissions` table in
+Supabase would be a natural addition if Siechem later wants a searchable record, but
+it hasn't been requested.
+
 ---
 
 ## 6. Deploying
