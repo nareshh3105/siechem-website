@@ -150,15 +150,19 @@
       padding: 8px 8px 24px;
       touch-action: pinch-zoom pan-x pan-y;
     }
+    /* The spread is sized in JS, because fitting it needs both the viewport
+       box and the pages' natural aspect ratio. At factor 1 the whole spread is
+       visible -- fitting to width alone would crop a tall page off the bottom,
+       which is what a reader least wants. */
+    .flip-zoom-spread {
+      display: flex; gap: 0;
+      width: max-content; margin: 0 auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+    }
     .flip-zoom-img {
-      display: block; margin: 0 auto;
-      max-width: none; height: auto;
-      /* The page is rendered at ZOOM_SCALE (well above screen resolution), so
-         --zoom-factor scales it up into that real detail rather than
-         interpolating. At factor 1 it simply fits the viewport. */
-      width: calc(min(94vw, 1400px) * var(--zoom-factor, 1));
+      display: block;
+      height: 100%; width: auto;
       background: #fff;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
       cursor: zoom-in;
     }
     .flip-zoom-img.at-max { cursor: zoom-out; }
@@ -608,14 +612,40 @@
       const ZOOM_STEPS = [1, 1.4, 1.8, 2.5];
       let zoomStep = 0;
 
+      // Sizes the spread so that at factor 1 the whole thing is on screen.
+      // Fitting needs the pages' real proportions, so it runs once the images
+      // have decoded rather than from CSS alone.
+      function layoutSpread() {
+        const spread = zoomViewportEl.querySelector('.flip-zoom-spread');
+        if (!spread) return;
+        const imgs = [...spread.querySelectorAll('img')];
+        if (!imgs.length || imgs.some(i => !i.naturalWidth)) return;
+
+        const availW = zoomViewportEl.clientWidth  - 24;
+        const availH = zoomViewportEl.clientHeight - 24;
+        const natW = imgs.reduce((sum, i) => sum + i.naturalWidth, 0);
+        const natH = Math.max(...imgs.map(i => i.naturalHeight));
+        // Whichever dimension runs out first decides the fit.
+        const fitH = Math.min(availH, availW / (natW / natH));
+        spread.style.height = Math.round(fitH * ZOOM_STEPS[zoomStep]) + 'px';
+      }
+
       function applyZoomStep() {
         const factor = ZOOM_STEPS[zoomStep];
-        zoomOverlayEl.style.setProperty('--zoom-factor', factor);
         zoomLevelEl.textContent = Math.round(factor * 100) + '%';
         zoomOutBtn.disabled = zoomStep === 0;
         zoomInBtn.disabled  = zoomStep === ZOOM_STEPS.length - 1;
-        const img = zoomViewportEl.querySelector('.flip-zoom-img');
-        if (img) img.classList.toggle('at-max', zoomStep === ZOOM_STEPS.length - 1);
+        zoomViewportEl.querySelectorAll('.flip-zoom-img').forEach(img =>
+          img.classList.toggle('at-max', zoomStep === ZOOM_STEPS.length - 1));
+        layoutSpread();
+      }
+
+      // Which pages sit side by side. With showCover on, page 1 stands alone
+      // and the rest pair up (2,3), (4,5) ... matching the book itself.
+      function spreadFor(n) {
+        if (n <= 1) return [1];
+        const left = n % 2 === 0 ? n : n - 1;
+        return left + 1 <= total ? [left, left + 1] : [left];
       }
 
       function setZoomStep(next) {
@@ -635,20 +665,24 @@
       }
 
       async function showZoomPage(n) {
-        zoomPage = n;
-        zoomPageNoEl.textContent = n + ' / ' + total;
-        zoomPrevBtn.disabled = n <= 1;
-        zoomNextBtn.disabled = n >= total;
+        const pages = spreadFor(n);
+        zoomPage = pages[0];
+        zoomPageNoEl.textContent = pages.length > 1
+          ? pages[0] + '–' + pages[1] + ' / ' + total
+          : pages[0] + ' / ' + total;
+        zoomPrevBtn.disabled = pages[0] <= 1;
+        zoomNextBtn.disabled = pages[pages.length - 1] >= total;
 
-        let dataUrl = zoomCache.get(n);
-        if (!dataUrl) {
+        const missing = pages.filter(p => !zoomCache.has(p));
+        if (missing.length) {
           zoomViewportEl.innerHTML = '';
           zoomViewportEl.appendChild(zoomLoadingEl);
           zoomLoadingEl.style.display = 'flex';
           try {
-            const rendered = await renderPage(n, ZOOM_SCALE, 0.97);
-            dataUrl = rendered.dataUrl;
-            zoomCache.set(n, dataUrl);
+            for (const p of missing) {
+              const rendered = await renderPage(p, ZOOM_SCALE, 0.97);
+              zoomCache.set(p, rendered.dataUrl);
+            }
           } catch (e) {
             zoomLoadingEl.textContent = 'Could not render this page at full resolution.';
             return;
@@ -656,19 +690,29 @@
         }
         // Bail if the visitor already navigated elsewhere while this was
         // rendering (e.g. clicked Next twice, or closed the overlay).
-        if (zoomPage !== n || !zoomOverlayEl.classList.contains('open')) return;
+        if (zoomPage !== pages[0] || !zoomOverlayEl.classList.contains('open')) return;
 
         zoomViewportEl.innerHTML = '';
-        const img = document.createElement('img');
-        img.className = 'flip-zoom-img';
-        img.src = dataUrl;
-        img.alt = 'Page ' + n + ' of ' + total;
-        // Clicking the page steps the magnification up, wrapping back to fit
-        // once it is already at maximum.
-        img.addEventListener('click', () => {
-          setZoomStep(zoomStep === ZOOM_STEPS.length - 1 ? 0 : zoomStep + 1);
+        const spread = document.createElement('div');
+        spread.className = 'flip-zoom-spread';
+        let pending = pages.length;
+        pages.forEach(p => {
+          const img = document.createElement('img');
+          img.className = 'flip-zoom-img';
+          img.src = zoomCache.get(p);
+          img.alt = 'Page ' + p + ' of ' + total;
+          // Clicking a page steps the magnification up, wrapping back to fit
+          // once it is already at maximum.
+          img.addEventListener('click', () => {
+            setZoomStep(zoomStep === ZOOM_STEPS.length - 1 ? 0 : zoomStep + 1);
+          });
+          // Fitting needs decoded dimensions; cached images may already be
+          // complete, in which case onload never fires.
+          if (img.complete && img.naturalWidth) { if (!--pending) layoutSpread(); }
+          else img.addEventListener('load', () => { if (!--pending) layoutSpread(); });
+          spread.appendChild(img);
         });
-        zoomViewportEl.appendChild(img);
+        zoomViewportEl.appendChild(spread);
         applyZoomStep();
       }
 
@@ -688,8 +732,20 @@
       document.getElementById('ccZoomBtn').addEventListener('click', openZoom);
       document.getElementById('ccStageZoom').addEventListener('click', openZoom);
       document.getElementById('ccZoomClose').addEventListener('click', closeZoom);
-      zoomPrevBtn.addEventListener('click', () => { if (zoomPage > 1) showZoomPage(zoomPage - 1); });
-      zoomNextBtn.addEventListener('click', () => { if (zoomPage < total) showZoomPage(zoomPage + 1); });
+      // Navigation moves a whole spread at a time, so Next advances past both
+      // visible pages rather than shuffling the pair along by one.
+      function zoomStepPage(dir) {
+        const pages = spreadFor(zoomPage);
+        const target = dir < 0
+          ? pages[0] - 1
+          : pages[pages.length - 1] + 1;
+        if (target >= 1 && target <= total) showZoomPage(target);
+      }
+      zoomPrevBtn.addEventListener('click', () => zoomStepPage(-1));
+      zoomNextBtn.addEventListener('click', () => zoomStepPage(1));
+      window.addEventListener('resize', () => {
+        if (zoomOverlayEl.classList.contains('open')) layoutSpread();
+      });
       zoomInBtn.addEventListener('click', () => setZoomStep(zoomStep + 1));
       zoomOutBtn.addEventListener('click', () => setZoomStep(zoomStep - 1));
 
@@ -703,8 +759,8 @@
       document.addEventListener('keydown', e => {
         if (!zoomOverlayEl.classList.contains('open')) return;
         if (e.key === 'Escape') closeZoom();
-        if (e.key === 'ArrowLeft' && zoomPage > 1) showZoomPage(zoomPage - 1);
-        if (e.key === 'ArrowRight' && zoomPage < total) showZoomPage(zoomPage + 1);
+        if (e.key === 'ArrowLeft') zoomStepPage(-1);
+        if (e.key === 'ArrowRight') zoomStepPage(1);
         if (e.key === '+' || e.key === '=') setZoomStep(zoomStep + 1);
         if (e.key === '-' || e.key === '_') setZoomStep(zoomStep - 1);
         if (e.key === '0') setZoomStep(0);
