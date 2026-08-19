@@ -528,6 +528,13 @@
       if (fellBack) return;          // watchdog already gave up
 
       const images = [first.dataUrl];
+      // The SCALE renders are kept separately so a page that was sharpened for
+      // zooming can be dropped back to its normal version for free, without
+      // paying to rasterise it a second time.
+      const baseImages = [first.dataUrl];
+      // Width of the page at scale 1, used to work out what scale a given
+      // on-screen size actually needs.
+      const basePageW = first.w / SCALE;
 
       // Measure against .ts-doc-main, not .flip-stage -- the stage is still
       // display:none at this point (it's only shown once the book is ready
@@ -782,11 +789,88 @@
         if (fellBack) return;
         const p = await renderPage(n);
         images.push(p.dataUrl);
+        baseImages.push(p.dataUrl);
         flip.updateFromImages(images);
         progressEl.textContent = n < total
           ? 'Loading remaining pages (' + n + ' of ' + total + ' ready)…'
           : 'Drag a page corner, use the arrows, or press ← / → to turn pages.';
       }
+
+      // ── Keep the visible pages sharp under browser zoom ────────────────
+      // The pages are rasterised once at SCALE, which is ample at 100% but is
+      // a fixed number of pixels: zoom in far enough and the browser is
+      // upscaling that raster, so the text goes soft the way it never does in
+      // a native PDF viewer. Rather than rasterise all ~30 pages at a size
+      // nobody may ever look at, this re-renders just the pages on screen,
+      // and only when they are actually being displayed larger than the
+      // pixels behind them.
+      const MAX_SHARPEN_SCALE = 6;   // matches the zoom overlay's ceiling
+      const SHARPENED_LIMIT   = 4;   // pages kept at high res before evicting
+      const sharpened = [];          // page numbers, oldest first
+      let sharpenBusy = false;
+
+      // What scale the page on screen actually warrants: its CSS width times
+      // the device pixel ratio (which is what browser zoom changes), measured
+      // against the page's natural width.
+      function neededScale() {
+        const perPageCss = (bookEl.clientWidth || 0) / 2;
+        if (!perPageCss || !basePageW) return SCALE;
+        const dpr = window.devicePixelRatio || 1;
+        return (perPageCss * dpr) / basePageW;
+      }
+
+      function visiblePages() {
+        const cur = flip.getCurrentPageIndex() + 1;
+        const pages = cur <= 1 ? [1] : [cur % 2 === 0 ? cur : cur - 1];
+        if (pages[0] !== 1 && pages[0] + 1 <= total) pages.push(pages[0] + 1);
+        return pages;
+      }
+
+      async function sharpenVisible() {
+        if (sharpenBusy || fellBack) return;
+        const want = Math.min(MAX_SHARPEN_SCALE, neededScale());
+        // Nothing to gain while the on-screen size still fits inside SCALE.
+        if (want <= SCALE + 0.05) {
+          // Zoomed back out -- hand the cheap versions back.
+          if (sharpened.length) {
+            sharpened.splice(0).forEach(p => { images[p - 1] = baseImages[p - 1]; });
+            flip.updateFromImages(images);
+          }
+          return;
+        }
+        const todo = visiblePages().filter(p => !sharpened.includes(p));
+        if (!todo.length) return;
+
+        sharpenBusy = true;
+        try {
+          for (const p of todo) {
+            const r = await renderPage(p, want, 0.97);
+            if (fellBack) return;
+            images[p - 1] = r.dataUrl;
+            sharpened.push(p);
+          }
+          while (sharpened.length > SHARPENED_LIMIT) {
+            const drop = sharpened.shift();
+            if (!visiblePages().includes(drop)) images[drop - 1] = baseImages[drop - 1];
+          }
+          flip.updateFromImages(images);
+        } catch (e) {
+          // A failed re-render just means the page stays at its normal
+          // resolution, so there is nothing to report to the visitor.
+        } finally {
+          sharpenBusy = false;
+        }
+      }
+
+      let sharpenTimer;
+      function scheduleSharpen() {
+        clearTimeout(sharpenTimer);
+        sharpenTimer = setTimeout(sharpenVisible, 250);
+      }
+      // Browser zoom fires resize; flipping changes which pages are on screen.
+      window.addEventListener('resize', scheduleSharpen);
+      flip.on('flip', scheduleSharpen);
+      scheduleSharpen();
     } catch (err) {
       clearTimeout(watchdog);
       fallbackToIframe(err && err.message ? err.message : err);
