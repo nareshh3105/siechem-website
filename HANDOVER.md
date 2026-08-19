@@ -240,56 +240,107 @@ credits the `.vercel.app` address instead of the real domain.
 
 ## 8. Transfer checklist
 
-Work top to bottom. Steps in Phase 2 must happen before Phase 3.
+**Chosen sequence: transfer ownership first, then go live.** Siechem owns every
+account before siechem.com points at the new site.
+
+The order of the transfers themselves is not arbitrary — Vercel depends on both
+GitHub and Supabase, so those move first.
+
+> **The admin panel's Publish button stops working partway through Phase 3 and stays
+> broken until Phase 4 is done.** Tell Siechem's staff not to make catalogue edits
+> during the transfer window. Editing still saves to the database; only publishing
+> to the live site is affected.
 
 ### Phase 1 — Siechem creates accounts
 
 - [ ] GitHub account or organisation
 - [ ] Vercel account on a **paid plan** (see the warning below)
 - [ ] Supabase account
-- [ ] A company mailbox for quote enquiries (e.g. `sales@siechem.com`), with
-      2-Step Verification enabled so an App Password can be generated
+- [ ] A mailbox for quote enquiries — `sales@siechem.com` on their existing cPanel
+      mail server (see §5; no Google account needed)
 
 > **The current Vercel project is on the Hobby plan, which permits non-commercial
 > use only.** A company website on Hobby violates Vercel's terms and can be
 > suspended. Siechem needs a Pro plan (~$20/month).
 
-### Phase 2 — Transfer ownership
+### Phase 2 — Back up before touching anything
 
-- [ ] GitHub: **Settings → Transfer ownership** → Siechem account
-- [ ] GitHub: re-create the `catalogues-v1` release and upload the 30 catalogue PDFs
-- [ ] Supabase: **transfer the existing project** to the Siechem organisation
+Everything below is reversible except mistakes made without a backup.
+
+- [ ] Export the Supabase database (all four `admin_*` tables)
+- [ ] Download all 30 catalogue PDFs from the current GitHub release
+- [ ] Record the current value of every environment variable — several cannot be
+      read back out of Vercel once set
+- [ ] Confirm `git log` on the local clone matches `origin/main`
+
+### Phase 3 — Transfer ownership, in this order
+
+**a) Supabase first** — least disruptive, and Vercel needs its keys.
+
+- [ ] Transfer the **existing project** to the Siechem organisation
       (do not create a new project — see §7c)
-- [ ] Vercel: **Settings → Transfer project** → Siechem account
-- [ ] Cloudflare: confirm Siechem controls the siechem.com DNS zone
+- [ ] Confirm the project reference in the URL is unchanged, so image URLs still work
+- [ ] Add the maintaining developer back as a member
 
-### Phase 3 — Re-issue every credential
+**b) GitHub second** — Vercel's deploys are wired to this repo.
 
-- [ ] `GITHUB_TOKEN` — new fine-grained PAT, no expiration, Contents read/write
+- [ ] **Settings → Transfer ownership** → Siechem account
+- [ ] Re-create the `catalogues-v1` release and upload the 30 catalogue PDFs (§7b)
+- [ ] Generate a new fine-grained PAT: this repo only, Contents read/write,
+      **no expiration**
+- [ ] Add the maintaining developer back as a collaborator
+
+**c) Vercel last** — it depends on both of the above.
+
+- [ ] **Settings → Transfer project** → Siechem account
+- [ ] Confirm the `siechem.vercel.app` address still resolves; if the project was
+      renamed, the testing URL changes too
+- [ ] Re-connect the Git integration to the transferred repo
+- [ ] Create a new deploy hook
+- [ ] Add the maintaining developer to the team
+- [ ] Re-link the local clone: `vercel link`
+
+### Phase 4 — Re-enter credentials and fix the hardcoded values
+
+Every environment variable must be re-entered on the new Vercel account — they do
+not travel with a project transfer.
+
+- [ ] `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY`
+- [ ] `GITHUB_TOKEN` — the new PAT from Phase 3b
+- [ ] `VERCEL_DEPLOY_HOOK_URL` — the new hook from Phase 3c
 - [ ] `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASS` — the Siechem mailbox
-      (see §5). Remove the legacy `GMAIL_USER` / `GMAIL_PASS` once this works.
+      (§5). **Add all four together**; setting `SMTP_HOST` alone breaks quote email.
 - [ ] `ADMIN_PASSWORD` — new password, stored in the company password manager
 - [ ] `ADMIN_SESSION_SECRET` — new random string
-- [ ] `VERCEL_DEPLOY_HOOK_URL` — new hook from the new Vercel project
-- [ ] `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` — from the transferred project
-- [ ] Revoke the old developer's tokens and remove their account access
-
-### Phase 4 — Code changes
-
-- [ ] Update `REPO` in `api/admin-publish.js` (§7a)
+- [ ] Update `REPO` in `api/admin-publish.js` to the new repo path (§7a)
 - [ ] Update the 30 PDF URLs in `catalog/data/families.json` (§7b)
-- [ ] Update canonical/`og:url` tags, `robots.txt`, and `gen-sitemap.mjs` to
-      siechem.com (§7d), then run `node scripts/gen-sitemap.mjs`
+- [ ] Deploy, then confirm the admin panel's **Publish** works again
 
-### Phase 5 — Verify before signing off
+### Phase 5 — Verify the transferred setup, still on the old domain
 
-- [ ] Site loads on siechem.com with a valid SSL certificate
-- [ ] **Submit a test quote → confirm it arrives in the Siechem mailbox**, not a
-      personal one
+Do this before any DNS change, while siechem.com still serves the old site.
+
+- [ ] Site loads correctly on the Vercel address
+- [ ] **Submit a test quote → confirm it arrives at `sales@siechem.com`**
 - [ ] Log into `/admin`, make a small edit, click **Publish**, confirm it goes live
 - [ ] Open a catalogue PDF and confirm it downloads
 - [ ] Confirm product images render on product pages
+- [ ] Revoke the previous owner's tokens and remove stale account access
+
+### Phase 6 — Go live
+
+Only once Phase 5 passes cleanly.
+
+- [ ] Agree a date and time with Siechem
+- [ ] Collect their high-traffic legacy URLs and add redirects for any that would 404
+- [ ] Add the Cloudflare DNS records Vercel specifies, set to **DNS only**
+      (grey cloud) — Cloudflare's proxy blocks Vercel's SSL issuance
+- [ ] Wait for verification and SSL to issue
+- [ ] Update canonical/`og:url` tags, `robots.txt` and `gen-sitemap.mjs` to
+      siechem.com (§7d), run `node scripts/gen-sitemap.mjs`, deploy
+- [ ] Confirm siechem.com loads with valid SSL
 - [ ] Verify the domain in Google Search Console and submit `/sitemap.xml`
+- [ ] **Keep the old cPanel web server running for a few weeks** as a rollback path
 
 ---
 
