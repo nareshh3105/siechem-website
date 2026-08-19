@@ -119,25 +119,49 @@
       cursor: pointer; transition: background 0.15s;
     }
     .flip-zoom-close:hover { background: rgba(255,255,255,0.24); }
+    /* Deliberately NOT a centring flexbox: when the image is wider than the
+       viewport, a centred flex child overflows equally in both directions and
+       the left-hand overflow becomes unreachable -- there is no negative
+       scroll. A block container with an auto-margined child scrolls correctly. */
     .flip-zoom-viewport {
-      flex: 1; overflow: auto; display: flex;
-      align-items: flex-start; justify-content: center;
+      flex: 1; overflow: auto;
       padding: 8px 8px 24px;
       touch-action: pinch-zoom pan-x pan-y;
     }
     .flip-zoom-img {
+      display: block; margin: 0 auto;
       max-width: none; height: auto;
-      /* Rendered at high-DPI on purpose -- this width just fits it to the
-         viewport at rest; pinch/scroll zoom then has real pixel detail to
-         reveal instead of upscaling the same low-res source. */
-      width: min(94vw, 1100px);
+      /* The page is rendered at ZOOM_SCALE (well above screen resolution), so
+         --zoom-factor scales it up into that real detail rather than
+         interpolating. At factor 1 it simply fits the viewport. */
+      width: calc(min(94vw, 1100px) * var(--zoom-factor, 1));
       background: #fff;
       box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      cursor: zoom-in;
     }
+    .flip-zoom-img.at-max { cursor: zoom-out; }
     .flip-zoom-loading {
-      margin: auto; color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.6);
       font-family: var(--mono); font-size: 13px;
-      display: flex; align-items: center; gap: 10px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; height: 100%;
+    }
+    .flip-zoom-scale {
+      display: flex; align-items: center; gap: 4px;
+      margin-left: auto; margin-right: 12px;
+    }
+    .flip-zoom-scale button {
+      width: 30px; height: 30px; border-radius: 6px;
+      background: rgba(255,255,255,0.12); border: none; color: #fff;
+      font-size: 17px; line-height: 1; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .flip-zoom-scale button:hover:not(:disabled) { background: rgba(255,255,255,0.24); }
+    .flip-zoom-scale button:disabled { opacity: 0.35; cursor: not-allowed; }
+    .flip-zoom-level {
+      font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.75);
+      min-width: 46px; text-align: center;
     }
     .flip-zoom-nav {
       display: flex; align-items: center; justify-content: center;
@@ -320,6 +344,11 @@
     <div class="flip-zoom-overlay" id="ccZoomOverlay">
       <div class="flip-zoom-topbar">
         <span class="flip-zoom-pageno" id="ccZoomPageNo">&ndash; / &ndash;</span>
+        <div class="flip-zoom-scale">
+          <button type="button" id="ccZoomOut" aria-label="Zoom out">&minus;</button>
+          <span class="flip-zoom-level" id="ccZoomLevel">100%</span>
+          <button type="button" id="ccZoomIn" aria-label="Zoom in">+</button>
+        </div>
         <button type="button" class="flip-zoom-close" id="ccZoomClose" aria-label="Close zoom">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
         </button>
@@ -491,7 +520,12 @@
         showCover: true,
         maxShadowOpacity: 0.5,
         mobileScrollSupport: true,
-        useMouseEvents: true,
+        // Pages turn only via the Prev/Next controls and the arrow buttons.
+        // With mouse events on, the library also flips on click, on drag, and
+        // when the pointer nears a page edge -- which fires accidentally while
+        // reading, and on mobile makes it impossible to tap a page without
+        // turning it.
+        useMouseEvents: false,
         showPageCorners: false
       });
       flip.loadFromImages(images);
@@ -526,7 +560,42 @@
       const zoomPageNoEl   = document.getElementById('ccZoomPageNo');
       const zoomPrevBtn    = document.getElementById('ccZoomPrev');
       const zoomNextBtn    = document.getElementById('ccZoomNext');
+      const zoomInBtn      = document.getElementById('ccZoomIn');
+      const zoomOutBtn     = document.getElementById('ccZoomOut');
+      const zoomLevelEl    = document.getElementById('ccZoomLevel');
       let zoomPage = 1;
+
+      // Magnification steps. 1 = fit to viewport; anything above reveals the
+      // detail already present in the ZOOM_SCALE render, so text stays sharp
+      // instead of turning into interpolated mush the way browser zoom does.
+      const ZOOM_STEPS = [1, 1.5, 2, 3, 4];
+      let zoomStep = 0;
+
+      function applyZoomStep() {
+        const factor = ZOOM_STEPS[zoomStep];
+        zoomOverlayEl.style.setProperty('--zoom-factor', factor);
+        zoomLevelEl.textContent = Math.round(factor * 100) + '%';
+        zoomOutBtn.disabled = zoomStep === 0;
+        zoomInBtn.disabled  = zoomStep === ZOOM_STEPS.length - 1;
+        const img = zoomViewportEl.querySelector('.flip-zoom-img');
+        if (img) img.classList.toggle('at-max', zoomStep === ZOOM_STEPS.length - 1);
+      }
+
+      function setZoomStep(next) {
+        const clamped = Math.max(0, Math.min(ZOOM_STEPS.length - 1, next));
+        if (clamped === zoomStep) return;
+        // Keep whatever is at the centre of the viewport roughly in place,
+        // rather than snapping back to the top-left on every step.
+        const prevFactor = ZOOM_STEPS[zoomStep];
+        const nextFactor = ZOOM_STEPS[clamped];
+        const ratio = nextFactor / prevFactor;
+        const cx = zoomViewportEl.scrollLeft + zoomViewportEl.clientWidth / 2;
+        const cy = zoomViewportEl.scrollTop + zoomViewportEl.clientHeight / 2;
+        zoomStep = clamped;
+        applyZoomStep();
+        zoomViewportEl.scrollLeft = cx * ratio - zoomViewportEl.clientWidth / 2;
+        zoomViewportEl.scrollTop  = cy * ratio - zoomViewportEl.clientHeight / 2;
+      }
 
       async function showZoomPage(n) {
         zoomPage = n;
@@ -557,13 +626,21 @@
         img.className = 'flip-zoom-img';
         img.src = dataUrl;
         img.alt = 'Page ' + n + ' of ' + total;
+        // Clicking the page steps the magnification up, wrapping back to fit
+        // once it is already at maximum.
+        img.addEventListener('click', () => {
+          setZoomStep(zoomStep === ZOOM_STEPS.length - 1 ? 0 : zoomStep + 1);
+        });
         zoomViewportEl.appendChild(img);
+        applyZoomStep();
       }
 
       function openZoom() {
         const startPage = flip.getCurrentPageIndex() + 1;
         zoomOverlayEl.classList.add('open');
         document.body.style.overflow = 'hidden';
+        zoomStep = 0;
+        applyZoomStep();
         showZoomPage(startPage);
       }
       function closeZoom() {
@@ -575,11 +652,24 @@
       document.getElementById('ccZoomClose').addEventListener('click', closeZoom);
       zoomPrevBtn.addEventListener('click', () => { if (zoomPage > 1) showZoomPage(zoomPage - 1); });
       zoomNextBtn.addEventListener('click', () => { if (zoomPage < total) showZoomPage(zoomPage + 1); });
+      zoomInBtn.addEventListener('click', () => setZoomStep(zoomStep + 1));
+      zoomOutBtn.addEventListener('click', () => setZoomStep(zoomStep - 1));
+
+      // Ctrl/Cmd + wheel magnifies the page instead of the whole browser UI,
+      // which is what people expect from a document viewer.
+      zoomViewportEl.addEventListener('wheel', e => {
+        if (!e.ctrlKey && !e.metaKey) return;
+        e.preventDefault();
+        setZoomStep(zoomStep + (e.deltaY < 0 ? 1 : -1));
+      }, { passive: false });
       document.addEventListener('keydown', e => {
         if (!zoomOverlayEl.classList.contains('open')) return;
         if (e.key === 'Escape') closeZoom();
         if (e.key === 'ArrowLeft' && zoomPage > 1) showZoomPage(zoomPage - 1);
         if (e.key === 'ArrowRight' && zoomPage < total) showZoomPage(zoomPage + 1);
+        if (e.key === '+' || e.key === '=') setZoomStep(zoomStep + 1);
+        if (e.key === '-' || e.key === '_') setZoomStep(zoomStep - 1);
+        if (e.key === '0') setZoomStep(0);
       });
 
       flipReady = true;
