@@ -91,6 +91,25 @@
     .flip-zoom-btn {
       display: inline-flex; align-items: center; gap: 6px;
     }
+    /* Pinned to the book itself. The controls bar sits below the stage and is
+       off-screen on shorter windows, so a zoom control that only lived there
+       went unnoticed and people reached for browser zoom instead -- which
+       just stretches the fixed-resolution page raster and looks soft. */
+    .flip-stage-zoom {
+      position: absolute; top: 14px; right: 14px; z-index: 5;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 999px;
+      background: rgba(0,0,0,0.45); border: none; color: #fff;
+      font-size: 12.5px; font-weight: 600; letter-spacing: 0.01em;
+      cursor: pointer; opacity: 0.88;
+      transition: background 0.15s, opacity 0.15s;
+    }
+    .flip-stage-zoom:hover { background: rgba(0,0,0,0.66); opacity: 1; }
+    @media (max-width: 700px) {
+      .flip-stage-zoom {
+        top: 8px; right: 8px; padding: 7px 12px; font-size: 11.5px;
+      }
+    }
     /* Zoom overlay — the flipbook's own page images are rasterised once at
        2.5x for the turn animation, which looks fine at rest but is a fixed
        resolution: browser pinch/scroll zoom just stretches that same
@@ -101,7 +120,10 @@
        more real detail instead of a blown-up JPEG. */
     .flip-zoom-overlay {
       position: fixed; inset: 0; z-index: 200;
-      background: rgba(10, 10, 10, 0.92);
+      /* Opaque on purpose. At 92% the sidebar, nav and footer stayed legible
+         behind the page and the whole thing read as a rendering fault rather
+         than a reader. A document view should show the document. */
+      background: #0c0c0c;
       display: none; flex-direction: column;
     }
     .flip-zoom-overlay.open { display: flex; }
@@ -134,7 +156,7 @@
       /* The page is rendered at ZOOM_SCALE (well above screen resolution), so
          --zoom-factor scales it up into that real detail rather than
          interpolating. At factor 1 it simply fits the viewport. */
-      width: calc(min(94vw, 1100px) * var(--zoom-factor, 1));
+      width: calc(min(94vw, 1400px) * var(--zoom-factor, 1));
       background: #fff;
       box-shadow: 0 10px 40px rgba(0,0,0,0.4);
       cursor: zoom-in;
@@ -317,6 +339,10 @@
             <button type="button" class="flip-arrow flip-arrow-prev" id="ccArrowPrev" aria-label="Previous page"><svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             <div id="ccBook" class="flip-book"></div>
             <button type="button" class="flip-arrow flip-arrow-next" id="ccArrowNext" aria-label="Next page"><svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button type="button" class="flip-stage-zoom" id="ccStageZoom" aria-label="Open this page at full resolution">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3M9 8v6M6 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Zoom
+            </button>
           </div>
           <div class="flip-controls" id="ccControls" style="display:none;">
             <button type="button" id="ccPrev" aria-label="Previous page">&lsaquo; Prev</button>
@@ -477,14 +503,18 @@
       const SCALE = 2.5;
       const ZOOM_SCALE = 6;
 
-      async function renderPage(n, scale = SCALE) {
+      // quality: JPEG is fine for the turn animation, but its ringing shows up
+      // around the fine print in spec tables once magnified, so the zoom render
+      // asks for a higher quality. These stay in memory as data URLs rather
+      // than crossing the network, so the extra bytes cost nothing to load.
+      async function renderPage(n, scale = SCALE, quality = 0.92) {
         const page = await pdf.getPage(n);
         const vp = page.getViewport({ scale });
         const canvas = document.createElement('canvas');
         canvas.width = Math.floor(vp.width);
         canvas.height = Math.floor(vp.height);
         await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+        const dataUrl = canvas.toDataURL('image/jpeg', quality);
         page.cleanup();
         return { dataUrl, w: canvas.width, h: canvas.height };
       }
@@ -568,7 +598,14 @@
       // Magnification steps. 1 = fit to viewport; anything above reveals the
       // detail already present in the ZOOM_SCALE render, so text stays sharp
       // instead of turning into interpolated mush the way browser zoom does.
-      const ZOOM_STEPS = [1, 1.5, 2, 3, 4];
+      //
+      // The steps are bounded by the source resolution, not chosen for round
+      // numbers. ZOOM_SCALE (6) renders a typical page ~3500px wide, and the
+      // image is displayed at up to 1400px, so the top step of 2.5 lands at
+      // ~3500px -- right at the source and still not upscaling. Going beyond
+      // would interpolate and bring back exactly the softness this overlay
+      // exists to remove.
+      const ZOOM_STEPS = [1, 1.4, 1.8, 2.5];
       let zoomStep = 0;
 
       function applyZoomStep() {
@@ -609,7 +646,7 @@
           zoomViewportEl.appendChild(zoomLoadingEl);
           zoomLoadingEl.style.display = 'flex';
           try {
-            const rendered = await renderPage(n, ZOOM_SCALE);
+            const rendered = await renderPage(n, ZOOM_SCALE, 0.97);
             dataUrl = rendered.dataUrl;
             zoomCache.set(n, dataUrl);
           } catch (e) {
@@ -649,6 +686,7 @@
       }
 
       document.getElementById('ccZoomBtn').addEventListener('click', openZoom);
+      document.getElementById('ccStageZoom').addEventListener('click', openZoom);
       document.getElementById('ccZoomClose').addEventListener('click', closeZoom);
       zoomPrevBtn.addEventListener('click', () => { if (zoomPage > 1) showZoomPage(zoomPage - 1); });
       zoomNextBtn.addEventListener('click', () => { if (zoomPage < total) showZoomPage(zoomPage + 1); });
